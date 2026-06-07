@@ -1,0 +1,88 @@
+{
+  "scenario_id": "printing_embroidery",
+  "scenario_title_en": "Printing & Embroidery",
+  "scenario_title_zh": "印绣花工艺",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Wendy here. I have to be straight with you — your brief lists a 12-color rotary print with 4 of those colors as metallic gold and silver. Metallic inks in rotary screens are a known pain point: short screen life, inconsistent laydown, and a 25-30% wastage rate on startup. Combined with rotary, you're looking at US$0.95 per piece for what should be a US$0.55 print. Before we go any further, can we talk about alternatives?",
+      "ai_message_zh": "Chen, Wendy。说实话 — 你工艺单写 12 色圆网印,其中 4 色是金银粉。金银粉在圆网里是大坑:网版寿命短、上色不稳、起机浪费 25-30%。配圆网,本应 0.55 美元的印花要 0.95 美元。再走之前,能谈替代方案吗?",
+      "expected_user_response_hint": "了解替代方案,做技术决定",
+      "key_phrases": ["Walk me through alternatives", "metallic ink", "rotary screen limitation", "cost impact"],
+      "common_mistakes": "metallic ink(金银粉墨) 颗粒粗,容易堵网,圆网大批量印刷的稳定性远不如平网和数码。",
+      "tips_zh": "金银粉印花优先选平网或数码金属墨水,圆网是下策。",
+      "user_response_example": "Walk me through the alternatives, Wendy. The buyer's design has 4 metallic accents that are non-negotiable. I need to give them a viable path that doesn't blow the cost target."
+    },
+    {
+      "round": 2,
+      "ai_message": "Three options. Option A: keep rotary for the 8 spot colors, switch the 4 metallics to flat screen — adds one operation but saves the rotary from metallic drag. Option B: keep everything flat screen, lose the rotary economy but gain consistency. Option C: switch metallics to digital print with metallic ink — most consistent look, but US$0.40 per piece premium. Which direction works for the buyer's design intent?",
+      "ai_message_zh": "三个方案。方案 A:8 个专色留圆网,4 个金银粉改平网 — 多一道工序但圆网不受影响。方案 B:全部平网,放弃圆网经济性但稳定。方案 C:金银粉换数码金属墨水 — 效果最稳,加 0.40 美元一件。客户设计意图走哪个方向?",
+      "expected_user_response_hint": "选方案并解释理由",
+      "key_phrases": ["Option A", "Option B", "Option C", "for the design intent"],
+      "common_mistakes": "metallic ink on digital(数码金属墨水) 是新技术,效果逼真,价格较高。",
+      "tips_zh": "多工艺组合(圆网+平网)是印花行业常见做法,可平衡成本和效果。",
+      "user_response_example": "Option A is the smart compromise — keeps the cost of the 8 spot colors down and the metallics get a clean flat-screen pass. The design has metallic accents only on the neck and hem, not all-over, so the extra operation isn't a big deal."
+    },
+    {
+      "round": 3,
+      "ai_message": "Option A it is. Rotary for 8 spot, flat screen for 4 metallics. Now, the bigger conversation — registration tolerance. Your brief says 0.2 mm. For a 12-color job across two methods, that's tight. Realistically I can hit 0.3 mm on most colors, 0.4 mm on the metallics. What does the buyer's QC actually measure, and can we relax 0.2 to 0.3?",
+      "ai_message_zh": "方案 A 确认。圆网 8 色,平网 4 色金属。再说大议题 — 套准公差。你工艺单写 0.2mm,12 色两种工艺很紧。实际我能做到 0.3mm 大部分色,0.4mm 金属色。客户 QC 实际量什么?0.2 能放宽到 0.3 吗?",
+      "expected_user_response_hint": "讨论套准公差和客户接受度",
+      "key_phrases": ["registration tolerance", "QC standard", "0.3 mm is acceptable", "for the buyer"],
+      "common_mistakes": "registration tolerance(套准公差) 在印花里是颜色与颜色的对齐偏差,数字越小越精确。",
+      "tips_zh": "圆网 0.2mm 是理论极限,实际 0.3-0.4mm 普遍;客户 QC 实际测 0.3-0.5mm。",
+      "user_response_example": "0.3 mm is acceptable — the buyer's QC actually uses 0.5 mm as their pass line, but they ask for 0.2 mm in the spec to keep us tight. 0.3 mm is realistic and they'll sign off. Document it in the strike-off report."
+    },
+    {
+      "round": 4,
+      "ai_message": "Good. Now let me raise something more fundamental. Your fabric is a 220 GSM cotton-modal with elastane. Spandex in the fabric means it stretches during printing. Rotary screens are calibrated to a fixed fabric dimension — if the fabric stretches 3% under tension, the registration drifts. We need to pre-test the fabric tension behavior, or we'll have a registration disaster on bulk.",
+      "ai_message_zh": "好。再说一个根本问题 — 你的布是 220 克棉莫代尔加氨纶。含氨纶布在印花过程中会拉伸。圆网按固定门幅校准,如果布在张力下拉伸 3%,套准就会漂。大货前要预测布的张力行为,否则套准会崩。",
+      "expected_user_response_hint": "理解张力风险,讨论预测试",
+      "key_phrases": ["fabric tension", "pre-test", "registration risk", "stretch behavior"],
+      "common_mistakes": "fabric tension(布面张力) 在印花过程中变化,含氨纶针织布尤其敏感,导致套准漂移。",
+      "tips_zh": "含氨纶针织布印花,要在进布处加张力控制装置,或预测试张力曲线。",
+      "user_response_example": "Pre-test the fabric tension — that's a smart move. Can you run a 5-meter trial on the actual bulk fabric before we commit to the full rotary run? The cost is worth it for the data."
+    },
+    {
+      "round": 5,
+      "ai_message": "I can do a 5-meter trial on the bulk greige — that's US$220 for the trial run, refundable against the bulk PO. We'll measure stretch under three tension settings and confirm registration. If the fabric moves more than 2%, we go to flat screen only and recalculate the cost.",
+      "ai_message_zh": "可以,大货坯布上跑 5 米试印,220 美元,大货时抵扣。三种张力下测拉伸,确认套准。如果布拉伸超过 2%,就全平网并重算成本。",
+      "expected_user_response_hint": "接受试印,讨论成本变化",
+      "key_phrases": ["trial run", "refundable", "tension test", "recalculate cost"],
+      "common_mistakes": "refundable against bulk PO(大货抵扣) 是行业惯例,客户接受试印费后退还。",
+      "tips_zh": "小试印 5-10 米是印花厂和针织厂常规做法,可避免大货失误。",
+      "user_response_example": "Trial run is a no-brainer at US$220 refundable. Run it, send me the data, and let's decide on the print method based on real numbers. If it's flat screen only, give me the new cost."
+    },
+    {
+      "round": 6,
+      "ai_message": "Will do. One more conversation — embroidery. The brief specifies 3D puff embroidery on the logo. On a 220 GSM stretch jersey, 3D puff is risky — the foam underlay creates a stiff spot that fights the fabric's drape. Also, on cotton-modal, the foam doesn't adhere as well as on poly-cotton. Are you locked on 3D puff, or would a high-density satin stitch with a slight raise achieve a similar look?",
+      "ai_message_zh": "好。再聊绣花。工艺单写 3D 立体绣 logo。在 220 克弹性汗布上做 3D 立体绣有风险 — 海绵底会让那块变硬,跟布料的悬垂性冲突。而且棉莫代尔上海绵,粘合度不如涤棉。客户是必须 3D 立体绣,还是高密度缎面绣带轻微凸起就能达到效果?",
+      "expected_user_response_hint": "讨论绣花技术调整",
+      "key_phrases": ["3D puff embroidery", "high-density satin", "drape", "foam underlay"],
+      "common_mistakes": "3D puff embroidery(3D 立体绣) 是用 EVA 海绵做底,绣完凸起,常用于帽子 / 卫衣,针织 T 恤上少见。",
+      "tips_zh": "3D 立体绣主要用于硬挺面料(帽子、卫衣),柔软针织布会显得突兀且易脱落。",
+      "user_response_example": "Honestly, the buyer wants the '3D look' but I don't think they understand the technical limitations. High-density satin with a slight raise is a smarter path. Can you do a sample of both, side-by-side? I'll have the design team choose."
+    },
+    {
+      "round": 7,
+      "ai_message": "Side-by-side sample of 3D puff vs. high-density satin on the same fabric — about US$85 setup, ready in 5 days. The high-density satin will give about 0.8 mm raise, the puff about 2.5 mm. I expect the design team to choose high-density once they see the drape difference. Now, last item — the embroidery backing.",
+      "ai_message_zh": "3D 立体绣 vs. 高密度缎面绣同布对照样 — 85 美元打版费,5 天出。高密度缎面凸起约 0.8mm,立体绣约 2.5mm。我猜设计团队看到悬垂差异会选高密度。最后一项 — 绣花衬底。",
+      "expected_user_response_hint": "讨论绣花衬底,准备收尾",
+      "key_phrases": ["embroidery backing", "tear-away", "cut-away", "for stretch fabric"],
+      "common_mistakes": "tear-away backing(撕布衬) 易撕但不够稳;cut-away backing(切衬) 更稳,适合弹性布。",
+      "tips_zh": "弹性针织布绣花建议切衬(撕不干净,留衬更稳)。",
+      "user_response_example": "Run the side-by-side — US$85 is fine. For the backing, on stretch jersey I'd prefer cut-away for stability. Confirm cut-away + water-soluble topping in the spec."
+    },
+    {
+      "round": 8,
+      "ai_message": "Confirmed: cut-away backing with water-soluble topping. Final package: 220 GSM cotton-modal jersey, rotary 8 spot + flat screen 4 metallics, 0.3 mm registration, 5-meter trial first, US$0.85 per piece for the 12-color print, plus high-density satin embroidery at US$0.35, side-by-side sample for design team. Strike-off in 10 days. Send me the spec sign-off email and we're locked.",
+      "ai_message_zh": "确认:切衬加水溶性上膜。最终方案:220 克棉莫代尔汗布,圆网 8 色 + 平网 4 色金属,套准 0.3mm,5 米试印先行,12 色印花 0.85 美元一件,加高密度缎面绣 0.35 美元,设计团队看对照样。10 天打样。发我工艺签收邮件,锁定。",
+      "expected_user_response_hint": "签收方案,确认收件",
+      "key_phrases": ["Locked", "Sign-off email", "Send the package", "approved"],
+      "common_mistakes": "sign-off email(工艺签收邮件) 是工艺确认的正式凭证,大货按此执行。",
+      "tips_zh": "工艺签收邮件要列所有变更点,让客户逐条确认,避免后续争议。",
+      "user_response_example": "Locked, Wendy. I'll send the sign-off email by end of day with every change documented. Send the trial run and the embroidery side-by-side to chen.wei@lilygarments.com. Approved and looking forward to it."
+    }
+  ]
+}

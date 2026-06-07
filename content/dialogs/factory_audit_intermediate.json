@@ -1,0 +1,88 @@
+{
+  "scenario_id": "factory_audit",
+  "scenario_title_en": "Factory Visit & Audit",
+  "scenario_title_zh": "工厂参观/验厂",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Morning. David Reed, compliance auditor for BSCI. I'll be running a full-day audit today. Before I start, can I have a copy of your social compliance manual, the worker handbook, and a list of all subcontractors?",
+      "ai_message_zh": "早上好。David Reed,BSCI 合规审核员。我今天要做全天审核。开始前,能给我一份社会责任手册、员工守则和所有分包商名单吗?",
+      "expected_user_response_hint": "提供合规文件,介绍陪同人员",
+      "key_phrases": ["Here's our social compliance manual", "worker handbook is up to date", "we don't use subcontractors for this product", "I'll be your escort today"],
+      "common_mistakes": "subcontractor(分包商)是大客户最敏感的问题之一,要主动说清是否使用。",
+      "tips_zh": "BSCI 审核要准备:① 行为准则 ② 招聘流程 ③ 工时记录 ④ 工资条 ⑤ 分包商清单(如有)。",
+      "user_response_example": "Good morning, David. Welcome. Here is our social compliance manual and the latest worker handbook — both are in English and Chinese. For your question on subcontractors — we don't use any for woven or knit products; everything is done in-house. I'm Lily, your escort for today, and our HR manager Wang will join us for the worker interviews."
+    },
+    {
+      "round": 2,
+      "ai_message": "Good. Let's start with HR records. I want to see the time records for the last 6 months, payroll records, and worker contracts for a random sample of 20 workers.",
+      "ai_message_zh": "好。先看 HR 资料。我要看过去 6 个月的考勤记录、工资条,以及随机抽 20 个工人的劳动合同。",
+      "expected_user_response_hint": "引导到 HR 办公室,提供资料",
+      "key_phrases": ["Follow me to the HR office", "Records are filed by month", "We use a fingerprint attendance system", "payroll is on the 10th of each month"],
+      "common_mistakes": "time records / attendance records / time cards 都是考勤记录,口语里常说 time records。",
+      "tips_zh": "BSCI 审核员会看:① 加班是否超出 36 小时/月 ② 是否足额支付加班费 ③ 有没有歧视性招聘。",
+      "user_response_example": "Follow me to the HR office. We use a fingerprint attendance system, and the records are backed up to our server. Payroll is processed on the 10th of each month, with payslips signed by each worker. We also have a worker grievance box at the canteen exit — let me show you that later."
+    },
+    {
+      "round": 3,
+      "ai_message": "Show me a sample of worker contracts and a recent payroll record. Also, do you have any migrant workers, and how do you handle their social insurance?",
+      "ai_message_zh": "给我看几份劳动合同和近期的工资条。另外,你们有外省工人吗?社保怎么交?",
+      "expected_user_response_hint": "展示合同和工资,介绍外省工和社保",
+      "key_phrases": ["worker contracts are bilingual", "Migrant workers make up about ...", "social insurance is fully covered", "housing allowance"],
+      "common_mistakes": "migrant worker(外来务工人员)是中国工厂的常见构成,要说明有合法工作和社保。",
+      "tips_zh": "外省工社保是 BSCI 审核重点:① 是否全员缴纳五险 ② 是否在工作地缴纳 ③ 是否有住房公积金或住房补贴。",
+      "user_response_example": "All our worker contracts are bilingual, signed voluntarily, and no recruitment fees are charged. About 40% of our workers are migrant workers from Anhui, Jiangxi, and Henan. We pay full social insurance for them, plus a housing allowance of RMB 300 per month. You'll see the payroll records reflect all of this."
+    },
+    {
+      "round": 4,
+      "ai_message": "Now let's walk the production floor. I want to see the cutting, sewing, and finishing areas. Are there any fire exits blocked, and is PPE provided where needed?",
+      "ai_message_zh": "现在去车间看看。我想看裁剪、车缝、后整三个区域。有没有消防通道堵塞?需要 PPE 的地方有配发吗?",
+      "expected_user_response_hint": "带客户走车间,展示安全和 PPE",
+      "key_phrases": ["All fire exits are marked and clear", "PPE is provided free of charge", "earplugs in sewing, masks in printing", "monthly safety training"],
+      "common_mistakes": "PPE = Personal Protective Equipment(个人防护装备),含耳塞、口罩、手套、防护眼镜。",
+      "tips_zh": "车间安全重点:① 消防通道畅通 ② 灭火器在有效期内 ③ PPE(耳塞/口罩)按岗位配发 ④ 应急疏散图显眼。",
+      "user_response_example": "All fire exits are clearly marked and unobstructed — you'll see green signs at each end of every building. We provide PPE free of charge: earplugs in sewing, dust masks in printing, gloves in cutting, and safety shoes in finishing. New workers get safety training on day one, and we run monthly drills. The last evacuation drill was 12 days ago."
+    },
+    {
+      "round": 5,
+      "ai_message": "I noticed some workers are wearing jewelry and one worker appears to be very young. Can I check her ID and the age-verification system?",
+      "ai_message_zh": "我看到有些工人戴了首饰,有一个看起来很年轻。我能查下她的身份证和年龄验证系统吗?",
+      "expected_user_response_hint": "解释首饰和年龄验证,提供 ID",
+      "key_phrases": ["Jewelry is not allowed on the floor", "we check IDs at recruitment", "age verification policy", "no workers under 18"],
+      "common_mistakes": "child labor(童工)是 BSCI 一票否决,工厂必须严格 18+。",
+      "tips_zh": "验厂年龄核实:① 招聘时查验身份证原件 ② 入职档案保留身份证复印件 ③ 车间显眼处张贴'禁止雇用 18 岁以下'标识。",
+      "user_response_example": "We have a strict no-jewelry policy on the production floor — I'll speak to the line supervisor about it. On age verification, we check government-issued ID at recruitment, and our HR system flags any applicant under 18. We don't employ anyone under 18. Let me pull her file and ID for you to verify right now."
+    },
+    {
+      "round": 6,
+      "ai_message": "I'll do random worker interviews next — 8 workers, in private. Where can we set that up?",
+      "ai_message_zh": "接下来我私下访谈 8 个工人。在哪里安排?",
+      "expected_user_response_hint": "安排私密访谈室,选择随机工人",
+      "key_phrases": ["We have a private meeting room", "I'll randomly select 8 workers", "interviews will be confidential", "no management presence"],
+      "common_mistakes": "worker interview(员工访谈)是 BSCI 核心环节,必须私密,管理层不能在现场。",
+      "tips_zh": "员工访谈:① 选不同工序/班次/年龄段的工人 ② 在独立房间一对一进行 ③ 不允许主管旁听 ④ 用工人熟悉的语言。",
+      "user_response_example": "We have a private meeting room on the third floor, no cameras, no management presence. I'll randomly select 8 workers from different lines and shifts. Interviews will be confidential — only you, the worker, and the translator if needed. The HR manager and I will step out completely."
+    },
+    {
+      "round": 7,
+      "ai_message": "After lunch, I want to see the chemical storage area for the printing workshop. Are your inks and dyes compliant with ZDHC and REACH?",
+      "ai_message_zh": "午饭后,我想看印花车间的化学品仓。你们油墨和染料符合 ZDHC 和 REACH 吗?",
+      "expected_user_response_hint": "介绍化学品合规,展示 SDS 文件",
+      "key_phrases": ["ZDHC compliant", "REACH SVHC below threshold", "SDS sheets are filed", "chemical inventory list"],
+      "common_mistakes": "ZDHC = Zero Discharge of Hazardous Chemicals(有害化学物质零排放);REACH 是欧盟化学品法规。",
+      "tips_zh": "化学品合规:① 染料/油墨供应商在 ZDHC InCheck 列表 ② SDS(安全数据表)归档 ③ 化学品仓双人双锁 ④ 应急淋浴/洗眼器。",
+      "user_response_example": "Our printing workshop uses water-based inks, and our dye house is ZDHC-compliant — we work with three approved suppliers. REACH SVHC content is below 0.1% threshold. I have the SDS sheets, the chemical inventory list, and our wastewater treatment records ready for review. The chemical storage has secondary containment, eyewash stations, and a fire suppression system."
+    },
+    {
+      "round": 8,
+      "ai_message": "OK, I have enough to draft the report. I'll issue a draft for your response within 10 working days. Any closing remarks from your side?",
+      "ai_message_zh": "好,材料够了。我会在 10 个工作日内出报告草稿给你反馈。你们有什么最后想说的?",
+      "expected_user_response_hint": "感谢审核,承诺整改,期待长期合作",
+      "key_phrases": ["Thank you for the thorough audit", "We'll address any findings", "commitment to continuous improvement", "Looking forward to long-term partnership"],
+      "common_mistakes": "audit finding(审核发现项)分 critical / major / minor,critical 项必须 30 天内整改。",
+      "tips_zh": "验厂 closing:① 感谢审核 ② 承诺整改 ③ 主动询问改进建议 ④ 强调持续改进的意愿。",
+      "user_response_example": "Thank you, David, for a thorough and professional audit. We'll treat every finding seriously — critical and major issues will be addressed within 30 days, and minor ones within 60 days. We see BSCI not as a one-time check, but as a framework for continuous improvement. Looking forward to a long-term partnership with your brand."
+    }
+  ]
+}

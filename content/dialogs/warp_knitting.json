@@ -1,0 +1,88 @@
+{
+  "scenario_id": "warp_knitting",
+  "scenario_title_en": "Warp Knitting",
+  "scenario_title_zh": "经编",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Linda from Sunrise Warp Knit Mill. I understand you are looking for warp knit fabric. What application is it for?",
+      "ai_message_zh": "你好,我是 Sunrise 经编厂的 Linda。听说您在找经编面料,请问做什么用?",
+      "expected_user_response_hint": "说明用途和品类:内衣、运动服、蕾丝等",
+      "key_phrases": ["It is for lingerie", "for sportswear", "for lining", "for car interior", "We need warp knit mesh"],
+      "common_mistakes": "warp knit(经编)≠ weft knit(纬编),不要说 'I want warp knit fabric' 又说 'I want jersey fabric',两者不同。",
+      "tips_zh": "经编 vs 纬编:经编稳定不易脱散,适合网眼、蕾丝、运动面料;纬编弹性好,适合 T 恤、内衣。",
+      "user_response_example": "Hello Linda, this is Emma from Lotus Lingerie. We need warp knit fabric for a bra cup line — power mesh, around 80 to 100 GSM."
+    },
+    {
+      "round": 2,
+      "ai_message": "Power mesh for bra cups — good. We run Karl Mayer HKS4 tricot machines and raschel machines. For power mesh, we usually use a 2-bar tricot with 40D spandex inlay. What is the target GSM?",
+      "ai_message_zh": "文胸 power mesh — 好的。我们用德国卡尔迈耶 HKS4 特里科经编机和拉舍尔经编机。power mesh 一般用 2 梳特里科 + 40D 氨纶衬纬。目标克重多少?",
+      "expected_user_response_hint": "确认克重和性能要求",
+      "key_phrases": ["Target GSM is ...", "Around 90 GSM", "We need 4-way stretch", "Good recovery is important"],
+      "common_mistakes": "GSM = grams per square meter,口语里读字母 'G-S-M',不要拼出全称。",
+      "tips_zh": "power mesh 克重 80-120 GSM,4 向弹力,氨纶含量 18-25%。",
+      "user_response_example": "Target GSM is 95. We need good 4-way stretch and high recovery — at least 90% recovery after 30% stretch. The cup has to hold its shape after 50 wash cycles."
+    },
+    {
+      "round": 3,
+      "ai_message": "95 GSM with 4-way stretch is standard. We use 40D spandex in both directions for true 4-way. About the warp yarn — we typically use 30D or 40D nylon. Which do you prefer?",
+      "ai_message_zh": "95 GSM 4 向弹力没问题。我们经纬都衬 40D 氨纶,做到真 4 向。经纱一般用 30D 或 40D 锦纶,您选哪个?",
+      "expected_user_response_hint": "选择经纱细度,讨论手感",
+      "key_phrases": ["30D is softer", "40D is more stable", "We need a soft hand feel", "Hand feel is more important than strength"],
+      "common_mistakes": "hand feel(手感)是一个完整短语,口语里 'hand' + 'feel' 不要拆开。",
+      "tips_zh": "30D 锦纶手感柔软,适合贴身内衣;40D 锦纶稳定性好,适合支撑结构。",
+      "user_response_example": "30D nylon, please — hand feel is the priority for bra cup. We can add a thin PU coating on the back for stability if needed."
+    },
+    {
+      "round": 4,
+      "ai_message": "30D nylon is good. We don't recommend PU coating for bra cup — it reduces breathability. Better to use 2 courses of 40D spandex inlay for stability. What's the color?",
+      "ai_message_zh": "30D 锦纶可以。文胸杯不建议 PU 涂层 — 会降低透气性。建议用 2 路 40D 氨纶衬纬增加稳定性。什么颜色?",
+      "expected_user_response_hint": "回答颜色,询问色牢度",
+      "key_phrases": ["Nude color", "Black and beige", "Pantone TCX color", "What about color fastness"],
+      "common_mistakes": "nude = 肤色,口语里就是 'nude' 或 'skin color',不是 'nude' 作'裸体' 那个意思。",
+      "tips_zh": "内衣 power mesh 颜色:肤、粉、白、黑为主,做 Pantone TCX(纺织)而非 TPX(印刷)。",
+      "user_response_example": "We need 4 colors: nude, light pink, white, and black. Pantone TCX, I'll send the codes. What's the color fastness for wash and light on this construction?"
+    },
+    {
+      "round": 5,
+      "ai_message": "On this 2-bar construction, wash fastness is grade 4 and light fastness is grade 4. We can hit grade 4-5 with a proper acid dye. For bulk, MOQ is 500 kg per color, lead time 25 days from lab dip approval.",
+      "ai_message_zh": "2 梳结构,水洗色牢度 4 级,耐光色牢度 4 级。用合适的酸性染料可以做到 4-5 级。大货 MOQ 每色 500 公斤,色样认可后 25 天交期。",
+      "expected_user_response_hint": "询问打样流程,确认时间",
+      "key_phrases": ["What's the lab dip lead time", "Can I get a hand sample first", "What is the sample yardage", "How much is the lab dip fee"],
+      "common_mistakes": "lab dip(染色小样)不是 'lab sample',专门用于对色。",
+      "tips_zh": "lab dip 流程:客户提供色号/Pantone → 工厂打色样(3-5 天) → 客户签样 → 大货生产。",
+      "user_response_example": "What's the lab dip lead time? And can I get a small hand sample first to check the hand feel before approving colors? What's the sample yardage and cost?"
+    },
+    {
+      "round": 6,
+      "ai_message": "Lab dip lead time is 5 days. Hand sample — we can send 1 meter of greige for your hand feel check, free of charge. Lab dip fee is US$30 per color, refundable on bulk order. Sound OK?",
+      "ai_message_zh": "色样 5 天。手感样 — 我们可以先寄 1 米坯布免费供您手感确认。色样费每色 30 美元,大货订单可冲抵。可以吗?",
+      "expected_user_response_hint": "确认打样安排,问包装方式",
+      "key_phrases": ["1 meter of greige is good", "Free of charge is great", "How is the fabric packed", "Tube or roll"],
+      "common_mistakes": "greige = 坯布(未染整),口语里 'greige' 读 /ɡreɪʒ/。",
+      "tips_zh": "坯布(greige)vs 成品布(finished fabric):手感样一般用成品,但开发阶段会用坯布省成本。",
+      "user_response_example": "1 meter of greige is good, free of charge is great. By the way, for the bulk order, how is the fabric packed — on tubes, double folded, or open width roll?"
+    },
+    {
+      "round": 7,
+      "ai_message": "We pack on 3-inch cardboard tubes, double folded, in polybags. Standard roll length is 30 meters. We can also do 50-meter rolls if you need longer. About the bulk, do you want a price for 1,000 kg or 3,000 kg?",
+      "ai_message_zh": "我们用 3 英寸纸管,对折,胶袋包装。标准卷长 30 米。如需更长可做 50 米。大货方面,您要 1000 公斤还是 3000 公斤的报价?",
+      "expected_user_response_hint": "确认订单量,询问价格",
+      "key_phrases": ["30-meter rolls are fine", "Price for 1,000 kg please", "What's the FOB price", "What's the payment term"],
+      "common_mistakes": "FOB price = 离岸价,后接港口名(FOB Ningbo / FOB Shanghai)。",
+      "tips_zh": "经编面料报价:FOB 港口 + 港口装柜 + 出口报关,价格含卷包装。",
+      "user_response_example": "30-meter rolls are fine. Please quote for 1,000 kg per color, FOB Ningbo. Standard TT 30/70 payment is OK. When can we have the offer?"
+    },
+    {
+      "round": 8,
+      "ai_message": "I can send the FOB Ningbo offer within 24 hours. Once you confirm the lab dip, we can start bulk. To close: lab dip 5 days, hand sample 3 days, bulk 25 days after lab dip approval, TT 30/70. Send me the Pantone codes and I'll start.",
+      "ai_message_zh": "FOB 宁波报价 24 小时内发您。色样确认后即可开始大货。总结:色样 5 天,手感样 3 天,色样确认后大货 25 天,TT 30/70。请发 Pantone 色号,我开始。",
+      "expected_user_response_hint": "确认流程,锁定下一步",
+      "key_phrases": ["I'll send the Pantone codes today", "Please send the offer by email", "Confirm by tomorrow", "Thanks Linda"],
+      "common_mistakes": "确认色样 sign-off 是 'approve the lab dip',不要简单说 'confirm the color'。",
+      "tips_zh": "lab dip approval 是大货启动的硬条件,签样要用邮件正式确认。",
+      "user_response_example": "I'll send the Pantone codes today by email. Please send the offer to emma@lotuslingerie.com. I'll confirm the lab dip within 2 days of receipt. Thanks Linda."
+    }
+  ]
+}

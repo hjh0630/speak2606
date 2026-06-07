@@ -1,0 +1,88 @@
+{
+  "scenario_id": "yarn_sourcing",
+  "scenario_title_en": "Yarn Sourcing",
+  "scenario_title_zh": "纱线采购",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Lisa here. Look, I've been thinking about your brief for the SS26 seamless line. Before I quote, I want to be upfront: 40s compact combed with 20% Lycra at 5,000 kg monthly is doable, but cashmere-touch melange is a different beast. Let me walk you through where we can really add value.",
+      "ai_message_zh": "Chen,我是 Lisa。你 SS26 无缝线的需求我看了。报价前先说清楚:40 支紧密精梳 + 20% 莱卡月单 5 吨能做,但仿羊绒混色纱是另一回事。让我讲讲我们真正能加值的地方。",
+      "expected_user_response_hint": "回应对方专业评估,聚焦高附加值产品",
+      "key_phrases": ["Walk me through it", "What can you offer", "Premium blend is ...", "cashmere-touch"],
+      "common_mistakes": "cashmere-touch melange(仿羊绒混色)不是真的 cashmere,是用超细腈纶 + 黏胶做的视觉手感替代品。",
+      "tips_zh": "Lycra 是英威达(原杜邦)的氨纶品牌名,行业习惯说 Lycra;通用词是 elastane / spandex。",
+      "user_response_example": "Walk me through it, Lisa. For SS26 we are launching a cashmere-touch line at 2,500 kg monthly — the rest is the standard 40s compact combed program. I want to know your real capability on the premium side."
+    },
+    {
+      "round": 2,
+      "ai_message": "On the premium side, we can do an 80/20 viscose-modal blend with 22% elastane, Nm 50/1, with a melange heather effect. The trick is we spin the melange at the roving stage using pre-blended fiber — way more even than fiber-dyed blending. Cost is around US$7.20 per kg.",
+      "ai_message_zh": "高附加值这块,我们可以做 80/20 黏胶/莫代尔 + 22% 氨纶,Nm 50/1,带混色麻灰效果。诀窍是我们在粗纱阶段用预混纤维纺纱,比散纤染色混纺均匀得多。价格大概每公斤 7.2 美元。",
+      "expected_user_response_hint": "追问工艺差异和价格细节",
+      "key_phrases": ["Nm 50/1", "melange", "fiber blending", "vs. fiber-dyed", "premium justification"],
+      "common_mistakes": "Nm 50/1 是公制纱支,50 公里纱重 1 公斤,数字越大纱越细。和英制 Ne 不要混算。",
+      "tips_zh": "散纤染色(fiber-dyed)做出的混色有彩点;预混纤维纺纱(pre-blended)做出的麻灰更均匀,手感更接近羊绒。",
+      "user_response_example": "Nm 50/1 melange at US$7.20 is in the right ballpark. How does the roving-stage blend compare to top-dyed fiber blending in terms of color consistency? I need to justify the premium to my merchandising director."
+    },
+    {
+      "round": 3,
+      "ai_message": "Color consistency is the differentiator. Top-dyed fiber blending typically has a CV of 8-12% on color shade — that's why you see mottle and barre on fabric. Our roving-stage pre-blend cuts the CV to under 4%. For a 2,500 kg monthly run, that means fewer claims and a tighter shade book.",
+      "ai_message_zh": "色稳定性是分水岭。散纤染色的混纺 CV 8-12%,所以你会看到布面斑点和 barry。我们粗纱阶段预混,CV 压到 4% 以内。每月 2.5 吨的量,意味着索赔更少、色卡更稳。",
+      "expected_user_response_hint": "讨论 CV 和 barry 问题",
+      "key_phrases": ["CV under 4%", "barry", "shade consistency", "fewer claims"],
+      "common_mistakes": "CV(coefficient of variation)即变异系数,数值越小越均匀。barry/ barre 是针织布面横档,常因纱线批差。",
+      "tips_zh": "barry 是横条/横档,常因不同批次的纱线混用或色差。CV 越低,barry 风险越小。",
+      "user_response_example": "CV under 4% is a strong story — and the barre issue has been a headache for us. Send me the lab data from your last three batches so I can put it in front of merchandising."
+    },
+    {
+      "round": 4,
+      "ai_message": "Will do. I'll send the QC report by tomorrow. Now on the standard 40s compact combed with 20% Lycra — to be straight, current cotton futures are pushing our cost up. Today I can offer US$5.85 per kg, but with a 30-day price validity only.",
+      "ai_message_zh": "好,明天把质检报告发你。再说标准 40 支紧密精梳 + 20% 莱卡 — 说实话,现在棉花期货在涨成本。今天可以报 5.85 美元/公斤,但有效期只有 30 天。",
+      "expected_user_response_hint": "讨论锁价或浮动价,期货对冲",
+      "key_phrases": ["30-day is too short", "hedge against futures", "floating price", "lock the price"],
+      "common_mistakes": "validity(报价有效期)和 shelf life(食品保质期)不要混。",
+      "tips_zh": "期货对冲 hedge:工厂在期货市场做反向操作,锁定原料成本,但会有 1-2% 风险金。",
+      "user_response_example": "30-day validity is too short — by the time my buyer signs off, the price is already off the table. Can you hedge on the cotton futures and give me 90-day validity? I'll pay the small premium."
+    },
+    {
+      "round": 5,
+      "ai_message": "I can hedge, but it costs about US$0.18 per kg, which I have to pass on. Or you can go floating, indexed to the ZCE cotton contract — that way you only pay the actual market move, plus a US$0.05 risk fee.",
+      "ai_message_zh": "可以对冲,但每公斤加 0.18 美元,得我转嫁给你。或者用浮动价,绑郑棉期货合约 — 这样你只付实际市场波动加 0.05 美元风险费。",
+      "expected_user_response_hint": "比较锁价与浮动价,选择机制",
+      "key_phrases": ["ZCE cotton", "floating index", "hedge premium", "I'll take floating"],
+      "common_mistakes": "ZCE(郑州商品交易所)是国内棉花期货;ICE Cotton(纽约)是美国基准。报价要明确基准。",
+      "tips_zh": "浮动价适合订单跨度大、对原料敏感的客户;锁价适合短平快的快时尚订单。",
+      "user_response_example": "Floating indexed to ZCE with the US$0.05 risk fee makes more sense for a 12-month program. Let's structure it that way — first shipment at today's price, then monthly reset against the ZCE average."
+    },
+    {
+      "round": 6,
+      "ai_message": "Smart. I can also offer a 5% volume rebate if you hit 60,000 kg cumulative over 12 months. Now — payment terms. For a floating-price contract, our standard is 30% TT deposit, 70% at sight LC. Will that work?",
+      "ai_message_zh": "聪明。如果 12 个月内累计 6 万公斤,我可以给 5% 返点。再说付款 — 浮动价合同,标准是 30% TT 订金 + 70% 即期信用证。可以吗?",
+      "expected_user_response_hint": "回应付款条件,讨论返点",
+      "key_phrases": ["LC at sight is fine", "30/70 TT", "volume rebate", "5% is acceptable"],
+      "common_mistakes": "volume rebate 是量返,不是 cash discount(现金折扣)。",
+      "tips_zh": "5% 量返在纱线行业是大客户级别,通常要求 12 个月累计量。",
+      "user_response_example": "30% TT and 70% LC at sight is standard, no issue. The 5% volume rebate is acceptable — but I want it as a credit note at year-end, not a price reduction. Cleaner for my accounting."
+    },
+    {
+      "round": 7,
+      "ai_message": "Credit note at year-end, fine. Two more things to nail down — first, cone weight and packaging. For seamless knitting, our standard is 1.5 kg cheese cones in cartons of 24. Does that match your machine setup?",
+      "ai_message_zh": "年终贷记通知,可以。再敲定两件事 — 第一,筒重和包装。无缝针织,我们标准是 1.5 公斤直筒,每箱 24 个。跟你的机器配套吗?",
+      "expected_user_response_hint": "确认筒重和包装",
+      "key_phrases": ["1.5 kg cheese", "24 cones per carton", "machine setup", "packaging specs"],
+      "common_mistakes": "cheese cone(直筒/奶酪筒)只是筒子纱的一种,还有 tapered cone(锥形筒)、hank(绞纱)等。",
+      "tips_zh": "无缝机一般用 cheese cone,筒重 1-2 kg,过重易变形。",
+      "user_response_example": "1.5 kg cheese works. 24 per carton — can you add a layer of stretch film and a desiccant? We had a humidity claim last summer from a different supplier."
+    },
+    {
+      "round": 8,
+      "ai_message": "Stretch film and desiccant, no problem. Last item — the testing protocol. We run Uster evenness and Classimat on every lot, but if you want SGS or Intertek pre-shipment testing, that adds 3 days and US$280 per shipment. Your call.",
+      "ai_message_zh": "缠绕膜和干燥剂,没问题。最后一项 — 测试。我们每批做乌斯特条干和 Classimat 纱疵分级。但如果你要 SGS 或 Intertek 装柜前测试,加 3 天,每次 280 美元。你定。",
+      "expected_user_response_hint": "决定是否要第三方测试,收尾",
+      "key_phrases": ["Uster is enough", "SGS is not needed", "third-party testing", "Close the deal"],
+      "common_mistakes": "Uster(乌斯特)是瑞士纺纱测试仪器品牌,行业内'乌斯特条干'是标准说法。",
+      "tips_zh": "Uster 测试覆盖条干 CV、粗细节、棉结;Classimat 给出纱疵分级 A/B/C/D。常规订单用厂内报告即可,大客户才上 SGS。",
+      "user_response_example": "Uster and Classimat from your in-house lab are sufficient for this program — we trust your data. Skip the third-party testing. Send me the draft contract tomorrow, and let's close this by Friday."
+    }
+  ]
+}

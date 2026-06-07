@@ -1,0 +1,58 @@
+{
+  "scenario_id": "sample_development",
+  "scenario_title_en": "Sample Development",
+  "scenario_title_zh": "款式开发/打样",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Sarah here. The pre-production sample is in our hands. Handfeel and stitching are great. But the dye shade is off — we're seeing a slightly bluer cast than the Pantone TPX 18-1664 you confirmed. What's going on?",
+      "ai_message_zh": "陈,Sarah。产前样到手了,手感和车缝都很好。但染色色光偏了 — 比我们确认的 Pantone TPX 18-1664 偏蓝一点。怎么回事?",
+      "expected_user_response_hint": "道歉 + 主动找根因 + 提方案",
+      "key_phrases": ["Apologies for the shade variance", "We will pull a lab dip on bulk fabric", "Yarn-dyed versus piece-dyed can cause a shift"],
+      "common_mistakes": "色光偏差(off-shade)是服装行业最常见的拒收原因之一,先认,再找根因:染料批次、固色温度、染整工艺。",
+      "tips_zh": "客户要 Pantone 色卡 TPX/TPG 编号,工厂要在大货前做 lab dip(实验室小样)给客户签。",
+      "user_response_example": "Apologies for the off-shade. I see what you mean — there's a cooler cast on the bulk. This is likely a dye-lot shift between the lab dip and the bulk run. We will pull a fresh lab dip tomorrow using the same bulk lot, and you should have it within 4 days."
+    },
+    {
+      "round": 2,
+      "ai_message": "OK, do that. But if the lab dip still doesn't match, we will need a full re-dye. Who's going to eat that cost?",
+      "ai_message_zh": "好,去做。但万一小样还是对不上,整批要重染,这个成本谁扛?",
+      "expected_user_response_hint": "提前谈清责任归属",
+      "key_phrases": ["If the off-shade is on our side, we absorb", "If it's within a Delta E of 1.5, we share", "Let's get the lab dip signed off first"],
+      "common_mistakes": "色差争议(cost of re-dye)经常出在责任划分上。提前用 Delta E 数值化公差(行业标准 ≤1.0),别事后扯皮。",
+      "tips_zh": "Delta E ≤ 1.0 = 肉眼几乎看不出;1.0-2.0 = 侧光能看出;≥ 2.0 = 明显偏色,通常要返工。",
+      "user_response_example": "If the off-shade exceeds Delta E 1.5 against the Pantone standard, the re-dye cost is on us. If it's within Delta E 1.5, we split it 50/50 — that's our standard. But let's get the lab dip signed off first before going there."
+    },
+    {
+      "round": 3,
+      "ai_message": "Fair enough. Now the measurement chart — the bulk sample's tolerance is wider than your tech-pack. Specifically, chest width is +2 cm at M. We agreed on +/- 1 cm. How did this happen?",
+      "ai_message_zh": "可以。还有尺寸表 — 大货样的公差比工艺单宽,M 码胸围 +2 厘米,我们说好的是 ±1 厘米。怎么搞的?",
+      "expected_user_response_hint": "分析是样板阶段偏差还是大货铺料问题",
+      "key_phrases": ["The pattern was within tolerance", "Bulk fabric may have stretched in cutting", "We will re-cut and re-sew for the next sample"],
+      "common_mistakes": "尺寸公差超差 +2cm,常见原因:样板 size set 偏大 / 大货面料有弹性松弛 / 铺料张力不均。不要随便给数字。",
+      "tips_zh": "返工前先测三个尺寸点确认是 systematic(系统性)还是 random(随机),系统性才返。",
+      "user_response_example": "The pattern itself was within +/- 0.5 cm. We suspect the bulk fabric stretched during spreading — 100 percent cotton can do that if not relaxed. We will let the fabric relax 24 hours, re-spread, and re-cut. Next sample should be on spec."
+    },
+    {
+      "round": 4,
+      "ai_message": "Fine. One more thing — I need an MSDS and a REACH compliance statement for this fabric. Our QC team is putting together the tech file for retail compliance.",
+      "ai_message_zh": "行。再一个 — 这块面料我需要 MSDS 和 REACH 合规声明。我们 QC 在整理零售合规的技术文件。",
+      "expected_user_response_hint": "提供测试报告或安排送检",
+      "key_phrases": ["We have a third-party SGS test report", "We can run REACH SVHC screening", "The MSDS is on file for this fabric composition"],
+      "common_mistakes": "REACH 是欧盟化学品法规,SVHC(高关注物质)清单会变,工厂报告最好 1 年内的。",
+      "tips_zh": "常见合规证书:Oeko-Tex Standard 100、REACH SVHC、ZDHC(零排放)、GOTS(有机棉)。不同市场要的不同。",
+      "user_response_example": "We have a current Oeko-Tex Standard 100 certificate and an SGS REACH SVHC test report, both issued this year — I can send the PDFs. If you need a fresh MSDS for this specific dye lot, our mill can issue one in 5 business days."
+    },
+    {
+      "round": 5,
+      "ai_message": "Send what you have. Last thing — sample yardage billing. We agreed on a free first sample, but you've charged USD 80 for the courier. Who pays the DHL?",
+      "ai_message_zh": "把现有的发我。最后 — 样布费用。我们说好首样免费,但 DHL 快递费 USD 80 写在了账单上,谁出?",
+      "expected_user_response_hint": "澄清 sample 免费的边界 + 快递费惯例",
+      "key_phrases": ["The first sample is free, but courier is on the buyer", "We can split courier for repeat orders", "Standard industry practice is buyer pays DHL"],
+      "common_mistakes": "首样免费通常指 sample fee,但 courier fee(快递费)分摊,行业惯例是买方付。",
+      "tips_zh": "样衣费用结构:sample fee(打样费)+ pattern fee(版费)+ courier fee(快递费)。大客户全免,小客户分摊。",
+      "user_response_example": "The first sample is free — that's the sample fee. Courier is on the buyer, that's industry standard. If you'd like, we can deduct the USD 80 from your first bulk order. Otherwise, I'll mark it as buyer-borne on the next invoice."
+    }
+  ]
+}

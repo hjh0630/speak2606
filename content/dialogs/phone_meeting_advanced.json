@@ -1,0 +1,88 @@
+{
+  "scenario_id": "phone_meeting",
+  "scenario_title_en": "Phone Meeting",
+  "scenario_title_zh": "电话会议",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hey Chen, Mark here. Got a minute? I just got off a call with our merchandising director — looks like the Q3 buy has been pulled forward by three weeks. I need to know if you can realistically hit a 35-day lead time on the knit program. No sugar-coating, what's the honest answer?",
+      "ai_message_zh": "Chen,在吗?我刚跟商品总监开完会,Q3 的订单提前了三周。你针织项目能不能做到 35 天交期?实话实说。",
+      "expected_user_response_hint": "直面问题,根据面料备货和产线情况给出诚实答案,有条件的话给替代方案",
+      "key_phrases": ["Honestly ...", "It depends on ...", "Realistically ...", "We can pull it off if ..."],
+      "common_mistakes": "no sugar-coating(别美化)语气很直接,回答时不要敷衍或过度承诺。",
+      "tips_zh": "高级别对话里客户会问'说真话',这时要给 honest answer + conditions,而不是 yes/no。",
+      "user_response_example": "Honestly, 35 days is tight — we'd need yarn already in-house and dyeing slots reserved in advance. If you can give me a confirmed PO within the next 5 days, we can hit it. If it's longer than that, I'd rather commit to 42 days and not miss it."
+    },
+    {
+      "round": 2,
+      "ai_message": "Appreciate the candor. Let me push internally for a fast-track PO. But our merchandising team is also asking why we should consolidate with you when our current vendor gives us 60 days of net terms. What's your position on payment terms?",
+      "ai_message_zh": "感谢坦诚。我会内部推动加急下单。但我们商品团队也在问,凭什么转到你们这,现在的供应商给我们 60 天 net terms 账期。你们付款条件怎么说?",
+      "expected_user_response_hint": "解释付款方式(常见 TT 30/70),可让步但要换条件,比如缩短账期换大单",
+      "key_phrases": ["Standard terms are ...", "We can offer ...", "in lieu of ...", "stretch on payment terms"],
+      "common_mistakes": "net 30 / net 60 是西方式的 open account(赊账),中国外贸工厂一般不做,要做就让步换条件。",
+      "tips_zh": "大客户要 60 天账期是硬条件,工厂不能直接答应。可以提议:30% TT 预付 + 70% 见提单副本付,或 50/50。",
+      "user_response_example": "Our standard terms are 30% TT deposit, 70% against B/L copy. We don't typically run open account, but for a committed annual volume of, say, US$500K, we can stretch to 20/80 on repeat orders. Cash flow is the lifeblood of a factory — I'd rather be upfront than promise something we can't deliver."
+    },
+    {
+      "round": 3,
+      "ai_message": "Fair enough. Let's not get ahead of ourselves — first we need to clear the sample approval. By the way, did the lab dip we sent last week reach you? Our colorist says the navy is off — wants it pushed greener.",
+      "ai_message_zh": "合理。先把样品搞定再说。上周我们寄的对色样到了没?我们调色师说藏青色偏了,要往绿调一些。",
+      "expected_user_response_hint": "确认收到色样,讨论改色方案,提供 dE 数值等专业表达",
+      "key_phrases": ["Lab dips came in", "We can re-dye ...", "We can push the shade greener", "colorfastness to light"],
+      "common_mistakes": "lab dip / lab swatch / lab-dip sample 都行,口语里说 lab dips came in 即可。",
+      "tips_zh": "高级别对话里谈颜色,会涉及 dE(CIELab 色差)、light fastness(耐光色牢度)、wash fastness(耐洗色牢度)等指标。",
+      "user_response_example": "Lab dips came in on Monday. We compared them against your standard — the dE is around 1.2, but I agree it reads slightly redder under D65 light. We can re-dye a greener batch by Thursday and re-submit. Honestly, this is a 2-handle tweak, not a major shade change."
+    },
+    {
+      "round": 4,
+      "ai_message": "Good. Send them over and copy my colorist Rachel — rachel.lin@abctrading.com. One more thing: the buyer is pushing hard on sustainability. Do you have any recycled or organic options, and can you back it up with certifications?",
+      "ai_message_zh": "好,寄出来的时候抄送我们调色师 Rachel — rachel.lin@abctrading.com。还有一件事:买家现在对可持续性要求很高。你们有再生或有机面料吗?有认证吗?",
+      "expected_user_response_hint": "介绍有机棉 / 再生涤纶 / GRS / GOTS / OCS 认证",
+      "key_phrases": ["GOTS-certified organic cotton", "GRS for recycled polyester", "We can provide ...", "transaction certificate"],
+      "common_mistakes": "GOTS(有机)、GRS(再生)、OCS(有机含量)、RCS(再生含量)是不同标准,别混。",
+      "tips_zh": "可持续认证:GOTS(全流程有机纺织)、GRS(全球回收标准)、OCS(有机含量声明)、RCS(回收声明)。要备好 scope certificate(范围证书) + transaction certificate(交易证书)。",
+      "user_response_example": "Yes — we run GOTS-certified organic cotton and GRS for recycled polyester blends, both with valid scope certificates. We can also issue a transaction certificate at shipment for traceability. For a 10,000-piece run, the cost premium is roughly 12-18% over conventional, depending on the fiber mix."
+    },
+    {
+      "round": 5,
+      "ai_message": "That's workable. Now let me put the squeeze on you — Target is benchmarking us on FOB, and we need to land below US$7.80 on this style. Your last quote was US$8.20. Where can you really go?",
+      "ai_message_zh": "行,这个可以谈。现在压一下价:Target 在比我们的 FOB,这款要压到 7.8 美元以下。你们上次报 8.2 美元,真正能到多少?",
+      "expected_user_response_hint": "分解成本,告诉客户能挤的空间,以及配套条件",
+      "key_phrases": ["Let me break down the cost", "We can shave ...", "if we go to ...", "I'll be straight with you"],
+      "common_mistakes": "Where can you really go 是'底价是多少',不是'你要去哪里',不要按字面理解。",
+      "tips_zh": "高级议价要给 cost breakdown:yarn cost + dyeing + trimming + labor + overhead + margin。客户看到细节更容易接受让步。",
+      "user_response_example": "Let me break it down for you. Yarn is 38%, dyeing 14%, trims 9%, labor 22%, overhead 7%, and our margin is 10%. To hit US$7.80, we need to drop the yarn from 32s combed to 30s semi-combed, and use bulk-dyed yarn instead of piece-dyed. That saves about 4% on fabric cost. We can hit US$7.95 on those specs — US$7.80 isn't doable without taking a loss."
+    },
+    {
+      "round": 6,
+      "ai_message": "US$7.95 with semi-combed yarn, but Target's spec says combed. Can you do combed at US$8.05 as a final offer, with a 60-day LC at sight instead of TT?",
+      "ai_message_zh": "7.95 美元用半精梳可以,但 Target 工艺单写的是精梳。8.05 美元精梳能做的吧?付款方式从 TT 改成 60 天即期信用证?",
+      "expected_user_response_hint": "讨论 LC 60 days at sight 的成本和风险,给出有条件答复",
+      "key_phrases": ["LC 60 days at sight", "We usually work with ...", "LC discounting cost", "I'll have to check with our finance"],
+      "common_mistakes": "LC at sight = 即期信用证(见单即付);LC 60 days = 远期信用证(见单后 60 天付款),对工厂是延迟收款。",
+      "tips_zh": "LC 60 days 工厂要承担 60 天的资金成本,通常会加价 0.5-1% 或者要求 LC at sight。如果接受,要确认开证行是国际一流银行。",
+      "user_response_example": "Combed at US$8.05 is doable. On the LC — we usually work with LC at sight, or LC 30 days. LC 60 days carries a financing cost of roughly 1.2% for us. We can accept LC 60 days at sight if you can add 1% to the unit price, or if you can confirm a confirmed irrevocable LC from a top-tier bank like Citi or HSBC."
+    },
+    {
+      "round": 7,
+      "ai_message": "Done — US$8.05, combed, LC 60 days at sight from Citi. I'll instruct our finance team to issue the LC this week. Send me the PI in the next 24 hours so we can move. By the way, can you absorb the lab-dip and proto-sample costs? It's table stakes in our market.",
+      "ai_message_zh": "成交:8.05 美元,精梳,Citi 的 60 天即期信用证。我让财务这周开证。你 24 小时内把 PI 发我,我们推进。另外,对色样和初样的费用你们能吸收吗?这是行业惯例。",
+      "expected_user_response_hint": "回复样品费惯例,主动给让步以促成大单",
+      "key_phrases": ["Sample cost is ...", "refundable against bulk order", "Free of charge for ...", "I'll waive it this time"],
+      "common_mistakes": "absorb the cost 是'承担/吸收成本',不是'理解成本'。",
+      "tips_zh": "样品费惯例:lab dip / proto sample(初样) 多由工厂承担,bulk sample(大货样) 由客户付费。可要求客户在 bulk 订单时返还(refundable against bulk order)。",
+      "user_response_example": "Our standard policy is that lab dips and proto samples are free of charge, and the cost is amortized into the bulk price — which is what we've already done in the US$8.05. Pre-production samples are typically on the customer's account, but I'll waive the courier fee this time as a one-time gesture for the first order. I'll have the PI in your inbox by tomorrow noon."
+    },
+    {
+      "round": 8,
+      "ai_message": "That's why I like working with you, Chen. One more curveball — our compliance team flagged that you need to sign our Code of Conduct before the LC can be issued. It's a 12-page doc. Can you turn that around by Friday?",
+      "ai_message_zh": "这就是我喜欢和你合作的原因,Chen。再来一个突发状况:我们合规团队说你们要先签我们的行为准则才能开证,12 页文档。周五前能搞定吗?",
+      "expected_user_response_hint": "承诺审阅,主动请求 highlight 关键条款,而不是简单 yes",
+      "key_phrases": ["I'll have legal review it", "Could you flag the ...", "key clauses", "We'll sign and return by ..."],
+      "common_mistakes": "turn around 在这里不是'转身走',而是'完成/交付'。",
+      "tips_zh": "高级别对话中,大客户的 Code of Conduct(行为准则)通常包括:反贿赂、反童工、强迫劳动、骚扰、薪资工时、环境保护等。工厂法务要先 review 再 sign。",
+      "user_response_example": "I'll have our legal and HR teams review it by Thursday. Could you flag any clauses that have changed from the version we signed two years ago, especially around subcontracting and migrant worker treatment? We'll sign and return by Friday EOD, with a redline if there's anything we need to discuss. Send it over and let's get this done."
+    }
+  ]
+}

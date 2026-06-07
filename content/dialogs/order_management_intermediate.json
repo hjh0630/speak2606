@@ -1,0 +1,88 @@
+{
+  "scenario_id": "order_management",
+  "scenario_title_en": "Order Management",
+  "scenario_title_zh": "订单沟通",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, James from Pacific Apparel. I am ready to discuss the order. We want to place 2,000 pcs of men's shirts per color, 4 colors, total 8,000 pcs. FOB Shanghai. But we have a tight timeline — we need the goods in Sydney by 15 October for our retail launch.",
+      "ai_message_zh": "你好,我是 Pacific Apparel 的 James。想和你谈订单。男款衬衣每个色 2 千件,4 个色,总共 8 千件,FOB 上海。但时间很紧,10 月 15 号货要到悉尼,我们要赶零售首发。",
+      "expected_user_response_hint": "确认订单细节,评估时间可行性",
+      "key_phrases": ["8,000 pcs in 4 colors", "lead time assessment", "production capacity", "cut-off date"],
+      "common_mistakes": "8 千件 4 色的订单,要确认工厂有没有 4 条 color line 的产能,不能只算总件。",
+      "tips_zh": "生产排产要看 color line,不是只看总件数;分色越多,换线次数越多,交期越长。",
+      "user_response_example": "Hi James, thanks for the heads up. 8,000 pcs in 4 colors, FOB Shanghai, ETA 15 October. Let me walk through the math: today is 5 June, so we have 132 days. Production needs 30 to 35 days, plus 5 days for lab dip, plus 18 days transit. We can do it, but tight — we need to lock the lab dip by mid-June."
+    },
+    {
+      "round": 2,
+      "ai_message": "Good. About the PI — we need it in US dollars, with TT 30/70 payment term. The deposit is 30% upon PI signing, balance 70% against B/L copy. Can you confirm our bank details will be on the PI?",
+      "ai_message_zh": "好。PI 方面,我们要用美元,付款方式 TT 30/70。30% 定金在 PI 签字后付,70% 尾款凭 B/L 副本。PI 上能附上我们收款银行信息吗?",
+      "expected_user_response_hint": "回应 PI 细节,确认付款条款和银行信息位置",
+      "key_phrases": ["PI in USD", "TT 30/70 confirmed", "bank details for receiving deposit", "B/L copy for balance"],
+      "common_mistakes": "PI 上要写两种银行信息:客户付定金到我司账户(收款),和工厂付款给供应商(付款)。",
+      "tips_zh": "PI 至少要写 7 项:卖方、买方、规格、数量、单价、总价、付款方式、交期、有效期。",
+      "user_response_example": "PI in USD, TT 30/70 — both noted. Yes, I will include our bank details for receiving the deposit. I will also include our SWIFT code, beneficiary name, and bank address. The balance 70% is against B/L copy — that is our standard term for accounts in good standing."
+    },
+    {
+      "round": 3,
+      "ai_message": "Great. I will sign the PI and arrange the deposit. One more question — what is your cut-off date for the shipping container? We may want to use a specific carrier to coordinate with our warehouse.",
+      "ai_message_zh": "好。我会签 PI 并安排定金。再问下,你们出运的截港日是什么时候?我们可能要用指定的船公司,方便配合我们仓库。",
+      "expected_user_response_hint": "讨论截港、订舱、船公司",
+      "key_phrases": ["cut-off date", "shipping line", "booking confirmation", "freight forwarder"],
+      "common_mistakes": "截港日(cut-off)是货进码头的最后期限,不是开船日,差 2-3 天。",
+      "tips_zh": "截港(cut-off)分:CY cut-off(整柜进码头)、VGM cut-off(重量申报)、文档 cut-off(提单确认)。",
+      "user_response_example": "Cut-off date for the CY container is 2 days before ETD. We usually book with COSCO or OOCL for Australia routes, but we can use your nominated forwarder if you prefer. Just give us the booking contact and the preferred ETD. I will confirm the cut-off once the booking is made."
+    },
+    {
+      "round": 4,
+      "ai_message": "We will use DB Schenker for the freight. They are our nominated forwarder. Please send them the cargo ready date as soon as cutting starts. For the B/L, can you do 'to order' B/L with our company as the notify party?",
+      "ai_message_zh": "我们用 DB Schenker 安排海运,是我们指定的货代。裁剪开始时把 cargo ready date 发给他们。提单能做成 'to order' 抬头,我们公司做 notify party 吗?",
+      "expected_user_response_hint": "讨论货代、提单抬头、notify party",
+      "key_phrases": ["to order B/L", "notify party", "consignee blank", "B/L endorsement"],
+      "common_mistakes": "B/L 抬头 consignee 留空 = to order,议付时需要背书;不要把 consignee 写成客户名。",
+      "tips_zh": "to order B/L = 凭指示提单,consignee 留 blank,notify party 写具体公司。",
+      "user_response_example": "Yes, we can do to order B/L with Pacific Apparel as the notify party. Consignee will be left blank, and the B/L will need your endorsement for release. We will send the draft B/L to your forwarder DB Schenker for review 48 hours before the cut-off."
+    },
+    {
+      "round": 5,
+      "ai_message": "Perfect. Now, on production tracking — we want to be on the weekly call. Every Tuesday 10 am Sydney time, can your team join for a 30-minute status update?",
+      "ai_message_zh": "好。生产跟踪方面,我们要进周会。每个周二悉尼时间上午 10 点,你们团队能加一个 30 分钟的进度会吗?",
+      "expected_user_response_hint": "确认周会时间,讨论议程和时区",
+      "key_phrases": ["Tuesday 10 am Sydney time", "8 am Beijing time", "weekly call agenda", "status update"],
+      "common_mistakes": "悉尼是 UTC+10(冬令时)/ +11(夏令时),北京是 UTC+8,差 2-3 小时,提前算好。",
+      "tips_zh": "Sydney 与 Beijing 差 2-3 小时,Sydney 10 am = Beijing 7-8 am,要双方都合适。",
+      "user_response_example": "Tuesday 10 am Sydney time is 7 am Beijing time — that works for us. I will set up a recurring call with a fixed agenda: cutting %, sewing %, finishing %, any issues, and next-week plan. I will send the invite today. Our production manager and I will be on the call."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK, invite received. Moving to OEM vs ODM — for this order, are we doing OEM or ODM? I want to be clear on the design ownership.",
+      "ai_message_zh": "好,收到邀请了。换个话题,OEM 还是 ODM?我想要明确一下设计归属。",
+      "expected_user_response_hint": "解释 OEM vs ODM,确认设计归属和样衣责任",
+      "key_phrases": ["OEM in this case", "design is yours", "we produce against your tech pack", "ODM needs separate agreement"],
+      "common_mistakes": "OEM = 我们按你的设计生产;ODM = 我们设计你贴牌;两者 IP 归属不同。",
+      "tips_zh": "OEM 订单:tech pack 由客户出,工厂负责打样和生产;ODM 订单:工厂出设计,客户选款。",
+      "user_response_example": "This is clearly an OEM order. You provide the tech pack, the artwork, and the spec — we produce against it. The design and IP are 100% yours. ODM would be a separate discussion, with a side letter on IP. For now, OEM is straightforward and the PI reflects that."
+    },
+    {
+      "round": 7,
+      "ai_message": "Clear. Now, on documents — for the shipment, we will need commercial invoice, packing list, B/L, certificate of origin, and the GSP form A for Australia. Can you prepare all of these?",
+      "ai_message_zh": "明白。单证方面,出运我们要商业发票、装箱单、提单、产地证和 GSP 澳大利亚格式 A。这些都能准备吗?",
+      "expected_user_response_hint": "确认全套单证,讨论产地证和 GSP",
+      "key_phrases": ["commercial invoice", "packing list", "C/O", "Form A", "GSP"],
+      "common_mistakes": "中国对澳大利亚没有 GSP Form A,澳洲认可的是 China-Australia FTA(中澳自贸区)原产地证。",
+      "tips_zh": "中澳自贸区生效后,中澳 FTA 原产地证可享零关税;Form A 是给发展中国家的普惠制,中澳间不适用。",
+      "user_response_example": "Yes, we can prepare the full set: commercial invoice, packing list, B/L, and China-Australia FTA Certificate of Origin. For Australia, it is the FTA certificate, not the GSP Form A — China is no longer a GSP beneficiary for Australia under the current FTA framework. The FTA cert gives you zero tariff."
+    },
+    {
+      "round": 8,
+      "ai_message": "Good catch on the FTA — my logistics team was about to ask for Form A. To summarize: PI signed this week, deposit paid Monday, production 35 days, ETD 28 September, ETA Sydney 15 October, weekly call Tuesday 10 am Sydney, full document set with FTA cert. Anything else?",
+      "ai_message_zh": "对,FTA 这个提醒得好 — 我物流团队本来要 Form A。总结一下:本周签 PI,周一定金,生产 35 天,ETD 9 月 28 日,ETA 悉尼 10 月 15 日,周二上午 10 点悉尼时间周会,单证含 FTA 产地证。还有别的吗?",
+      "expected_user_response_hint": "做 closing summary,确认所有时间点",
+      "key_phrases": ["To summarize", "key dates confirmed", "looking forward to working with you", "closing"],
+      "common_mistakes": "closing 时一定要把所有数字念一遍,确认双方理解一致,避免邮件来回。",
+      "tips_zh": "标准 closing:回顾关键时间点、明确下一步动作、感谢客户、留下联系方式。",
+      "user_response_example": "To summarize and confirm: PI signed this week, deposit wired Monday, production starts after lab dip approval mid-June, 35-day lead time, ETD 28 September, ETA 15 October, weekly call Tuesday 8 am Beijing time, documents with FTA cert. All looks good. Looking forward to working with you, James. Talk to you on Tuesday's call."
+    }
+  ]
+}

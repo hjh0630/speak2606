@@ -1,0 +1,58 @@
+{
+  "scenario_id": "logistics_shipping",
+  "scenario_title_en": "Logistics, Shipping & Documents",
+  "scenario_title_zh": "物流/船期/单证",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, this is Daniel. Our forwarder just told us the NYC-bound vessel is fully booked for next week. What's our plan B?",
+      "ai_message_zh": "陈,我 Daniel。我们货代说下周去纽约的船没舱位了,有 B 方案吗?",
+      "expected_user_response_hint": "回应问题,提供替代方案或交涉空间",
+      "key_phrases": ["Let me check with our forwarder", "We have an alternative via ...", "Sailing on the 22nd to Long Beach instead"],
+      "common_mistakes": "不要只说 'We'll figure it out'。客户问 plan B,需要具体方案:转港、走其他船公司、加钱订舱。",
+      "tips_zh": "缺舱时常规操作:转相近船期 / 转附近港口再陆运 / 接受加价。给客户选项,不要单选。",
+      "user_response_example": "Let me check with our forwarder now. I see two options: MSC has a sailing on the 22nd to Long Beach with transshipment to NYC, or Maersk has a direct slot to Newark on the 25th. Which one works better for you?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Long Beach is fine if it's faster. But I need an updated ETD and ETA in writing by end of day.",
+      "ai_message_zh": "长滩可以,只要更快。但今天下班前我要书面的 ETD 和 ETA。",
+      "expected_user_response_hint": "确认能提供并设定期限",
+      "key_phrases": ["I will email you by ...", "Tentative ETD is ...", "ETA will be ..."],
+      "common_mistakes": "tentative(暂定)vs confirmed(确认):给客户前要明确标注,免得后面翻脸。",
+      "tips_zh": "正式报价 / 船期 / 装柜日,落文字,口头不算。",
+      "user_response_example": "Will do. Tentative ETD Ningbo is the 22nd, ETA Long Beach around the 11th of next month. I will email you the official update by 5 PM today."
+    },
+    {
+      "round": 3,
+      "ai_message": "Good. Now the stuffing — our QC wants to do a pre-shipment inspection on Friday morning. Will the cargo be ready?",
+      "ai_message_zh": "行。装柜这边,我们的 QC 周五上午要做一次装柜前检验,货能好吗?",
+      "expected_user_response_hint": "协调生产、QC、装柜时间",
+      "key_phrases": ["Cargo will be ready by ...", "We can arrange the inspection on ...", "Please confirm the inspector's arrival time"],
+      "common_mistakes": "PSI(Pre-Shipment Inspection)不是客人随便来的 — 要走正式流程,定好时间和人员。",
+      "tips_zh": "装柜前检验要提前 24-48 小时确认货物已入库、外箱唛头清晰可读。",
+      "user_response_example": "Yes, production finishes Thursday afternoon, and the cartons will be in our warehouse by Thursday evening. We can arrange the PSI on Friday morning at 9 AM. Please confirm the inspector's arrival time."
+    },
+    {
+      "round": 4,
+      "ai_message": "The inspector will arrive at 9:30. Make sure your QC manager is on site. By the way, can we do telex release this time? Last time the original B/L took forever to reach us.",
+      "ai_message_zh": "检验员 9:30 到。确保你们 QC 主管在场。另外这票能走电放吗?上次正本提单寄得太慢了。",
+      "expected_user_response_hint": "确认电放可行并说明电放条件",
+      "key_phrases": ["Yes, we can do telex release", "Once the B/L is issued, the ... will be released", "A telex release fee of ..."],
+      "common_mistakes": "电放(目的港船公司直接放货给收货人)前提:客户已付款或信用证相符,别一上来就答应。",
+      "tips_zh": "电放风险:提单失去物权凭证作用。TT 款到齐或 LC 兑付后才建议电放。",
+      "user_response_example": "Yes, we can arrange telex release. Once we receive your full payment, the shipping line will release the B/L to your forwarder at destination. The telex release fee is USD 25."
+    },
+    {
+      "round": 5,
+      "ai_message": "OK. Last question — for the C/O, our customs broker says we need a 'single country of origin' declaration. Is everything made in China?",
+      "ai_message_zh": "好。最后一个问题:产地证,我客户报关行说需要 '单一原产地' 声明。所有货物都是中国产的对吧?",
+      "expected_user_response_hint": "确认原产国并说明单据合规性",
+      "key_phrases": ["Yes, 100 percent produced in China", "The C/O will state 'Made in China'", "No third-country materials involved"],
+      "common_mistakes": "如果用了第三国原料(比如越南的拉链、印度的纽扣),产地证得如实申报,不能含糊。",
+      "tips_zh": "美国海关严查原产地欺诈,Form A 错填可能整批被退或罚款,别图省事。",
+      "user_response_example": "Yes, the garments are 100 percent assembled in our factory in Zhejiang, and all trims are sourced domestically. The C/O will state 'Made in China' accordingly."
+    }
+  ]
+}

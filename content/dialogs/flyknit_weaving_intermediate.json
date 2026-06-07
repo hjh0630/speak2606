@@ -1,0 +1,88 @@
+{
+  "scenario_id": "flyknit_weaving",
+  "scenario_title_en": "Flyknit Weaving",
+  "scenario_title_zh": "飞织",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, this is Daniel from Apex Flyknit Lab. Our merchandising team passed me your inquiry — a marathon racing upper, gauge E18, under 28 grams. Let's talk specs.",
+      "ai_message_zh": "你好,我是 Apex 飞织实验室的 Daniel。业务部转了您的询盘 — 马拉松竞速鞋面,E18,目标克重 28 克以下。我们谈一下规格。",
+      "expected_user_response_hint": "确认关键参数,提出新需求或调整",
+      "key_phrases": ["Let me confirm the spec", "28 grams is the stretch target", "We can do 30 grams with E15", "What is your lead time for the sample"],
+      "common_mistakes": "marathon racing(马拉松竞速)用 E15-E18,日常 running 用 E14-E15,不要混淆。",
+      "tips_zh": "竞速鞋面极轻,E18 是常用机号,密度紧,功能分区全靠编程。",
+      "user_response_example": "Let me confirm: 28 grams or under per upper, gauge E18, with TPU yarn reinforcement in the eyestay and a transparent mono-mesh on the medial side. Can you meet that?"
+    },
+    {
+      "round": 2,
+      "ai_message": "28 grams with E18 is tight — that's racing spec. We can hit it with 50D polyester plus 20D spandex and a very open jacquard structure. But sample lead time is 14 days and the mold cost is higher at E18.",
+      "ai_message_zh": "E18 28 克很有挑战 — 这是竞赛级。我们用 50D 涤纶 + 20D 氨纶,搭配大开口提花结构可以做到。但打样 14 天,模具费也更高。",
+      "expected_user_response_hint": "询问更具体的工艺细节和成本",
+      "key_phrases": ["What is the mold cost difference", "Can we do a strike-off first", "How do you control the 28 gram target", "What is the yield on the machine"],
+      "common_mistakes": "strike-off(打样)用在小样片上,flyknit 打样是 whole-upper sample,不是 strike-off。",
+      "tips_zh": "E18 飞织模具编程时间长,通常多收 30-50% 程序费,要在 RFQ 阶段问清楚。",
+      "user_response_example": "Understood on the lead time. What is the mold cost difference between E15 and E18? And do you have yield data on E18 — what's the typical first-piece pass rate?"
+    },
+    {
+      "round": 3,
+      "ai_message": "Mold cost is US$2,500 for E15 and US$3,800 for E18. Yield on E18 in our experience is about 78-82% first-piece pass. We do in-line inspection at every 50 pieces.",
+      "ai_message_zh": "模具费 E15 是 2500 美元,E18 是 3800 美元。E18 的首件合格率我们大概 78-82%。我们每 50 件做一次在线检验。",
+      "expected_user_response_hint": "讨论良率和首件合格率,询问质量控制细节",
+      "key_phrases": ["78% is a bit low for us", "What are the main defects", "How do you handle off-spec pieces", "Can we agree on a 90% target"],
+      "common_mistakes": "off-spec = 不合格,口语里 'off-spec' 比 'defective' 更专业。",
+      "tips_zh": "E18 飞织首件合格率行业平均 75-85%,可以通过模具优化和工艺调试提升。",
+      "user_response_example": "78% first-piece pass is a bit low. What are the main defects — is it holes, yarn breaks, or pattern issues? We need to agree on a 90% target before sample approval."
+    },
+    {
+      "round": 4,
+      "ai_message": "Main defects at E18 are yarn breaks and float skips. We can hit 88-90% with two rounds of pattern tuning. We suggest a counter-sample after the first sample to lock the program.",
+      "ai_message_zh": "E18 主要疵点是断纱和跳纱。两轮花型调试后可以做到 88-90%。建议第一版样品后做一次 counter-sample,锁定程序。",
+      "expected_user_response_hint": "讨论 counter-sample 流程和时间表",
+      "key_phrases": ["Counter-sample sounds reasonable", "How long does the counter-sample take", "What is the cost for the counter-sample", "Let's set milestones"],
+      "common_mistakes": "counter-sample 是 '确认样',不是 '反样',不要直译。",
+      "tips_zh": "counter-sample 是飞织开发流程关键节点,确认后程序冻结,大批量按此生产。",
+      "user_response_example": "Counter-sample makes sense. How long does the counter-sample take after we approve the first sample, and is there an extra charge? Let's set milestones — sample in 14 days, counter-sample in 7 days, then bulk."
+    },
+    {
+      "round": 5,
+      "ai_message": "Counter-sample is 7 working days, no extra charge if the program change is under 10%. For changes over 10%, we charge US$200 per round. Bulk lead time is 35 days from deposit and counter-sample approval.",
+      "ai_message_zh": "counter-sample 7 个工作日,程序改动 10% 以内不另收费。超过 10% 每轮 200 美元。大货交期是定金 + counter-sample 确认后 35 天。",
+      "expected_user_response_hint": "确认批量生产细节,询问付款方式",
+      "key_phrases": ["35 days is acceptable", "What is the payment term", "TT 30/70 standard", "Can you do 25/75", "What about the size run"],
+      "common_mistakes": "size run = 尺码配比,口语里说 'size run' 不是 'size list'。",
+      "tips_zh": "size run 在跑鞋里通常是 US 7-12,男款 7-12 7 档,需提前给工厂尺码配比。",
+      "user_response_example": "35 days is fine. Payment term — let's go TT 30/70 standard. I will send the size run separately. By the way, can you accommodate a heel counter with hot-pressed TPU, or do you only do knitted-in counter?"
+    },
+    {
+      "round": 6,
+      "ai_message": "We do both. Knitted-in counter is lighter and seamless, but the heel lock is softer. Hot-pressed TPU counter is more rigid — better for marathon racing. Which do you prefer?",
+      "ai_message_zh": "两种都能做。编织港宝更轻、零接缝,但后跟锁定偏软。热压 TPU 港宝更硬 — 适合马拉松竞速。您的偏好?",
+      "expected_user_response_hint": "选择 counter 工艺,讨论细节",
+      "key_phrases": ["We need hot-pressed TPU for racing", "Knitted-in is fine for lifestyle", "What is the additional cost", "Weight difference between the two"],
+      "common_mistakes": "heel lock = 后跟锁定(后跟包紧度),不是 'heel stick'。",
+      "tips_zh": "竞速鞋优先 hot-pressed TPU counter,lifestyle 鞋优先 knitted-in counter,看性能与成本平衡。",
+      "user_response_example": "We need hot-pressed TPU for racing — heel lock is critical at 3-hour marathon pace. What is the weight difference and the cost difference per pair?"
+    },
+    {
+      "round": 7,
+      "ai_message": "Hot-pressed TPU counter adds 4 grams and US$0.45 per pair. For the racing version, we recommend 0.8 mm TPU film, 60 mm height. We can source the TPU film or you can supply it.",
+      "ai_message_zh": "热压 TPU 港宝增加 4 克,每双 0.45 美元。竞速版推荐 0.8 毫米 TPU 膜,高 60 毫米。TPU 膜我们可以采购,您也可以指定供应商。",
+      "expected_user_response_hint": "讨论 TPU 来源与上工序衔接",
+      "key_phrases": ["We will supply the TPU film", "Please source from your approved supplier", "What is the lead time for the TPU", "Can you do a counter sample with both options"],
+      "common_mistakes": "TPU film = TPU 膜,口语里 'film' 比 'sheet' 常用。",
+      "tips_zh": "TPU 膜厚度 0.6-1.0 mm,品牌指定厚度和硬度(Shore A),要和工厂确认上工序衔接。",
+      "user_response_example": "We will supply the TPU film from our approved vendor — it's a specific 0.8 mm Shore A 85 grade. Please send the TPU spec sheet so we can match it."
+    },
+    {
+      "round": 8,
+      "ai_message": "Got it. Please send the TPU spec by email. To wrap up: sample 14 days, counter-sample 7 days, bulk 35 days after deposit, payment TT 30/70, FOB Shenzhen. I'll send the full development timeline by email tonight.",
+      "ai_message_zh": "好。请邮件发 TPU 规格。总结:打样 14 天,counter-sample 7 天,定金后大货 35 天,TT 30/70,FOB 深圳。我今晚邮件发完整开发时间表。",
+      "expected_user_response_hint": "确认时间表,询问 PI 流程",
+      "key_phrases": ["Send the timeline to ...", "When can we have the PI", "Bulk price is ...", "I will confirm with my boss tomorrow"],
+      "common_mistakes": "FOB Shenzhen = 离岸价深圳,后接港口名是固定搭配,不要拆开。",
+      "tips_zh": "大货 PI 包含:单价、模具费、TT 比例、交期、size run、shipment,逐项核对。",
+      "user_response_example": "Send the timeline to mark@velocity.com. By the way, when can we have the PI for the bulk — is it 3,000 pairs or higher? I'll confirm the size run with my boss tomorrow."
+    }
+  ]
+}

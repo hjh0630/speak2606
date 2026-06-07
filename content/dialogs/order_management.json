@@ -1,0 +1,88 @@
+{
+  "scenario_id": "order_management",
+  "scenario_title_en": "Order Management",
+  "scenario_title_zh": "订单沟通",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, this is James from Pacific Apparel in Sydney. We would like to place an order for 2,000 men's shirts. Can you send us a Proforma Invoice?",
+      "ai_message_zh": "你好,我是悉尼 Pacific Apparel 的 James。我们想定 2 千件男款衬衣。能发一份形式发票给我们吗?",
+      "expected_user_response_hint": "确认收到订单意向,询问规格细节",
+      "key_phrases": ["Sure, I can prepare the PI", "Could you share the spec", "I need to know ...", "lead time"],
+      "common_mistakes": "PI = Proforma Invoice(形式发票),不是正式 invoice;报价后才出 PI。",
+      "tips_zh": "客户说 'place an order',要先确认 spec 细节再出 PI,不要直接答应。",
+      "user_response_example": "Hi James, glad to hear from you. Sure, I can prepare the PI. Before I do that, could you share the full spec — fabric, style number, sizes, packing, and your required delivery time?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Style is PMS-2024, men's short-sleeve shirt, 100% cotton poplin, 110 GSM, 4 colors, size S to XXL. We need delivery by 30 September. Please quote FOB Shanghai.",
+      "ai_message_zh": "款号 PMS-2024,男款短袖衬衣,100% 棉府绸,110 克,4 个色,尺码 S 到 XXL。9 月 30 号前要出货。请报 FOB 上海。",
+      "expected_user_response_hint": "复述规格,告知 PI 准备时间",
+      "key_phrases": ["Just to confirm", "poplin 110 GSM", "PI in 24 hours", "valid for 30 days"],
+      "common_mistakes": "poplin = 府绸,不要拼成 popplin / popeline。",
+      "tips_zh": "复述规格是外贸标准动作:面料、克重、颜色、尺码、目标价、交期都要复述一遍。",
+      "user_response_example": "Got it. Just to confirm: style PMS-2024, men's short-sleeve, 100% cotton poplin, 110 GSM, 4 colors, sizes S to XXL, FOB Shanghai, delivery by 30 September. I will prepare the PI and send it within 24 hours. It will be valid for 30 days."
+    },
+    {
+      "round": 3,
+      "ai_message": "Good. By the way, what is your payment term? We usually do TT 30/70 with new suppliers.",
+      "ai_message_zh": "好的。顺便问下,你们付款方式怎么要求?新供应商我们一般做 TT 30/70。",
+      "expected_user_response_hint": "确认 TT 30/70,解释起算点和交期计算",
+      "key_phrases": ["TT 30/70 is fine", "30% deposit", "70% balance before shipment", "lead time starts from deposit"],
+      "common_mistakes": "TT 30/70 = 30% 定金 + 70% 尾款,不是 30/70 days;尾款通常发货前付清。",
+      "tips_zh": "TT = Telegraphic Transfer(电汇),读 'T-T',不要读全称。",
+      "user_response_example": "TT 30/70 is fine for us. 30% deposit upon PI confirmation, 70% balance before shipment. Lead time of 35 days starts from the deposit received date. I will include all of this in the PI."
+    },
+    {
+      "round": 4,
+      "ai_message": "OK. One more thing — the deposit can be paid within 5 business days after we receive the PI. The balance, can we pay against copy of B/L?",
+      "ai_message_zh": "好。再说一个,定金在收到 PI 后 5 个工作日内付。尾款能不能凭 B/L 副本付?",
+      "expected_user_response_hint": "回应尾款条件,讨论凭 B/L 副本付尾款",
+      "key_phrases": ["balance against B/L copy", "original B/L sent after full payment", "telex release is not standard for us"],
+      "common_mistakes": "balance against B/L copy 比 against original B/L 风险高,工厂一般要付清才放单。",
+      "tips_zh": "B/L = Bill of Lading(提单),是货权凭证;balance against B/L copy 是常见的灵活付款。",
+      "user_response_example": "Balance against B/L copy is acceptable. The original B/L will be sent by courier after we receive the full balance payment. Telex release is not standard for us on new accounts, but B/L copy is fine."
+    },
+    {
+      "round": 5,
+      "ai_message": "Fair enough. Please send the PI to james@pacificapparel.com.au. And please include the bank details on the PI for the deposit transfer.",
+      "ai_message_zh": "可以。请把 PI 发到 james@pacificapparel.com.au。PI 上请附上你们银行账户信息,方便我们打定金。",
+      "expected_user_response_hint": "确认收件邮箱,确认银行信息和币种",
+      "key_phrases": ["PI sent to your email", "bank details in USD", "SWIFT code", "beneficiary name"],
+      "common_mistakes": "PI 上的银行账户必须是 USD 账户,币种写错会导致客户打款失败。",
+      "tips_zh": "PI 上银行信息:beneficiary, account number, SWIFT code, bank name, bank address,都要写全。",
+      "user_response_example": "Sure, I will email the PI to james@pacificapparel.com.au with the bank details in USD — beneficiary name, account number, SWIFT code, and the bank address. Please confirm receipt and the deposit timeline."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK. We have approved the PI internally. I will sign and send it back today. The deposit will be paid on Monday — that's 5 business days. When do you expect production to start?",
+      "ai_message_zh": "好。我们内部已经批了 PI,我今天签字发回。定金周一会打,正好 5 个工作日。什么时候可以开始生产?",
+      "expected_user_response_hint": "说明生产开始时间,确认 milestone",
+      "key_phrases": ["Production starts upon deposit", "lab dip in 5 days", "cutting after lab dip approval", "milestones"],
+      "common_mistakes": "生产开始时间不是 deposit 收到那天,而是 deposit 收到 + lab dip 确认 + 面料齐套后。",
+      "tips_zh": "定单时间线:deposit 收 → 面料备齐 → lab dip 批 → 裁剪 → 缝制 → 终检 → 出运。",
+      "user_response_example": "Production will start immediately after the deposit is received and the lab dip is approved. Lab dip in 5 days, fabric is in stock, cutting will start next week, sewing the week after, ETD end of September."
+    },
+    {
+      "round": 7,
+      "ai_message": "Sounds good. Can you send me weekly updates on production status? I would like to know cutting, sewing, and packing progress every Friday.",
+      "ai_message_zh": "好的。你能每周给我更新一下生产进度吗?每周五告诉我裁剪、缝制、包装的进展。",
+      "expected_user_response_hint": "确认周报机制,确定沟通方式",
+      "key_phrases": ["weekly update every Friday", "by email with photos", "production status report"],
+      "common_mistakes": "周报要有数据,不是 'going well'。要写:本周完成 / 累计完成 / 待完成。",
+      "tips_zh": "周报常见格式:date, order, cutting %, sewing %, finishing %, issues, next week plan。",
+      "user_response_example": "Sure, I will send a weekly status update every Friday by email — with photos for sewing and packing. The report will include cutting, sewing, finishing, and any issues. First update will be next Friday after cutting starts."
+    },
+    {
+      "round": 8,
+      "ai_message": "Perfect. One last thing — what is the final ETD and ETA? We have a big promotion in October, so we need the goods in Sydney by 15 October at the latest.",
+      "ai_message_zh": "好。最后一个问题,ETD 和 ETA 分别是几号?我们 10 月有个大促,最晚 10 月 15 号货要到悉尼。",
+      "expected_user_response_hint": "给出 ETD/ETA,确认是否能满足客户促销",
+      "key_phrases": ["ETD end of September", "ETA 15 October", "13 days transit", "sea freight to Sydney"],
+      "common_mistakes": "ETD 是开船日(Shanghai),ETA 是到港日(Sydney),中间加上 transit time。",
+      "tips_zh": "上海到悉尼海运 13-15 天,加上装柜和清关,ETA = ETD + 18-20 天。",
+      "user_response_example": "ETD from Shanghai will be 28 September, ETA Sydney 15 October. That hits your promotion date exactly. Transit time is about 13 days, plus 2 days for container loading and 2 days for customs clearance on your side. I will confirm the vessel name and booking number next week."
+    }
+  ]
+}

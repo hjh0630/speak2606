@@ -1,0 +1,88 @@
+{
+  "scenario_id": "flyknit_weaving",
+  "scenario_title_en": "Flyknit Weaving",
+  "scenario_title_zh": "飞织",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Mark, Daniel from Apex. I had a look at your RFQ for the marathon racing upper — E18, 28 grams, hot-pressed TPU counter. Before we go further, can you walk me through the real commercial context? I need to know the volumes and timing before my technical team commits.",
+      "ai_message_zh": "Mark,我是 Apex 的 Daniel。看了您马拉松竞速鞋面的询盘 — E18,28 克,热压 TPU 港宝。谈之前,能说一下商业背景吗?我需要了解量级和时间,才好让技术团队承诺。",
+      "expected_user_response_hint": "说明商业背景:品牌、首发量、上市时间、年度目标",
+      "key_phrases": ["The launch is in Q3", "First run is ... pairs", "Annual target is ... pairs", "We need to lock the spec by ..."],
+      "common_mistakes": "不要只说 'we need it fast',要给出具体上市时间和年度目标。",
+      "tips_zh": "商业背景决定技术承诺:首发 1000 双和 50,000 双,工厂资源调配完全不同。",
+      "user_response_example": "Sure. The shoe launches Q3 next year, but we need to lock the upper by end of this quarter. First run is 2,000 pairs for the launch, with annual target of 80,000 pairs if it sells well. We are committing to two SKUs initially."
+    },
+    {
+      "round": 2,
+      "ai_message": "80,000 pairs annual — that's a serious program. Realistically, for E18 racing uppers, your cost target needs to be in the US$4.50 to US$5.20 FOB range. Where are you on price?",
+      "ai_message_zh": "年 80,000 双 — 这是大项目。说实话,E18 竞速鞋面,您的成本目标要在 FOB 4.50-5.20 美元区间。您的价格预期多少?",
+      "expected_user_response_hint": "直接给出目标价,讨论成本结构",
+      "key_phrases": ["Our target is US$...", "That is above our cost line", "Can you break down the cost", "Yarn is the biggest cost driver"],
+      "common_mistakes": "cost target = 目标成本,不是 'target price'(那是对客户的售价)。",
+      "tips_zh": "E18 飞织成本结构:纱线 45-50%,加工 25-30%,模具摊销 10-15%,辅料 5-10%。",
+      "user_response_example": "Our target landed cost is US$4.80 FOB Shenzhen for 5,000 pairs per order. Can you break down the cost — I want to see yarn, knitting, and finishing separately. Where is the room to move?"
+    },
+    {
+      "round": 3,
+      "ai_message": "To be straight with you, at 5,000 pairs per order, US$4.80 is tight but workable. The breakdown: yarn US$2.10, knitting US$1.20, TPU counter and finishing US$0.85, overhead US$0.45, margin US$0.20. We're already at the floor.",
+      "ai_message_zh": "直说吧,5000 双一单,4.80 美元能接但很紧。拆分:纱线 2.10 美元,织造 1.20 美元,TPU 港宝和后整理 0.85 美元,管理费 0.45 美元,利润 0.20 美元。已经是底线。",
+      "expected_user_response_hint": "讨论压价空间,看是否能在材料或工艺上优化",
+      "key_phrases": ["Can we substitute yarn", "Move to a domestic yarn supplier", "Skip the TPU counter for the first run", "What if we commit to 10,000 pairs"],
+      "common_mistakes": "substitute yarn(替代纱线)要先确认性能等效,不要只看单价。",
+      "tips_zh": "压价三大杠杆:纱线国产替代、模具费摊销到更多数量、简化工艺(如 TPU 改 knitted-in)。",
+      "user_response_example": "I see the margin is razor thin. Two questions: can we move to a domestic polyester supplier for the 50D yarn, and what does the price look like if we commit to 10,000 pairs per order instead of 5,000?"
+    },
+    {
+      "round": 4,
+      "ai_message": "On yarn — we currently use 50D from a Taiwanese supplier. A domestic equivalent is 8-12% cheaper, but the dye uptake and evenness are not as consistent. I'd flag that risk. On volume, 10,000 pairs per order drops us to US$4.55.",
+      "ai_message_zh": "纱线这块 — 我们现在 50D 用的是台湾供应商。国产同等品便宜 8-12%,但染色均匀度有差距,这个风险我得提一下。量的话,10000 双一单可以做到 4.55 美元。",
+      "expected_user_response_hint": "评估国产纱线风险,讨论是否接受 10,000 双起的批量",
+      "key_phrases": ["Color consistency is critical for us", "What is the typical shade variation", "Can you do a side-by-side trial", "We can commit to 8,000 pairs"],
+      "common_mistakes": "shade variation = 色差,口语里常用 'shade variation' 或 'color shift'。",
+      "tips_zh": "国产涤纶长丝色差控制:大厂可做到 Delta E < 1.0,小厂常 1.5-2.0,要做小样对比。",
+      "user_response_example": "Color consistency is non-negotiable for us. Can you do a side-by-side trial with the domestic yarn on the first sample? If it passes our lab dip approval, we go with the cheaper yarn. On volume, we can commit to 8,000 pairs per order — where does that land you?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Side-by-side trial is easy — I'll program both yarns into the same sample. If the domestic yarn passes your dE < 1.0 spec, we go with it. On 8,000 pairs, we can do US$4.65. That's my best number, no song and dance.",
+      "ai_message_zh": "对比试验没问题 — 我在同一样品上编两种纱线。国产纱线如果达到您 dE < 1.0 标准,我们就用。8000 双的话,4.65 美元。这是我的最终价,不绕弯子。",
+      "expected_user_response_hint": "锁定价格,讨论付款和合同条款",
+      "key_phrases": ["US$4.65 works", "Lock the price for 12 months", "What about the mold cost", "Can we amortize the mold over the annual volume"],
+      "common_mistakes": "amortize(摊销)是会计词,口语里说 'spread the cost over ...' 更自然。",
+      "tips_zh": "模具费摊销:大订单通常工厂承担或分摊到前 3 批,小订单工厂会单独收。",
+      "user_response_example": "US$4.65 works if we lock it for 12 months. The mold cost — can you amortize it over the annual volume of 80,000 pairs instead of charging us upfront?"
+    },
+    {
+      "round": 6,
+      "ai_message": "On the mold, we can amortize it over the first 30,000 pairs at no extra cost, as long as you give us the 80,000-pair forecast in writing. After 30,000 pairs, the program is fully yours.",
+      "ai_message_zh": "模具这块,只要您书面给 80,000 双的年预测,前 30,000 双我们分摊,不另收。30,000 双之后,程序完全归您。",
+      "expected_user_response_hint": "确认分摊条款,讨论 IP 和数据透明度",
+      "key_phrases": ["The 80k forecast in writing is fine", "We need full IP transfer at sample approval", "Can we audit your production line", "We need real-time production data"],
+      "common_mistakes": "IP transfer(知识产权转移)要在合同里写清,口头说无效。",
+      "tips_zh": "大单项目 IP 条款:程序、模具、数据归属,通常在 sample approval 时全数转移。",
+      "user_response_example": "80,000-pair forecast in writing is fine. Two more things: first, full IP transfer at sample approval, not at order; second, we want audit access to your E18 line and real-time OEE data. Are you open to that?"
+    },
+    {
+      "round": 7,
+      "ai_message": "IP at sample approval is acceptable. On audit access — we welcome brand audits, with two weeks' notice. On OEE, we can share daily output and defect rate through a shared dashboard. Anything else?",
+      "ai_message_zh": "样品认可时 IP 转移可以接受。验厂 — 欢迎品牌方审计,提前两周通知即可。OEE 这块,我们可以共享每日产量和不良率数据看板。还有其他吗?",
+      "expected_user_response_hint": "讨论可持续发展与社会责任合规",
+      "key_phrases": ["We need GRS certification", "What about recycled yarn options", "Social compliance audit by Q2", "ZDHC wastewater compliance"],
+      "common_mistakes": "GRS = Global Recycled Standard,口语里读字母 'G-R-S'。",
+      "tips_zh": "国际品牌飞织项目常见合规:GRS(再生材料)、GOTS(有机棉)、ZDHC(废水)、BSCI/SEDEX(社会责任)。",
+      "user_response_example": "Last thing — sustainability. We need GRS-certified recycled yarn options for the 2026 line, and we'll have a third-party social compliance audit by Q2. Is ZDHC wastewater compliance already in place at your facility?"
+    },
+    {
+      "round": 8,
+      "ai_message": "We are GRS-certified since 2022 and ZDHC-compliant since 2023. Recycled 50D polyester is available at a 15% premium — let's revisit cost once we lock the commercial terms. To summarize: 8,000 pairs per order, US$4.65 FOB Shenzhen, TT 30/70, mold amortized over 30,000 pairs, full IP at sample approval. I'll have the draft agreement and development timeline to you by Friday.",
+      "ai_message_zh": "我们 2022 年起就有 GRS 认证,2023 年起 ZDHC 合规。再生 50D 涤纶可用,溢价 15% — 商业条款锁定后再谈成本。总结:8000 双一单,FOB 深圳 4.65 美元,TT 30/70,模具分摊到 30,000 双,样品认可时 IP 完整转移。协议草稿和开发时间表周五前发您。",
+      "expected_user_response_hint": "确认总结,锁定下一步",
+      "key_phrases": ["Send the agreement by Friday", "I will review over the weekend", "Sample start on Monday", "Let's get this moving"],
+      "common_mistakes": "锁定商业条款时,口头总结要在邮件里再确认一次,避免争议。",
+      "tips_zh": "大项目收尾:邮件确认所有条款 — 价格、付款、交期、IP、模具、可持续,逐项核对。",
+      "user_response_example": "Send the agreement by Friday to mark@velocity.com. I'll review over the weekend and come back Monday with comments. Let's target sample start next Wednesday — I want this program moving."
+    }
+  ]
+}

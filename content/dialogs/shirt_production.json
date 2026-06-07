@@ -1,0 +1,88 @@
+{
+  "scenario_id": "shirt_production",
+  "scenario_title_en": "Shirt Production",
+  "scenario_title_zh": "衬衣生产",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, this is Mr. Wang from the cutting room at Shanghai Shirt Co. May I help you?",
+      "ai_message_zh": "早上好,我是上海衬衫厂裁剪车间的王主任,请问有什么事?",
+      "expected_user_response_hint": "报订单号,说明是来跟进大货进度的",
+      "key_phrases": ["I am following up on ...", "The order is ... pieces", "Could you give me an update on ..."],
+      "common_mistakes": "不要说 I want to know the situation — 用 Could you give me an update on ... 更专业。",
+      "tips_zh": "电话跟单开场先报订单号/款号/PO 号,对方才好调出资料。",
+      "user_response_example": "Good morning, Mr. Wang. This is Lin from the merchandising team. I am following up on PO 4521, the men's yarn-dyed shirts, 3,000 pieces. Could you give me an update on the cutting status?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure, PO 4521. The fabric is in the warehouse. We just finished the fabric inspection this morning — 4-point system, about 92 points per 100 yards. The shrinkage is within the tolerance.",
+      "ai_message_zh": "好的,PO 4521。面料已经到仓库,今天上午刚做完面料检验,4 分制 100 码 92 分,缩率在公差内。",
+      "expected_user_response_hint": "回应 4-point 分数,确认能否开始裁剪",
+      "key_phrases": ["92 points is acceptable", "Can we start cutting today", "What's the spreading plan"],
+      "common_mistakes": "4-point system 的分数越小越好,不要说 high score — 要说 low / acceptable。",
+      "tips_zh": "面料 4 分制 100 码 92 分以内算合格,数值越小代表疵点越少。",
+      "user_response_example": "92 points is acceptable for this style. So can we start cutting today? And how many plies are you planning for the lay?"
+    },
+    {
+      "round": 3,
+      "ai_message": "Yes, spreading will start this afternoon. We have 12 plies per lay, and about 28 lays in total. Marker length is around 6.2 meters. Should finish spreading tomorrow morning.",
+      "ai_message_zh": "是的,今天下午开始拖料。每层 12 匹,总共约 28 层。排料长 6.2 米左右。明天上午能拖完。",
+      "expected_user_response_hint": "确认排料长度合理,问裁剪完成时间",
+      "key_phrases": ["12 plies is fine", "When can cutting be finished", "marker efficiency"],
+      "common_mistakes": "lay 是名词(一层铺好的布料),不是动词 lay(放);plies 是 lay 的复数。",
+      "tips_zh": "排料长度一般 5-7 米,12 层 ply 在梭织衬衫常见。",
+      "user_response_example": "12 plies is fine, that is standard for this fabric. When can the cutting be finished? And what is the marker efficiency, around 85%?"
+    },
+    {
+      "round": 4,
+      "ai_message": "Marker efficiency is 86%. Cutting will be done by Wednesday afternoon. Then we move to sewing. The shirts are on line 3, 35 workers. We can start Friday morning.",
+      "ai_message_zh": "排料利用率 86%,周三下午裁完。然后转缝制,3 号流水线 35 人,周五早上开始。",
+      "expected_user_response_hint": "确认缝制开始时间,询问交期是否有问题",
+      "key_phrases": ["Friday start is fine", "When do you think shipping can be", "lead time"],
+      "common_mistakes": "on line 3 中的 line 指流水线/生产线,不要说成 production line No.3 — 直接 line 3 即可。",
+      "tips_zh": "35 人的流水线在衬衣工厂属中等规模,日产能约 350-400 件。",
+      "user_response_example": "Friday start is fine. With 35 workers, daily output is about 350 to 400 pieces, right? So when do you think the whole order can be finished and ready for inspection?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Yes, around 380 pieces per day. The cutting will be ready Friday morning, sewing will take 9 to 10 days. We plan to finish sewing by next Tuesday.",
+      "ai_message_zh": "对,一天 380 件左右。裁剪周五早准备好,缝制大概 9 到 10 天,计划下周二完成。",
+      "expected_user_response_hint": "确认整个交期节奏,提后续整烫和检验",
+      "key_phrases": ["Tuesday sewing finish is OK", "ironing and inspection after that", "PSI date"],
+      "common_mistakes": "交期表达:from now 起算 or from cutting start 起算,要明确。",
+      "tips_zh": "缝制完成后,还要 1-2 天做 buttonhole / button attach,1 天 ironing,1 天 final inspection。",
+      "user_response_example": "Tuesday sewing finish is OK. After that, buttonholes and buttons take one more day, then ironing and final inspection. So we can plan the PSI for next Friday?"
+    },
+    {
+      "round": 6,
+      "ai_message": "Yes, PSI next Friday afternoon works. We will use AQL 2.5, general inspection level II, double sampling. About 80 pieces for sampling.",
+      "ai_message_zh": "可以,PSI 定在下周五下午。AQL 2.5,一般检验水平 II,二次抽样,抽 80 件左右。",
+      "expected_user_response_hint": "确认 AQL 和抽样方案,询问谁来验货",
+      "key_phrases": ["AQL 2.5 is confirmed", "Who will do the inspection", "buyer's QC"],
+      "common_mistakes": "AQL = Acceptable Quality Limit,读 'a-q-l',不是 'akle'。",
+      "tips_zh": "AQL 2.5 + 一般 II + 二次抽样是服装出口最常见的组合。",
+      "user_response_example": "AQL 2.5, general level II, double sampling, around 80 pieces — that is confirmed. Will the buyer send their own QC, or do you have an in-house final inspection team?"
+    },
+    {
+      "round": 7,
+      "ai_message": "We have an in-house final inspection team. The buyer can also send their QC if they want. After PSI passes, we will do folding, polybag, and carton packing on Saturday.",
+      "ai_message_zh": "我们有内部终检组。客户要派 QC 也可以。PSI 过了之后,周六做折叠、胶袋、入箱。",
+      "expected_user_response_hint": "确认包装细节,询问 carton mark 和装柜时间",
+      "key_phrases": ["polybag with ...", "pieces per carton", "shipping mark", "container loading"],
+      "common_mistakes": "polybag 里的 shirt 折叠方式有几种,flat fold / hanger pack 要提前确认。",
+      "tips_zh": "常见衬衣包装:1 件 1 胶袋,12 件或 24 件 1 出口箱,纸箱唛按客户 shipping mark。",
+      "user_response_example": "Good. For the polybag, please use a clear bag with a small desiccant inside, flat fold. 12 pieces per master carton, 5-ply carton. The shipping mark is the same as last order. When can container loading be?"
+    },
+    {
+      "round": 8,
+      "ai_message": "Container loading will be on Monday morning. We can also do a pre-shipment photo and send it to you. If PSI passes, the ETD is the following Wednesday.",
+      "ai_message_zh": "装柜定在周一上午。装柜前我们可以拍装柜照片发给你。PSI 通过的话,ETD 就是下周三。",
+      "expected_user_response_hint": "确认 ETD,要求发 pre-shipment photos,礼貌结束",
+      "key_phrases": ["ETD confirmed", "Please send pre-shipment photos", "Thanks for the update"],
+      "common_mistakes": "ETD 是预计开船日,不是到港日(到港是 ETA)。",
+      "tips_zh": "装柜后记得向客户要 pre-shipment photos 留底,确认数量和箱唛。",
+      "user_response_example": "ETD next Wednesday is noted. Please send the pre-shipment photos before container loading, with carton count and shipping mark visible. Thanks for the update, Mr. Wang. Talk to you next week."
+    }
+  ]
+}

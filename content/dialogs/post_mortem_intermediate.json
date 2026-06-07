@@ -1,0 +1,88 @@
+{
+  "scenario_id": "post_mortem",
+  "scenario_title_en": "Post-Mortem Review",
+  "scenario_title_zh": "反思复盘",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, this is David, factory quality manager. PO 4521 closed last week with a 3% claim rate, a 2-day delivery slip, and a USD 8,000 cost of poor quality. I want to do a structured post-mortem using a fishbone diagram, 5-why, and a CAPA register. Can you facilitate?",
+      "ai_message_zh": "我是品质经理 David。PO 4521 上周关闭,索赔率 3%,交期延误 2 天,质量损失成本 8,000 美元。我想做结构化复盘:鱼骨图 + 5-why + CAPA 注册表。你能主持吗?",
+      "expected_user_response_hint": "确认主持,讨论方法论和议程",
+      "key_phrases": ["I can facilitate", "fishbone for categories", "5-why for root cause", "CAPA register with owner and due date"],
+      "common_mistakes": "fishbone + 5-why + CAPA 是三个工具,不能混用:fishbone 找类别,5-why 找根因,CAPA 定措施。",
+      "tips_zh": "Fishbone 6M 类别:Man, Machine, Material, Method, Measurement, Mother Nature (Environment)。",
+      "user_response_example": "I can facilitate the session. We will use fishbone to categorize causes across the 6 M's, then drill down with 5-why on the top 2 categories, then build a CAPA register with owner, due date, and verification method. I will send the agenda and template by tomorrow."
+    },
+    {
+      "round": 2,
+      "ai_message": "Good. I have the data — defect Pareto shows 60% of issues are bar tack skipping, 25% are button attaching loose, 15% are shade variation. The bar tack is the top one. Let's drill into that. Walk me through the fishbone categories.",
+      "ai_message_zh": "好。我有数据 — 疵点帕累托显示 60% 是套结跳针,25% 是钉扣松,15% 是色差。套结排第一,深挖一下。带我过一遍鱼骨图分类。",
+      "expected_user_response_hint": "对套结跳针做 6M 鱼骨图分析",
+      "key_phrases": ["Man: operator skill", "Machine: needle bar wear", "Material: thread tension", "Method: bar tack SOP", "Measurement: in-line audit frequency", "Mother Nature: humidity"],
+      "common_mistakes": "鱼骨图每个 M 都要列多个可能原因,不能只列一个。",
+      "tips_zh": "6M fishbone 经典框架:Manpower, Machine, Material, Method, Measurement, Milieu/Environment。",
+      "user_response_example": "On the bar tack skipping, the fishbone looks like this. Man: 2 operators on rotation, one is junior with only 3 months' experience. Machine: needle bar worn at 1.2 million stitches, no digital counter. Material: thread batch from supplier B had inconsistent lubrication. Method: bar tack SOP version 2.1 does not specify needle change interval. Measurement: in-line audit every 4 hours, too long for a critical operation. Mother Nature: humidity in sewing room was 75% last week, above the 65% spec."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK, lots of potential causes. The 5-why on the bar tack will focus on the Machine category — needle bar wear — since we have the strongest evidence there. Why did the bar tack skip?",
+      "ai_message_zh": "好,可能原因不少。套结 5-why 聚焦 Machine 类别 — 针杆磨损,这条证据最充分。为什么套结跳针?",
+      "expected_user_response_hint": "第一层 why:针杆磨损超过寿命",
+      "key_phrases": ["Why 1: needle bar worn beyond life", "1.2M stitches vs 800K spec", "no auto alert"],
+      "common_mistakes": "5-why 要选证据最强的路径,不要分散。",
+      "tips_zh": "5-why 建议选 Pareto top 1 类别,选证据最充分的路径,避免猜谜。",
+      "user_response_example": "Why 1: the needle bar on bar tack machine #2 was worn beyond its useful life. Evidence: maintenance log shows 1.2 million stitches since the last change, against the 800,000-stitch spec. Visual inspection of the needle bar showed scoring marks on the surface."
+    },
+    {
+      "round": 4,
+      "ai_message": "Why did the needle bar run to 1.2 million stitches without being changed?",
+      "ai_message_zh": "为什么针杆跑到 120 万针还没换?",
+      "expected_user_response_hint": "第二/三层 why:保养跟踪机制缺失",
+      "key_phrases": ["Why 2: no auto alert", "manual log missed", "Why 3: backup mechanic not assigned", "leave coverage gap"],
+      "common_mistakes": "继续往下挖要找 system gap,不能停在 'mechanic forgot'。",
+      "tips_zh": "5-why 第 2-3 层通常是 process / system 缺口。",
+      "user_response_example": "Why 2: there is no automatic counter or alert system on the bar tack machines. The mechanic tracks the count manually in a paper logbook. The last count was at 600,000 stitches, 3 weeks ago. Why 3: the mechanic was on annual leave for 4 days, and no backup mechanic was assigned to monitor the count during that period. There is no SOP that requires leave coverage for maintenance counters."
+    },
+    {
+      "round": 5,
+      "ai_message": "Why is there no SOP for leave coverage, and why did the digital counter proposal not get approved last year?",
+      "ai_message_zh": "为什么没有请假代班 SOP?为什么去年数字计数器提案没批?",
+      "expected_user_response_hint": "第四/五层 why:管理层决策机制",
+      "key_phrases": ["Why 4: SOP review committee does not include maintenance", "Why 5: budget approval process not aligned with critical maintenance"],
+      "common_mistakes": "最后一层 why 触及 management decision,要给出可改的 systemic 行动。",
+      "tips_zh": "5-why 的最后 1-2 层是 management / governance,要给出 systemic fix。",
+      "user_response_example": "Why 4: the SOP review committee is led by production and IE, with no maintenance representative. Maintenance-related SOPs are not systematically reviewed. Why 5: the budget request for digital counters (USD 3,000) was submitted to the plant manager but returned 'not a priority for this year'. The decision was based on short-term cost, not on COPQ. Root cause: the management system does not link COPQ data to maintenance capex decisions."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK, root cause is clear. Now, let's build the CAPA register. I want corrective actions, preventive actions, owners, due dates, and verification method. Start with the bar tack issue.",
+      "ai_message_zh": "好,根因清楚。现在建 CAPA 表。要纠正措施、预防措施、负责人、完成日期、验证方法。先做套结。",
+      "expected_user_response_hint": "为套结问题写完整 CAPA 表",
+      "key_phrases": ["Corrective: replace needle bar", "Preventive: install digital counter", "Update SOP", "owner: David", "verification: weekly KPI"],
+      "common_mistakes": "CAPA 表要有 corrective 和 preventive 两种,不能只有 corrective。",
+      "tips_zh": "Corrective = 解决当前问题;Preventive = 防止同类问题再次发生。",
+      "user_response_example": "CAPA for bar tack: Corrective action 1 — replace all needle bars on bar tack machines, owner: maintenance head, due: this week, status: done. Corrective action 2 — rework 600 pieces, owner: line supervisor, due: this week, status: done. Preventive action 1 — install digital counter and auto alert, owner: maintenance head, due: 30 October, verification: alert test on 3 machines. Preventive action 2 — update SOP for backup mechanic coverage, owner: IE manager, due: 15 October, verification: SOP review and sign-off by plant manager."
+    },
+    {
+      "round": 7,
+      "ai_message": "Good CAPA. Now, on the bigger picture — I want a lessons-learned document for the factory, and I want to update the SOP for bar tack operations. Walk me through the structure.",
+      "ai_message_zh": "好 CAPA。再看大方向 — 我要一份工厂的 lessons-learned 文档,还要更新套结 SOP。带我过结构。",
+      "expected_user_response_hint": "讨论 lessons-learned 文档结构和 SOP 更新",
+      "key_phrases": ["Lessons learned: 4 sections", "SOP update: 5 sections", "knowledge sharing across lines", "PDCA cycle"],
+      "common_mistakes": "lessons-learned 要有 actionable takeaways,不是只写 'what happened'。",
+      "tips_zh": "Lessons-learned 模板:1) What happened, 2) Why, 3) What we learned, 4) What we will change。",
+      "user_response_example": "Lessons-learned document: 4 sections. Section 1: incident summary (1 page). Section 2: root cause analysis (fishbone + 5-why, 1 page). Section 3: key takeaways (3 to 5 bullets, 1 page). Section 4: action items (CAPA table, 1 page). Distribution: all production lines, IE, maintenance, QA. We will hold a 30-minute knowledge-sharing session for all supervisors. The new SOP for bar tack will follow PDCA: Plan (define needle change interval, 800K stitches), Do (run with digital counter), Check (monthly KPI review), Act (refine SOP at quarter end)."
+    },
+    {
+      "round": 8,
+      "ai_message": "Excellent. To close: CAPA register done, root cause documented, lessons-learned draft assigned, SOP update with PDCA cycle. KPI for next quarter: 0 bar tack defects, OTD above 95%, COPQ below 1% of revenue. I want a monthly review of these KPIs. Action items: lessons-learned by 10 October, SOP v3.0 by 20 October, digital counter by 30 October, monthly KPI review first Friday of each month. Confirm?",
+      "ai_message_zh": "很好。收尾:CAPA 表完成,根因记录,lessons-learned 起草分工,SOP 更新走 PDCA。下季度 KPI:零套结疵点,OTD 高于 95%,COPQ 低于营收 1%。月度复盘 KPI。行动项:10 月 10 日前 lessons-learned,10 月 20 日前 SOP v3.0,10 月 30 日前数字计数器,每月第一个周五 KPI 评审。确认吗?",
+      "expected_user_response_hint": "确认所有行动项和 KPI,定下次评审时间",
+      "key_phrases": ["All action items confirmed", "owners assigned", "KPI dashboard live", "next review in 30 days"],
+      "common_mistakes": "closing 要 verify 每条 action item 的 owner 和 due date。",
+      "tips_zh": "好的 close:逐条 confirm action items + owners + due dates + next review date。",
+      "user_response_example": "All action items confirmed. Owners assigned: lessons-learned doc — me, due 10 October. SOP v3.0 — IE manager, due 20 October. Digital counter — maintenance head, due 30 October. Monthly KPI review — David and me, first Friday of each month. KPI dashboard will go live next Monday, with OTD, defect rate, COPQ, claim rate. Next review on the first Friday of November. This was a productive session, David. The 5-why really surfaced the systemic gap, not just the surface symptom. We will be stronger on the next order."
+    }
+  ]
+}

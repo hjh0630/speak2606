@@ -1,0 +1,953 @@
+[
+  {
+    "id": "phone_meeting",
+    "title_zh": "电话会议",
+    "title_en": "Phone Meeting",
+    "icon": "📞",
+    "description_zh": "与海外客户初次/跟进通话,介绍公司、确认需求、推动下一步",
+    "description_en": "Initial or follow-up call with overseas buyers — introductions, product discussion, next-step alignment",
+    "category": "communication",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / sourcing manager",
+    "ai_role_zh": "海外采购商 / 客户",
+    "user_role": "Chinese export sales representative (garment & textile)",
+    "user_role_zh": "中国外贸业务员(服装纺织)",
+    "key_skills": [
+      "opening the call",
+      "introducing the company",
+      "presenting samples and capacity",
+      "handling objections",
+      "confirming next steps and closing"
+    ],
+    "key_skills_zh": [
+      "开场白",
+      "公司介绍",
+      "样品与产能推介",
+      "处理异议",
+      "确认下一步并收尾"
+    ],
+    "industry_terms_sample": [
+      "MOQ",
+      "lead time",
+      "handfeel",
+      "sample yardage",
+      "bulk order"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "voice",
+      "sales",
+      "follow-up"
+    ]
+  },
+  {
+    "id": "inquiry_quote",
+    "title_zh": "询盘报价",
+    "title_en": "Inquiry & Quotation",
+    "icon": "📨",
+    "description_zh": "收到 RFQ、报价、议价、确认 PI",
+    "description_en": "Responding to RFQs, preparing quotations, negotiating price, issuing Proforma Invoice",
+    "category": "sales",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / merchandiser",
+    "ai_role_zh": "海外采购商 / 跟单",
+    "user_role": "Chinese export sales representative (garment & textile)",
+    "user_role_zh": "中国外贸业务员(服装纺织)",
+    "key_skills": [
+      "understanding the RFQ",
+      "calculating FOB / CIF / EXW prices",
+      "presenting cost breakdown",
+      "negotiating price and MOQ",
+      "issuing and following up on PI"
+    ],
+    "key_skills_zh": [
+      "理解询盘",
+      "FOB / CIF / EXW 报价计算",
+      "成本结构说明",
+      "议价与 MOQ 谈判",
+      "PI 发送与跟进"
+    ],
+    "industry_terms_sample": [
+      "RFQ",
+      "PI",
+      "FOB",
+      "CIF",
+      "EXW",
+      "TT payment",
+      "deposit"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "email_to_call",
+      "pricing",
+      "negotiation"
+    ]
+  },
+  {
+    "id": "factory_audit",
+    "title_zh": "工厂参观/验厂",
+    "title_en": "Factory Visit & Audit",
+    "icon": "🏭",
+    "description_zh": "接待客户验厂、介绍产线产能、回答合规与品控问题",
+    "description_en": "Hosting customer audits, presenting production lines, capacity, QC and compliance",
+    "category": "operations",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / third-party auditor (BSCI / SEDEX / SA8000)",
+    "ai_role_zh": "海外采购商 / 第三方验厂员",
+    "user_role": "Chinese factory sales / merchandising manager",
+    "user_role_zh": "中国工厂业务/跟单主管",
+    "key_skills": [
+      "greeting and safety briefing",
+      "presenting company profile and capacity",
+      "walking the production lines (cutting, sewing, finishing, packing)",
+      "explaining QC procedures and AQL",
+      "answering compliance and CSR questions"
+    ],
+    "key_skills_zh": [
+      "欢迎与安全须知",
+      "公司及产能介绍",
+      "产线参观讲解(裁剪/车缝/后整/包装)",
+      "QC 流程与 AQL 说明",
+      "合规与 CSR 问题应答"
+    ],
+    "industry_terms_sample": [
+      "AQL",
+      "QC",
+      "production line",
+      "capacity",
+      "lead time"
+    ],
+    "estimated_minutes": 12,
+    "tags": [
+      "on_site",
+      "compliance",
+      "production"
+    ]
+  },
+  {
+    "id": "logistics_shipping",
+    "title_zh": "物流/船期/单证",
+    "title_en": "Logistics, Shipping & Documents",
+    "icon": "🚢",
+    "description_zh": "催货、装柜、提单、报关、单证沟通",
+    "description_en": "Shipping follow-up, container loading, B/L, customs clearance, document handling",
+    "category": "logistics",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / freight forwarder / shipping coordinator",
+    "ai_role_zh": "海外采购商 / 货代 / 船务",
+    "user_role": "Chinese export sales / shipping clerk",
+    "user_role_zh": "中国外贸业务员/船务",
+    "key_skills": [
+      "giving shipping status updates",
+      "explaining ETD / ETA / cut-off time",
+      "coordinating container loading and stuffing",
+      "preparing and checking B/L, invoice, packing list, C/O",
+      "handling customs and inspection issues"
+    ],
+    "key_skills_zh": [
+      "船期状态汇报",
+      "ETD / ETA / 截关时间解释",
+      "装柜与装箱协调",
+      "提单/发票/装箱单/产地证准备核对",
+      "报关与查验问题处理"
+    ],
+    "industry_terms_sample": [
+      "ETD",
+      "ETA",
+      "B/L",
+      "C/O",
+      "FCL",
+      "LCL",
+      "telex release"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "shipping",
+      "documents",
+      "logistics"
+    ]
+  },
+  {
+    "id": "sample_development",
+    "title_zh": "款式开发/打样",
+    "title_en": "Sample Development",
+    "icon": "🧵",
+    "description_zh": "确认样板、工艺、修改意见、寄样跟进",
+    "description_en": "Sample confirmation, workmanship discussion, revision feedback, sample shipment follow-up",
+    "category": "product",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / designer / merchandiser",
+    "ai_role_zh": "海外采购商 / 设计师 / 跟单",
+    "user_role": "Chinese merchandiser / sample room coordinator",
+    "user_role_zh": "中国外贸跟单/样衣房协调员",
+    "key_skills": [
+      "confirming tech-pack and spec sheet",
+      "discussing fabric, GSM, yarn count, handfeel",
+      "explaining workmanship and stitching",
+      "handling fit / measurement comments",
+      "managing sample yardage and courier (DHL / FedEx)"
+    ],
+    "key_skills_zh": [
+      "工艺单与尺寸表确认",
+      "面料/克重/纱支/手感讨论",
+      "车缝工艺讲解",
+      "尺寸与版型意见处理",
+      "样布用量与快递寄样跟进"
+    ],
+    "industry_terms_sample": [
+      "GSM",
+      "yarn count",
+      "handfeel",
+      "tech-pack",
+      "pre-production sample"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "product",
+      "R&D",
+      "sampling"
+    ]
+  },
+  {
+    "id": "claim_aftersales",
+    "title_zh": "索赔/售后",
+    "title_en": "Claims & After-sales",
+    "icon": "⚠️",
+    "description_zh": "质量问题、延误、扣款、解决方案谈判",
+    "description_en": "Quality issues, shipment delay, debit notes, negotiating solutions",
+    "category": "service",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / QC manager / legal representative",
+    "ai_role_zh": "海外采购商 / 品控经理 / 法务",
+    "user_role": "Chinese export sales / quality manager",
+    "user_role_zh": "中国外贸业务员/品质经理",
+    "key_skills": [
+      "receiving and acknowledging complaints",
+      "asking for evidence (photos, inspection report, sample)",
+      "proposing root-cause analysis and corrective action",
+      "negotiating debit note / discount / replacement",
+      "closing the claim with timeline"
+    ],
+    "key_skills_zh": [
+      "接收并确认投诉",
+      "要求证据(照片/验货报告/样品)",
+      "根因分析与纠正措施提议",
+      "扣款/折扣/补货谈判",
+      "索赔关闭与时间节点"
+    ],
+    "industry_terms_sample": [
+      "debit note",
+      "claim",
+      "inspection report",
+      "AQL",
+      "rework"
+    ],
+    "estimated_minutes": 11,
+    "tags": [
+      "service",
+      "quality",
+      "negotiation"
+    ]
+  },
+  {
+    "id": "yarn_sourcing",
+    "title_zh": "纱线采购",
+    "title_en": "Yarn Sourcing",
+    "icon": "🧶",
+    "description_zh": "与纱线供应商沟通成分、纱支、捻度、颜色、起订量、价格与交期",
+    "description_en": "Discuss composition, yarn count, twist, color, MOQ, price and lead time with yarn suppliers",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Yarn supplier / sales representative",
+    "ai_role_zh": "纱线供应商 / 业务员",
+    "user_role": "Knit or woven fabric sourcing / merchandiser (garment factory)",
+    "user_role_zh": "面料采购或跟单(服装厂)",
+    "key_skills": [
+      "specifying yarn composition and count",
+      "discussing twist and spinning method",
+      "requesting color matching against Pantone",
+      "negotiating MOQ and cone weight",
+      "confirming lead time and sample dispatch"
+    ],
+    "key_skills_zh": [
+      "成分与纱支表达",
+      "捻度与纺纱方式讨论",
+      "对色与潘通色号",
+      "起订量与筒重谈判",
+      "交期与样品寄送确认"
+    ],
+    "industry_terms_sample": [
+      "yarn count",
+      "twist",
+      "combed",
+      "compact yarn",
+      "Pantone TCX"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "process",
+      "yarn",
+      "sourcing"
+    ]
+  },
+  {
+    "id": "weaving_knitting",
+    "title_zh": "织造沟通",
+    "title_en": "Weaving & Knitting",
+    "icon": "🪡",
+    "description_zh": "与织厂或针织厂技术沟通梭织 / 针织、组织结构、克重、密度、上机参数与缩率",
+    "description_en": "Discuss woven vs knit construction, fabric structure, GSM, density, machine settings and shrinkage with the mill",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Weaving / knitting mill technician",
+    "ai_role_zh": "织厂 / 针织厂技术员",
+    "user_role": "Garment factory merchandiser or fabric sourcing",
+    "user_role_zh": "服装厂跟单 / 面料采购",
+    "key_skills": [
+      "choosing weave vs knit",
+      "specifying GSM, EPI/PPI, courses/wales",
+      "discussing machine gauge and stitch length",
+      "negotiating width and shrinkage tolerance",
+      "requesting greige or finish samples"
+    ],
+    "key_skills_zh": [
+      "梭织与针织选择",
+      "克重、密度、线圈参数",
+      "机号与线圈长度",
+      "门幅与缩率公差",
+      "坯布与成品样申请"
+    ],
+    "industry_terms_sample": [
+      "GSM",
+      "EPI",
+      "PPI",
+      "gauge",
+      "shrinkage"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "process",
+      "weaving",
+      "knitting"
+    ]
+  },
+  {
+    "id": "dyeing_finishing",
+    "title_zh": "染整工艺",
+    "title_en": "Dyeing & Finishing",
+    "icon": "🎨",
+    "description_zh": "与染厂跟单:染色、印花、后整理、色牢度、克重损失、缩水与手感",
+    "description_en": "Coordinate with the dye house on dyeing, finishing, color fastness, GSM loss, shrinkage and handfeel",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Dye house merchandiser / colorist",
+    "ai_role_zh": "染厂跟单 / 调色师",
+    "user_role": "Garment factory merchandiser / sourcing",
+    "user_role_zh": "服装厂跟单 / 面料采购",
+    "key_skills": [
+      "specifying dye process and color matching",
+      "reviewing lab dips and production lots",
+      "discussing color fastness to wash, light, rubbing",
+      "explaining GSM loss and shrinkage",
+      "requesting finishing options (mercerizing, singeing, softening)"
+    ],
+    "key_skills_zh": [
+      "染色工艺与对色",
+      "对色样与生产大货",
+      "耐洗 / 耐光 / 耐摩擦色牢度",
+      "克重损失与缩水",
+      "后整理(丝光/烧毛/柔软)"
+    ],
+    "industry_terms_sample": [
+      "lab dip",
+      "Delta E",
+      "reactive dye",
+      "color fastness",
+      "GSM loss"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "process",
+      "dyeing",
+      "finishing"
+    ]
+  },
+  {
+    "id": "printing_embroidery",
+    "title_zh": "印绣花工艺",
+    "title_en": "Printing & Embroidery",
+    "icon": "🖋️",
+    "description_zh": "与印花厂 / 绣花厂沟通印花方式(数码 / 网印 / 圆网 / 平网)、绣花工艺、花型与配色",
+    "description_en": "Coordinate with print and embroidery houses on print method (digital / rotary / flat screen), embroidery technique, artwork and color matching",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Print / embroidery house merchandiser",
+    "ai_role_zh": "印花厂 / 绣花厂跟单",
+    "user_role": "Garment factory merchandiser / designer",
+    "user_role_zh": "服装厂跟单 / 设计师",
+    "key_skills": [
+      "choosing the right print method",
+      "preparing artwork for color separation",
+      "specifying embroidery stitch type and density",
+      "matching Pantone shades across print / embroidery",
+      "approving strike-off and production samples"
+    ],
+    "key_skills_zh": [
+      "印花方式选择",
+      "花型分色与文件准备",
+      "绣花针法与密度",
+      "潘通色号统一",
+      "打样与大货确认"
+    ],
+    "industry_terms_sample": [
+      "digital print",
+      "rotary screen",
+      "satin stitch",
+      "Pantone TCX",
+      "registration"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "process",
+      "print",
+      "embroidery"
+    ]
+  },
+  {
+    "id": "seamless_garment",
+    "title_zh": "无缝服装",
+    "title_en": "Seamless Garment",
+    "icon": "🩱",
+    "description_zh": "与无缝内衣厂沟通筒形结构、seamless knitting、氨纶比例、克重分布与尺码",
+    "description_en": "Talk to seamless knitwear factories on tubular construction, seamless knitting, spandex ratio, GSM distribution and sizing",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Seamless knitting factory merchandiser",
+    "ai_role_zh": "无缝针织厂跟单",
+    "user_role": "Intimates / activewear merchandiser",
+    "user_role_zh": "内衣 / 运动服装跟单",
+    "key_skills": [
+      "explaining seamless knitting and tubular body",
+      "specifying nylon-to-spandex ratio and denier",
+      "discussing machine gauge (E14, E18, E28)",
+      "reviewing GSM distribution across body zones",
+      "approving fit on body length, gusset and waistband"
+    ],
+    "key_skills_zh": [
+      "无缝针织与筒形结构",
+      "锦纶氨纶比与旦数",
+      "机号 E14 / E18 / E28",
+      "分区克重与压力分布",
+      "筒长 / 三角区 / 腰头尺寸"
+    ],
+    "industry_terms_sample": [
+      "seamless knitting",
+      "spandex",
+      "gauge E28",
+      "gusset",
+      "tubular"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "process",
+      "seamless",
+      "intimate",
+      "activewear"
+    ]
+  },
+  {
+    "id": "quality_tech_issue",
+    "title_zh": "工艺问题解决",
+    "title_en": "Quality & Tech Issue Resolution",
+    "icon": "🛠️",
+    "description_zh": "面对客户 / QC,解释疵点、返工方案、工艺改进与让步接收",
+    "description_en": "Explain defects, propose rework, suggest process improvement and concession options to the buyer or QC",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Buyer / third-party QC inspector",
+    "ai_role_zh": "客户 / 第三方验货员",
+    "user_role": "Chinese factory quality manager / merchandiser",
+    "user_role_zh": "工厂品质经理 / 跟单",
+    "key_skills": [
+      "acknowledging and categorizing defects (barry, skew, pilling, hole)",
+      "requesting evidence (photo, inspection report, reference sample)",
+      "explaining root cause in process terms",
+      "proposing rework or repair in the factory",
+      "negotiating concession / AQL relaxation / down-grade"
+    ],
+    "key_skills_zh": [
+      "疵点分类与确认",
+      "证据要求(照片 / 报告 / 参考样)",
+      "根因分析(工艺层面)",
+      "厂内返工 / 修补方案",
+      "让步接收 / AQL 放宽 / 降级"
+    ],
+    "industry_terms_sample": [
+      "barry",
+      "skew",
+      "pilling",
+      "AQL",
+      "rework"
+    ],
+    "estimated_minutes": 11,
+    "tags": [
+      "process",
+      "quality",
+      "problem solving"
+    ]
+  },
+  {
+    "id": "shirt_production",
+    "title_zh": "衬衣生产",
+    "title_en": "Shirt Production",
+    "icon": "👔",
+    "description_zh": "梭织衬衣全流程沟通:面料进厂检验、技术准备、裁剪、缝制、锁眼钉扣、整烫、成衣检验、包装入库",
+    "description_en": "Full woven shirt production communication: incoming fabric inspection, tech pack prep, cutting, sewing, buttonholes, ironing, final inspection, packing",
+    "category": "refine",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Shirt factory production manager / cutting room / IE engineer",
+    "ai_role_zh": "衬衣生产厂长 / 车间主任 / IE 工程师",
+    "user_role": "Merchandiser or QA following up shirt production",
+    "user_role_zh": "跟单或质检",
+    "key_skills": [
+      "fabric inspection report (4-point system)",
+      "marker making and spreading",
+      "seam allowance and SPI",
+      "buttonhole and button attaching",
+      "fusing and interlining",
+      "ironing temperature and pressing cloth",
+      "AQL final inspection",
+      "folding and polybag packing"
+    ],
+    "key_skills_zh": [
+      "面料 4 分制检验",
+      "排料与拖料",
+      "缝份与针距",
+      "锁眼钉扣",
+      "粘合衬与压烫",
+      "整烫温度与烫布",
+      "AQL 终检",
+      "折叠与胶袋包装"
+    ],
+    "industry_terms_sample": [
+      "tech pack",
+      "marker",
+      "seam allowance",
+      "SPI",
+      "fusing",
+      "AQL"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "refine",
+      "garment",
+      "production",
+      "shirt"
+    ]
+  },
+  {
+    "id": "order_management",
+    "title_zh": "订单沟通",
+    "title_en": "Order Management",
+    "icon": "📋",
+    "description_zh": "订单全周期沟通:接单、PI 制作、客户确认、预付款、排产、大货进度、出运、尾款",
+    "description_en": "Full order cycle communication: order intake, PI, customer confirmation, deposit, production, shipment, balance",
+    "category": "refine",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / brand sourcing manager",
+    "ai_role_zh": "海外品牌采购 / 客户",
+    "user_role": "Chinese export sales / merchandising",
+    "user_role_zh": "中国外贸业务员 / 跟单",
+    "key_skills": [
+      "issuing and confirming PI",
+      "explaining payment terms (TT, LC, DP, DA)",
+      "tracking deposit and balance",
+      "communicating ETD and ETA",
+      "managing booking and cut-off",
+      "OEM vs ODM scope"
+    ],
+    "key_skills_zh": [
+      "PI 制作与确认",
+      "付款方式解释(TT/LC/DP/DA)",
+      "定金与尾款跟进",
+      "ETD/ETA 沟通",
+      "订舱与截港",
+      "OEM/ODM 范围"
+    ],
+    "industry_terms_sample": [
+      "Proforma Invoice",
+      "TT 30/70",
+      "LC at sight",
+      "deposit",
+      "ETD",
+      "ETA",
+      "booking"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "refine",
+      "order",
+      "sales",
+      "shipping"
+    ]
+  },
+  {
+    "id": "exception_handling",
+    "title_zh": "异常处理",
+    "title_en": "Exception Handling",
+    "icon": "⚠️",
+    "description_zh": "生产与订单异常应急:延期、质量偏差、改单、物料断供、船期延误、索赔前置沟通",
+    "description_en": "Emergency handling of production and order issues: delays, spec deviations, order changes, material shortages, shipment slips, pre-claim conversations",
+    "category": "refine",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Buyer under pressure / third-party QC",
+    "ai_role_zh": "客户(面对延期/问题) / 第三方 QC",
+    "user_role": "Merchandiser or export manager handling exceptions",
+    "user_role_zh": "跟单或外贸经理处理异常",
+    "key_skills": [
+      "notifying delays proactively",
+      "explaining force majeure calmly",
+      "proposing rework or replacement",
+      "offering credit note to prevent claim",
+      "issuing revised ETD",
+      "writing 8D / RC report"
+    ],
+    "key_skills_zh": [
+      "主动通知延期",
+      "不可抗力冷静说明",
+      "返工 / 换货方案",
+      "扣款 / 贷项通知防索赔",
+      "修订 ETD 沟通",
+      "8D / RC 报告"
+    ],
+    "industry_terms_sample": [
+      "force majeure",
+      "expedite",
+      "rework",
+      "credit note",
+      "claim",
+      "8D"
+    ],
+    "estimated_minutes": 11,
+    "tags": [
+      "refine",
+      "exception",
+      "crisis",
+      "claim"
+    ]
+  },
+  {
+    "id": "post_mortem",
+    "title_zh": "反思复盘",
+    "title_en": "Post-Mortem Review",
+    "icon": "🔍",
+    "description_zh": "订单结束后复盘:质量问题、交期问题、客户反馈、改进措施、SOP 更新、5-why 分析",
+    "description_en": "End-of-order review: quality issues, lead-time issues, customer feedback, improvements, SOP updates, 5-why analysis",
+    "category": "refine",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Factory management / quality manager",
+    "ai_role_zh": "工厂管理层 / 品质经理",
+    "user_role": "Project manager reporting to senior management",
+    "user_role_zh": "项目经理(向管理层汇报)",
+    "key_skills": [
+      "running 5-why root cause analysis",
+      "writing corrective and preventive action (CAPA)",
+      "summarizing lessons learned",
+      "updating SOPs and work instructions",
+      "presenting KPI review",
+      "proposing PDCA and Kaizen improvements"
+    ],
+    "key_skills_zh": [
+      "5-why 根因分析",
+      "CAPA 纠正预防措施",
+      "经验教训总结",
+      "SOP 与作业指导书更新",
+      "KPI 复盘汇报",
+      "PDCA 与改善提案"
+    ],
+    "industry_terms_sample": [
+      "5-why analysis",
+      "root cause",
+      "CAPA",
+      "SOP",
+      "PDCA",
+      "Kaizen"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "refine",
+      "post-mortem",
+      "Kaizen",
+      "CAPA"
+    ]
+  },
+  {
+    "id": "flyknit_weaving",
+    "title_zh": "飞织",
+    "title_en": "Flyknit Weaving",
+    "icon": "🧦",
+    "description_zh": "飞织鞋面技术沟通,一体编织、零缝合、电脑横机",
+    "description_en": "Flyknit upper technology — one-piece knitting, no-sew construction, computer flat knitting",
+    "category": "weaving",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Flyknit factory technical engineer (upper development)",
+    "ai_role_zh": "飞织厂技术工程师(鞋面开发)",
+    "user_role": "Footwear brand sourcing / designer",
+    "user_role_zh": "运动品牌采购 / 鞋类设计师",
+    "key_skills": [
+      "upper design",
+      "yarn selection",
+      "gauge selection",
+      "pattern programming",
+      "production lead time",
+      "QC standards"
+    ],
+    "key_skills_zh": [
+      "鞋面设计",
+      "纱线选型",
+      "机号选择",
+      "花型编程",
+      "生产交期",
+      "QC 标准"
+    ],
+    "industry_terms_sample": [
+      "flyknit",
+      "intarsia",
+      "computer flat knitting machine",
+      "gauge E14",
+      "jacquard pattern",
+      "no-sew upper"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "knitting",
+      "footwear",
+      "technical"
+    ]
+  },
+  {
+    "id": "warp_knitting",
+    "title_zh": "经编",
+    "title_en": "Warp Knitting",
+    "icon": "🪡",
+    "description_zh": "经编工艺沟通,tricot / raschel、多梳栉、衬纬",
+    "description_en": "Warp knitting — tricot, raschel, multi-bar, guide bars, inlay",
+    "category": "weaving",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Warp knitting factory technician",
+    "ai_role_zh": "经编厂技术员",
+    "user_role": "Fabric sourcing / lingerie factory merchandiser",
+    "user_role_zh": "面料采购 / 内衣厂工艺",
+    "key_skills": [
+      "specifying warp knit fabric",
+      "guide bar configuration",
+      "understanding inlay",
+      "lace vs mesh",
+      "lead time and MOQ"
+    ],
+    "key_skills_zh": [
+      "经编面料规格",
+      "梳栉配置",
+      "衬纬理解",
+      "蕾丝与网眼区分",
+      "交期与 MOQ"
+    ],
+    "industry_terms_sample": [
+      "warp knitting",
+      "tricot",
+      "raschel",
+      "guide bar",
+      "inlay",
+      "raschel lace"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "knitting",
+      "technical",
+      "fabric"
+    ]
+  },
+  {
+    "id": "shuttle_weaving",
+    "title_zh": "梭织",
+    "title_en": "Shuttle / Woven",
+    "icon": "🧵",
+    "description_zh": "梭织工艺沟通,喷气/剑杆/水织,组织与密度",
+    "description_en": "Woven fabric — air-jet / rapier / water-jet, weave structures, density",
+    "category": "weaving",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Woven mill technical director",
+    "ai_role_zh": "梭织厂技术厂长",
+    "user_role": "Shirt / suit factory / woven fabric sourcing",
+    "user_role_zh": "衬衫/西装厂 / 梭织面料采购",
+    "key_skills": [
+      "reading EPI / PPI",
+      "weave structures",
+      "loom selection",
+      "warp and weft yarn",
+      "finishing expectations"
+    ],
+    "key_skills_zh": [
+      "EPI / PPI 识别",
+      "织物组织",
+      "织机选型",
+      "经纬纱",
+      "后整理预期"
+    ],
+    "industry_terms_sample": [
+      "air-jet loom",
+      "rapier loom",
+      "EPI",
+      "PPI",
+      "twill 3/1",
+      "jacquard"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "weaving",
+      "technical",
+      "fabric"
+    ]
+  },
+  {
+    "id": "weft_knitting",
+    "title_zh": "纬编",
+    "title_en": "Weft Knitting",
+    "icon": "👕",
+    "description_zh": "纬编工艺沟通,圆机/横机、单面/双面、提花/绒类",
+    "description_en": "Weft knitting — circular / flat, single jersey, interlock, rib, fleece",
+    "category": "weaving",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Weft knitting factory technician",
+    "ai_role_zh": "纬编厂技术员",
+    "user_role": "T-shirt / underwear factory sourcing",
+    "user_role_zh": "T 恤 / 内衣厂采购",
+    "key_skills": [
+      "specifying knit structure",
+      "circular vs flat",
+      "GSM and shrinkage",
+      "yarn count",
+      "lead time"
+    ],
+    "key_skills_zh": [
+      "针织组织规格",
+      "圆机横机",
+      "克重与缩率",
+      "纱线支数",
+      "交期"
+    ],
+    "industry_terms_sample": [
+      "single jersey",
+      "interlock",
+      "rib 1x1",
+      "pique",
+      "3-thread fleece"
+    ],
+    "estimated_minutes": 9,
+    "tags": [
+      "knitting",
+      "technical",
+      "garment"
+    ]
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "factory_audit",
+  "scenario_title_en": "Factory Visit & Audit",
+  "scenario_title_zh": "工厂参观/验厂",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning. I'm Lisa from GreenLeaf Apparel in the UK. We have a factory audit scheduled for today. Is this the main entrance?",
+      "ai_message_zh": "早上好。我是英国 GreenLeaf Apparel 的 Lisa。我们今天安排了验厂,这里是正门吗?",
+      "expected_user_response_hint": "欢迎并确认,引导进入",
+      "key_phrases": ["Welcome to our factory", "Yes, this is the main gate", "Please come in", "sign in at reception"],
+      "common_mistakes": "main gate / main entrance 都可以,工厂通常说 'factory gate'。",
+      "tips_zh": "客户来访第一句话就是欢迎,要把厂名说全:Welcome to Hangzhou Lily Garments。",
+      "user_response_example": "Good morning, Lisa. Welcome to Hangzhou Lily Garments. Yes, this is our main gate. Please come in. We'll need you to sign in at reception and wear a visitor badge. Let me take you to the meeting room first."
+    },
+    {
+      "round": 2,
+      "ai_message": "Thanks. Before we start, can I see your business license and the BSCI audit report? Also, where is the emergency exit?",
+      "ai_message_zh": "谢谢。开始前,我能看下你们的营业执照和 BSCI 验厂报告吗?另外,紧急出口在哪?",
+      "expected_user_response_hint": "提供资料,指向安全出口",
+      "key_phrases": ["Sure, here is our business license", "BSCI report is from last year", "emergency exit is over there"],
+      "common_mistakes": "BSCI = Business Social Compliance Initiative(欧洲零售业社会责任倡议)。",
+      "tips_zh": "客户进厂先看两样:①营业执照(合法性)②社会责任验厂报告(合规性)。",
+      "user_response_example": "Sure, I have both documents ready. Here is our business license, and here is our latest BSCI audit report — it was issued last October with an A rating. The emergency exit is right over there, marked with the green sign. Our safety officer will give you a brief safety introduction in a moment."
+    },
+    {
+      "round": 3,
+      "ai_message": "Great. How many production lines do you have, and what's your total monthly capacity for t-shirts?",
+      "ai_message_zh": "好的。你们有多少条产线?T恤月产能多少?",
+      "expected_user_response_hint": "介绍产线数量和月产能",
+      "key_phrases": ["We have ... production lines", "monthly capacity is ...", "pieces per month"],
+      "common_mistakes": "production line / line 都是产线,口语里直接说 'we run ... lines'。",
+      "tips_zh": "验厂常问的产能数据:产线数、工人人数、月产能。要准备一个标准答案。",
+      "user_response_example": "We have 18 production lines in total, with 10 lines dedicated to knitwear including t-shirts. Monthly capacity for t-shirts is around 350,000 pieces, depending on style complexity. For a single style, we can comfortably produce 50,000 pieces per month."
+    },
+    {
+      "round": 4,
+      "ai_message": "Could we walk the cutting, sewing, and packing areas? I want to see how the workflow goes from fabric to finished garment.",
+      "ai_message_zh": "能不能带我们看看裁剪、车缝、包装三个区域?我想了解从面料到成衣的流程。",
+      "expected_user_response_hint": "引导参观,介绍每道工序",
+      "key_phrases": ["Let's start at the cutting room", "This is the sewing line", "packing is over here"],
+      "common_mistakes": "cutting room(裁剪车间)、sewing line(车缝产线)、packing area(包装区)要分清。",
+      "tips_zh": "参观流程建议:cutting → sewing → finishing → packing → warehouse。裁剪风险最大,要从这里开始。",
+      "user_response_example": "Of course. Let's start at the cutting room — that's where fabric is laid, marked, and cut. Then we'll move to the sewing floor, then the finishing and packing area, and finally the finished goods warehouse. Please stay on the yellow walking line for safety. Let me introduce you to the cutting supervisor first."
+    },
+    {
+      "round": 5,
+      "ai_message": "How do you make sure each shirt is the correct size and color before it goes to packing?",
+      "ai_message_zh": "在进包装前,你们怎么确保每件衣服的尺寸和颜色是对的?",
+      "expected_user_response_hint": "介绍 inline QC 和 final inspection 流程",
+      "key_phrases": ["Inline QC", "final inspection", "AQL 2.5", "size and color check"],
+      "common_mistakes": "inline QC(过程检验)和 final inspection(终检)是两个不同环节,要分开说。",
+      "tips_zh": "QC 三检制:①首件检验(first-off)②巡回检验(patrol)③末件检验(end-off)。AQL 抽样在终检进行。",
+      "user_response_example": "We do inline QC at three points: first-off inspection at the start of each style, patrol inspection every two hours, and end-off inspection at the end of each batch. Before packing, every garment goes through a final random inspection under AQL 2.5 general inspection level II. Defective pieces are reworked or rejected and don't reach the packing area."
+    },
+    {
+      "round": 6,
+      "ai_message": "How many workers do you have, and do they all work overtime voluntarily? I also want to see the dormitory.",
+      "ai_message_zh": "你们有多少工人?加班都是自愿的吗?我也想看看宿舍。",
+      "expected_user_response_hint": "介绍工人数和劳动合规,引导看宿舍",
+      "key_phrases": ["We have ... workers", "overtime is voluntary", "monthly average overtime", "dormitory is over there"],
+      "common_mistakes": "voluntary overtime 是合规底线,验厂必查。",
+      "tips_zh": "合规验厂要看的:①工时(每月加班不超过 36 小时,中国法律)②自愿加班 ③工资条 ④宿舍条件 ⑤消防通道。",
+      "user_response_example": "We have 480 workers in total, all on proper labor contracts. Overtime is strictly voluntary — workers sign an overtime consent form if they choose to work extra hours. Monthly overtime is capped at 36 hours, in line with Chinese labor law. The dormitory is on the second floor of Building C. Let me show you after lunch."
+    },
+    {
+      "round": 7,
+      "ai_message": "OK, let's break for lunch. After lunch, can I see the QC lab and your fabric warehouse? I want to check if you have enough fabric for our order.",
+      "ai_message_zh": "好,先吃午饭。午饭后,能看看你们的实验室和面料仓吗?我想确认你们库存够不够做我们的单。",
+      "expected_user_response_hint": "确认下午行程,引出面料和产能话题",
+      "key_phrases": ["After lunch we'll see ...", "fabric warehouse is ...", "We have enough greige fabric", "ready to dye"],
+      "common_mistakes": "greige fabric(坯布)是染色前的状态,工厂常备库存。",
+      "tips_zh": "客户查面料库存,要展示:① 坯布卷数 ② 染整进度 ③ 预计到货时间。这是验厂后下单的关键证据。",
+      "user_response_example": "Sure, lunch is at 12:30 in our canteen. After lunch, we'll visit the QC lab — we test colorfastness, GSM, and shrinkage there. Then the fabric warehouse. We currently have 8,000 meters of greige fabric in stock for your style, ready to send to the dye house as soon as we receive your PO. That gives you a 5-day buffer on lead time."
+    },
+    {
+      "round": 8,
+      "ai_message": "Sounds good. Overall, I'm satisfied with the visit. I'll send the audit report next week. Is there anything else you'd like to show me?",
+      "ai_message_zh": "好。整体我对这次参观很满意。下周我会发验厂报告。还有什么要给我看的吗?",
+      "expected_user_response_hint": "做 closing,展示样品间,期待合作",
+      "key_phrases": ["Let me show you our sample room", "Thank you for your time", "Looking forward to working with you"],
+      "common_mistakes": "audit report(验厂报告)是客户出的,不是工厂出的,不要混淆。",
+      "tips_zh": "验厂结束前,主动带客户参观 sample room(样品间),展示开发能力,推动后续合作。",
+      "user_response_example": "Thank you, Lisa. Before you go, let me show you our sample room — I think our development capability will interest you for future programs. Looking forward to your audit report and to working with GreenLeaf. I'll have the car take you to the airport."
+    }
+  ]
+}

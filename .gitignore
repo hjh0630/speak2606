@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Database
+data/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+dl/*.log
+dl/cloudflared
+dl/cloudflared.exe
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# OS
+*.tmp
+*.bak
+
+# Sandbox / runtime artifacts
+.home/
+.mavis/
+.skills/
+.dl/
+
+# Packaged archives (re-generate on demand)
+*.tar.gz
+*.zip
+speakly-app.zip
+SpeakFlow-minimax-code.tar.gz
+
+# Frontend build artifacts (regen via npm run build)
+frontend/dist/

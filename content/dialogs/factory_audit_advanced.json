@@ -1,0 +1,58 @@
+{
+  "scenario_id": "factory_audit",
+  "scenario_title_en": "Factory Visit & Audit",
+  "scenario_title_zh": "工厂参观/验厂",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, Mr. Chen. I'm David Reynolds, lead auditor from SGS. We're doing a BSCI full audit today, plus a separate SA8000 review. Can we start by seeing the production schedule and the attendance log?",
+      "ai_message_zh": "陈先生早上好。我是 SGS 的首席审核员 David Reynolds。我们今天做一次 BSCI 全审,外加一次 SA8000 独立审核。先从生产计划和考勤记录开始,可以吗?",
+      "expected_user_response_hint": "准备好文件 + 安排陪同人员 + 给时间表",
+      "key_phrases": ["Welcome, Mr. Reynolds. Let me introduce our team.", "Here is the production schedule and the attendance log", "We have allocated 4 hours for the document review"],
+      "common_mistakes": "BSCI(欧洲)+ SA8000(美国社会责任标准)是两个体系,不要混,准备两套文件。",
+      "tips_zh": "BSCI 审核清单:工资工时 / 健康安全 / 禁止强迫劳动 / 禁止歧视 / 环保,11 个 performance area。",
+      "user_response_example": "Welcome, Mr. Reynolds. Let me introduce our HR manager Ms. Wang and our compliance officer Mr. Liu. Here is the production schedule and the attendance log for the past 12 months. We've allocated 4 hours for the document review — please let us know if you need more time."
+    },
+    {
+      "round": 2,
+      "ai_message": "Let me start with the worker interview. We'd like to talk to 8 workers in private, with no management present. Can you arrange a meeting room and ensure no supervisor is within earshot?",
+      "ai_message_zh": "先做员工访谈。我想在无管理层在场的情况下,跟 8 名员工分别谈。能不能安排一个会议室,确保没有主管在听?",
+      "expected_user_response_hint": "配合 + 强调公司欢迎第三方访谈 + 提供便利",
+      "key_phrases": ["Absolutely, we welcome private interviews", "The meeting room on the 3rd floor is reserved", "We will have a sign on the door — 'private interview in progress'"],
+      "common_mistakes": "员工访谈(employee interview)是 BSCI/SA8000 核心环节,管理层回避是硬要求。不要试图陪同或翻译。",
+      "tips_zh": "挑选访谈员工:覆盖不同工种(车缝/裁剪/包装)、不同时段(白班/夜班)、不同工龄。",
+      "user_response_example": "Absolutely — we welcome private interviews, that's our standard practice. The meeting room on the 3rd floor is reserved for the next 3 hours, and a sign on the door will read 'private interview in progress'. Our HR manager can help with the worker selection list, but she will not be in the room."
+    },
+    {
+      "round": 3,
+      "ai_message": "One thing I noticed on the document review — the working hours log shows an average of 62 hours per week, including overtime. That's above the BSCI 60-hour threshold. Explain.",
+      "ai_message_zh": "我看到一个问题 — 考勤记录显示平均周工时 62 小时,含加班。超过 BSCI 60 小时上限。解释一下。",
+      "expected_user_response_hint": "不要否认,给原因 + 改善承诺",
+      "key_phrases": ["We acknowledge the gap", "It's driven by Q4 peak season", "We are committing to a 56-hour weekly cap from next month"],
+      "common_mistakes": "62 小时超 BSCI 标准(60h),承认后给改善计划,不要找理由(订单压力不算理由)。",
+      "tips_zh": "国际客户常见工时上限:BSCI 60h,SA8000 48h + 加班 12h。工厂目标:周 56h 以下 + 月加班 36h 以下。",
+      "user_response_example": "We acknowledge the gap — 62 hours is not acceptable by BSCI standards. The driver is Q4 peak season with a major US retailer's program. From January 1st, we are committing to a 56-hour weekly cap, with monthly management review. Our compliance officer Mr. Liu will own the implementation."
+    },
+    {
+      "round": 4,
+      "ai_message": "OK. Now the chemical management — I see you have an MSDS file, but the chemicals storage room doesn't have a ventilation system. That's a 'non-conformity' under BSCI Health & Safety. How soon can you fix it?",
+      "ai_message_zh": "行。再说化学品管理 — 我看到你有 MSDS 文件,但化学品仓库没有通风系统。这在 BSCI 健康安全下是 '不符合项'。多久能改?",
+      "expected_user_response_hint": "给具体改进时间表 + 区分 critical vs general non-conformity",
+      "key_phrases": ["We will install mechanical ventilation within 30 days", "We will isolate the chemical storage from production in the meantime", "This is a general non-conformity, not critical"],
+      "common_mistakes": "BSCI 评级:Critical(零容忍)/ Major(可补救)/ General(改进项)。通风缺失是 General,可补救。",
+      "tips_zh": "通风系统是低成本改进(几千到几万人民币),不要拖,30 天内能搞定。",
+      "user_response_example": "We will install mechanical ventilation within 30 days, with a quotation already requested from a local HVAC vendor. In the meantime, we will isolate the chemical storage room, restrict access, and post warning signs. This is a general non-conformity, not critical, and we will close it before the follow-up audit."
+    },
+    {
+      "round": 5,
+      "ai_message": "Last item — the worker dormitory. I want to inspect it now. Is that OK?",
+      "ai_message_zh": "最后 — 员工宿舍。我现在想去看看,可以吗?",
+      "expected_user_response_hint": "开门让查,不要挡,挡 = 怀疑",
+      "key_phrases": ["Of course, please follow me", "The dormitory is 5 minutes' walk from the main building", "We have 80 workers living on-site"],
+      "common_mistakes": "BSCI 审核员要看宿舍,任何阻拦都 = 立刻 red flag。",
+      "tips_zh": "宿舍检查清单:人均面积(>3 ㎡)、消防通道、隐私(异性不进)、饮用水、卫生设施。",
+      "user_response_example": "Of course, please follow me. The dormitory is 5 minutes' walk from the main building, with separate buildings for male and female workers. We have 80 workers living on-site. Take as much time as you need, and ask any worker directly if you have questions."
+    }
+  ]
+}

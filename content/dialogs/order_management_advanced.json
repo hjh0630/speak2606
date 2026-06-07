@@ -1,0 +1,88 @@
+{
+  "scenario_id": "order_management",
+  "scenario_title_en": "Order Management",
+  "scenario_title_zh": "订单沟通",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, James from Pacific Apparel. Look, before we go further, I have to be straight — last season we had a 3-week delay on your side, and we lost AUD 80,000 in retail markdowns. I am not going through that again. What is your real lead time for 8,000 pcs in 4 colors, FOB Shanghai, and what guarantees do I get?",
+      "ai_message_zh": "我是 Pacific Apparel 的 James。直说,上一季你们延期了 3 周,我们零售打折亏了 8 万澳元。我不想再来一次。8 千件 4 色,FOB 上海,真实交期多久?有什么保证?",
+      "expected_user_response_hint": "承认上季问题,给出交期分解和保证方案",
+      "key_phrases": ["acknowledge the delay last season", "root cause was fabric shortage", "revised lead time with buffer", "penalty clause vs incentive"],
+      "common_mistakes": "客户翻旧账时,先 acknowledge 再 explain,不要直接辩解。",
+      "tips_zh": "真实 lead time = 生产时间 + buffer(面料/辅料/染整延误预留)+ PSI + 装柜。",
+      "user_response_example": "James, I hear you. Last season's slip was on us — the fabric mill had a dye lot issue, and we should have flagged it 2 weeks earlier. For this order, the real lead time is 38 days production plus 3 days buffer, so 41 days from deposit, with a written commitment in the PI. If we miss it, we offer a 1% discount on the invoice value as a penalty. Does that work for you?"
+    },
+    {
+      "round": 2,
+      "ai_message": "1% penalty is weak — we lost 5% of order value in markdowns. I need 2% penalty for delays over 5 days, plus 100% air-freight coverage if the delay causes a retail launch miss. Counter-offer?",
+      "ai_message_zh": "1% 罚款太轻 — 我们打了 5% 订单价值的折。超 5 天延期,我要 2% 罚款,加上影响零售首发的 100% 空运费由你们承担。能还个价吗?",
+      "expected_user_response_hint": "讨论 penalty 条款、空运费和风险分摊",
+      "key_phrases": ["2% penalty is acceptable", "air-freight cost sharing", "delay caused by force majeure is excluded", "side letter on penalty"],
+      "common_mistakes": "Penalty 条款要 exclude force majeure(不可抗力),否则工厂裸奔。",
+      "tips_zh": "合同 penalty 条款常见:延误超 X 天,Y% 折扣;但要 exclude 不可抗力,如地震、战争、港口罢工。",
+      "user_response_example": "I can meet you halfway. 2% penalty for delays over 5 working days — agreed. Air-freight coverage: I can offer 50% on a capped basis, max 3% of the order value. Beyond that, we share 50-50. Force majeure is excluded — earthquakes, port strikes, government lockdowns are not on us. We document this in a side letter attached to the PI."
+    },
+    {
+      "round": 3,
+      "ai_message": "I need 70% air-freight coverage, not 50%. And force majeure exclusions need to be tighter — natural disasters only, no 'government action' carve-out. Last time the term 'government action' was used to dodge a customs strike that was foreseeable.",
+      "ai_message_zh": "空运我要 70% 承担,不是 50%。不可抗力要更严 — 仅限自然灾害,不能写 '政府行为'。上次有海关罢工用 '政府行为' 推掉了。",
+      "expected_user_response_hint": "讨论空运比例、不可抗力定义",
+      "key_phrases": ["70% air-freight is too high", "force majeure scope", "natural disasters only", "side letter wording"],
+      "common_mistakes": "政府行为(government action)范围太宽,工厂用它脱责就完了;要限定为 natural disasters。",
+      "tips_zh": "国际合同 force majeure 常见:战争、地震、洪水、瘟疫;不包括普通罢工或政策变动。",
+      "user_response_example": "I can go to 60% on air-freight with the 3% cap — that is the ceiling I can approve. On force majeure, I agree to limit it to natural disasters and pandemics declared by WHO, with a 10-day notice obligation. 'Government action' is out. Let me send the draft side letter by tomorrow for your legal team to review."
+    },
+    {
+      "round": 4,
+      "ai_message": "60% is acceptable on air-freight. Now, on payment — TT 30/70 is fine, but I want the 30% deposit to be held in escrow until the lab dip is approved. We had a bad experience with a supplier who took the deposit and changed the colors.",
+      "ai_message_zh": "空运 60% 可以。付款方面,TT 30/70 可以,但 30% 定金我要放在第三方托管,直到 lab dip 批下来。遇到过供应商收定金后改色的。",
+      "expected_user_response_hint": "讨论 escrow 安排、lab dip 流程",
+      "key_phrases": ["escrow is not standard", "lab dip in 5 days", "deposit refund if lab dip rejected", "trust-based model"],
+      "common_mistakes": "Escrow 在中国出口交易不常见,工厂一般直接收定金;可改为 refund 条件做软性安排。",
+      "tips_zh": "Escrow 第三方托管服务在 B2B 跨境交易中可行,但要付额外费用,且工厂配合度低。",
+      "user_response_example": "Escrow with a third party is not standard in China export and adds 1% to 2% in fees. I propose an alternative: the deposit is fully refundable if the lab dip is rejected in 2 attempts within 10 working days. After lab dip approval, the deposit is non-refundable but convertible to the order. I will write this into the PI as a special term. Same protection, lower friction."
+    },
+    {
+      "round": 5,
+      "ai_message": "OK, refundable deposit is acceptable if the 2-attempt clause is clear. Now, on production — we want 100% pre-shipment inspection by our nominated QC, not the factory's in-house team. PSI is at our cost, but we will use SGS. The factory's job is to make 100% of the goods ready and accessible for the inspection.",
+      "ai_message_zh": "好,2 次 lab dip 拒收退款可以,条件要写清。生产方面,我们要 100% 装柜前检验,由我方指定的第三方 SGS 来做,费用我方出。工厂负责把 100% 货备好、检得到。",
+      "expected_user_response_hint": "讨论第三方 PSI 安排、inspection scope",
+      "key_phrases": ["SGS PSI is welcome", "100% piece-by-piece access", "AQL 1.5/2.5/4.0", "PSI failed means rework"],
+      "common_mistakes": "第三方 PSI 不合格,工厂负责 rework 成本;但要明确 rework 时间是否影响 ETA。",
+      "tips_zh": "SGS / BV / Intertek 是三大第三方,客户指定其中一家,工厂只需配合。",
+      "user_response_example": "SGS PSI is welcome. The factory will make 100% of the goods ready, accessible for piece-by-piece inspection, with the AQL 1.5 / 2.5 / 4.0 split we agreed. If PSI fails on the first attempt, the rework cost is on us, and we have 5 working days to bring it back. If PSI fails twice, we discuss the next step in writing — credit note, replacement, or air-freight at our cost."
+    },
+    {
+      "round": 6,
+      "ai_message": "Reasonable. On documents — for the shipment, commercial invoice, packing list, B/L, FTA cert — plus I want the mill test report attached. We had a GSM dispute last year; I want the actual mill certificate with each shipment as a paper trail.",
+      "ai_message_zh": "合理。单证方面,商业发票、装箱单、提单、FTA 产地证 — 还要附工厂的 mill test report。去年有过克重争议,我希望每批货有实际工厂证书留底。",
+      "expected_user_response_hint": "讨论 mill test report、quality document 体系",
+      "key_phrases": ["mill test report is standard", "GSM, shrinkage, color fastness data", "test report dated within 6 months", "quality file per shipment"],
+      "common_mistakes": "mill test report 是面料厂的出货报告,工厂可代收转交;但要确认 date 不超过 6 个月。",
+      "tips_zh": "Mill test report 包含:GSM, shrinkage, color fastness to wash/light/rubbing, pilling, 拉力等。",
+      "user_response_example": "Mill test report is standard from our fabric supplier — I will attach the original with the shipping documents. The report covers GSM, shrinkage, color fastness to wash / light / rubbing, and pilling grade. The test must be dated within 6 months of the shipment. For traceability, I will set up a digital quality file per PO that is shared with you and SGS."
+    },
+    {
+      "round": 7,
+      "ai_message": "Perfect. One more thing — I want to talk about the post-shipment claim window. Standard is 30 days after arrival. Given last season's issues, I want 60 days. And I want a credit note pre-approved up to 5% of order value for any defects discovered in the field.",
+      "ai_message_zh": "好。再说售后索赔期。标准是到港后 30 天。鉴于上季的事故,我要 60 天。还有,我希望预先批一笔 5% 订单价值的 credit note,用于市场发现的问题。",
+      "expected_user_response_hint": "讨论索赔期、credit note pre-approval 机制",
+      "key_phrases": ["60-day claim window is acceptable", "credit note pre-approval up to 3%", "claim procedure in writing", "evidence-based claim"],
+      "common_mistakes": "credit note 预批 5% 等于让渡利润,工厂一般只能接受 2-3%。",
+      "tips_zh": "credit note 是一种对未来索赔的让步,evidence-based 才能生效,不能滥用。",
+      "user_response_example": "60-day claim window from arrival is acceptable. On the pre-approved credit note, 5% is too high — I can offer 3% with evidence-based claims, capped per incident. Anything above 3% goes through a formal 8D review. The 3% covers typical field defects — stitching, color bleeding, button issues. Anything safety-related is uncapped. Deal?"
+    },
+    {
+      "round": 8,
+      "ai_message": "3% pre-approved credit note, uncapped for safety — that is fair. To wrap up: PI signed this week, deposit Monday, lab dip 5 days, production 41 days, PSI by SGS, FTA cert and mill test report attached, side letter on penalty and force majeure, weekly call Tuesday. Send me the PI and the side letter draft today, and we are good. Anything else?",
+      "ai_message_zh": "3% 预批 credit note,安全类不封顶 — 公平。总结:本周签 PI,周一定金,lab dip 5 天,生产 41 天,SGS PSI,附 FTA 证和 mill test report,加 penalty 和不可抗力附函,周二周会。今天发 PI 和附函草案,可以开工。还有别的吗?",
+      "expected_user_response_hint": "做 closing summary,确认所有数字和文件",
+      "key_phrases": ["To summarize", "PI and side letter by EOD", "weekly call recurring", "looking forward"],
+      "common_mistakes": "高级别 close 要把所有 numbers / clauses / documents 都念一遍,留 paper trail。",
+      "tips_zh": "正式 close 用 'To summarize and confirm',然后逐条 list 关键点,最后留联系方式。",
+      "user_response_example": "To summarize and confirm: PI and side letter draft by EOD today. Deposit Monday. Lab dip 5 working days, refundable after 2 failed attempts. Production 41 days, 2% penalty after 5 days delay, force majeure limited to natural disasters, 60% air-freight coverage with 3% cap. PSI by SGS, AQL 1.5 / 2.5 / 4.0. FTA cert, mill test report, 3% pre-approved credit note, safety uncapped. Weekly call Tuesday 8 am Beijing. All locked. Looking forward to the launch in October, James. Have a good evening."
+    }
+  ]
+}

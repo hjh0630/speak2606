@@ -1,0 +1,62 @@
+{
+  "scenario_id": "weft_knitting",
+  "scenario_title_en": "Weft Knitting",
+  "scenario_title_zh": "纬编",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Emma, Tom from Sunrise Knitting Mill. I have your inquiry on the 220 GSM interlock with 5% spandex for the body-fit program. I have a few questions before I quote. Do you have 5 minutes?",
+      "ai_message_zh": "Hi Emma,Sunrise 针织厂的 Tom。你询的 220 GSM 双面 + 5% 氨纶(修身系列),我报价前有几个问题。你有 5 分钟吗?",
+      "expected_user_response_hint": "说有,然后引导对方问",
+      "key_phrases": ["interlock", "5% spandex", "body-fit", "quote", "a few questions"],
+      "common_mistakes": "Don't say 'I am busy' — say 'Yes, go ahead'",
+      "tips_zh": "高阶:对方要做 pre-qual,先给时间"
+    },
+    {
+      "round": 2,
+      "ai_message": "First, on the spandex — 5% is the weight percent or the fabric percent? And which spandex grade — 20D, 30D, or 40D? 20D is for ultra-fine, 40D for shaping. What's the end use?",
+      "ai_message_zh": "第一,氨纶 — 5% 是按重量还是按面料?哪个氨纶规格 — 20D、30D、还是 40D?20D 是超细,40D 是塑形。请问最终用途是什么?",
+      "expected_user_response_hint": "明确 5% 含量(按面料重)、30D(常规修身)、用途(打底衫/瑜伽裤)",
+      "key_phrases": ["5% spandex", "20D", "30D", "40D", "weight percent vs fabric percent"],
+      "common_mistakes": "Don't say 'I am not sure' — pick: '5% by fabric weight, 30D, for shaping leggings'",
+      "tips_zh": "高阶:D 数的区别显专业"
+    },
+    {
+      "round": 3,
+      "ai_message": "Got it. For 30D spandex with 5% by fabric weight, you'd need the spandex drafted at 7.5% on the feeder, accounting for the take-up loss. We can run 30D with 30 inch diameter, 78 feeders, 24-cut. 220 GSM finished. Want me to do a hand sample first?",
+      "ai_message_zh": "明白。30D 氨纶,5% 面料重,你在喂纱口要放 7.5%(算上回缩损失)。30 寸筒径、78 路、24 针,能做。成品 220 GSM。要不要先打手样?",
+      "expected_user_response_hint": "接受 1 米手样,确认氨纶织造参数",
+      "key_phrases": ["spandex draft", "take-up loss", "30 inch diameter", "hand sample", "feeder setup"],
+      "common_mistakes": "Don't say 'just quote' — ask for hand sample: 'Yes, 1-meter hand sample. Then 50-meter trial before bulk.'",
+      "tips_zh": "高阶:take-up / draft 数字是内行话"
+    },
+    {
+      "round": 4,
+      "ai_message": "On the finishing — for spandex interlock, we need to set the heat-setting temperature carefully. 195 degrees C for 30 seconds is standard. Over 200, the spandex yellows. Under 190, you get shrinkage. What's your heat-set spec?",
+      "ai_message_zh": "后整理 — 含氨纶双面,定形温度要小心。195 度 30 秒是标准。超过 200 度氨纶会黄变,低于 190 度会缩水。你们定形规格是多少?",
+      "expected_user_response_hint": "确认 195°C x 30s;问缩水目标(经纬各 ≤5%)",
+      "key_phapes": ["heat-setting", "195 degrees C", "30 seconds", "spandex yellowing", "shrinkage target"],
+      "common_mistakes": "Don't say 'no problem' — confirm: '195 / 30, shrinkage 5% max, and we need to verify on the hand sample'",
+      "tips_zh": "氨纶定形:温度是命门,数字要清楚"
+    },
+    {
+      "round": 5,
+      "ai_message": "For shrinkage, we can do 5% max in warp and weft post-compacting. Compact machine is a Bianco from Italy. Pre-relaxing is included. After finishing, we hit GSM 220 with a tolerance of plus or minus 5. Width is 175 cm open, 70 cm tubular. OK?",
+      "ai_message_zh": "缩水,我们预缩机后能做到经纬 5% 以内。预缩机是意大利 Bianco。预松弛包含在内。后整理完,克重 220 ±5。幅宽 175 厘米开幅,或 70 厘米圆筒。可以吗?",
+      "expected_user_response_hint": "确认克重容差 ±5,幅宽 175 开幅接受;问缩水测试方法(AATCC 135)",
+      "key_phrases": ["Bianco compactor", "pre-relaxing", "plus or minus 5 GSM", "175 cm open width", "shrinkage 5%"],
+      "common_mistakes": "Don't say 'fine' — '175 cm open, 220 ± 5 GSM, AATCC 135 wash test, shrinkage 5% max. Can you confirm lab test report before bulk?'",
+      "tips_zh": "高阶:数字+测试方法双确认"
+    },
+    {
+      "round": 6,
+      "ai_message": "Yes, I'll send you the lab report with 3 wash cycles per AATCC 135. Hand sample in 5 days, 1 meter. If you approve, 50-meter trial, then bulk. Bulk 30 days from greige approval. 45 days if you need dyeing. Send me your Pantone for lab dip.",
+      "ai_message_zh": "好的,我发您 AATCC 135 三个洗涤循环的实验报告。手样 5 天,1 米。确认后 50 米试产,再大货。坯布确认到出厂 30 天,染色 45 天。发我 Pantone 做 lab dip。",
+      "expected_user_response_hint": "承诺 1-2 个 Pantone,确认发工艺单+样卡",
+      "key_phrases": ["AATCC 135", "3 wash cycles", "1-meter hand sample", "50-meter trial", "lab dip"],
+      "common_mistakes": "Don't say 'ok' alone — 'Will send 2 Pantone codes today. Looking forward to the 1-meter hand sample.'",
+      "tips_zh": "完美收尾"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "dyeing_finishing",
+  "scenario_title_en": "Dyeing & Finishing",
+  "scenario_title_zh": "染整工艺",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, Wang Lei from Sunrise Dye House. I have your brief for the navy melange program. Before I open any pots, I need to clarify — is the navy a solid reactive dye, or are we doing a fiber-blend melange with dyed cotton?",
+      "ai_message_zh": "Chen,我是 Sunrise 染厂的王磊。藏青色麻灰那批我看过了。开染前先确认 — 这个藏青是纯活性染色,还是用染色棉做麻灰混纺?",
+      "expected_user_response_hint": "说明是纯色还是麻灰混色",
+      "key_phrases": ["It's a fiber-blend melange", "solid dye", "Heather effect", "two fibers blended"],
+      "common_mistakes": "melange(麻灰) 在中国指两种染色纤维混纺形成的混色效果,英语里也叫 heather。",
+      "tips_zh": "麻灰是 fiber-blend 效果,需要染两种纤维再混纺,跟纯色染色工艺不同。",
+      "user_response_example": "It's a fiber-blend melange — we blend dyed black cotton with white cotton at the yarn spinning stage. The yarn is already in stock, we just need to knit and finish."
+    },
+    {
+      "round": 2,
+      "ai_message": "Got it. So you need finishing only, not piece dyeing. In that case, the color matching is on the yarn, not on the fabric. What is the target shade ratio, and what's the dE tolerance the buyer accepts?",
+      "ai_message_zh": "明白了。那你只需要后整理,不需要匹染。对色就在纱线阶段,不是布面。目标色比怎么定?客户能接受多少 dE?",
+      "expected_user_response_hint": "回答色比和色差",
+      "key_phrases": ["70/30 ratio", "dE within 1.0", "target shade is ...", "black to white ratio"],
+      "common_mistakes": "dE / Delta E 通用,口语里说 dE one point zero 或 DE 1.0。",
+      "tips_zh": "麻灰混色用色比(black:white)和 dE 双重控制,色比定调子,dE 定均匀度。",
+      "user_response_example": "70% black, 30% white. The dE should be within 1.0 against the standard card. The buyer will sign off a physical reference swatch."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK. For finishing on melange jersey, the risk is shade shift during washing and drying. What thermal setting do you need — stenter at 150°C or 170°C? Higher temp locks the dye but may yellow the white fiber.",
+      "ai_message_zh": "好的。麻灰汗布后整理风险在洗烘过程中的色偏。定型温度要多少 — 150 度还是 170 度?高温锁色好但白纤维会发黄。",
+      "expected_user_response_hint": "讨论定型温度",
+      "key_phrases": ["150°C is safer", "170°C is needed for ...", "stenter setting", "thermal setting"],
+      "common_mistakes": "stenter(拉幅定型机) 是针织后整理核心设备,温度 140-190°C;温度影响尺寸稳定和手感。",
+      "tips_zh": "麻灰 / 浅色布定型温度不宜超过 160°C,过高温导致白纤维黄变。",
+      "user_response_example": "150°C is safer for the white component. We can extend the dwell time if needed, but the buyer is very strict on whiteness."
+    },
+    {
+      "round": 4,
+      "ai_message": "150°C with longer dwell works. About the soft hand — for melange, a hydrophilic softener is better than silicone because silicone can mask the heather effect and make it look flat. Do you agree?",
+      "ai_message_zh": "150 度延长时间,可以。手感方面 — 麻灰用亲水柔软剂比硅油好,硅油会盖住麻灰的肌理感,看起来会糊。你同意吗?",
+      "expected_user_response_hint": "讨论柔软剂选择",
+      "key_phrases": ["hydrophilic softener", "silicone softener", "Heather effect", "for breathability"],
+      "common_mistakes": "hydrophilic(亲水) 柔软剂保持吸湿排汗,silicone 柔软剂滑爽但拒水。",
+      "tips_zh": "运动面料 / 麻灰布优先亲水柔软剂;硅油用在需要滑爽的衬衫布。",
+      "user_response_example": "Agreed, hydrophilic softener for this one. The buyer actually does moisture management testing, so we need to keep the wicking performance. Non-silicone is the right call."
+    },
+    {
+      "round": 5,
+      "ai_message": "Good. About color fastness — for the melange, washing fastness is the most critical because the dye from the black fiber can bleed onto the white during repeated washes. Our standard wash test is 4 grade after 5 home launderings. Is that acceptable?",
+      "ai_message_zh": "好的。色牢度 — 麻灰最关键是耐洗,因为黑色纤维在反复洗涤中会掉色到白纤维上。我们标准是 5 次家用洗涤后 4 级。可以吗?",
+      "expected_user_response_hint": "讨论耐洗色牢度",
+      "key_phrases": ["Grade 4 is fine", "washing fastness", "5 home launderings", "ISO 105 C06"],
+      "common_mistakes": "ISO 105-C06 是家用洗涤测试标准,AATCC 135 类似,测试温度和次数要标清楚。",
+      "tips_zh": "麻灰布对耐洗要求比纯色高,因为白底会暴露任何黑纤维掉色。",
+      "user_response_example": "Grade 4 after 5 launderings is the buyer's minimum. We will test per ISO 105-C06 at 40°C. Please also run a light fastness test — we need grade 4 minimum there too."
+    },
+    {
+      "round": 6,
+      "ai_message": "Light fastness on melange is usually grade 4-5 on cotton, grade 4 is doable. Now a more technical question — GSM loss during finishing. What's your target tolerance, and do you want us to compensate by knitting heavier greige?",
+      "ai_message_zh": "麻灰耐光一般 4-5 级,4 级可以做到。技术问题 — 后整理的克重损失。你的目标公差是多少?要不要我们针织时把坯布加重来补偿?",
+      "expected_user_response_hint": "讨论克重损失",
+      "key_phrases": ["GSM loss", "knit heavier", "tolerance is ...", "compensate at greige"],
+      "common_mistakes": "GSM loss(克重损失) 是后整理中常见的 3-8% 损耗,通常针织坯布要预加。",
+      "tips_zh": "棉针织后整理 GSM loss 一般 5-8%,客户要 200 GSM 成品,坯布要织到 215 GSM 左右。",
+      "user_response_example": "Target is 220 GSM finished. We can accept up to 3% GSM loss. So please knit greige at 228 GSM, and we should land at 220-222 after finishing."
+    },
+    {
+      "round": 7,
+      "ai_message": "Will do. We will knit to 228 GSM greige. One last thing — the buyer is asking for Oeko-Tex Standard 100 certification. Our mill is certified, but the softener and dye chemicals need to be on the approved list. Can you confirm what Oeko-Tex class you need — Class 1 for baby, or Class 2 for direct skin contact?",
+      "ai_message_zh": "好,针织按 228 克做。最后一项 — 客户要 Oeko-Tex 100 认证。我们厂有认证,但柔软剂和染料要用白名单的。你要 Class 1(婴儿)还是 Class 2(直接接触皮肤)?",
+      "expected_user_response_hint": "说明 Oeko-Tex 等级",
+      "key_phrases": ["Class 2 for adult", "Class 1 for baby", "Oeko-Tex 100", "direct skin contact"],
+      "common_mistakes": "Oeko-Tex 100 分 4 级:Class 1 婴儿、Class 2 直接接触、Class 3 不直接接触、Class 4 装饰。",
+      "tips_zh": "Oeko-Tex 100 证书每年更新,新配方要重新测试。",
+      "user_response_example": "Class 2 — this is for adult T-shirts with direct skin contact. We don't need Class 1. Please confirm in the lab dip report that all chemicals are Oeko-Tex compliant."
+    },
+    {
+      "round": 8,
+      "ai_message": "Confirmed: Class 2 Oeko-Tex. Let me summarize the finish spec — 228 GSM greige knit, melange finish at 150°C stenter, hydrophilic softener, ISO 105-C06 grade 4 wash, grade 4 light, Oeko-Tex Class 2, pre-shrunk to 3% lengthwise / 3% widthwise. Lab dips in 6 days. Sound right?",
+      "ai_message_zh": "确认 Oeko-Tex Class 2。总结整理工艺 — 228 克坯布,麻灰整理 150 度定型,亲水柔软剂,ISO 105-C06 水洗 4 级,耐光 4 级,Oeko-Tex Class 2,预缩 3%/3%。6 天对色样。这样对吗?",
+      "expected_user_response_hint": "确认总结,收尾",
+      "key_phrases": ["Confirmed", "Send the lab dips", "Looking forward to ..."],
+      "common_mistakes": "总结时要逐条核对,不要笼统说 ok;确认一致后再继续。",
+      "tips_zh": "整理工艺总结是后续 QC 报告的对照基础,要落到 PI 或 spec sheet 上。",
+      "user_response_example": "Confirmed on all points. Please send the lab dips with full finishing details to chen.wei@lilygarments.com. Looking forward to the swatches, Wang."
+    }
+  ]
+}

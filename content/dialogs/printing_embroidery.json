@@ -1,0 +1,88 @@
+{
+  "scenario_id": "printing_embroidery",
+  "scenario_title_en": "Printing & Embroidery",
+  "scenario_title_zh": "印绣花工艺",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Wendy from Lotus Print House. You emailed us about printing on cotton jersey. How can I help you?",
+      "ai_message_zh": "你好,我是 Lotus 印花厂的 Wendy。你邮件咨询棉汗布印花,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍,说明来意:需要印花或绣花",
+      "key_phrases": ["This is ...", "I need to print on ...", "for our T-shirt line", "looking for a print quote"],
+      "common_mistakes": "print 在口语里既可作名词也可作动词,常见搭配 print on / print onto。",
+      "tips_zh": "联系印花厂时要先报:面料、印花方式(数码/网印)、颜色数、图案尺寸、数量。",
+      "user_response_example": "Hello Wendy, this is Chen Wei from Lily Garments. I need to print on cotton jersey for our spring T-shirt line."
+    },
+    {
+      "round": 2,
+      "ai_message": "Cotton jersey printing — good. We do digital print, rotary screen, and flat screen. How many colors in your design, and what is the quantity?",
+      "ai_message_zh": "棉汗布印花 — 好的。我们做数码印花、圆网印花和平网印花。设计稿有几个颜色?数量多少?",
+      "expected_user_response_hint": "回答颜色数和数量",
+      "key_phrases": ["... colors in the design", "around ... pieces", "for the print run"],
+      "common_mistakes": "rotary screen(圆网)、flat screen(平网)、digital print(数码) 三种工艺,适合不同量级。",
+      "tips_zh": "数码印花适合小批量(50-500 件)多色复杂花型;圆网适合大批量(5000+)重复图案;平网适合中等批量。",
+      "user_response_example": "The design has 6 colors, and we need 3,000 pieces total. It's a placement print on the chest."
+    },
+    {
+      "round": 3,
+      "ai_message": "6 colors, 3,000 pieces, chest placement. For this, flat screen printing is the most cost-effective. Digital would be more expensive per piece. Do you have the artwork ready?",
+      "ai_message_zh": "6 色,3000 件,胸前定位印。这种量平网印花最划算。数码印花单价更贵。设计稿准备好了吗?",
+      "expected_user_response_hint": "确认设计稿状态",
+      "key_phrases": ["artwork is ready", "AI / PSD file", "we have the design", "need to send by email"],
+      "common_mistakes": "artwork 行业里说 artwork file,通常要 AI / PSD / PDF 矢量文件。",
+      "tips_zh": "印花厂需要矢量文件 + Pantone 色号,光栅图(JPG/PNG) 收费分色。",
+      "user_response_example": "Yes, the artwork is ready in AI format with Pantone TCX colors. I'll send it by email."
+    },
+    {
+      "round": 4,
+      "ai_message": "Perfect. Once we receive the artwork, we can do a strike-off sample in 5-7 days. The strike-off is a small printed sample on the actual fabric for color and registration check. Do you want it on white or color fabric?",
+      "ai_message_zh": "好的。收到设计稿后,5-7 天可以出 strike-off(打样)。打样是在实际面料上印小样,看颜色和套准。要做在白色布还是染色布上?",
+      "expected_user_response_hint": "回答底布颜色",
+      "key_phrases": ["White fabric", "color fabric", "on the actual base color", "on light blue"],
+      "common_mistakes": "strike-off(打样) 是固定表达,口语里说 strike-off sample 或 strike-off 即可。",
+      "tips_zh": "深色底布印花要先打白底层(white underbase),工艺和成本不同。",
+      "user_response_example": "On the actual base color — light blue. The buyer wants to see how the design looks on the real fabric."
+    },
+    {
+      "round": 5,
+      "ai_message": "Got it. On light blue, some of the lighter inks may need a white underbase to stay vibrant. I'll flag that in the strike-off. About the print size — is it a 10 cm chest print, or larger?",
+      "ai_message_zh": "好的。在浅蓝布上,有些浅色油墨需要打白底层才能鲜艳。打样时会标出来。印花尺寸 — 10 厘米胸印,还是更大?",
+      "expected_user_response_hint": "回答印花尺寸",
+      "key_phrases": ["chest print", "full front", "back print", "size is ... cm"],
+      "common_mistakes": "white underbase(白底层) 是在彩色布上先印一层白墨,再叠色,色彩才鲜艳。",
+      "tips_zh": "白底层要额外成本和工时,深色布印花成本通常高 30-50%。",
+      "user_response_example": "It's a 12 cm wide chest print. White underbase is fine if needed — we want the colors to pop."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK. About the Pantone matching — flat screen printing is usually within Delta E 1.5-2.0 of the Pantone. If you need tighter than 1.5, we should consider digital print. What's your tolerance?",
+      "ai_message_zh": "好的。潘通对色 — 平网印花一般 Delta E 在 1.5-2.0。如果要 1.5 以内,建议数码印花。你们的公差多少?",
+      "expected_user_response_hint": "说明色差公差",
+      "key_phrases": ["dE 2.0 is fine", "we accept", "tolerance is ...", "Pantone match"],
+      "common_mistakes": "dE 1.5-2.0 是行业标准,网印很难做到 1.0 以内。",
+      "tips_zh": "网印和数码的色差公差不同,需求严格就用数码,价格高一倍。",
+      "user_response_example": "dE 2.0 is acceptable for this style. The buyer's tolerance is not that strict on prints."
+    },
+    {
+      "round": 7,
+      "ai_message": "Good. About wash fastness — for pigment print on cotton, we typically hit grade 3-4 on washing and grade 3 on rubbing. If you need higher, we use reactive print instead. Which do you want?",
+      "ai_message_zh": "好的。色牢度 — 棉布涂料印花一般水洗 3-4 级,摩擦 3 级。如果要更高,改用活性印花。你们选哪个?",
+      "expected_user_response_hint": "说明印花类型和牢度",
+      "key_phrases": ["pigment print", "reactive print", "wash fastness", "grade ... is fine"],
+      "common_mistakes": "pigment print(涂料印花) 工艺简单、手感略硬;reactive print(活性印花) 手感柔软、牢度好。",
+      "tips_zh": "涂料印花便宜、手感硬,适合低要求订单;活性印花贵 20-30%,手感好、牢度好。",
+      "user_response_example": "Reactive print, please. The buyer's standard is grade 4 washing, and reactive gets us there. Cost is secondary on this style."
+    },
+    {
+      "round": 8,
+      "ai_message": "Reactive print, 12 cm chest, 6 colors, white underbase — that comes to about US$0.85 per piece. Strike-off in 7 days, bulk in 15 days after strike-off approval. Should I send the PI?",
+      "ai_message_zh": "活性印花,12 厘米胸印,6 色,白底层 — 单价大概 0.85 美元一件。7 天打样,批准后 15 天大货。要发 PI 吗?",
+      "expected_user_response_hint": "确认收 PI,收尾",
+      "key_phrases": ["Please send it", "to my email", "Looking forward to the strike-off", "Thanks Wendy"],
+      "common_mistakes": "strike-off approval 是关键节点,批准后才能进大货,不要跳步。",
+      "tips_zh": "打样批准后所有工艺参数就锁定了,大货严格按打样执行。",
+      "user_response_example": "Please send the PI to chen.wei@lilygarments.com. Looking forward to seeing the strike-off. Thanks, Wendy."
+    }
+  ]
+}
