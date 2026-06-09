@@ -47,23 +47,7 @@ async function ensureSession() {
   }
 }
 
-// Manual reload for the follow-along prompt list.  The data is normally loaded
-// in startSession/resumeSession, but if the /api/scenarios/:id call raced or
-// failed, the user can click "重试" in the empty-state banner to refetch.
-async function reloadPrompts() {
-  const s = sessionStore.session
-  if (!s) return
-  sessionStore.connection = 'connecting'
-  try {
-    const { getRepeatPrompts } = await import('@/api/sessions')
-    const prompts = await getRepeatPrompts(s.id, s.scenario_id, s.difficulty)
-    sessionStore.repeatPrompts = prompts
-  } catch (e) {
-    if (typeof console !== 'undefined') console.warn('[PracticeView] reloadPrompts failed', e)
-  } finally {
-    if (sessionStore.connection === 'connecting') sessionStore.connection = 'idle'
-  }
-}
+// (reloadPrompts now lives in sessionStore and is exposed as a store action)
 
 onMounted(async () => {
   // Detect mobile viewport for sidebar default. We only initialize once;
@@ -192,8 +176,22 @@ async function sendText() {
 }
 
 async function playPrompt() {
-  const prompt = currentPrompt.value
-  if (!prompt) return
+  // Try to surface a useful message if the prompt list never loaded.
+  // (Previously this function returned silently when `currentPrompt` was
+  // null, which made the button look broken when the backend hadn't shipped
+  // the follow-along prompts yet.)
+  let prompt = currentPrompt.value
+  if (!prompt && sessionStore.session?.mode === 'repeat' && sessionStore.repeatPrompts.length === 0) {
+    // Best-effort late load — the session store helper is safe to call.
+    try {
+      await sessionStore.reloadPrompts?.()
+      prompt = currentPrompt.value
+    } catch { /* swallow — we'll surface a friendly error below */ }
+  }
+  if (!prompt) {
+    sessionStore.errorMessage = '目标句还没加载好,稍等几秒再试'
+    return
+  }
   tts.stop()
   if (tts.isLoading.value) return
   // The backend /api/tts takes plain text; the response.url may be a server
@@ -306,7 +304,7 @@ function goToHistory() {
         v-if="sessionStore.session"
         type="button"
         class="btn-outline !py-1.5 !px-3 mt-2"
-        @click="reloadPrompts"
+        @click="sessionStore.reloadPrompts"
       >
         重试加载跟读句
       </button>
@@ -433,30 +431,71 @@ function goToHistory() {
             </button>
           </div>
 
-          <!-- Repeat-mode: prominent "listen to original" CTA -->
-          <div v-if="isRepeat" class="mb-3">
-            <button
-              type="button"
-              class="w-full inline-flex items-center justify-center gap-2 rounded-xl
-                     bg-accent-500 text-white shadow-soft
-                     px-4 py-3 text-base font-medium
-                     hover:bg-accent-600 active:scale-[0.99] transition-all
-                     disabled:opacity-60 disabled:cursor-not-allowed"
-              :disabled="tts.isLoading.value"
-              @click="playPrompt"
-            >
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              先听原音
-            </button>
-            <p class="mt-1.5 text-center text-xs text-ink-500">
-              💡 建议先听原音,再点击下方按钮开始录音(3秒倒计时)
-            </p>
-          </div>
+          <!-- Repeat-mode hint (just text, no big button) -->
+          <p v-if="isRepeat" class="mb-2 text-center text-xs text-ink-500">
+            💡 建议先听原音,再点击录音按钮(3秒倒计时)
+          </p>
 
           <!-- Recorder — stacks vertically on mobile, horizontal on sm+ -->
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <!-- Center: recorder (always visible, prominent) -->
-            <div class="order-1 sm:order-2 flex justify-center">
+            <!-- Center: [Play Original (repeat only)] [Recorder] -->
+            <div class="order-1 sm:order-2 flex justify-center items-center gap-3">
+              <!-- Play Original: same shape as RecorderButton so the row reads as
+                   two equal-weight circles. Only shown in repeat mode. -->
+              <button
+                v-if="isRepeat"
+                type="button"
+                class="relative rounded-full text-white font-semibold flex items-center justify-center
+                       shadow-card transition-all duration-150 active:scale-95
+                       h-20 w-20 sm:h-24 sm:w-24 text-xl
+                       disabled:opacity-50 disabled:cursor-not-allowed
+                       bg-brand-500 hover:bg-brand-600
+                       [&.is-playing]:bg-accent-500 [&.is-playing]:hover:bg-accent-600"
+                :class="{ 'is-playing': tts.isPlaying.value }"
+                :disabled="!currentPrompt || tts.isLoading.value"
+                :title="!currentPrompt ? '目标句还没加载好' : (tts.isPlaying.value ? '点击停止' : '听原音')"
+                :aria-label="tts.isPlaying.value ? '点击停止播放' : '听原音'"
+                @click="tts.isPlaying.value ? tts.stop() : playPrompt()"
+              >
+                <span
+                  v-if="tts.isPlaying.value"
+                  class="absolute inset-0 rounded-full animate-pulse-ring pointer-events-none"
+                  aria-hidden="true"
+                />
+                <svg
+                  v-if="tts.isLoading.value"
+                  viewBox="0 0 24 24"
+                  class="h-6 w-6 animate-spin"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="9" stroke-opacity="0.25" />
+                  <path d="M21 12a9 9 0 0 0-9-9" stroke-linecap="round" />
+                </svg>
+                <svg
+                  v-else-if="tts.isPlaying.value"
+                  viewBox="0 0 24 24"
+                  class="h-7 w-7 sm:h-9 sm:w-9"
+                  fill="currentColor"
+                >
+                  <rect x="6" y="6" width="12" height="12" rx="2" />
+                </svg>
+                <svg
+                  v-else
+                  viewBox="0 0 24 24"
+                  class="h-8 w-8 sm:h-10 sm:w-10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" />
+                  <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                  <path d="M19 5a10 10 0 0 1 0 14" />
+                </svg>
+              </button>
               <RecorderButton
                 :is-recording="recorder.isRecording.value"
                 :is-preparing="recorder.isPreparing.value"

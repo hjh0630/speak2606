@@ -79,6 +79,25 @@ export const useSessionStore = defineStore('session', () => {
     }
   }
 
+  async function reloadPrompts(): Promise<RepeatPrompt[]> {
+    const s = session.value
+    if (!s) return []
+    const wasConnecting = connection.value
+    if (!wasConnecting) connection.value = 'connecting'
+    try {
+      const prompts = await apiGetRepeatPrompts(s.id, s.scenario_id, s.difficulty)
+      repeatPrompts.value = prompts
+      return prompts
+    } catch (e) {
+      if (typeof console !== 'undefined') {
+        console.warn('[sessionStore] reloadPrompts failed', e)
+      }
+      return []
+    } finally {
+      if (connection.value === 'connecting') connection.value = 'idle'
+    }
+  }
+
   async function resumeSession(id: string): Promise<PracticeSession> {
     connection.value = 'connecting'
     try {
@@ -255,6 +274,7 @@ export const useSessionStore = defineStore('session', () => {
     transientUserText,
     startSession,
     resumeSession,
+    reloadPrompts,
     sendText,
     sendAudio,
     finish,
