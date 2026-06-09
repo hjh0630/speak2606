@@ -21,6 +21,10 @@ const tts = useTts()
 
 const sessionId = computed(() => route.params.id as string)
 const textInput = ref('')
+// TTS playback speed for the "听原音" button (repeat mode).  Default 0.8×
+// — slower is friendlier for language learners who need a beat to parse
+// each word.  User can switch to 1.0× / 0.6× via the inline pill toggle.
+const ttsSpeed = ref<number>(0.8)
 const messagesEl = ref<HTMLElement | null>(null)
 // Sidebar default: hidden on mobile (≤ 640 px), shown on desktop.
 // `isMobile` is reactive so the aside re-renders if the user resizes.
@@ -196,32 +200,28 @@ async function playPrompt() {
   if (tts.isLoading.value) return
   // The backend /api/tts takes plain text; the response.url may be a server
   // route.  If TTS isn't available, we fall back to browser TTS.
-  const res = await tts.playText(prompt.text)
+  const res = await tts.playText(prompt.text, undefined, ttsSpeed.value)
   if (!res && 'speechSynthesis' in window) {
     try {
       const u = new SpeechSynthesisUtterance(prompt.text)
       u.lang = 'en-US'
-      u.rate = 0.95
+      // Mirror the user's chosen speed (browser TTS rate: 1.0 = normal,
+      // 0.5 = half speed, 2.0 = double).
+      u.rate = ttsSpeed.value
       window.speechSynthesis.speak(u)
     } catch { /* noop */ }
   }
 }
 
-async function playAssistant() {
-  const url = sessionStore.lastAssistantAudioUrl
-  if (url) {
-    await tts.playUrl(url)
-    return
-  }
-  const last = [...(sessionStore.session?.messages ?? [])].reverse().find((m) => m.role === 'assistant')
-  if (last && 'speechSynthesis' in window) {
-    try {
-      const u = new SpeechSynthesisUtterance(last.content)
-      u.lang = 'en-US'
-      u.rate = 0.95
-      window.speechSynthesis.speak(u)
-    } catch { /* noop */ }
-  }
+async function playMyRecording() {
+  // Replay the user's most recent recording. The blob lives in the recorder
+  // composable and is cleared at the start of each new recording.  When no
+  // recording exists yet the button is disabled, so this guard is just a
+  // safety net.
+  const blob = recorder.audioBlob.value
+  if (!blob) return
+  tts.stop()
+  await tts.playBlob(blob)
 }
 
 async function finish() {
@@ -436,12 +436,33 @@ function goToHistory() {
             💡 建议先听原音,再点击录音按钮(3秒倒计时)
           </p>
 
+          <!-- TTS speed selector (repeat mode only) — controls "听原音" playback rate -->
+          <div
+            v-if="isRepeat"
+            class="mb-2 flex items-center justify-center gap-1.5 text-xs"
+          >
+            <span class="text-ink-500">语速</span>
+            <button
+              v-for="s in [1.0, 0.8, 0.6]"
+              :key="s"
+              type="button"
+              class="rounded-full px-2.5 py-0.5 border transition-colors"
+              :class="ttsSpeed === s
+                ? 'bg-brand-500 text-white border-brand-500'
+                : 'bg-white text-ink-600 border-ink-200 hover:bg-ink-50'"
+              :aria-pressed="ttsSpeed === s"
+              @click="ttsSpeed = s"
+            >
+              {{ s }}x
+            </button>
+          </div>
+
           <!-- Recorder — stacks vertically on mobile, horizontal on sm+ -->
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <!-- Center: [Play Original (repeat only)] [Recorder].
-                 Both buttons are wrapped in a flex-col-with-label so the
-                 two circles end up at the same vertical center when the
-                 outer `items-center` aligns them. -->
+            <!-- Center: [Play Original (repeat)] [Recorder] [Replay Me (always)].
+                 All three buttons are wrapped in a flex-col-with-label so the
+                 circles end up at the same vertical center when the outer
+                 `items-start` aligns them. -->
             <div class="order-1 sm:order-2 flex justify-center items-start gap-3">
               <!-- Play Original (repeat mode only) -->
               <div
@@ -509,6 +530,8 @@ function goToHistory() {
                   <span v-else>听原音</span>
                 </p>
               </div>
+
+              <!-- Recorder (always) -->
               <RecorderButton
                 :is-recording="recorder.isRecording.value"
                 :is-preparing="recorder.isPreparing.value"
@@ -520,17 +543,68 @@ function goToHistory() {
                 @stop="onRecorderStop"
                 @countdown-cancel="() => undefined"
               />
+
+              <!-- Replay My Recording (always). Disabled until the user has
+                   recorded at least once. -->
+              <div class="flex flex-col items-center gap-2 select-none">
+                <div class="relative">
+                  <span
+                    v-if="tts.isPlaying.value"
+                    class="absolute inset-0 rounded-full animate-pulse-ring pointer-events-none"
+                    aria-hidden="true"
+                  />
+                  <button
+                    type="button"
+                    class="relative z-10 rounded-full text-white font-semibold flex items-center justify-center
+                           shadow-card transition-all duration-150 active:scale-95
+                           h-20 w-20 sm:h-24 sm:w-24 text-xl
+                           disabled:opacity-40 disabled:cursor-not-allowed
+                           bg-brand-500 hover:bg-brand-600
+                           [&.is-playing]:bg-accent-500 [&.is-playing]:hover:bg-accent-600"
+                    :class="{ 'is-playing': tts.isPlaying.value }"
+                    :disabled="!recorder.audioBlob.value"
+                    :title="!recorder.audioBlob.value
+                      ? '先录一次才能回放'
+                      : (tts.isPlaying.value ? '点击停止' : '听我的')"
+                    :aria-label="tts.isPlaying.value ? '点击停止回放' : '听我的录音'"
+                    @click="tts.isPlaying.value ? tts.stop() : playMyRecording()"
+                  >
+                    <svg
+                      v-if="tts.isPlaying.value"
+                      viewBox="0 0 24 24"
+                      class="h-7 w-7 sm:h-9 sm:w-9"
+                      fill="currentColor"
+                    >
+                      <rect x="6" y="6" width="12" height="12" rx="2" />
+                    </svg>
+                    <svg
+                      v-else
+                      viewBox="0 0 24 24"
+                      class="h-8 w-8 sm:h-10 sm:w-10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <!-- User head -->
+                      <circle cx="12" cy="9" r="3.5" fill="currentColor" stroke="none" />
+                      <!-- User shoulders / body curve -->
+                      <path d="M5 20c0-3 3-5 7-5s7 2 7 5" />
+                      <!-- Small play triangle overlay (bottom-right) -->
+                      <path d="M16 16l4 2.4-4 2.4z" fill="currentColor" stroke="none" />
+                    </svg>
+                  </button>
+                </div>
+                <p class="text-xs text-ink-500 h-4">
+                  <span v-if="tts.isPlaying.value">点击停止</span>
+                  <span v-else>听我的</span>
+                </p>
+              </div>
             </div>
-            <!-- Left: replay AI + desktop-only hint -->
+
+            <!-- Left: desktop-only hint -->
             <div class="order-2 sm:order-1 flex items-center gap-2 text-xs text-ink-500 justify-center sm:justify-start">
-              <button
-                type="button"
-                class="rounded-lg border border-ink-200 px-2 py-1 hover:bg-ink-50"
-                :disabled="!sessionStore.lastAssistantAudioUrl && !sessionStore.session"
-                @click="playAssistant"
-              >
-                🔊 复听 AI
-              </button>
               <span v-if="isRepeat" class="hidden sm:inline text-ink-400">
                 完成后点"下一句"
               </span>
