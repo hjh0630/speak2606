@@ -9,7 +9,11 @@
       "ai_message": "Chen, this is Linda. The buyer is now involving their legal team on PO 2024-512. They claim the broken stitches constitute a 'material breach' under the master supply agreement. We have 30 days to respond before formal arbitration. How do you want to play this?",
       "ai_message_zh": "陈,Linda。PO 2024-512 这票客户已经让他们的法务介入了。他们主张车缝开线构成主供应合同下的 '实质性违约',30 天内不回应就走正式仲裁。你们想怎么打?",
       "expected_user_response_hint": "立刻升级到老板 + 评估法律风险 + 主动提议庭外和解",
-      "key_phrases": ["I'm escalating to the owner today", "Material breach is a high bar — let's de-escalate", "We prefer settlement over arbitration"],
+      "key_phrases": [
+        "I'm escalating to the owner today",
+        "Material breach is a high bar — let's de-escalate",
+        "We prefer settlement over arbitration"
+      ],
       "common_mistakes": "客户搬出 legal/arbitration,不要慌,但要立刻升级到老板/法务。假装能搞定 = 错失处理窗口。",
       "tips_zh": "Material breach 在英美法下门槛高(影响合同根本目的),大客户多用作谈判筹码,小客户才真打。",
       "user_response_example": "I hear you. I'm escalating to our owner and our external counsel today. 'Material breach' is a serious claim and we want to de-escalate. Can we set up a call this week with both sides' senior management to find a commercial settlement before arbitration?"
@@ -19,7 +23,11 @@
       "ai_message": "The buyer's counsel is demanding: (1) USD 15,000 cash settlement, (2) a 12-month quality monitoring program with monthly third-party audits, (3) a public statement on your CSR. What's your read?",
       "ai_message_zh": "客户法务要:(1) USD 15,000 现金赔偿,(2) 12 个月质量监控,每月第三方审核,(3) 公开的 CSR 声明。你们怎么看?",
       "expected_user_response_hint": "分项评估、给反提案",
-      "key_phrases": ["Cash settlement is workable", "12-month monitoring is a stretch, let's propose 6 months", "Public CSR statement is not standard, we can do a private one"],
+      "key_phrases": [
+        "Cash settlement is workable",
+        "12-month monitoring is a stretch, let's propose 6 months",
+        "Public CSR statement isn't standard, we can do a private one"
+      ],
       "common_mistakes": "客户列三件套,不要打包谈,要分项谈 — 现金/商业/公关分开给底线。",
       "tips_zh": "第三方审核(BSCI/SEDEX)成本 USD 1,500-3,000/次,12 次就是 2-3.6 万美金,工厂要算清。",
       "user_response_example": "My read: USD 15,000 cash is on the high side but workable; 12-month third-party audits is excessive — we can agree to 6 months of monthly internal audits with quarterly third-party checks; a public CSR statement is non-standard, but a private CAP with buyer oversight is fair. Counter at USD 8,000 cash, 6-month internal-plus-quarterly-third-party, private CAP."
@@ -29,7 +37,11 @@
       "ai_message": "Buyer is willing to drop the public statement if we accept the 12-month third-party audits. The cash can be USD 12,000. Is that a deal?",
       "ai_message_zh": "客户愿意撤掉公开 CSR 声明,如果我们接受 12 个月第三方审核。现金 USD 12,000。能成交吗?",
       "expected_user_response_hint": "最终判断 + 谈细节",
-      "key_phrases": ["We can accept USD 12,000", "On the 12-month audits, we need to scope the cost", "Let's close on these terms"],
+      "key_phrases": [
+        "We can accept USD 12,000",
+        "On the 12-month audits, we need to scope the cost",
+        "Let's close on these terms"
+      ],
       "common_mistakes": "12-month audit 是一笔持续成本(每年 USD 18,000+),要看未来订单能不能 cover。不要只看眼前 cash。",
       "tips_zh": "negotiation final move:如果你能接受,先说 cash,再说 audit 细节;如果不能,先说 audit,再说 cash 加大。",
       "user_response_example": "We accept USD 12,000 cash. On the 12-month audit, we agree to BSCI or SEDEX — same standard the buyer uses. We need to clarify who pays the audit cost and the report sharing. Let's get those two points in writing before we sign anything."
@@ -39,7 +51,11 @@
       "ai_message": "OK. Audit cost split 50/50, reports go to buyer's compliance team only. Now, the master supply agreement — the buyer's counsel wants a 'no-repeat' clause: any quality issue above 5 percent AQL within 12 months triggers automatic termination.",
       "ai_message_zh": "行。审核费五五分,报告只发客户合规团队。还有主合同 — 客户法务要加一条 'no-repeat' 条款:12 个月内任何超过 5% AQL 的质量问题,自动终止合同。",
       "expected_user_response_hint": "评估条款风险 + 给缓冲方案",
-      "key_phrases": ["An automatic termination is too harsh", "Let's add a cure period", "We can accept a 30-day remediation window"],
+      "key_phrases": [
+        "An automatic termination is too harsh",
+        "Let's add a cure period",
+        "We can accept a 30-day remediation window"
+      ],
       "common_mistakes": "'no-repeat / auto-terminate' 条款对工厂风险极大。一次大货 QC 失误,客户可据此终止后续订单。",
       "tips_zh": "counter:30 天 remediation(整改期) + 终止前 60 天 written notice + 双方共同确认。",
       "user_response_example": "An automatic-termination clause is too harsh — one bad shift could kill the whole program. We can accept a 'material defect' clause with a 30-day cure period: if we fail to remediate within 30 days of written notice, the buyer can terminate. That's standard, fair, and protects both sides."
@@ -49,7 +65,11 @@
       "ai_message": "That's acceptable. Last item — the buyer's counsel wants a settlement agreement with a non-disclosure clause. We all sign, no press, no social media. Can you sign?",
       "ai_message_zh": "可以。最后 — 客户法务要和解协议带保密条款。我们都签字,不上媒体、不上社交平台。你能签吗?",
       "expected_user_response_hint": "确认 NDA 可签,但要明确范围",
-      "key_phrases": ["We can sign an NDA", "Scope should be: the dispute and the settlement amount", "Mutual non-disparagement, please"],
+      "key_phrases": [
+        "We can sign an NDA",
+        "Scope should be: the dispute and the settlement amount",
+        "Mutual non-disparagement, please"
+      ],
       "common_mistakes": "NDA 别签空白:明确 scope(范围)、duration(年限)、exclusions(例外:法律要求披露的)。",
       "tips_zh": "标准 NDA:scope + duration(2-3 年)+ 双方 mutual + 例外(法律/审计/已有公开信息)。",
       "user_response_example": "We can sign an NDA — that's standard. To be clear, the scope should be limited to this specific dispute and the settlement amount. We also want a mutual non-disparagement clause so neither side speaks negatively about the other in public. Three-year duration, with carve-outs for legal and audit disclosures."

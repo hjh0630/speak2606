@@ -55,11 +55,20 @@ export const useSessionStore = defineStore('session', () => {
       repeatIndex.value = 0
       repeatPrompts.value = []
       if (s.mode === 'repeat') {
-        try {
-          repeatPrompts.value = await apiGetRepeatPrompts(s.id)
-        } catch {
-          repeatPrompts.value = []
+        // Load follow-along prompts via the API client.  The helper itself
+        // never throws — it returns [] on any failure — so we don't need a
+        // try/catch here, but we log so a misconfigured backend is easy to
+        // spot from the browser console.
+        const prompts = await apiGetRepeatPrompts(s.id, s.scenario_id, s.difficulty)
+        if (!prompts.length && typeof console !== 'undefined') {
+          console.warn(
+            `[sessionStore] repeat-mode session ${s.id} (scenario=${s.scenario_id}, ` +
+              `difficulty=${s.difficulty}) loaded 0 follow-along prompts — ` +
+              'check that the scenario dialog file exists and the /api/scenarios/:id ' +
+              'endpoint returns rounds with ai_message.',
+          )
         }
+        repeatPrompts.value = prompts
       }
       connection.value = 'idle'
       return s
@@ -76,9 +85,15 @@ export const useSessionStore = defineStore('session', () => {
       const s = await apiGetSession(id)
       session.value = s
       if (s.mode === 'repeat' && repeatPrompts.value.length === 0) {
-        try {
-          repeatPrompts.value = await apiGetRepeatPrompts(s.id)
-        } catch { /* ignore */ }
+        // Same note as startSession: apiGetRepeatPrompts never throws.
+        const prompts = await apiGetRepeatPrompts(s.id, s.scenario_id, s.difficulty)
+        if (!prompts.length && typeof console !== 'undefined') {
+          console.warn(
+            `[sessionStore] resume session ${s.id} (scenario=${s.scenario_id}, ` +
+              `difficulty=${s.difficulty}) loaded 0 follow-along prompts.`,
+          )
+        }
+        repeatPrompts.value = prompts
       }
       connection.value = 'idle'
       return s

@@ -9,7 +9,11 @@
       "ai_message": "Hi, this is Daniel from Boreal Apparel in Toronto. I'm calling about the RFQ I sent yesterday for women's viscose dresses. Have you had a chance to review it?",
       "ai_message_zh": "你好,我是多伦多 Boreal Apparel 的 Daniel。我打来问下我昨天发的人造棉连衣裙询价,你看过了吗?",
       "expected_user_response_hint": "确认收到 RFQ,问询关键点",
-      "key_phrases": ["I had a look at your RFQ", "Just to clarify a few points", "Could you confirm"],
+      "key_phrases": [
+        "I had a look at your RFQ",
+        "Just to clarify a few points",
+        "Could you confirm"
+      ],
       "common_mistakes": "viscose 是人造棉/粘胶,有时被误称 rayon,两者其实是一回事,viscose 是欧洲叫法。",
       "tips_zh": "RFQ 进来后,如果信息不全,先问清楚再报价,比报完再改更专业。",
       "user_response_example": "Hi Daniel, thanks for the inquiry. I had a look at your RFQ last night. Just to clarify a few points before I quote — could you confirm the fabric weight, lining requirement, and whether you need a fitting sample before bulk?"
@@ -19,7 +23,11 @@
       "ai_message": "Viscose, 120 GSM, with the same-fabric lining. Two colorways. Quantity is 4,000 pieces per color. Target landed cost in Toronto is CAD$12.50 all-in, including duty and freight.",
       "ai_message_zh": "人造棉 120 克,同面料里布。两个颜色。每个颜色 4000 件。多伦多落地成本目标 12.5 加元,含关税和运费。",
       "expected_user_response_hint": "将 CAD$ 落地价拆解成 FOB 价",
-      "key_phrases": ["Let me work backwards from your landed cost", "CIF breakdown", "DDP vs DAP"],
+      "key_phrases": [
+        "Let me work backwards from your landed cost",
+        "CIF breakdown",
+        "DDP vs DAP"
+      ],
       "common_mistakes": "landed cost(到岸成本)含货值+运费+保险+关税;FOB 价是其中货值部分,要把它们拆开。",
       "tips_zh": "客户报 landed cost 时,要从后往前推:落地价 - 海运 - 关税 - 港杂 = FOB 价。注意关税因国家而异,加拿大对中国服装关税约 17-18%。",
       "user_response_example": "Got it. Let me work backwards from your CAD$12.50 landed cost. Sea freight to Toronto is roughly US$0.80 per piece, Canadian duty on women's dresses is around 17%, plus a small brokerage fee. That means your FOB Shanghai target is around US$8.20. Does that math line up with what you had in mind?"
@@ -29,7 +37,11 @@
       "ai_message": "That's about right. But we're flexible on the FOB if you can absorb some of the logistics. Can you quote both FOB Shanghai and CIF Toronto? Also — is 4,000 pieces workable for you as an MOQ?",
       "ai_message_zh": "差不多。但如果你们能分摊一些物流费用,FOB 这块我们能灵活一点。能不能同时报 FOB 上海和 CIF 多伦多?另外,4000 件能作为你们的 MOQ 吗?",
       "expected_user_response_hint": "回答 MOQ 灵活度,解释为什么 MOQ 在意,提供两种报价",
-      "key_phrases": ["Our MOQ is ...", "more flexible on", "CIF quote includes ..."],
+      "key_phrases": [
+        "Our MOQ is ...",
+        "more flexible on",
+        "CIF quote includes ..."
+      ],
       "common_mistakes": "CIF 价 = Cost + Insurance + Freight;CIF Toronto 意味着工厂负责到多伦多的运费和保险。",
       "tips_zh": "CIF 报价要点:FOB 价 + 海运费 + 海运保险(一般货值的 0.3-0.5%)。工厂报价时要明确:CIF 是按货值还是数量加。",
       "user_response_example": "Our standard MOQ per color is 1,000 pieces, but we're more flexible on style for repeat customers — 4,000 pieces per color across two colors is absolutely workable. For the quotation, I'll give you both FOB Shanghai and CIF Toronto, with the freight quote based on a 20-foot container. CIF will include 0.3% insurance, as per Incoterms 2020."
@@ -39,7 +51,12 @@
       "ai_message": "Perfect. One more thing — we want a contrasting piping at the neckline, and the hem needs to be 1cm wider than the sample you sent last season. Can you quote with that?",
       "ai_message_zh": "好的。再加一个:领口要撞色滚边,下摆比你们上季度寄的样衣宽 1 厘米。能按这个报吗?",
       "expected_user_response_hint": "确认细节,说明工时增加对成本的影响",
-      "key_phrases": ["Contrasting piping", "That adds about ...", "to the unit cost", "I can work that in"],
+      "key_phrases": [
+        "Contrasting piping",
+        "That adds about ...",
+        "to the unit cost",
+        "I can work that in"
+      ],
       "common_mistakes": "piping 是滚边/嵌条,不是 piping(管道)。要按服装语境理解。",
       "tips_zh": "撞色滚边(contrasting piping)涉及额外裁条 + 缝制工时,通常增加 US$0.10-0.20 单价,要在报价里说清。",
       "user_response_example": "Contrasting piping at the neckline and a 1cm wider hem — both doable. The piping adds roughly US$0.18 per piece for the extra cutting and binding step. The wider hem is a minor change, no cost impact. I'll send a revised spec confirmation to make sure we have the right piping width and color in mind."
@@ -49,27 +66,42 @@
       "ai_message": "Sounds good. What's the typical lead time for 8,000 pieces total? And do you run inline QC, or is the final inspection enough?",
       "ai_message_zh": "好的。8000 件总单交期一般多久?你们是过程检验,还是只做终检?",
       "expected_user_response_hint": "说明交期,介绍 QC 体系(过程检验 + 终检)",
-      "key_phrases": ["Lead time is ...", "We run inline QC", "final random inspection", "AQL 2.5"],
+      "key_phrases": [
+        "Lead time is ...",
+        "We run inline QC",
+        "final random inspection",
+        "AQL 2.5"
+      ],
       "common_mistakes": "inline QC(过程检验)≠ final inspection(终检),两者都做才专业。",
       "tips_zh": "QC 三道关:①DUPRO(产中检 30-50% 时)② PSI / FRI(装柜前终检)③ 客户指定第三方(如 SGS / BV / Intertek)。",
-      "user_response_example": "Lead time is 45 to 50 days from deposit, including fabric sourcing. We run inline QC at the sewing line every day, a mid-production check (DUPRO) at around 60% completion, and a final random inspection before shipment. We follow AQL 2.5 general inspection level II, but if your standard is different, just let us know."
+      "user_response_example": "Lead time is 45 to 50 days from deposit, including fabric sourcing. We run inline QC at the sewing line every day, a mid-production check (DUPRO) at around 60% completion, and a final random inspection before shipment. We follow AQL 2.5 general inspection level II, but if your standard is different, just let's know."
     },
     {
       "round": 6,
-      "ai_message": "We need AQL 1.5 for critical, 2.5 for major, 4.0 for minor. Also, can you do 50 days including delivery to Toronto? Door-to-door, that is.",
+      "ai_message": "We need AQL 1.5 for critical, 2.5 for major, 4.0 for minor. Also, can you do 50 days including delivery to Toronto? Door-to-door, that's.",
       "ai_message_zh": "我们 AQL 标准:critical 1.5、major 2.5、minor 4.0。还有,从下单到多伦多送货上门 50 天能做到吗?",
       "expected_user_response_hint": "确认 AQL,讨论 DDP / 门到门时间",
-      "key_phrases": ["AQL 1.5 / 2.5 / 4.0", "Door-to-door", "DDP is tight but possible", "add 5-7 days"],
+      "key_phrases": [
+        "AQL 1.5 / 2.5 / 4.0",
+        "Door-to-door",
+        "DDP is tight but possible",
+        "add 5-7 days"
+      ],
       "common_mistakes": "DDP(Delivered Duty Paid) = 完税后交货,工厂负责到客户仓库的一切费用和风险。",
       "tips_zh": "DDP 要算:生产(45 天) + 海运(25-30 天) + 清关(3-5 天) + 派送(1-2 天),约 75-80 天,50 天 DDP 几乎不可能。要么加价,要么改 75 天。",
-      "user_response_example": "On the AQL — 1.5 / 2.5 / 4.0 is fine, we'll adjust our QC plan accordingly. On the lead time — door-to-door DDP in 50 days is not realistic, honestly. Production is 45-50 days, sea freight to Toronto is 25-30 days, plus 3-5 days for clearance. 75-80 days is the realistic DDP timeline. If you need it faster, we'd have to split the shipment by air."
+      "user_response_example": "On the AQL — 1.5 / 2.5 / 4.0 is fine, we'll adjust our QC plan accordingly. On the lead time — door-to-door DDP in 50 days isn't realistic, honestly. Production is 45-50 days, sea freight to Toronto is 25-30 days, plus 3-5 days for clearance. 75-80 days is the realistic DDP timeline. If you need it faster, we'd have to split the shipment by air."
     },
     {
       "round": 7,
       "ai_message": "OK, 75-80 days DDP is fine. Send me the offer with FOB Shanghai, CIF Toronto, and DDP Toronto. I'll review and get back next week. One last question — what's your policy on price protection if the fabric price moves?",
       "ai_message_zh": "行,75-80 天 DDP 可以。把 FOB 上海、CIF 多伦多、DDP 多伦多三个价都报给我。我下周回复。最后一个问题:面料价格波动的话,你们价格怎么保护?",
       "expected_user_response_hint": "说明价格保护条款(常见 PI 有效期 30 天 + 数量浮动容忍度)",
-      "key_phrases": ["Price is locked once the PI is confirmed", "valid for 30 days", "Viscose price has been stable", "I can hold the price for"],
+      "key_phrases": [
+        "Price is locked once the PI is confirmed",
+        "valid for 30 days",
+        "Viscose price has been stable",
+        "I can hold the price for"
+      ],
       "common_mistakes": "price protection 是'价格保护',不是 '价格保护伞'(umbrella)。",
       "tips_zh": "面料价格波动保护:① PI 30 天内有效,锁定价格;② 30 天后若客户未确认,可按实际原料价格调整;③ 大宗订单可签 long-term price agreement(长期价格协议)。",
       "user_response_example": "Standard policy: once the PI is confirmed and deposit received, the price is locked. The offer is valid for 30 days. Viscose has been relatively stable this year, so I don't see a major move in the near term. For annual programs, we can also do a quarterly price review tied to the published yarn index — that's worth discussing if we move to a long-term relationship."
@@ -79,7 +111,11 @@
       "ai_message": "Appreciate the clarity. Send everything to daniel.lee@borealapparel.ca. I'll get the internal approval and revert with a PO by Wednesday. Thanks for the call.",
       "ai_message_zh": "讲得很清楚。全部发到 daniel.lee@borealapparel.ca。我内部批一下,周三前给你 PO。谢谢。",
       "expected_user_response_hint": "确认收件,承诺邮件,做 closing",
-      "key_phrases": ["I'll send the full offer", "Thanks for the call", "Looking forward to your PO"],
+      "key_phrases": [
+        "I'll send the full offer",
+        "Thanks for the call",
+        "Looking forward to your PO"
+      ],
       "common_mistakes": "revert with a PO 是英式/加拿大式表达,意思是'回复并给 PO'。",
       "tips_zh": "客户说'周三前给 PO' = commitment,要 follow up 准时。",
       "user_response_example": "Thanks, Daniel. You'll have the full offer — FOB Shanghai, CIF Toronto, and DDP Toronto — in your inbox by tomorrow afternoon, Beijing time. Looking forward to your PO on Wednesday. Have a good evening in Toronto."

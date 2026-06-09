@@ -6,20 +6,28 @@
   "rounds": [
     {
       "round": 1,
-      "ai_message": "Hi Chen, this is Daniel from the buying office. Could you give me an update on PO #2024-356? The buyer is asking about the shipping date.",
+      "ai_message": "Hi Chen, this is Daniel from the buying office. Can you update me on PO #2024-356? The buyer is asking about the shipping date.",
       "ai_message_zh": "陈你好,我是采购办的 Daniel。订单 2024-356 进度怎么样了?客户在问船期。",
       "expected_user_response_hint": "确认订单号,给当前生产/出货阶段的状态",
-      "key_phrases": ["Let me check the status", "We're currently at ...", "Production is ... percent done"],
+      "key_phrases": [
+        "Let me check the status",
+        "We're currently at ...",
+        "Production is ... percent done"
+      ],
       "common_mistakes": "不要笼统说 'It's in progress' — 要给具体阶段:in production / in QC / in packing。",
       "tips_zh": "主动报数据(百分比、日期)比 '快了快了' 专业得多。",
-      "user_response_example": "Hi Daniel. Let me check — PO 2024-356. Production is about 70 percent done, and we are moving into final inspection this Friday."
+      "user_response_example": "Hi Daniel. Let me check — PO 2024-356. Production is about 70 percent done, and we're moving into final inspection this Friday."
     },
     {
       "round": 2,
       "ai_message": "Friday? That works. What is your estimated ETD from Ningbo? The vessel they want is the MSC vessel, if possible.",
       "ai_message_zh": "周五可以。预计什么时候从宁波开船?他们想走 MSC 的船,能配合吗?",
       "expected_user_response_hint": "给出 ETD 并确认船公司可行性",
-      "key_phrases": ["ETD is ...", "MSC has a sailing on ...", "We can book on ..."],
+      "key_phrases": [
+        "ETD is ...",
+        "MSC has a sailing on ...",
+        "We can book on ..."
+      ],
       "common_mistakes": "ETD / ETA 容易说反:ETD=Estimated Time of Departure(离港),ETA=Estimated Time of Arrival(到港)。",
       "tips_zh": "跟货代/船代先确认本周和下周 MSC 船期表,再给客户,不要凭印象答。",
       "user_response_example": "Sure. ETD from Ningbo is around the 18th of this month. MSC has a direct sailing to New York on the 20th. We can book your container on that one."
@@ -29,40 +37,56 @@
       "ai_message": "Perfect. What about the cut-off time? I want to make sure the cargo will be at port in time.",
       "ai_message_zh": "好的。截关时间是?我想确认能不能赶得上。",
       "expected_user_response_hint": "给截关时间,以及工厂送货到港的安排",
-      "key_phrases": ["The cut-off is ...", "Container needs to be at yard by ...", "We will arrange stuffing on ..."],
+      "key_phrases": [
+        "The cut-off is ...",
+        "Container needs to be at yard by ...",
+        "We'll arrange stuffing on ..."
+      ],
       "common_mistakes": "cut-off = 截关(船公司收货截止),不是装柜截止。搞混会误事。",
       "tips_zh": "工厂装柜日、还柜到堆场日、截关日,三个时间都要心里有数。",
-      "user_response_example": "The cut-off is on the 17th, by 6 PM. We will arrange stuffing at our warehouse on the 15th, and deliver the container to the yard on the 16th."
+      "user_response_example": "The cut-off is on the 17th, by 6 PM. We'll arrange stuffing at our warehouse on the 15th, and deliver the container to the yard on the 16th."
     },
     {
       "round": 4,
       "ai_message": "Good. Can you send me the draft B/L once it's issued? My forwarder needs to check the consignee and notify party fields.",
       "ai_message_zh": "好。提单一出来,先发我一份草稿可以吗?我货代要核对收货人和通知人。",
       "expected_user_response_hint": "答应并确认信息以谁为准",
-      "key_phrases": ["Sure, will do", "Please double-check the ...", "Final B/L will follow the booking confirmation"],
+      "key_phrases": [
+        "Sure, will do",
+        "Please double-check the ...",
+        "Final B/L will follow the booking confirmation"
+      ],
       "common_mistakes": "B/L 草稿确认要明确:consignee(收货人)、notify party(通知人)、shipper(发货人)三栏必查。",
       "tips_zh": "草稿先发给货代和客户各一份,有问题改在签单前,签完就改不动了。",
-      "user_response_example": "Sure. Once the booking is confirmed, I will send you the draft B/L for review. Please double-check the consignee and notify party fields."
+      "user_response_example": "Sure. Once the booking is confirmed, I'll send you the draft B/L for review. Please double-check the consignee and notify party fields."
     },
     {
       "round": 5,
       "ai_message": "One more thing — do you handle the C/O? We need a Form A for the US shipment.",
       "ai_message_zh": "还有 — 产地证你们办吗?美国这票要办普惠制 Form A。",
       "expected_user_response_hint": "确认能办并说清楚办理方式和时间",
-      "key_phrases": ["Yes, we can issue the C/O", "It will be issued by ...", "Extra fee is ..."],
+      "key_phrases": [
+        "Yes, we can issue the C/O",
+        "It will be issued by ...",
+        "Extra fee is ..."
+      ],
       "common_mistakes": "C/O = Certificate of Origin(产地证);Form A 是 GSP(普惠制)产地证,用途不同别搞混。",
       "tips_zh": "办证文件要提前准备:商业发票、装箱单、提单草本,缺一不可。",
-      "user_response_example": "Yes, we will issue the General C/O through the local CCPIT. Form A is also possible. The extra fee is around USD 30 per set."
+      "user_response_example": "Yes, we'll issue the General C/O through the local CCPIT. Form A is also possible. The extra fee is around USD 30 per set."
     },
     {
       "round": 6,
       "ai_message": "OK. What documents will the courier deliver to my office directly? My accounting team needs the invoice and packing list.",
       "ai_message_zh": "行。哪些文件会直接快递给我办公室?财务要发票和装箱单。",
       "expected_user_response_hint": "说明快递资料清单",
-      "key_phrases": ["We will send ... by DHL", "Original set includes ...", "The courier will arrive in ..."],
+      "key_phrases": [
+        "We'll send ... by DHL",
+        "Original set includes ...",
+        "The courier will arrive in ..."
+      ],
       "common_mistakes": "full set(全套)通常指:1/3 正本提单 + 商业发票 + 装箱单 + 产地证 + 保险单,别漏。",
       "tips_zh": "正本提单要不要寄,要看客户要不要做电放(telex release)。美国客人很多走电放,省快递时间和丢件风险。",
-      "user_response_example": "We will send the full set by DHL, including one original B/L, invoice, packing list, and C/O. They usually arrive within three business days after sailing."
+      "user_response_example": "We'll send the full set by DHL, including one original B/L, invoice, packing list, and C/O. They usually arrive within three business days after sailing."
     }
   ]
 }

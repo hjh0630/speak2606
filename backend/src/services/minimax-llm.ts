@@ -16,6 +16,15 @@ const log = createLogger('minimax-llm');
 
 const SCORING_SYSTEM_PROMPT = `You are a friendly but rigorous English speaking coach for a Chinese export salesperson in the apparel & textile industry.
 
+CRITICAL OUTPUT FORMAT — READ FIRST:
+- Respond with ONLY a single valid JSON object. Nothing else.
+- The FIRST character of your response must be { and the LAST character must be }.
+- DO NOT wrap the JSON in markdown fences (no \`\`\`json or \`\`\`).
+- DO NOT add any explanation, preamble, commentary, or prose before or after the JSON.
+- DO NOT include any text outside the JSON object.
+- The response must be parseable by JSON.parse() with zero preprocessing.
+- If you violate this format, the system fails. JSON-only, always.
+
 After each user utterance, evaluate it and return STRICT JSON with EXACTLY this shape (no prose, no markdown, no backticks):
 
 {
@@ -33,7 +42,9 @@ Scoring rubric:
 - 40-59:  frequent errors that may cause confusion
 - 0-39:   hard to follow
 
-Be honest, brief, and actionable. ALWAYS output valid JSON. Never wrap in markdown.`;
+Be honest, brief, and actionable. ALWAYS output valid JSON. Never wrap in markdown.
+
+REMINDER: Your entire response must be a single JSON object starting with { and ending with }. No markdown, no fences, no prose outside the JSON. The first character is { and the last character is }.`;
 
 function buildMockLlmResponse(req: LlmChatRequest): LlmChatResponse {
   // For scoring requests, return a mock score.
@@ -80,9 +91,10 @@ function buildRequestBody(req: LlmChatRequest): unknown {
     temperature: req.temperature ?? 0.7,
   };
   if (req.maxTokens !== undefined) body.max_tokens = req.maxTokens;
-  if (req.responseFormatJson) {
-    body.response_format = { type: 'json_object' };
-  }
+  // NOTE: We deliberately do NOT set `response_format: { type: "json_object" }`.
+  // The MiniMax text-01 model returns an empty string when this field is set,
+  // even though the API is OpenAI-compatible. We rely on a strict system prompt
+  // + the safeParseScore fence-stripping on the client side instead.
   return body;
 }
 
@@ -96,13 +108,16 @@ async function callRemote(req: LlmChatRequest): Promise<LlmChatResponse> {
     headers['X-Group-Id'] = config.minimax.groupId;
   }
 
+  const requestBody = buildRequestBody(req);
+  log.debug(`MiniMax LLM request: responseFormatJson=${req.responseFormatJson} body=${JSON.stringify(requestBody).slice(0, 400)}`);
+
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 30_000);
   try {
     const resp = await fetch(url, {
       method: 'POST',
       headers,
-      body: JSON.stringify(buildRequestBody(req)),
+      body: JSON.stringify(requestBody),
       signal: controller.signal,
     });
     if (!resp.ok) {
@@ -115,6 +130,7 @@ async function callRemote(req: LlmChatRequest): Promise<LlmChatResponse> {
       usage?: { prompt_tokens?: number; completion_tokens?: number; total_tokens?: number };
     };
     const content = data.choices?.[0]?.message?.content ?? '';
+    log.debug(`MiniMax LLM response: len=${content.length} raw=${JSON.stringify(content).slice(0, 300)}`);
     return {
       content,
       model: data.model ?? 'unknown',

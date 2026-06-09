@@ -1,4 +1,5 @@
 import { http } from './client'
+import { getScenarioDialogs } from './scenarios'
 import type {
   CreateSessionRequest,
   CreateSessionResponse,
@@ -162,16 +163,95 @@ export async function sendMessage(
   return normalizeSendMessageResponse(res.data as Record<string, unknown>)
 }
 
-export async function getRepeatPrompts(sessionId: string): Promise<RepeatPrompt[]> {
-  // Backend exposes repeat-mode prompts as part of /api/scenarios/:id dialogs.
-  // The session-level /prompts endpoint is optional; we try it and fall back.
+/**
+ * Adapter: normalize a raw dialog entry (whatever shape the backend serves)
+ * into a flat list of RepeatPrompt objects the UI can iterate over.
+ *
+ * The backend today returns `{ scenario, dialogs: [{ difficulty, rounds: [{ round,
+ * ai_message, ai_message_zh, ... }] }] }`.  This helper is intentionally
+ * tolerant: it tries several common field names (`rounds` / `turns` / `lines`)
+ * and several common text fields (`ai_message` / `text` / `en`), so that if
+ * the backend ever renames a field we degrade to the next best alternative
+ * rather than silently showing an empty prompt list.
+ */
+function dialogEntryToPrompts(entry: Record<string, unknown> | null | undefined): RepeatPrompt[] {
+  if (!entry || typeof entry !== 'object') return []
+  const diff = (entry.difficulty as Difficulty | undefined) ?? 'beginner'
+  // Accept any of the common round container names.
+  const roundsRaw = entry.rounds ?? entry.turns ?? entry.lines ?? entry.dialog
+  if (!Array.isArray(roundsRaw)) return []
+  return roundsRaw
+    .map((r, idx): RepeatPrompt | null => {
+      if (!r || typeof r !== 'object') return null
+      const rr = r as Record<string, unknown>
+      // The English target line is the AI's utterance.  Accept a few common
+      // aliases so a backend rename doesn't break the UI silently.
+      const textRaw =
+        (typeof rr.ai_message === 'string' && rr.ai_message) ||
+        (typeof rr.text === 'string' && rr.text) ||
+        (typeof rr.en === 'string' && rr.en) ||
+        (typeof rr.content === 'string' && rr.content) ||
+        ''
+      const translation =
+        (typeof rr.ai_message_zh === 'string' && rr.ai_message_zh) ||
+        (typeof rr.translation === 'string' && rr.translation) ||
+        (typeof rr.zh === 'string' && rr.zh) ||
+        undefined
+      if (!textRaw) return null
+      const idRaw = rr.round ?? rr.id ?? rr.index ?? idx + 1
+      const id = String(idRaw)
+      return { id, text: textRaw, translation, difficulty: diff }
+    })
+    .filter((p): p is RepeatPrompt => p !== null)
+}
+
+export async function getRepeatPrompts(
+  sessionId: string,
+  scenarioId?: string,
+  difficulty?: Difficulty,
+): Promise<RepeatPrompt[]> {
+  // 1) Try the (currently unimplemented) session-level endpoint first so we
+  //    stay forward-compatible if/when the backend adds it.
   try {
     const res = await http.get<RepeatPrompt[] | { items: RepeatPrompt[] }>(
       `/sessions/${encodeURIComponent(sessionId)}/prompts`,
     )
-    if (Array.isArray(res.data)) return res.data
-    if (res.data && Array.isArray(res.data.items)) return res.data.items
-  } catch { /* fallthrough */ }
+    if (Array.isArray(res.data) && res.data.length) return res.data
+    if (res.data && Array.isArray((res.data as { items?: RepeatPrompt[] }).items)) {
+      const items = (res.data as { items: RepeatPrompt[] }).items
+      if (items.length) return items
+    }
+  } catch (err) {
+    // Expected: the backend doesn't implement this endpoint yet.  Fall through.
+    if (typeof console !== 'undefined') {
+      console.debug('[getRepeatPrompts] /prompts endpoint not available, falling back', err)
+    }
+  }
+
+  // 2) Fall back to /api/scenarios/:id dialogs (the real source of truth on
+  //    the backend today).  Pick the dialog entry matching the session's
+  //    difficulty and convert it into RepeatPrompts through the adapter.
+  if (scenarioId) {
+    try {
+      const dialogs = await getScenarioDialogs(scenarioId)
+      if (Array.isArray(dialogs) && dialogs.length) {
+        // Pick the entry for the chosen difficulty, fall back to beginner,
+        // then to whatever is first.  All three guards are kept in case the
+        // backend later returns multiple difficulty variants in one call.
+        const pool = dialogs as unknown as Record<string, unknown>[]
+        const entry =
+          pool.find((d) => d.difficulty === difficulty) ??
+          pool.find((d) => d.difficulty === 'beginner') ??
+          pool[0]
+        const prompts = dialogEntryToPrompts(entry)
+        if (prompts.length) return prompts
+      }
+    } catch (err) {
+      if (typeof console !== 'undefined') {
+        console.warn('[getRepeatPrompts] failed to load scenario dialogs', err)
+      }
+    }
+  }
   return []
 }
 

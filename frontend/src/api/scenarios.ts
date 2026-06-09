@@ -107,3 +107,19 @@ export async function getScenario(id: string): Promise<Scenario> {
   }
   return normalizeScenario(data as Record<string, unknown>)
 }
+
+/**
+ * Returns the dialogs (one entry per difficulty) for a scenario.  The backend
+ * serves these at `GET /api/scenarios/:id` together with the scenario meta.
+ * We use this for follow-along ("repeat") mode to derive per-round prompts.
+ */
+export async function getScenarioDialogs(scenarioId: string): Promise<Dialog[]> {
+  const res = await http.get<ScenarioDetail | Record<string, unknown>>(
+    `/scenarios/${encodeURIComponent(scenarioId)}`,
+  )
+  const data = res.data as Record<string, unknown> | undefined
+  if (data && Array.isArray((data as { dialogs?: unknown[] }).dialogs)) {
+    return (data as { dialogs: Dialog[] }).dialogs
+  }
+  return []
+}

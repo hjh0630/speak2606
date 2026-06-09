@@ -1,7 +1,7 @@
 # SpeakFlow · 服装纺织外贸英语口语练习 App
 
 一个垂直场景的英语口语练习应用,基于 MiniMax 语音大模型,专注服装纺织外贸业务。
-内置 6 个高频场景(电话会议、询盘报价、工厂参观、物流船期、打样、索赔售后),
+内置 20 个场景(6 大类 × 3 难度,加扩展),
 三个难度(入门 / 进阶 / 高阶),两种模式(自由对话 / 跟读),
 每轮 AI 回复后给简洁反馈(总分 + 流利度 + 准确度 + 关键问题 + 改进建议)。
 
@@ -83,7 +83,7 @@ npm install && npm run dev
 ```ini
 # MiniMax 语音大模型 API
 MINIMAX_API_KEY=sk-cp-...
-MINIMAX_GROUP_ID=2019754696415122059
+MINIMAX_GROUP_ID=2019754696415122059  # 示例值,需替换为你自己的 group id
 API_BASE=https://api.minimax.chat
 
 # Server
@@ -100,7 +100,9 @@ CONTENT_DIR=/workspace/content
 
 如果 `MINIMAX_API_KEY` 留空,后端仍会启动,但对话 / 评分 / TTS 走 mock 模式(方便纯前端调试,无 API 消耗)。
 
-## 🎯 6 个内置场景
+## 🎯 20 个内置场景(6 大类 × 3 难度 + 扩展)
+
+下面是 6 大类场景的索引,每个大类对应 3 个难度(beginner / intermediate / advanced)共 18 条主对话,外加 2 条扩展场景:
 
 | ID | 中文 | 角色扮演 | 你练什么 |
 |----|------|---------|---------|
@@ -136,7 +138,22 @@ curl -X POST http://localhost:3001/api/sessions/<SID>/messages \
 - **ASR** 用浏览器原生 Web Speech API(Firefox 不支持,自动降级到文字输入)
 - **TTS** 音频用后端 hex → mp3 实时合成,首次加载略慢(等 LLM 几秒)
 - **MiniMax 配额** 受你账号 plan 限制
+- **API 套餐问题** —— 当前 group_id 对应的账号 plan / 配额在部分场景(TTS 长文本、并发)可能触发限流或余额不足,正在做多账号 fallback 方案(WIP)
 - **历史记录** 存在本地 SQLite,清空数据库会丢
+
+## 🌐 公网访问
+
+本地部署只暴露 `http://localhost:3001`,要让外网访问,走 Cloudflare 临时隧道:
+
+1. 下载 [cloudflared](https://github.com/cloudflare/cloudflared/releases) Windows 版,把 `cloudflared.exe` 放到 `C:\Windows\System32\` 或 `C:\Program Files\cloudflared\`(或任意在 PATH 里的目录)
+2. 在项目根目录双击 `deploy.bat`,脚本会自动:
+   - 杀掉占用 3001 的旧 node 进程
+   - `npm run build` 重建前端(如 dist 已存在则跳过)
+   - 后端编译 + 启动(serve `frontend/dist` + API + WebSocket)
+   - 启动 `cloudflared tunnel --url http://localhost:3001`
+3. 脚本会从 cloudflared 日志里抓取公网 URL(形如 `https://xxxx.trycloudflare.com`)并打印出来,直接发给别人就能用
+4. **注意**:临时隧道 URL 每次重启都会变,不要做成固定链接;需要固定域名请绑 Cloudflare 账户的命名隧道
+5. 不需要公网时双击 `stop.bat` 关闭 node + cloudflared
 
 ## 🛠 技术栈
 

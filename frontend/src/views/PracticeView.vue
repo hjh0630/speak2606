@@ -22,7 +22,10 @@ const tts = useTts()
 const sessionId = computed(() => route.params.id as string)
 const textInput = ref('')
 const messagesEl = ref<HTMLElement | null>(null)
-const showSidebar = ref(true)
+// Sidebar default: hidden on mobile (≤ 640 px), shown on desktop.
+// `isMobile` is reactive so the aside re-renders if the user resizes.
+const isMobile = ref(false)
+const showSidebar = ref(false)
 const showPermissionHint = ref(false)
 const finishing = ref(false)
 const finished = ref(false)
@@ -44,7 +47,29 @@ async function ensureSession() {
   }
 }
 
+// Manual reload for the follow-along prompt list.  The data is normally loaded
+// in startSession/resumeSession, but if the /api/scenarios/:id call raced or
+// failed, the user can click "重试" in the empty-state banner to refetch.
+async function reloadPrompts() {
+  const s = sessionStore.session
+  if (!s) return
+  sessionStore.connection = 'connecting'
+  try {
+    const { getRepeatPrompts } = await import('@/api/sessions')
+    const prompts = await getRepeatPrompts(s.id, s.scenario_id, s.difficulty)
+    sessionStore.repeatPrompts = prompts
+  } catch (e) {
+    if (typeof console !== 'undefined') console.warn('[PracticeView] reloadPrompts failed', e)
+  } finally {
+    if (sessionStore.connection === 'connecting') sessionStore.connection = 'idle'
+  }
+}
+
 onMounted(async () => {
+  // Detect mobile viewport for sidebar default. We only initialize once;
+  // user can still toggle the sidebar manually after that.
+  isMobile.value = window.innerWidth < 640
+  showSidebar.value = !isMobile.value
   await ensureSession()
   scrollToBottom()
   if (typeof navigator !== 'undefined' && navigator.permissions) {
@@ -98,11 +123,16 @@ const connectionLabel = computed(() => {
 async function onRecorderStart() {
   if (recorder.isRecording.value || stt.isListening.value) return
   showPermissionHint.value = false
+  sessionStore.errorMessage = null
+  console.log('[PracticeView] onRecorderStart')
   // Start the recorder (so we get the level meter / pulse animation)
   try {
     await recorder.start()
-  } catch {
+    console.log('[PracticeView] recorder started')
+  } catch (e) {
+    console.warn('[PracticeView] recorder.start() failed', e)
     showPermissionHint.value = true
+    sessionStore.errorMessage = recorder.error.value || '无法启动录音,请检查麦克风权限。'
     return
   }
   // In parallel, start the browser STT (Chrome/Edge/Safari).
@@ -111,28 +141,43 @@ async function onRecorderStart() {
   try {
     await stt.start(async (finalText) => {
       const text = finalText.trim()
+      console.log('[PracticeView] stt onFinal:', JSON.stringify(text))
       if (!text) return
       try {
         await sessionStore.sendText(text, currentPrompt.value?.id)
-      } catch {
+      } catch (err) {
+        console.error('[PracticeView] sendText failed', err)
         // store has the error
       }
     })
-  } catch {
-    // browser doesn't support STT — text input remains the fallback
+    console.log('[PracticeView] stt started, isListening=', stt.isListening.value)
+  } catch (e) {
+    // browser doesn't support STT — surface the error and fall back to text input
+    console.warn('[PracticeView] stt.start() failed', e)
+    if (stt.error.value) {
+      sessionStore.errorMessage = stt.error.value
+    }
   }
 }
 
 async function onRecorderStop() {
-  // Stop both the visual recorder and the STT session.
+  // Stop both the visual recorder and the STT session.  The STT stop()
+  // awaits the recognizer's onend, so the final transcript is ready by the
+  // time the onFinal callback fires (or after the internal safety timeout).
+  console.log('[PracticeView] onRecorderStop')
   const blob = await recorder.stop()
-  stt.stop()
-  // If the browser STT already produced a final transcript, it has been
-  // forwarded. Nothing else to do here.
-  if (!blob || blob.size === 0) return
+  const finalTranscript = await stt.stop()
+  console.log('[PracticeView] stop complete, blob.size=', blob?.size ?? 0, 'lastResult=', JSON.stringify(stt.lastResult.value), 'resolved=', JSON.stringify(finalTranscript))
   // Note: we do NOT upload raw audio to the server. The text path is
   // the single source of truth for content scoring. Audio is kept
   // locally only as a visual cue.
+  // If the recognizer produced no transcript, surface a friendly hint so
+  // the user knows the mic captured nothing usable.  Also surface any
+  // STT error that might have fired asynchronously (no-speech, network…).
+  if (!stt.lastResult.value) {
+    sessionStore.errorMessage = stt.error.value
+      || '没听清,请再试一次,或直接用下方文字输入。'
+  }
 }
 
 async function sendText() {
@@ -246,6 +291,27 @@ function goToHistory() {
       </div>
     </div>
 
+    <!-- Repeat-mode: no prompts loaded fallback -->
+    <div
+      v-if="isRepeat && progress.total === 0"
+      class="card p-4 sm:p-5 text-sm text-ink-500 border-amber-200 bg-amber-50/60"
+    >
+      <div class="font-semibold text-amber-800 mb-1">还没加载到跟读句</div>
+      <p>
+        正在从场景库同步跟读内容…
+        <span v-if="!sessionStore.session">请先选择一个场景开始练习。</span>
+        <span v-else>如果一直停留在此,刷新页面或换一个场景重试。</span>
+      </p>
+      <button
+        v-if="sessionStore.session"
+        type="button"
+        class="btn-outline !py-1.5 !px-3 mt-2"
+        @click="reloadPrompts"
+      >
+        重试加载跟读句
+      </button>
+    </div>
+
     <!-- Finished modal-like card -->
     <div v-if="finished" class="card p-5 sm:p-6 animate-slide-up">
       <div class="flex items-center gap-3">
@@ -279,12 +345,12 @@ function goToHistory() {
             </p>
             <button
               type="button"
-              class="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-ink-200 px-2.5 py-1.5 text-xs font-medium text-ink-700 hover:bg-ink-50"
+              class="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-ink-200 px-2.5 py-1.5 text-xs font-medium text-ink-600 hover:bg-ink-50"
               :disabled="tts.isLoading.value"
               @click="playPrompt"
             >
               <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              播放
+              再听一遍
             </button>
           </div>
           <p v-if="currentPrompt.translation" class="text-sm text-ink-500 mt-2">
@@ -326,15 +392,26 @@ function goToHistory() {
           >
             {{ connectionLabel }}
           </div>
+          <div
+            v-if="recorder.isRecording.value && stt.isListening.value && !stt.interimText.value && !stt.finalText.value"
+            class="mb-2 text-center text-xs text-brand-700 animate-pulse"
+          >
+            🎙️ 正在听… 请说英文
+          </div>
           <div v-if="sessionStore.errorMessage" class="mb-2 text-center text-xs text-rose-600">
             {{ sessionStore.errorMessage }}
           </div>
           <div
-            v-if="stt.isListening.value && (stt.interimText.value || stt.finalText.value)"
+            v-if="(stt.isListening.value && (stt.interimText.value || stt.finalText.value)) || (!stt.isListening.value && stt.lastResult.value)"
             class="mb-2 rounded-lg bg-brand-50 border border-brand-200 px-3 py-2 text-sm text-brand-800"
           >
-            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider mr-1">识别中</span>
-            <span>{{ stt.finalText.value }}<span class="opacity-60">{{ stt.interimText.value }}</span></span>
+            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider mr-1">
+              {{ stt.isListening.value ? '识别中' : '你说' }}
+            </span>
+            <span v-if="stt.isListening.value">
+              {{ stt.finalText.value }}<span class="opacity-60">{{ stt.interimText.value }}</span>
+            </span>
+            <span v-else>{{ stt.lastResult.value }}</span>
           </div>
 
           <!-- Text fallback / always-available text input -->
@@ -356,9 +433,44 @@ function goToHistory() {
             </button>
           </div>
 
-          <!-- Recorder -->
-          <div class="flex items-center justify-between gap-3">
-            <div class="flex items-center gap-2 text-xs text-ink-500">
+          <!-- Repeat-mode: prominent "listen to original" CTA -->
+          <div v-if="isRepeat" class="mb-3">
+            <button
+              type="button"
+              class="w-full inline-flex items-center justify-center gap-2 rounded-xl
+                     bg-accent-500 text-white shadow-soft
+                     px-4 py-3 text-base font-medium
+                     hover:bg-accent-600 active:scale-[0.99] transition-all
+                     disabled:opacity-60 disabled:cursor-not-allowed"
+              :disabled="tts.isLoading.value"
+              @click="playPrompt"
+            >
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              先听原音
+            </button>
+            <p class="mt-1.5 text-center text-xs text-ink-500">
+              💡 建议先听原音,再点击下方按钮开始录音(3秒倒计时)
+            </p>
+          </div>
+
+          <!-- Recorder — stacks vertically on mobile, horizontal on sm+ -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <!-- Center: recorder (always visible, prominent) -->
+            <div class="order-1 sm:order-2 flex justify-center">
+              <RecorderButton
+                :is-recording="recorder.isRecording.value"
+                :is-preparing="recorder.isPreparing.value"
+                :level="recorder.level.value"
+                :mode="isRepeat ? 'countdown' : 'toggle'"
+                :countdown-ms="isRepeat ? 3000 : 0"
+                :disabled="sessionStore.connection !== 'idle'"
+                @start="onRecorderStart"
+                @stop="onRecorderStop"
+                @countdown-cancel="() => undefined"
+              />
+            </div>
+            <!-- Left: replay AI + desktop-only hint -->
+            <div class="order-2 sm:order-1 flex items-center gap-2 text-xs text-ink-500 justify-center sm:justify-start">
               <button
                 type="button"
                 class="rounded-lg border border-ink-200 px-2 py-1 hover:bg-ink-50"
@@ -367,19 +479,12 @@ function goToHistory() {
               >
                 🔊 复听 AI
               </button>
-              <span v-if="isRepeat" class="text-ink-400">
+              <span v-if="isRepeat" class="hidden sm:inline text-ink-400">
                 完成后点"下一句"
               </span>
             </div>
-            <RecorderButton
-              :is-recording="recorder.isRecording.value"
-              :is-preparing="recorder.isPreparing.value"
-              :level="recorder.level.value"
-              :disabled="sessionStore.connection !== 'idle'"
-              @start="onRecorderStart"
-              @stop="onRecorderStop"
-            />
-            <div v-if="isRepeat" class="flex gap-2">
+            <!-- Right: prev/next -->
+            <div v-if="isRepeat" class="order-3 flex gap-2 justify-center sm:justify-end">
               <button
                 type="button"
                 class="btn-outline"
@@ -401,8 +506,9 @@ function goToHistory() {
         </div>
       </div>
 
-      <!-- Sidebar: scoring -->
-      <aside v-if="showSidebar" class="space-y-4">
+      <!-- Sidebar: scoring. On mobile (≤ 640 px), default-collapsed; user can
+           toggle with the "显示评分/隐藏评分" button in the top bar. -->
+      <aside v-if="!isMobile || showSidebar" class="space-y-4">
         <ScoreCard :score="sessionStore.lastScore" />
         <div class="card p-4 sm:p-5 text-sm text-ink-500">
           <h3 class="text-sm font-semibold text-ink-800 mb-2">小贴士</h3>

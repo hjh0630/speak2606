@@ -9,7 +9,12 @@
       "ai_message": "Hello, this is Mark Johnson from ABC Trading in New York. May I speak with Mr. Chen, please?",
       "ai_message_zh": "你好,我是纽约 ABC Trading 的 Mark Johnson,请问陈先生在吗?",
       "expected_user_response_hint": "自我介绍并确认身份;询问对方来意",
-      "key_phrases": ["This is ... speaking", "May I speak with ...", "Speaking, please", "How can I help you"],
+      "key_phrases": [
+        "This is ... speaking",
+        "May I speak with ...",
+        "Speaking, please",
+        "How can I help you"
+      ],
       "common_mistakes": "中式英语:不要在 This is Mark speaking 后面再加 I am。也不要说 I am Mark(听起来像 'I'm Mark, not anybody else')。",
       "tips_zh": "接电话先报公司+部门+姓名,不要只报名字。This is + 名字 + speaking。",
       "user_response_example": "Hello, this is Chen Wei from Hangzhou Lily Garments. Speaking, please. How can I help you, Mark?"
@@ -19,17 +24,26 @@
       "ai_message": "Hi Mr. Chen. We saw your company profile on Alibaba and I'm interested in your knitwear. Do you have a moment?",
       "ai_message_zh": "陈先生你好。我们在阿里上看到贵司资料,对你们的针织产品很感兴趣。你现在方便吗?",
       "expected_user_response_hint": "礼貌确认有时间,并引出产品话题",
-      "key_phrases": ["Yes, I have a few minutes", "Sure, go ahead", "Now is a good time"],
+      "key_phrases": [
+        "Yes, I've a few minutes",
+        "Sure, go ahead",
+        "Now is a good time"
+      ],
       "common_mistakes": "不要说 I am free(自由)— 用 I have time / I'm available 更自然。",
       "tips_zh": "对方先问方便吗,先给时间再问具体内容,显得专业。",
-      "user_response_example": "Yes, I have a few minutes. Glad you reached out. What kind of knitwear are you looking for?"
+      "user_response_example": "Yes, I've a few minutes. Glad you reached out. What kind of knitwear are you looking for?"
     },
     {
       "round": 3,
-      "ai_message": "Great. We are looking for women's cotton sweaters, around 200 grams, for the fall season. Can you do that?",
+      "ai_message": "Great. We're looking for women's cotton sweaters, around 200 grams, for fall. Can you do that?",
       "ai_message_zh": "好的。我们想找女装棉质毛衣,大概 200 克,秋季款。你们能做吗?",
       "expected_user_response_hint": "确认可以做,并询问数量/目标价/出货时间",
-      "key_phrases": ["Yes, we can", "200 GSM is standard for us", "Could you share your ...", "target price"],
+      "key_phrases": [
+        "Yes, we can",
+        "200 GSM is standard for us",
+        "Could you share your ...",
+        "target price"
+      ],
       "common_mistakes": "克重单位要说 grams per square meter 或简写 GSM,不要说 200 gram's sweater。",
       "tips_zh": "听到客户需求后,先回 Yes / No,再问三个关键点:数量(Q'ty)、目标价(target price)、出货时间(when do you need it)。",
       "user_response_example": "Yes, we can. 200 GSM is a standard weight for us. Could you share the order quantity, your target price, and your required delivery time?"
@@ -39,7 +53,12 @@
       "ai_message": "We usually start with 1,000 pieces per style, two colors. Target price is around US$8.50 FOB Ningbo. Delivery by mid-September.",
       "ai_message_zh": "我们一般每个款起订 1000 件,两个颜色。目标价 FOB 宁波 8.5 美元左右。9 月中要出货。",
       "expected_user_response_hint": "回应数量和价格,介绍起订量和报价区间",
-      "key_phrases": ["Our MOQ is ...", "The price would be around ...", "For that quantity ...", "lead time"],
+      "key_phrases": [
+        "Our MOQ is ...",
+        "The price would be around ...",
+        "For that quantity ...",
+        "lead time"
+      ],
       "common_mistakes": "FOB 后面是港口名,不是城市缩写;不要说 price is 8.5 dollars,要说 US$8.50。",
       "tips_zh": "客户给了 FOB 价,意味着他要自己安排海运。你后面报价要明确 FOB 哪个港口。",
       "user_response_example": "Our MOQ is 500 pieces per color. For 1,000 pieces per style, the FOB Ningbo price would be around US$9.20. For the lead time, we need about 45 days after the deposit."
@@ -49,17 +68,27 @@
       "ai_message": "US$9.20 is a bit high. Our target is US$8.50. Can you try to meet us in the middle?",
       "ai_message_zh": "9.2 美元有点高,我们目标是 8.5 美元。能折中一下吗?",
       "expected_user_response_hint": "用让步 + 条件的方式回应议价",
-      "key_phrases": ["We can come down to ...", "If you can ...", "meet in the middle", "reduce to ..."],
+      "key_phrases": [
+        "We can come down to ...",
+        "If you can ...",
+        "meet in the middle",
+        "reduce to ..."
+      ],
       "common_mistakes": "不要直接说 I can't — 即使拒绝也要给替代方案。",
       "tips_zh": "议价时,让步一定要换条件:降价就提数量,或提付款方式,或提面料简化。",
       "user_response_example": "I understand. If you can increase the quantity to 1,500 pieces per color, we can come down to US$8.70. Otherwise, US$9.00 is the best we can do at this quantity."
     },
     {
       "round": 6,
-      "ai_message": "OK, that's fair. Please send me a few samples first — yarn dyed, no logos. How long will samples take?",
+      "ai_message": "OK, that's fair. Just send me a few samples first — yarn dyed, no logos. How long will samples take?",
       "ai_message_zh": "好的,这样合理。请先寄几个样品给我,色织,不带 logo。样品要多久?",
       "expected_user_response_hint": "确认样品要求,说明打样时间和寄样方式",
-      "key_phrases": ["Samples will be ready in ...", "We can send by DHL", "courier account", "sample cost"],
+      "key_phrases": [
+        "Samples will be ready in ...",
+        "We can send by DHL",
+        "courier account",
+        "sample cost"
+      ],
       "common_mistakes": "样品免费/收费表达要清楚:free of charge / charged but refundable upon order。",
       "tips_zh": "打样时长一般 7-15 天,要看工艺。寄样快递常用 DHL / FedEx,主动问客户 courier account 更显贴心。",
       "user_response_example": "Yarn-dyed, no logos — got it. Plain samples will be ready in 7 to 10 days. We can send by DHL. Do you have a courier account, or should we use ours and add it to the invoice?"
@@ -69,7 +98,11 @@
       "ai_message": "Please use our account, I'll email you the number. One more thing — can you also send your company profile and BSCI report?",
       "ai_message_zh": "请用我司账号,我把账号发邮件给你。再问下,能不能也发一下贵司的公司介绍和 BSCI 报告?",
       "expected_user_response_hint": "确认收账号,确认资料发送",
-      "key_phrases": ["I'll send ... by email", "Sure, I'll attach ...", "No problem"],
+      "key_phrases": [
+        "I'll send ... by email",
+        "Sure, I'll attach ...",
+        "No problem"
+      ],
       "common_mistakes": "BSCI / SEDEX / SA8000 都是常见社会责任验厂,不要混说。",
       "tips_zh": "客户要验厂报告,这是基本资质,直接发 PDF 就好。",
       "user_response_example": "Sure, I'll send our company profile and the latest BSCI report by email right after this call. What's your email address, please?"
@@ -79,7 +112,12 @@
       "ai_message": "It's mark.johnson@abctrading.com. So, to summarize: you'll send samples and the documents. We'll review and get back to you next week. Anything else?",
       "ai_message_zh": "邮箱是 mark.johnson@abctrading.com。总结一下:你寄样品和资料,我们看下下周回复你。还有别的吗?",
       "expected_user_response_hint": "做 closing summary,确认下一步时间点",
-      "key_phrases": ["To summarize ...", "I'll get back to you by ...", "Looking forward to ...", "Have a nice day"],
+      "key_phrases": [
+        "To summarize ...",
+        "I'll get back to you by ...",
+        "Looking forward to ...",
+        "Have a nice day"
+      ],
       "common_mistakes": "收尾不要用 Ok, bye bye — 太随便。要用一个明确的 next step。",
       "tips_zh": "电话结束前主动总结 3 件事:谁做什么、什么时候完成、下次沟通时间。",
       "user_response_example": "Perfect. To summarize: I'll send the samples by DHL on Tuesday, and the company profile plus BSCI report by email today. You'll review everything and get back to me by Friday. Looking forward to it. Have a great day, Mark."

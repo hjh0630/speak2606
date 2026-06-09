@@ -188,6 +188,10 @@ function defaultSystemPrompts(): Record<Difficulty, string> {
   };
 }
 
+function difficultyFileSuffix(d: Difficulty): string {
+  return d === 'beginner' ? '' : `_${d}`;
+}
+
 function loadAll(): void {
   if (_loaded) return;
   const contentDir = config.contentDir;
@@ -204,19 +208,52 @@ function loadAll(): void {
     }
 
     const dialogsMap = new Map<string, ScenarioDialogs[]>();
+    const allDifficulties: Difficulty[] = ['beginner', 'intermediate', 'advanced'];
     for (const s of _scenarios) {
-      const filePath = path.join(contentDir, 'dialogs', `${s.id}.json`);
-      const data = safeReadJson<ScenarioDialogs[] | ScenarioDialogs>(filePath);
-      let list: ScenarioDialogs[] = [];
-      if (Array.isArray(data)) {
-        list = data;
-      } else if (data && Array.isArray((data as ScenarioDialogs).rounds)) {
-        list = [data as ScenarioDialogs];
+      const list: ScenarioDialogs[] = [];
+      for (const diff of allDifficulties) {
+        if (!s.difficulty_levels.includes(diff)) continue;
+        const filePath = path.join(
+          contentDir,
+          'dialogs',
+          `${s.id}${difficultyFileSuffix(diff)}.json`,
+        );
+        const data = safeReadJson<ScenarioDialogs[] | ScenarioDialogs>(filePath);
+        if (Array.isArray(data)) {
+          for (const entry of data) {
+            if (entry && Array.isArray(entry.rounds)) {
+              list.push({ ...entry, difficulty: entry.difficulty ?? diff });
+            }
+          }
+        } else if (data && Array.isArray((data as ScenarioDialogs).rounds)) {
+          list.push({ ...(data as ScenarioDialogs), difficulty: diff });
+        } else {
+          // Graceful degradation: fall back to the beginner file if a
+          // difficulty-specific file is missing.
+          if (diff === 'beginner') {
+            log.warn(`No dialogs for ${s.id} (${diff}), will use defaults`);
+          } else {
+            log.warn(
+              `Missing dialog file for ${s.id} at difficulty ${diff} (${filePath}); falling back to beginner`,
+            );
+            const fallbackPath = path.join(contentDir, 'dialogs', `${s.id}.json`);
+            const fallback = safeReadJson<ScenarioDialogs[] | ScenarioDialogs>(fallbackPath);
+            if (Array.isArray(fallback)) {
+              for (const entry of fallback) {
+                if (entry && Array.isArray(entry.rounds)) {
+                  list.push({ ...entry, difficulty: diff });
+                }
+              }
+            } else if (fallback && Array.isArray((fallback as ScenarioDialogs).rounds)) {
+              list.push({ ...(fallback as ScenarioDialogs), difficulty: diff });
+            }
+          }
+        }
       }
       if (list.length === 0) {
         log.warn(`No dialogs for ${s.id}, using defaults`);
         const defaults = defaultDialogs().get(s.id) ?? [];
-        list = defaults;
+        list.push(...defaults);
       }
       dialogsMap.set(s.id, list);
     }

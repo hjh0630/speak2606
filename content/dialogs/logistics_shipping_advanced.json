@@ -6,10 +6,14 @@
   "rounds": [
     {
       "round": 1,
-      "ai_message": "Chen, this is Daniel. We've got a problem. The carrier just rolled our booking from the Maersk Madison to the Maersk Montana, sailing five days later. The retailer's DC slot is locked. Help me out.",
+      "ai_message": "Chen, this is Daniel. We have got a problem. The carrier just rolled our booking from the Maersk Madison to the Maersk Montana, sailing five days later. The retailer's DC slot is locked. Help me out.",
       "ai_message_zh": "陈,Daniel。麻烦了。船公司刚把我们的舱从 Maersk Madison 改到 Maersk Montana,晚了 5 天。零售商的 DC 档期锁死了,帮我搞定。",
       "expected_user_response_hint": "理解紧急,先稳住情绪,再给可行方案",
-      "key_phrases": ["Let me put out feelers with other carriers", "What about splitting the shipment?", "I will escalate with Maersk directly"],
+      "key_phrases": [
+        "Let me put out feelers with other carriers",
+        "What about splitting the shipment?",
+        "I'll escalate with Maersk directly"
+      ],
       "common_mistakes": "客户说 'help me out',你别只说 'sorry'。要立刻出选项:加钱插舱 / 分批出 / 走空运补货。",
       "tips_zh": "舱位被甩(cancel booking)是常见痛点,提前一周确认船公司舱单,别等到截关。",
       "user_response_example": "I hear you. Two immediate options: I'll escalate with Maersk to get you on a Maersk Edmonds that sails in two days — same string, just earlier — or we can split the order and air-freight the urgent 30 percent. Which is cheaper for you depends on the rush, but the Edmonds is my pick."
@@ -19,7 +23,11 @@
       "ai_message": "The Edmonds is my pick too. Pull that string. But I need you to absorb the demurrage risk if the container doesn't get picked up within the free time.",
       "ai_message_zh": "我也选 Edmonds。去谈。但你们要承担堆场免堆期过后的滞港费风险。",
       "expected_user_response_hint": "评估风险、谈判分担比例",
-      "key_phrases": ["We can share the demurrage risk", "Free time is usually 7 days", "Let's cap our exposure at ..."],
+      "key_phrases": [
+        "We can share the demurrage risk",
+        "Free time is usually 7 days",
+        "Let's cap our exposure at ..."
+      ],
       "common_mistakes": "demurrage(滞港费,堆场)/ detention(滞箱费,船公司)别混。negotiate 时讲清楚对应哪一项。",
       "tips_zh": "大客户谈分摊,小客户谈一口价。demurrage 通常 USD 75-150/天,心里有数。",
       "user_response_example": "Free time at LA port is seven days — that should be enough. If your DC pickup slips past day 8, let's split the demurrage 50/50. I'll put that in writing."
@@ -29,17 +37,25 @@
       "ai_message": "Acceptable. Now, the Form A — the customs broker flagged that our last shipment's fiber composition declaration was inconsistent with the lab report. Can your team do a fiber composition check on this lot before issuance?",
       "ai_message_zh": "行。还有 Form A — 报关行说我们上一票的纤维成分声明跟检测报告对不上。这票你们发货前能做个纤维成分核对吗?",
       "expected_user_response_hint": "确认能配合并安排内部 QC 节点",
-      "key_phrases": ["We will run a SGS fiber composition test", "Allow 3-5 business days for the lab", "The lab report will match the C/O"],
+      "key_phrases": [
+        "We'll run a SGS fiber composition test",
+        "Allow 3-5 business days for the lab",
+        "The lab report will match the C/O"
+      ],
       "common_mistakes": "fiber composition(fiber content)申报错误在欧美海关是 high-risk 错报,Form A 错填会罚款。",
       "tips_zh": "C/O 上写 '100% Cotton',实验室报告也得是 100% cotton,任何偏差都改。",
-      "user_response_example": "Absolutely. We will run a SGS fiber composition test on bulk production samples, 3-5 business days turnaround. The lab report will be issued before the C/O, and the C/O will match the lab numbers exactly."
+      "user_response_example": "Absolutely. We'll run a SGS fiber composition test on bulk production samples, 3-5 business days turnaround. The lab report will be issued before the C/O, and the C/O will match the lab numbers exactly."
     },
     {
       "round": 4,
       "ai_message": "Good. Now, will the actual C/O go through the China Council for the Promotion of International Trade? I need the issuing body on file for our import compliance team.",
       "ai_message_zh": "好。产地证是走中国贸促会出的吗?我合规团队要把出证机构记在档。",
       "expected_user_response_hint": "确认出证机构并解释其权威性",
-      "key_phrases": ["Issued by CCPIT", "Notarized by the local chamber", "We can also do electronic C/O"],
+      "key_phrases": [
+        "Issued by CCPIT",
+        "Notarized by the local chamber",
+        "We can also do electronic C/O"
+      ],
       "common_mistakes": "C/O 出证机构:中国贸促会(CCPIT)vs 国家质检总局(现在并入海关)。两套系统,客户要哪种提前问。",
       "tips_zh": "很多国家海关只认贸促会或海关出的 C/O,自家开的证不算。",
       "user_response_example": "Yes, all C/Os are issued by the China Council for the Promotion of International Trade (CCPIT) and notarized by the Zhejiang sub-council. We can also issue an e-C/O if your country supports it."
@@ -49,7 +65,11 @@
       "ai_message": "Perfect. Last item: I need a commercial invoice and packing list in the buyer's format — not your template. I'll email the template tonight. Can you turn it around by tomorrow noon?",
       "ai_message_zh": "完美。最后,发票和装箱单要按我客户模板,不是你们的版式。今晚我邮件发模板,明天中午前能出吗?",
       "expected_user_response_hint": "确认能配合并预留时间",
-      "key_phrases": ["Will follow your template", "By noon tomorrow", "Please flag any fields we need to add"],
+      "key_phrases": [
+        "Will follow your template",
+        "By noon tomorrow",
+        "Please flag any fields we need to add"
+      ],
       "common_mistakes": "客户指定模板通常有额外字段:HS code、buyer's PO、country of origin、country of destination,要逐项确认。",
       "tips_zh": "模板来了先 diff,缺什么字段提前说,别交了再改。",
       "user_response_example": "Yes, drop me the template and I'll have our shipping team populate it. By noon tomorrow you'll have the draft for review — please flag any fields that aren't on the template so we can add them on the first pass."

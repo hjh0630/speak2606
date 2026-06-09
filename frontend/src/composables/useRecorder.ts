@@ -102,24 +102,28 @@ export function useRecorder(options: UseRecorderOptions = {}) {
     error.value = null
     audioBlob.value = null
     isPreparing.value = true
+    console.log('[useRecorder] start: requesting mic stream…')
     try {
       const stream = await ensureStream()
       const mime = pickMime()
       mimeType.value = mime
       chunks = []
       recorder = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream)
+      console.log('[useRecorder] start: MediaRecorder created, mime=', mime || '(browser default)')
       recorder.ondataavailable = (e) => {
         if (e.data && e.data.size > 0) chunks.push(e.data)
       }
       recorder.onerror = (e: Event) => {
         const ev = e as unknown as { error?: { message?: string } }
         error.value = ev?.error?.message || '录音发生错误'
+        console.error('[useRecorder] onerror', e)
       }
       recorder.onstop = () => {
         const blob = new Blob(chunks, { type: mime || 'audio/webm' })
         audioBlob.value = blob
         isRecording.value = false
         stopLevelMonitor()
+        console.log('[useRecorder] onstop: blob size=', blob.size, 'mime=', blob.type)
       }
       const timeslice = options.timesliceMs ?? 250
       if (timeslice > 0) recorder.start(timeslice)
@@ -127,11 +131,13 @@ export function useRecorder(options: UseRecorderOptions = {}) {
       startTs = Date.now()
       isRecording.value = true
       startLevelMonitor()
+      console.log('[useRecorder] start: recording, timeslice=', timeslice)
     } catch (e) {
       const msg = e instanceof Error ? e.message : '无法访问麦克风'
       if (/permission|denied|not allowed/i.test(msg)) permissionDenied.value = true
       error.value = msg
       isRecording.value = false
+      console.error('[useRecorder] start failed:', msg)
       throw e
     } finally {
       isPreparing.value = false
@@ -142,6 +148,7 @@ export function useRecorder(options: UseRecorderOptions = {}) {
     return new Promise((resolve) => {
       const r = recorder
       if (!r || r.state === 'inactive') {
+        console.log('[useRecorder] stop: recorder inactive, returning cached blob, size=', audioBlob.value?.size ?? 0)
         resolve(audioBlob.value)
         return
       }
@@ -150,9 +157,16 @@ export function useRecorder(options: UseRecorderOptions = {}) {
         audioBlob.value = blob
         isRecording.value = false
         stopLevelMonitor()
+        console.log('[useRecorder] stop: blob ready, size=', blob.size)
         resolve(blob)
       }
-      try { r.stop() } catch { resolve(null) }
+      try {
+        r.stop()
+        console.log('[useRecorder] stop: MediaRecorder.stop() called')
+      } catch (e) {
+        console.warn('[useRecorder] stop threw', e)
+        resolve(null)
+      }
     })
   }
 

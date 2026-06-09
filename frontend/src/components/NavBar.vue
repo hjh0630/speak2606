@@ -5,16 +5,36 @@ import { useRoute, RouterLink } from 'vue-router'
 const route = useRoute()
 const open = ref(false)
 const scrolled = ref(false)
+const apiState = ref<'unknown' | 'ok' | 'down'>('unknown')
 
 function onScroll() {
   scrolled.value = window.scrollY > 4
 }
 
+async function checkApi(): Promise<void> {
+  try {
+    const base = (import.meta.env.VITE_API_BASE as string | undefined) ?? ''
+    const ctrl = new AbortController()
+    const t = setTimeout(() => ctrl.abort(), 4000)
+    const res = await fetch(`${base}/api/status`, { signal: ctrl.signal })
+    clearTimeout(t)
+    apiState.value = res.ok ? 'ok' : 'down'
+  } catch {
+    apiState.value = 'down'
+  }
+}
+
+let apiTimer: number | null = null
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
+  void checkApi()
+  apiTimer = window.setInterval(() => void checkApi(), 15000)
 })
-onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', onScroll)
+  if (apiTimer !== null) window.clearInterval(apiTimer)
+})
 
 const links = [
   { to: '/', label: '首页' },
@@ -48,6 +68,23 @@ function isActive(to: string): boolean {
         </span>
         <span class="text-base sm:text-lg font-semibold tracking-tight text-ink-800 group-hover:text-brand-700 transition-colors">
           SpeakFlow
+        </span>
+        <span
+          :title="
+            apiState === 'ok' ? 'API reachable' : apiState === 'down' ? 'API unreachable' : 'API checking…'
+          "
+          :class="[
+            'ml-1 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium border transition-colors',
+            apiState === 'ok'
+              ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+              : apiState === 'down'
+                ? 'border-rose-200 bg-rose-50 text-rose-700'
+                : 'border-ink-200 bg-ink-50 text-ink-500',
+          ]"
+          data-testid="api-status-badge"
+        >
+          API
+          <span aria-hidden="true">{{ apiState === 'ok' ? '✓' : apiState === 'down' ? '✗' : '…' }}</span>
         </span>
       </RouterLink>
 

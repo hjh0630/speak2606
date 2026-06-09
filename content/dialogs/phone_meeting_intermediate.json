@@ -9,7 +9,12 @@
       "ai_message": "Good morning, this is Mark Johnson calling from ABC Trading in New York. Am I reaching the export sales department?",
       "ai_message_zh": "早上好,我是纽约 ABC Trading 的 Mark Johnson。请问我打到出口部了吗?",
       "expected_user_response_hint": "确认部门并自我介绍,引出对话",
-      "key_phrases": ["Yes, you've reached ...", "This is ...", "How may I help you", "speaking"],
+      "key_phrases": [
+        "Yes, you've reached ...",
+        "This is ...",
+        "How may I help you",
+        "speaking"
+      ],
       "common_mistakes": "am I reaching 是电话用语(打到对的地方了吗),不能换成 did I reach。",
       "tips_zh": "外贸公司电话里通常分:export sales / merchandising / shipping,先确认对方找的是哪个。",
       "user_response_example": "Yes, you've reached the export sales department. This is Chen Wei, the sales manager for the European and US markets. How may I help you, Mark?"
@@ -19,7 +24,12 @@
       "ai_message": "Great. I'll keep it brief. We've been buying woven shirts from your competitor for two years, but their lead times are slipping. I'd like to explore whether you could be a backup source. Do you have time for a quick call?",
       "ai_message_zh": "好的,简单说一下。我们两年里一直从你同行那里采购梭织衬衫,但他们的交期在变长。我想看看你们能不能做个备选供应商。方便简单聊几句吗?",
       "expected_user_response_hint": "理解对方处境(转单/备选),给出积极回应并展示能力",
-      "key_phrases": ["I'd be happy to ...", "I appreciate the opportunity", "What are your main concerns", "current vendor"],
+      "key_phrases": [
+        "I'd be happy to ...",
+        "I appreciate the opportunity",
+        "What are your main concerns",
+        "current vendor"
+      ],
       "common_mistakes": "不要把 backup source 翻译成'备胎'说出口 — 用 backup source / alternative source 即可。",
       "tips_zh": "客户提到 current vendor 的痛点(交期长),回答时要把这个痛点 + 你的优势对应起来。",
       "user_response_example": "Of course, I'd be happy to walk you through what we can offer. Could you share what your current vendor's typical lead time is, and what your target is? That way I can tell you honestly whether we're a good fit."
@@ -29,7 +39,12 @@
       "ai_message": "Their lead time is now 75 to 80 days after PO, and quality has been inconsistent. We need 45 days max, and we run AQL 2.5 inspection.",
       "ai_message_zh": "他们现在下单后要 75-80 天,质量也不稳定。我们要 45 天以内,验货用 AQL 2.5。",
       "expected_user_response_hint": "正面回应交期和质量能力,展示工厂把控",
-      "key_phrases": ["45 days is doable", "Our standard lead time is ...", "AQL 2.5 is no problem", "we run inline QC"],
+      "key_phrases": [
+        "45 days is doable",
+        "Our standard lead time is ...",
+        "AQL 2.5 is no problem",
+        "we run inline QC"
+      ],
       "common_mistakes": "AQL 后面要跟 level 和 inspection type:AQL 2.5 general inspection。不要省略 level。",
       "tips_zh": "交期和质量是验厂最常被问的两项,工厂要能给出具体数字 + 流程。",
       "user_response_example": "45 days after PO is doable for woven shirts, especially if the fabric is in stock. Our standard lead time is 40 to 50 days. AQL 2.5 general inspection is no problem — we run inline QC during sewing and a final random inspection before shipment."
@@ -39,7 +54,12 @@
       "ai_message": "Sounds reasonable. Tell me about your capacity. How many woven shirts can you produce per month, and how many production lines do you run?",
       "ai_message_zh": "听起来合理。说说你们产能吧。一个月能产多少件梭织衬衫?多少条产线?",
       "expected_user_response_hint": "用具体数字介绍产能,产线数量,工人数量",
-      "key_phrases": ["We currently run ...", "production lines", "Our monthly capacity is ...", "pieces per month"],
+      "key_phrases": [
+        "We currently run ...",
+        "production lines",
+        "Our monthly capacity is ...",
+        "pieces per month"
+      ],
       "common_mistakes": "产线 / 工人 / 产能是三个不同概念:lines / workers / capacity(pcs/month),不要混说。",
       "tips_zh": "客户问产能,工厂要主动给三组数字:产线数、工人数、月产能(件)。",
       "user_response_example": "We currently run 12 production lines dedicated to woven shirts, with about 320 workers. Monthly capacity is around 250,000 pieces, depending on style complexity. For a single style, we can comfortably do 30,000 to 50,000 pieces per month."
@@ -49,7 +69,12 @@
       "ai_message": "Good. What about fabric? Do you source greige fabric locally or import it? And what's your typical yarn count range?",
       "ai_message_zh": "好的。面料呢?你们是本地采购坯布还是进口?通常用什么纱支范围?",
       "expected_user_response_hint": "解释面料来源、纱支范围、是否做后整理",
-      "key_phrases": ["We source ... locally", "yarn count range", "combed cotton", "compact yarn"],
+      "key_phrases": [
+        "We source ... locally",
+        "yarn count range",
+        "combed cotton",
+        "compact yarn"
+      ],
       "common_mistakes": "greige fabric 是坯布(未染色),客户在问坯布来源,不是在问成衣面料。",
       "tips_zh": "梭织衬衫常见 yarn count:30s, 40s, 50s, 60s。数字越大纱越细,价格越贵。",
       "user_response_example": "We source most of our greige fabric from mills in Jiangsu and Zhejiang — long-term partners. For yarn count, we typically work with 30s to 60s combed cotton, and for premium customers we also do compact yarn. We do in-house dyeing and finishing."
@@ -59,17 +84,27 @@
       "ai_message": "One last thing before I decide to visit. Are you vertically integrated? And do you have experience with US retailers like Target or Macy's?",
       "ai_message_zh": "我决定来拜访前,还有最后一个问题。你们是垂直整合的吗?有没有和 Target、Macy's 这类美国零售商合作过?",
       "expected_user_response_hint": "解释是否垂直整合(织造/染整/车缝),并说明大客户合作经验",
-      "key_phrases": ["We are semi-vertical", "vertically integrated", "We currently supply ...", "factory audit"],
+      "key_phrases": [
+        "We're semi-vertical",
+        "vertically integrated",
+        "We currently supply ...",
+        "factory audit"
+      ],
       "common_mistakes": "Target / Macy's 是品牌名,问的是 'have you supplied them',不是问 'are you their partner'。",
       "tips_zh": "垂直整合 = fabric + dyeing + cutting + sewing 在自家完成;半整合 = 只做裁剪+车缝。大客户合作要说具体订单数和年份。",
-      "user_response_example": "We are semi-vertically integrated — we do cutting, sewing, and finishing in-house, and source greige fabric from partner mills that we own a stake in. We currently supply woven shirts to a US mid-market retailer — about 600,000 pieces last year — and we're familiar with their compliance and labeling requirements."
+      "user_response_example": "We're semi-vertically integrated — we do cutting, sewing, and finishing in-house, and source greige fabric from partner mills that we own a stake in. We currently supply woven shirts to a US mid-market retailer — about 600,000 pieces last year — and we're familiar with their compliance and labeling requirements."
     },
     {
       "round": 7,
       "ai_message": "Impressive. I'll plan a visit in the next two to three weeks. Could you email me a formal quotation for 10,000 pieces first, so I can present it internally?",
       "ai_message_zh": "不错。我打算 2-3 周内过来拜访。你能先把 10000 件的正式报价发我邮件吗?我内部要先报一下。",
       "expected_user_response_hint": "确认时间窗,确认报价细节(规格、贸易条款、有效期)",
-      "key_phrases": ["I'll prepare ...", "valid for 30 days", "Could you confirm ...", "formal quotation"],
+      "key_phrases": [
+        "I'll prepare ...",
+        "valid for 30 days",
+        "Could you confirm ...",
+        "formal quotation"
+      ],
       "common_mistasks": "",
       "common_mistakes": "formal quotation 一定要写有效期(validity),如 30 days,这是报价单必备要素。",
       "tips_zh": "客户要正式报价,这是关键节点。报价要包含:款号、数量、单价、贸易条款、交期、付款方式、有效期。",
@@ -80,7 +115,12 @@
       "ai_message": "I'll send you the tech-pack by email after this call. Let's tentatively schedule the visit for the 18th. I'll get back to you with the date by end of week.",
       "ai_message_zh": "我打完电话把工艺单发你邮件。暂定 18 号过来拜访,周内会和你确认具体日期。",
       "expected_user_response_hint": "确认行程安排,做 closing summary",
-      "key_phrases": ["Tentatively noted", "I'll arrange ...", "Looking forward to hosting you", "send a formal invitation"],
+      "key_phrases": [
+        "Tentatively noted",
+        "I'll arrange ...",
+        "Looking forward to hosting you",
+        "send a formal invitation"
+      ],
       "common_mistakes": "tentatively 后面要跟 noted / scheduled,不要用 I tentatively accept(中式英语)。",
       "tips_zh": "客户来访前,工厂要发正式邀请函 (invitation letter) 协助签证,这是外贸常识。",
       "user_response_example": "The 18th is tentatively noted. I'll arrange a hotel near the factory and a car pickup from the airport. I'll also send a formal invitation letter to help with the visa. Looking forward to hosting you, Mark. Have a great rest of the week."

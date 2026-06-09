@@ -9,7 +9,11 @@
       "ai_message": "Hi Chen, this is Linda from our QC team. We received the shipment yesterday and found a quality concern on PO 2024-512. Can we talk?",
       "ai_message_zh": "陈,你好,我是 QC 部的 Linda。PO 2024-512 的货昨天到了,我们发现一个质量问题,能聊聊吗?",
       "expected_user_response_hint": "认真接收、表达关切,不要急着辩解",
-      "key_phrases": ["I'm sorry to hear that", "Could you share the details and photos?", "We take this seriously"],
+      "key_phrases": [
+        "I'm sorry to hear that",
+        "Could you share the details and photos?",
+        "We take this seriously"
+      ],
       "common_mistakes": "客户刚说 'quality concern',不要马上说 'this never happened before'。先听,后问证据。",
       "tips_zh": "接收投诉三步:acknowledge / ask for evidence / commit to follow up。",
       "user_response_example": "Hi Linda, I'm sorry to hear that. Could you share the specific issue and some photos? We take every quality concern seriously and will look into it right away."
@@ -19,17 +23,25 @@
       "ai_message": "Sure. The shipment arrived with broken stitches on about 8 percent of the garments — mostly on the side seam. The packing list says 3,000 pieces, so that's roughly 240 pieces affected.",
       "ai_message_zh": "行。货到的时候大约 8% 的衣服有车缝开线的问题,主要在侧缝。装箱单是 3000 件,大概 240 件受影响。",
       "expected_user_response_hint": "先确认 + 请客户发证据 + 表明会查",
-      "key_phrases": ["Could you send photos and the inspection report?", "We will check our QC records", "8 percent is above the acceptable AQL"],
+      "key_phrases": [
+        "Could you send photos and the inspection report?",
+        "We'll check our QC records",
+        "8 percent is above the acceptable AQL"
+      ],
       "common_mistakes": "不要立刻 'agree' 客户的数据(8%),先要 inspection report,再去查自己 QC 记录。",
       "tips_zh": "AQL 2.5 = 接受水准 4% 以下;8% 远超,确实要赔。",
-      "user_response_example": "Thank you for the details. Could you send me photos and the third-party inspection report? I will check our in-line QC and final inspection records against your findings."
+      "user_response_example": "Thanks for the details. Could you send me photos and the third-party inspection report? I'll check our in-line QC and final inspection records against your findings."
     },
     {
       "round": 3,
-      "ai_message": "The report and photos are attached. What is your proposed solution?",
+      "ai_message": "The report and photos are attached. What's your proposed solution?",
       "ai_message_zh": "报告和照片附上了。你们打算怎么处理?",
       "expected_user_response_hint": "给具体方案(选项),不要空话",
-      "key_phrases": ["We can offer three options", "Rework, replacement, or discount", "We will cover the cost"],
+      "key_phrases": [
+        "We can offer three options",
+        "Rework, replacement, or discount",
+        "We'll cover the cost"
+      ],
       "common_mistakes": "不要只说 'we will handle it'。给客户选:返工(rework)、补货(replacement)、折扣(discount)。",
       "tips_zh": "三方共赢:工厂成本最小、客户损失最小、关系不伤。三选一是行业惯例。",
       "user_response_example": "We can offer three options for the 240 affected pieces: (1) we rework and return them within 10 days at our cost, (2) we remake and resend within 15 days, or (3) we issue a 30 percent credit note for replacement. Your call."
@@ -39,20 +51,28 @@
       "ai_message": "The buyer is asking for a discount, not rework — they need the goods on shelf by next Friday. Can you issue a credit note?",
       "ai_message_zh": "客户要折扣,不要返工 — 他们下周五前要上架。能开扣款单吗?",
       "expected_user_response_hint": "确认能开 credit note / debit note,讲清流程",
-      "key_phrases": ["Yes, we can issue a credit note", "Please send the debit note format", "Credit will be applied to the next order"],
+      "key_phrases": [
+        "Yes, we can issue a credit note",
+        "Please send the debit note format",
+        "Credit will be applied to the next order"
+      ],
       "common_mistakes": "credit note(供应商开,贷记客户账)和 debit note(客户开,索赔扣款)别搞反,方向不同。",
       "tips_zh": "大客户走 debit note 走流程;小客户直接 credit note 更简单。",
-      "user_response_example": "Yes, we can issue a credit note. Please send your debit note format with the exact value, and we will counter-sign and apply it to your next PO. What amount are we looking at?"
+      "user_response_example": "Yes, we can issue a credit note. Please send your debit note format with the exact value, and we'll counter-sign and apply it to your next PO. What amount are we looking at?"
     },
     {
       "round": 5,
       "ai_message": "The buyer proposes a 25 percent credit. Can you accept that, plus a root-cause analysis report within one week?",
       "ai_message_zh": "客户提 25% 折扣,加一份一周内的根因分析报告,你们能接受吗?",
       "expected_user_response_hint": "折扣可以谈(给个台阶),RCA 报告必须配合",
-      "key_phrases": ["We accept 25 percent credit", "RCA report will be delivered within 5 business days", "We will improve our final inspection"],
+      "key_phrases": [
+        "We accept 25 percent credit",
+        "RCA report will be delivered within 5 business days",
+        "We'll improve our final inspection"
+      ],
       "common_mistakes": "RCA(Root Cause Analysis)报告不仅找原因,更要写 corrective action 和 prevention measure,光说 '我们注意' 不算 RCA。",
       "tips_zh": "RCA 标准结构:problem / 5-why analysis / root cause / corrective action / prevention / timeline / owner。",
-      "user_response_example": "We accept the 25 percent credit. For the RCA, you will have it within 5 business days, including the 5-why analysis, our corrective action, and the prevention plan. We will also strengthen the final inspection."
+      "user_response_example": "We accept the 25 percent credit. For the RCA, you'll have it within 5 business days, including the 5-why analysis, our corrective action, and the prevention plan. We'll also strengthen the final inspection."
     }
   ]
 }
