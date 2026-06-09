@@ -43,6 +43,12 @@ Thumbs.db
 .skills/
 .dl/
 
+# Local DPAPI-encrypted key store (Windows Credential Manager wrapper)
+# — see memory file `speakflow-palette.md` for the migration procedure.
+# Should always live OUTSIDE the project tree (default: %USERPROFILE%\.speakflow\)
+# but guard against accidental creation inside the project.
+.speakflow/
+
 # Packaged archives (re-generate on demand)
 *.tar.gz
 *.zip

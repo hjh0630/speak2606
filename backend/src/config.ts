@@ -1,5 +1,6 @@
 import * as path from 'node:path';
 import * as fs from 'node:fs';
+import { execSync } from 'node:child_process';
 import { createLogger } from './utils/logger';
 
 const log = createLogger('config');
@@ -51,6 +52,35 @@ function envBool(key: string, fallback: boolean): boolean {
   return v === '1' || v.toLowerCase() === 'true';
 }
 
+/**
+ * Read the MiniMax API key from a DPAPI-encrypted local file. The file lives
+ * outside the project tree (default: %USERPROFILE%\.speakflow\key.bin on
+ * Windows, ~/.speakflow/key.bin on Linux) and is only decryptable by the
+ * current OS user. This is the preferred source for the key — it keeps the
+ * value out of .env files, git history, logs, and chat transcripts.
+ *
+ * On any failure (missing file, PowerShell not available, decrypt error),
+ * we fall back to process.env / .env so existing setups keep working.
+ */
+function readKeyFromSecureStore(): string {
+  const home = process.env.USERPROFILE || process.env.HOME || ''
+  const keyFile = path.join(home, '.speakflow', 'key.bin')
+  if (!fs.existsSync(keyFile)) return ''
+  // Only attempt DPAPI on Windows. On other platforms we'd need a different
+  // keystore (e.g. libsecret on Linux, Keychain on macOS); for now, just
+  // fall through to .env there.
+  if (process.platform !== 'win32') return ''
+  try {
+    const escaped = keyFile.replace(/\\/g, '\\\\').replace(/'/g, "''")
+    const cmd = `powershell -NoProfile -Command "Add-Type -AssemblyName System.Security; $e = [System.IO.File]::ReadAllBytes('${escaped}'); $b = [System.Security.Cryptography.ProtectedData]::Unprotect($e, $null, [System.Security.Cryptography.DataProtectionScope]::CurrentUser); [System.Text.Encoding]::Unicode.GetString($b)"`
+    const out = execSync(cmd, { encoding: 'utf-8', stdio: ['ignore', 'pipe', 'pipe'] })
+    return out.trim()
+  } catch (err) {
+    log.warn(`Failed to read key from DPAPI store (${keyFile}): ${(err as Error).message}`)
+    return ''
+  }
+}
+
 export interface AppConfig {
   port: number;
   host: string;
@@ -78,7 +108,9 @@ export const config: AppConfig = {
     .map((s) => s.trim())
     .filter((s) => s.length > 0),
   minimax: {
-    apiKey: envStr('MINIMAX_API_KEY', ''),
+    // Prefer the DPAPI-encrypted store. Fall back to env var / .env if the
+    // store is unavailable (e.g., on first run before migration).
+    apiKey: readKeyFromSecureStore() || envStr('MINIMAX_API_KEY', ''),
     groupId: envStr('MINIMAX_GROUP_ID', ''),
     apiBase: envStr('API_BASE', 'https://api.minimax.chat'),
     hasCredentials: envBool('MINIMAX_HAS_CREDENTIALS', false),
