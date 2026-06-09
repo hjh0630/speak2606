@@ -29,7 +29,9 @@ export function useTts() {
   }
 
   async function playUrl(url: string): Promise<void> {
-    cleanup()
+    // Caller is responsible for cleanup. (Earlier we called cleanup() here
+    // unconditionally, which revoked the very objectUrl that playBlob had
+    // just created and passed in — audio.src then pointed at a dead URL.)
     audio = new Audio()
     audio.preload = 'auto'
     audio.crossOrigin = 'anonymous'
@@ -52,7 +54,18 @@ export function useTts() {
     error.value = null
     try {
       const res = await apiTts({ text, voice, speed })
-      await playUrl(res.url)
+      // The backend returns `audio_base64` (raw bytes, base64-encoded) and
+      // `mime`. There is NO `url` field — the previous code tried to set
+      // `new Audio().src = res.url` which was `undefined`, so nothing
+      // played. Decode to a Blob and use an Object URL instead.
+      if (res.audio_base64) {
+        const mime = res.mime || 'audio/mpeg'
+        const bytes = Uint8Array.from(atob(res.audio_base64), (c) => c.charCodeAt(0))
+        const blob = new Blob([bytes], { type: mime })
+        await playBlob(blob)
+      } else {
+        throw new Error('TTS response had no playable audio payload')
+      }
       return res
     } catch (e) {
       error.value = e instanceof Error ? e.message : 'TTS failed'
@@ -63,6 +76,10 @@ export function useTts() {
   }
 
   async function playBlob(blob: Blob): Promise<void> {
+    // Tear down any previous playback BEFORE creating the new object URL so
+    // we don't revoke the URL we're about to use. (This used to call
+    // playUrl(objectUrl), but playUrl's internal cleanup() would then revoke
+    // the very URL we'd just stored in `objectUrl`.)
     cleanup()
     objectUrl = URL.createObjectURL(blob)
     await playUrl(objectUrl)

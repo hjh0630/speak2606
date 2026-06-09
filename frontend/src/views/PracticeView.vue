@@ -438,64 +438,77 @@ function goToHistory() {
 
           <!-- Recorder — stacks vertically on mobile, horizontal on sm+ -->
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <!-- Center: [Play Original (repeat only)] [Recorder] -->
-            <div class="order-1 sm:order-2 flex justify-center items-center gap-3">
-              <!-- Play Original: same shape as RecorderButton so the row reads as
-                   two equal-weight circles. Only shown in repeat mode. -->
-              <button
+            <!-- Center: [Play Original (repeat only)] [Recorder].
+                 Both buttons are wrapped in a flex-col-with-label so the
+                 two circles end up at the same vertical center when the
+                 outer `items-center` aligns them. -->
+            <div class="order-1 sm:order-2 flex justify-center items-start gap-3">
+              <!-- Play Original (repeat mode only) -->
+              <div
                 v-if="isRepeat"
-                type="button"
-                class="relative rounded-full text-white font-semibold flex items-center justify-center
-                       shadow-card transition-all duration-150 active:scale-95
-                       h-20 w-20 sm:h-24 sm:w-24 text-xl
-                       disabled:opacity-50 disabled:cursor-not-allowed
-                       bg-brand-500 hover:bg-brand-600
-                       [&.is-playing]:bg-accent-500 [&.is-playing]:hover:bg-accent-600"
-                :class="{ 'is-playing': tts.isPlaying.value }"
-                :disabled="!currentPrompt || tts.isLoading.value"
-                :title="!currentPrompt ? '目标句还没加载好' : (tts.isPlaying.value ? '点击停止' : '听原音')"
-                :aria-label="tts.isPlaying.value ? '点击停止播放' : '听原音'"
-                @click="tts.isPlaying.value ? tts.stop() : playPrompt()"
+                class="flex flex-col items-center gap-2 select-none"
               >
-                <span
-                  v-if="tts.isPlaying.value"
-                  class="absolute inset-0 rounded-full animate-pulse-ring pointer-events-none"
-                  aria-hidden="true"
-                />
-                <svg
-                  v-if="tts.isLoading.value"
-                  viewBox="0 0 24 24"
-                  class="h-6 w-6 animate-spin"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <circle cx="12" cy="12" r="9" stroke-opacity="0.25" />
-                  <path d="M21 12a9 9 0 0 0-9-9" stroke-linecap="round" />
-                </svg>
-                <svg
-                  v-else-if="tts.isPlaying.value"
-                  viewBox="0 0 24 24"
-                  class="h-7 w-7 sm:h-9 sm:w-9"
-                  fill="currentColor"
-                >
-                  <rect x="6" y="6" width="12" height="12" rx="2" />
-                </svg>
-                <svg
-                  v-else
-                  viewBox="0 0 24 24"
-                  class="h-8 w-8 sm:h-10 sm:w-10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" />
-                  <path d="M15.5 8.5a5 5 0 0 1 0 7" />
-                  <path d="M19 5a10 10 0 0 1 0 14" />
-                </svg>
-              </button>
+                <div class="relative">
+                  <span
+                    v-if="tts.isPlaying.value"
+                    class="absolute inset-0 rounded-full animate-pulse-ring pointer-events-none"
+                    aria-hidden="true"
+                  />
+                  <button
+                    type="button"
+                    class="relative z-10 rounded-full text-white font-semibold flex items-center justify-center
+                           shadow-card transition-all duration-150 active:scale-95
+                           h-20 w-20 sm:h-24 sm:w-24 text-xl
+                           disabled:opacity-50 disabled:cursor-not-allowed
+                           bg-brand-500 hover:bg-brand-600
+                           [&.is-playing]:bg-accent-500 [&.is-playing]:hover:bg-accent-600"
+                    :class="{ 'is-playing': tts.isPlaying.value }"
+                    :disabled="!currentPrompt || tts.isLoading.value"
+                    :title="!currentPrompt ? '目标句还没加载好' : (tts.isPlaying.value ? '点击停止' : '听原音')"
+                    :aria-label="tts.isPlaying.value ? '点击停止播放' : '听原音'"
+                    @click="tts.isPlaying.value ? tts.stop() : playPrompt()"
+                  >
+                    <svg
+                      v-if="tts.isLoading.value"
+                      viewBox="0 0 24 24"
+                      class="h-6 w-6 animate-spin"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="9" stroke-opacity="0.25" />
+                      <path d="M21 12a9 9 0 0 0-9-9" stroke-linecap="round" />
+                    </svg>
+                    <svg
+                      v-else-if="tts.isPlaying.value"
+                      viewBox="0 0 24 24"
+                      class="h-7 w-7 sm:h-9 sm:w-9"
+                      fill="currentColor"
+                    >
+                      <rect x="6" y="6" width="12" height="12" rx="2" />
+                    </svg>
+                    <svg
+                      v-else
+                      viewBox="0 0 24 24"
+                      class="h-8 w-8 sm:h-10 sm:w-10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" />
+                      <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                      <path d="M19 5a10 10 0 0 1 0 14" />
+                    </svg>
+                  </button>
+                </div>
+                <p class="text-xs text-ink-500 h-4">
+                  <span v-if="tts.isLoading.value">加载中…</span>
+                  <span v-else-if="tts.isPlaying.value">点击停止</span>
+                  <span v-else>听原音</span>
+                </p>
+              </div>
               <RecorderButton
                 :is-recording="recorder.isRecording.value"
                 :is-preparing="recorder.isPreparing.value"

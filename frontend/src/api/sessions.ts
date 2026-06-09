@@ -299,13 +299,12 @@ export async function uploadAudio(
 }
 
 export async function tts(payload: TtsRequest): Promise<TtsResponse> {
-  const res = await http.post<TtsResponse | { url?: string; audio_url?: string; mocked?: boolean }>(
-    '/tts',
-    payload,
-  )
-  const d = res.data as TtsResponse | { url?: string; audio_url?: string; mocked?: boolean }
-  if (d && 'audio_url' in d && d.audio_url && !('url' in d)) {
-    return { url: d.audio_url, mocked: d.mocked }
+  const res = await http.post<TtsResponse | Record<string, unknown>>('/tts', payload)
+  const d = res.data as TtsResponse | Record<string, unknown>
+  if (d && typeof (d as { audio_base64?: unknown }).audio_base64 === 'string') {
+    return d as TtsResponse
   }
+  // Older backend responses (or future url-based responses) — fall through
+  // and let the caller handle a missing `audio_base64` defensively.
   return d as TtsResponse
 }

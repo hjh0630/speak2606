@@ -206,9 +206,13 @@ export interface TtsRequest {
   speed?: number
 }
 export interface TtsResponse {
-  url: string
-  format?: string
-  mocked?: boolean
+  // The MiniMax TTS endpoint returns the synthesized audio as a base64-encoded
+  // string plus a MIME type. The previous type assumed a `url` field but the
+  // backend never wrote the audio to disk, so consumers must decode
+  // `audio_base64` themselves (see composables/useTTS.ts → playText).
+  audio_base64: string
+  mime: string
+  mocked: boolean
 }
 
 export interface ApiErrorBody {
