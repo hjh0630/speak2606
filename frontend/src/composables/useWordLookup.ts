@@ -18,37 +18,13 @@ interface Popup {
   source?: 'local' | 'llm' | 'mock'
 }
 
-/**
- * Whole-app word lookup.
- *
- * Tiered lookup:
- *   1. Local garment-textile dictionary (instant, free) — fuzzy match covers
- *      plural / -ed / -ing / -ly stems.
- *   2. If the local dictionary misses, pop a "loading" popup and call
- *      `/api/dictionary?w=…`, which hits the MiniMax LLM with a 1.5 s hard
- *      timeout. The user sees the answer or a graceful "no result" close.
- *
- * Listens to `mouseup` / `touchend` / `selectionchange` to detect when the
- * user finishes a selection gesture, then positions the popup above (or
- * below when near the top of the viewport) the selection.
- */
 export function useWordLookup() {
   const popup = ref<Popup | null>(null)
   const isPlaying = ref(false)
   const tts = useTts()
 
   let debounceTimer: number | null = null
-  // Track the mousedown-initiated close timeout so show() can cancel it.
-  let closeTimer: number | null = null
   let lastSelText = ''
-  // Pop the popup only on `mouseup` / `touchend` / explicit double-click —
-  // i.e. after the user finishes a deliberate selection gesture, NOT on
-  // every selectionchange tick (which fires on every cursor micro-move).
-  // IMPORTANT: must be reset to false after show() completes, otherwise
-  // trailing selectionchange events (including those triggered by the
-  // popup DOM insertion itself) will re-invoke show() on a now-collapsed
-  // selection and immediately clear the popup ("一闪即过").
-  let armSelection = false
   // Monotonic counter so out-of-order async LLM responses can't clobber a
   // newer selection's popup.
   let reqId = 0
@@ -146,29 +122,32 @@ export function useWordLookup() {
     }
   }
 
-  async function show() {
+  // ── Core: single entry point for showing the popup ──────────────────
+  // Called from onMouseUp / onTouchEnd / onDblClick after a suitable
+  // debounce.  We do NOT listen to selectionchange — that event fires
+  // continuously during drag-select and also spuriously on DOM mutations
+  // (including the Teleport popup insertion itself), making it impossible
+  // to avoid flash-without the arm/disarm machinery that proved fragile.
+
+  async function tryShow() {
     if (debounceTimer) {
       window.clearTimeout(debounceTimer)
       debounceTimer = null
     }
-    // Cancel any pending mousedown-initiated close so it can't race with us.
-    if (closeTimer) {
-      window.clearTimeout(closeTimer)
-      closeTimer = null
-    }
-    // Once show() runs, disarm the selectionchange trigger so trailing
-    // events (including those caused by the popup DOM insertion itself)
-    // won't re-enter and accidentally clear a valid popup.
-    armSelection = false
+
+    // Read selection synchronously — at this point the browser has settled
+    // the selection (mouseup / dblclick already fired).
     const sel = typeof window !== 'undefined' ? window.getSelection() : null
     if (!sel || sel.isCollapsed || sel.rangeCount === 0) {
-      popup.value = null
-      lastSelText = ''
+      // No valid selection → nothing to do (but DON'T clear an existing
+      // popup — another gesture may have opened it and we shouldn't steal).
       return
     }
+
     const raw = sel.toString().trim()
     if (!raw || raw === lastSelText) return
     lastSelText = raw
+
     const found = lookupLocal(raw)
     if (found) {
       const pos = rectForSelection()
@@ -176,21 +155,15 @@ export function useWordLookup() {
       popup.value = { word: found.key, meaning: found.meaning, ...pos, source: 'local' }
       return
     }
-    // Local miss → try backend LLM. Show a "loading" placeholder first so
-    // the user gets immediate feedback that something is happening.
+
+    // Local miss → try backend LLM.
     const pos = rectForSelection()
     if (!pos) return
     const myReqId = ++reqId
-    popup.value = {
-      word: raw,
-      meaning: '查询中…',
-      ...pos,
-      loading: true,
-    }
+    popup.value = { word: raw, meaning: '查询中…', ...pos, loading: true }
     const remote = await fetchRemote(raw, myReqId)
     if (myReqId !== reqId) return
     if (!remote) {
-      // LLM also missed (or timed out / errored). Close silently.
       popup.value = null
       return
     }
@@ -198,34 +171,36 @@ export function useWordLookup() {
   }
 
   function close() {
+    if (debounceTimer) {
+      window.clearTimeout(debounceTimer)
+      debounceTimer = null
+    }
     popup.value = null
     lastSelText = ''
-    armSelection = false
   }
 
-  function onMouseUp() {
-    armSelection = true
+  // ── Event handlers ──────────────────────────────────────────────────
+
+  function onMouseUp(_e: Event) {
+    // 150 ms debounce — long enough to absorb the second click of a
+    // double-click (so we don't fire twice), short enough to feel instant.
     if (debounceTimer) window.clearTimeout(debounceTimer)
-    debounceTimer = window.setTimeout(show, 60)
+    debounceTimer = window.setTimeout(tryShow, 150)
   }
 
-  function onSelectionChange() {
-    if (!armSelection) return
+  function onDblClick(_e: Event) {
+    // Double-click always selects a word (browser default).  Fire
+    // immediately — the 150 ms mouseup debounce will be cancelled below.
     if (debounceTimer) window.clearTimeout(debounceTimer)
-    debounceTimer = window.setTimeout(show, 80)
+    debounceTimer = window.setTimeout(tryShow, 0)
   }
 
   function onMouseDown(e: MouseEvent) {
     const target = e.target as HTMLElement | null
+    // Click inside the popup → let the popup handle it (play / close).
     if (target && target.closest('[data-word-popup]')) return
-    // Clicking elsewhere: cancel any pending selection-based show and close.
-    armSelection = false
-    if (closeTimer) window.clearTimeout(closeTimer)
-    closeTimer = window.setTimeout(() => {
-      popup.value = null
-      lastSelText = ''
-      closeTimer = null
-    }, 0)
+    // Click anywhere else → close the popup.
+    close()
   }
 
   function onKeyDown(e: KeyboardEvent) {
@@ -251,7 +226,7 @@ export function useWordLookup() {
   onMounted(() => {
     document.addEventListener('mouseup', onMouseUp)
     document.addEventListener('touchend', onMouseUp)
-    document.addEventListener('selectionchange', onSelectionChange)
+    document.addEventListener('dblclick', onDblClick)
     document.addEventListener('mousedown', onMouseDown)
     document.addEventListener('keydown', onKeyDown)
   })
@@ -259,7 +234,7 @@ export function useWordLookup() {
   onUnmounted(() => {
     document.removeEventListener('mouseup', onMouseUp)
     document.removeEventListener('touchend', onMouseUp)
-    document.removeEventListener('selectionchange', onSelectionChange)
+    document.removeEventListener('dblclick', onDblClick)
     document.removeEventListener('mousedown', onMouseDown)
     document.removeEventListener('keydown', onKeyDown)
   })
