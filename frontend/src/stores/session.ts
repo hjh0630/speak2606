@@ -240,8 +240,20 @@ export const useSessionStore = defineStore('session', () => {
     if (!cur) return null
     try {
       const finished = await apiEndSession(cur.id)
-      session.value = finished
-      return finished
+      // Belt-and-suspenders: the backend /complete endpoint should now
+      // include `messages` in its response (so the sidebar's "本轮摘要"
+      // keeps the correct count), but if some future server regression
+      // drops the field, fall back to keeping the messages we already
+      // had in memory. Otherwise the count snaps to 0 the moment the
+      // user clicks 结束本次, which is jarring.
+      const merged: PracticeSession = {
+        ...finished,
+        messages: (finished.messages && finished.messages.length > 0)
+          ? finished.messages
+          : (cur.messages ?? []),
+      }
+      session.value = merged
+      return merged
     } catch (e) {
       // Even if the backend fails to persist, we still consider it ended
       // locally.

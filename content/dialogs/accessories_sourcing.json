@@ -1,0 +1,88 @@
+{
+  "scenario_id": "accessories_sourcing",
+  "scenario_title_en": "Accessories Sourcing",
+  "scenario_title_zh": "辅料采购",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, this is Wendy from Yiwu Bright Buttons. May I help you?",
+      "ai_message_zh": "早上好,我是义乌光耀纽扣的 Wendy,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍,说明来意:需要找特定规格的纽扣",
+      "key_phrases": ["This is ...", "I am looking for ...", "We need ... for ...", "May I ask about ..."],
+      "common_mistakes": "Don't say 'I want buy buttons' — say 'I am looking for buttons' or 'I want to order buttons'.",
+      "tips_zh": "电话采购辅料,先报公司 + 用途 + 规格,对方才好推荐。",
+      "user_response_example": "Good morning, Wendy. This is Chen Wei from Hangzhou Lily Garments. I am looking for resin buttons for our men's shirt line."
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure, Chen. What size, what color, and what finish? We have matte, glossy, and pearlescent.",
+      "ai_message_zh": "好的,陈先生。你们要什么尺寸、什么颜色、什么表面效果?我们有哑光、亮面和珠光。",
+      "expected_user_response_hint": "说出纽扣尺寸、颜色、表面效果,报 Pantone 号",
+      "key_phrases": ["Resin button", "size 12 mm", "Pantone TCX", "matte finish", "shank button"],
+      "common_mistakes": "纽扣尺寸用毫米,口语说 12 mm;不要把 12 mm 念成 'twelve millimeter' (可以但太慢),直接 'twelve mil'。",
+      "tips_zh": "纽扣常见尺寸 10 / 12 / 14 / 16 / 18 mm;男装衬衣常用 12 mm 双眼扣或带柄扣(shank)。",
+      "user_response_example": "Resin button, size 12 millimeters, matte finish. The color is Pantone 19-4052 navy, TCX version."
+    },
+    {
+      "round": 3,
+      "ai_message": "Got it, navy matte 12 mm shank. How many designs, and what is the order quantity? Our MOQ is 1,000 pieces per color.",
+      "ai_message_zh": "好的,藏青哑光 12 mm 带柄扣。你们要几个款?订单量多少?起订量是每色 1000 颗。",
+      "expected_user_response_hint": "说明款式数量和下单量,确认 MOQ",
+      "key_phrases": ["We have ... designs", "around ... pieces", "What is the MOQ", "per color"],
+      "common_mistakes": "MOQ 在辅料行业多以 pieces(颗)为单位,不要和纱线(kg)或成衣(pieces)混。",
+      "tips_zh": "纽扣 MOQ 一般按颗计,普通色 1000-2000 颗,特殊色或开模 5000+。",
+      "user_response_example": "We have 6 designs this season, navy is one of them. The total quantity is around 5,000 pieces. 1,000 per color is fine."
+    },
+    {
+      "round": 4,
+      "ai_message": "OK. For 5,000 pieces, the price is around US$0.05 per piece. The tooling fee for new color is US$80 per shade, refundable when you reach 50,000 pieces.",
+      "ai_message_zh": "好的。5000 颗的话,价格约每颗 0.05 美元。新色开模费每色 80 美元,达到 5 万颗可退。",
+      "expected_user_response_hint": "确认价格,询问开模费退款条件",
+      "key_phrases": ["per piece", "tooling fee", "refundable", "when you reach ..."],
+      "common_mistakes": "tooling fee 不要说成 'tool fee';口语常说 'mold charge' 或 'tooling fee',都可。",
+      "tips_zh": "开模费可退是常见谈判点,大客户基本都能谈到累计 5 万颗退款。",
+      "user_response_example": "US$0.05 per piece is acceptable. For the tooling fee, is it refundable when we reach 50,000 pieces per color?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Yes, refundable at 50,000 pieces. Do you also need the buttons in a custom blister pack, or in bulk carton?",
+      "ai_message_zh": "是的,5 万颗可退。纽扣需要定制吸塑包装,还是散装纸箱?",
+      "expected_user_response_hint": "说明包装方式,询问小包装费用",
+      "key_phrases": ["In bulk carton", "blister pack", "pieces per carton", "extra cost"],
+      "common_mistakes": "Don't say 'box pack' — say 'blister pack' (吸塑) or 'in bulk' (散装) for industry clarity.",
+      "tips_zh": "小包装(blister / polybag)有附加费 US$0.005-0.01/颗;大货通常散装到厂再分装。",
+      "user_response_example": "Bulk carton is fine, 1,000 pieces per inner box and 5,000 pieces per export carton. Please confirm the carton marking."
+    },
+    {
+      "round": 6,
+      "ai_message": "Sure. About lead time, samples in 5-7 days after Pantone confirmed, bulk 20 days after sample approval.",
+      "ai_message_zh": "好的。交期方面,潘通号确认后 5-7 天出样品,样品批准后 20 天大货。",
+      "expected_user_response_hint": "确认交期,询问样品费",
+      "key_phrases": ["Lead time is fine", "samples are ...", "courier account", "sample cost"],
+      "common_mistakes": "lead time 后面要接 from / after,不要单独说 'lead time is 20 days'。",
+      "tips_zh": "样品免费但运费到付,或样品费累计订单可抵扣 — 这两种都常见。",
+      "user_response_example": "Lead time is fine. For the samples, are they free of charge, or charged but refundable? We can use our DHL account."
+    },
+    {
+      "round": 7,
+      "ai_message": "Samples are free, but the courier is on the buyer. About the zipper for the shirt, do you also need it from us? We carry YKK and SBS.",
+      "ai_message_zh": "样品免费,运费客户自付。再问一下,衬衣拉链你们也需要从我们这里配吗?我们有 YKK 和 SBS。",
+      "expected_user_response_hint": "确认是否要拉链,选择品牌和规格",
+      "key_phrases": ["YKK zipper", "SBS zipper", "size 5#", "auto-lock slider", "close-end"],
+      "common_mistakes": "拉链规格 #3 / #5 / #8 / #10 表示宽度(#5 = 5 mm 左右),不要把 # 念成 'number'。",
+      "tips_zh": "男装衬衣常用 #5 闭尾(close-end)涤纶拉链,品牌客户偏好 YKK。",
+      "user_response_example": "Yes, please quote YKK #5 close-end polyester zipper, auto-lock slider, in the same navy color. The quantity will be similar to buttons."
+    },
+    {
+      "round": 8,
+      "ai_message": "Got it. I'll prepare the proforma invoice for both buttons and zippers and email you by tomorrow. Anything else?",
+      "ai_message_zh": "好的。我把纽扣和拉链的 PI 一起做,明天发邮件给你。还有别的吗?",
+      "expected_user_response_hint": "确认收件邮箱,做 closing",
+      "key_phrases": ["Please send to ...", "Looking forward to ...", "Have a nice day"],
+      "common_mistakes": "PI 不要说成 'formal invoice',PI 是 proforma invoice(预开发票),不等同于 commercial invoice(商业发票)。",
+      "tips_zh": "PI 上要写清:trade term、payment、validity、bank info,这是后续付款和清关的基础。",
+      "user_response_example": "Please send the PI to chen.wei@lilygarments.com. Looking forward to the lab samples. Have a nice day, Wendy."
+    }
+  ]
+}

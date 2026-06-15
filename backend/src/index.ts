@@ -12,6 +12,7 @@ import historyRoutes from './routes/history';
 import statsRoutes from './routes/stats';
 import vocabularyRoutes from './routes/vocabulary';
 import statusRoutes from './routes/status';
+import dictionaryRoutes from './routes/dictionary';
 import { registerSessionWs } from './ws/session-ws';
 
 const log = createLogger('index');
@@ -99,6 +100,7 @@ async function build(): Promise<FastifyInstance> {
   await app.register(statsRoutes);
   await app.register(vocabularyRoutes);
   await app.register(statusRoutes);
+  await app.register(dictionaryRoutes);
 
   // WebSocket routes
   registerSessionWs(app);

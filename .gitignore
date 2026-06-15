@@ -57,3 +57,9 @@ SpeakFlow-minimax-code.tar.gz
 
 # Frontend build artifacts (regen via npm run build)
 frontend/dist/
+
+# Debug / study artifacts (added 2026-06-15)
+backend/study/
+study/
+*.tsbuildinfo
+.vercel

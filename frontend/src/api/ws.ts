@@ -2,6 +2,8 @@
 // exposes a real-time audio stream.  The connection is best-effort — if the
 // socket fails, the view falls back to the REST path automatically.
 
+import { wsBaseUrl } from './client'
+
 export type WsMessage =
   | { type: 'ready' }
   | { type: 'transcript'; text: string; final: boolean }
@@ -85,6 +87,8 @@ export class WsClient {
 }
 
 export function sessionWsUrl(sessionId: string): string {
-  const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-  return `${proto}//${window.location.host}/ws/session/${encodeURIComponent(sessionId)}`
+  // Pick up the shared wsBaseUrl() from api/client.ts when the front-end
+  // is built with VITE_API_BASE (i.e. when the SPA and the Fastify
+  // backend live on different origins).
+  return `${wsBaseUrl()}/ws/session/${encodeURIComponent(sessionId)}`
 }

@@ -26,6 +26,21 @@ const textInput = ref('')
 // each word.  User can switch to 1.0× / 0.6× via the inline pill toggle.
 const ttsSpeed = ref<number>(0.8)
 const messagesEl = ref<HTMLElement | null>(null)
+// "Jump to latest" floating button — visible whenever the user has
+// scrolled away from the bottom of the messages pane (e.g. to re-read
+// an earlier AI reply on mobile where the pane is short). Clicking it
+// pins the view to the latest message again. Without it, the auto-scroll
+// only fires on `messages.length` changes, so a long AI reply that
+// arrives while the user is reading history leaves them stranded.
+const showScrollToBottom = ref(false)
+function onMessagesScroll() {
+  const el = messagesEl.value
+  if (!el) return
+  // 80 px cushion — small scrolls (like the auto-scroll landing the user
+  // a few pixels off) shouldn't pop the button up unnecessarily.
+  const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight
+  showScrollToBottom.value = distanceFromBottom > 80
+}
 // Sidebar default: hidden on mobile (≤ 640 px), shown on desktop.
 // `isMobile` is reactive so the aside re-renders if the user resizes.
 const isMobile = ref(false)
@@ -38,7 +53,10 @@ const lastFinishedId = ref<string | null>(null)
 function scrollToBottom() {
   nextTick(() => {
     const el = messagesEl.value
-    if (el) el.scrollTop = el.scrollHeight
+    if (el) {
+      el.scrollTop = el.scrollHeight
+      showScrollToBottom.value = false
+    }
   })
 }
 
@@ -359,7 +377,8 @@ function goToHistory() {
         <!-- Messages -->
         <div
           ref="messagesEl"
-          class="flex-1 overflow-y-auto scrollbar-thin px-4 sm:px-6 py-4 space-y-3"
+          class="flex-1 overflow-y-auto scrollbar-thin px-4 sm:px-6 py-4 space-y-3 relative"
+          @scroll="onMessagesScroll"
         >
           <div
             v-if="!sessionStore.session || (sessionStore.session.messages?.length ?? 0) === 0"
@@ -374,6 +393,23 @@ function goToHistory() {
             :key="m.id"
             :message="m"
           />
+
+          <!-- "Jump to latest" floating button — only visible when the user
+               has scrolled away from the bottom of the messages pane. -->
+          <button
+            v-if="showScrollToBottom && (sessionStore.session?.messages?.length ?? 0) > 0"
+            type="button"
+            class="sticky bottom-2 ml-auto mr-2 h-9 w-9 rounded-full bg-brand-500 hover:bg-brand-600
+                   text-white shadow-card flex items-center justify-center transition-all
+                   active:scale-95 z-10"
+            aria-label="跳到最新消息"
+            title="跳到最新消息"
+            @click="scrollToBottom"
+          >
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </button>
         </div>
 
         <!-- Composer / recorder -->

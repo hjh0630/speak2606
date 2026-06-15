@@ -17,6 +17,29 @@ const difficultyMeta = computed(() => {
       return { label: props.scenario.difficulty, cls: 'bg-ink-100 text-ink-700' }
   }
 })
+
+// Tier 4-5 (crisis / anomaly) gets a ⚠️ anomaly chip; tier 1-3 is normal.
+// Tags may also force-show the anomaly flag (e.g. on a "beginner" version of
+// a crisis scenario) so users get the warning regardless of which difficulty
+// they happen to browse.
+const isAnomaly = computed(() => {
+  const d = props.scenario.estimated_difficulty ?? 0
+  if (d >= 4) return true
+  return Array.isArray(props.scenario.tags) && props.scenario.tags.includes('anomaly')
+})
+
+const hasPrereqs = computed(
+  () => Array.isArray(props.scenario.prerequisites) && props.scenario.prerequisites.length > 0,
+)
+
+const prereqLabel = computed(() => {
+  // We only have the IDs from the API; show them as a comma-separated list
+  // and let the user click through to the linked scenarios themselves.
+  // (A future enhancement could resolve the IDs to titles via a second
+  // API call or a /api/scenarios lookup, but the IDs are still useful as
+  // "you need to know about LC / payment terms first" hints.)
+  return (props.scenario.prerequisites ?? []).join(', ')
+})
 </script>
 
 <template>
@@ -38,6 +61,11 @@ const difficultyMeta = computed(() => {
             {{ scenario.title }}
           </h3>
           <span :class="['chip', difficultyMeta.cls]">{{ difficultyMeta.label }}</span>
+          <span
+            v-if="isAnomaly"
+            class="chip bg-rose-50 text-rose-700 border border-rose-200"
+            title="⚠️ 进阶 / 异常场景"
+          >⚠️ 异常</span>
         </div>
         <p v-if="scenario.subtitle" class="text-sm text-ink-500 truncate">
           {{ scenario.subtitle }}
@@ -51,6 +79,21 @@ const difficultyMeta = computed(() => {
     >
       {{ scenario.description }}
     </p>
+
+    <!-- ⚠️ Prerequisites hint — only rendered when the scenario declares any.
+         Resolves IDs → titles so the user sees friendly names (e.g.
+         "信用证不符点" not "lc_discrepancy"). -->
+    <div
+      v-if="hasPrereqs"
+      class="rounded-lg bg-amber-50 border border-amber-200 px-2.5 py-1.5
+             text-xs text-amber-800 leading-snug flex items-start gap-1.5"
+    >
+      <span class="shrink-0 mt-px">📚</span>
+      <span class="min-w-0">
+        <span class="font-semibold">建议先学</span>
+        <span class="text-amber-900"> · {{ prereqLabel }}</span>
+      </span>
+    </div>
 
     <div class="flex items-center justify-between text-xs text-ink-500 mt-auto pt-1">
       <div class="flex items-center gap-3">

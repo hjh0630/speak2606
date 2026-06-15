@@ -17,7 +17,7 @@ import { scoreWithLlm, scoreRepeat, safeParseScore } from '../services/scoring';
 // safeParseScore is internal to scoring.ts and not re-exported; we reuse it via the LLM module
 // only for the explicit /feedback path. The /messages path uses scoreWithLlm which already
 // handles JSON parsing.
-import { getScenarioById, getDialogForRound, getSystemPrompt } from '../services/content';
+import { getScenarioById, getDialogForRound, getDialogsForScenario, getSystemPrompt } from '../services/content';
 import { config } from '../config';
 import { createLogger } from '../utils/logger';
 import type {
@@ -121,6 +121,48 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
       return reply.code(500).send(errBody('SESSION_FETCH_FAILED', (err as Error).message));
     }
   });
+
+  // GET /api/sessions/:id/prompts  — return the per-round follow-along
+  // targets for this session's scenario+difficulty. The front-end issues
+  // this as a forward-compat probe (it falls back to /api/scenarios/:id
+  // dialogs on 4xx); implementing the endpoint here turns a 404 (which
+  // triggers a browser-side "Failed to load resource" console error) into
+  // a clean 200, and also gives the front-end a session-scoped view of
+  // prompts in case the dialog store is later keyed differently.
+  app.get<{ Params: { id: string }; Querystring: { difficulty?: string } }>(
+    '/api/sessions/:id/prompts',
+    async (req, reply) => {
+      try {
+        const rec = getSession(req.params.id);
+        if (!rec) {
+          return reply.code(404).send(errBody('SESSION_NOT_FOUND', `session '${req.params.id}' not found`));
+        }
+        const requestedDifficulty = req.query?.difficulty;
+        const difficulty: Difficulty =
+          requestedDifficulty && isValidDifficulty(requestedDifficulty) ? requestedDifficulty : rec.difficulty;
+        const dialogs = getDialogsForScenario(rec.scenario_id);
+        const entry = dialogs.find((d) => d.difficulty === difficulty) ?? dialogs[0];
+        if (!entry || !Array.isArray(entry.rounds) || entry.rounds.length === 0) {
+          return reply.send({ items: [] });
+        }
+        const items = entry.rounds
+          .map((r) => {
+            const text = r.ai_message ?? '';
+            if (!text) return null;
+            return {
+              id: String(r.round),
+              text,
+              translation: r.ai_message_zh,
+              difficulty: entry.difficulty,
+            };
+          })
+          .filter((p): p is { id: string; text: string; translation: string; difficulty: Difficulty } => p !== null);
+        return reply.send({ items });
+      } catch (err) {
+        return reply.code(500).send(errBody('PROMPTS_FAILED', (err as Error).message));
+      }
+    },
+  );
 
   // POST /api/sessions/:id/messages
   app.post<{ Params: { id: string }; Body: MessageBody }>(
@@ -381,6 +423,21 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
         if (!result) {
           return reply.code(500).send(errBody('SESSION_COMPLETE_FAILED', 'unknown error'));
         }
+        // Include the full message list in the response — the front-end's
+        // sessionStore.finish() replaces the entire session with this payload,
+        // and the sidebar "本轮摘要" reads `session.messages.length` to render
+        // the count. Without this field, the count would reset to 0 right
+        // after finishing, even though the messages are still in the DB.
+        const finalMessages = getMessages(id).map((m) => ({
+          id: m.id,
+          role: m.role,
+          content: m.content,
+          audio_url: m.audio_url ?? null,
+          score: m.score ?? null,
+          fluency: m.fluency ?? null,
+          accuracy: m.accuracy ?? null,
+          created_at: m.created_at,
+        }));
         return reply.send({
           session_id: id,
           status: 'completed',
@@ -388,6 +445,7 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
           total_score: rec.total_score,
           duration_sec: result.durationSec,
           message_count: result.messageCount,
+          messages: finalMessages,
         });
       } catch (err) {
         log.error(`POST /complete failed: ${(err as Error).message}`);

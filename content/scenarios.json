@@ -949,5 +949,254 @@
       "technical",
       "garment"
     ]
+  },
+  {
+    "id": "accessories_sourcing",
+    "title_zh": "辅料采购",
+    "title_en": "Accessories Sourcing",
+    "icon": "🧷",
+    "description_zh": "与纽扣/拉链/吊牌/织带供应商沟通规格、颜色、起订量、价格与交期,以及对色和开模",
+    "description_en": "Coordinate with button / zipper / label / tape suppliers on specs, color, MOQ, price, lead time, color matching and custom tooling",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Accessory supplier / sales representative",
+    "ai_role_zh": "辅料供应商 / 业务员",
+    "user_role": "Garment factory merchandiser / accessories sourcing",
+    "user_role_zh": "服装厂跟单 / 辅料采购",
+    "key_skills": [
+      "specifying button material / size / Pantone",
+      "discussing zipper type and tape color",
+      "requesting custom logo on labels and tags",
+      "negotiating MOQ and tooling cost",
+      "confirming sample dispatch and lead time"
+    ],
+    "key_skills_zh": [
+      "纽扣材质/尺寸/潘通色号",
+      "拉链类型与带布颜色",
+      "吊牌织标定制 logo",
+      "起订量与开模费谈判",
+      "样品寄送与交期确认"
+    ],
+    "industry_terms_sample": [
+      "shank button",
+      "YKK zipper",
+      "Pantone TCX",
+      "tooling fee",
+      "woven label"
+    ],
+    "estimated_minutes": 9,
+    "tags": ["process", "accessory", "sourcing"]
+  },
+  {
+    "id": "garment_washing",
+    "title_zh": "成衣洗水/后整",
+    "title_en": "Garment Washing & Finishing",
+    "icon": "🫧",
+    "description_zh": "与洗水厂沟通洗水方式(普洗/酵素/石磨/漂染/硅油)、缩水、手感控制与色牢度",
+    "description_en": "Coordinate with laundry on wash type (general / enzyme / stone / bleach / silicone), shrinkage, handfeel control and color fastness",
+    "category": "process",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Garment laundry / finishing house merchandiser",
+    "ai_role_zh": "洗水厂 / 后整理厂跟单",
+    "user_role": "Garment factory merchandiser or denim / casual wear sourcing",
+    "user_role_zh": "服装厂跟单 / 牛仔或休闲款采购",
+    "key_skills": [
+      "specifying wash type and recipe",
+      "discussing handfeel target (soft, dry, vintage)",
+      "reviewing shrinkage tolerance and dimensional change",
+      "reviewing color fastness to wash / rubbing",
+      "approving bulk wash after lab dip / first bulk sample"
+    ],
+    "key_skills_zh": [
+      "洗水方式与配方",
+      "目标手感(柔软/干爽/复古)",
+      "缩率公差与尺寸变化",
+      "耐洗 / 耐摩擦色牢度",
+      "大货洗水批准流程"
+    ],
+    "industry_terms_sample": [
+      "enzyme wash",
+      "stone wash",
+      "silicone softener",
+      "dimensional change",
+      "lab dip"
+    ],
+    "estimated_minutes": 10,
+    "tags": ["process", "garment", "finishing"]
+  },
+  {
+    "id": "lc_discrepancy",
+    "title_zh": "信用证不符点",
+    "title_en": "LC Document Discrepancy",
+    "icon": "📑",
+    "description_zh": "交单时信用证有不符点,与客户/银行沟通接受不符、改证或担保放单。⚠️ 异常/进阶场景,建议先完成 [询盘报价] + [订单沟通],熟悉 LC 流程",
+    "description_en": "On LC negotiation, present documents with discrepancies; negotiate with buyer and bank for acceptance, amendment or indemnity. ⚠️ Anomaly / advanced; finish [Inquiry & Quote] + [Order Management] first to be familiar with LC workflow.",
+    "category": "business",
+    "subcategory": "trade_finance",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Overseas buyer / documentary credit specialist at negotiating bank",
+    "ai_role_zh": "海外客户 / 议付行单证员",
+    "user_role": "Chinese export sales / documentation clerk",
+    "user_role_zh": "中国外贸业务员 / 单证员",
+    "key_skills": [
+      "explaining UCP 600 article 14 review timeline",
+      "listing common discrepancies (late shipment, short shipment, expired LC)",
+      "requesting buyer to waive discrepancy or amend LC",
+      "preparing indemnity letter for negotiation under reserve",
+      "communicating with advising / negotiating bank",
+      "handling multi-discrepancy escalation with fraud allegation"
+    ],
+    "key_skills_zh": [
+      "UCP 600 第 14 条审单时限",
+      "常见不符点(晚装/短装/过期)",
+      "请求客户放弃不符点或改证",
+      "担保放单 / 保留议付",
+      "通知行 / 议付行沟通",
+      "多不符点 + 欺诈指控的升级处理"
+    ],
+    "industry_terms_sample": [
+      "discrepancy",
+      "waiver",
+      "indemnity",
+      "UCP 600",
+      "B/L date",
+      "amendment",
+      "negotiation under reserve",
+      "issuing bank"
+    ],
+    "estimated_minutes": 11,
+    "estimated_difficulty": 4,
+    "prerequisites": ["inquiry_quote", "order_management"],
+    "tags": ["business", "LC", "documents", "exception", "anomaly", "crisis", "trade-finance"]
+  },
+  {
+    "id": "payment_overdue",
+    "title_zh": "客户付款逾期/催款",
+    "title_en": "Overdue Payment & Collection",
+    "icon": "💰",
+    "description_zh": "客户尾款/开船后货款未按时付,催收沟通,信用证延期或分期方案。⚠️ 异常/进阶场景,建议先完成 [订单沟通] + [信用证不符点],熟悉 PI/LC 流程",
+    "description_en": "Customer overdue on balance or post-shipment payment — collection calls, LC extension or installment plan negotiation. ⚠️ Anomaly / advanced; finish [Order Management] + [LC Document Discrepancy] first to be familiar with PI/LC workflow.",
+    "category": "business",
+    "subcategory": "trade_finance",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Overseas buyer / finance controller under cash flow pressure",
+    "ai_role_zh": "海外客户 / 财务总监(资金紧张)",
+    "user_role": "Chinese export sales / finance manager",
+    "user_role_zh": "中国外贸业务员 / 财务经理",
+    "key_skills": [
+      "polite first reminder and asking for payment date",
+      "second reminder with potential credit hold",
+      "negotiating installment or LC extension",
+      "explaining late-payment interest and impact on future orders",
+      "closing on a confirmed payment schedule",
+      "managing credit-hold escalation and bankruptcy / Chapter 11 scenarios"
+    ],
+    "key_skills_zh": [
+      "礼貌首催 + 询问付款日",
+      "二催 + 暂停授信",
+      "分期 / 信用证延期谈判",
+      "逾期利息与未来订单影响",
+      "确认付款时间表并收尾",
+      "信用暂停升级 + 客户破产/Chapter 11 处理"
+    ],
+    "industry_terms_sample": [
+      "overdue",
+      "payment reminder",
+      "credit hold",
+      "installment plan",
+      "LC extension",
+      "late-payment interest",
+      "wire transfer",
+      "debit note"
+    ],
+    "estimated_minutes": 10,
+    "estimated_difficulty": 4,
+    "prerequisites": ["order_management", "lc_discrepancy"],
+    "tags": ["business", "payment", "exception", "anomaly", "crisis", "trade-finance", "collections"]
+  },
+  {
+    "id": "customs_hold",
+    "title_zh": "海关查验/扣货",
+    "title_en": "Customs Hold & Return",
+    "icon": "🛃",
+    "description_zh": "货物到港被海关查验/扣留,与货代、客户、报关行沟通证明文件、改港或退运。⚠️ 异常/进阶场景,建议先完成 [物流/船期/单证] + [订单沟通]",
+    "description_en": "Cargo held by customs at destination — coordinate with forwarder, buyer and customs broker on documents, diversion or return. ⚠️ Anomaly / advanced; finish [Logistics & Shipping] + [Order Management] first.",
+    "category": "business",
+    "subcategory": "logistics",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Destination customs officer / overseas buyer logistics manager",
+    "ai_role_zh": "目的港海关 / 客户物流经理",
+    "user_role": "Chinese export sales / shipping clerk / forwarder",
+    "user_role_zh": "中国外贸业务员 / 船务 / 货代",
+    "key_skills": [
+      "identifying hold reason (HS code, value, label, certificate)",
+      "preparing supplementary documents (C/O, test report, invoice breakdown)",
+      "negotiating with customs broker on duty and bond",
+      "discussing diversion to free port or return to origin",
+      "communicating cost allocation between buyer and seller",
+      "requesting binding ruling from CBP / customs authority"
+    ],
+    "key_skills_zh": [
+      "确认扣货原因(HS编码/价值/标签/证书)",
+      "补充单证(C/O/测试报告/发票拆分)",
+      "与报关行谈关税与保证金",
+      "改港到自由港或退运回始发地",
+      "费用分摊沟通",
+      "申请 binding ruling / 事先裁定"
+    ],
+    "industry_terms_sample": [
+      "customs hold",
+      "HS code",
+      "C/O",
+      "demurrage",
+      "return cargo",
+      "binding ruling",
+      "test report",
+      "free port"
+    ],
+    "estimated_minutes": 11,
+    "estimated_difficulty": 4,
+    "prerequisites": ["logistics_shipping", "order_management"],
+    "tags": ["business", "logistics", "exception", "customs", "anomaly", "crisis"]
+  },
+  {
+    "id": "trade_fair",
+    "title_zh": "展会/Showroom 接单",
+    "title_en": "Trade Fair & Showroom",
+    "icon": "🛍",
+    "description_zh": "广交会、Canton Fair、Magic Show、Texworld 等展会现场和 Showroom 接待客户,快速介绍产品并拿意向单",
+    "description_en": "Receive buyers at trade fairs (Canton Fair, Magic Show, Texworld) and showrooms — quick product intro, sample walk-through and intent orders",
+    "category": "business",
+    "subcategory": "sales",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Overseas buyer / sourcing manager walking the booth",
+    "ai_role_zh": "海外客户 / 采购经理(逛展位)",
+    "user_role": "Chinese export sales on booth duty",
+    "user_role_zh": "中国外贸业务员(展会站位)",
+    "key_skills": [
+      "30-second elevator pitch",
+      "highlighting hero products and fabric tech",
+      "qualifying the buyer (category, volume, target market)",
+      "collecting business cards and follow-up plan",
+      "closing with a tentative MOQ and sample dispatch"
+    ],
+    "key_skills_zh": [
+      "30 秒电梯演讲",
+      "亮点产品和面料科技推介",
+      "客户背景判断(品类/量/目标市场)",
+      "收名片与跟进计划",
+      "现场初步 MOQ 与样品寄送"
+    ],
+    "industry_terms_sample": [
+      "elevator pitch",
+      "hero product",
+      "MOQ",
+      "Showroom",
+      "lead"
+    ],
+    "estimated_minutes": 8,
+    "tags": ["business", "sales", "fair", "showroom"]
   }
 ]

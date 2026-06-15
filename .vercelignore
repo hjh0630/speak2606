@@ -1,0 +1,19 @@
+# SpeakFlow Vercel ignore — we deploy the static Vue 3 build, not the
+# backend (which goes to Render). Anything not needed by the SPA build
+# is excluded from the upload to keep deploy size small.
+
+backend/
+content/
+dl/
+docs/
+pw-shots/
+integration-deliverable.md
+
+# Tooling
+.git/
+.gitignore
+*.log
+*.bat
+*.ps1
+*.sh
+backend/src/**/*.ts

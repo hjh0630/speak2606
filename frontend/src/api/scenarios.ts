@@ -71,6 +71,8 @@ function normalizeScenario(raw: Record<string, unknown>): Scenario {
     roles,
     goals,
     estimated_minutes: r.estimated_minutes,
+    estimated_difficulty: r.estimated_difficulty as number | undefined,
+    prerequisites: r.prerequisites as string[] | undefined,
     icon: r.icon,
     tags: r.tags,
     industry_terms_sample: r.industry_terms_sample,

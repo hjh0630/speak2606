@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: speakflow-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    # Node 20 LTS, matches what we use in dev.
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: LOG_LEVEL
+        value: info
+      - key: CORS_ORIGINS
+        # IMPORTANT: change this to your Vercel domain after first deploy
+        sync: false
+      - key: MINIMAX_API_KEY
+        sync: false
+      - key: MINIMAX_GROUP_ID
+        sync: false
+      # Turso (libSQL) — free tier 9 GB, permanent, edge-replicated.
+      # Set both to your Turso instance values; DB_PATH is no longer used
+      # because db.ts now uses libsql client when these are present.
+      - key: TURSO_DATABASE_URL
+        sync: false
+      - key: TURSO_AUTH_TOKEN
+        sync: false
+      # Local-path override: if you want to use the bundled better-sqlite3
+      # driver instead of Turso (e.g. for self-hosting on a box with disk),
+      # uncomment this and remove the TURSO_* keys above.
+      # - key: DB_PATH
+      #   value: /var/data/app.db
+    healthCheckPath: /health
+    autoDeploy: true

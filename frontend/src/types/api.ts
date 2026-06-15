@@ -30,6 +30,10 @@ export interface Scenario {
   roles: { ai: string; user: string }
   goals: string[]
   estimated_minutes?: number
+  /** 1-5 internal rating; higher = harder / more advanced / crisis-level. */
+  estimated_difficulty?: number
+  /** IDs of scenarios the user should ideally complete first. */
+  prerequisites?: string[]
   icon?: string
   tags?: string[]
   industry_terms_sample?: string[]
