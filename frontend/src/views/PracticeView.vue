@@ -20,7 +20,6 @@ const stt = useBrowserSTT({ lang: 'en-US' })
 const tts = useTts()
 
 const sessionId = computed(() => route.params.id as string)
-const textInput = ref('')
 // TTS playback speed for the "听原音" button (repeat mode).  Default 0.8×
 // — slower is friendlier for language learners who need a beat to parse
 // each word.  User can switch to 1.0× / 0.6× via the inline pill toggle.
@@ -78,13 +77,10 @@ onMounted(async () => {
   showSidebar.value = !isMobile.value
   await ensureSession()
   scrollToBottom()
-  if (typeof navigator !== 'undefined' && navigator.permissions) {
-    try {
-      const status = await navigator.permissions.query({ name: 'microphone' as PermissionName })
-      if (status.state === 'denied') showPermissionHint.value = true
-    } catch { /* not all browsers support permissions.query */ }
-  }
-  if (recorder.permissionDenied.value) showPermissionHint.value = true
+  // Permission check is reactive: if getUserMedia fails on the first
+  // recording attempt, the error handler sets showPermissionHint.
+  // Pre-checking via navigator.permissions.query can return stale results
+  // in some browsers (e.g. "denied" when user has actually granted access).
 })
 
 watch(() => sessionStore.session?.messages?.length, scrollToBottom)
@@ -183,17 +179,6 @@ async function onRecorderStop() {
   if (!stt.lastResult.value) {
     sessionStore.errorMessage = stt.error.value
       || '没听清,请再试一次,或直接用下方文字输入。'
-  }
-}
-
-async function sendText() {
-  const text = textInput.value.trim()
-  if (!text) return
-  textInput.value = ''
-  try {
-    await sessionStore.sendText(text, currentPrompt.value?.id)
-  } catch {
-    // store has the error
   }
 }
 
@@ -380,14 +365,6 @@ function goToHistory() {
           class="flex-1 overflow-y-auto scrollbar-thin px-4 sm:px-6 py-4 space-y-3 relative"
           @scroll="onMessagesScroll"
         >
-          <div
-            v-if="!sessionStore.session || (sessionStore.session.messages?.length ?? 0) === 0"
-            class="h-full flex flex-col items-center justify-center text-center text-ink-500"
-          >
-            <div class="text-4xl mb-2">🎤</div>
-            <p class="text-sm">按下录音按钮开始第一句</p>
-            <p class="text-xs text-ink-400 mt-1">说英文,AI 会即时回复并给你评分</p>
-          </div>
           <MessageBubble
             v-for="m in sessionStore.session?.messages ?? []"
             :key="m.id"
@@ -448,24 +425,6 @@ function goToHistory() {
             <span v-else>{{ stt.lastResult.value }}</span>
           </div>
 
-          <!-- Text fallback / always-available text input -->
-          <div class="flex items-end gap-2 mb-3">
-            <textarea
-              v-model="textInput"
-              class="input min-h-[44px] max-h-32 resize-y scrollbar-thin"
-              rows="1"
-              :placeholder="isRepeat ? '输入你的跟读,Enter 发送' : '输入英文,Enter 发送'"
-              @keydown.enter.exact.prevent="sendText"
-            />
-            <button
-              type="button"
-              class="btn-primary"
-              :disabled="!textInput.trim() || sessionStore.connection !== 'idle'"
-              @click="sendText"
-            >
-              发送
-            </button>
-          </div>
 
           <!-- Repeat-mode hint (just text, no big button) -->
           <p v-if="isRepeat" class="mb-2 text-center text-xs text-ink-500">
@@ -678,7 +637,7 @@ function goToHistory() {
             <li v-if="isFree">一次只说 1–2 句,对话更自然。</li>
             <li v-else>模仿语调和停顿,不必逐字对应。</li>
             <li>录音时观察右上角,声波越稳,识别越准。</li>
-            <li>不擅长录音?直接用文字输入,效果一样。</li>
+            <li>遇到识别错误?缩短句子,或换个说法再试。</li>
           </ul>
         </div>
         <div v-if="isFree" class="card p-4 sm:p-5">

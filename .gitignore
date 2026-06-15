@@ -63,3 +63,5 @@ backend/study/
 study/
 *.tsbuildinfo
 .vercel
+
+.vercel
