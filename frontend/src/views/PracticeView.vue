@@ -340,20 +340,9 @@ function goToHistory() {
           class="px-4 sm:px-6 pt-5 pb-3 border-b border-ink-100"
         >
           <div class="text-xs font-semibold text-ink-500 uppercase tracking-wider mb-1">目标句</div>
-          <div class="flex items-start gap-3">
-            <p class="text-lg sm:text-2xl font-semibold text-ink-800 leading-snug flex-1">
-              {{ currentPrompt.text }}
-            </p>
-            <button
-              type="button"
-              class="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-ink-200 px-2.5 py-1.5 text-xs font-medium text-ink-600 hover:bg-ink-50"
-              :disabled="tts.isLoading.value"
-              @click="playPrompt"
-            >
-              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              再听一遍
-            </button>
-          </div>
+          <p class="text-lg sm:text-2xl font-semibold text-ink-800 leading-snug">
+            {{ currentPrompt.text }}
+          </p>
           <p v-if="currentPrompt.translation" class="text-sm text-ink-500 mt-2">
             {{ currentPrompt.translation }}
           </p>

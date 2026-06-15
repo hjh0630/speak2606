@@ -38,10 +38,16 @@ export function useWordLookup() {
   const tts = useTts()
 
   let debounceTimer: number | null = null
+  // Track the mousedown-initiated close timeout so show() can cancel it.
+  let closeTimer: number | null = null
   let lastSelText = ''
   // Pop the popup only on `mouseup` / `touchend` / explicit double-click —
   // i.e. after the user finishes a deliberate selection gesture, NOT on
   // every selectionchange tick (which fires on every cursor micro-move).
+  // IMPORTANT: must be reset to false after show() completes, otherwise
+  // trailing selectionchange events (including those triggered by the
+  // popup DOM insertion itself) will re-invoke show() on a now-collapsed
+  // selection and immediately clear the popup ("一闪即过").
   let armSelection = false
   // Monotonic counter so out-of-order async LLM responses can't clobber a
   // newer selection's popup.
@@ -145,6 +151,15 @@ export function useWordLookup() {
       window.clearTimeout(debounceTimer)
       debounceTimer = null
     }
+    // Cancel any pending mousedown-initiated close so it can't race with us.
+    if (closeTimer) {
+      window.clearTimeout(closeTimer)
+      closeTimer = null
+    }
+    // Once show() runs, disarm the selectionchange trigger so trailing
+    // events (including those caused by the popup DOM insertion itself)
+    // won't re-enter and accidentally clear a valid popup.
+    armSelection = false
     const sel = typeof window !== 'undefined' ? window.getSelection() : null
     if (!sel || sel.isCollapsed || sel.rangeCount === 0) {
       popup.value = null
@@ -203,9 +218,13 @@ export function useWordLookup() {
   function onMouseDown(e: MouseEvent) {
     const target = e.target as HTMLElement | null
     if (target && target.closest('[data-word-popup]')) return
-    setTimeout(() => {
+    // Clicking elsewhere: cancel any pending selection-based show and close.
+    armSelection = false
+    if (closeTimer) window.clearTimeout(closeTimer)
+    closeTimer = window.setTimeout(() => {
       popup.value = null
       lastSelText = ''
+      closeTimer = null
     }, 0)
   }
 
