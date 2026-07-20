@@ -1,0 +1,88 @@
+{
+  "scenario_id": "weaving_knitting",
+  "scenario_title_en": "Weaving & Knitting",
+  "scenario_title_zh": "织造沟通",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, Tom from Jiangnan Knitting. I reviewed your brief for the 220 GSM fleece. A few technical questions before I confirm feasibility — what machine gauge are you targeting, and do you want 3-end or 2-end fleece?",
+      "ai_message_zh": "Chen,我是江南针织的 Tom。看了你 220 克抓绒的需求。确认工艺前先问几个问题:机号多少?要 3 路还是 2 路抓绒?",
+      "expected_user_response_hint": "回答机号和路数,讨论结构",
+      "key_phrases": ["3-end fleece", "2-end fleece", "machine gauge", "E20 / E24"],
+      "common_mistakes": "3-end fleece(三路抓绒) = 面纱+底纱+衬氨纶,比 2-end(二路)厚实、保形好、贵 8-12%。",
+      "tips_zh": "E20 / E24 是针织机机号,数字越大针越细,布面越细腻。",
+      "user_response_example": "We are targeting 3-end fleece for better recovery, on E20 machines. 88% cotton, 12% polyester for the face, with a 20D spandex feeder."
+    },
+    {
+      "round": 2,
+      "ai_message": "3-end on E20, that's our bread and butter. About the loop length — for 220 GSM, we'd run the face at 3.0 mm, the bind at 2.8, and the spandex at 1.2 with 3.5x draft. Does that match your spec?",
+      "ai_message_zh": "3 路 E20,这是我们的强项。线圈长度方面,要 220 克的话,面纱 3.0mm,地纱 2.8mm,氨纶 1.2mm,牵伸 3.5 倍。跟你工艺单对得上吗?",
+      "expected_user_response_hint": "回应线圈长度参数",
+      "key_phrases": ["Loop length", "spandex draft", "face / bind yarn", "GSM target"],
+      "common_mistakes": "loop length(线圈长度) 是针织工艺核心参数,直接影响克重和手感;不要按字面说'loop length of yarn'。",
+      "tips_zh": "spandex draft(氨纶牵伸) 常见 2.5-4 倍,过高易断,过低弹力不够。",
+      "user_response_example": "Loop length is in the right range. The face yarn at 3.0 mm might be a touch loose — can we go to 2.9 mm to tighten the surface? Let's see the lab sample first."
+    },
+    {
+      "round": 3,
+      "ai_message": "Sure, 2.9 mm is doable. One thing I want to flag — at 220 GSM with that loop configuration, your shrinkage might be on the higher side, around 7-8% lengthwise before pre-shrunk. After compacting, we can pull it down to 4%.",
+      "ai_message_zh": "可以,2.9mm 行。有件事要提:220 克按这组线圈参数,预缩前长度方向缩水可能在 7-8%。紧式预缩后能压到 4%。",
+      "expected_user_response_hint": "讨论缩水解决方案",
+      "key_phrases": ["4% is acceptable", "pre-shrunk", "tighten the loop", "compact finishing"],
+      "common_mistakes": "shrinkage 报数字时要分清 lengthwise(L 方向)和 widthwise(W 方向),不要只报一个。",
+      "tips_zh": "pre-shrunk / compacting 是通过机械预缩让纤维预缩到位,后续水洗不再缩。",
+      "user_response_example": "4% lengthwise is acceptable — widthwise we can tolerate 5%. The buyer cares more about recovery and pilling than absolute shrinkage numbers."
+    },
+    {
+      "round": 4,
+      "ai_message": "Understood. To control pilling, I'd suggest using combed yarn and adding an anti-pilling finish in the wet process. We typically get grade 3.5 to 4 on the Martindale test after finishing. What grade does your buyer require?",
+      "ai_message_zh": "明白。要控起球,建议用精梳纱,加一道抗起球整理。湿处理后 Martindale 测试一般能到 3.5-4 级。客户要几级?",
+      "expected_user_response_hint": "回应起球等级要求",
+      "key_phrases": ["Grade 3.5 minimum", "Martindale", "anti-pilling finish", "pilling resistance"],
+      "common_mistakes": "Martindale(马丁代尔)是耐磨/起球测试标准,等级 1-5,数字越大越好。",
+      "tips_zh": "ASTM / ISO 标准下,grade 3-4 是成人装常规要求,grade 4 是高端要求。",
+      "user_response_example": "Buyer's minimum is grade 3.5 after 5,000 rubs. We also test at 7,000 rubs for our own record. If we hit 4, even better."
+    },
+    {
+      "round": 5,
+      "ai_message": "I'll target grade 4 at 5,000 rubs. Now about the dyeing route — for fleece, we typically do continuous dyeing. For 3,000 kg total, jet dyeing might be a more flexible option for color matching. Your call?",
+      "ai_message_zh": "我会做到 5,000 转 4 级。染色路线 — 抓绒我们一般用连续染色。3,3 吨这个量,溢流染色(jet dyeing)对色可能更灵活。你选哪个?",
+      "expected_user_response_hint": "选择染色方式",
+      "key_phrases": ["jet dyeing", "continuous dyeing", "color matching", "for small lot"],
+      "common_mistakes": "jet dyeing(溢流染色) 适合小批量多色,continuous dyeing(连续轧染) 适合大批量单色。",
+      "tips_zh": "单色 5 吨以上用连续轧染成本低;小批量多色用溢流染色灵活但单价高 10-15%。",
+      "user_response_example": "Jet dyeing makes more sense — we have 4 colors, 750 kg each, and the order might split. Flexibility matters more than per-kg cost on this run."
+    },
+    {
+      "round": 6,
+      "ai_message": "Jet dyeing it is. On lead time, with 4 colors in jet machines, we're looking at 30 days from lab dip approval, plus 7 days for knitting. Let me also raise the width question — tubular at 200 cm circumference, or open width at 180 cm?",
+      "ai_message_zh": "溢流染色。交期方面,4 个色走溢流,从批准色样起 30 天,加针织 7 天。再问门幅 — 圆筒 200cm 围,还是开幅 180cm?",
+      "expected_user_response_hint": "回答门幅",
+      "key_phrases": ["Open width is better", "tubular", "cuttable width", "for our lay planning"],
+      "common_mistakes": "open width 的 cuttable width(有效裁剪门幅) 比 full width 小 2-3 cm,下单时要问清楚。",
+      "tips_zh": "抓绒 / 卫衣布常用开幅(因为要双层拉毛),套裁 T 恤用圆筒更省。",
+      "user_response_example": "Open width at 180 cm full width, with cuttable width of 178 cm minimum. Our lay planning is set for open width on this style."
+    },
+    {
+      "round": 7,
+      "ai_message": "Confirmed: open width 180 cm, cuttable 178 cm. One more — the buyer asked about recycled content. We can run this with 20% GRS-certified recycled cotton blended with virgin combed. Will that affect your handfeel target?",
+      "ai_message_zh": "确认:开幅 180cm,有效 178cm。再确认一个 — 客户问能不能用 20% GRS 再生棉混纺。会影响手感目标吗?",
+      "expected_user_response_hint": "讨论再生混纺对手感影响",
+      "key_phrases": ["GRS blend is fine", "recycled cotton", "slight handfeel change", "acceptable for the buyer"],
+      "common_mistakes": "GRS(Global Recycled Standard)是再生标准,scope certificate + transaction certificate 要备好。",
+      "tips_zh": "再生棉短纤比例高,手感略糙,通常需要额外柔软整理(softener)补偿。",
+      "user_response_example": "GRS blend is fine — 20% recycled is acceptable to the buyer. Handfeel change is tolerable, but please add a softener to compensate. We need the TC at shipment."
+    },
+    {
+      "round": 8,
+      "ai_message": "Will do. I'll add a silicone softener to compensate. Let me summarize: 220 GSM, 3-end fleece, 88/12 cotton/recycled cotton, 20D spandex feeder, jet dyed, open width 180/178, pre-shrunk, Martindale grade 4, 30-day lead time. PI by tomorrow. Good?",
+      "ai_message_zh": "好,会加硅油柔软剂补偿。我总结一下:220 克,3 路抓绒,88/12 棉/再生棉,20D 氨纶,溢流染色,开幅 180/178,预缩,马丁代尔 4 级,交期 30 天。PI 明天发你。可以吗?",
+      "expected_user_response_hint": "确认总结,给收件邮箱",
+      "key_phrases": ["Sounds good", "Confirmed", "Please send to ...", "Looking forward to it"],
+      "common_mistakes": "总结时要逐条确认,不要笼统说 ok;PI 出来前把数字再过一遍。",
+      "tips_zh": "拿到 PI 后逐条核对:G SM、门幅、成分、交期、单价、付款方式、有效期。",
+      "user_response_example": "Sounds good, Tom. Confirmed on all points. Please send the PI to chen.wei@lilygarments.com. Looking forward to the lab dips."
+    }
+  ]
+}

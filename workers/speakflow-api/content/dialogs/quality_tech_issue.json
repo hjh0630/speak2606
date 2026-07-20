@@ -1,0 +1,88 @@
+{
+  "scenario_id": "quality_tech_issue",
+  "scenario_title_en": "Quality & Tech Issue Resolution",
+  "scenario_title_zh": "工艺问题解决",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Karen from Westcoast QC, calling on behalf of the buyer. We've flagged some issues on PO-2026-0412. Can we discuss?",
+      "ai_message_zh": "你好,我是 Westcoast QC 的 Karen,代表客户联系你。PO-2026-0412 这单我们发现了一些问题,能聊聊吗?",
+      "expected_user_response_hint": "礼貌确认接听,询问具体问题",
+      "key_phrases": ["This is ...", "What issues did you find", "I am ready to listen", "Let me get the QC file"],
+      "common_mistakes": "flag a issue / raise an issue / spot an issue 都通用,flag 是 QC 行业高频词。",
+      "tips_zh": "接到 QC 反馈,先听对方说完整再回应,不要中途打断。",
+      "user_response_example": "Hello Karen, this is Chen Wei from Lily Garments. I'm ready to listen. What issues did you find on the PO?"
+    },
+    {
+      "round": 2,
+      "ai_message": "On a 200-piece random pull, we found 12 pieces with visible barre marks across the chest and 6 pieces with shade variation between the front and back panels. That's 9% defect rate, well over the AQL 2.5 limit.",
+      "ai_message_zh": "200 件抽样里,我们发现 12 件胸前有明显的 barry 横条,6 件前后片有色差。9% 的不良率,远超 AQL 2.5 标准。",
+      "expected_user_response_hint": "请求看证据,确认具体位置",
+      "key_phrases": ["Could you send photos", "What size are the barre marks", "send the inspection report", "I will look into it"],
+      "common_mistakes": "barre / barry 是针织布的横条/横档,常因不同批次的纱线混用导致。",
+      "tips_zh": "barre/横条 + 色差/前后片色差,常因 yarn lot 不一致或匹染不均。",
+      "user_response_example": "I see. Could you send the photos and the inspection report by email? I'll pull the production records and look into the cause."
+    },
+    {
+      "round": 3,
+      "ai_message": "I'll email everything within the hour. To save time — do you know if the bulk yarn was from a single lot, or were there multiple lots mixed during knitting?",
+      "ai_message_zh": "我 1 小时内把材料邮件发你。为了节省时间 — 大货纱线是同一批号,还是针织时混了多批?",
+      "expected_user_response_hint": "查纱线批号和混批情况",
+      "key_phrases": ["Let me check the yarn lots", "I will pull the records", "single lot or multiple", "I will confirm"],
+      "common_mistakes": "yarn lot(纱线批号) 是同一次染色的纱线批次,不同批号可能色差。",
+      "tips_zh": "混批(mix lot) 是针织大货常见问题,barre 风险会显著上升。",
+      "user_response_example": "Let me check with the knitting mill. I'll pull the yarn lot records and the knitting schedule to see if there was any lot mixing."
+    },
+    {
+      "round": 4,
+      "ai_message": "Please do. While we wait for that, can you tell me the knitting machine gauge and the yarn count? This will help me match the barre pattern to a likely cause.",
+      "ai_message_zh": "好的。同时能告诉我针织机号和纱支吗?这能帮我把 barry 形态对应到可能的原因。",
+      "expected_user_response_hint": "提供机号和纱支信息",
+      "key_phrases": ["E28 machine", "32s yarn", "the gauge is ...", "the count is ..."],
+      "common_mistakes": "machine gauge(机号) 和 yarn count(纱支) 是两个独立参数,口语里都要说。",
+      "tips_zh": "barre 形态不同原因不同 — 周期 1-2cm 可能是机器问题,5-10cm 可能是纱线问题。",
+      "user_response_example": "The knitting is on E28 machines, 32s combed cotton. The barre is at a 5-7 cm repeat, which I think points to yarn variation rather than machine."
+    },
+    {
+      "round": 5,
+      "ai_message": "5-7 cm repeat — that does look like yarn variation, not a machine problem. My guess is lot mixing or uneven yarn tension. What's your initial assessment of the root cause?",
+      "ai_message_zh": "5-7cm 周期 — 看起来是纱线问题,不是机器。我猜是混批或纱线张力不均。你初步根因分析是什么?",
+      "expected_user_response_hint": "给出初步分析,承担责任或推给上游",
+      "key_phrases": ["I think it's ...", "the most likely cause is ...", "yarn lot mixing", "I will check"],
+      "common_mistakes": "root cause(根因) 是 QC 流程关键词,根因分析(RCA) 是常见方法。",
+      "tips_zh": "根因分析要落到具体工艺步骤,不能光说'质量问题'。",
+      "user_response_example": "My initial assessment is yarn lot mixing during knitting. I will check with the knitting mill. The shade variation on front/back is likely from the dye lot, not the knitting."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK. For the 18 affected pieces, what is your proposed resolution? Rework, replacement, or concession?",
+      "ai_message_zh": "好的。18 件有问题的产品,你们的处理方案是什么?返工、补货,还是让步?",
+      "expected_user_response_hint": "提出处理方案",
+      "key_phrases": ["We propose rework", "replacement", "concession", "let me check the cost"],
+      "common_mistakes": "rework(返工)/ replacement(补货)/ concession(让步) 是三种常见处理方式,各有成本与时间。",
+      "tips_zh": "返工成本最低但耗时,补货最快但成本高,让步最快但有品牌风险。",
+      "user_response_example": "For the 18 pieces, we propose rework at our cost — we can re-knit the affected panels and re-sew. Lead time is 10 days. For the remaining bulk, we will tighten the yarn lot control."
+    },
+    {
+      "round": 7,
+      "ai_message": "Rework is acceptable if the appearance matches the original. Can you send a reworked sample first for sign-off? And what's your action plan to prevent the issue on the remaining production?",
+      "ai_message_zh": "返工可以接受,但外观要跟原单一致。先寄个返工件给我们签收好吗?剩下的货你们怎么防止问题?",
+      "expected_user_response_hint": "提出整改措施",
+      "key_phrases": ["Corrective action", "prevent recurrence", "yarn lot control", "send a sample"],
+      "common_mistakes": "corrective action(纠正措施) 是 QC 流程标准表达,要落到具体行动。",
+      "tips_zh": "纠正措施要具体:批号管理、针织排程、QC 加严。",
+      "user_response_example": "Yes, I'll send a reworked sample by Friday. For prevention, we will lock the yarn lot to a single batch per PO, add inline QC checks every 50 pieces, and document it in the production plan."
+    },
+    {
+      "round": 8,
+      "ai_message": "Sounds reasonable. Send the rework sample, the prevention plan, and the updated inspection report once the rework is done. I'll close the issue if everything checks out. Anything else I should know?",
+      "ai_message_zh": "合理。把返工件、整改计划、返工后的检验报告发我。检查通过就关闭这个 issue。还有别的吗?",
+      "expected_user_response_hint": "确认收件和下一步,收尾",
+      "key_phrases": ["I will send everything by Friday", "Thanks Karen", "talk soon"],
+      "common_mistakes": "close the issue(关闭 issue) 是 QC 流程标准动作,要有书面凭证。",
+      "tips_zh": "关闭 issue 前要发所有补救文件,留底,避免后续被翻账。",
+      "user_response_example": "I'll send the rework sample by Friday, the prevention plan by Monday, and the final inspection report next week. Thanks for the heads-up, Karen. Talk soon."
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+[
+  {
+    "id": "yarn-sourcing-yarn-mill",
+    "title_zh": "纱线采购与 Uster 报告纠纷",
+    "title_en": "Yarn Sourcing & Uster Report Dispute",
+    "icon": "🧶",
+    "description_zh": "与纱线供应商沟通成分、纱支、捻度、起订量、价格；批量交付时围绕 Uster CV% 与 IPI 指标与供应商谈判让步或扣款。",
+    "description_en": "Coordinate with yarn suppliers on composition, yarn count, twist, MOQ and price; negotiate allowance or debit notes around Uster CV% and IPI on bulk delivery.",
+    "category": "spinning",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Yarn mill sales representative / QC manager",
+    "ai_role_zh": "纱线厂业务员 / 品质经理",
+    "user_role": "Knit or woven fabric sourcing / merchandiser at garment factory",
+    "user_role_zh": "面料采购或跟单(服装厂)",
+    "key_skills": [
+      "specifying yarn composition and yarn count",
+      "discussing twist direction and TPM",
+      "reviewing Uster test certificate (CV%, IPI, hairiness)",
+      "negotiating MOQ and cone weight",
+      "raising claim on out-of-spec yarn"
+    ],
+    "key_skills_zh": [
+      "成分与纱支表达",
+      "捻向与 TPM 讨论",
+      "Uster 检测报告解读 (CV%/IPI/毛羽)",
+      "起订量与筒重谈判",
+      "纱线参数不符时的索赔沟通"
+    ],
+    "industry_terms_sample": [
+      "combed yarn",
+      "ring spun",
+      "Uster CV%",
+      "IPI",
+      "Pantone TPX"
+    ],
+    "estimated_minutes": 11,
+    "tags": ["process", "yarn", "sourcing", "qc"]
+  },
+  {
+    "id": "poplin-shade-claim",
+    "title_zh": "梭织规格与染整色差纠纷",
+    "title_en": "Woven Spec & Dyeing Shade Claim",
+    "icon": "🪡",
+    "description_zh": "与梭织厂沟通织物组织、经纬密、克重、门幅；面料进染厂后围绕大货色光 ΔE 与确认样偏差发起让步接收或扣款谈判。",
+    "description_en": "Talk with a woven mill on construction, EPI/PPI, GSM and width; once the fabric returns from the dye house, negotiate concession or debit note on Delta E between bulk and approved lab dip.",
+    "category": "weaving",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Woven mill technician / dyeing house merchandiser",
+    "ai_role_zh": "梭织厂技术员 / 染厂跟单",
+    "user_role": "Garment factory merchandiser or fabric sourcing",
+    "user_role_zh": "服装厂跟单 / 面料采购",
+    "key_skills": [
+      "specifying weave construction and EPI x PPI",
+      "confirming GSM and cuttable width",
+      "reviewing lab dip against Pantone TPX",
+      "measuring Delta E between bulk and approved sample",
+      "negotiating shade concession or discount"
+    ],
+    "key_skills_zh": [
+      "织物组织与 EPI x PPI 表达",
+      "克重与可裁门幅确认",
+      "对色样与潘通 TPX 复核",
+      "大货与封样 ΔE 测量",
+      "色光让步或折扣谈判"
+    ],
+    "industry_terms_sample": [
+      "EPI x PPI",
+      "GSM",
+      "cuttable width",
+      "lab dip",
+      "Delta E"
+    ],
+    "estimated_minutes": 11,
+    "tags": ["process", "weaving", "dyeing", "claim"]
+  },
+  {
+    "id": "dyeing-delta-e",
+    "title_zh": "染整小样到大货 ΔE 控制",
+    "title_en": "Lab Dip to Bulk Delta E Control",
+    "icon": "🎨",
+    "description_zh": "与染厂跟单:从对色样、复样、头缸到大货全流程围绕 ΔE、色牢度、克重损失和缩水进行技术沟通与让步谈判。",
+    "description_en": "Coordinate with the dye house from lab dip, repeat dip, first bulk lot to bulk production — discuss Delta E, color fastness, GSM loss and shrinkage, including concession trade-offs.",
+    "category": "dyeing",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Dye house merchandiser / colorist",
+    "ai_role_zh": "染厂跟单 / 调色师",
+    "user_role": "Garment factory merchandiser / sourcing",
+    "user_role_zh": "服装厂跟单 / 面料采购",
+    "key_skills": [
+      "approving lab dip against Pantone TCX",
+      "reviewing first bulk lot under D65 light",
+      "specifying color fastness to wash / light / rubbing",
+      "controlling GSM loss and shrinkage",
+      "negotiating Delta E tolerance and credit note"
+    ],
+    "key_skills_zh": [
+      "潘通 TCX 对色样批准",
+      "D65 光源下头缸样审核",
+      "水洗/耐光/耐摩擦色牢度规范",
+      "克重损失与缩水控制",
+      "ΔE 公差与贷记通知谈判"
+    ],
+    "industry_terms_sample": [
+      "lab dip",
+      "Delta E",
+      "reactive dye",
+      "color fastness",
+      "GSM loss"
+    ],
+    "estimated_minutes": 12,
+    "tags": ["process", "dyeing", "shade", "qc"]
+  },
+  {
+    "id": "vintage-tshirt-craft",
+    "title_zh": "样衣确认与工艺成本谈判",
+    "title_en": "Vintage T-shirt Sample & Craft Cost",
+    "icon": "👕",
+    "description_zh": "复古 T 恤样衣确认:面料、印花、绣花、水洗工艺与成本,涵盖 PP 样、TOP 样和大货前工艺单审批全流程。",
+    "description_en": "Vintage T-shirt sample confirmation covering fabric, print, embroidery, garment wash and craft cost; PP sample, TOP sample and pre-production tech pack sign-off.",
+    "category": "garment",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Overseas buyer / merchandiser",
+    "ai_role_zh": "海外采购商 / 跟单",
+    "user_role": "Chinese garment factory merchandiser / sample room coordinator",
+    "user_role_zh": "中国外贸跟单 / 样衣房协调员",
+    "key_skills": [
+      "confirming tech pack and spec sheet",
+      "discussing fabric GSM and yarn count",
+      "approving PP sample and TOP sample",
+      "quoting craftsmanship cost (print / embroidery / wash)",
+      "managing sample yardage and DHL"
+    ],
+    "key_skills_zh": [
+      "工艺单与尺寸表确认",
+      "面料克重与纱支讨论",
+      "PP 样与 TOP 样批核",
+      "印花/绣花/水洗成本报价",
+      "样布码数与 DHL 寄样管理"
+    ],
+    "industry_terms_sample": [
+      "tech pack",
+      "PP sample",
+      "TOP sample",
+      "marker",
+      "SPI"
+    ],
+    "estimated_minutes": 11,
+    "tags": ["product", "sampling", "garment", "cost"]
+  },
+  {
+    "id": "embroidery-print-wash",
+    "title_zh": "绣花/印花/水洗工艺沟通",
+    "title_en": "Embroidery / Print / Wash Craft Coordination",
+    "icon": "🖼",
+    "description_zh": "与绣花厂/印花厂/洗水厂对接工艺细节:DST 打版、印花分色套色、酵素/石头水洗与水洗牢度。",
+    "description_en": "Coordinate with embroidery, print and laundry houses on DST digitizing, print color separation, enzyme / stone wash and wash fastness.",
+    "category": "crafts",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Embroidery / print / laundry house merchandiser",
+    "ai_role_zh": "绣花厂 / 印花厂 / 洗水厂跟单",
+    "user_role": "Garment factory merchandiser / designer",
+    "user_role_zh": "服装厂跟单 / 设计师",
+    "key_skills": [
+      "preparing DST embroidery file",
+      "specifying print method (plastisol / water-based / discharge)",
+      "approving strike-off and registration tolerance",
+      "specifying wash recipe (enzyme / stone / silicone)",
+      "reviewing wash fastness and dimensional change"
+    ],
+    "key_skills_zh": [
+      "DST 绣花打版文件准备",
+      "印花方式(胶浆/水浆/拔印)选择",
+      "打样与套色公差批核",
+      "洗水配方(酵素/石头/硅油)指定",
+      "水洗牢度与尺寸变化复核"
+    ],
+    "industry_terms_sample": [
+      "DST file",
+      "satin stitch",
+      "plastisol",
+      "enzyme wash",
+      "dimensional change"
+    ],
+    "estimated_minutes": 10,
+    "tags": ["crafts", "embroidery", "print", "wash"]
+  },
+  {
+    "id": "lc-claim-arbitration",
+    "title_zh": "RFQ → L/C → PSI → 索赔全流程",
+    "title_en": "RFQ to L/C to PSI to Claim Arbitration",
+    "icon": "🔍",
+    "description_zh": "外贸全流程实战:从 RFQ 询盘、PI 报价、信用证开立、PSI 出货前验货到客户索赔与仲裁。",
+    "description_en": "End-to-end trade workflow: from RFQ inquiry, PI quotation, L/C issuance, pre-shipment inspection to buyer claim and arbitration.",
+    "category": "qc",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Overseas buyer / documentary credit specialist / QC manager",
+    "ai_role_zh": "海外客户 / 信用证单证员 / 品控经理",
+    "user_role": "Chinese export sales / documentation clerk / quality manager",
+    "user_role_zh": "中国外贸业务员 / 单证员 / 品质经理",
+    "key_skills": [
+      "responding to RFQ with FOB / CIF quotation",
+      "explaining L/C at sight and amendment",
+      "arranging PSI per AQL 2.5 standard",
+      "issuing debit note or credit note on defects",
+      "negotiating replacement vs allowance on claim"
+    ],
+    "key_skills_zh": [
+      "RFQ 询盘 FOB/CIF 报价",
+      "即期信用证与改证沟通",
+      "按 AQL 2.5 安排 PSI",
+      "缺陷扣款/贷记通知开具",
+      "补货与让步接收的索赔谈判"
+    ],
+    "industry_terms_sample": [
+      "RFQ",
+      "PI",
+      "L/C at sight",
+      "PSI",
+      "AQL 2.5",
+      "debit note"
+    ],
+    "estimated_minutes": 13,
+    "tags": ["trade", "L/C", "PSI", "claim", "qc"]
+  },
+  {
+    "id": "outdoor-yoga-basketball",
+    "title_zh": "户外+瑜伽+球衣定制沟通",
+    "title_en": "Outdoor + Yoga + Teamwear Customization",
+    "icon": "🏃",
+    "description_zh": "户外硬壳+瑜伽打底+球衣号码定制三大品类综合沟通:防水等级、纱线氨纶比、号码贴布绣工艺与版型选择。",
+    "description_en": "Multi-category conversation covering outdoor hardshell, yoga bottoms and teamwear customization — waterproof rating, nylon-spandex ratio, tackle twill numbers and fit selection.",
+    "category": "sportswear",
+    "subcategory": "garment_textile",
+    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "ai_role": "Sportswear brand sourcing / merchandising manager",
+    "ai_role_zh": "运动品牌采购 / 跟单经理",
+    "user_role": "Chinese sportswear factory merchandiser",
+    "user_role_zh": "中国运动服装厂跟单",
+    "key_skills": [
+      "specifying waterproof rating (10K mm H2O) and breathability",
+      "selecting nylon-spandex ratio (75/25, 80/20, 88/12)",
+      "explaining tackle twill number vs sublimation",
+      "approving fit (compression / semi-fit / relaxed)",
+      "negotiating MOQ and lead time for teamwear"
+    ],
+    "key_skills_zh": [
+      "防水(10K mm H2O)与透气参数表达",
+      "锦氨比(75/25, 80/20, 88/12)选型",
+      "贴布绣号码 vs 热升华印花对比",
+      "压缩/半贴/宽松版型批核",
+      "球衣定制 MOQ 与交期谈判"
+    ],
+    "industry_terms_sample": [
+      "DWR",
+      "four-way stretch",
+      "squat-proof",
+      "tackle twill",
+      "teamwear"
+    ],
+    "estimated_minutes": 12,
+    "tags": ["sportswear", "outdoor", "yoga", "teamwear", "customization"]
+  }
+]

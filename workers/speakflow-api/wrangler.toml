@@ -1,0 +1,38 @@
+name = "speakflow-api"
+main = "src/index.ts"
+compatibility_date = "2026-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 database — created 2026-06-17
+[[d1_databases]]
+binding = "DB"
+database_name = "speakflow-db"
+database_id = "045423bc-f540-42ac-8591-8130d7c4a4f6"
+
+# R2 bucket for TTS audio — OPTIONAL (degraded mode when account doesn't enable R2).
+# Uncomment and create the bucket in the Cloudflare dashboard to enable persistent
+# TTS audio (otherwise the worker delivers audio inline as base64 in WS frames).
+# [[r2_buckets]]
+# binding = "AUDIO"
+# bucket_name = "speakflow-audio"
+
+# Bundle content/*.json as text into the worker (avoids runtime fs reads)
+# See: https://developers.cloudflare.com/workers/wrangler/bundling/#bundling-files
+[[rules]]
+type = "Text"
+globs = ["../../content/**/*.json"]
+fallthrough = true
+
+# Vars (non-secret). Secrets (MINIMAX_*) are set via `wrangler secret put`.
+[vars]
+LOG_LEVEL = "info"
+API_BASE = "https://api.minimax.chat"
+MINIMAX_TTS_VOICE = "male-qn-qingse"
+MINIMAX_TTS_MODEL = "speech-2.8-turbo"
+MINIMAX_ASR_MODEL = "asr-01"
+MINIMAX_LLM_MODEL = "minimax-text-01"
+# Public R2 bucket URL for audio playback (configure custom domain in CF dashboard)
+AUDIO_PUBLIC_BASE = "https://audio.speakflow.pages.dev"
+
+[observability]
+enabled = true

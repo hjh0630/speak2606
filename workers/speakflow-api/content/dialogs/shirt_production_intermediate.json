@@ -1,0 +1,88 @@
+{
+  "scenario_id": "shirt_production",
+  "scenario_title_en": "Shirt Production",
+  "scenario_title_zh": "衬衣生产",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Lin, this is David from the IE department. I have your spec sheet in front of me — PO 4521, men's long-sleeve shirt, 100% cotton 80s x 80s, 110 x 60 construction, 110 GSM. Is that still the latest?",
+      "ai_message_zh": "Lin 你好,我是 IE 部门的 David。手上有你的规格单 — PO 4521,男款长袖衬衣,100% 棉 80 支 x 80 支,经纬密 110 x 60,克重 110。这是最新的对吗?",
+      "expected_user_response_hint": "确认规格,提出关键技术问题",
+      "key_phrases": ["Yes, that is the latest", "80s x 80s poplin", "construction is 110 x 60", "confirm shrinkage spec"],
+      "common_mistakes": "80s x 80s 是 yarn count,不是 fabric count;construction 110 x 60 指 EPI x PPI 经纬密。",
+      "tips_zh": "poplin / oxford / twill / dobby 都要在 spec 上写明,不能笼统说 'shirting'。",
+      "user_response_example": "Yes, that is the latest version, Rev.3. Just to confirm: 80s x 80s poplin, 110 x 60 construction, 110 GSM. Shrinkage spec is 3% max in warp and weft. Anything else you need before cutting?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Good. One thing I want to flag — the GSM tolerance is plus or minus 5%, but the lab test came back at 108 GSM. That's at the lower limit. Are you OK to release for cutting, or do you want us to re-check?",
+      "ai_message_zh": "好的。有个事想跟你确认:克重公差是正负 5%,但实验室测出来 108 克,在下限。是可以放行裁剪,还是需要复测?",
+      "expected_user_response_hint": "给出放行/复测决定,引用规格",
+      "key_phrases": ["108 is within tolerance", "release for cutting", "re-test is not needed", "documented in the inspection report"],
+      "common_mistakes": "在公差 lower limit 时,正常是 accept,但要在 inspection report 写清楚 'at lower limit, accepted by merchandiser'。",
+      "tips_zh": "克重偏轻一点对手感影响不大,在公差内建议放行,但要求 report 上注明。",
+      "user_response_example": "108 GSM is within the minus 5% tolerance, so I am OK to release for cutting. Please document it in the fabric inspection report as 'at lower limit, released per merchandiser approval'. Thanks for catching that."
+    },
+    {
+      "round": 3,
+      "ai_message": "Will do. About the marker — we did a sample marker for size M. Marker length is 6.4 meters, efficiency 84%. For 6 sizes, total marker is about 9.2 meters. I want to confirm: are all 6 sizes in the same color, or split?",
+      "ai_message_zh": "好的。排料方面:M 码做了排料样,长 6.4 米,利用率 84%。6 个尺码一起排,总长 9.2 米。想确认一下:6 个码是同一个颜色,还是要分色?",
+      "expected_user_response_hint": "说明分色分码,讨论排料策略",
+      "key_phrases": ["All 6 sizes in 2 colors", "size ratio", "combine cutting", "shade band"],
+      "common_mistakes": "shade band 同一卷面料头尾色差,不能跨卷拼接,要预留。",
+      "tips_zh": "分色排料时,同一件衬衣的前后片、袖片必须在同一卷或同 shade band 内。",
+      "user_response_example": "For PO 4521, we have 2 colors — white and light blue, 50/50 split. Each color has all 6 sizes with the size ratio S-M-L-XL-XXL-XXXL = 1:2:3:3:2:1. Please cut each color as a single lot. Watch the shade band — keep front and back panels from the same roll."
+    },
+    {
+      "round": 4,
+      "ai_message": "Understood. Spreading will start tomorrow. We will use 8 plies per lay with face-up, face-down alternating to avoid shade variation between panels. For sewing, I want to set up the line as 35 operators with one piece flow.",
+      "ai_message_zh": "明白。明天开始拖料。每层 8 匹,面朝上、面朝下交替铺,避免色差。缝制这边,我打算 35 人单件流。",
+      "expected_user_response_hint": "确认单件流,讨论关键工序和 SPI",
+      "key_phrases": ["one piece flow is good", "key operations", "SPI standard", "8 SPI on side seam"],
+      "common_mistakes": "one piece flow(单件流)与 bundle system(捆扎流)不同,前者更灵活但需要 IE 平衡。",
+      "tips_zh": "衬衣关键工序:合肩缝(shoulder join) → 领子 set sleeve → 袖侧缝 → 锁眼钉扣。",
+      "user_response_example": "One piece flow is good for this style. For sewing spec, please use 8 SPI on the side seam and 10 to 12 SPI on the collar stand. The shoulder seam should be a superimposed seam with 1 cm seam allowance, double-needle for topstitching."
+    },
+    {
+      "round": 5,
+      "ai_message": "Got it. About the collar — the buyer wants a fused collar with soft handfeel. We are using a 60 GSM knit fusible interlining, bonding at 145 degrees, 3.5 bar pressure, 12 seconds. Will that meet the spec?",
+      "ai_message_zh": "好的。领子方面,客户要粘合领但要手感软。我们用 60 克针织粘合衬,145 度、3.5 巴压 12 秒。这个参数能过吗?",
+      "expected_user_response_hint": "讨论压烫参数,确认剥离强度和手感",
+      "key_phrases": ["145 degrees is standard", "peel strength", "soft handfeel", "pre-test before bulk"],
+      "common_mistakes": "fusible interlining 压烫参数不对会导致 bubble 或 delamination(脱胶),bulk 前一定要做 pre-fuse test。",
+      "tips_zh": "压烫后 24 小时做剥离强度测试,Knit fusible 一般要求 1.5 kg/2.5cm 以上。",
+      "user_response_example": "145 degrees and 3.5 bar for 12 seconds is standard for knit fusible. Please do a pre-fuse test on 20 panels first — check for bubbles, delamination, and peel strength. We need 1.5 kg per 2.5 cm minimum. Handfeel must be soft, no boardy feeling."
+    },
+    {
+      "round": 6,
+      "ai_message": "Will do. Sewing will start Friday as planned. One more thing — the buyer added a chest pocket with a button flap on Rev.3. The pocket position is 7 cm below the shoulder seam. Is that correct?",
+      "ai_message_zh": "好的。缝制周五开始。还有一件事,Rev.3 加了胸口袋加扣盖,口袋位置在肩缝下 7 厘米。这样对吗?",
+      "expected_user_response_hint": "确认口袋位置,讨论扣盖和口袋的缝合细节",
+      "key_phrases": ["7 cm from shoulder seam", "pocket size", "button on flap", "bar tack"],
+      "common_mistakes": "pocket position 一定要按 spec 上的图量,不能凭印象,肩缝下 7 cm 是从 seam line 算。",
+      "tips_zh": "口袋四角要打 bar tack(套结),防止受力后开线。",
+      "user_response_example": "Yes, 7 cm below the shoulder seam, measured from the seam line. Pocket size is 12 cm wide x 13 cm deep, with a button flap. Please bar tack at the top corners of the pocket and at the two ends of the buttonhole on the flap. Use 12 mm buttons."
+    },
+    {
+      "round": 7,
+      "ai_message": "Confirmed. We will use 12 mm corozo buttons, 4-hole, color to match the fabric. Buttonhole will be flat buttonholes, 16 stitches per cm. We are doing the buttonhole and button attach in a separate section. Anything on ironing?",
+      "ai_message_zh": "确认。扣子用 12 毫米 corozo 树脂扣,4 孔,颜色配面料。锁眼是平面眼,每厘米 16 针。锁眼钉扣单独一个组。整烫方面有什么要求?",
+      "expected_user_response_hint": "讨论整烫温度、烫布和蒸汽",
+      "key_phrases": ["ironing temperature 160", "pressing cloth", "steam iron", "no shine on dark colors"],
+      "common_mistakes": "深色衬衣整烫要垫 pressing cloth,否则会有 iron shine(烫光)。",
+      "tips_zh": "cotton 衬衣整烫 160-180 度,蒸汽 30-40 秒,领子、袖口、前门襟要压出 sharp crease。",
+      "user_response_example": "For ironing: temperature 160 to 170 degrees, steam on. Use a pressing cloth for the dark colors — light blue and white can be ironed direct. Pay attention to the collar, cuff, and front placket — they need a sharp, flat finish. No iron shine, no water marks."
+    },
+    {
+      "round": 8,
+      "ai_message": "Understood. Final inspection plan: we will do 100% piece-by-piece inspection before folding, then AQL 2.5 sampling on top of that. We expect the order to be ready for PSI by next Friday. Anything else?",
+      "ai_message_zh": "明白。终检方案:折叠前 100% 逐件检,然后再做 AQL 2.5 抽样。预计下周五可以 PSI。还有别的吗?",
+      "expected_user_response_hint": "确认 PSI 时间,要求看 in-line 和 final 报告,定下一步",
+      "key_phrases": ["PSI confirmed for next Friday", "in-line inspection report", "ETA after ETD", "thanks David"],
+      "common_mistakes": "100% piece-by-piece inspection 是工厂自检,AQL 抽样是 buyer/QC 验货,两者不同。",
+      "tips_zh": "出口衬衣常见两轮检:工厂 100% + AQL 2.5 抽样,不合格不让装柜。",
+      "user_response_example": "PSI next Friday is confirmed. Please send me the in-line inspection report (cutting and sewing) and the final inspection report on Thursday. I will arrange the buyer's QC. Thanks David, talk to you end of this week for the in-line report."
+    }
+  ]
+}

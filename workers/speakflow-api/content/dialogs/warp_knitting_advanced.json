@@ -1,0 +1,62 @@
+{
+  "scenario_id": "warp_knitting",
+  "scenario_title_en": "Warp Knitting",
+  "scenario_title_zh": "经编",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Emma, Linda here. Glad the lab dip passed. Before we lock the bulk PO, I want to walk you through three things: the GB3 pattern repeat, the inlay yarn tension, and how we're going to handle the selvage at the elastane edge.",
+      "ai_message_zh": "Emma,Linda 在。大货 lab dip 过了我很高兴。在锁大货 PO 之前,我想跟你过三件事:GB3 的花纹循环、衬纬纱的张力,还有弹力边如何处理毛边。",
+      "expected_user_response_hint": "提议按 GB3 → 衬纬张力 → 毛边 顺序逐项讨论;或让对方先说重点",
+      "key_phrases": ["walk you through", "lock the PO", "pattern repeat", "yarn tension", "selvage", "elastane edge"],
+      "common_mistakes": "Don't say 'we lock the PO' — say 'we lock the bulk PO' or 'we place the order'",
+      "tips_zh": "高阶沟通:用 walk through / run through / sign off on,显得专业;不要用 check"
+    },
+    {
+      "round": 2,
+      "ai_message": "Right, on the GB3 pattern — the repeat needs to be 18 needles for the hex mesh. Right now your pattern file shows 17. That mismatch is going to cause a moire pattern at the selvedge. Can you re-check the design file?",
+      "ai_message_zh": "对,GB3 那个花纹 — 六角网眼的花型循环应该是 18 针。现在你给的花型文件写的是 17 针。这个不匹配会在布边出现 moire 干涉纹。你能再对一下设计文件吗?",
+      "expected_user_response_hint": "解释设计文件来源、跟织造工程师确认能否改 18 针、问改 18 针对成本/交期影响",
+      "key_phrases": ["pattern repeat", "mismatch", "moire pattern", "re-check the design", "needle count"],
+      "common_mistakes": "Don't say 'we will change' — say 'we will re-cut' or 'we will adjust' (change implies switching fabric)",
+      "tips_zh": "工艺误差:用 mismatch / off by one 描述,精准;不要笼统说 problem"
+    },
+    {
+      "round": 3,
+      "ai_message": "On the inlay yarn — we're using 75D polyester. The full-width weft insertion needs the weft to be at 12 to 15 grams per linear meter tension. Below 10, the mesh looks loose. Above 18, we'll get pucker at the selvedge. What's your machine's tolerance?",
+      "ai_message_zh": "衬纬纱 — 我们用的是 75D 涤纶。全幅衬纬张力要控制在每延米 12 到 15 克。低于 10 网眼显得松,高于 18 布边会起皱。你们机器的容差是多少?",
+      "expected_user_response_hint": "给出张力范围(±2g/m 或类似)、机器型号、Karl Mayer 还是国产",
+      "key_phrases": ["weft insertion", "tension range", "tolerance", "pucker", "Karl Mayer"],
+      "common_mistakes": "Don't say 'our machine can do' — say 'our Karl Mayer HKS4 gives us a tolerance of plus or minus 2 g per linear meter'",
+      "tips_zh": "技术对答要给出具体数,显得有真机器经验"
+    },
+    {
+      "round": 4,
+      "ai_message": "Got it. On the selvage — because of the 20D spandex at the edge, the elastane will try to retract. We need either a separate edge course or selvedge waste of 2.5 cm each side. Which do you prefer?",
+      "ai_message_zh": "明白。布边 — 因为边上是 20D 氨纶,弹力丝会回缩。我们需要单独边组或者每边 2.5 厘米的毛边。你选哪个?",
+      "expected_user_response_hint": "选其中一个方案并解释成本影响;或问两个方案对产量的影响",
+      "key_phrases": ["selvage", "elastane retraction", "edge course", "selvedge waste", "yield rate"],
+      "common_mistakes": "Don't say 'I think both are OK' — pick one with a reason, e.g. 'edge course for higher yield'",
+      "tips_zh": "高阶客户喜欢你能给出推荐而不是列选项"
+    },
+    {
+      "round": 5,
+      "ai_message": "Fine, edge course. I'll re-cut the pattern today and send the updated file by tomorrow. One more thing — can you do a 5-meter trial run before the full 2000 meters? I want to confirm the moire is gone before we commit.",
+      "ai_message_zh": "行,用边组。我今天重新出花型,明天发你更新文件。还有一件事 — 大货 2000 米前,能不能先跑 5 米试产?我想先确认 moire 没了再下单。",
+      "expected_user_response_hint": "答应做试产,确认交期/费用/色卡;试产完了再走大货",
+      "key_phrases": ["5-meter trial", "trial run", "re-cut the pattern", "commit the bulk", "color lab dip"],
+      "common_mistakes": "Don't say 'we will try' — say 'we can do 5 meters in 3 days, then 5 days for color approval before bulk'",
+      "tips_zh": "试产:5 米 / 10 米 / 50 米 都有;给具体数字 + 周期"
+    },
+    {
+      "round": 6,
+      "ai_message": "Great. Send me the updated file, the lab dip for color, and a 5-meter hand sample. Once the hand sample passes, we'll send the PO. Lead time 30 days from PO to ex-works. Shipment from Shanghai. Any questions?",
+      "ai_message_zh": "好。发我更新文件、色卡、和 5 米手样。手样过审后我们下 PO。从 PO 到出厂 30 天,从上海出运。有什么问题吗?",
+      "expected_user_response_hint": "确认所有交付物+时间节点;可以谈付款条件(LC/TT)和包装",
+      "key_phrases": ["hand sample", "ex-works", "shipment from Shanghai", "LC at sight", "TT 30/70"],
+      "common_mistakes": "Don't say 'we accept all' — re-state key terms: '5-meter hand sample, then 30-day lead time, TT 30/70, OK'",
+      "tips_zh": "收尾:重述关键条款确认共识(lead time, payment, shipment),不只说 OK"
+    }
+  ]
+}

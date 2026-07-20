@@ -1,0 +1,88 @@
+{
+  "scenario_id": "quality_tech_issue",
+  "scenario_title_en": "Quality & Tech Issue Resolution",
+  "scenario_title_zh": "工艺问题解决",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Karen here. Look, before we go further — I need to flag that the buyer is now treating this as a 'systemic' issue, not a 'one-batch' issue. We found the same shade drift on a different PO from your factory last month, and now a third-party social audit is asking whether your dye house has process control. The buyer's legal team is in the loop. I want to fix this with you before it goes any further. Can we have an honest conversation?",
+      "ai_message_zh": "Chen, Karen。先说清楚 — 客户现在把这件事当'系统性问题'而不是'单批问题'处理。我们发现上个月你厂另一个 PO 也有同样色偏,现在第三方社会责任审计在问你染厂是否有工艺控制。客户法务已经介入。我想跟你一起搞定,别让事态扩大。能坦诚聊吗?",
+      "expected_user_response_hint": "直面问题,承认可能存在系统性问题",
+      "key_phrases": ["Honest conversation", "I take this seriously", "root cause analysis", "systemic fix"],
+      "common_mistakes": "systemic issue(系统性问题) 意味着不是单点,而是工艺或管理体系的问题。",
+      "tips_zh": "客户把问题升级到 systemic,工厂要主动展开 RCA 并制定 CAP,展示负责任态度。",
+      "user_response_example": "Honest conversation, Karen. I take this seriously. If this is happening across POs, it's a process control issue at the dye house level, not a one-off. I'm willing to do a full RCA with third-party verification. Let me know what the buyer needs."
+    },
+    {
+      "round": 2,
+      "ai_message": "Appreciate the candor. Here's what the buyer needs to move forward: a formal 8D (eight disciplines) report, a third-party audit of the dye house's process control, a corrective action plan with a 90-day window, and a commitment to share the audit report with the buyer's compliance team. If we can deliver all four, the buyer's legal team stays out of it. Can you commit?",
+      "ai_message_zh": "感谢坦诚。客户需要四样东西往前走:正式 8D 报告、染厂工艺控制第三方审计、90 天纠正措施计划、审计报告共享给客户合规团队。四个都做到,客户法务就不介入。你能承诺吗?",
+      "expected_user_response_hint": "逐项确认承诺",
+      "key_phrases": ["8D report", "third-party audit", "90-day CAP", "commit to the buyer"],
+      "common_mistakes": "8D report(8D 报告) 是制造业问题解决标准方法:D1 团队、D2 问题、D3 围堵、D4 根因、D5 措施、D6 实施、D7 防止复发、D8 祝贺团队。",
+      "tips_zh": "8D 报告是 OEM 工厂应对大客户问题解决的标准动作。",
+      "user_response_example": "Committed. 8D report by next Wednesday, third-party audit by SGS in 3 weeks, 90-day CAP with milestones, and full audit report shared with your compliance team. I'll have my dye house manager join the audit personally."
+    },
+    {
+      "round": 3,
+      "ai_message": "Good. Before we get to the 8D, I need to walk you through what we've found. On the navy hoodie, the bulk fabric's Delta E against the standard was 1.8, and against the lab dip was 2.3. On the other PO's black T-shirt, the Delta E was 2.5. Both used different dye lots from the same dye house. The common factor is the dye house, not the style. Walk me through what's actually happening on the dye house floor.",
+      "ai_message_zh": "好。8D 之前,先说我们发现。藏青卫衣大货对标准 dE 1.8,对对色样 dE 2.3。另一个 PO 黑色 T 恤 dE 2.5。两个用的不同批号,但同一染厂。共同因素是染厂,不是款型。说说染厂现场到底怎么回事?",
+      "expected_user_response_hint": "解释染厂工艺状况",
+      "key_phrases": ["Delta E 1.8", "common factor", "dye house floor", "process control"],
+      "common_mistakes": "Delta E(dE) 是色差数值,1.0 以内同色,1-2 是商业可接受,2+ 是肉眼可辨。",
+      "tips_zh": "dE 1.5 以上开始有肉眼可辨色差,深色 dE 2.0+ 客户通常会投诉。",
+      "user_response_example": "Honestly, the dye house has been running hot — they have three of our major buyers plus another brand on their lines, and their master colorist left 6 weeks ago. The replacement is competent but not at the master level. That explains the drift across buyers."
+    },
+    {
+      "round": 4,
+      "ai_message": "That explains a lot. The missing master colorist is a real risk. For the 8D, I need a clear D4 (root cause) — not 'human error' or 'process variation,' which are placebos. I want a specific failure mode. What do you think is the actual root cause?",
+      "ai_message_zh": "这就解释通了。资深调色师离职是真风险。8D 报告 D4(根因)要写清楚 — 不要'人为错误'或'工艺波动'这种套话。要具体的失效模式。你认为真正的根因是什么?",
+      "expected_user_response_hint": "用具体工艺问题回答根因",
+      "key_phrases": ["D4 root cause", "specific failure mode", "not placebo", "we found ..."],
+      "common_mistakes": "D4 root cause(D4 根因) 8D 报告里要避免套话,要落到具体的失效模式。",
+      "tips_zh": "根因要可验证、可测量、可复现,不能光说'管理不到位'。",
+      "user_response_example": "Specific failure mode: the dye house's color matching is now done by a junior colorist using the spectrophotometer, but the production floor has not been re-calibrated to the new operator's workflow. The spectrophotometer readings are correct, but the dye bath adjustments are inconsistent. D4 = calibration drift between instrument and operator."
+    },
+    {
+      "round": 5,
+      "ai_message": "Calibration drift between instrument and operator — that's a real D4. Now D5 (corrective action). What do you propose? And be specific about the timeline.",
+      "ai_message_zh": "仪器和操作员之间的校准漂移 — 这是真的 D4。说说 D5(纠正措施),具体到时间。",
+      "expected_user_response_hint": "提出具体整改方案和时间表",
+      "key_phrases": ["D5 corrective action", "timeline", "re-calibrate", "operator training"],
+      "common_mistakes": "D5 纠正措施 要分 immediate action(围堵)+ long-term action(防止复发)。",
+      "tips_zh": "8D 报告的 D5 措施要具体到:做什么、谁做、什么时候完成、怎么验证。",
+      "user_response_example": "D5 has two parts. Immediate: re-calibrate all dye bath adjustments against the spectrophotometer over 2 weeks, supervised by the senior colorist (we are hiring one back as a consultant). Long-term: implement a daily dE check on the first 50 meters of every dye lot, signed off by the colorist and the production manager. Effective immediately."
+    },
+    {
+      "round": 6,
+      "ai_message": "D5 is solid. Now D6 (implementation) — what's the verification method? How will we know it's working? The buyer's compliance team will want a measurable KPI, not a feeling.",
+      "ai_message_zh": "D5 行。D6(实施验证) — 怎么验证有效?客户合规团队要可量化 KPI,不是感觉。",
+      "expected_user_response_hint": "提出量化 KPI",
+      "key_phrases": ["KPI", "measurable", "verification method", "dE target"],
+      "common_mistakes": "D6 实施验证 要落到可量化 KPI,比如 dE ≤ 1.0、批合格率 ≥ 98%。",
+      "tips_zh": "KPI 要 SMART:Specific、Measurable、Achievable、Relevant、Time-bound。",
+      "user_response_example": "KPI: every dye lot must hit dE ≤ 1.0 against the standard on the first 50 meters. The daily check goes to a shared dashboard that the buyer's QC team can read. We commit to 100% compliance on the KPI within 60 days, and we'll hold the 90-day CAP review with the buyer's compliance team to verify."
+    },
+    {
+      "round": 7,
+      "ai_message": "dE 1.0 on every lot is a strong KPI. Acceptable. For the SGS audit, I want it focused on three things: color management process, operator competency, and the daily dE check. SGS will charge about US$2,800 for a 2-day audit. Will the dye house accept SGS directly, or do you want to pre-coordinate with them?",
+      "ai_message_zh": "dE 1.0 是强 KPI,可接受。SGS 审计要聚焦三件事:色彩管理流程、操作员能力、每日 dE 检查。SGS 2 天审计约 2,800 美元。染厂接受 SGS 直接进,还是你要先跟他们协调?",
+      "expected_user_response_hint": "讨论审计安排",
+      "key_phrases": ["SGS audit", "pre-coordinate", "direct access", "dye house accepts"],
+      "common_mistakes": "pre-coordinate(预协调) 是审计前先跟被审方沟通范围,提高审计效率。",
+      "tips_zh": "第三方审计最好让审计员直接进场,不要厂方陪同太多,影响审计独立性。",
+      "user_response_example": "Pre-coordinate the scope and the schedule, but during the audit, SGS should have direct access to the dye house floor, the lab, and the records. The dye house manager will be available for questions, but not shadowing the auditor. Two days is fine."
+    },
+    {
+      "round": 8,
+      "ai_message": "Direct access agreed. Final package: 8D report by Wednesday, SGS audit in 3 weeks on color management / operator competency / daily dE check, 90-day CAP with dE ≤ 1.0 KPI on every lot, full audit report shared with buyer compliance, 2.5% allowance + 2.5% credit on current PO, re-dye and re-test on the affected pieces. Send me the 8D draft tomorrow. We can close this cleanly if we execute.",
+      "ai_message_zh": "直接进现场确认。最终方案:周三 8D 报告,3 周后 SGS 审计聚焦三块,90 天 CAP 加每批 dE ≤ 1.0 KPI,完整审计报告共享客户合规,2.5% 折让 + 2.5% 抵扣当前 PO,问题件重染重测。8D 草稿明天发我。执行到位就干净收尾。",
+      "expected_user_response_hint": "确认方案,锁定下一步",
+      "key_phrases": ["Locked", "8D by Wednesday", "audit in 3 weeks", "approved"],
+      "common_mistakes": "8D 报告要按时按质提交,延期会失信;所有承诺要书面化。",
+      "tips_zh": "危机处理最关键的是'按时、按质、按承诺',所有时间点要守。",
+      "user_response_example": "Locked, Karen. 8D draft by tomorrow EOD, full report by Wednesday, SGS audit scheduled in 3 weeks, KPI on the dashboard by next Monday. I'll have my dye house manager and our QA director on the call for the kickoff. Let's close this cleanly."
+    }
+  ]
+}

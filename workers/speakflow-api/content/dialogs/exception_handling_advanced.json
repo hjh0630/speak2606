@@ -1,0 +1,88 @@
+{
+  "scenario_id": "exception_handling",
+  "scenario_title_en": "Exception Handling",
+  "scenario_title_zh": "异常处理",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Look, I am going to be blunt. PO 4521 just had a third issue in two weeks — late fabric, bar tack defect, and now a 5-day port strike at Shanghai that has pushed your ETD from 30 September to 7 October. I have a board meeting tomorrow where I have to explain why we are missing the retail launch. What do I tell them?",
+      "ai_message_zh": "直说。PO 4521 两周内出第三件事:面料延期、套结疵点,现在又是上海港罢工 5 天,ETD 从 9 月 30 日推到 10 月 7 日。明天我开董事会,要解释为什么赶不上零售首发。我怎么讲?",
+      "expected_user_response_hint": "承认问题,提供清晰的事实和救援方案",
+      "key_phrases": ["Three issues, all on our side", "port strike is force majeure", "expedited air-freight at our cost", "give the board a clear narrative"],
+      "common_mistakes": "客户把三个问题堆到一起质问,先分开归因:哪些是工厂错,哪些是 force majeure。",
+      "tips_zh": "Port strike 在中国算 force majeure(工会组织的合法罢工),但要看合同定义。",
+      "user_response_example": "Honest answer for the board: two issues are on us — late fabric and the bar tack defect, both fixed at our cost. The port strike is a force majeure event, well-documented by the Shanghai port authority. To rescue the launch, we are air-freighting 2,000 pcs at our cost — those land in Sydney 8 October, in time for the launch. The remaining 6,000 pcs go by sea, ETA 18 October, two weeks late."
+    },
+    {
+      "round": 2,
+      "ai_message": "Air-freight 2,000 pcs at your cost — that is something, but our launch needs 5,000 pcs minimum to make the window viable. Air-freight more, or I will have to delay the launch altogether and that costs more than freight.",
+      "ai_message_zh": "空运 2 千件你们承担 — 有点用,但我们首发至少要 5 千件。多空运,否则我推迟首发,损失比运费大。",
+      "expected_user_response_hint": "讨论 5,000 pcs 的空运方案,成本分摊",
+      "key_phrases": ["Air-freight 5,000 pcs is doable", "the cost is significant", "share 50-50", "no air-freight from competitor"],
+      "common_mistakes": "5,000 pcs × 0.3 kg each = 1.5 ton,空运成本可能 USD 8,000-12,000,工厂要算清楚。",
+      "tips_zh": "Air-freight 报价一般 USD 4-8/kg,衬衣 0.3 kg/件,5 千件约 USD 6,000-12,000。",
+      "user_response_example": "I can air-freight 5,000 pcs — total weight about 1.5 tons. The air-freight cost will be around USD 9,000 at current rates. I propose 50-50 cost sharing: we cover USD 4,500, you cover USD 4,500. We also add a 5% credit note on the air-freight portion as a gesture. This is my ceiling — the alternative is sea-freight 8,000 pcs and a delayed launch on your side."
+    },
+    {
+      "round": 3,
+      "ai_message": "50-50 is not enough. Two of the three issues are on you — fabric and bar tack. The port strike is a shared risk. I want 70-30: you cover USD 6,300, I cover USD 2,700. Plus the 5% credit note on the air-freight portion.",
+      "ai_message_zh": "5-5 分担不够。三件事里两件是你们的错 — 面料和套结。港口罢工是共同风险。我要 7-3 分:你们 6,300,我们 2,700,加 5% credit note。",
+      "expected_user_response_hint": "讨论 70-30 的可接受度,tradeoff",
+      "key_phrases": ["70-30 is too aggressive", "60-40 is the realistic split", "port strike is shared risk", "we absorb more than our share"],
+      "common_mistakes": "port strike 是不可抗力,工厂不应承担 70% — 责任分摊要按根因比例。",
+      "tips_zh": "常见责任分摊:工厂自错 100% / 工厂+客户共同 50-50 / 不可抗力按合同。",
+      "user_response_example": "I appreciate the logic, James, but 70-30 is not defensible to my CFO. Here is the math: of the three issues, 2 are 100% on us, 1 is force majeure — that puts the responsibility roughly at 60-40 in your favor. I can offer 65-35: we cover USD 5,850, you cover USD 3,150, plus the 5% credit note on the air-freight portion. That is the limit I can sign off on."
+    },
+    {
+      "round": 4,
+      "ai_message": "65-35 is acceptable. Now, on the long-term — I cannot keep doing this. I want a quarterly business review with you, where we go through defect rate, on-time delivery, and claims. We need a clear improvement plan with KPIs. Are you in?",
+      "ai_message_zh": "65-35 可以。长期看,我不想再这样。我要和你开季度业务评审会,讨论疵点率、准时交付和索赔。我们要一个明确的 KPI 改进方案。干不干?",
+      "expected_user_response_hint": "接受 QBR,讨论 KPI 和数据共享",
+      "key_phrases": ["QBR is welcome", "share KPI dashboard", "defect rate below 1%", "on-time delivery above 95%"],
+      "common_mistakes": "QBR KPI 要可量化,不要 'better quality' 这种虚的。",
+      "tips_zh": "QBR 常见 KPI:OTD (on-time delivery), defect rate (DPMO), claim rate, RFT (right first time), cost of poor quality。",
+      "user_response_example": "QBR is welcome — I will propose a structure. We can do a half-day review every quarter: KPI dashboard, defect Pareto, claims trend, top 3 issues, and a joint improvement plan. Target KPIs for the next 4 quarters: OTD above 95%, defect rate below 1.5%, claim rate below 0.5% of order value. I will share the dashboard starting next month."
+    },
+    {
+      "round": 5,
+      "ai_message": "Good. Now, this specific PO — the air-freight and the 5% credit note will help. But the bar tack issue is symptomatic — I have seen similar problems on 2 of the last 5 orders. What systemic change are you making at your factory?",
+      "ai_message_zh": "好。具体到这个 PO — 空运和 5% credit note 有用。但套结问题是表征 — 过去 5 单里 2 单有类似问题。你们工厂在做什么系统改变?",
+      "expected_user_response_hint": "讨论 systemic change,8D CAPA,SOP 更新",
+      "key_phrases": ["machine maintenance program", "operator certification", "in-line audit every 2 hours", "preventive CAPA in place"],
+      "common_mistakes": "客户问 'systemic change',就是要 SOP 层面的改变,不只是 'we will be careful'。",
+      "tips_zh": "Systemic change 例子:周期性设备维护、操作员认证、巡检频率、in-line audit 频率。",
+      "user_response_example": "Three systemic changes are in motion. First, the bar tack machine maintenance cycle moves from reactive to preventive: needle bar change every 1 million stitches, logged digitally. Second, operator certification: every bar tack operator must pass a 100-piece skill test every 6 months. Third, in-line audit frequency increases from every 4 hours to every 2 hours for bar tack stations. The 8D report will document the full CAPA, and the SOP will be updated this month."
+    },
+    {
+      "round": 6,
+      "ai_message": "Sounds like you have a real plan, not just words. I want to see the updated SOP and the maintenance log when ready. One more thing — to prevent future claims, I want a pre-approved credit note pool of 3% of quarterly order value, usable for any field issue.",
+      "ai_message_zh": "听起来是实际方案,不只是说说。SOP 更新和保养记录出后给我看。还有,为了防未来索赔,我要 3% 季度订单价值的 pre-approved credit note pool,用于任何市场问题。",
+      "expected_user_response_hint": "讨论 pre-approved credit note pool,接受或调整",
+      "key_phrases": ["3% pool is acceptable", "tied to quarterly review", "evidence-based claim", "unused balance rolls over"],
+      "common_mistakes": "credit note pool 是季度机制,要 evidence-based 才能用,不能直接扣。",
+      "tips_zh": "Pre-approved credit note pool 常见 2-3%,evidence-based 用,余款滚存。",
+      "user_response_example": "3% pre-approved credit note pool, evidence-based, tied to our QBR — that is acceptable. I propose 3% of quarterly order value, claim evidence required within 14 days of discovery, unused balance rolls to next quarter. We will review the pool usage in the QBR. I will draft the side letter next week for your legal team to review."
+    },
+    {
+      "round": 7,
+      "ai_message": "OK, agreed. Now, a delicate question — there is a rumor in the market that your factory is overloaded and is subcontracting some orders to smaller mills. Is there truth to this, and how do I know my PO is fully produced in your facility?",
+      "ai_message_zh": "好,同意。问个敏感问题 — 市场上传闻你们工厂产能爆满,在转单给小厂。是不是真的?我怎么知道我的 PO 是你们厂自己做的?",
+      "expected_user_response_hint": "回应转单传闻,提供透明信息、参观邀请",
+      "key_phrases": ["we use 2 partner mills for overflow", "subcontract is disclosed", "you are welcome to audit", "no subcontract for premium clients"],
+      "common_mistakes": "不要否认或回避 subcontract 问题 — 客户要 transparency,subcontracting 很正常,但要 disclosed。",
+      "tips_zh": "大厂产能不够时,subcontract 是常见做法;要 disclose 并通过 buyer's audit。",
+      "user_response_example": "I appreciate the direct question. We do use 2 partner mills for overflow during peak season — but I want to be transparent about that. PO 4521 is 100% in our facility, you can verify by the QR code on each carton. We disclose all partner mills in our BSCI audit, and you are welcome to send your QC to audit them anytime. For premium accounts like yours, we do not subcontract without written consent."
+    },
+    {
+      "round": 8,
+      "ai_message": "OK, transparency is what I need. To close: 5,000 pcs air-freight 65-35 cost share, 5% credit note on air-freight, ETA 8 October for the 5,000 pcs, remaining by sea ETA 18 October, QBR quarterly with KPI dashboard, 3% pre-approved credit note pool, updated SOP and maintenance log by month end, no undisclosed subcontracting. Send me a written summary by EOD, and we move forward. Anything else from your side?",
+      "ai_message_zh": "好,我需要的就是透明。收尾:5 千件空运 65-35 成本分摊,空运 5% credit note,5 千件 ETA 10 月 8 日,余件海运 ETA 10 月 18 日,QBR 季度含 KPI 看板,3% 预批 credit note pool,月底前出 SOP 和保养记录,转单要披露。EOD 前发我书面总结,我们就推进。你那边还有吗?",
+      "expected_user_response_hint": "做 closing summary,确认所有数字、文件、机制",
+      "key_phrases": ["To summarize and confirm", "written summary by EOD", "side letter next week", "thanks James"],
+      "common_mistakes": "高级别 close,要把所有 8-10 个数字和文件都念一遍,留 paper trail。",
+      "tips_zh": "复杂 close 用 'to summarize' + numbered list,确认每条都 lock。",
+      "user_response_example": "To summarize and confirm: 5,000 pcs air-freight, 65-35 cost share, USD 5,850 on us. 5% credit note on the air-freight portion, ETA 8 October. Remaining 3,000 pcs by sea, ETA 18 October. QBR quarterly with KPI dashboard: OTD > 95%, defect < 1.5%, claim < 0.5%. 3% pre-approved credit note pool, evidence-based, quarterly rollover. SOP and maintenance log by 30 September. No undisclosed subcontracting. Written summary by EOD, side letter by next Friday. All locked. Thank you for the constructive conversation, James — this is how a long-term partnership works."
+    }
+  ]
+}

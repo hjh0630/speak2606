@@ -1,0 +1,122 @@
+{
+  "scenario_id": "inquiry_quote",
+  "scenario_title_en": "Inquiry & Quotation",
+  "scenario_title_zh": "询盘报价",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Sarah from StyleHouse UK. We sent you an RFQ last week for men's polo shirts. Did you receive it?",
+      "ai_message_zh": "你好,我是英国 StyleHouse 的 Sarah。我们上周给你发了男款 polo 衫的询盘。你收到了吗?",
+      "expected_user_response_hint": "确认收到 RFQ,简述已读内容",
+      "key_phrases": [
+        "Yes, I received your RFQ",
+        "Thank you for your inquiry",
+        "Could you walk me through"
+      ],
+      "common_mistakes": "RFQ = Request For Quotation(询盘),读作 'ar-f-q' 或 'request for quote',不要念字母。",
+      "tips_zh": "RFQ 是外贸第一环节。收到后第一步是回 thank you for your inquiry,表示已读。",
+      "user_response_example": "Yes, thanks for your inquiry. I received the RFQ on Monday and have been working on the quotation. To make sure I quote correctly, could you walk me through the key details?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure. We need 2,000 pieces per color, 3 colors. 100% cotton pique, 220 GSM. Logo embroidery on the left chest. Pack 1 pc per polybag, 30 pcs per carton.",
+      "ai_message_zh": "好的。每个颜色 2000 件,3 个颜色。100% 棉珠地,220 克。左边胸口 logo 刺绣。包装 1 件 1 胶袋,30 件 1 箱。",
+      "expected_user_response_hint": "复述关键参数,确认理解一致",
+      "key_phrases": [
+        "Just to confirm ...",
+        "100% cotton pique, 220 GSM",
+        "logo embroidery on left chest",
+        "packing"
+      ],
+      "common_mistakes": "pique 是珠地网眼布,不要拼成 pick / peak。",
+      "tips_zh": "复述 RFQ 是专业做法:面料/克重/印花/包装 都要重复一遍,避免后续返工。",
+      "user_response_example": "Got it. Just to confirm: 2,000 pieces per color, 3 colors, total 6,000 pieces. 100% cotton pique, 220 GSM. Logo embroidery on left chest. Packing: 1 pc per polybag, 30 pcs per master carton. Is that correct?"
+    },
+    {
+      "round": 3,
+      "ai_message": "Yes, that's right. We need delivery by sea to Felixstowe, target price US$5.50 FOB Shanghai. When can we have your offer?",
+      "ai_message_zh": "对,没错。海运到费利克斯托,目标价 FOB 上海 5.5 美元。什么时候能报价?",
+      "expected_user_response_hint": "承诺报价时间(常见 24-48 小时),不要当场口头报价",
+      "key_phrases": [
+        "I'll send the offer within ...",
+        "24 to 48 hours",
+        "Let me check the cost"
+      ],
+      "common_mistakes": "offer 在外贸里是'报价单',不是'offers'复数。",
+      "tips_zh": "不要在电话里随便口头报价,要承诺 24/48 小时内出正式报价单。",
+      "user_response_example": "Understood. FOB Shanghai, US$5.50 is your target. Let me check yarn and embroidery costs — I'll send you a formal offer by email within 24 hours. Could you also send the logo file in vector format for the embroidery?"
+    },
+    {
+      "round": 4,
+      "ai_message": "I'll send the logo tonight. The PI should be in US dollars, payment by TT 30/70. Anything else you need from us?",
+      "ai_message_zh": "今晚我发 logo 给你。PI 用美元,付款 TT 30/70。还有什么需要的?",
+      "expected_user_response_hint": "说明 PI 要包含的内容,以及确认有效期",
+      "key_phrases": [
+        "I'll include ...",
+        "PI valid for 30 days",
+        "Lead time is ..."
+      ],
+      "common_mistakes": "PI = Proforma Invoice(形式发票),不是 Purchase Invoice(那是采购发票)。",
+      "tips_zh": "PI 必备字段:价格条款、数量、交期、付款方式、有效期、开证行信息(如有)。",
+      "user_response_example": "Yes — the PI will include unit price, total amount, FOB Shanghai, lead time, TT 30% deposit and 70% balance before shipment, and it'll be valid for 30 days. Please confirm your shipping mark and any special carton markings you'd like."
+    },
+    {
+      "round": 5,
+      "ai_message": "Carton mark is just 'STYLEHOUSE UK' in black on two sides. Send the PI to sarah@stylehouse.co.uk. By the way, is your price firm or can you do better?",
+      "ai_message_zh": "箱唛就写 'STYLEHOUSE UK' 黑色印两侧。PI 发 sarah@stylehouse.co.uk。顺便问下,你价格是实在的,还是有商量余地?",
+      "expected_user_response_hint": "礼貌告知有讨论空间,但要看量",
+      "key_phrases": [
+        "The price is negotiable",
+        "For this quantity ...",
+        "depends on the order size"
+      ],
+      "common_mistakes": "is your price firm 是问'你价格实不实在',不是说'你公司稳不稳'。",
+      "tips_zh": "议价:可以留余地,但要在客户问的时候才说,不要主动给折扣。",
+      "user_response_example": "The price I send is our best offer for 2,000 pieces per color. If you can increase to 3,000 per color, I can take another look at the price for you. But at the current quantity, US$5.50 is the best I can do."
+    },
+    {
+      "round": 6,
+      "ai_message": "3,000 per color is too much for us. Let's stick with 2,000. Just try to keep it competitive. So FOB Shanghai US$5.50 — yes or no?",
+      "ai_message_zh": "3 千一件太多了,还是 2 千。尽量有竞争力。FOB 上海 5.5 美元,行不行?",
+      "expected_user_response_hint": "如果达不到,解释差距,提出折中价 + 配套条件",
+      "key_phrases": [
+        "I can do US$...",
+        "if you can ...",
+        "meet in the middle"
+      ],
+      "common_mistakes": "yes or no 是 closed question,不要在没办法的时候硬回 yes。",
+      "tips_zh": "答不到客户目标时,不要直接说 no,要说 'I can do X if you can Y'。",
+      "user_response_example": "Honestly, US$5.50 FOB Shanghai is below our cost line at 2,000 pieces. I can do US$5.85 if you confirm within 5 business days, or US$5.75 if you pay 40% deposit. What works for you?"
+    },
+    {
+      "round": 7,
+      "ai_message": "OK, US$5.85 it is. Let me check with my boss and come back to you tomorrow. Anything else I should know?",
+      "ai_message_zh": "好,5.85 美元。我和老板说一下,明天回你。还有什么我需要知道的吗?",
+      "expected_user_response_hint": "说明下单流程 + 备货时间,引导下一步",
+      "key_phrases": [
+        "Once you confirm ...",
+        "deposit triggers production",
+        "Lead time starts from ...",
+        "deposit received date"
+      ],
+      "common_mistakes": "deposit received date = 收到定金日,这是交期起算点,要在 PI 上写明。",
+      "tips_zh": "交期起算点:deposit received date / PO confirmed date / lab dip approved date,要在 PI 上明确。",
+      "user_response_example": "Two important things: first, lead time of 35 days starts from the deposit received date, not the PO date. Second, please send the logo in AI or CDR format — JPG won't work for embroidery. Once you confirm, send the PO and deposit, and we'll kick off production right away."
+    },
+    {
+      "round": 8,
+      "ai_message": "Got it, logo will be in AI format. I'll get back to you by tomorrow noon UK time. Thanks, Chen. Bye.",
+      "ai_message_zh": "好,logo 用 AI 格式。明天中午英国时间回你。谢谢 Chen。再见。",
+      "expected_user_response_hint": "礼貌结束,确认收到,期待回复",
+      "key_phrases": [
+        "Thanks, Sarah",
+        "Looking forward to your reply",
+        "Have a great day"
+      ],
+      "common_mistakes": "结束不要太随便,可以加 'looking forward to working with you'。",
+      "tips_zh": "电话结束前再确认一次:什么时候收到回复,这就锁定了 follow-up 时点。",
+      "user_response_example": "Thanks for the call, Sarah. I'll email the PI by tomorrow morning Beijing time. Looking forward to working with StyleHouse. Have a great evening."
+    }
+  ]
+}

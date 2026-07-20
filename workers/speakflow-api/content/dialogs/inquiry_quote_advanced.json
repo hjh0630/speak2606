@@ -1,0 +1,129 @@
+{
+  "scenario_id": "inquiry_quote",
+  "scenario_title_en": "Inquiry & Quotation",
+  "scenario_title_zh": "询盘报价",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Mark. Look, I'm not here to waste your time. I've a sealed-bid situation — three of your competitors are quoting the same spec, and I need your best landed price in Los Angeles by Friday EOB. I want numbers, not a song and dance.",
+      "ai_message_zh": "Chen,Mark。不废话。密封投标,你们三个同行都在报同一规格,周五下班前给我洛杉矶到岸最优价。要数字,别来虚的。",
+      "expected_user_response_hint": "严肃回应,主动问关键参数,承诺按时报价",
+      "key_phrases": [
+        "Understood",
+        "Send me the tech-pack",
+        "Same spec sheet as last time",
+        "I need to see the ...",
+        "to quote accurately"
+      ],
+      "common_mistakes": "sealed-bid(密封投标)是'三方竞标,出价不公开',不是'我不出价'。",
+      "tips_zh": "客户说 sealed-bid,意味着他不会告诉你其他家出价,你只能报自己最优。强调差异化价值而不是一味降价。",
+      "user_response_example": "Understood, sealed-bid — I'll sharpen my pencil. Send me the tech-pack, fabric composition, and quantity breakdown by colorway and size, plus the AQL standard. If you can get that to me by tomorrow noon, I'll have numbers in your inbox by Friday 4pm LA time. What's the basis — FOB, CIF, or DDP LAX?"
+    },
+    {
+      "round": 2,
+      "ai_message": "DDP LAX warehouse. 30,000 pieces, 4 colors, 60/40 cotton-poly fleece, 320 GSM. Embroidered logo. Same AQL as last time — 1.5/2.5/4.0. Tech-pack is on its way to your email.",
+      "ai_message_zh": "DDP 到 LAX 仓库。30000 件,4 个颜色,60/40 棉涤毛圈,320 GSM。绣花 logo。AQL 同上次 1.5/2.5/4.0。工艺单马上发你邮箱。",
+      "expected_user_response_hint": "确认 DDP LAX 涉及的成本结构(关税、港杂、卡车派送)",
+      "key_phrases": [
+        "DDP LAX",
+        "duty rate is around ...",
+        "Section 301 tariffs",
+        "MPF + HMF"
+      ],
+      "common_mistakes": "Section 301 是美国对中国商品加征的关税(目前部分恢复),中国工厂报价时常忽略。",
+      "tips_zh": "美国 DDP 要算:①Section 301 关税(目前部分品类 7.5-25%)②MPF(merchandise processing fee 0.3464%)③HMF(Harbor Maintenance Fee 0.125%)。这些都要算进落地成本。",
+      "user_response_example": "30,000 pieces in 4 colors, 320 GSM fleece, DDP LAX. Noted. Just a heads up on the cost stack: Section 301 on cotton-poly fleece is currently 7.5%, plus 0.46% in MPF and HMF combined. I want to make sure my landed cost is realistic. What's the latest classification ruling — is this 6109.10 or 6110.20?"
+    },
+    {
+      "round": 3,
+      "ai_message": "It's 6110.20 — 7.5% Section 301, plus the 25% on the cotton portion was removed when the exclusions expired. So just the 7.5%. And don't even think about transshipping through Vietnam — we'll kill the PO if we find out.",
+      "ai_message_zh": "6110.20,Section 301 7.5%,棉花那 25% 在排除清单到期后取消了,就剩 7.5%。别想走越南转运,发现就取消订单。",
+      "expected_user_response_hint": "强调合规,确认原产地,这是大客户敏感点",
+      "key_phrases": [
+        "Straight from our factory in China",
+        "Country of origin on the label",
+        "C/O will be issued by CCPIT",
+        "No transshipment"
+      ],
+      "common_mistakes": "transshipment(转运)+ country of origin(原产地)是美国海关合规核心,中国工厂要主动说清楚。",
+      "tips_zh": "美国客户对原产地很敏感:① 货必须真正从中国出口 ② 标签 Made in China ③ C/O(产地证)由 CCPIT 出具 ④ 不能洗标(撕标重贴)。",
+      "user_response_example": "Understood — straight from our factory in Jiangsu, no transshipment, no label-switching. Country of origin 'Made in China' will be on every garment, and we'll issue a CCPIT-issued Certificate of Origin with the shipment. We're UFLPA-compliant and can provide a full supply chain map if your compliance team needs it."
+    },
+    {
+      "round": 4,
+      "ai_message": "Good. Look, the other two mills are coming in at around US$11.20 DDP LAX. I know you won't be the cheapest, but I want you in the race. Where can you land?",
+      "ai_message_zh": "好。另外两家报 DDP LAX 大概 11.2 美元。我知道你们不是最便宜的,但我希望你进局。你能到多少?",
+      "expected_user_response_hint": "诚实报一个有竞争力的价格 + 强调差异化(不是 cheapest)",
+      "key_phrases": [
+        "I'm not going to lie, US$11.20 is aggressive",
+        "My DDP LAX is US$11.85",
+        "Here's where I add value ...",
+        "what I save you in ..."
+      ],
+      "common_mistakes": "I want you in the race 是'我希望你参与竞标',不是'我想让你在赛跑里'。",
+      "tips_zh": "高级别议价:不要直接比价格,要把工厂的'软价值'(交付可靠性、合规、品控)换算成价格。",
+      "user_response_example": "I'll be straight with you — US$11.20 DDP LAX would put us below material cost. My DDP LAX lands at US$11.85. But here's the angle: our on-time delivery rate last year was 97% versus the industry average of 82%, and our AQL reject rate was 0.8% versus the 2-3% most mills run. That delta alone saves you US$0.40 to US$0.60 per piece in air-freight and chargeback. Net-net, you land cheaper with us."
+    },
+    {
+      "round": 5,
+      "ai_message": "Numbers like that, I respect. But the buyer is benchmarking on unit price, not on cost of poor quality. If I can only get approval above US$11.50, what would it take for you to land at US$11.45?",
+      "ai_message_zh": "这种数字我尊重。但买家比的是单价,不是质量成本。如果我只批到 11.5 美元以上,你能不能做到 11.45?",
+      "expected_user_response_hint": "用 trade-off 解释不能降的原因,提供小让步换具体条件",
+      "key_phrases": [
+        "US$11.45 would mean ...",
+        "drop one color",
+        "change packing",
+        "compromise on yarn count"
+      ],
+      "common_mistakes": "cost of poor quality(COPQ)是个专业概念:返工、退货、空运补偿的总和。客户可能没算,你要主动提。",
+      "tips_zh": "议价最后阶段:5-10 美分差距,可以换具体条件(数量、付款、包装、辅料),不要直接降到底价。",
+      "user_response_example": "US$11.45 would mean we drop the embroidered logo to a printed one (saves US$0.18), and you accept 30 pcs per carton instead of 24 (saves US$0.12 on packing). I'd rather not compromise the GSM or the fleece quality. With those two changes, US$11.45 is doable. What's the buyer more flexible on — the logo or the packing?"
+    },
+    {
+      "round": 6,
+      "ai_message": "Packing is flexible — we can do 30 pcs per carton. But the embroidered logo is a brand signature, non-negotiable. So US$11.45 with embroidery and 30 pcs per carton — yes or no?",
+      "ai_message_zh": "包装可以,30 件一箱没问题。但绣花是品牌标志,不能谈。所以 11.45 美元,绣花,30 件一箱,行不行?",
+      "expected_user_response_hint": "用 embroidery 工艺优化来挤空间,而非直接答应",
+      "key_phrases": [
+        "I can make it work with ...",
+        "tighter embroidery density",
+        "in-house embroidery line",
+        "I'll take US$11.45 if you ..."
+      ],
+      "common_mistakes": "yes or no 又是 closed question。要 creative:yes with conditions。",
+      "tips_zh": "advanced 谈判要会交换:用工艺优化 + 工厂 in-house 能力 挤空间,而不是简单让利。",
+      "user_response_example": "I'll make it work. We have an in-house embroidery line, so I'm not paying a sub-contractor margin. I'll tighten the stitch density from 7,000 to 5,500 — visually identical, but it shaves 8% off the embroidery time. US$11.45 is my final number, locked. The only thing I'll ask in return is a 40% deposit instead of 30%, to protect my cash flow on a tight-margin deal."
+    },
+    {
+      "round": 7,
+      "ai_message": "40% deposit is non-negotiable on our side — 30% is corporate policy. But I can guarantee a confirmed PO by Tuesday, and a 50% deposit on the second PO if you hit the delivery date. Deal?",
+      "ai_message_zh": "40% 预付我们这边谈不了,30% 是公司规定。但我能承诺周二前下确定 PO,而且第二单给 50% 预付,如果你们交期能赶上。成交?",
+      "expected_user_response_hint": "接受条件,但要写进 PI / 合同里,口头不算数",
+      "key_phrases": [
+        "Deal — but let's put it in writing",
+        "I want the 50% deposit on PO #2 in the PI",
+        "Side letter",
+        "Let's formalize it"
+      ],
+      "common_mistakes": "corporate policy 是'公司政策',大客户常用来挡回让步,要认可但要求回报。",
+      "tips_zh": "高级别谈判:任何承诺都要 'put it in writing',写进 PI 或签 side letter(附属协议)。口头答应不算数。",
+      "user_response_example": "Deal — but I want the 50% deposit on PO #2 in writing, and I want the on-time delivery commitment linked to a 1% penalty clause if we miss the ETD by more than 5 days. Let's put both into a side letter and reference it in the PI. If your legal team signs off by Tuesday, I sign the PO on Wednesday."
+    },
+    {
+      "round": 8,
+      "ai_message": "Fair. I'll have legal draft the side letter tonight. Send me the final PI with the DDP LAX number, the 1.5/2.5/4.0 AQL, the 50% deposit clause on PO #2, and the side letter template. By Tuesday, I promise you'll have a firm PO. Let's make this happen.",
+      "ai_message_zh": "行。法务今晚起草附件。把终版 PI 给我:含 DDP LAX 价、1.5/2.5/4.0 AQL、第二单 50% 定金条款、附件模板。周二前,正式 PO 给你。把这事做起来。",
+      "expected_user_response_hint": "确认交付物清单,承诺时间,做 closing",
+      "key_phrases": [
+        "You'll have everything by ...",
+        "Side letter + PI",
+        "Looking forward to making this happen",
+        "Let's build a long-term partnership"
+      ],
+      "common_mistakes": "firm PO 是'确定 PO',不是'坚固 PO'。",
+      "tips_zh": "closing 阶段要总结所有 deliverable,锁定时间点,约定下一步动作。",
+      "user_response_example": "You'll have the final PI, the side letter template, and the master PO template in your inbox by Monday 6pm LA time. Once your legal signs off, I'll countersign the same day. Mark — I think we can build something real here, not just a one-off PO. Let's go."
+    }
+  ]
+}

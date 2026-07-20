@@ -1,0 +1,88 @@
+{
+  "scenario_id": "seamless_garment",
+  "scenario_title_en": "Seamless Garment",
+  "scenario_title_zh": "无缝服装",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Daniel here. Look — before we cut a single program, I have to push back on your spec. You're asking for an E14 machine, 24-cut equivalent gauge, with 12-zone body mapping and engineered compression for a 'plus-size sculpting' legging at a US$6.50 target retail. E14 is too coarse for that construction density at the price point. You'll get a boardy hand and visible stitch pattern, not the smooth second-skin the buyer wants. Let me lay out the real options.",
+      "ai_message_zh": "Chen, Daniel。开程序前我得先 push back。你要 E14 机、12 区塑形、加压工艺,做大码塑形打底裤,零售目标 6.5 美元。E14 在这个价格点对这种密度太粗。布会板结、针迹明显,不是客户要的第二层皮肤。让我列真方案。",
+      "expected_user_response_hint": "理解技术挑战,讨论真方案",
+      "key_phrases": ["Lay out the options", "E14 limitation", "sculpting compression", "12-zone mapping"],
+      "common_mistakes": "E14 是粗针机,适合冬季厚款;12 区 body mapping 需要更细的 E28 或 E32。",
+      "tips_zh": "E14 + 12 区塑形是矛盾组合,机器精度不够做细分区。",
+      "user_response_example": "Lay them out, Daniel. The US$6.50 retail is fixed by the buyer's merchandising team. We need to find the right machine and construction to hit the price and the design intent."
+    },
+    {
+      "round": 2,
+      "ai_message": "Three real paths. Path A: E28 with 4 zones (waist, hip, mid-thigh, calf) at 200-260 GSM — the proven construction for sculpting leggings. Hits the price, fits the look, but only 4 zones. Path B: E24 with 6 zones, slightly boardier hand than E28, but more body mapping. Path C: stay E14, drop to 6 zones, accept the visible texture. Your call on the trade.",
+      "ai_message_zh": "三个真方案。A:E28,4 区(腰、臀、中腿、小腿),200-260 克 — 经典塑形打底裤,价格、效果都达标,只有 4 区。B:E24,6 区,手感比 E28 略硬,但分区更多。C:保持 E14,降到 6 区,接受明显纹理。你怎么选?",
+      "expected_user_response_hint": "选工艺路径",
+      "key_phrases": ["Path A", "Path B", "Path C", "for the design"],
+      "common_mistakes": "4-zone 经典分区:腰 / 臀 / 中腿 / 小腿,足以体现塑形感;6+ 区更精细但成本上升。",
+      "tips_zh": "分区数不等于塑形效果,4 区经典方案在运动品牌里已验证。",
+      "user_response_example": "Path A. E28 with 4 zones is the right proven construction. 4 zones is enough for the sculpting story. Let's lock the spec there and optimize the price."
+    },
+    {
+      "round": 3,
+      "ai_message": "Path A confirmed. E28, 4 zones. Now the engineering — the sculpting claim needs to be backed by measured compression, not just marketing. We can run a compression test on the fabric at 30% elongation, target around 15-18 mmHg for 'firm' sculpting. That requires a tighter stitch length and higher spandex content. What's the buyer's compression claim in the marketing — light, firm, or extra-firm?",
+      "ai_message_zh": "方案 A 确认。E28,4 区。工程上 — 塑形要靠压缩数据支撑,不是营销话术。我们可在 30% 拉伸下测压力,目标 15-18 mmHg 是'强塑形'。这需要更短线圈长度、更高氨纶。客户营销口径是什么 — 轻压、强压、还是超强压?",
+      "expected_user_response_hint": "讨论压缩数据",
+      "key_phrases": ["firm sculpting", "compression mmHg", "15-18 mmHg", "extra-firm"],
+      "common_mistakes": "mmHg(毫米汞柱) 是压缩压力单位,15-18 是中强压,18-22 是强压,22+ 是医疗级。",
+      "tips_zh": "运动打底裤一般 15-22 mmHg,医疗级 20-30 mmHg,客户营销要准确,不能夸大。",
+      "user_response_example": "Firm sculpting, but the marketing team hasn't put a number on it. I'll align with you at 15-18 mmHg at 30% elongation. Document the test method in the spec so we can defend the claim if needed."
+    },
+    {
+      "round": 4,
+      "ai_message": "Test method is HATRA or MST Stretch Recovery — we use MST because it's more repeatable. 15-18 mmHg is achievable on E28 with 30% spandex. But here's the trade — at that compression, the recovery at 100% elongation drops to 88-90%. Recovery is what makes a legging 'last'. The buyer should know that 'firm' and 'durable recovery' are slightly opposed. Are they willing to accept 90% recovery, or do they need 92%+?",
+      "ai_message_zh": "测试方法用 HATRA 或 MST Stretch Recovery,我们用 MST 重复性更好。E28 + 30% 氨纶,15-18 mmHg 能做到。但这里有取舍 — 在那个压力下,100% 拉伸回弹降到 88-90%。回弹是打底裤耐穿的关键。客户能接受 90%,还是要 92%+?",
+      "expected_user_response_hint": "权衡压力与回弹",
+      "key_phrases": ["90% is acceptable", "92% is the target", "trade-off", "compression vs. recovery"],
+      "common_mistakes": "stretch recovery(拉伸回弹) 是氨纶布耐用度核心指标,100% 拉伸后回弹,数值越高越耐穿。",
+      "tips_zh": "压缩压力越高,回弹越低;90% 是底线,92% 是性能级,95% 是顶级。",
+      "user_response_example": "The buyer is targeting 92% recovery — that's a performance promise in the marketing. Can we hit 92% at 15-18 mmHg? If not, we have to relax the compression claim. Walk me through the options."
+    },
+    {
+      "round": 5,
+      "ai_message": "92% recovery at 15-18 mmHg is achievable, but we need to drop the nylon from 40D to 30D and increase spandex from 20D to 30D. That adds US$0.22 per garment but pushes the recovery to 93% and keeps compression in the 15-18 range. Also, the spandex needs to be Creora brand or equivalent high-recovery grade — generic spandex lands at 88-89%.",
+      "ai_message_zh": "92% 回弹 + 15-18 mmHg 可以做到,但要把锦纶从 40D 降到 30D,氨纶从 20D 加到 30D。加 0.22 美元一件,但回弹推到 93%,压缩保持 15-18。此外氨纶要用 Creora 或同级高回弹品牌 — 普通氨纶只到 88-89%。",
+      "expected_user_response_hint": "接受高规格氨纶",
+      "key_phrases": ["Creora spandex", "30D / 30D", "92% recovery", "premium yarn"],
+      "common_mistakes": "Creora(韩国晓星)氨纶是高回弹品牌,优于普通氨纶,价格高 20-30%。",
+      "tips_zh": "无缝高性能打底裤常用 Creora / Lycra 等品牌氨纶。",
+      "user_response_example": "Creora 30D is in line with the performance story. The US$0.22 premium is absorbable. Confirm Creora or equivalent in the spec, and let's move on to the size run."
+    },
+    {
+      "round": 6,
+      "ai_message": "Creora 30D / nylon 30D confirmed. Now the size run — plus-size sculpting means we need to validate the 4 zones still work at 2XL and 3XL. The compression is in the fabric, but the body mapping was designed on a medium frame. We should test fit on a 2XL fit model before committing to the size run. Can you arrange that?",
+      "ai_message_zh": "Creora 30D / 锦纶 30D 确认。尺码方面 — 大码塑形要验证 2XL、3XL 下 4 区是否仍有效。压力在布里,但 body mapping 是按中码身材设计的。要在 2XL fit model 上试身,再定尺码组。你能安排吗?",
+      "expected_user_response_hint": "讨论大码试身",
+      "key_phrases": ["plus-size fit model", "2XL / 3XL", "body mapping", "fit validation"],
+      "common_mistakes": "plus-size(大码) 在外贸里通常指 2XL+,欧美市场 14-24 码,需要专门的 fit model。",
+      "tips_zh": "大码 fit model 在国内难找,常借用 brand 总部 fit model 或视频连线。",
+      "user_response_example": "The buyer's US office has a fit model program. I'll arrange a video fitting for 2XL and 3XL on the proto. Can you have the proto ready in two sizes by week 3? It'll cost extra but it's the right call."
+    },
+    {
+      "round": 7,
+      "ai_message": "Two-size proto in M and 2XL by week 3 — doable, no extra charge. We can include a 'compression map' printout showing the mmHg at each of the 4 zones for both sizes. That data will help the buyer's product team defend the claim. About the lead time for the full size run after fit approval — 6,000 pieces across 5 sizes, with 4-zone programming, expect 35 days.",
+      "ai_message_zh": "M 和 2XL 两码产前样第 3 周出 — 可行,不另收费。我们会附一份'压力图',显示两个尺码 4 区的 mmHg。数据帮客户产品团队证明卖点。fit 批准后,6 千件 5 尺码、4 区编程,35 天出货。",
+      "expected_user_response_hint": "确认打样和交期",
+      "key_phrases": ["compression map", "5 sizes", "fit model", "approved"],
+      "common_mistakes": "compression map(压力图) 是工程文件,标明各区 mmHg,营销和合规都能用。",
+      "tips_zh": "营销要塑形卖点,工程要有数据支撑,压力图是两者的桥梁。",
+      "user_response_example": "Compression map is a great idea — that's the kind of data the buyer's product team loves. 35 days is fine. Send the proto with the map, and I'll have the buyer's product team review by week 4."
+    },
+    {
+      "round": 8,
+      "ai_message": "Final package: E28, 4 zones (200-260 GSM), Creora 30D / nylon 30D, 80/20 nylon-spandex, 15-18 mmHg at 30% elongation, 92%+ recovery, plus-size fit validation on 2XL, compression map deliverable, full size run 6,000 pieces in 35 days. PI tomorrow at US$5.10 per piece, including the engineering and validation work. Let's lock it.",
+      "ai_message_zh": "最终方案:E28,4 区(200-260 克),Creora 30D / 锦纶 30D,80/20 锦纶氨纶,30% 拉伸下 15-18 mmHg,92%+ 回弹,2XL 大码验证,附压力图,5 尺码 6 千件 35 天出货。PI 明天发,5.10 美元一件,含工程和验证。锁定。",
+      "expected_user_response_hint": "锁定方案,确认收件",
+      "key_phrases": ["Locked", "Send the PI", "compression map", "approved"],
+      "common_mistakes": "工程和验证费是隐形成本,要写进 PI,客户才能在总成本里看到。",
+      "tips_zh": "PI 要列所有加价项(氨纶升级、压力图、大码验证),让客户逐条确认。",
+      "user_response_example": "Locked, Daniel. Send the PI to chen.wei@lilygarments.com with the engineering and validation line items clearly visible. The compression map is a real differentiator for the buyer. Approved and looking forward to the proto."
+    }
+  ]
+}

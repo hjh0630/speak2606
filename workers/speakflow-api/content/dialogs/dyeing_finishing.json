@@ -1,0 +1,88 @@
+{
+  "scenario_id": "dyeing_finishing",
+  "scenario_title_en": "Dyeing & Finishing",
+  "scenario_title_zh": "染整工艺",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning. This is Wang Lei from Sunrise Dye House. You sent us some Pantone numbers yesterday. How can I help you?",
+      "ai_message_zh": "早上好,我是 Sunrise 染厂的王磊。你昨天发了几个潘通色号,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍,说明来意:需要对色样,准备大货",
+      "key_phrases": ["This is ...", "I need to dye ...", "for our fabric", "ready for bulk"],
+      "common_mistakes": "dye 是动词(染色),dye house 是染厂。dyeing 是名词/动名词(染色工艺)。",
+      "tips_zh": "联系染厂时要先报:面料类型(梭织/针织)、颜色(潘通号)、克重、数量。",
+      "user_response_example": "Good morning, Wang. This is Chen Wei from Lily Garments. I need to dye some cotton single jersey for our summer T-shirt line."
+    },
+    {
+      "round": 2,
+      "ai_message": "Cotton single jersey, OK. How many Pantone colors, and can you tell me the GSM of the fabric?",
+      "ai_message_zh": "棉单面汗布,好的。有几个潘通色?面料克重是多少?",
+      "expected_user_response_hint": "回答颜色数量和克重",
+      "key_phrases": ["We have ... colors", "around ... GSM", "the fabric is ..."],
+      "common_mistakes": "single jersey(单面汗布) 不要说成 single cloth,single jersey 是针织标准名。",
+      "tips_zh": "对色时讲克重有助于染厂算染料用量和工艺时间。",
+      "user_response_example": "We have 4 colors. The fabric is 180 GSM, 26s single yarn, 100% combed cotton."
+    },
+    {
+      "round": 3,
+      "ai_message": "180 GSM combed cotton, that's standard. We will use reactive dye. For the lab dip, we need 5-7 days. Do you have the Pantone TPX or TCX numbers?",
+      "ai_message_zh": "180 克精梳棉,常规的。我们用活性染料。对色样需要 5-7 天。你们有潘通 TPX 还是 TCX 号?",
+      "expected_user_response_hint": "提供潘通号,确认色卡系统",
+      "key_phrases": ["TPX numbers are ...", "TCX", "I'll send by email", "I have all 4"],
+      "common_mistakes": "reactive dye(活性染料) 是棉最常用,色牢度好;disperse dye(分散染料) 用于涤纶。",
+      "tips_zh": "棉用活性染料,涤纶用分散染料,腈纶用阳离子染料,不要混。",
+      "user_response_example": "TCX numbers, I'll email them to you this morning. The main color is 19-4052 navy blue."
+    },
+    {
+      "round": 4,
+      "ai_message": "Good. Once we receive the Pantone, we start the lab dip. About the lab dip timing — if you want rush, we can do 4 days with a small surcharge. Normal is 6 days. Which do you prefer?",
+      "ai_message_zh": "好的。收到潘通号后启动打色样。打色样时间 — 加急 4 天,加一点费用;常规 6 天。你选哪个?",
+      "expected_user_response_hint": "选择加急或常规",
+      "key_phrases": ["Rush is fine", "What's the surcharge", "Normal is OK", "for our timeline"],
+      "common_mistakes": "surcharge 是'附加费',口语里直接说 surcharge 即可。",
+      "tips_zh": "加急一般每色 30-50 美元,小批量色样常用。",
+      "user_response_example": "Normal is OK for us. 6 days works, no rush needed. Just send the lab dips by DHL."
+    },
+    {
+      "round": 5,
+      "ai_message": "Sure. DHL is fine, freight collect on your account. About the bulk — our MOQ is 300 kg per color. How much do you need?",
+      "ai_message_zh": "可以。DHL 寄,运费到付用你们账号。大货方面,我们起染量是每个色 300 公斤。你们要多少?",
+      "expected_user_response_hint": "说明大货量,确认起订",
+      "key_phrases": ["We need around ... kg", "per color", "total quantity"],
+      "common_mistakes": "freight collect 是'运费到付',口语里说 freight collect on your account 即可。",
+      "tips_zh": "起染量(MOQ)是染缸最低经济量,过小染厂会加价或拒绝。",
+      "user_response_example": "Each color is about 1,500 kg, total 6,000 kg. 300 kg per color is fine."
+    },
+    {
+      "round": 6,
+      "ai_message": "Good. About the color fastness — for reactive dye on cotton, we typically hit grade 4 on washing and grade 3-4 on rubbing. Does that meet your standard?",
+      "ai_message_zh": "好的。色牢度方面,活性染料染棉,水洗牢度一般 4 级,摩擦牢度 3-4 级。达到你们标准吗?",
+      "expected_user_response_hint": "确认色牢度要求",
+      "key_phrases": ["Grade 4 is fine", "rubbing fastness", "washing fastness", "buyer's standard"],
+      "common_mistakes": "washing fastness(耐洗)和 rubbing fastness(耐摩擦) 是两个不同测试;行业说 grade 4-5 / 3-4 是 ISO 105 标准。",
+      "tips_zh": "ISO 105 / AATCC 是色牢度测试标准,1-5 级,5 级最好。",
+      "user_response_example": "Grade 4 washing and 3-4 rubbing meets our buyer's standard. We will do a final test on bulk production."
+    },
+    {
+      "round": 7,
+      "ai_message": "OK. About handfeel — do you want a soft finish, a stiff finish, or normal? We can add a softener for the soft feel.",
+      "ai_message_zh": "好的。手感方面,你们要柔软、硬挺还是常规?可以加柔软剂做软手感。",
+      "expected_user_response_hint": "说明手感需求",
+      "key_phrases": ["Soft hand", "soft finish", "stiff finish", "normal is fine"],
+      "common_mistakes": "handfeel / hand feel 都对,口语里常说 soft hand 或 soft handfeel。",
+      "tips_zh": "柔软剂(softener)分硅油(silicone)和非硅(non-silicone),硅油更滑但影响印花。",
+      "user_response_example": "Soft hand is what we want. Please use a non-silicone softener — we will do printing on this fabric later, silicone can cause ink issues."
+    },
+    {
+      "round": 8,
+      "ai_message": "Got it, non-silicone softener. About shrinkage — our standard is within 5% lengthwise and widthwise. We do pre-shrunk compacting, so it should be better. Is there anything else?",
+      "ai_message_zh": "好的,非硅柔软剂。缩水方面,我们标准是长度和宽度方向都在 5% 以内。做预缩紧式整理,会更好一点。还有别的吗?",
+      "expected_user_response_hint": "确认缩水要求,收尾",
+      "key_phrases": ["5% is fine", "pre-shrunk is good", "Please send the lab dips", "Thanks"],
+      "common_mistakes": "lengthwise / widthwise(L 方向 / W 方向) 缩水要分别报,不要笼统说 5%。",
+      "tips_zh": "pre-shrunk(预缩)在染厂后整理阶段做,目的是减少后续水洗缩水。",
+      "user_response_example": "5% is acceptable, pre-shrunk is even better. Please send the lab dips by DHL when ready. Thanks, Wang."
+    }
+  ]
+}

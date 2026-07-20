@@ -1,0 +1,9 @@
+[
+  {"id":"spinning","name":"纺纱 Spinning","icon":"🧵","count":0,"desc":"纤维→纱线（成分/支数/捻度/Uster）"},
+  {"id":"weaving","name":"织造 Weaving","icon":"🪡","count":0,"desc":"梭织/经编/纬编/飞织（GSM/EPI·PPI/机号）"},
+  {"id":"dyeing","name":"染整 Dyeing","icon":"🎨","count":0,"desc":"染色+后整理（lab dip/ΔE/色牢度）"},
+  {"id":"garment","name":"服装 Garment","icon":"👕","count":0,"desc":"成衣（样衣/SPI/裁剪/缝制/整烫）"},
+  {"id":"crafts","name":"工艺 Crafts","icon":"🖼","count":0,"desc":"绣花/印花/水洗/无缝/贴合"},
+  {"id":"qc","name":"品控 QC","icon":"🔍","count":0,"desc":"RFQ→L/C→PSI→索赔全流程"},
+  {"id":"sportswear","name":"运动 Sportswear","icon":"🏃","count":0,"desc":"跑步/足球/篮球/户外/瑜伽"}
+]

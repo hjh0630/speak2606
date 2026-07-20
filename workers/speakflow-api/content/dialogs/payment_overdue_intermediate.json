@@ -1,0 +1,68 @@
+{
+  "scenario_id": "payment_overdue",
+  "scenario_title_en": "Overdue Payment & Collection",
+  "scenario_title_zh": "客户付款逾期/催款(进阶)",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, this is Robert from finance. The balance on PO 2024-388 is now 21 days overdue — US$48,200. We've sent 3 reminders and a demand letter, no response. Our CEO is asking why we haven't escalated to credit hold. Can you give me a concrete payment date today?",
+      "ai_message_zh": "陈,你好,我是 Robert。PO 2024-388 的尾款已经逾期 21 天 — 48,200 美元。催了 3 次加一封律师函,没回复。我们 CEO 问为什么还没暂停授信。今天能给我一个具体付款日吗?",
+      "expected_user_response_hint": "承认问题严重,给出具体日期+金额,解释卡点",
+      "key_phrases": ["We apologize for the delay", "payment will be made by ...", "the delay is because ..."],
+      "common_mistakes": "Don't say 'we are working on it' — that's what you said 3 reminders ago; give a specific date and amount.",
+      "tips_zh": "21 天 + 律师函 = 客户内部已经到财务上限/现金流断裂,要主动给方案,不要被动等。",
+      "user_response_example": "Robert, we apologize for the delay. Payment of US$48,200 will be made by wire this Wednesday, June 19th. The delay was our parent group's quarterly cash pooling — the funds were released yesterday. I will send you the bank reference as soon as the wire is sent."
+    },
+    {
+      "round": 2,
+      "ai_message": "Wednesday is 4 days from now. We need the wire reference by EOD Tuesday for our credit committee. If it doesn't arrive, we will put your account on credit hold starting Wednesday — meaning no new orders, no shipment release on PO 2024-401 either. Are you prepared for that consequence?",
+      "ai_message_zh": "周三 4 天后。我们周二下班前要拿到电汇凭证给信用委员会。如果没拿到,周三起暂停授信 — 新订单不接,PO 2024-401 也不放货。你们准备好承担这个后果吗?",
+      "expected_user_response_hint": "承诺周二发凭证,接受 credit hold 后果",
+      "key_phrases": ["We will send the wire reference by Tuesday EOD", "we accept the credit hold consequence", "please confirm in writing"],
+      "common_mistakes": "Don't argue the credit hold terms — at 21 days overdue, the buyer has every right. Accept and commit.",
+      "tips_zh": "Credit hold 是供应商的最后手段,实施后 30-60 天才能解除,期间客户不能补货,损失放大。",
+      "user_response_example": "We will send the wire reference by Tuesday 5 PM China time. We accept the credit hold consequence and will do everything to avoid triggering it. Please confirm the hold terms in writing — I need it for our finance audit."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK, hold terms: starting Wednesday June 19, all open orders suspended, no new POs accepted, no shipments released. Lifted only after cleared payment + 30 percent deposit on the next order. About late-payment interest, our standard is 1.5 percent per month on the overdue balance, calculated from the original due date.",
+      "ai_message_zh": "好的,暂停条款:6 月 19 日周三起,所有未完成订单暂停,不接新 PO,不释放任何出货。仅在欠款清 + 下一单 30% 定金后才解除。逾期利息按 1.5%/月,从原到期日起算。",
+      "expected_user_response_hint": "接受 1.5% 利息,谈 deposit 比例",
+      "key_phrases": ["1.5 percent per month is acceptable", "can we do 20 percent deposit", "interest from original due date"],
+      "common_mistakes": "1.5%/月 = 18% 年化,比标准 1% 高;客户谈判时常压到 1%,但要换条件(更长合约 / 更高 deposit)。",
+      "tips_zh": "高利息条款对应高风险,客户接受 1.5% 通常意味着内部评级下调,后续合作更难。",
+      "user_response_example": "1.5 percent per month is acceptable, calculated from the original due date of May 25. For the next order, can we do 20 percent deposit instead of 30? We have a confirmed Q3 order of US$120,000 — we're committed."
+    },
+    {
+      "round": 4,
+      "ai_message": "20 percent deposit on a US$120,000 order is US$24,000. Our credit committee requires 30 percent on accounts that have triggered a hold. We can do 25 percent as a one-time courtesy, with the remaining 5 percent added to the balance payment terms. Otherwise, 30 percent is firm.",
+      "ai_message_zh": "20% 定金 = 2.4 万美元,信用委员会要求暂停授信账户 30%。考虑到一次性特殊,可以 25%,剩下 5% 加到尾款。否则 30% 不让步。",
+      "expected_user_response_hint": "接受 25/75,讨论尾款条件",
+      "key_phrases": ["25 percent deposit, 75 percent balance is fine", "balance payment terms", "we appreciate the courtesy"],
+      "common_mistakes": "Don't push for 20% after being offered 25% — 25% 是 already a concession, take it.",
+      "tips_zh": "谈判 25/75 是双赢:客户少 5% 定金压力,供应商保 25% 现金流 + 信誉修复路径。",
+      "user_response_example": "25 percent deposit, 75 percent balance is acceptable. For the 75 percent balance, can we do 30 percent against B/L copy and 45 percent against B/L original? That matches our cash flow."
+    },
+    {
+      "round": 5,
+      "ai_message": "30/45 split is fine. About the cleared payment for PO 2024-388 — we need the full US$48,200 plus the late-payment interest (21 days × 1.5 percent = US$506). Total US$48,706, by wire, with bank reference, by Tuesday EOD. If we don't have it, credit hold triggers Wednesday morning, no exceptions.",
+      "ai_message_zh": "30/45 可以。PO 2024-388 清欠 — 48,200 + 逾期利息(21 天 × 1.5% = 506 美元) = 48,706 美元,电汇,带凭证,周二下班前。没到,周三早上准时启动暂停授信,不例外。",
+      "expected_user_response_hint": "确认具体金额+时间+凭证,做承诺",
+      "key_phrases": ["We will send US$48,706 by wire by Tuesday EOD", "we will email the bank reference", "no exceptions accepted"],
+      "common_mistakes": "Don't say 'approximately 48,000' — the buyer is doing a credit audit, every cent must match.",
+      "tips_zh": "逾期利息精确计算:48,200 × 1.5% / 30 × 21 = 506.10 美元,客户会计会核对。",
+      "user_response_example": "We will send US$48,706 by wire by Tuesday 5 PM China time, and email the bank reference immediately after the wire is sent. We accept no exceptions. Thank you for the courtesy on the 25 percent deposit, Robert."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK, that's the deal. To wrap up: US$48,706 by Tuesday EOD, credit hold triggers Wednesday if missed, 25 percent deposit on next order, 30/45 balance terms, 1.5 percent per month interest, signed term sheet by Friday. Anything else?",
+      "ai_message_zh": "好的,就这么定。总结:48,706 美元周二下班前电汇,周三收不到就启动暂停授信,下一单 25% 定金,30/45 尾款,1.5%/月利息,周五前签条款书。还有别的吗?",
+      "expected_user_response_hint": "做 closing,确认所有动作",
+      "key_phrases": ["To summarize", "we will do ... by ...", "thank you for working with us"],
+      "common_mistakes": "收尾不要 'OK, deal' — 5 个动作要逐条确认。",
+      "tips_zh": "复杂催款 closing = 5 个动作 × 金额 × 时间 × 凭证 + 双方签字。",
+      "user_response_example": "Perfect. To summarize: US$48,706 by Tuesday EOD with bank reference, 25 percent deposit on next order, 30/45 balance, 1.5 percent per month interest, signed term sheet by Friday. Thank you for working with us, Robert. We will not let this happen again."
+    }
+  ]
+}

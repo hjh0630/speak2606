@@ -1,0 +1,2918 @@
+[
+  {
+    "term": "MOQ",
+    "full_form": "Minimum Order Quantity",
+    "category": "phone_meeting",
+    "phonetic": "/ˌem əʊ ˈkjuː/",
+    "definition_en": "the smallest quantity a supplier is willing to produce per order",
+    "definition_zh": "最低起订量",
+    "example": "Our MOQ for this style is 500 pieces per color."
+  },
+  {
+    "term": "lead time",
+    "full_form": "lead time",
+    "category": "phone_meeting",
+    "phonetic": "/ˈliːd taɪm/",
+    "definition_en": "the time between placing an order and receiving the goods",
+    "definition_zh": "交货周期",
+    "example": "The standard lead time is 30 days after the deposit."
+  },
+  {
+    "term": "RFQ",
+    "full_form": "Request For Quotation",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌɑːr ef ˈkjuː/",
+    "definition_en": "a formal request to suppliers for price quotation",
+    "definition_zh": "询价单",
+    "example": "Please send us your RFQ and we will reply within 24 hours."
+  },
+  {
+    "term": "PI",
+    "full_form": "Proforma Invoice",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌpiː ˈaɪ/",
+    "definition_en": "a preliminary invoice sent to buyers before shipment, used as a quotation and payment reference",
+    "definition_zh": "形式发票 / 预开发票",
+    "example": "Please review the PI and confirm by reply email."
+  },
+  {
+    "term": "FOB",
+    "full_form": "Free On Board",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌef əʊ ˈbiː/",
+    "definition_en": "price includes delivery to the port of loading; buyer takes over from there",
+    "definition_zh": "离岸价(装运港交货)",
+    "example": "Our offer is FOB Ningbo at USD 4.20 per piece."
+  },
+  {
+    "term": "CIF",
+    "full_form": "Cost, Insurance & Freight",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌsiː aɪ ˈef/",
+    "definition_en": "price includes cost, insurance, and freight to the destination port",
+    "definition_zh": "到岸价(包含运费保险)",
+    "example": "CIF Hamburg is USD 5.10 per piece."
+  },
+  {
+    "term": "EXW",
+    "full_form": "Ex Works",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌiː eks ˈdʌbəljuː/",
+    "definition_en": "price is at the factory gate; buyer arranges and pays for all transport",
+    "definition_zh": "出厂价(工厂交货)",
+    "example": "EXW price is USD 3.85, no loading included."
+  },
+  {
+    "term": "TT payment",
+    "full_form": "Telegraphic Transfer",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌtiː ˈtiː ˈpeɪmənt/",
+    "definition_en": "a bank wire transfer, the most common payment method in export trade",
+    "definition_zh": "电汇",
+    "example": "We accept 30 percent TT deposit and 70 percent against B/L copy."
+  },
+  {
+    "term": "deposit",
+    "full_form": "deposit",
+    "category": "inquiry_quote",
+    "phonetic": "/dɪˈpɒzɪt/",
+    "definition_en": "an upfront partial payment to confirm an order",
+    "definition_zh": "订金 / 定金",
+    "example": "A 30 percent deposit is required to start production."
+  },
+  {
+    "term": "AQL",
+    "full_form": "Acceptable Quality Level",
+    "category": "factory_audit",
+    "phonetic": "/ˌeɪ kjuː ˈel/",
+    "definition_en": "the maximum acceptable number of defects per hundred units in a sampling inspection",
+    "definition_zh": "可接受质量水平(抽样标准)",
+    "example": "Our AQL standard is 2.5 for major, 4.0 for minor."
+  },
+  {
+    "term": "QC",
+    "full_form": "Quality Control",
+    "category": "factory_audit",
+    "phonetic": "/ˌkjuː ˈsiː/",
+    "definition_en": "the process of checking products to ensure they meet quality standards",
+    "definition_zh": "品控 / 质量控制",
+    "example": "We have in-line QC and final QC at our factory."
+  },
+  {
+    "term": "BSCI",
+    "full_form": "Business Social Compliance Initiative",
+    "category": "factory_audit",
+    "phonetic": "/ˌbiː ˌes ˌsiː ˈaɪ/",
+    "definition_en": "a European social compliance audit framework for supply chains",
+    "definition_zh": "欧洲商业社会合规倡议",
+    "example": "We are BSCI audited and our latest report is grade B."
+  },
+  {
+    "term": "SEDEX",
+    "full_form": "Supplier Ethical Data Exchange",
+    "category": "factory_audit",
+    "phonetic": "/ˈsiː deks/",
+    "definition_en": "a UK-based ethical trade audit platform (SMETA)",
+    "definition_zh": "供应商道德数据交换(英)",
+    "example": "Our factory is registered on SEDEX with a SMETA 4-pillar audit."
+  },
+  {
+    "term": "production line",
+    "full_form": "production line",
+    "category": "factory_audit",
+    "phonetic": "/prəˈdʌkʃn laɪn/",
+    "definition_en": "a sequence of workstations where garments are assembled",
+    "definition_zh": "生产线",
+    "example": "We run 12 production lines, each with 25 operators."
+  },
+  {
+    "term": "capacity",
+    "full_form": "capacity",
+    "category": "factory_audit",
+    "phonetic": "/kəˈpæsəti/",
+    "definition_en": "the maximum output a factory can produce in a given period",
+    "definition_zh": "产能",
+    "example": "Our monthly capacity is 200,000 pieces for woven tops."
+  },
+  {
+    "term": "ETD",
+    "full_form": "Estimated Time of Departure",
+    "category": "logistics_shipping",
+    "phonetic": "/ˌiː tiː ˈdiː/",
+    "definition_en": "the expected date a vessel leaves the port of origin",
+    "definition_zh": "预计离港日期",
+    "example": "Our ETD from Ningbo is the 22nd of this month."
+  },
+  {
+    "term": "ETA",
+    "full_form": "Estimated Time of Arrival",
+    "category": "logistics_shipping",
+    "phonetic": "/ˌiː tiː ˈeɪ/",
+    "definition_en": "the expected date a vessel reaches the destination port",
+    "definition_zh": "预计到港日期",
+    "example": "ETA at Long Beach is around the 11th of next month."
+  },
+  {
+    "term": "B/L",
+    "full_form": "Bill of Lading",
+    "category": "logistics_shipping",
+    "phonetic": "/ˌbiː ˈel/",
+    "definition_en": "a document issued by the carrier acknowledging receipt of cargo for shipment",
+    "definition_zh": "提单",
+    "example": "The original B/L will be sent by DHL within 3 days of sailing."
+  },
+  {
+    "term": "C/O",
+    "full_form": "Certificate of Origin",
+    "category": "logistics_shipping",
+    "phonetic": "/ˌsiː ˈəʊ/",
+    "definition_en": "a document certifying the country where the goods were manufactured",
+    "definition_zh": "产地证",
+    "example": "The C/O will be issued by CCPIT stating 'Made in China'."
+  },
+  {
+    "term": "FCL",
+    "full_form": "Full Container Load",
+    "category": "logistics_shipping",
+    "phonetic": "/ˌef ˌsiː ˈel/",
+    "definition_en": "a container fully loaded with one consignee's cargo",
+    "definition_zh": "整柜",
+    "example": "We will ship this order as FCL to save on per-unit cost."
+  },
+  {
+    "term": "LCL",
+    "full_form": "Less than Container Load",
+    "category": "logistics_shipping",
+    "phonetic": "/ˌel ˌsiː ˈel/",
+    "definition_en": "a shipment that doesn't fill a whole container, consolidated with others",
+    "definition_zh": "拼柜",
+    "example": "For small orders, LCL is more economical."
+  },
+  {
+    "term": "telex release",
+    "full_form": "telex release",
+    "category": "logistics_shipping",
+    "phonetic": "/ˈteleks rɪˈliːs/",
+    "definition_en": "the shipping line releases cargo at destination without the original B/L",
+    "definition_zh": "电放",
+    "example": "For US buyers, we usually do telex release after full payment."
+  },
+  {
+    "term": "cut-off time",
+    "full_form": "cut-off time",
+    "category": "logistics_shipping",
+    "phonetic": "/ˈkʌt ɒf taɪm/",
+    "definition_en": "the latest time cargo must be at the terminal to load the planned vessel",
+    "definition_zh": "截关时间",
+    "example": "The cut-off is on the 17th, by 6 PM."
+  },
+  {
+    "term": "stuffing",
+    "full_form": "container stuffing",
+    "category": "logistics_shipping",
+    "phonetic": "/ˈstʌfɪŋ/",
+    "definition_en": "the process of loading cargo into a shipping container",
+    "definition_zh": "装柜",
+    "example": "We will arrange stuffing at our warehouse on the 15th."
+  },
+  {
+    "term": "PSI",
+    "full_form": "Pre-Shipment Inspection",
+    "category": "logistics_shipping",
+    "phonetic": "/ˌpiː ˌes ˈaɪ/",
+    "definition_en": "a final inspection performed before goods are loaded for export",
+    "definition_zh": "装柜前检验",
+    "example": "Our PSI is conducted by SGS on the morning of stuffing."
+  },
+  {
+    "term": "demurrage",
+    "full_form": "demurrage",
+    "category": "logistics_shipping",
+    "phonetic": "/dɪˈmʌrɪdʒ/",
+    "definition_en": "a charge payable to the port/terminal when a container stays beyond free time",
+    "definition_zh": "滞港费(堆场)",
+    "example": "Demurrage starts at USD 75 per day after the 7-day free period."
+  },
+  {
+    "term": "detention",
+    "full_form": "detention",
+    "category": "logistics_shipping",
+    "phonetic": "/dɪˈtenʃn/",
+    "definition_en": "a charge by the shipping line when a container is held outside the port",
+    "definition_zh": "滞箱费(船公司)",
+    "example": "Detention is separate from demurrage and charged by the carrier."
+  },
+  {
+    "term": "GSM",
+    "full_form": "Grams per Square Meter",
+    "category": "sample_development",
+    "phonetic": "/ˌdʒiː ˌes ˈem/",
+    "definition_en": "the weight of a fabric per square meter, indicating its thickness/density",
+    "definition_zh": "克重(每平方米克数)",
+    "example": "The fabric is 220 GSM French terry, 100 percent cotton."
+  },
+  {
+    "term": "yarn count",
+    "full_form": "yarn count",
+    "category": "sample_development",
+    "phonetic": "/jɑːn kaʊnt/",
+    "definition_en": "a numerical system indicating the thickness of yarn; higher number = finer yarn",
+    "definition_zh": "纱支",
+    "example": "Our 220 GSM terry uses 32s single yarn."
+  },
+  {
+    "term": "handfeel",
+    "full_form": "handfeel",
+    "category": "sample_development",
+    "phonetic": "/ˈhændfiːl/",
+    "definition_en": "the tactile sensation of a fabric when touched by hand",
+    "definition_zh": "手感",
+    "example": "The handfeel is soft and slightly dry, with a peach-skin finish."
+  },
+  {
+    "term": "tech-pack",
+    "full_form": "technical package",
+    "category": "sample_development",
+    "phonetic": "/ˈtek pæk/",
+    "definition_en": "a detailed document from the buyer specifying design, materials, measurements, and construction",
+    "definition_zh": "工艺单 / 技术包",
+    "example": "Please review the tech-pack and flag any inconsistencies."
+  },
+  {
+    "term": "spec sheet",
+    "full_form": "specification sheet",
+    "category": "sample_development",
+    "phonetic": "/ˈspek ʃiːt/",
+    "definition_en": "a document listing product specifications (BOM, measurements, colors, trims)",
+    "definition_zh": "规格表",
+    "example": "The spec sheet says M chest is 96 cm, but the pattern was drafted at 100."
+  },
+  {
+    "term": "BOM",
+    "full_form": "Bill of Materials",
+    "category": "sample_development",
+    "phonetic": "/bɒm/",
+    "definition_en": "a list of all raw materials and trims needed to make a product",
+    "definition_zh": "物料清单",
+    "example": "The BOM lists fabric, lining, buttons, zipper, thread, and labels."
+  },
+  {
+    "term": "pre-production sample",
+    "full_form": "pre-production sample",
+    "category": "sample_development",
+    "phonetic": "/ˌpriː prəˈdʌkʃn ˈsæmpl/",
+    "definition_en": "a sample made from bulk fabric before mass production starts",
+    "definition_zh": "产前样",
+    "example": "Please sign off the pre-production sample before we start bulk."
+  },
+  {
+    "term": "lab dip",
+    "full_form": "laboratory dip",
+    "category": "sample_development",
+    "phonetic": "/læb dɪp/",
+    "definition_en": "a small fabric sample dyed to match a target color before bulk production",
+    "definition_zh": "染色小样 / 试色样",
+    "example": "We will send you a lab dip for sign-off before bulk dyeing."
+  },
+  {
+    "term": "Pantone TPX",
+    "full_form": "Pantone Textile Paper eXtended",
+    "category": "sample_development",
+    "phonetic": "/ˈpæntəʊn ˌtiː piː ˈeks/",
+    "definition_en": "a Pantone color system for textiles, used as the standard for shade matching",
+    "definition_zh": "潘通纺织色卡 TPX 系列",
+    "example": "We need the lab dip to match Pantone TPX 18-1664 within Delta E 1.0."
+  },
+  {
+    "term": "Delta E",
+    "full_form": "Delta E",
+    "category": "sample_development",
+    "phonetic": "/ˈdeltə iː/",
+    "definition_en": "a numerical measure of color difference; lower is closer match",
+    "definition_zh": "色差值",
+    "example": "Delta E below 1.0 is acceptable for most color matches."
+  },
+  {
+    "term": "differential feed",
+    "full_form": "differential feed",
+    "category": "sample_development",
+    "phonetic": "/ˌdɪfəˈrenʃl fiːd/",
+    "definition_en": "a sewing machine feature that controls the rate of front and back feed dogs independently, critical for stretch knits",
+    "definition_zh": "差动送布",
+    "example": "Coverstitch hem waving is usually a differential feed setting issue."
+  },
+  {
+    "term": "overlock",
+    "full_form": "overlock stitch",
+    "category": "sample_development",
+    "phonetic": "/ˈəʊvəlɒk/",
+    "definition_en": "a stitch that trims and overcasts the fabric edge in one pass; prevents fraying",
+    "definition_zh": "锁边 / 包缝",
+    "example": "Side seams should be overlocked before topstitching."
+  },
+  {
+    "term": "coverstitch",
+    "full_form": "coverstitch",
+    "category": "sample_development",
+    "phonetic": "/ˈkʌvəstɪtʃ/",
+    "definition_en": "a two-or-three-needle stitch that gives a clean, professional hem finish on knits",
+    "definition_zh": "绷缝",
+    "example": "The hem should be coverstitched, not overlocked, for a cleaner finish."
+  },
+  {
+    "term": "fit sample",
+    "full_form": "fit sample",
+    "category": "sample_development",
+    "phonetic": "/fɪt ˈsæmpl/",
+    "definition_en": "a sample tried on a real body (fit model) to evaluate silhouette and fit",
+    "definition_zh": "试衣样",
+    "example": "We can do a fit sample on our part-time fit model for USD 50 extra."
+  },
+  {
+    "term": "YKK",
+    "full_form": "Yoshida Kogyo Kabushikigaisha",
+    "category": "sample_development",
+    "phonetic": "/waɪ keɪ keɪ/",
+    "definition_en": "a Japanese brand widely considered the industry standard for zippers",
+    "definition_zh": "YKK 拉链(行业标准品牌)",
+    "example": "The buyer specified YKK zippers, which adds USD 0.15 per piece."
+  },
+  {
+    "term": "Oeko-Tex",
+    "full_form": "Oeko-Tex Standard 100",
+    "category": "sample_development",
+    "phonetic": "/ˈəʊkəʊ teks/",
+    "definition_en": "an international certification for textiles tested for harmful substances",
+    "definition_zh": "Oeko-Tex 100 生态纺织品认证",
+    "example": "Our fabric is Oeko-Tex Standard 100 certified for babywear."
+  },
+  {
+    "term": "REACH",
+    "full_form": "Registration, Evaluation, Authorisation and Restriction of Chemicals",
+    "category": "sample_development",
+    "phonetic": "/riːtʃ/",
+    "definition_en": "EU regulation governing chemical substances in products",
+    "definition_zh": "欧盟化学品法规",
+    "example": "We can issue a REACH SVHC test report for this fabric."
+  },
+  {
+    "term": "MSDS",
+    "full_form": "Material Safety Data Sheet",
+    "category": "sample_development",
+    "phonetic": "/ˌem ˌes ˌdiː ˈes/",
+    "definition_en": "a safety document listing chemical composition, hazards, and handling of a substance",
+    "definition_zh": "化学品安全技术说明书",
+    "example": "Please provide the MSDS for the dye used in this batch."
+  },
+  {
+    "term": "debit note",
+    "full_form": "debit note",
+    "category": "claim_aftersales",
+    "phonetic": "/ˈdebɪt nəʊt/",
+    "definition_en": "a document issued by a buyer to claim a refund or reduce amount owed to a supplier",
+    "definition_zh": "扣款单 / 借记通知",
+    "example": "The buyer issued a debit note for USD 4,000 against the next invoice."
+  },
+  {
+    "term": "credit note",
+    "full_form": "credit note",
+    "category": "claim_aftersales",
+    "phonetic": "/ˈkredɪt nəʊt/",
+    "definition_en": "a document issued by a supplier acknowledging a credit to a buyer's account",
+    "definition_zh": "贷记通知 / 退款单",
+    "example": "We issued a credit note to be applied to your next PO."
+  },
+  {
+    "term": "RCA",
+    "full_form": "Root Cause Analysis",
+    "category": "claim_aftersales",
+    "phonetic": "/ˌɑːr ˌsiː ˈeɪ/",
+    "definition_en": "a structured method to identify the underlying cause of a problem",
+    "definition_zh": "根因分析",
+    "example": "Please send us the RCA report within 5 business days."
+  },
+  {
+    "term": "CAP",
+    "full_form": "Corrective Action Plan",
+    "category": "claim_aftersales",
+    "phonetic": "/kæp/",
+    "definition_en": "a written plan detailing corrective and preventive actions after an issue",
+    "definition_zh": "纠正措施计划",
+    "example": "The signed CAP must include owner, deadline, and verification method."
+  },
+  {
+    "term": "claim",
+    "full_form": "claim",
+    "category": "claim_aftersales",
+    "phonetic": "/kleɪm/",
+    "definition_en": "a demand by a buyer for compensation due to a product or service issue",
+    "definition_zh": "索赔",
+    "example": "The buyer filed a claim for 240 defective pieces."
+  },
+  {
+    "term": "inspection report",
+    "full_form": "inspection report",
+    "category": "claim_aftersales",
+    "phonetic": "/ɪnˈspekʃn rɪˈpɔːt/",
+    "definition_en": "a written report from a QC inspector detailing findings of a quality check",
+    "definition_zh": "检验报告",
+    "example": "Please send the third-party inspection report with the claim."
+  },
+  {
+    "term": "rework",
+    "full_form": "rework",
+    "category": "claim_aftersales",
+    "phonetic": "/riːˈwɜːk/",
+    "definition_en": "the process of repairing defective products so they meet specifications",
+    "definition_zh": "返工",
+    "example": "We can rework the 240 affected pieces at our cost."
+  },
+  {
+    "term": "AQL 2.5",
+    "full_form": "AQL 2.5",
+    "category": "claim_aftersales",
+    "phonetic": "/ˌeɪ kjuː ˈel tuː pɔɪnt faɪv/",
+    "definition_en": "a common Acceptable Quality Level used in garment inspection for major defects",
+    "definition_zh": "AQL 2.5(主要缺陷抽样标准)",
+    "example": "Our standard is AQL 2.5 for major, 4.0 for minor."
+  },
+  {
+    "term": "material breach",
+    "full_form": "material breach",
+    "category": "claim_aftersales",
+    "phonetic": "/məˈtɪəriəl briːtʃ/",
+    "definition_en": "a serious failure to perform a contract term that justifies termination",
+    "definition_zh": "实质性违约",
+    "example": "The buyer alleges a material breach under the master supply agreement."
+  },
+  {
+    "term": "NDA",
+    "full_form": "Non-Disclosure Agreement",
+    "category": "claim_aftersales",
+    "phonetic": "/ˌen ˌdiː ˈeɪ/",
+    "definition_en": "a legal contract restricting the parties from sharing confidential information",
+    "definition_zh": "保密协议",
+    "example": "We can sign an NDA to keep the settlement confidential."
+  },
+  {
+    "term": "compliance",
+    "full_form": "compliance",
+    "category": "factory_audit",
+    "phonetic": "/kəmˈplaɪəns/",
+    "definition_en": "the act of meeting legal, regulatory, and customer requirements",
+    "definition_zh": "合规",
+    "example": "Our compliance team manages BSCI, SEDEX, and buyer-specific audits."
+  },
+  {
+    "term": "audit",
+    "full_form": "audit",
+    "category": "factory_audit",
+    "phonetic": "/ˈɔːdɪt/",
+    "definition_en": "a systematic examination of a factory's operations, records, and compliance",
+    "definition_zh": "审核 / 审计",
+    "example": "The annual BSCI audit is scheduled for March."
+  },
+  {
+    "term": "non-conformity",
+    "full_form": "non-conformity",
+    "category": "factory_audit",
+    "phonetic": "/ˌnɒn kənˈfɔːməti/",
+    "definition_en": "a deviation from a standard, requirement, or process",
+    "definition_zh": "不符合项",
+    "example": "Lack of ventilation in the chemical room is a non-conformity."
+  },
+  {
+    "term": "PI",
+    "full_form": "Proforma Invoice (recap)",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌpiː ˈaɪ/",
+    "definition_en": "issued after price agreement, used to collect the deposit",
+    "definition_zh": "PI 形式发票(用于收订金)",
+    "example": "The PI is valid for 7 days from the date of issue."
+  },
+  {
+    "term": "hand sample",
+    "full_form": "hand sample",
+    "category": "sample_development",
+    "phonetic": "/hænd ˈsæmpl/",
+    "definition_en": "a small fabric cutting sent for handfeel evaluation before lab dip",
+    "definition_zh": "手感样",
+    "example": "We will send a hand sample for the new French terry first."
+  },
+  {
+    "term": "TT 30/70",
+    "full_form": "TT 30/70",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌtiː ˈtiː θɜːti ˈsevənti/",
+    "definition_en": "30 percent deposit by TT, 70 percent balance against B/L copy",
+    "definition_zh": "30/70 电汇付款比例",
+    "example": "Standard payment terms are TT 30/70 for new buyers."
+  },
+  {
+    "term": "LC",
+    "full_form": "Letter of Credit",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌel ˈsiː/",
+    "definition_en": "a bank-issued document guaranteeing payment to the seller upon shipment",
+    "definition_zh": "信用证",
+    "example": "For first orders we accept LC at sight from a top-tier bank."
+  },
+  {
+    "term": "DP",
+    "full_form": "Documents against Payment",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌdiː ˈpiː/",
+    "definition_en": "the bank releases shipping documents to the buyer only against payment",
+    "definition_zh": "付款交单",
+    "example": "We can accept DP at sight for trusted buyers."
+  },
+  {
+    "term": "DA",
+    "full_form": "Documents against Acceptance",
+    "category": "inquiry_quote",
+    "phonetic": "/ˌdiː ˈeɪ/",
+    "definition_en": "the bank releases documents against the buyer's acceptance of a draft",
+    "definition_zh": "承兑交单",
+    "example": "DA 30 days is risky for new buyers."
+  },
+  {
+    "term": "yarn count",
+    "full_form": "yarn count",
+    "category": "yarn_sourcing",
+    "phonetic": "/jɑːn kaʊnt/",
+    "definition_en": "a numerical system indicating yarn fineness; common systems are Ne (English, count = number of 840-yard lengths per pound), Nm (metric, meters per gram), and Tex (grams per 1000 m)",
+    "definition_zh": "纱线细度,常见 Ne(英制)、Nm(公制)、Tex(特克斯)",
+    "example": "We need 32 Ne compact cotton yarn for this style."
+  },
+  {
+    "term": "combed cotton",
+    "full_form": "combed cotton yarn",
+    "category": "yarn_sourcing",
+    "phonetic": "/kəʊmd ˈkɒtn/",
+    "definition_en": "cotton yarn that has been combed to remove short fibers and impurities, producing a smoother, stronger, finer yarn than carded",
+    "definition_zh": "精梳棉纱,经梳理去除短纤和杂质,比普梳更光洁、强韧",
+    "example": "32s combed cotton gives a cleaner handfeel for premium tees."
+  },
+  {
+    "term": "carded cotton",
+    "full_form": "carded cotton yarn",
+    "category": "yarn_sourcing",
+    "phonetic": "/ˈkɑːdɪd ˈkɒtn/",
+    "definition_en": "cotton yarn that has only been carded to align fibers; cheaper and more hairy than combed, used in basic or rustic styles",
+    "definition_zh": "普梳棉纱,只经粗梳,毛羽多,价格便宜",
+    "example": "20s carded cotton is a common choice for budget fleece."
+  },
+  {
+    "term": "compact yarn",
+    "full_form": "compact-spun yarn",
+    "category": "yarn_sourcing",
+    "phonetic": "/ˈkɒmpækt jɑːn/",
+    "definition_en": "ring-spun yarn with a compacting zone that reduces hairiness and improves strength; cleaner surface for printing and dyeing",
+    "definition_zh": "紧密纺纱,在环锭纺基础上加压实区,毛羽少、布面光洁",
+    "example": "Compact yarn is preferred for high-end jersey where print clarity matters."
+  },
+  {
+    "term": "ring-spun",
+    "full_form": "ring-spun yarn",
+    "category": "yarn_sourcing",
+    "phonetic": "/rɪŋ spʌn/",
+    "definition_en": "yarn spun on a ring-spinning frame, producing a strong, fine yarn; the most common spinning method for premium cotton",
+    "definition_zh": "环锭纺纱,主流精梳棉纺纱方法,强力好、纱光洁",
+    "example": "Ring-spun yarn is the standard for combed cotton tees."
+  },
+  {
+    "term": "open-end",
+    "full_form": "open-end yarn (OE)",
+    "category": "yarn_sourcing",
+    "phonetic": "/ˈəʊpən end/",
+    "definition_en": "yarn spun by a rotor or air-jet process; cheaper and faster than ring-spun, but weaker and hairier",
+    "definition_zh": "气流纺或转杯纺,比环锭纺便宜但强力稍低",
+    "example": "Open-end yarn is common in budget knit fleece."
+  },
+  {
+    "term": "vortex spun",
+    "full_form": "vortex-spun yarn",
+    "category": "yarn_sourcing",
+    "phonetic": "/ˈvɔːteks spʌn/",
+    "definition_en": "yarn produced on a Murata vortex spinner, with very low hairiness; used in some knit applications",
+    "definition_zh": "涡流纺,日本村田工艺,毛羽极少",
+    "example": "Vortex-spun yarn is popular for high-speed knitting of jersey."
+  },
+  {
+    "term": "siro-spun",
+    "full_form": "siro-spun yarn",
+    "category": "yarn_sourcing",
+    "phonetic": "/ˈsɪərəʊ spʌn/",
+    "definition_en": "a two-strand spinning method that produces a yarn resembling plied; gives a cleaner, stronger yarn than singles",
+    "definition_zh": "赛络纺,两根粗纱平行纺成类似股线的纱",
+    "example": "Siro-spun yarn is used in shirting for a clean appearance."
+  },
+  {
+    "term": "slub",
+    "full_form": "slub yarn",
+    "category": "yarn_sourcing",
+    "phonetic": "/slʌb/",
+    "definition_en": "yarn with intentional thick and thin sections, used for textured, rustic fabric appearance",
+    "definition_zh": "竹节纱,粗细不均,用于粗犷风格布面",
+    "example": "Slub yarn gives the fabric a vintage, irregular look."
+  },
+  {
+    "term": "melange",
+    "full_form": "melange yarn (heather)",
+    "category": "yarn_sourcing",
+    "phonetic": "/meɪˈlɑːnʒ/",
+    "definition_en": "yarn spun from pre-blended dyed fibers, producing a heathered or mixed-color effect; common in casual wear",
+    "definition_zh": "麻灰纱,染色纤维预混纺纱,形成混色效果",
+    "example": "Melange yarn is widely used in athleisure and casual basics."
+  },
+  {
+    "term": "twist",
+    "full_form": "yarn twist",
+    "category": "yarn_sourcing",
+    "phonetic": "/twɪst/",
+    "definition_en": "the number of turns per unit length in a yarn, usually measured in TPM (turns per meter) or TPI (turns per inch)",
+    "definition_zh": "捻度,每米或每英寸的捻回数,TPM/TPI",
+    "example": "4 TPM is a typical twist for knit yarn."
+  },
+  {
+    "term": "S twist / Z twist",
+    "full_form": "direction of twist",
+    "category": "yarn_sourcing",
+    "phonetic": "/es twist / ziː twist/",
+    "definition_en": "S-twist turns clockwise, Z-twist counterclockwise; knit yarns are typically Z-twist, woven warp often S-twist",
+    "definition_zh": "S 捻(顺时针)、Z 捻(逆时针),针织多用 Z 捻",
+    "example": "We use Z-twist yarn for single jersey."
+  },
+  {
+    "term": "cone",
+    "full_form": "yarn cone (cheese)",
+    "category": "yarn_sourcing",
+    "phonetic": "/kəʊn/",
+    "definition_en": "a package of yarn wound on a conical or cylindrical paper tube, ready for knitting or weaving; common weights 1-2 kg",
+    "definition_zh": "筒子纱,针织/梭织用的卷装,常见 1-2 公斤",
+    "example": "1.5 kg cheese cones are standard for seamless knitting."
+  },
+  {
+    "term": "composition",
+    "full_form": "fiber composition",
+    "category": "yarn_sourcing",
+    "phonetic": "/ˌkɒmpəˈzɪʃn/",
+    "definition_en": "the fiber blend of a yarn, e.g. 100% cotton, 80/20 cotton/polyester, CVC (chief value cotton), T/C (polyester/cotton)",
+    "definition_zh": "纤维成分,如 100% 棉、80/20 棉/涤、CVC、T/C",
+    "example": "The composition is 100% combed cotton, 32s single."
+  },
+  {
+    "term": "GSM",
+    "full_form": "grams per square meter",
+    "category": "weaving_knitting",
+    "phonetic": "/ˌdʒiː ˌes ˈem/",
+    "definition_en": "the weight of a fabric in grams per square meter, indicating its density and thickness",
+    "definition_zh": "克重,每平方米克数,反映面料厚薄和密度",
+    "example": "The buyer spec calls for 220 GSM single jersey."
+  },
+  {
+    "term": "EPI",
+    "full_form": "ends per inch (warp)",
+    "category": "weaving_knitting",
+    "phonetic": "/ˌiː piː ˈaɪ/",
+    "definition_en": "the number of warp yarns per inch of woven fabric; a measure of warp density",
+    "definition_zh": "经密,每英寸经纱根数,梭织参数",
+    "example": "For 60s shirting, we run 100 EPI on the loom."
+  },
+  {
+    "term": "PPI",
+    "full_form": "picks per inch (weft)",
+    "category": "weaving_knitting",
+    "phonetic": "/ˌpiː piː ˈaɪ/",
+    "definition_en": "the number of weft (filling) yarns per inch of woven fabric",
+    "definition_zh": "纬密,每英寸纬纱根数",
+    "example": "80 EPI x 80 PPI is a standard poplin density."
+  },
+  {
+    "term": "course",
+    "full_form": "course (knit)",
+    "category": "weaving_knitting",
+    "phonetic": "/kɔːs/",
+    "definition_en": "a horizontal row of loops in a knitted fabric; courses per cm measures the width density",
+    "definition_zh": "横列,针织布横向线圈行",
+    "example": "We measure courses per cm on the finished fabric."
+  },
+  {
+    "term": "wale",
+    "full_form": "wale (knit)",
+    "category": "weaving_knitting",
+    "phonetic": "/weɪl/",
+    "definition_en": "a vertical column of loops in a knitted fabric; wales per cm measures the length density",
+    "definition_zh": "纵行,针织布纵向线圈列",
+    "example": "Interlock has finer wales than single jersey."
+  },
+  {
+    "term": "gauge",
+    "full_form": "machine gauge (knitting)",
+    "category": "weaving_knitting",
+    "phonetic": "/ɡeɪdʒ/",
+    "definition_en": "the number of needles per inch on a knitting machine; e.g. E14, E18, E24, E28, E32; higher gauge = finer knit",
+    "definition_zh": "机号,每英寸针数,E14 粗、E28 中、E32 细",
+    "example": "Seamless leggings are knit on E28 or E32 machines."
+  },
+  {
+    "term": "single jersey",
+    "full_form": "single jersey knit",
+    "category": "weaving_knitting",
+    "phonetic": "/ˈsɪŋɡl ˈdʒɜːzi/",
+    "definition_en": "a one-face knit fabric with distinct face and back; lightweight and common for T-shirts",
+    "definition_zh": "单面汗布,正反面不同的最基本针织布",
+    "example": "Single jersey at 180 GSM is the most common tee fabric."
+  },
+  {
+    "term": "interlock",
+    "full_form": "interlock knit",
+    "category": "weaving_knitting",
+    "phonetic": "/ˈɪntəlɒk/",
+    "definition_en": "a double-knit fabric with two interlocking single-jersey layers; thicker, more stable, reversible",
+    "definition_zh": "双面布,两层单面互锁,厚实稳定,两面相同",
+    "example": "Interlock at 220 GSM is good for premium tees and dresses."
+  },
+  {
+    "term": "rib",
+    "full_form": "rib knit (1x1, 2x2)",
+    "category": "weaving_knitting",
+    "phonetic": "/rɪb/",
+    "definition_en": "a knit with alternating knit and purl stitches; very stretchy; 1x1 alternates 1 knit 1 purl, 2x2 alternates 2 knit 2 purl",
+    "definition_zh": "罗纹,1x1、2x2 交替,高弹性,常用于领口袖口",
+    "example": "1x1 rib is used for the neckband of T-shirts."
+  },
+  {
+    "term": "pique",
+    "full_form": "pique knit",
+    "category": "weaving_knitting",
+    "phonetic": "/ˈpiːkeɪ/",
+    "definition_en": "a knit with a waffle or honeycomb texture; common in polo shirts",
+    "definition_zh": "珠地网眼,常用于 Polo 衫",
+    "example": "Pique knit 220 GSM is the classic polo fabric."
+  },
+  {
+    "term": "fleece",
+    "full_form": "fleece knit (3-end, 2-end)",
+    "category": "weaving_knitting",
+    "phonetic": "/fliːs/",
+    "definition_en": "a knit with a brushed or raised back for warmth; 3-end has 3 yarn feeds including spandex, 2-end has 2",
+    "definition_zh": "抓绒,背面起绒保暖,3 路含氨纶,2 路不含",
+    "example": "3-end fleece gives better recovery than 2-end."
+  },
+  {
+    "term": "terry",
+    "full_form": "terry knit (French terry)",
+    "category": "weaving_knitting",
+    "phonetic": "/ˈteri/",
+    "definition_en": "a knit with loops on the back that can be left as is (French terry) or brushed (terry fleece); used in sweatshirts and athleisure",
+    "definition_zh": "毛圈布,背面有未剪断的线圈,可起绒或不起绒",
+    "example": "French terry at 320 GSM is the standard unbrushed sweatshirt fabric."
+  },
+  {
+    "term": "jacquard",
+    "full_form": "jacquard knit",
+    "category": "weaving_knitting",
+    "phonetic": "/dʒəˈkɑːd/",
+    "definition_en": "a knit produced on a jacquard machine with individual needle control, allowing complex patterns",
+    "definition_zh": "提花针织,机器单独控制针,出复杂花型",
+    "example": "Jacquard knits allow logo and pattern in the fabric structure."
+  },
+  {
+    "term": "dobby",
+    "full_form": "dobby weave",
+    "category": "weaving_knitting",
+    "phonetic": "/ˈdɒbi/",
+    "definition_en": "a small-pattern weave produced on a dobby loom, allowing simple geometric designs",
+    "definition_zh": "多臂小提花,简单几何图案",
+    "example": "Dobby weaves are used for textured shirting."
+  },
+  {
+    "term": "plain weave",
+    "full_form": "plain weave (tabby)",
+    "category": "weaving_knitting",
+    "phonetic": "/pleɪn wiːv/",
+    "definition_en": "the simplest and most common weave, with weft passing alternately over and under each warp",
+    "definition_zh": "平纹,最基本的梭织组织",
+    "example": "Plain weave poplin is a standard shirting fabric."
+  },
+  {
+    "term": "twill",
+    "full_form": "twill weave",
+    "category": "weaving_knitting",
+    "phonetic": "/twɪl/",
+    "definition_en": "a weave with diagonal lines, produced by offset weft; common in chinos and denim",
+    "definition_zh": "斜纹,经纬交错形成斜线,用于卡其、牛仔",
+    "example": "3/1 twill is the classic denim construction."
+  },
+  {
+    "term": "satin",
+    "full_form": "satin weave",
+    "category": "weaving_knitting",
+    "phonetic": "/ˈsætɪn/",
+    "definition_en": "a weave with long warp or weft floats, giving a smooth, lustrous surface",
+    "definition_zh": "缎纹,长浮线,表面光滑有光泽",
+    "example": "Satin weave is used in formal shirting and linings."
+  },
+  {
+    "term": "loop length",
+    "full_form": "loop length (knit)",
+    "category": "weaving_knitting",
+    "phonetic": "/luːp leŋθ/",
+    "definition_en": "the length of yarn in a single knitted loop, measured in mm; directly affects GSM, handfeel and shrinkage",
+    "definition_zh": "线圈长度,影响克重、手感、缩水",
+    "example": "Tightening the loop length from 3.0 to 2.7 mm raised the GSM by 5%."
+  },
+  {
+    "term": "shrinkage",
+    "full_form": "fabric shrinkage",
+    "category": "weaving_knitting",
+    "phonetic": "/ˈʃrɪnkɪdʒ/",
+    "definition_en": "the dimensional change of fabric after washing, measured in % lengthwise (L) and widthwise (W); industry standard ±5%",
+    "definition_zh": "缩水率,水洗后尺寸变化,长度/宽度方向百分比",
+    "example": "Our cotton jersey pre-shrunk to 3% L / 3% W."
+  },
+  {
+    "term": "color fastness",
+    "full_form": "color fastness",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˈkʌlə ˈfæstnəs/",
+    "definition_en": "the resistance of a dyed fabric to color change or transfer under conditions such as washing, light, rubbing, perspiration",
+    "definition_zh": "色牢度,染色后抵抗褪色/沾色的能力",
+    "example": "Buyer's standard is grade 4 washing fastness on dark shades."
+  },
+  {
+    "term": "wash fastness",
+    "full_form": "wash fastness (ISO 105-C06)",
+    "category": "dyeing_finishing",
+    "phonetic": "/wɒʃ ˈfæstnəs/",
+    "definition_en": "color change and staining after washing, tested at 40 or 60°C with a multi-fiber strip; grades 1-5",
+    "definition_zh": "耐洗色牢度,多纤维贴衬测试,1-5 级",
+    "example": "Wash fastness at 40°C came in at grade 4 on the navy."
+  },
+  {
+    "term": "light fastness",
+    "full_form": "light fastness (ISO 105-B02)",
+    "category": "dyeing_finishing",
+    "phonetic": "/laɪt ˈfæstnəs/",
+    "definition_en": "resistance of color to fading under exposure to light (xenon arc), graded 1-8 (blue scale)",
+    "definition_zh": "耐光色牢度,氙灯测试,1-8 级蓝标",
+    "example": "Light fastness grade 4 is the minimum for outdoor apparel."
+  },
+  {
+    "term": "rubbing fastness",
+    "full_form": "rubbing / crocking fastness (ISO 105-X12)",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˈrʌbɪŋ ˈfæstnəs/",
+    "definition_en": "color transfer from fabric to a white crocking cloth by rubbing; dry and wet; grades 1-5",
+    "definition_zh": "耐摩擦色牢度,干摩和湿摩,1-5 级",
+    "example": "Wet rubbing fastness is critical for deep shades."
+  },
+  {
+    "term": "reactive dye",
+    "full_form": "reactive dye",
+    "category": "dyeing_finishing",
+    "phonetic": "/riˈæktɪv daɪ/",
+    "definition_en": "a dye that forms a covalent bond with cellulosic fibers, giving good wash fastness; main dye class for cotton",
+    "definition_zh": "活性染料,与纤维素共价键结合,棉布主流染料",
+    "example": "Reactive dyes are used for cotton T-shirt fabric."
+  },
+  {
+    "term": "disperse dye",
+    "full_form": "disperse dye",
+    "category": "dyeing_finishing",
+    "phonetic": "/dɪˈspɜːs daɪ/",
+    "definition_en": "a non-ionic dye used for synthetic fibers, especially polyester; applied under high temperature and pressure",
+    "definition_zh": "分散染料,用于合成纤维,高温高压染色",
+    "example": "Disperse dye on polyester requires 130°C thermosol."
+  },
+  {
+    "term": "vat dye",
+    "full_form": "vat dye",
+    "category": "dyeing_finishing",
+    "phonetic": "/væt daɪ/",
+    "definition_en": "an insoluble dye reduced to a soluble form for dyeing, then oxidized to fix; very high fastness",
+    "definition_zh": "还原染料,色牢度极佳,适合深色",
+    "example": "Indigo on denim is a vat dye."
+  },
+  {
+    "term": "jet dyeing",
+    "full_form": "jet dyeing",
+    "category": "dyeing_finishing",
+    "phonetic": "/dʒet ˈdaɪɪŋ/",
+    "definition_en": "a piece-dyeing method where fabric is circulated in a closed jet machine; suitable for knit and small lots",
+    "definition_zh": "溢流染色,匹染方式,适合针织和小批量多色",
+    "example": "Jet dyeing is flexible for small-lot multi-color knits."
+  },
+  {
+    "term": "continuous dyeing",
+    "full_form": "continuous dyeing (pad-dry-cure)",
+    "category": "dyeing_finishing",
+    "phonetic": "/kənˈtɪnjuəs ˈdaɪɪŋ/",
+    "definition_en": "a pad-dry-cure or pad-steam process for high-volume fabric dyeing; efficient for large lots of single color",
+    "definition_zh": "连续染色,适合大批量单色,效率高",
+    "example": "Continuous dyeing is cost-effective for 10,000+ kg single-color runs."
+  },
+  {
+    "term": "lab dip",
+    "full_form": "lab dip / laboratory dip",
+    "category": "dyeing_finishing",
+    "phonetic": "/læb dɪp/",
+    "definition_en": "a small fabric sample dyed in the lab to match a target color (Pantone TCX/TPX) before bulk production",
+    "definition_zh": "对色样,实验室染色小样,大货前客户签收",
+    "example": "We need 4 lab dips signed off before bulk dyeing."
+  },
+  {
+    "term": "Delta E",
+    "full_form": "Delta E (color difference)",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˈdeltə iː/",
+    "definition_en": "a numerical measure of color difference under CIELab; <1.0 imperceptible, 1-2 acceptable, >2 visible",
+    "definition_zh": "色差值,CIELab 标准,数字越小越接近",
+    "example": "Delta E under 1.0 is acceptable for most color matches."
+  },
+  {
+    "term": "Pantone TCX",
+    "full_form": "Pantone Textile Cotton eXtended",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˈpæntəʊn ˌtiː siː ˈeks/",
+    "definition_en": "a Pantone color system for cotton-based textiles, used as the standard for fabric color matching",
+    "definition_zh": "潘通 TCX,棉基纺织色卡",
+    "example": "We matched the lab dip to Pantone TCX 19-4052 within dE 1.0."
+  },
+  {
+    "term": "pre-shrunk",
+    "full_form": "pre-shrunk (compacting)",
+    "category": "dyeing_finishing",
+    "phonetic": "/priː ʃrʌŋk/",
+    "definition_en": "a finishing process that mechanically compacts the fabric to remove residual shrinkage, often to ±3%",
+    "definition_zh": "预缩,机械压实减少水洗缩水",
+    "example": "Pre-shrunk jersey holds its size after home laundering."
+  },
+  {
+    "term": "mercerized",
+    "full_form": "mercerized finish",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˈmɜːsəraɪzd/",
+    "definition_en": "treatment of cotton with concentrated NaOH to swell the fiber, increasing luster, strength and dye affinity",
+    "definition_zh": "丝光,NaOH 处理后表面光泽好、强力高",
+    "example": "Mercerized cotton jersey has a subtle luster on the face."
+  },
+  {
+    "term": "singed",
+    "full_form": "singeing finish",
+    "category": "dyeing_finishing",
+    "phonetic": "/sɪndʒd/",
+    "definition_en": "a finishing process that burns off surface fuzz/hairiness from fabric by passing over a gas flame or hot plate, giving a cleaner surface",
+    "definition_zh": "烧毛,烧去表面毛羽,布面光洁",
+    "example": "Singeing at 1100°C cleans the surface for luster."
+  },
+  {
+    "term": "softener",
+    "full_form": "softener (silicone vs non-silicone)",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˈsɒfnə/",
+    "definition_en": "a finishing chemical that imparts soft hand; silicone gives slick feel, non-silicone (hydrophilic) preserves wicking",
+    "definition_zh": "柔软剂,硅油滑爽、非硅亲水",
+    "example": "Use non-silicone softener on performance fabric to keep wicking."
+  },
+  {
+    "term": "bleached",
+    "full_form": "bleached",
+    "category": "dyeing_finishing",
+    "phonetic": "/bliːtʃt/",
+    "definition_en": "fabric treated with hydrogen peroxide or chlorine to remove natural color, preparing for dyeing or printing",
+    "definition_zh": "漂白,去除天然色素,便于染色印花",
+    "example": "The greige fabric is bleached before reactive dyeing."
+  },
+  {
+    "term": "GSM loss",
+    "full_form": "GSM loss in finishing",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˌdʒiː ˌes ˈem lɒs/",
+    "definition_en": "the percentage decrease in fabric weight from greige to finished state, typically 3-8% on cotton knit",
+    "definition_zh": "克重损失,坯布到成品克重减少比例",
+    "example": "Compensate the 5% GSM loss by knitting greige heavier."
+  },
+  {
+    "term": "hydrophilic finish",
+    "full_form": "hydrophilic finish",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˌhaɪdrəˈfɪlɪk ˈfɪnɪʃ/",
+    "definition_en": "a chemical finish that makes synthetic fabric wick moisture, used in activewear",
+    "definition_zh": "亲水整理,提高化纤吸湿性,运动面料常用",
+    "example": "Hydrophilic finish on polyester for moisture management."
+  },
+  {
+    "term": "digital print",
+    "full_form": "digital textile printing",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈdɪdʒɪtl prɪnt/",
+    "definition_en": "inkjet printing of fabric directly from a digital file, no screens required; ideal for small lots and complex multi-color designs",
+    "definition_zh": "数码印花,喷墨直印,适合小批量多色复杂花型",
+    "example": "Digital print allows photographic detail on 14-color designs."
+  },
+  {
+    "term": "rotary screen",
+    "full_form": "rotary screen printing",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈrəʊtəri skriːn/",
+    "definition_en": "a cylindrical screen continuously rotates while fabric passes under it, ideal for high-volume runs of repeating patterns",
+    "definition_zh": "圆网印花,适合大批量重复图案",
+    "example": "Rotary screen print runs at 30 m/min on a 5,000 m bulk order."
+  },
+  {
+    "term": "flat screen",
+    "full_form": "flat screen printing (flatbed)",
+    "category": "printing_embroidery",
+    "phonetic": "/flæt skriːn/",
+    "definition_en": "a flat screen printing method where each color is printed through a separate screen; flexible for medium lots and detailed patterns",
+    "definition_zh": "平网印花,适合中等批量和细节图案",
+    "example": "Flat screen handles the 4 metallic colors cleanly."
+  },
+  {
+    "term": "sublimation",
+    "full_form": "sublimation printing",
+    "category": "printing_embroidery",
+    "phonetic": "/ˌsʌblɪˈmeɪʃn/",
+    "definition_en": "a heat transfer process where dye sublimates into polyester fibers; vivid, durable prints on polyester",
+    "definition_zh": "热升华印花,染料升华进入涤纶,色彩鲜艳牢固",
+    "example": "Sublimation print is widely used on polyester sportswear."
+  },
+  {
+    "term": "pigment print",
+    "full_form": "pigment printing",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈpɪɡmənt prɪnt/",
+    "definition_en": "printing with insoluble pigments bound to fabric by a binder; cheap and versatile but slightly stiffer hand",
+    "definition_zh": "涂料印花,用粘合剂固着,成本低,手感略硬",
+    "example": "Pigment print is the most economical for cotton T-shirts."
+  },
+  {
+    "term": "reactive print",
+    "full_form": "reactive printing",
+    "category": "printing_embroidery",
+    "phonetic": "/riˈæktɪv prɪnt/",
+    "definition_en": "printing with reactive dyes that bond to cellulose; soft hand and high wash fastness",
+    "definition_zh": "活性印花,与纤维共价结合,手感柔软、牢度好",
+    "example": "Reactive print is the premium choice for cotton jersey."
+  },
+  {
+    "term": "strike-off",
+    "full_form": "strike-off (print sample)",
+    "category": "printing_embroidery",
+    "phonetic": "/straɪk ɒf/",
+    "definition_en": "a small printed sample on the actual fabric for color and registration approval before bulk production",
+    "definition_zh": "印花打样,大货前颜色和套准签收",
+    "example": "Strike-off approval is required before bulk print."
+  },
+  {
+    "term": "registration",
+    "full_form": "registration tolerance",
+    "category": "printing_embroidery",
+    "phonetic": "/ˌredʒɪˈstreɪʃn/",
+    "definition_en": "the alignment accuracy of multiple colors in a print, measured in mm; tighter is better",
+    "definition_zh": "套准,多色对齐精度,数字越小越精准",
+    "example": "We hold registration tolerance of 0.3 mm on 12-color prints."
+  },
+  {
+    "term": "color separation",
+    "full_form": "color separation",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈkʌlə ˌsepəˈreɪʃn/",
+    "definition_en": "the process of separating a multi-color artwork into individual channels/screen for each color",
+    "definition_zh": "分色,把多色设计稿拆成每色一个通道",
+    "example": "Color separation for 12 colors is included in the setup fee."
+  },
+  {
+    "term": "satin stitch",
+    "full_form": "satin stitch (embroidery)",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈsætɪn stɪtʃ/",
+    "definition_en": "a tight zigzag stitch for filling areas; produces a smooth, lustrous surface; used for narrow bands and text",
+    "definition_zh": "缎纹绣,紧密之字针,用于窄带和文字",
+    "example": "Satin stitch at 0.4 mm pitch gives clean logo edges."
+  },
+  {
+    "term": "chain stitch",
+    "full_form": "chain stitch (embroidery)",
+    "category": "printing_embroidery",
+    "phonetic": "/tʃeɪn stɪtʃ/",
+    "definition_en": "a looped stitch that resembles a chain; used for outlines, running stitches, and decorative effects",
+    "definition_zh": "链式绣,环环相扣,常用于轮廓和装饰",
+    "example": "Chain stitch outlines the embroidery logo."
+  },
+  {
+    "term": "fill stitch",
+    "full_form": "fill stitch (tatami)",
+    "category": "printing_embroidery",
+    "phonetic": "/fɪl stɪtʃ/",
+    "definition_en": "a layered embroidery stitch with rows in alternating directions; used for large filled areas",
+    "definition_zh": "填充绣(榻榻米),多层叠加,适合大面积色块",
+    "example": "Fill stitch is used for the body of an embroidered badge."
+  },
+  {
+    "term": "toweling embroidery",
+    "full_form": "toweling embroidery (chenille)",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈtaʊəlɪŋ ˌembrɔɪˈdri/",
+    "definition_en": "a raised, fluffy embroidery effect using a looped pile yarn, used in decorative and varsity-style apparel",
+    "definition_zh": "毛巾绣(雪尼尔),凸起毛圈效果,装饰感强",
+    "example": "Toweling embroidery gives a varsity letterman look."
+  },
+  {
+    "term": "sequin embroidery",
+    "full_form": "sequin embroidery",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈsiːkwɪn ˌembrɔɪˈdri/",
+    "definition_en": "embroidery with sequins attached; used in eveningwear and decorative garments",
+    "definition_zh": "珠片绣,装饰感强,用于礼服和装饰",
+    "example": "Sequin embroidery needs a special attachment on the machine."
+  },
+  {
+    "term": "applique",
+    "full_form": "applique embroidery",
+    "category": "printing_embroidery",
+    "phonetic": "/əˈplɪːkeɪ/",
+    "definition_en": "a technique where fabric pieces are sewn onto a base fabric, often with embroidered edges",
+    "definition_zh": "贴布绣,把布片缝在底布上,常配绣边",
+    "example": "Applique reduces thread count and adds dimension."
+  },
+  {
+    "term": "chenille",
+    "full_form": "chenille yarn / embroidery",
+    "category": "printing_embroidery",
+    "phonetic": "/ʃəˈniːl/",
+    "definition_en": "a fuzzy, caterpillar-like yarn or embroidery effect with raised pile",
+    "definition_zh": "雪尼尔线/绣,凸起毛茸效果",
+    "example": "Chenille patches are popular in streetwear."
+  },
+  {
+    "term": "eyelet",
+    "full_form": "eyelet embroidery (cutwork)",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈaɪlət/",
+    "definition_en": "an embroidery with small cut-out holes, finished with stitching; decorative and breathable",
+    "definition_zh": "镂空绣,剪孔后绣边装饰,透气",
+    "example": "Eyelet embroidery is used in summer blouses."
+  },
+  {
+    "term": "backing",
+    "full_form": "embroidery backing (tear-away / cut-away)",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈbækɪŋ/",
+    "definition_en": "stabilizing material placed under the fabric during embroidery; tear-away for knits, cut-away for stretch and stability",
+    "definition_zh": "绣花衬底,撕衬适合针织,切衬适合弹性布",
+    "example": "Use cut-away backing on stretch jersey for embroidery."
+  },
+  {
+    "term": "white underbase",
+    "full_form": "white underbase (print)",
+    "category": "printing_embroidery",
+    "phonetic": "/waɪt ˈʌndəbeɪs/",
+    "definition_en": "a layer of white ink printed first on colored fabric to make subsequent colors appear vibrant",
+    "definition_zh": "白底层,在色布上先印白墨让后续色更鲜艳",
+    "example": "Light blue base needs a white underbase for the print to pop."
+  },
+  {
+    "term": "topping film",
+    "full_form": "water-soluble topping film",
+    "category": "printing_embroidery",
+    "phonetic": "/ˈtɒpɪŋ fɪlm/",
+    "definition_en": "a transparent film placed on top of the fabric during embroidery to keep stitches raised on textured surfaces; dissolves in water",
+    "definition_zh": "水溶性上膜,绣花时盖在布上让针迹立起,水溶去除",
+    "example": "Topping film is standard for toweling and terry embroidery."
+  },
+  {
+    "term": "hand feel",
+    "full_form": "hand feel",
+    "category": "dyeing_finishing",
+    "phonetic": "/hænd fiːl/",
+    "definition_en": "the tactile sensation of a fabric — soft, crisp, smooth, stiff, etc.",
+    "definition_zh": "织物的手感(柔软、挺括、滑爽等)",
+    "example": "We need a softer hand feel for this t-shirt fabric."
+  },
+  {
+    "term": "GSM loss",
+    "full_form": "GSM loss",
+    "category": "dyeing_finishing",
+    "phonetic": "/ˌdʒiː es ɛm lɒs/",
+    "definition_en": "reduction in fabric weight after wet processing",
+    "definition_zh": "染整后克重损失",
+    "example": "A GSM loss of 3 to 5 percent is normal after washing."
+  },
+  {
+    "term": "course",
+    "full_form": "course",
+    "category": "weaving_knitting",
+    "phonetic": "/kɔːrs/",
+    "definition_en": "a horizontal row of knit stitches",
+    "definition_zh": "针织物横列(一行线圈)",
+    "example": "We increased the courses per inch to get a denser fabric."
+  },
+  {
+    "term": "wale",
+    "full_form": "wale",
+    "category": "weaving_knitting",
+    "phonetic": "/weɪl/",
+    "definition_en": "a vertical column of knit stitches",
+    "definition_zh": "针织物纵行(一列线圈)",
+    "example": "A higher wales count means finer knit construction."
+  },
+  {
+    "term": "registration",
+    "full_form": "registration",
+    "category": "printing_embroidery",
+    "phonetic": "/ˌrɛdʒɪˈstreɪʃən/",
+    "definition_en": "precise alignment of multiple color screens in printing",
+    "definition_zh": "印花套色对位精度",
+    "example": "Misregistration of more than 0.3mm is not acceptable."
+  },
+  {
+    "term": "siro-spun",
+    "full_form": "siro-spun",
+    "category": "yarn_sourcing",
+    "phonetic": "/ˈsɪəroʊ spʌn/",
+    "definition_en": "a two-strand compact spinning method for smoother yarn",
+    "definition_zh": "赛络纺(双股紧密纺)",
+    "example": "Siro-spun yarn gives better hairiness and strength."
+  },
+  {
+    "term": "combed",
+    "full_form": "combed",
+    "category": "yarn_sourcing",
+    "phonetic": "/koʊmd/",
+    "definition_en": "cotton that has been combed to remove short fibers, giving smoother yarn",
+    "definition_zh": "精梳(去除短纤维,纱更光洁)",
+    "example": "We only use combed cotton for premium tee shirts."
+  },
+  {
+    "term": "sublimation print",
+    "full_form": "sublimation print",
+    "category": "printing_embroidery",
+    "phonetic": "/ˌsʌblɪˈmeɪʃən prɪnt/",
+    "definition_en": "dye transfer via heat into polyester fabric; produces vivid, no-hand-feel prints",
+    "definition_zh": "热升华印花(聚酯专用,色彩鲜艳)",
+    "example": "Sublimation print works best on white polyester."
+  },
+  {
+    "term": "tech pack",
+    "full_form": "technical package",
+    "category": "shirt_production",
+    "phonetic": "/ˈtek pæk/",
+    "definition_en": "a complete set of documents that defines how a garment is to be produced, including spec, BOM, artwork, measurements, and construction notes",
+    "definition_zh": "技术包 / 工艺单",
+    "example": "We received the buyer's tech pack last week and started marker making."
+  },
+  {
+    "term": "BOM",
+    "full_form": "Bill of Materials",
+    "category": "shirt_production",
+    "phonetic": "/biː əʊ em/",
+    "definition_en": "a list of all materials, trims, and components needed to produce one garment",
+    "definition_zh": "物料清单",
+    "example": "The BOM for this shirt includes shell fabric, interlining, buttons, thread, and labels."
+  },
+  {
+    "term": "marker",
+    "full_form": "marker",
+    "category": "shirt_production",
+    "phonetic": "/ˈmɑːkə/",
+    "definition_en": "a paper or digital layout of all pattern pieces arranged for cutting to minimize fabric waste",
+    "definition_zh": "排料图 / 排料样板",
+    "example": "Marker efficiency for this style is 86% on 145 cm fabric."
+  },
+  {
+    "term": "marker efficiency",
+    "full_form": "marker efficiency",
+    "category": "shirt_production",
+    "phonetic": "/ˈmɑːkə ɪˈfɪʃənsi/",
+    "definition_en": "the ratio of fabric used by pattern pieces to total fabric used in the lay",
+    "definition_zh": "排料利用率",
+    "example": "We aim for marker efficiency above 84% on cotton poplin."
+  },
+  {
+    "term": "spreading",
+    "full_form": "spreading / lay",
+    "category": "shirt_production",
+    "phonetic": "/ˈspredɪŋ/",
+    "definition_en": "the process of stacking multiple plies of fabric on the cutting table in preparation for cutting",
+    "definition_zh": "拖料 / 铺料",
+    "example": "We do spreading face-up, face-down alternating to avoid shade variation."
+  },
+  {
+    "term": "plies",
+    "full_form": "plies (of fabric)",
+    "category": "shirt_production",
+    "phonetic": "/plaɪz/",
+    "definition_en": "the number of layers of fabric stacked in a single lay for cutting",
+    "definition_zh": "铺料层数",
+    "example": "For this 110 GSM cotton we run 12 plies per lay."
+  },
+  {
+    "term": "notch",
+    "full_form": "notch",
+    "category": "shirt_production",
+    "phonetic": "/nɒtʃ/",
+    "definition_en": "a small V-cut or mark on a cut piece used to align panels during sewing",
+    "definition_zh": "剪口 / 定位缺口",
+    "example": "Notches on the sleeve cap help align it to the armscye."
+  },
+  {
+    "term": "drill mark",
+    "full_form": "drill mark",
+    "category": "shirt_production",
+    "phonetic": "/drɪl mɑːk/",
+    "definition_en": "a small hole punched through stacked fabric layers to mark a sewing reference point",
+    "definition_zh": "钻孔定位标记",
+    "example": "Drill marks on the pocket position ensure consistent placement on every shirt."
+  },
+  {
+    "term": "bundle",
+    "full_form": "bundle",
+    "category": "shirt_production",
+    "phonetic": "/ˈbʌndl/",
+    "definition_en": "a tied set of cut pieces grouped for one sewing operation in a bundle system",
+    "definition_zh": "捆扎分批件",
+    "example": "Each bundle contains 10 pieces for one operation."
+  },
+  {
+    "term": "seam allowance",
+    "full_form": "seam allowance",
+    "category": "shirt_production",
+    "phonetic": "/siːm əˈlaʊəns/",
+    "definition_en": "the extra fabric left at the edge of a panel for sewing the seam",
+    "definition_zh": "缝份",
+    "example": "Standard seam allowance for shirts is 1 cm on side seams."
+  },
+  {
+    "term": "SPI",
+    "full_form": "Stitches Per Inch",
+    "category": "shirt_production",
+    "phonetic": "/es piː aɪ/",
+    "definition_en": "the number of stitches in one inch of seam, indicating seam strength and appearance",
+    "definition_zh": "每英寸针数",
+    "example": "Side seam is 8 SPI and topstitch is 10 to 12 SPI."
+  },
+  {
+    "term": "flat-felled seam",
+    "full_form": "flat-felled seam",
+    "category": "shirt_production",
+    "phonetic": "/flæt feld siːm/",
+    "definition_en": "a strong seam where one raw edge is enclosed and the other is topstitched flat",
+    "definition_zh": "包边折边缝 / 来去缝",
+    "example": "We use a flat-felled seam on the side seam of premium shirts."
+  },
+  {
+    "term": "French seam",
+    "full_form": "French seam",
+    "category": "shirt_production",
+    "phonetic": "/frentʃ siːm/",
+    "definition_en": "a seam that encloses the raw edges inside, used on light or sheer fabrics",
+    "definition_zh": "法式缝 / 内包缝",
+    "example": "French seam is used on the sleeve placket to enclose raw edges."
+  },
+  {
+    "term": "buttonhole",
+    "full_form": "buttonhole",
+    "category": "shirt_production",
+    "phonetic": "/ˈbʌtnhəʊl/",
+    "definition_en": "a slit finished with stitching to allow a button to pass through",
+    "definition_zh": "扣眼 / 锁眼",
+    "example": "Flat buttonholes are 16 stitches per cm on the front placket."
+  },
+  {
+    "term": "shank button",
+    "full_form": "shank button",
+    "category": "shirt_production",
+    "phonetic": "/ʃæŋk ˈbʌtn/",
+    "definition_en": "a button with a small loop on the back, sewn on with the shank, not through the face",
+    "definition_zh": "有脚扣 / 柄扣",
+    "example": "Shank buttons are used on heavy coats, not standard shirts."
+  },
+  {
+    "term": "interlining",
+    "full_form": "interlining",
+    "category": "shirt_production",
+    "phonetic": "/ˈɪntəlaɪnɪŋ/",
+    "definition_en": "a layer of fabric placed between the shell and the lining to add body, shape, or reinforcement",
+    "definition_zh": "衬 / 衬布 / 中间衬",
+    "example": "We use a 60 GSM knit fusible interlining in the collar and cuff."
+  },
+  {
+    "term": "fusible interlining",
+    "full_form": "fusible interlining",
+    "category": "shirt_production",
+    "phonetic": "/ˈfjuːzəbl ˈɪntəlaɪnɪŋ/",
+    "definition_en": "an interlining coated with hot-melt adhesive that bonds to the shell under heat and pressure",
+    "definition_zh": "粘合衬",
+    "example": "Fusible interlining is pressed at 145 degrees for 12 seconds."
+  },
+  {
+    "term": "fusing",
+    "full_form": "fusing",
+    "category": "shirt_production",
+    "phonetic": "/ˈfjuːzɪŋ/",
+    "definition_en": "the process of bonding fusible interlining to the shell fabric using a heat press",
+    "definition_zh": "压衬 / 粘合",
+    "example": "Pre-fuse test is required before bulk fusing on the collar."
+  },
+  {
+    "term": "peel strength",
+    "full_form": "peel strength",
+    "category": "shirt_production",
+    "phonetic": "/piːl streŋθ/",
+    "definition_en": "the force required to separate the fusible interlining from the shell, measured in kg per 2.5 cm",
+    "definition_zh": "剥离强度",
+    "example": "Peel strength of knit fusible on cotton poplin must be above 1.5 kg per 2.5 cm."
+  },
+  {
+    "term": "pressing cloth",
+    "full_form": "pressing cloth",
+    "category": "shirt_production",
+    "phonetic": "/ˈpresɪŋ klɒθ/",
+    "definition_en": "a thin cloth placed between the iron and the garment to prevent shine or scorching",
+    "definition_zh": "烫布",
+    "example": "Use a pressing cloth on dark colors to avoid iron shine."
+  },
+  {
+    "term": "iron shine",
+    "full_form": "iron shine",
+    "category": "shirt_production",
+    "phonetic": "/ˈaɪən ʃaɪn/",
+    "definition_en": "a glossy mark on fabric caused by ironing at too high a temperature or without a pressing cloth",
+    "definition_zh": "烫光 / 烫痕",
+    "example": "Dark navy shirts easily show iron shine if pressed without a cloth."
+  },
+  {
+    "term": "AQL",
+    "full_form": "Acceptable Quality Limit",
+    "category": "shirt_production",
+    "phonetic": "/eɪ kjuː el/",
+    "definition_en": "the maximum acceptable number of defective items in a sampling plan, used in final inspection",
+    "definition_zh": "可接受质量限",
+    "example": "We use AQL 1.5 for major, 2.5 for minor, 4.0 for critical defects."
+  },
+  {
+    "term": "DUPRO",
+    "full_form": "During Production Inspection",
+    "category": "shirt_production",
+    "phonetic": "/ˈdjuːprəʊ/",
+    "definition_en": "an inspection conducted when production is 30% to 50% complete to catch issues early",
+    "definition_zh": "中期验货 / 生产中检验",
+    "example": "DUPRO is scheduled when 30% of the order is sewn."
+  },
+  {
+    "term": "PSI",
+    "full_form": "Pre-Shipment Inspection",
+    "category": "shirt_production",
+    "phonetic": "/piː es aɪ/",
+    "definition_en": "the final inspection conducted when 80% or more of the order is packed, ready for shipment",
+    "definition_zh": "装柜前检验 / 尾期检验",
+    "example": "PSI is done at 100% packed, before container loading."
+  },
+  {
+    "term": "polybag",
+    "full_form": "polybag",
+    "category": "shirt_production",
+    "phonetic": "/ˈpɒlibæɡ/",
+    "definition_en": "a clear plastic bag used to pack one garment for retail or shipping",
+    "definition_zh": "胶袋 / 塑料袋",
+    "example": "Each shirt goes into a clear polybag with a small desiccant."
+  },
+  {
+    "term": "shipping mark",
+    "full_form": "shipping mark / carton mark",
+    "category": "shirt_production",
+    "phonetic": "/ˈʃɪpɪŋ mɑːk/",
+    "definition_en": "printed information on the outside of export cartons identifying the buyer, PO, style, and destination",
+    "definition_zh": "箱唛 / 运输标记",
+    "example": "Shipping mark is 'STYLEHOUSE UK' in black on two sides of the carton."
+  },
+  {
+    "term": "carton",
+    "full_form": "carton / master carton",
+    "category": "shirt_production",
+    "phonetic": "/ˈkɑːtn/",
+    "definition_en": "the outer corrugated box used to pack multiple polybagged garments for export",
+    "definition_zh": "外箱 / 出口纸箱",
+    "example": "Master carton is 5-ply, holding 12 pieces, 60 x 40 x 30 cm."
+  },
+  {
+    "term": "GSM",
+    "full_form": "Grams per Square Meter",
+    "category": "shirt_production",
+    "phonetic": "/dʒiː es em/",
+    "definition_en": "the weight of fabric per square meter, indicating fabric thickness and hand feel",
+    "definition_zh": "克重 / 每平方米克数",
+    "example": "Poplin shirting for this shirt is 110 GSM, plus or minus 5% tolerance."
+  },
+  {
+    "term": "Delta E",
+    "full_form": "Delta E (color difference)",
+    "category": "shirt_production",
+    "phonetic": "/ˈdeltə iː/",
+    "definition_en": "a numerical measure of color difference between two samples; lower is closer, less than 2 is acceptable",
+    "definition_zh": "色差值",
+    "example": "Bulk lot Delta E is 1.8 against the lab dip, at the edge of the 2.0 tolerance."
+  },
+  {
+    "term": "POP",
+    "full_form": "Point of Purchase",
+    "category": "shirt_production",
+    "phonetic": "/piː əʊ piː/",
+    "definition_en": "the retail display location where the product is sold, used in packaging and labeling decisions",
+    "definition_zh": "零售卖点",
+    "example": "Each polybag has a sticker with the POP barcode for the retail store."
+  },
+  {
+    "term": "Proforma Invoice",
+    "full_form": "Proforma Invoice (PI)",
+    "category": "order_management",
+    "phonetic": "/prəˈfɔːmə ˈɪnvɔɪs/",
+    "definition_en": "a preliminary invoice sent to the buyer before shipment, used for payment, customs, and license applications",
+    "definition_zh": "形式发票",
+    "example": "Please find the Proforma Invoice attached, valid for 30 days."
+  },
+  {
+    "term": "Sales Contract",
+    "full_form": "Sales Contract (SC)",
+    "category": "order_management",
+    "phonetic": "/seɪlz ˈkɒntrækt/",
+    "definition_en": "a binding agreement between buyer and seller covering terms, price, delivery, and payment",
+    "definition_zh": "销售合同",
+    "example": "Both parties signed the Sales Contract before the deposit was wired."
+  },
+  {
+    "term": "Purchase Order",
+    "full_form": "Purchase Order (PO)",
+    "category": "order_management",
+    "phonetic": "/ˈpɜːtʃəs ˈɔːdə/",
+    "definition_en": "a commercial document issued by the buyer to the seller confirming the order details",
+    "definition_zh": "采购订单",
+    "example": "PO 4521 was issued on 5 June for 3,000 shirts."
+  },
+  {
+    "term": "TT",
+    "full_form": "Telegraphic Transfer",
+    "category": "order_management",
+    "phonetic": "/tiː tiː/",
+    "definition_en": "an electronic bank-to-bank wire transfer, the most common payment method in China export",
+    "definition_zh": "电汇",
+    "example": "We accept payment by TT 30% deposit, 70% balance before shipment."
+  },
+  {
+    "term": "LC",
+    "full_form": "Letter of Credit",
+    "category": "order_management",
+    "phonetic": "/el siː/",
+    "definition_en": "a bank guarantee of payment to the seller upon presentation of compliant shipping documents",
+    "definition_zh": "信用证",
+    "example": "The LC at sight was opened by the buyer's bank in Sydney."
+  },
+  {
+    "term": "DP",
+    "full_form": "Documents against Payment",
+    "category": "order_management",
+    "phonetic": "/diː piː/",
+    "definition_en": "a payment method where the buyer pays to receive the shipping documents",
+    "definition_zh": "付款交单",
+    "example": "We agreed on DP at sight for this trial order."
+  },
+  {
+    "term": "DA",
+    "full_form": "Documents against Acceptance",
+    "category": "order_management",
+    "phonetic": "/diː eɪ/",
+    "definition_en": "a payment method where the buyer accepts a draft to receive the documents, paying later",
+    "definition_zh": "承兑交单",
+    "example": "DA 30 days is common in the Middle East market."
+  },
+  {
+    "term": "deposit",
+    "full_form": "deposit / down payment",
+    "category": "order_management",
+    "phonetic": "/dɪˈpɒzɪt/",
+    "definition_en": "an upfront partial payment, usually 30%, made by the buyer to confirm the order",
+    "definition_zh": "定金 / 预付款",
+    "example": "The deposit is 30% of the invoice value, paid upon PI signing."
+  },
+  {
+    "term": "balance",
+    "full_form": "balance payment",
+    "category": "order_management",
+    "phonetic": "/ˈbæləns/",
+    "definition_en": "the remaining payment, usually 70%, made before shipment or against B/L copy",
+    "definition_zh": "尾款 / 余款",
+    "example": "Balance is paid against B/L copy, original B/L is sent by courier after full payment."
+  },
+  {
+    "term": "ETD",
+    "full_form": "Estimated Time of Departure",
+    "category": "order_management",
+    "phonetic": "/iː tiː diː/",
+    "definition_en": "the estimated date the vessel leaves the port of origin",
+    "definition_zh": "预计开船日 / 离港日",
+    "example": "ETD Shanghai is 28 September, ETA Sydney is 15 October."
+  },
+  {
+    "term": "ETA",
+    "full_form": "Estimated Time of Arrival",
+    "category": "order_management",
+    "phonetic": "/iː tiː eɪ/",
+    "definition_en": "the estimated date the vessel arrives at the destination port",
+    "definition_zh": "预计到港日",
+    "example": "ETA is 13 to 15 days after ETD for the Shanghai to Sydney route."
+  },
+  {
+    "term": "booking",
+    "full_form": "shipping booking",
+    "category": "order_management",
+    "phonetic": "/ˈbʊkɪŋ/",
+    "definition_en": "the reservation of cargo space on a vessel with a shipping line or forwarder",
+    "definition_zh": "订舱",
+    "example": "We made the booking with COSCO for the 28 September ETD."
+  },
+  {
+    "term": "cut-off date",
+    "full_form": "cut-off date",
+    "category": "order_management",
+    "phonetic": "/kʌt ɒf deɪt/",
+    "definition_en": "the last date cargo or documents must be delivered to the port or shipping line",
+    "definition_zh": "截港日 / 截关日",
+    "example": "CY cut-off is 26 September, 2 days before ETD."
+  },
+  {
+    "term": "Bill of Lading",
+    "full_form": "Bill of Lading (B/L)",
+    "category": "order_management",
+    "phonetic": "/bɪl əv ˈleɪdɪŋ/",
+    "definition_en": "a legal document issued by the carrier acknowledging receipt of cargo for shipment",
+    "definition_zh": "提单",
+    "example": "The original B/L is sent by courier after we receive the full balance."
+  },
+  {
+    "term": "OEM",
+    "full_form": "Original Equipment Manufacturer",
+    "category": "order_management",
+    "phonetic": "/əʊ iː em/",
+    "definition_en": "a supplier that makes products to the buyer's design and specification",
+    "definition_zh": "代工 / 贴牌生产",
+    "example": "This is an OEM order — you provide the tech pack, we produce."
+  },
+  {
+    "term": "ODM",
+    "full_form": "Original Design Manufacturer",
+    "category": "order_management",
+    "phonetic": "/əʊ diː em/",
+    "definition_en": "a supplier that designs and manufactures a product, which the buyer then brands",
+    "definition_zh": "设计代工 / 自有设计制造",
+    "example": "ODM orders require a side letter on IP ownership."
+  },
+  {
+    "term": "force majeure",
+    "full_form": "force majeure",
+    "category": "exception_handling",
+    "phonetic": "/fɔːs mæˈʒɜː/",
+    "definition_en": "an unforeseeable event (war, earthquake, pandemic, port strike) that prevents contract performance and excuses delay",
+    "definition_zh": "不可抗力",
+    "example": "The port strike was declared force majeure by the Shanghai port authority."
+  },
+  {
+    "term": "expedite",
+    "full_form": "expedite / rush",
+    "category": "exception_handling",
+    "phonetic": "/ˈekspɪdaɪt/",
+    "definition_en": "to speed up production or shipping, usually at additional cost, to meet a revised deadline",
+    "definition_zh": "加急 / 赶工",
+    "example": "We will expedite the re-dye at extra cost on our side."
+  },
+  {
+    "term": "rework",
+    "full_form": "rework / repair",
+    "category": "exception_handling",
+    "phonetic": "/ˌriːˈwɜːk/",
+    "definition_en": "to fix defects on finished or semi-finished pieces so they meet the original spec",
+    "definition_zh": "返工 / 修补",
+    "example": "All 600 pieces need rework on the bar tacks at the factory's cost."
+  },
+  {
+    "term": "replacement",
+    "full_form": "replacement",
+    "category": "exception_handling",
+    "phonetic": "/rɪˈpleɪsmənt/",
+    "definition_en": "shipping new pieces to replace defective ones, often in a separate shipment",
+    "definition_zh": "换货 / 补件",
+    "example": "Replacement pieces will ship by air at our cost."
+  },
+  {
+    "term": "scrap",
+    "full_form": "scrap / off-spec",
+    "category": "exception_handling",
+    "phonetic": "/skræp/",
+    "definition_en": "pieces that cannot be reworked and are disposed of, counted as waste",
+    "definition_zh": "报废 / 不合格",
+    "example": "About 2% of the lot was scrapped and could not be reworked."
+  },
+  {
+    "term": "credit note",
+    "full_form": "credit note",
+    "category": "exception_handling",
+    "phonetic": "/ˈkredɪt nəʊt/",
+    "definition_en": "a document issued by the seller reducing the buyer's payable amount, often for defects or goodwill",
+    "definition_zh": "贷项通知单",
+    "example": "We issued a credit note for USD 1,500 to cover the QC cost."
+  },
+  {
+    "term": "debit note",
+    "full_form": "debit note",
+    "category": "exception_handling",
+    "phonetic": "/ˈdebɪt nəʊt/",
+    "definition_en": "a document issued by the seller to the buyer for additional charges owed",
+    "definition_zh": "借项通知单",
+    "example": "The debit note for the air-freight surcharge was attached to the invoice."
+  },
+  {
+    "term": "claim",
+    "full_form": "claim / complaint",
+    "category": "exception_handling",
+    "phonetic": "/kleɪm/",
+    "definition_en": "a formal demand by the buyer for compensation due to defects, delay, or other breach",
+    "definition_zh": "索赔 / 投诉",
+    "example": "The buyer filed a claim for USD 5,000 due to delayed delivery."
+  },
+  {
+    "term": "claim prevention",
+    "full_form": "claim prevention",
+    "category": "exception_handling",
+    "phonetic": "/kleɪm prɪˈvenʃn/",
+    "definition_en": "proactive steps taken to address issues before they escalate into a formal claim",
+    "definition_zh": "索赔前置 / 防索赔",
+    "example": "We use credit notes as a claim prevention tool on small issues."
+  },
+  {
+    "term": "8D report",
+    "full_form": "8 Disciplines Problem Solving",
+    "category": "exception_handling",
+    "phonetic": "/eɪt diː rɪˈpɔːt/",
+    "definition_en": "a structured problem-solving method with 8 steps: team, problem, containment, root cause, corrective, implementation, prevention, recognition",
+    "definition_zh": "8D 报告",
+    "example": "We delivered the 8D report within 48 hours, in English."
+  },
+  {
+    "term": "root cause",
+    "full_form": "root cause",
+    "category": "exception_handling",
+    "phonetic": "/ruːt kɔːz/",
+    "definition_en": "the fundamental reason a problem occurred, identified through 5-why or fishbone analysis",
+    "definition_zh": "根本原因",
+    "example": "The root cause was the missing preventive maintenance on the bar tack machine."
+  },
+  {
+    "term": "corrective action",
+    "full_form": "corrective action (CA)",
+    "category": "exception_handling",
+    "phonetic": "/kəˈrektɪv ˈækʃn/",
+    "definition_en": "the immediate action taken to fix the current problem and contain its impact",
+    "definition_zh": "纠正措施",
+    "example": "Corrective action was to replace the worn needle bar immediately."
+  },
+  {
+    "term": "preventive action",
+    "full_form": "preventive action (PA)",
+    "category": "exception_handling",
+    "phonetic": "/prɪˈventɪv ˈækʃn/",
+    "definition_en": "the action taken to eliminate the root cause and prevent the problem from recurring",
+    "definition_zh": "预防措施",
+    "example": "Preventive action is to install a digital counter and update the SOP."
+  },
+  {
+    "term": "CAPA",
+    "full_form": "Corrective and Preventive Action",
+    "category": "exception_handling",
+    "phonetic": "/ˈkæpə/",
+    "definition_en": "a combined register of corrective and preventive actions with owners, due dates, and verification",
+    "definition_zh": "纠正与预防措施",
+    "example": "Each CAPA item has an owner, a due date, and a verification method."
+  },
+  {
+    "term": "production delay",
+    "full_form": "production delay",
+    "category": "exception_handling",
+    "phonetic": "/prəˈdʌkʃn dɪˈleɪ/",
+    "definition_en": "any slip in the planned production schedule, often resulting in a revised ETD",
+    "definition_zh": "生产延期",
+    "example": "A 2-day production delay pushed the ETD from 28 to 30 September."
+  },
+  {
+    "term": "5-why analysis",
+    "full_form": "5-why root cause analysis",
+    "category": "post_mortem",
+    "phonetic": "/faɪv waɪ əˈnæləsɪs/",
+    "definition_en": "a questioning technique that asks 'why' five times to drill from a symptom to the systemic root cause",
+    "definition_zh": "5 个为什么 / 5-why 分析",
+    "example": "We did 5-why on the bar tack skipping and found the missing maintenance system."
+  },
+  {
+    "term": "fishbone diagram",
+    "full_form": "fishbone / Ishikawa diagram",
+    "category": "post_mortem",
+    "phonetic": "/ˈfɪʃbəʊn ˈdaɪəɡræm/",
+    "definition_en": "a cause-and-effect diagram with branches for 6 M's: Man, Machine, Material, Method, Measurement, Milieu",
+    "definition_zh": "鱼骨图 / 石川图",
+    "example": "The fishbone for the bar tack issue had 6 categories, top causes in Machine and Method."
+  },
+  {
+    "term": "Pareto analysis",
+    "full_form": "Pareto analysis (80/20 rule)",
+    "category": "post_mortem",
+    "phonetic": "/pəˈriːtəʊ əˈnæləsɪs/",
+    "definition_en": "a technique that ranks causes by frequency, identifying the vital few that drive most of the impact",
+    "definition_zh": "帕累托分析 / 二八法则",
+    "example": "Pareto showed 60% of defects came from bar tack, so we focused the 5-why there."
+  },
+  {
+    "term": "lessons learned",
+    "full_form": "lessons learned",
+    "category": "post_mortem",
+    "phonetic": "/ˈlesnz lɜːnd/",
+    "definition_en": "documented knowledge from a project about what worked, what did not, and what to do differently",
+    "definition_zh": "经验教训",
+    "example": "We circulated the lessons learned to all production lines."
+  },
+  {
+    "term": "best practice",
+    "full_form": "best practice",
+    "category": "post_mortem",
+    "phonetic": "/best ˈpræktɪs/",
+    "definition_en": "a method or technique that has consistently shown superior results and is recommended for adoption",
+    "definition_zh": "最佳实践",
+    "example": "Daily KPI review is now a best practice across all lines."
+  },
+  {
+    "term": "KPI review",
+    "full_form": "Key Performance Indicator review",
+    "category": "post_mortem",
+    "phonetic": "/keɪ piː aɪ rɪˈvjuː/",
+    "definition_en": "a periodic meeting where actual performance is compared against targets and gaps are discussed",
+    "definition_zh": "KPI 评审",
+    "example": "The monthly KPI review covers OTD, defect rate, COPQ, and claim rate."
+  },
+  {
+    "term": "SOP",
+    "full_form": "Standard Operating Procedure",
+    "category": "post_mortem",
+    "phonetic": "/es əʊ piː/",
+    "definition_en": "a documented step-by-step procedure for performing a routine operation in the factory",
+    "definition_zh": "标准作业程序",
+    "example": "We updated the bar tack SOP to v3.0 with preventive maintenance steps."
+  },
+  {
+    "term": "work instruction",
+    "full_form": "work instruction (WI)",
+    "category": "post_mortem",
+    "phonetic": "/wɜːk ɪnˈstrʌkʃn/",
+    "definition_en": "a detailed document showing how to perform a specific task, often at the operator level",
+    "definition_zh": "作业指导书",
+    "example": "The work instruction for the new bar tack SOP is posted at every station."
+  },
+  {
+    "term": "PDCA",
+    "full_form": "Plan-Do-Check-Act",
+    "category": "post_mortem",
+    "phonetic": "/piː diː siː eɪ/",
+    "definition_en": "a four-step continuous improvement cycle: plan a change, do it, check the result, act to standardize or refine",
+    "definition_zh": "PDCA 循环 / 戴明环",
+    "example": "We run the SOP update on a PDCA cycle over 90 days."
+  },
+  {
+    "term": "Kaizen",
+    "full_form": "Kaizen (continuous improvement)",
+    "category": "post_mortem",
+    "phonetic": "/kaɪˈzen/",
+    "definition_en": "a Japanese philosophy of small, continuous improvements involving all employees",
+    "definition_zh": "改善 / 持续改进",
+    "example": "Each line submits two Kaizen proposals per month."
+  },
+  {
+    "term": "meeting minutes",
+    "full_form": "meeting minutes",
+    "category": "post_mortem",
+    "phonetic": "/ˈmiːtɪŋ ˈmɪnɪts/",
+    "definition_en": "a written record of what was discussed and decided in a meeting, circulated to attendees",
+    "definition_zh": "会议纪要",
+    "example": "I will circulate the meeting minutes within 24 hours."
+  },
+  {
+    "term": "action items",
+    "full_form": "action items",
+    "category": "post_mortem",
+    "phonetic": "/ˈækʃn ˈaɪtəmz/",
+    "definition_en": "specific tasks assigned in a meeting, with an owner and a due date",
+    "definition_zh": "行动项",
+    "example": "Each action item has an owner, a due date, and a status field."
+  },
+  {
+    "term": "COPQ",
+    "full_form": "Cost of Poor Quality",
+    "category": "post_mortem",
+    "phonetic": "/siː əʊ piː kjuː/",
+    "definition_en": "the total cost of rework, scrap, claims, returns, and extra inspection caused by defects",
+    "definition_zh": "质量损失成本",
+    "example": "COPQ for this incident was about USD 8,000."
+  },
+  {
+    "term": "yield rate",
+    "full_form": "yield rate",
+    "category": "post_mortem",
+    "phonetic": "/jiːld reɪt/",
+    "definition_en": "the percentage of input pieces that pass inspection as first-quality, indicating process efficiency",
+    "definition_zh": "一次合格率 / 良率",
+    "example": "Yield rate on the navy line dropped from 96% to 88% during the bar tack issue."
+  },
+  {
+    "term": "defect rate",
+    "full_form": "defect rate",
+    "category": "post_mortem",
+    "phonetic": "/ˈdiːfekt reɪt/",
+    "definition_en": "the percentage of defective pieces in a lot, often measured in DPMO (defects per million opportunities)",
+    "definition_zh": "疵点率",
+    "example": "Defect rate rose to 1.8% in Q3, above the 1.2% target."
+  },
+  {
+    "term": "flyknit",
+    "full_form": "flyknit",
+    "category": "flyknit_weaving",
+    "phonetic": "/ˈflaɪˌnɪt/",
+    "definition_en": "a one-piece knitted upper technology for sports shoes, made on a computer flat knitting machine with no sewing required",
+    "definition_zh": "飞织,一体编织鞋面技术",
+    "example": "We are sourcing a flyknit upper for our new running shoe line."
+  },
+  {
+    "term": "whole-upper",
+    "full_form": "whole-upper one-piece",
+    "category": "flyknit_weaving",
+    "phonetic": "/hoʊl ˈʌpər/",
+    "definition_en": "a fully knitted shoe upper produced in one piece, with the vamp, tongue and collar all integrated",
+    "definition_zh": "整片鞋面,一次成型",
+    "example": "We need the whole-upper knitted in one piece, no assembly seams."
+  },
+  {
+    "term": "computer flat knitting machine",
+    "full_form": "computer flat knitting machine (CFKM)",
+    "category": "flyknit_weaving",
+    "phonetic": "/kəmˈpjuːtər flæt ˈnɪtɪŋ məˈʃiːn/",
+    "definition_en": "a computerized V-bed knitting machine used to produce shaped knit panels such as flyknit uppers",
+    "definition_zh": "电脑横机,全成型针织机",
+    "example": "Our factory runs 200 computer flat knitting machines for upper production."
+  },
+  {
+    "term": "gauge E14",
+    "full_form": "gauge E14 (needles per inch)",
+    "category": "flyknit_weaving",
+    "phonetic": "/ɡeɪdʒ iː fɔːrˈtiːn/",
+    "definition_en": "a needle gauge of 14 needles per inch on a flat knitting machine, used for medium-thickness flyknit uppers",
+    "definition_zh": "机号 E14,每英寸 14 针",
+    "example": "For a medium-weight running upper, gauge E14 is the most common choice."
+  },
+  {
+    "term": "gauge E15",
+    "full_form": "gauge E15 (needles per inch)",
+    "category": "flyknit_weaving",
+    "phonetic": "/ɡeɪdʒ iː fɪfˈtiːn/",
+    "definition_en": "a needle gauge of 15 needles per inch, slightly finer than E14, used for lighter, denser flyknit",
+    "definition_zh": "机号 E15,每英寸 15 针",
+    "example": "Gauge E15 gives a finer, smoother surface for lifestyle flyknit uppers."
+  },
+  {
+    "term": "gauge E18",
+    "full_form": "gauge E18 (needles per inch)",
+    "category": "flyknit_weaving",
+    "phonetic": "/ɡeɪdʒ iː eɪˈtiːn/",
+    "definition_en": "a needle gauge of 18 needles per inch, used for ultra-fine seamless knitting and lightweight uppers",
+    "definition_zh": "机号 E18,每英寸 18 针,细针",
+    "example": "Gauge E18 is for very light, dense, premium running uppers."
+  },
+  {
+    "term": "intarsia",
+    "full_form": "intarsia knitting",
+    "category": "flyknit_weaving",
+    "phonetic": "/ɪnˈtɑːrsiə/",
+    "definition_en": "a knitting technique that knits separate yarn blocks of different colors in the same course, used for logos and color blocks on flyknit uppers",
+    "definition_zh": "嵌花,无虚线提花",
+    "example": "We use intarsia to knit the swoosh logo directly into the upper."
+  },
+  {
+    "term": "jacquard pattern",
+    "full_form": "jacquard pattern",
+    "category": "flyknit_weaving",
+    "phonetic": "/dʒəˈkɑːrd pætərn/",
+    "definition_en": "a multi-color knit pattern produced by selective needle selection, with floats on the reverse side",
+    "definition_zh": "提花花型,贾卡花型",
+    "example": "The jacquard pattern on the upper is breathable yet supportive."
+  },
+  {
+    "term": "tuck stitch",
+    "full_form": "tuck stitch",
+    "category": "flyknit_weaving",
+    "phonetic": "/tʌk stɪtʃ/",
+    "definition_en": "a stitch held on the needle without being knocked over, used to create texture, openness, or 3D structure on a knit upper",
+    "definition_zh": "集圈针,半成型线圈",
+    "example": "We add tuck stitches in the forefoot to improve flexibility."
+  },
+  {
+    "term": "miss stitch",
+    "full_form": "miss stitch (float)",
+    "category": "flyknit_weaving",
+    "phonetic": "/mɪs stɪtʃ/",
+    "definition_en": "a stitch where the yarn floats over the needle without forming a loop, used in jacquard knitting",
+    "definition_zh": "浮线,跳针",
+    "example": "The miss stitch on the reverse side reduces yarn consumption in jacquard."
+  },
+  {
+    "term": "hold stitch",
+    "full_form": "hold stitch",
+    "category": "flyknit_weaving",
+    "phonetic": "/hoʊld stɪtʃ/",
+    "definition_en": "a stitch held on a needle for several courses to create a shaped, slacker area in the knit",
+    "definition_zh": "握持针,hold 针",
+    "example": "Hold stitches are used to shape the toebox curve."
+  },
+  {
+    "term": "yarn carrier",
+    "full_form": "yarn carrier",
+    "category": "flyknit_weaving",
+    "phonetic": "/jɑːrn ˈkæriər/",
+    "definition_en": "a movable feeder on a flat knitting machine that delivers yarn to selected needles",
+    "definition_zh": "纱嘴,导纱器",
+    "example": "We have 12 yarn carriers on the machine for multi-color intarsia."
+  },
+  {
+    "term": "sock-like fit",
+    "full_form": "sock-like fit",
+    "category": "flyknit_weaving",
+    "phonetic": "/sɒk laɪk fɪt/",
+    "definition_en": "a snug, sock-like wearing feel produced by a one-piece flyknit upper with high elasticity",
+    "definition_zh": "袜套式贴合感",
+    "example": "The flyknit upper gives a sock-like fit that wraps the foot."
+  },
+  {
+    "term": "no-sew upper",
+    "full_form": "no-sew upper",
+    "category": "flyknit_weaving",
+    "phonetic": "/noʊ sjuː ˈʌpər/",
+    "definition_en": "a shoe upper assembled without stitching, typically by welding or knitting as one piece",
+    "definition_zh": "无车缝鞋面,一体鞋面",
+    "example": "A no-sew upper cuts labor cost and avoids needle holes in the material."
+  },
+  {
+    "term": "density",
+    "full_form": "density (courses per cm)",
+    "category": "flyknit_weaving",
+    "phonetic": "/ˈdensəti/",
+    "definition_en": "the number of courses (horizontal rows) per cm in a knit fabric, indicating tightness",
+    "definition_zh": "密度,横密,每厘米线圈数",
+    "example": "We increased the density in the eyestay area for more support."
+  },
+  {
+    "term": "spandex",
+    "full_form": "spandex / Lycra / elastane",
+    "category": "flyknit_weaving",
+    "phonetic": "/ˈspændɛks/",
+    "definition_en": "an elastic fiber used in flyknit uppers, typically 20D-40D for footwear",
+    "definition_zh": "氨纶,弹力丝",
+    "example": "We blend 20D spandex in the collar to give a comfortable sock-like fit."
+  },
+  {
+    "term": "polyester filament",
+    "full_form": "polyester filament yarn",
+    "category": "flyknit_weaving",
+    "phonetic": "/ˌpɒliˈɛstər ˈfɪləmənt/",
+    "definition_en": "a continuous filament polyester yarn, commonly 75D-150D, used as the main yarn in flyknit",
+    "definition_zh": "涤纶长丝",
+    "example": "75D polyester filament is the standard base yarn for running uppers."
+  },
+  {
+    "term": "Dtex",
+    "full_form": "decitex (Dtex)",
+    "category": "flyknit_weaving",
+    "phonetic": "/ˈdiːtɛks/",
+    "definition_en": "a yarn count unit, the weight in grams of 10,000 meters of yarn, used for filament yarn",
+    "definition_zh": "分特克斯,长丝纱线细度单位",
+    "example": "A 167 dtex polyester filament is common in flyknit uppers."
+  },
+  {
+    "term": "breathability zone",
+    "full_form": "breathability zone",
+    "category": "flyknit_weaving",
+    "phonetic": "/ˌbriːðəˈbɪləti zoʊn/",
+    "definition_en": "an area on the upper with looser knit, mesh structure, or open holes for ventilation",
+    "definition_zh": "透气区",
+    "example": "We program a breathability zone on the vamp and medial side."
+  },
+  {
+    "term": "support zone",
+    "full_form": "support zone",
+    "category": "flyknit_weaving",
+    "phonetic": "/səˈpɔːrt zoʊn/",
+    "definition_en": "an area on the upper with denser knit, reinforcement yarn, or TPU yarn for stability",
+    "definition_zh": "支撑区,补强区",
+    "example": "The eyestay and heel counter are the key support zones."
+  },
+  {
+    "term": "TPU yarn",
+    "full_form": "TPU yarn (thermoplastic polyurethane)",
+    "category": "flyknit_weaving",
+    "phonetic": "/tiː piː juː jɑːrn/",
+    "definition_en": "a thermoplastic yarn that melts under heat and bonds with the upper, used for reinforcement or welding",
+    "definition_zh": "TPU 纱,热熔纱",
+    "example": "We use TPU yarn at 180°C to weld the upper to the strobel board."
+  },
+  {
+    "term": "heel counter",
+    "full_form": "heel counter",
+    "category": "flyknit_weaving",
+    "phonetic": "/hiːl ˈkaʊntər/",
+    "definition_en": "a reinforcement at the heel of the shoe, either knitted-in or hot-pressed, to lock the heel",
+    "definition_zh": "后跟港宝,后跟补强",
+    "example": "The heel counter is hot-pressed at 120°C for 60 seconds."
+  },
+  {
+    "term": "strobel",
+    "full_form": "strobel stitch (strobel board)",
+    "category": "flyknit_weaving",
+    "phonetic": "/ˈstroʊbəl/",
+    "definition_en": "a stitching method that attaches the upper to the insole board, used in most sports shoes",
+    "definition_zh": "鞋面与中底板缝合(沿条工艺)",
+    "example": "We combine the flyknit upper with a strobel-stitched insole board."
+  },
+  {
+    "term": "warp knitting",
+    "full_form": "warp knitting",
+    "category": "warp_knitting",
+    "phonetic": "/wɔːrp ˈnɪtɪŋ/",
+    "definition_en": "a knitting process where yarns run vertically (warp-wise) and form loops interlocked along the length, produced on tricot or raschel machines",
+    "definition_zh": "经编",
+    "example": "Warp knitting is fast and stable, ideal for lingerie, mesh, and lace."
+  },
+  {
+    "term": "tricot",
+    "full_form": "tricot warp knitting machine",
+    "category": "warp_knitting",
+    "phonetic": "/ˈtriːkɒ/",
+    "definition_en": "a warp knitting machine with bearded needles, mainly producing fine, plain fabrics for lingerie and lining",
+    "definition_zh": "特里科经编机",
+    "example": "Tricot is the standard machine for smooth, fine fabrics like lingerie mesh."
+  },
+  {
+    "term": "raschel",
+    "full_form": "raschel warp knitting machine",
+    "category": "warp_knitting",
+    "phonetic": "/ˈræʃəl/",
+    "definition_en": "a warp knitting machine with latch needles, used for lace, net, mesh, carpet, and technical textiles",
+    "definition_zh": "拉舍尔经编机",
+    "example": "Raschel machines with 30+ guide bars are used for floral lace."
+  },
+  {
+    "term": "milanese",
+    "full_form": "milanese warp knitting",
+    "category": "warp_knitting",
+    "phonetic": "/ˌmɪləˈniːz/",
+    "definition_en": "a warp knitting technique using two sets of yarns running diagonally, producing a very run-resistant, fine fabric",
+    "definition_zh": "米兰尼斯经编",
+    "example": "Milanese is rarely used today but produces very stable, run-resistant fabric."
+  },
+  {
+    "term": "guide bar",
+    "full_form": "guide bar (GB1, GB2, GB3)",
+    "category": "warp_knitting",
+    "phonetic": "/ɡaɪd bɑːr/",
+    "definition_en": "a bar on a warp knitting machine that controls the lateral movement of yarn guides to form stitches",
+    "definition_zh": "梳栉,GB1/GB2/GB3",
+    "example": "A three-bar raschel has GB1, GB2, and GB3 for ground, pattern, and inlay."
+  },
+  {
+    "term": "pillar stitch",
+    "full_form": "pillar stitch (chain stitch)",
+    "category": "warp_knitting",
+    "phonetic": "/ˈpɪlər stɪtʃ/",
+    "definition_en": "a basic warp knit stitch forming a vertical chain, also called chain stitch or 1-and-1",
+    "definition_zh": "编链组织,经平组织",
+    "example": "Pillar stitch is the building block of warp knit structures."
+  },
+  {
+    "term": "lap",
+    "full_form": "lap (overlap)",
+    "category": "warp_knitting",
+    "phonetic": "/læp/",
+    "definition_en": "the lateral movement of a guide bar across the needles to wrap yarn around them",
+    "definition_zh": "针背垫纱,垫纱",
+    "example": "The lap movement on GB2 controls the pattern design."
+  },
+  {
+    "term": "underlap",
+    "full_form": "underlap",
+    "category": "warp_knitting",
+    "phonetic": "/ˈʌndərˌlæp/",
+    "definition_en": "the movement of the guide bar on the back side of the needle, mainly determining fabric properties",
+    "definition_zh": "针前垫纱,延展线",
+    "example": "A longer underlap gives more horizontal strength and stability."
+  },
+  {
+    "term": "closed lap",
+    "full_form": "closed lap",
+    "category": "warp_knitting",
+    "phonetic": "/kloʊzd læp/",
+    "definition_en": "a lap where the guide bar moves in the same direction on both sides of the needle",
+    "definition_zh": "闭口垫纱",
+    "example": "Closed lap is used in 1-and-1 pillar stitch."
+  },
+  {
+    "term": "open lap",
+    "full_form": "open lap",
+    "category": "warp_knitting",
+    "phonetic": "/ˈoʊpən læp/",
+    "definition_en": "a lap where the guide bar moves in opposite directions on the two sides of the needle",
+    "definition_zh": "开口垫纱",
+    "example": "Open lap on both bars forms a simple 2-and-2 warp knit."
+  },
+  {
+    "term": "inlay",
+    "full_form": "inlay (full-width weft insertion)",
+    "category": "warp_knitting",
+    "phonetic": "/ˈɪnˌleɪ/",
+    "definition_en": "a yarn laid in between needles by a guide bar without forming a stitch, used to add weft-wise strength or pattern",
+    "definition_zh": "衬纬,全幅衬纬",
+    "example": "Inlay with spandex gives the fabric 4-way stretch."
+  },
+  {
+    "term": "warp beam",
+    "full_form": "warp beam (creel)",
+    "category": "warp_knitting",
+    "phonetic": "/wɔːrp biːm/",
+    "definition_en": "a large cylindrical beam on which warp yarns are wound and fed to the knitting machine",
+    "definition_zh": "经轴,盘头",
+    "example": "Each guide bar is fed from its own warp beam behind the machine."
+  },
+  {
+    "term": "warping machine",
+    "full_form": "warping machine",
+    "category": "warp_knitting",
+    "phonetic": "/ˈwɔːrpɪŋ məˈʃiːn/",
+    "definition_en": "a machine that winds warp yarns from creel packages onto a warp beam in parallel, equal length",
+    "definition_zh": "整经机",
+    "example": "Sectional warping is used for patterned warp knits like lace."
+  },
+  {
+    "term": "sectional warping",
+    "full_form": "sectional warping",
+    "category": "warp_knitting",
+    "phonetic": "/ˈsɛkʃənəl ˈwɔːrpɪŋ/",
+    "definition_en": "a warping method where warp is built up section by section, used for colored patterns and lace",
+    "definition_zh": "分条整经,分段整经",
+    "example": "Sectional warping allows multi-color patterned warps for raschel lace."
+  },
+  {
+    "term": "Karl Mayer",
+    "full_form": "Karl Mayer machine",
+    "category": "warp_knitting",
+    "phonetic": "/kɑːrl ˈmaɪər/",
+    "definition_en": "a leading German manufacturer of warp knitting machines and warp preparation equipment",
+    "definition_zh": "卡尔迈耶,德国经编机品牌",
+    "example": "Our HKS4 tricot is built by Karl Mayer, made in Germany."
+  },
+  {
+    "term": "HKS",
+    "full_form": "HKS (high-speed warp knitting machine)",
+    "category": "warp_knitting",
+    "phonetic": "/eɪtʃ keɪ ɛs/",
+    "definition_en": "Karl Mayer's high-speed tricot machine series, used for fine fabrics at high production speed",
+    "definition_zh": "高速经编机 HKS 系列",
+    "example": "HKS machines can run at 3,000+ courses per minute."
+  },
+  {
+    "term": "raschel lace",
+    "full_form": "raschel lace",
+    "category": "warp_knitting",
+    "phonetic": "/ˈræʃəl leɪs/",
+    "definition_en": "lace fabric produced on a multi-bar raschel machine, simulating the look of true Leavers lace",
+    "definition_zh": "拉舍尔蕾丝,经编蕾丝",
+    "example": "Modern raschel lace can closely mimic traditional Leavers lace at lower cost."
+  },
+  {
+    "term": "warp knit mesh",
+    "full_form": "warp knit mesh",
+    "category": "warp_knitting",
+    "phonetic": "/wɔːrp nɪt mɛʃ/",
+    "definition_en": "a net-like warp knit fabric with regular hexagonal or square holes, used for sports linings and bags",
+    "definition_zh": "经编网眼布",
+    "example": "Warp knit mesh is the standard lining for running shoes and sports bags."
+  },
+  {
+    "term": "warp knit suede",
+    "full_form": "warp knit suede (麂皮绒)",
+    "category": "warp_knitting",
+    "phonetic": "/wɔːrp nɪt sweɪd/",
+    "definition_en": "a brushed warp knit fabric that imitates suede leather, often polyester or nylon",
+    "definition_zh": "经编麂皮绒",
+    "example": "Warp knit suede is widely used for sofa upholstery and garment shells."
+  },
+  {
+    "term": "jacquard warp knit",
+    "full_form": "jacquard warp knit (经编贾卡)",
+    "category": "warp_knitting",
+    "phonetic": "/dʒəˈkɑːrd wɔːrp nɪt/",
+    "definition_en": "a warp knit fabric with a pattern produced by selectively controlling individual guide bars (jacquard)",
+    "definition_zh": "经编贾卡,经编提花",
+    "example": "Jacquard warp knit is used for patterned curtain and lace fabrics."
+  },
+  {
+    "term": "loom",
+    "full_form": "loom (weaving machine)",
+    "category": "shuttle_weaving",
+    "phonetic": "/luːm/",
+    "definition_en": "a machine that interlaces warp and weft yarns to produce woven fabric",
+    "definition_zh": "织机,织布机",
+    "example": "Our mill runs 600 looms, mostly air-jet and rapier."
+  },
+  {
+    "term": "shuttle",
+    "full_form": "shuttle",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈʃʌtəl/",
+    "definition_en": "a traditional weaving tool that carries the weft yarn across the shed; modern shuttleless looms use other weft insertion methods",
+    "definition_zh": "梭子,梭",
+    "example": "Shuttle looms are now rare in large mills, replaced by shuttleless looms."
+  },
+  {
+    "term": "shuttleless loom",
+    "full_form": "shuttleless loom",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈʃʌtələs luːm/",
+    "definition_en": "a modern weaving machine that inserts weft without a shuttle, using rapier, air-jet, water-jet, or projectile methods",
+    "definition_zh": "无梭织机",
+    "example": "Shuttleless looms give higher speed and fewer weft breaks."
+  },
+  {
+    "term": "air-jet loom",
+    "full_form": "air-jet loom (喷气织机)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ɛər dʒɛt luːm/",
+    "definition_en": "a shuttleless loom that uses a jet of compressed air to carry the weft yarn across the shed, very high speed",
+    "definition_zh": "喷气织机",
+    "example": "Air-jet looms are the fastest, reaching 1,500+ rpm for plain cotton."
+  },
+  {
+    "term": "rapier loom",
+    "full_form": "rapier loom (剑杆织机)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈreɪpiər luːm/",
+    "definition_en": "a shuttleless loom that uses a rigid or flexible rapier to carry the weft across the shed, very versatile",
+    "definition_zh": "剑杆织机",
+    "example": "Rapier looms are ideal for fancy yarn, denim, and small batch."
+  },
+  {
+    "term": "water-jet loom",
+    "full_form": "water-jet loom (水射流织机)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈwɔːtər dʒɛt luːm/",
+    "definition_en": "a shuttleless loom that uses a water jet to insert the weft, mainly for hydrophobic synthetic fabrics",
+    "definition_zh": "水射流织机,喷水织机",
+    "example": "Water-jet looms are widely used for polyester taffeta and nylon fabric."
+  },
+  {
+    "term": "projectile loom",
+    "full_form": "projectile loom",
+    "category": "shuttle_weaving",
+    "phonetic": "/prəˈdʒɛktaɪl luːm/",
+    "definition_en": "a shuttleless loom that uses small projectiles to grip and carry the weft across the shed",
+    "definition_zh": "片梭织机",
+    "example": "Projectile looms like Sulzer P7100 are common for heavy industrial fabrics."
+  },
+  {
+    "term": "dobby",
+    "full_form": "dobby loom / dobby weave",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈdɒbi/",
+    "definition_en": "a loom attachment or weave structure that controls a small number of heald frames for simple patterns like twill and small geometric designs",
+    "definition_zh": "多臂机,小提花",
+    "example": "Dobby looms are perfect for twill, plain, and small geometric patterns."
+  },
+  {
+    "term": "jacquard loom",
+    "full_form": "jacquard loom",
+    "category": "shuttle_weaving",
+    "phonetic": "/dʒəˈkɑːrd luːm/",
+    "definition_en": "a loom with a jacquard head that controls each warp end individually, used for complex large patterns",
+    "definition_zh": "大提花织机,贾卡织机",
+    "example": "Jacquard looms are used for damask, matelassé, and complex patterned fabrics."
+  },
+  {
+    "term": "warp",
+    "full_form": "warp (经纱)",
+    "category": "shuttle_weaving",
+    "phonetic": "/wɔːrp/",
+    "definition_en": "the set of yarns running lengthwise in a woven fabric, parallel to the selvedge",
+    "definition_zh": "经纱,经线",
+    "example": "Warp yarns are sized before weaving to reduce breakage."
+  },
+  {
+    "term": "weft",
+    "full_form": "weft (纬纱)",
+    "category": "shuttle_weaving",
+    "phonetic": "/wɛft/",
+    "definition_en": "the yarn running crosswise in a woven fabric, perpendicular to the selvedge",
+    "definition_zh": "纬纱,纬线",
+    "example": "We use 40s cotton weft for a soft hand feel on this shirt."
+  },
+  {
+    "term": "warping",
+    "full_form": "warping (整经)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈwɔːrpɪŋ/",
+    "definition_en": "the process of transferring warp yarns from creel packages onto a warp beam in equal length and tension",
+    "definition_zh": "整经",
+    "example": "Direct warping is used for plain fabrics; sectional warping for patterned."
+  },
+  {
+    "term": "sizing",
+    "full_form": "sizing (浆纱)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈsaɪzɪŋ/",
+    "definition_en": "the process of coating warp yarns with size (usually starch or PVA) to strengthen them and reduce breakage during weaving",
+    "definition_zh": "浆纱",
+    "example": "Sizing with PVA improves weaving efficiency for fine-count cotton warp."
+  },
+  {
+    "term": "drawing-in",
+    "full_form": "drawing-in (穿综)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈdrɔːɪŋ ɪn/",
+    "definition_en": "the process of threading each warp end through a heald and a reed, in a specific pattern",
+    "definition_zh": "穿综",
+    "example": "Drawing-in pattern determines the weave structure on the loom."
+  },
+  {
+    "term": "heald frame",
+    "full_form": "heald frame (综框)",
+    "category": "shuttle_weaving",
+    "phonetic": "/hiːld freɪm/",
+    "definition_en": "a frame carrying healds (heddles) that lift or lower groups of warp yarns to form the shed",
+    "definition_zh": "综框",
+    "example": "A dobby loom typically has 8-16 heald frames."
+  },
+  {
+    "term": "reed",
+    "full_form": "reed (钢筘)",
+    "category": "shuttle_weaving",
+    "phonetic": "/riːd/",
+    "definition_en": "a comb-like device on a loom that beats the weft into place and keeps warp yarns evenly spaced",
+    "definition_zh": "钢筘",
+    "example": "Reed count determines the warp density of the fabric."
+  },
+  {
+    "term": "shedding",
+    "full_form": "shedding (开口)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈʃɛdɪŋ/",
+    "definition_en": "the action of separating warp yarns into upper and lower layers to form a shed for weft insertion",
+    "definition_zh": "开口,开口运动",
+    "example": "Shedding is the first step of the weaving cycle."
+  },
+  {
+    "term": "beat-up",
+    "full_form": "beat-up (打纬)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈbiːt ʌp/",
+    "definition_en": "the action of pushing the weft yarn into the fell of the cloth using the reed, determining fabric density",
+    "definition_zh": "打纬,打纬运动",
+    "example": "Beat-up force affects fabric hand feel and density uniformity."
+  },
+  {
+    "term": "take-up",
+    "full_form": "take-up (卷取)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈteɪk ʌp/",
+    "definition_en": "the action of winding the woven fabric onto the cloth roll at a controlled rate",
+    "definition_zh": "卷取,卷布",
+    "example": "Take-up tension must match loom speed to keep fabric flat."
+  },
+  {
+    "term": "let-off",
+    "full_form": "let-off (送经)",
+    "category": "shuttle_weaving",
+    "phonetic": "/lɛt ɒf/",
+    "definition_en": "the action of releasing warp yarn from the warp beam at a controlled tension during weaving",
+    "definition_zh": "送经,放经",
+    "example": "Electronic let-off keeps warp tension constant from full beam to empty."
+  },
+  {
+    "term": "plain weave",
+    "full_form": "plain weave (1/1)",
+    "category": "shuttle_weaving",
+    "phonetic": "/pleɪn wiːv/",
+    "definition_en": "the simplest weave structure, each weft passes over one warp and under the next, balanced and stable",
+    "definition_zh": "平纹,平纹组织",
+    "example": "Plain weave is the most common structure for shirts and sheets."
+  },
+  {
+    "term": "twill",
+    "full_form": "twill weave (2/1, 3/1)",
+    "category": "shuttle_weaving",
+    "phonetic": "/twɪl/",
+    "definition_en": "a weave with diagonal lines on the surface, formed by weft floating over multiple warps, e.g. 2/1 or 3/1 twill",
+    "definition_zh": "斜纹,2/1 斜纹,3/1 斜纹",
+    "example": "3/1 twill is the classic structure for chino and denim."
+  },
+  {
+    "term": "satin",
+    "full_form": "satin weave (4/1, 5/1, 8/1)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈsætən/",
+    "definition_en": "a weave with long warp or weft floats giving a smooth, lustrous surface, e.g. 4-satin, 5-satin, 8-satin",
+    "definition_zh": "缎纹,4 枚缎,5 枚缎,8 枚缎",
+    "example": "8-satin gives the smoothest, most lustrous surface for sateen sheets."
+  },
+  {
+    "term": "yarn-dyed",
+    "full_form": "yarn-dyed (色织)",
+    "category": "shuttle_weaving",
+    "phonetic": "/jɑːrn daɪd/",
+    "definition_en": "a fabric woven from pre-dyed yarns, giving clear color and good fastness, e.g. yarn-dyed stripes and checks",
+    "definition_zh": "色织,色纺",
+    "example": "Yarn-dyed stripes are the classic Oxford shirting look."
+  },
+  {
+    "term": "piece-dyed",
+    "full_form": "piece-dyed (匹染)",
+    "category": "shuttle_weaving",
+    "phonetic": "/piːs daɪd/",
+    "definition_en": "a fabric dyed in the piece (after weaving), the most common method for solid color",
+    "definition_zh": "匹染,布匹染色",
+    "example": "Piece-dyed solid color is cheaper than yarn-dyed for large runs."
+  },
+  {
+    "term": "EPI",
+    "full_form": "EPI (Ends Per Inch)",
+    "category": "shuttle_weaving",
+    "phonetic": "/iː piː aɪ/",
+    "definition_en": "the number of warp ends per inch of fabric width, a key parameter of woven fabric density",
+    "definition_zh": "经密,每英寸经纱数",
+    "example": "Our poplin is 144 EPI by 76 PPI, soft yet stable."
+  },
+  {
+    "term": "PPI",
+    "full_form": "PPI (Picks Per Inch)",
+    "category": "shuttle_weaving",
+    "phonetic": "/piː piː aɪ/",
+    "definition_en": "the number of weft picks per inch of fabric length, the other key parameter of woven density",
+    "definition_zh": "纬密,每英寸纬纱数",
+    "example": "Higher PPI gives a more compact, durable fabric."
+  },
+  {
+    "term": "shrinkage in loom state",
+    "full_form": "shrinkage in loom state (织缩率)",
+    "category": "shuttle_weaving",
+    "phonetic": "/ˈʃrɪnkɪdʒ ɪn luːm steɪt/",
+    "definition_en": "the length reduction of warp and weft yarn in the woven state compared to the un-stretched state, important for greige planning",
+    "definition_zh": "织缩率,坯布织缩",
+    "example": "Cotton twill has a higher warp shrinkage in loom state than polyester."
+  },
+  {
+    "term": "weft knitting",
+    "full_form": "weft knitting",
+    "category": "weft_knitting",
+    "phonetic": "/wɛft ˈnɪtɪŋ/",
+    "definition_en": "a knitting process where one yarn forms loops across the width of the fabric, course by course",
+    "definition_zh": "纬编",
+    "example": "Weft knitting is the most common method for T-shirts and underwear."
+  },
+  {
+    "term": "circular knitting machine",
+    "full_form": "circular knitting machine (圆机)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈsɜːrkjələr ˈnɪtɪŋ məˈʃiːn/",
+    "definition_en": "a weft knitting machine with a rotating cylinder, producing tubular fabric for T-shirts and underwear",
+    "definition_zh": "圆机,圆形纬编机",
+    "example": "Single jersey is produced on a circular knitting machine."
+  },
+  {
+    "term": "flat knitting machine",
+    "full_form": "flat knitting machine (横机)",
+    "category": "weft_knitting",
+    "phonetic": "/flæt ˈnɪtɪŋ məˈʃiːn/",
+    "definition_en": "a weft knitting machine with a flat bed, used for shaped panels like sweaters and collars",
+    "definition_zh": "横机,平板针织机",
+    "example": "Flat knitting machines knit fully-fashioned sweater panels."
+  },
+  {
+    "term": "cylinder",
+    "full_form": "cylinder (针筒)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈsɪlɪndər/",
+    "definition_en": "the rotating slotted cylinder on a circular knitting machine that holds the needles",
+    "definition_zh": "针筒",
+    "example": "A 30-inch diameter cylinder gives about 1,800 needles for 24 gauge."
+  },
+  {
+    "term": "needle count",
+    "full_form": "needle count (针数)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈniːdəl kaʊnt/",
+    "definition_en": "the total number of needles on a circular knitting machine cylinder, determining fabric width and gauge",
+    "definition_zh": "针数,总针数",
+    "example": "Higher needle count means wider fabric at the same gauge."
+  },
+  {
+    "term": "cam arrangement",
+    "full_form": "cam arrangement (三角排列)",
+    "category": "weft_knitting",
+    "phonetic": "/kæm əˈreɪndʒmənt/",
+    "definition_en": "the layout of stitch cams on a circular knitting machine, determining knit, tuck, miss patterns",
+    "definition_zh": "三角排列,三角配置",
+    "example": "A 4-track cam arrangement allows complex jacquard on a single jersey machine."
+  },
+  {
+    "term": "single jersey",
+    "full_form": "single jersey (单面组织)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈsɪŋɡəl ˈdʒɜːrzi/",
+    "definition_en": "a basic weft knit with face loops on one side and back loops on the other, used for T-shirts",
+    "definition_zh": "单面汗布,单面组织",
+    "example": "Single jersey curls at the edges — that's how you tell it from interlock."
+  },
+  {
+    "term": "interlock",
+    "full_form": "interlock (双面组织)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈɪntərˌlɒk/",
+    "definition_en": "a double-knit fabric with two 1x1 rib layers interlocked, giving a smooth both-side face and high stability",
+    "definition_zh": "双面布,棉毛布,interlock",
+    "example": "Interlock does not curl at the edges and is more stable than single jersey."
+  },
+  {
+    "term": "rib 1x1",
+    "full_form": "rib 1x1 (1+1 罗纹)",
+    "category": "weft_knitting",
+    "phonetic": "/rɪb wʌn bɪ wʌn/",
+    "definition_en": "a rib knit with one knit stitch alternating with one purl stitch, very stretchy in the width",
+    "definition_zh": "1+1 罗纹,1x1 罗纹",
+    "example": "Rib 1x1 is the standard cuff and collar fabric for T-shirts."
+  },
+  {
+    "term": "rib 2x2",
+    "full_form": "rib 2x2 (2+2 罗纹)",
+    "category": "weft_knitting",
+    "phonetic": "/rɪb tuː bɪ tuː/",
+    "definition_en": "a rib knit with two knit stitches alternating with two purl stitches, wider ribs, less stretchy",
+    "definition_zh": "2+2 罗纹,2x2 罗纹",
+    "example": "Rib 2x2 is used for sweater cuffs and beanies."
+  },
+  {
+    "term": "pique",
+    "full_form": "pique (珠地)",
+    "category": "weft_knitting",
+    "phonetic": "/piˈkeɪ/",
+    "definition_en": "a knit with a waffle or honeycomb texture, the classic Lacoste polo fabric",
+    "definition_zh": "珠地,珠地网眼",
+    "example": "Pique polo is usually 220 GSM combed cotton, with a textured face."
+  },
+  {
+    "term": "fleece",
+    "full_form": "fleece (3-thread fleece)",
+    "category": "weft_knitting",
+    "phonetic": "/fliːs/",
+    "definition_en": "a 3-yarn knit with face yarn, tie yarn, and a brushed loop yarn on the back, used for hoodies and sweatshirts",
+    "definition_zh": "抓绒,三线绒,卫衣布",
+    "example": "3-thread fleece at 320 GSM is the standard hoodie fabric."
+  },
+  {
+    "term": "jersey jacquard",
+    "full_form": "jersey jacquard (单面提花)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈdʒɜːrzi dʒəˈkɑːrd/",
+    "definition_en": "a single jersey fabric with a multi-color pattern produced by selective needle knitting, with floats on the back",
+    "definition_zh": "单面提花,大圆机提花",
+    "example": "Jersey jacquard is the most cost-effective way to do all-over color patterns on knits."
+  },
+  {
+    "term": "Fair Isle",
+    "full_form": "Fair Isle (费尔岛提花)",
+    "category": "weft_knitting",
+    "phonetic": "/fɛr aɪl/",
+    "definition_en": "a traditional stranded colorwork pattern with small repeating geometric motifs, typically on flat knit garments",
+    "definition_zh": "费尔岛提花,北欧风提花",
+    "example": "Fair Isle is a heritage look on wool sweaters."
+  },
+  {
+    "term": "terry",
+    "full_form": "terry (毛圈布)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈtɛri/",
+    "definition_en": "a knit with uncut loops on the back, used for towels, beachwear, and casual sweatpants",
+    "definition_zh": "毛圈布,毛巾布",
+    "example": "French terry is terry with a smooth face and soft loop back."
+  },
+  {
+    "term": "velour",
+    "full_form": "velour (天鹅绒针织)",
+    "category": "weft_knitting",
+    "phonetic": "/vəˈlʊr/",
+    "definition_en": "a knit with cut loops on the surface, sheared to give a soft velvety hand feel, used for tracksuits",
+    "definition_zh": "针织天鹅绒,velour",
+    "example": "Velour tracksuits were huge in the 2000s and are coming back."
+  },
+  {
+    "term": "ottoman",
+    "full_form": "ottoman rib",
+    "category": "weft_knitting",
+    "phonetic": "/ˈɒtəmən/",
+    "definition_en": "a double-knit with pronounced horizontal ribs, used for structured tops and dresses",
+    "definition_zh": "奥特曼条,横条针织",
+    "example": "Ottoman rib is often used in tailored knit dresses for body shape."
+  },
+  {
+    "term": "Milano rib",
+    "full_form": "Milano rib (米兰罗纹)",
+    "category": "weft_knitting",
+    "phonetic": "/mɪˈlɑːnoʊ rɪb/",
+    "definition_en": "a flat double-knit rib with a clear vertical cord on the face, used for suit lining and outerwear",
+    "definition_zh": "米兰罗纹,米兰尼斯罗纹",
+    "example": "Milano rib is the classic structured rib for jacket lining."
+  },
+  {
+    "term": "sinkers",
+    "full_form": "sinker (沉降片)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈsɪŋkər/",
+    "definition_en": "a thin metal plate on a knitting machine that holds down the previously formed loop while a new loop is being made",
+    "definition_zh": "沉降片",
+    "example": "Sinkers are essential for holding loops on a circular knitting machine."
+  },
+  {
+    "term": "course",
+    "full_form": "course (横列)",
+    "category": "weft_knitting",
+    "phonetic": "/kɔːrs/",
+    "definition_en": "a horizontal row of loops in a knit fabric, equivalent to a weft pick",
+    "definition_zh": "横列,线圈横列",
+    "example": "Courses per cm (CPC) is the vertical density of a knit."
+  },
+  {
+    "term": "wale",
+    "full_form": "wale (纵行)",
+    "category": "weft_knitting",
+    "phonetic": "/weɪl/",
+    "definition_en": "a vertical column of loops in a knit fabric, running lengthwise",
+    "definition_zh": "纵行,线圈纵行",
+    "example": "Wales per inch (WPI) is the horizontal density of a knit."
+  },
+  {
+    "term": "CPC",
+    "full_form": "CPC (courses per cm)",
+    "category": "weft_knitting",
+    "phonetic": "/siː piː siː/",
+    "definition_en": "the number of knit courses per cm in a knit fabric, the vertical density",
+    "definition_zh": "纵密,每厘米横列数",
+    "example": "A 200 GSM single jersey is around 18 CPC and 12 WPI."
+  },
+  {
+    "term": "WPI",
+    "full_form": "WPI (wales per inch)",
+    "category": "weft_knitting",
+    "phonetic": "/ˌdʌbljuː piː aɪ/",
+    "definition_en": "the number of knit wales per inch in a knit fabric, the horizontal density",
+    "definition_zh": "横密,每英寸纵行数",
+    "example": "WPI is the standard way to express knit density in the US."
+  },
+  {
+    "term": "open loop",
+    "full_form": "open loop (开口线圈)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈoʊpən luːp/",
+    "definition_en": "a knit loop whose yarn ends cross at the bottom, the legs are open",
+    "definition_zh": "开口线圈",
+    "example": "Open loops make a softer, looser knit surface."
+  },
+  {
+    "term": "closed loop",
+    "full_form": "closed loop (闭口线圈)",
+    "category": "weft_knitting",
+    "phonetic": "/kloʊzd luːp/",
+    "definition_en": "a knit loop whose yarn ends cross at the top, the legs are closed",
+    "definition_zh": "闭口线圈",
+    "example": "Closed loops give a cleaner, more stable knit surface."
+  },
+  {
+    "term": "sinker loop",
+    "full_form": "sinker loop (沉降弧)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈsɪŋkər luːp/",
+    "definition_en": "the lower arc of a knit loop that connects two adjacent needle loops on the back side",
+    "definition_zh": "沉降弧,线圈弧",
+    "example": "The sinker loop length is the main driver of fabric thickness."
+  },
+  {
+    "term": "needle loop",
+    "full_form": "needle loop (圈柱)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈniːdəl luːp/",
+    "definition_en": "the upper arc of a knit loop that sits over the needle, also called face loop",
+    "definition_zh": "针编弧,圈柱",
+    "example": "Needle loops form the visible face of the knit."
+  },
+  {
+    "term": "float loop",
+    "full_form": "float loop (延展线)",
+    "category": "weft_knitting",
+    "phonetic": "/floʊt luːp/",
+    "definition_en": "the part of yarn connecting two knit loops in a different course, not forming a loop itself",
+    "definition_zh": "延展线,浮线",
+    "example": "Long floats on the back of jacquard knit can be snagged."
+  },
+  {
+    "term": "mending",
+    "full_form": "mending (修补)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈmɛndɪŋ/",
+    "definition_en": "the process of repairing minor defects (holes, slubs, dropped stitches) on knitted fabric before finishing",
+    "definition_zh": "修补,验布修补",
+    "example": "After knitting, every roll goes through inspection and mending."
+  },
+  {
+    "term": "inspection",
+    "full_form": "inspection (验布)",
+    "category": "weft_knitting",
+    "phonetic": "/ɪnˈspɛkʃən/",
+    "definition_en": "the process of checking fabric on a moving frame under light, looking for defects like holes, slubs, barre",
+    "definition_zh": "验布,布面检验",
+    "example": "Inspection is done at 4 points per meter, with a four-point system."
+  },
+  {
+    "term": "finishing",
+    "full_form": "finishing (后整理)",
+    "category": "weft_knitting",
+    "phonetic": "/ˈfɪnɪʃɪŋ/",
+    "definition_en": "the processes applied to greige fabric to improve hand feel, appearance, and performance, e.g. singeing, brushing, compacting",
+    "definition_zh": "后整理,后处理",
+    "example": "Compacting in finishing controls the residual shrinkage of single jersey."
+  },
+  {
+    "term": "yarn count Ne",
+    "full_form": "yarn count Ne (English count)",
+    "category": "weft_knitting",
+    "phonetic": "/jɑːrn kaʊnt ˌen ˈiː/",
+    "definition_en": "the English cotton yarn count: the number of 840-yard lengths per pound; higher Ne = finer yarn",
+    "definition_zh": "英制支数 Ne,棉纱细度",
+    "example": "Combed cotton 32 Ne is a common T-shirt yarn."
+  },
+  {
+    "term": "yarn count Nm",
+    "full_form": "yarn count Nm (metric count)",
+    "category": "weft_knitting",
+    "phonetic": "/jɑːrn kaʊnt ˌɛn ˈɛm/",
+    "definition_en": "the metric yarn count: the number of 1 km lengths per kg; higher Nm = finer yarn, common for wool",
+    "definition_zh": "公制支数 Nm,毛纱细度",
+    "example": "Wool 28 Nm / 2 is the classic sweater yarn."
+  }
+]

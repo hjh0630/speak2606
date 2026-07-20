@@ -1,0 +1,68 @@
+{
+  "scenario_id": "lc_discrepancy",
+  "scenario_title_en": "LC Document Discrepancy",
+  "scenario_title_zh": "信用证不符点(高阶)",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Mr. Chen, this is David Rothschild, senior counsel at Rothschild Trade Finance. We have a serious problem with LC 2024-M-188 — your negotiating bank has refused to pay under the LC, citing 5 discrepancies including what they are calling a 'fraudulent document'. They have referred the case to their compliance department, and we are looking at a 60-day freeze on the proceeds. I am calling to discuss your options.",
+      "ai_message_zh": "陈先生,我是 Rothschild Trade Finance 的高级法务 David Rothschild。LC 2024-M-188 有严重问题 — 议付行拒付了,理由是 5 个不符点,其中一项被定性为'欺诈性单据'。案件已转到合规部,款项 60 天冻结。我打来是讨论你们的选项。",
+      "expected_user_response_hint": "保持冷静,要求具体证据,不要承认欺诈",
+      "key_phrases": ["We need the specific allegation in writing", "we strongly deny any fraud", "we will engage our own counsel"],
+      "common_mistakes": "Don't say 'this is a misunderstanding' to fraud allegations — silence is treated as guilt, you must respond in writing with evidence.",
+      "tips_zh": "Fraud allegation = UCP 600 Article 16(f),银行可永久拒付,需要法律团队立即介入,7 天内书面反驳。",
+      "user_response_example": "Mr. Rothschild, we strongly deny any allegation of fraud. Please send the specific allegation in writing, citing which document and which clause. We will engage our own trade counsel and respond within 7 business days with documentary evidence. Until then, we request the proceeds be unfrozen pending the response."
+    },
+    {
+      "round": 2,
+      "ai_message": "The fraud allegation is based on the commercial invoice. Our investigation shows the unit price on the invoice is 15 percent below the average market price for this product category, and the quantity exceeds your facility's stated capacity by 22 percent. The negotiating bank suspects price manipulation to draw excess LC proceeds. The other 4 discrepancies are technical — late B/L, insurance gap, certificate from wrong authority, packing list mismatch.",
+      "ai_message_zh": "欺诈指控基于商业发票。我们调查显示发票单价低于该品类市场均价 15%,数量超过你们厂房产能 22%。议付行怀疑价格操纵以套取 LC 款项。其它 4 个不符点是技术性 — 晚 B/L、保险缺口、证书签发机构错、装箱单不符。",
+      "expected_user_response_hint": "用证据反驳价格和数量质疑,准备文件包",
+      "key_phrases": ["Our pricing is supported by the buyer's RFQ and competitive quote process", "capacity includes overtime and subcontracting", "please share the buyer's PO"],
+      "common_mistakes": "Low price ≠ fraud — 客户 RFQ + 多家比价记录是合法证据,缺失文件才是问题。",
+      "tips_zh": "反欺诈证据包:RFQ / 多家比价记录 / 客户正式 PO / 产能说明(双班 + 加班 + 协作厂)/ 验货报告 / 出口报关单。",
+      "user_response_example": "On price — our unit price is supported by the buyer's RFQ dated March 12, plus two competing quotes from peer factories that came in higher. On quantity — our stated capacity is single-shift, but we ran double shifts plus subcontracted 30 percent of the cutting to a partner mill, all disclosed to the buyer's QC team. I will send the full evidence package within 5 business days."
+    },
+    {
+      "round": 3,
+      "ai_message": "The evidence package is exactly what we need. About the 4 technical discrepancies — once the fraud allegation is cleared, we can address those through standard amendment. However, the 60-day freeze means the negotiating bank will not pay anyone during investigation. Your only options are: (1) wait for the investigation to clear and collect the LC proceeds, (2) negotiate an out-of-court settlement with the buyer for partial payment, (3) escalate to international arbitration, which takes 12 to 18 months.",
+      "ai_message_zh": "证据包正是我们需要的。4 个技术性不符点 — 欺诈指控清除后,可以走标准改证流程。但是 60 天冻结意味着议付行在调查期间不向任何人付款。你们的选择:1) 等调查结束收 LC 款项;2) 庭外和解部分付款;3) 国际仲裁,12-18 个月。",
+      "expected_user_response_hint": "讨论三个选项的成本/时间/风险,选择路径",
+      "key_phrases": ["We prefer option 1, wait for investigation", "evidence package in 5 business days", "international arbitration is our last resort"],
+      "common_mistakes": "Don't immediately accept option 2 (settlement) — buyer will lowball, you lose leverage. Wait for evidence to clear the fraud first.",
+      "tips_zh": "证据充分时,选项 1(等调查)通常 30-45 天解冻;选项 2(和解)buyer 会利用冻结压价 30-50%。",
+      "user_response_example": "We prefer option 1 — wait for the investigation. We will submit the full evidence package within 5 business days, and request the investigation conclude within 30 days. International arbitration is our last resort, only if the investigation is unreasonably delayed."
+    },
+    {
+      "round": 4,
+      "ai_message": "About the settlement option as a backup — if your evidence doesn't clear the fraud allegation, the buyer may offer to pay 60 to 70 percent of the LC value in exchange for full release of all claims. This is the realistic floor in trade finance fraud cases. We need to know your position today, before submitting evidence.",
+      "ai_message_zh": "关于和解选项作为备选 — 如果证据不能清除欺诈指控,客户可能愿意付 LC 金额的 60-70% 来换取完全免责。这是贸易融资欺诈案的实际底线。我们要你们今天表态,在提交证据前。",
+      "expected_user_response_hint": "拒绝预设底线,坚持证据优先",
+      "key_phrases": ["We will not pre-commit to a settlement floor", "evidence first, settlement if evidence fails", "we reserve all rights"],
+      "common_mistakes": "Don't accept a 60-70% floor pre-emptively — once you commit, lawyer and bank will use it against you in any future negotiation.",
+      "tips_zh": "预设底线 = 谈判自杀;法律策略应是'evidence first, fallback only if evidence fails'。",
+      "user_response_example": "We will not pre-commit to a settlement floor. Our position is: submit evidence in 5 business days, allow 30 days for investigation, escalate to arbitration only if both evidence and investigation are unreasonably delayed. We reserve all rights under UCP 600 and ICC arbitration rules."
+    },
+    {
+      "round": 5,
+      "ai_message": "Understood. To set expectations — the investigation will be conducted by the negotiating bank's compliance team, not by us. They will independently verify your evidence against (1) the buyer's payment history, (2) the buyer's RFQ and contract, (3) third-party market price data. If your evidence is solid, the freeze should be lifted in 30 to 45 days. If not, we need to revisit the settlement option.",
+      "ai_message_zh": "明白。预期管理 — 调查由议付行合规部进行,不是我们。他们会独立核实你们的证据 vs 1) 客户付款历史;2) 客户 RFQ 和合同;3) 第三方市场行情数据。如果证据扎实,30-45 天解冻。如果不扎实,我们要重启和解选项。",
+      "expected_user_response_hint": "确认证据包范围,讨论时间表",
+      "key_phrases": ["We will provide all three categories of evidence", "please define 'solid' in measurable terms", "we want weekly status updates"],
+      "common_mistakes": "Don't accept 'we will let you know' on timeline — push for weekly status updates, document each milestone.",
+      "tips_zh": "证据包三类:1) 客户关系证据(RFQ/PO/付款历史);2) 价格合理性证据(比价/原料成本);3) 数量产能证据(双班/外包/海关出口数据)。",
+      "user_response_example": "We will provide all three categories of evidence — buyer's RFQ and PO, our cost breakdown versus market data, and our overtime + subcontracting records. We request weekly status updates from the compliance team, and a written milestone for the 30-day and 45-day marks."
+    },
+    {
+      "round": 6,
+      "ai_message": "Agreed — weekly status updates, written milestones at 30 and 45 days. To wrap up: (1) evidence package in 5 business days, (2) investigation timeline 30 to 45 days, (3) weekly status updates, (4) no pre-committed settlement floor, (5) arbitration as last resort. Mr. Chen, please confirm your legal counsel's engagement letter and we'll formally open the case file.",
+      "ai_message_zh": "同意 — 每周状态更新,30/45 天书面里程碑。总结:1) 5 个工作日内交证据包;2) 调查 30-45 天;3) 每周更新;4) 不预设和解底线;5) 仲裁最后选项。陈先生,请确认你们法务聘书,我们正式立案。",
+      "expected_user_response_hint": "确认所有动作,要求正式立案通知",
+      "key_phrases": ["Confirmed, all five points", "please send the formal case file notice", "we will engage counsel this week"],
+      "common_mistakes": "Don't leave without written confirmation — verbal agreement on fraud cases is unenforceable.",
+      "tips_zh": "欺诈案 closing 必拿:书面立案号 + 5 个工作日时间表 + 每周更新机制 + 法务对接窗口。",
+      "user_response_example": "Confirmed on all five points. Please send the formal case file notice with the case number and your contact's email. We will engage Shanghai-based trade counsel this week and loop them into the weekly updates. Looking forward to a clean resolution, Mr. Rothschild."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "flyknit_weaving",
+  "scenario_title_en": "Flyknit Weaving",
+  "scenario_title_zh": "飞织",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Daniel from Apex Flyknit Lab. I understand you are looking for a flyknit upper supplier. How can I help you?",
+      "ai_message_zh": "你好,我是 Apex 飞织实验室的 Daniel。听说您在找飞织鞋面供应商,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍,说明鞋型、目标价位和大致数量",
+      "key_phrases": ["This is ... from ...", "We are developing a running shoe", "We need about ... pairs", "We are looking for a flyknit supplier"],
+      "common_mistakes": "不要简单说 'I want flyknit' — 要说 'I want to develop a flyknit upper' 或 'I am looking for a flyknit supplier'。",
+      "tips_zh": "飞织厂合作第一通电话:报品牌、鞋型、目标价位、MOQ 需求。",
+      "user_response_example": "Hello Daniel, this is Mark Chen from Velocity Sports. We are developing a new running shoe and we are looking for a flyknit upper supplier. We need about 5,000 pairs for the first order."
+    },
+    {
+      "round": 2,
+      "ai_message": "Good. Apex Lab has 12 years of experience in flyknit uppers for running and lifestyle shoes. We can do whole-upper one-piece knitting, no sew, with intarsia logos. Which shoe type are you targeting — running, training, or lifestyle?",
+      "ai_message_zh": "好的。Apex 实验室做飞织鞋面 12 年了,主要做跑鞋和休闲鞋。我们能做整片一体飞织、零缝合、嵌花 logo。请问您要做哪种鞋 — 跑步、训练还是休闲?",
+      "expected_user_response_hint": "回答鞋型,顺便说一下性能要求",
+      "key_phrases": ["It is a running shoe", "lifestyle sneaker", "training shoe", "target weight is ... grams"],
+      "common_mistakes": "lifestyle(休闲)和 running(跑步)用纱线和密度差别很大,不要混用。",
+      "tips_zh": "lifestyle 飞织用粗针 E14,密度松,花纹明显;running 飞织用 E15-E18,密度紧,功能性透气分区。",
+      "user_response_example": "It is a running shoe, mid-range. Target upper weight is around 35 to 40 grams per piece, with breathability on the vamp and good lateral support."
+    },
+    {
+      "round": 3,
+      "ai_message": "Got it. For a 35-40 gram running upper, we usually use gauge E15 with 75D polyester filament plus 20D spandex. For the support zone we add TPU yarn. What colors do you need?",
+      "ai_message_zh": "明白。35-40 克的跑鞋鞋面,我们常用机号 E15,75D 涤纶长丝加 20D 氨纶,支撑区加 TPU 纱。请问需要什么颜色?",
+      "expected_user_response_hint": "回答颜色和分区要求",
+      "key_phrases": ["Main color is ...", "We need ... colors", "Black / white / red", "Two-tone is fine"],
+      "common_mistakes": "color = 颜色,口语里 colors of a shoe,不要说 'I want color red'。",
+      "tips_zh": "飞织常用多色:body color + accent color + logo color,确认主色 + 辅色 + logo 颜色数。",
+      "user_response_example": "Main color is black, with a white midfoot and an orange logo. We also need one Pantone color for the spring line — I will send the Pantone TCX code by email."
+    },
+    {
+      "round": 4,
+      "ai_message": "Three colors is fine for E15. About the logo — do you want it intarsia knitted, or printed on after? Intarsia is no-sew but has a minimum logo size of about 8 mm.",
+      "ai_message_zh": "E15 做 3 个颜色没问题。logo 这块 — 您是要嵌花(integria)编织进去,还是后印?嵌花零车缝,但 logo 最小约 8 毫米。",
+      "expected_user_response_hint": "选择 logo 工艺",
+      "key_phrases": ["We prefer intarsia", "knit it directly in", "no-sew construction", "logo size is ... mm"],
+      "common_mistakes": "intarsia 是嵌花(无虚线),jacquard 是提花(有浮线背面),不要混用。",
+      "tips_zh": "intarsia logo 正面干净,无浮线,适合多色块;jacquard logo 适合小尺寸,背面有浮线。",
+      "user_response_example": "We prefer intarsia — no-sew construction is important for our brand. The swoosh logo is about 25 mm wide, so size is not an issue."
+    },
+    {
+      "round": 5,
+      "ai_message": "OK, 25 mm intarsia is easy. For the development, we need your last shape — a 3D file or a 2D drawing with key dimensions. Can you send the last?",
+      "ai_message_zh": "好,25 毫米嵌花没问题。开发阶段需要您提供鞋楦 — 3D 文件或带关键尺寸的 2D 图。可以提供鞋楦吗?",
+      "expected_user_response_hint": "确认是否能提供鞋楦",
+      "key_phrases": ["I can send the last file", "in STL or OBJ format", "We have the last in 3D", "We can also send 2D drawings"],
+      "common_mistakes": "last = 鞋楦,发音 /læst/,和 'last 上一个' 同音但意思不同。",
+      "tips_zh": "鞋楦是飞织开发的灵魂文件,3D 文件格式优先 STL 或 OBJ。",
+      "user_response_example": "Yes, I can send the last file in STL format. We also have 2D drawings with the toe spring and instep height. I will email both today."
+    },
+    {
+      "round": 6,
+      "ai_message": "Perfect. Once we receive the last, our engineer can program the knit pattern in 3 to 5 working days. We will send a 3D simulation and a hand sample. Sample lead time is about 10 days. Is that OK?",
+      "ai_message_zh": "好。收到鞋楦后,我们的工程师 3-5 个工作日可以编程花型。会发您 3D 仿真和手织样。样鞋交期约 10 天,可以吗?",
+      "expected_user_response_hint": "确认交期,询问样品费用",
+      "key_phrases": ["10 days is fine", "Sample lead time is OK", "How much is the sample fee", "Can we deduct the sample cost from the bulk order"],
+      "common_mistakes": "sample fee = 打样费,口语里直接说 'sample fee',不要说 'cost for the sample'。",
+      "tips_zh": "样鞋费:单只约 200-500 元,大批量订单可冲抵货款,提前谈好。",
+      "user_response_example": "10 days is acceptable. By the way, what is the sample fee per pair? And can it be deducted from the bulk order once we place it?"
+    },
+    {
+      "round": 7,
+      "ai_message": "Sample fee is US$80 per pair, refundable once your bulk order is 3,000 pairs or more. We will need 50% deposit for the mold, balance before sample shipment. Does that work?",
+      "ai_message_zh": "样品费 80 美元一双,3000 双以上大货订单可冲抵。需要 50% 模具定金,样品出货前付尾款。可以吗?",
+      "expected_user_response_hint": "确认付款方式,询问模具相关",
+      "key_phrases": ["That works for us", "TT 50/50 is fine", "What about the mold cost", "How long is the mold life"],
+      "common_mistakes": "deposit = 定金,口语里 'deposit' 可数: a 50% deposit。",
+      "tips_zh": "飞织模具(program 文件)归属:大部分工厂给买断式,有的按订单免费提供,签合同时要明确。",
+      "user_response_example": "That works. 50% deposit is fine. One question — the mold program, does it belong to us after the sample is approved? We may move production to another factory in the future."
+    },
+    {
+      "round": 8,
+      "ai_message": "Yes, once sample is approved and the program is paid in full, it is your IP. You can take it to any factory. Let me send you a draft sample agreement by email for review.",
+      "ai_message_zh": "可以。样品认可且程序款付清后,程序归您,可以拿到任何工厂。我先发您一份打样协议草稿邮件审阅。",
+      "expected_user_response_hint": "确认收邮件,安排下步",
+      "key_phrases": ["Sounds good", "I will review the agreement", "Please send the agreement to ...", "We can start next week"],
+      "common_mistakes": "IP = intellectual property,口语里读 'I-P',不要念字母全称。",
+      "tips_zh": "大品牌飞织项目一定要签 IP 归属条款,程序文件是可移植的核心资产。",
+      "user_response_example": "Sounds good. Please send the agreement to mark@velocity.com. We can start the sample process next week once the last file is ready. Thanks Daniel."
+    }
+  ]
+}

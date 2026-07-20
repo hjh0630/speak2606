@@ -1,0 +1,78 @@
+{
+  "scenario_id": "claim_aftersales",
+  "scenario_title_en": "Claims & After-sales",
+  "scenario_title_zh": "索赔/售后",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Linda here. We're escalating the PO 2024-512 case. The buyer is threatening to withhold payment on PO 2024-589 unless we resolve this claim. Can you give me a written response by tomorrow?",
+      "ai_message_zh": "陈,Linda。PO 2024-512 这票我们升级处理了。客户威胁要扣 PO 2024-589 的货款,除非把这票索赔解决。明天能给我书面回复吗?",
+      "expected_user_response_hint": "承诺时间表 + 升级处理,内部要查清",
+      "key_phrases": [
+        "I'll give you a written response by EOD tomorrow",
+        "I'm escalating this internally",
+        "Please share all the evidence you've"
+      ],
+      "common_mistakes": "不要只说 'we will get back to you'。给具体时间:by EOD, by tomorrow noon, within 24 hours。",
+      "tips_zh": "客户扣押后续订单货款(leverage),这是常见的 escalation 手段,工厂必须快速响应,不能拖。",
+      "user_response_example": "Understood. I'll personally own this and give you a written response by 5 PM tomorrow. In the meantime, could you share the full evidence pack — photos, QC report, and the buyer's claim letter? I'm escalating internally to our QC manager and the owner."
+    },
+    {
+      "round": 2,
+      "ai_message": "Evidence pack is on its way. Now, the broken-stitch issue — is it a single shift on the production line, or systemic? We need to know before we settle.",
+      "ai_message_zh": "证据马上发。现在的问题是,车缝开线是单班次问题还是系统性问题?我们要在谈赔偿前搞清楚。",
+      "expected_user_response_hint": "分析根因 + 解释范围",
+      "key_phrases": [
+        "We traced it to a single sewing line on the night shift",
+        "The issue is the thread tension",
+        "We'll re-train the operators"
+      ],
+      "common_mistakes": "单班次 vs 系统性的判断,要查清再答。查:机器、工人、面料、工艺变更。",
+      "tips_zh": "客户问是不是系统性,你要给:影响范围 + 根因 + 改善措施。三件套一起说。",
+      "user_response_example": "We've traced it to a single sewing line on the night shift of March 15th. The root cause was a thread-tension issue on the overlock machine — the operator didn't flag the tension drift. We've re-trained the line and added an hourly tension check."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK, single shift, that's manageable. Now for settlement — the buyer is asking for USD 4,500 plus a free re-shipment. USD 4,500 equals about 18 percent of the invoice value. That's on the high side. What's your position?",
+      "ai_message_zh": "行,单班次,能接受。赔偿 — 客户要 USD 4,500 加免费重发。4500 大概是发票金额的 18%,偏高。你们怎么看?",
+      "expected_user_response_hint": "用数据反推 + 谈判",
+      "key_phrases": [
+        "The actual defect rate is 8 percent",
+        "USD 4,500 is roughly 18 percent, the industry norm is 10-15 percent",
+        "Can we meet in the middle?"
+      ],
+      "common_mistakes": "客户报价时直接 'yes' / 'no' 都不好。拆开:承认问题部分(8% × 货值),争议额外部分。",
+      "tips_zh": "赔偿谈判:replacement cost + shipment cost + admin cost + goodwill,加起来就是 18%,但要分项列。",
+      "user_response_example": "On the 240 affected pieces, a fair credit would be USD 2,500 — that's the FOB value of the goods plus re-inspection. The other USD 2,000 doesn't map to a clear cost line. Can we settle at USD 3,000 and free re-shipment? That's roughly 12 percent of the invoice."
+    },
+    {
+      "round": 4,
+      "ai_message": "The buyer won't go below USD 4,000, and free re-shipment is non-negotiable. I think we can close at USD 4,000 plus shipping. Can you accept?",
+      "ai_message_zh": "客户最低 USD 4,000,免费重发非谈。我看 4000 + 运费能成交。你能接受吗?",
+      "expected_user_response_hint": "评估利润 + 客户关系,做决定",
+      "key_phrases": [
+        "We accept USD 4,000 credit and free re-shipment",
+        "This is a stretch but we value the relationship",
+        "Please send the formal debit note"
+      ],
+      "common_mistakes": "谈判要分清:loss vs relationship value。利润薄的老客户,通常别硬扛。",
+      "tips_zh": "判断标准:赔偿金额 / 订单年金额 = 影响系数;<5% 可吃,5-10% 谈,>10% 慎。",
+      "user_response_example": "We accept USD 4,000 credit note and free re-shipment. Please send the formal debit note with the buyer's signature, and we'll process the credit within 48 hours. We value the partnership — let's make sure this doesn't happen again."
+    },
+    {
+      "round": 5,
+      "ai_message": "OK. One last thing — the buyer's compliance team wants a copy of your corrective action plan, signed by your QC manager. Can you send it by Friday?",
+      "ai_message_zh": "行。最后 — 客户合规团队要一份你们 QC 主管签的纠正措施计划,周五能发吗?",
+      "expected_user_response_hint": "承诺时间 + 给模板框架",
+      "key_phrases": [
+        "Yes, signed CAP by Friday EOD",
+        "I'll email the draft for your review first",
+        "CAP will include 5-why, corrective, and prevention sections"
+      ],
+      "common_mistakes": "CAP(Corrective Action Plan)和 RCA 经常被混用 — RCA 是分析,CAP 是行动计划,客户要的是后者,包括 RCA 结论。",
+      "tips_zh": "CAP 模板:问题描述 / 根因 / 即时措施 / 长期预防 / 责任人 / 完成时间 / 验证方法。",
+      "user_response_example": "Yes, you'll have a signed CAP by Friday EOD. I'll email you a draft tomorrow for review. The CAP will cover the 5-why analysis, immediate corrective action, long-term prevention, owner, deadline, and verification method."
+    }
+  ]
+}

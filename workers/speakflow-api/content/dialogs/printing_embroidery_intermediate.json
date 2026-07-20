@@ -1,0 +1,88 @@
+{
+  "scenario_id": "printing_embroidery",
+  "scenario_title_en": "Printing & Embroidery",
+  "scenario_title_zh": "印绣花工艺",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, Wendy from Lotus Print House. I have your brief — a 14-color floral placement print on a 220 GSM cotton-modal jersey, run of 4,000 pieces. Before I quote, I need to challenge the print method. For 14 colors with detailed shading, rotary screen won't hold the registration. Flat screen or digital are your realistic options. What's your priority — cost or detail?",
+      "ai_message_zh": "Chen,我是 Lotus 印花厂的 Wendy。看了你的工艺单 — 220 克棉莫代尔汗布,14 色花卉定位印,4000 件。报价前先挑战印花方式:14 色带渐变细节,圆网套准撑不住,平网和数码才现实。你优先选哪个 — 成本还是细节?",
+      "expected_user_response_hint": "根据效果需求选工艺",
+      "key_phrases": ["Detail is priority", "Digital print", "flat screen", "color separation"],
+      "common_mistakes": "registration(套准) 是多色印花关键指标,圆网大批量套准好但细节不如平网和数码。",
+      "tips_zh": "14 色 + 渐变,数码印花最合适;平网也能做但分色工时长。",
+      "user_response_example": "Detail is the priority. The buyer is going for a high-end look with subtle color gradients. Digital print is fine if the cost premium is reasonable."
+    },
+    {
+      "round": 2,
+      "ai_message": "OK, digital print it is. For digital, we use acid ink on cotton-modal. Acid ink has better color vibrancy and softness on this fabric than reactive digital. About the design — is it a continuous pattern or a single placement?",
+      "ai_message_zh": "好,数码印花。数码我们用酸性墨水印棉莫代尔。酸性墨水在这种布上比活性数码色彩更鲜、手感更软。设计稿 — 是连续花型还是单一定位?",
+      "expected_user_response_hint": "回答花型类型",
+      "key_phrases": ["placement print", "continuous pattern", "all-over print", "single placement"],
+      "common_mistakes": "placement print(定位印) vs all-over print(满身印) — 工艺和损耗差异大。",
+      "tips_zh": "定位印需要在每一件 T 恤上对位,人工或模板辅助,效率低,单价高。",
+      "user_response_example": "It's a continuous all-over print, full front and back. About 60% of the fabric area is printed."
+    },
+    {
+      "round": 3,
+      "ai_message": "All-over digital at 60% coverage is significant. On the cost side, digital is priced by ink consumption. For 14 colors with 60% coverage, expect about US$2.20 per piece. The alternative is to flatten the artwork to 8 spot colors and run flat screen — that drops to US$1.10 per piece but loses the gradient effect.",
+      "ai_message_zh": "满身印 60% 覆盖率,墨水用量大。成本上,数码按墨水计费,14 色 60% 覆盖率约 2.2 美元一件。或者把设计压成 8 个专色走平网,降到 1.1 美元一件,但会丢渐变效果。",
+      "expected_user_response_hint": "评估两个方案",
+      "key_phrases": ["digital is fine", "US$2.20 is acceptable", "flatten to 8 colors", "artwork simplification"],
+      "common_mistakes": "artwork simplification(设计简化) 是降本常用手段,客户愿不愿意改设计是商务问题不是技术问题。",
+      "tips_zh": "压专色降本,但效果会变;要先跟客户(buyer)确认是否接受简化。",
+      "user_response_example": "The buyer's brand is built on rich color stories. US$2.20 is acceptable for the SS collection. Let's stay on digital. Can you ensure the gradient stays smooth at the seam line?"
+    },
+    {
+      "round": 4,
+      "ai_message": "Gradient at the seam is always the risk on all-over prints. We usually print panels separately and seam them, but on a 200 cm tubular you have a single panel. The solution is to print with a 5 cm overlap zone at the side seam, and trim it during sewing. Your pattern maker needs to know about the overlap.",
+      "ai_message_zh": "满身印接缝处渐变是常出问题的地方。我们通常分片印再拼缝,但 200cm 圆筒是单片。解决办法是侧缝位置印 5 厘米重叠区,车缝时再修齐。你的版师要知道这个重叠。",
+      "expected_user_response_hint": "了解侧缝处理方案",
+      "key_phrases": ["overlap zone", "side seam", "panel", "pattern maker"],
+      "common_mistakes": "overlap zone(重叠区) 是数码满身印处理侧缝的常见方法,1-5 cm 重叠,车缝时对齐。",
+      "tips_zh": "数码印花机的有效门幅通常 160-180 cm,超过要分片或重叠。",
+      "user_response_example": "The overlap zone approach is fine. I'll brief our pattern maker to align the side seam within the overlap. What's the tolerance for pattern matching on this?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Pattern matching tolerance should be within 2-3 mm on the side seam. Our printer does that consistently. Now, the bigger question — wash fastness on digital prints. Acid ink gives us grade 4 on the first 5 washes, but it drops to 3-4 after 20 washes. If the buyer needs 4 across 30 washes, we have to add a fixing agent in post-treatment. US$0.15 per piece extra.",
+      "ai_message_zh": "侧缝对花公差 2-3mm 以内,我们印花机一直稳定。更大的问题 — 数码印花的耐洗。酸性墨水前 5 次水洗 4 级,20 次后降到 3-4 级。如果客户要 30 次水洗保持 4 级,后整理要加固色剂,加 0.15 美元一件。",
+      "expected_user_response_hint": "决定是否加固色剂",
+      "key_phrases": ["add the fixative", "US$0.15 is fine", "30 washes standard", "post-treatment"],
+      "common_mistakes": "fixing agent(固色剂) 是后整理化学品,提升染料与纤维结合力,延长牢度。",
+      "tips_zh": "酸性墨水比活性墨水鲜艳,但湿牢度略差,深色 / 高饱和花型需要固色剂。",
+      "user_response_example": "Buyer's care label says 'wash inside out, 30°C, 30 washes' — so the 30-wash standard applies. Add the fixative. The US$0.15 premium is worth it."
+    },
+    {
+      "round": 6,
+      "ai_message": "Will do. Now I want to flag a process risk — digital print on cotton-modal can have a handfeel change after printing. The ink sits on the fiber surface. For a 220 GSM fabric, it shouldn't be too noticeable, but the buyer should know. We can do a pre-production print sample to confirm.",
+      "ai_message_zh": "好。再提一个工艺风险 — 棉莫代尔数码印花,墨水在纤维表面,手感会变。220 克布上感觉不明显,但要让客户知道。我们可以出产前印花样确认。",
+      "expected_user_response_hint": "接受产前样,确认手感",
+      "key_phrases": ["handfeel change", "pre-production sample", "acceptable", "buyer is aware"],
+      "common_mistakes": "ink-on-surface(墨水在表面) vs reactive ink(活性墨水渗透) 决定了手感,数码酸性墨水偏表面。",
+      "tips_zh": "数码印花手感变化是客户常问的问题,提前沟通可避免后期争议。",
+      "user_response_example": "The buyer's tech design team is aware that digital print may slightly change the handfeel. Pre-production sample is a good safety net — let's do that. Send the strike-off with the fixative treatment included."
+    },
+    {
+      "round": 7,
+      "ai_message": "Will include the fixative in the strike-off. Now — embroidery is mentioned in the brief as a secondary technique on the sleeve. What stitch type do you want? Satin stitch, chain stitch, or fill stitch?",
+      "ai_message_zh": "打样会包含固色。工艺单提到袖口有绣花,是什么针法?缎纹绣、链式绣还是填充绣?",
+      "expected_user_response_hint": "讨论绣花针法",
+      "key_phrases": ["satin stitch", "chain stitch", "fill stitch", "for the logo"],
+      "common_mistakes": "satin stitch(缎纹绣) 用于细线宽条带;chain stitch(链式绣) 适合轮廓;fill stitch(填充绣) 适合大面积色块。",
+      "tips_zh": "绣花针法选错会显得粗笨或稀疏,按图案类型选针法。",
+      "user_response_example": "It's a small logo, 4 cm wide. Satin stitch works for that size — clean edges, fine detail. What backing do you recommend for jersey?"
+    },
+    {
+      "round": 8,
+      "ai_message": "For jersey, tear-away backing is standard, plus a water-soluble topping film to keep the stitches raised on the textured surface. Density around 0.4 mm pitch gives a clean satin look. Embroidery cost for 4 cm logo is about US$0.35 per piece. Let me summarize: digital print 60% coverage at US$2.20, fixative US$0.15, embroidery at US$0.35, total US$2.70 per piece. Strike-off in 8 days. Sound good?",
+      "ai_message_zh": "汗布绣花,撕布衬底是标准,再加水溶性上膜让针迹立在纹理面上。针距 0.4mm 缎面干净。4cm 绣花成本约 0.35 美元一件。总结:数码印花 60% 覆盖率 2.2 美元,固色 0.15 美元,绣花 0.35 美元,共 2.7 美元一件。8 天打样。这样行吗?",
+      "expected_user_response_hint": "确认总结,收尾",
+      "key_phrases": ["Approved", "Send the strike-off", "Looking forward"],
+      "common_mistakes": "tear-away backing(撕布衬底) vs cut-away(切衬) — 针织用撕衬,梭织用切衬。",
+      "tips_zh": "绣花+印花组合,先印后绣避免绣花区域墨水被针刺穿。",
+      "user_response_example": "Approved, Wendy. Send the strike-off with the full print and embroidery to chen.wei@lilygarments.com. Looking forward to it."
+    }
+  ]
+}

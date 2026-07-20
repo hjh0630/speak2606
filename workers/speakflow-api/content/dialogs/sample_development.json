@@ -1,0 +1,78 @@
+{
+  "scenario_id": "sample_development",
+  "scenario_title_en": "Sample Development",
+  "scenario_title_zh": "款式开发/打样",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, this is Sarah from our design team. We just sent you a tech-pack for the new dress. Have you had a chance to review it?",
+      "ai_message_zh": "陈你好,我是设计部 Sarah。新款连衣裙的工艺单刚发你,你看过了吗?",
+      "expected_user_response_hint": "确认收到并简短反馈初步意见",
+      "key_phrases": [
+        "Yes, I received it",
+        "I've gone through the spec sheet",
+        "A few points I want to confirm"
+      ],
+      "common_mistakes": "不要光说 'we got it'。要给具体反馈点:面料、尺寸、工艺细节,显示你读过了。",
+      "tips_zh": "tech-pack 收到后先看 BOM(物料清单)和 measurement chart(尺寸表),这是问题高发区。",
+      "user_response_example": "Hi Sarah, yes, I received the tech-pack yesterday. I've gone through the spec sheet and the BOM. A few points I want to confirm with you — can we jump on a quick call now?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure. First, the fabric — we wrote 180 GSM cotton jersey, but our designer wants a slightly heavier handfeel. Can you suggest alternatives?",
+      "ai_message_zh": "行。第一个,面料 — 我们写的是 180 克棉毛布,但设计师想要更厚实的手感。你能推荐替代品吗?",
+      "expected_user_response_hint": "提建议并解释 trade-off",
+      "key_phrases": [
+        "We can go up to 200 GSM",
+        "Slightly heavier would be 220 GSM French terry",
+        "There will be a small cost impact"
+      ],
+      "common_mistakes": "handfeel(手感)是主观的,要给具体克重 + 工艺建议,不要只说 'we can make it heavier'。",
+      "tips_zh": "报替代方案时给三件套:克重 / 工艺 / 价格影响,客户才好决策。",
+      "user_response_example": "Sure. For a heavier handfeel, we can move to 220 GSM French terry — same cotton face, slightly thicker loop on the back. The cost will go up about 8 percent. Want me to send a hand sample first?"
+    },
+    {
+      "round": 3,
+      "ai_message": "Yes please, send a hand sample. While we're at it — the spec says 'overlock stitch' on the hem. Is that standard, or can we do a coverstitch for a cleaner finish?",
+      "ai_message_zh": "好,寄块手感样。同时 — 工艺单上写的是下摆锁边,标准做法。能不能改用绷缝,看起来更干净?",
+      "expected_user_response_hint": "解释 stitch 类型差异并给建议",
+      "key_phrases": [
+        "Coverstitch gives a cleaner hem",
+        "Overlock is fine for casual styles",
+        "Coverstitch needs a special machine, slight extra cost"
+      ],
+      "common_mistakes": "overlock / coverstitch 作用不同:overlock 防脱线,coverstitch 装饰 + 弹性,别只看字面。",
+      "tips_zh": "针织弹力面料,下摆 coverstitch 是行业默认,主动建议升级显得专业。",
+      "user_response_example": "Good eye. Coverstitch gives a much cleaner hem, especially on stretch knits. We can do it on our existing machines, with a slight cost add of USD 0.20 per piece. Worth it for the finish."
+    },
+    {
+      "round": 4,
+      "ai_message": "OK, let's do coverstitch. Now the size spec — your spec says size M is chest 96 cm. Our designer drafted at 100 cm. Who's right?",
+      "ai_message_zh": "行,改 coverstitch。尺寸这块 — 你们工艺单写 M 码胸围 96,我们设计师画版是 100,谁对?",
+      "expected_user_response_hint": "澄清来源并给建议",
+      "key_phrases": [
+        "Let me check our size chart",
+        "The 96 is from our standard size chart",
+        "We can grade to 100 if you prefer"
+      ],
+      "common_mistakes": "不要凭印象答。先确认你工艺单的数据来源(品牌 size chart / 工厂标准尺码),再给方案。",
+      "tips_zh": "尺寸冲突很常见,通常用工厂标准 + 客户公差 ±2cm 都可接受。",
+      "user_response_example": "Let me check — the 96 cm in our spec sheet is from our standard export size chart. If your designer drafted at 100 for a relaxed fit, I can grade the pattern to 100. Either works; what matters is that we're aligned before sampling."
+    },
+    {
+      "round": 5,
+      "ai_message": "Let's go with 100, then. Final question — the sample yardage. How much fabric do you need for the sample, and how long will sampling take?",
+      "ai_message_zh": "那就 100 吧。最后 — 打样的面料用量和打样周期?",
+      "expected_user_response_hint": "给面料用量 + 排期",
+      "key_phrases": [
+        "We need 1.5 meters for a sample",
+        "Sampling lead time is 10-12 days",
+        "We'll send the sample by DHL"
+      ],
+      "common_mistakes": "样布用量不要估:按款式 + 尺码计算实际裁剪用量,报整数米。",
+      "tips_zh": "打样周期(10-15 天)+ 快递(DHL 3-5 天)要分开说,客户才知道何时能拿到。",
+      "user_response_example": "We need 1.5 meters of fabric for one sample. Sampling lead time is 10-12 days, then we send by DHL which adds 3-4 days. So you should have the sample in hand within 16 days."
+    }
+  ]
+}

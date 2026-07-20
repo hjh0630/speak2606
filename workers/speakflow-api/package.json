@@ -1,0 +1,25 @@
+{
+  "name": "speakflow-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "sync-content": "bash scripts/sync-content.sh",
+    "prebuild": "bash scripts/sync-content.sh",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "d1:create": "wrangler d1 create speakflow-db",
+    "d1:execute:local": "wrangler d1 execute speakflow-db --local --file=./schema.sql",
+    "d1:execute:remote": "wrangler d1 execute speakflow-db --remote --file=./schema.sql"
+  },
+  "dependencies": {
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250101.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^3.95.0"
+  }
+}
