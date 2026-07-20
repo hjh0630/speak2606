@@ -1,0 +1,88 @@
+{
+  "scenario_id": "weaving_knitting",
+  "scenario_title_en": "Weaving & Knitting",
+  "scenario_title_zh": "织造沟通",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Tom here. Look, before I open the lab, I need to challenge one spec on your tech-pack. You're calling for a 16-cut interlock with 28s yarn, but your GSM target is 260. On my machines, that combination will land at 235, not 260. Either we go 14-cut, or we go 24s yarn, or we accept 235. Pick one — which direction do you want to push?",
+      "ai_message_zh": "Chen,Tom。先开打前我得挑战你工艺单上一个数字。你写 16 针双面布 + 28 支纱,克重 260。我机器上这个组合只能做到 235。要么换 14 针,要么换 24 支,要么接受 235。你怎么选?",
+      "expected_user_response_hint": "根据成本/手感要求选择工艺方向",
+      "key_phrases": ["Push to 14-cut", "Stay at 28s", "GSM is the priority", "handfeel matters more"],
+      "common_mistakes": "16-cut(16 针)interlock 是中细针双面,18 针以上是细针;针数越低布越粗。",
+      "tips_zh": "克重由 4 个变量决定:机号、纱支、线圈长度、织缩。改任何一个,克重都会动。",
+      "user_response_example": "The buyer has a 260 GSM minimum in the tech-pack. Let's push to 14-cut with 24s yarn — that gives us the weight and a slightly firmer hand which is actually on-brand."
+    },
+    {
+      "round": 2,
+      "ai_message": "14-cut, 24s — got it. That puts you in a different yarn stock. Honestly, 24s is not our bread and butter — our line is geared to 28s, 32s, 40s. 24s will have a 10-12% longer lead time because we need to source. Will that be a problem for your booking date?",
+      "ai_message_zh": "14 针 24 支,记下了。坦白说,24 支不是我们的主流 — 我们机型偏 28、32、40 支。24 支要外采,交期会长 10-12%。你预订的出货日会受影响吗?",
+      "expected_user_response_hint": "接受更长交期或讨论备选",
+      "key_phrases": ["Lead time is tight", "Can we expedite", "alternative yarn", "at what cost"],
+      "common_mistakes": "bread and butter(主业/主力产品) 是固定表达,行业里也常说 core competency。",
+      "tips_zh": "外采 yarn 排产要留 7-10 天,小批量加急可走加价通道。",
+      "user_response_example": "Honestly, every extra day matters. Our booking date is locked. Can you expedite the yarn sourcing with a small premium, or do we need to revisit the 28s option with a 5% GSM variance allowance?"
+    },
+    {
+      "round": 3,
+      "ai_message": "I can expedite the 24s yarn at a US$0.18 per kg surcharge. On 4,000 kg, that's US$720. Or I can keep you on 28s and pull GSM to 245 by tightening the loop length to 2.7 mm — that's the cheaper path and keeps the line running. What's your call?",
+      "ai_message_zh": "24 支加急每公斤加 0.18 美元。4 吨就是 720 美元。或者继续 28 支,线圈长度收到 2.7mm,克重做到 245 — 更便宜而且不断线。你选?",
+      "expected_user_response_hint": "选加急外采还是调工艺参数",
+      "key_phrases": ["Let's go with 245 GSM", "Take the expedite", "cost vs. risk", "buyer acceptance"],
+      "common_mistakes": "loop length 调小 0.1 mm 通常带来 2-3% 克重变化,克重变化也会影响缩水。",
+      "tips_zh": "调 loop length 是工艺工程师的'暗调',不影响单价但影响手感。",
+      "user_response_example": "Let's tighten the loop and stay on 28s — US$720 saved is meaningful, and 245 GSM with a 5% tolerance is acceptable to the buyer. Just confirm the shrinkage stays within 4% lengthwise."
+    },
+    {
+      "round": 4,
+      "ai_message": "At 2.7 mm loop, lengthwise shrinkage pre-compact is around 6.5%. After compacting, we should land at 3.5 to 4%. Widthwise stays at about 3%. Now — the bigger conversation. Your buyer is also asking for GRS recycled content, but 14-cut on interlock with recycled cotton tends to have more nep count. Have you considered GRS recycled poly blend instead?",
+      "ai_message_zh": "2.7mm 线圈,长度方向预缩前 6.5%,预缩后 3.5-4%,宽度方向约 3%。再说一个重点 — 客户要 GRS 再生,但 14 针双面用再生棉,棉结会偏多。考虑过 GRS 再生涤纶混纺吗?",
+      "expected_user_response_hint": "评估再生涤纶方案的可行性",
+      "key_phrases": ["GRS poly blend", "nep count", "recycled cotton", "sustainability story"],
+      "common_mistakes": "nep(棉结) 是纤维纠缠形成的小结,影响布面光洁度,再生棉因纤维短更易出现。",
+      "tips_zh": "GRS 再生涤纶(来自 PET 瓶)比再生棉稳定,适合做结构纱。",
+      "user_response_example": "GRS poly blend is a stronger story for them actually — they can claim 30% recycled content. Can you do 70% combed cotton / 30% GRS recycled poly on 14-cut interlock? What's the impact on handfeel?"
+    },
+    {
+      "round": 5,
+      "ai_message": "70/30 cotton/recycled poly on 14-cut will give a slightly drier, more technical hand — a bit like a performance interlock. If the buyer is targeting a 'premium basics' feel, the poly might fight the story. If they're going for 'athleisure casual', the poly actually helps with recovery and reduces pilling.",
+      "ai_message_zh": "70/30 棉/再生涤纶 14 针双面,手感会偏干、偏技术感,有点像运动双面。如果客户定位'高端基础款',涤纶会跟品牌调性冲突;如果定位'运动休闲 casual',涤纶反而帮回弹、降起球。",
+      "expected_user_response_hint": "讨论定位对工艺的影响",
+      "key_phrases": ["It's athleisure casual", "we are going for", "handfeel direction", "premium basics"],
+      "common_mistakes": "athleisure = athletic + leisure,运动休闲风,常用化纤混纺;premium basics 强调天然纤维触感。",
+      "tips_zh": "定位决定工艺,不要先定工艺再讲定位 — 顺序很重要。",
+      "user_response_example": "Athleisure casual is exactly where the brand is heading. The poly recovery and lower pilling actually support the positioning. Let's go 70/30, but please run a control sample first so I can show the buyer side-by-side."
+    },
+    {
+      "round": 6,
+      "ai_message": "Will do. I'll run a side-by-side: 100% combed cotton vs. 70/30 cotton/recycled poly, both at 14-cut, 245 GSM. Will need 5 days for knitting plus 3 days for dyeing — so you have both in 8 days. Cost-wise, the 70/30 will save you roughly 8% on yarn cost vs. all-cotton.",
+      "ai_message_zh": "好。我会做对照样:100% 精梳棉 vs. 70/30 棉/再生涤纶,都 14 针 245 克。针织 5 天加染色 3 天,8 天给你两个样。成本上,70/30 比全棉省约 8% 纱线费。",
+      "expected_user_response_hint": "确认打样时间,讨论成本",
+      "key_phrases": ["8% savings is real", "send me both", "side-by-side", "cost reduction"],
+      "common_mistakes": "side-by-side 是固定表达,意思是'并排对比'。",
+      "tips_zh": "做对照样时,所有变量保持一致,只换要对比的那一项,客户才好判断。",
+      "user_response_example": "8% savings is real — and the recycled story is genuine. Send me both samples side-by-side with a one-pager summary. I'll have the buyer pick by next Wednesday."
+    },
+    {
+      "round": 7,
+      "ai_message": "Done. One last technical flag — your spec calls for a mercerized finish on the face, but mercerizing on interlock isn't typical. It opens up the cotton structure and you lose some of the interlock's natural stability. Can you tell me why the buyer wants mercerized on this construction?",
+      "ai_message_zh": "好。最后一个工艺问题 — 你的工艺单写面做丝光整理,但丝光用在双面布上不常见。丝光会打开棉纤维结构,双面布本身的稳定性会损失。能告诉我客户为什么要在这种结构上做丝光?",
+      "expected_user_response_hint": "解释客户对丝光的需求,讨论替代方案",
+      "key_phrases": ["for luster", "appearance", "alternative finish", "compact finishing"],
+      "common_mistakes": "mercerized(丝光) 是用 NaOH 处理棉纤维,使其表面光滑、有光泽,常用于梭织棉毛衫,针织上少见。",
+      "tips_zh": "针织双面布通常用 calender(轧光) 或 compact(紧式) 整理来提光,不影响弹性。",
+      "user_response_example": "The buyer mentioned 'subtle luster' in the brief — I think what they actually want is a cleaner surface, not a true mercerized look. Can you propose a calender finish as an alternative? And quote the cost difference?"
+    },
+    {
+      "round": 8,
+      "ai_message": "Calender finish at 80°C gives a soft, even sheen without opening the cotton — perfect for interlock. Cost is the same as mercerizing, no premium. Let me also propose a final package: 14-cut interlock, 28s yarn, 70/30 cotton/recycled poly, 245 GSM, open width 180/178, jet dyed, calender finish, anti-pilling, pre-shrunk, GRS scope cert. PI tomorrow. Sound like a plan?",
+      "ai_message_zh": "80 度轧光整理给柔光、不开棉纤维,适合双面。价格跟丝光一样,不加钱。给你最终方案:14 针双面,28 支,70/30 棉/再生涤纶,245 克,开幅 180/178,溢流染色,轧光,抗起球,预缩,GRS 范围证。PI 明天发。这个方案可以吗?",
+      "expected_user_response_hint": "确认方案,收尾",
+      "key_phrases": ["Approved", "Send the PI", "One more thing", "Close it out"],
+      "common_mistakes": "calender finishing(轧光) vs calendering(压光) — 在针织整理中常交替使用,都指表面加光。",
+      "tips_zh": "最终 PI 要把每个工艺都列上,QC 才好对照,后续争议也少。",
+      "user_response_example": "Approved on the full package. Send the PI to chen.wei@lilygarments.com, and CC my assistant Tony. Let's close this out and lock the slot in the production calendar."
+    }
+  ]
+}

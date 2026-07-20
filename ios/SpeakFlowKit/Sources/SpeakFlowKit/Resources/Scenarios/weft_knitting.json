@@ -1,0 +1,62 @@
+{
+  "scenario_id": "weft_knitting",
+  "scenario_title_en": "Weft Knitting",
+  "scenario_title_zh": "纬编",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, this is Tom from the knitting mill. How can I help you?",
+      "ai_message_zh": "早上好,我是针织厂的 Tom,请问有什么事?",
+      "expected_user_response_hint": "说明来意:需要找纬编针织面料,T 恤或内衣",
+      "key_phrases": ["I am looking for ...", "I need a knit fabric", "for T-shirts", "for underwear"],
+      "common_mistakes": "Don't say 'I want knitted fabric' — say 'I am looking for a weft knit fabric supplier' or 'I need single jersey cotton for T-shirts'",
+      "tips_zh": "开门见山:报用途(内衣/T 恤/运动)+ 成分"
+    },
+    {
+      "round": 2,
+      "ai_message": "OK. Single jersey, interlock, rib, pique, fleece — which one do you need?",
+      "ai_message_zh": "好的。单面、双面、罗纹、珠地、毛巾布 — 您要哪种?",
+      "expected_user_response_hint": "选 single jersey(T 恤用)或 rib(领口用),不要太纠结",
+      "key_phrases": ["single jersey", "interlock", "rib 1x1", "pique", "fleece"],
+      "common_mistakes": "Don't say 'I don't know' — pick one based on use: 'single jersey for T-shirts'",
+      "tips_zh": "5 大类是基础,要选一个"
+    },
+    {
+      "round": 3,
+      "ai_message": "Single jersey, 100% cotton, 180 GSM. Got it. What yarn count and what machine gauge are you targeting?",
+      "ai_message_zh": "单面,100% 棉,180 GSM。明白。您要的纱支是多少?机号多少?",
+      "expected_user_response_hint": "报 26s 或 32s 棉纱,机号 E24 或 E28",
+      "key_phrases": ["26 Ne", "32 Ne", "E24 gauge", "E28 gauge", "compact yarn"],
+      "common_mistakes": "Don't say 'normal' — be specific: '26 Ne compact, E24 gauge'",
+      "tips_zh": "棉纱支数 + 机号 是基础,数字具体点"
+    },
+    {
+      "round": 4,
+      "ai_message": "For 26 Ne compact on E24, 180 GSM, we can do that on a Mayer & Cie circular knitting machine. 24-cut, 30 inch diameter, 78 feeders. What quantity?",
+      "ai_message_zh": "26 支紧密纺、E24、180 GSM,我们用 Mayer & Cie 圆机可以做。24 针、30 寸筒径、78 路。请问量是多少?",
+      "expected_user_response_hint": "报月用量或单次量",
+      "key_phrases": ["Mayer & Cie", "circular knitting", "78 feeders", "30 inch diameter", "monthly volume"],
+      "common_mistakes": "Don't say 'I don't know' — give a rough number: 'monthly 8000 kg'",
+      "tips_zh": "机型号说出来,显得有常识"
+    },
+    {
+      "round": 5,
+      "ai_message": "8000 kg per month is a healthy order. We can dedicate 4 machines to you. Lead time 30 days from greige approval, 45 days if you need dyeing. Lab dip in 5 days, dyeing lab dip 7 to 10 days.",
+      "ai_message_zh": "月用量 8000 公斤是稳定订单。我们可以专机 4 台做您的单。从坯布确认到出厂 30 天,如果要染色 45 天。坯布 lab dip 5 天,染色 lab dip 7-10 天。",
+      "expected_user_response_hint": "确认交期;问颜色管理(批差 ΔE);问分批",
+      "key_phrases": ["dedicate machines", "lead time 30 days", "45 days with dyeing", "lab dip", "delta E"],
+      "common_mistakes": "Don't say 'great' alone — '30 days from greige approval, lab dip in 5 days, 4 dedicated machines. Can you do 3 colors? 30/70 TT?'",
+      "tips_zh": "量大时要问分色/分批"
+    },
+    {
+      "round": 6,
+      "ai_message": "Yes, 3 colors is fine. Send me your Pantone codes. I'll have lab dips on your desk in 5 days. Once approved, 45 days for dyed fabric, FOB Shanghai. We accept TT 30/70. Anything else?",
+      "ai_message_zh": "可以,3 个颜色没问题。发我 Pantone 色号。5 天内 lab dip 到您桌上。确认后,染色 45 天,FOB 上海。我们接受 30/70 TT。还有问题吗?",
+      "expected_user_response_hint": "确认发 Pantone,确认 TT 30/70 接受,结束",
+      "key_phrases": ["Pantone TPX", "lab dip 5 days", "FOB Shanghai", "TT 30/70", "3 colors"],
+      "common_mistakes": "Don't say 'thanks bye' — re-confirm: 'Will send 3 Pantone codes today. 5-day lab dip, 45-day bulk, TT 30/70. Looking forward to working with you.'",
+      "tips_zh": "完美收尾"
+    }
+  ]
+}

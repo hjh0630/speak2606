@@ -1,0 +1,88 @@
+{
+  "scenario_id": "weaving_knitting",
+  "scenario_title_en": "Weaving & Knitting",
+  "scenario_title_zh": "织造沟通",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Tom from Jiangnan Knitting Mill. You sent us an inquiry for jersey fabric yesterday. What can I do for you?",
+      "ai_message_zh": "你好,我是江南针织厂的 Tom。你昨天发了一份汗布的询价,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍并说明来意:需要找特定规格的针织布",
+      "key_phrases": ["This is ...", "I am looking for ...", "We need jersey fabric", "for our T-shirt line"],
+      "common_mistakes": "inquiry / enquiry 都对,口语里常直接说 inquiry。",
+      "tips_zh": "询针织布时要先讲:产品类型(单面/双面/罗纹)、克重、成分、用途。",
+      "user_response_example": "Hello Tom, this is Chen Wei from Lily Garments. I am looking for single jersey fabric for our men's T-shirt line."
+    },
+    {
+      "round": 2,
+      "ai_message": "Good. What GSM are you looking at, and what is the composition?",
+      "ai_message_zh": "好的。你们要多少克重的?成分是什么?",
+      "expected_user_response_hint": "说明克重和成分",
+      "key_phrases": ["Around ... GSM", "100% cotton", "combed cotton", "cotton/spandex blend"],
+      "common_mistakes": "GSM(grams per square meter)不要按字面说 grams per square meter 全文,口语里直接说 GSM 即可。",
+      "tips_zh": "男 T 恤常用 180-220 GSM,女 T 恤 140-180 GSM。",
+      "user_response_example": "We need around 180 GSM, 100% combed cotton, single jersey."
+    },
+    {
+      "round": 3,
+      "ai_message": "180 GSM combed cotton, single jersey — standard. What about width? Do you need tubular or open width?",
+      "ai_message_zh": "180 克精梳棉单面汗布,常规的。门幅呢?要圆筒还是开幅?",
+      "expected_user_response_hint": "说明门幅要求",
+      "key_phrases": ["Tubular is fine", "open width", "we need ... cm", "cuttable width"],
+      "common_mistakes": "tubular(圆筒) 和 open width(开幅) 是针织布的两种卷装方式,选哪种看后整理和裁剪习惯。",
+      "tips_zh": "圆筒布(tubular)是圆筒状,适合 T 恤套裁;开幅布(open width)是平幅,适合大身裁片。",
+      "user_response_example": "Tubular is fine for us, around 180 cm circumference."
+    },
+    {
+      "round": 4,
+      "ai_message": "OK. Tubular 180 cm, 180 GSM combed cotton, we can do that. What about the yarn count — 26s or 32s?",
+      "ai_message_zh": "好的。圆筒 180cm,180 克精梳棉,能做。纱支用 26 支还是 32 支?",
+      "expected_user_response_hint": "选择纱支,讨论手感和成本",
+      "key_phrases": ["26s is fine", "32s is finer", "yarn count", "for handfeel"],
+      "common_mistakes": "yarn count 26s = 26 英支(英制),数字越大纱越细,布越薄越贵。",
+      "tips_zh": "26s 偏厚实耐穿(适合 200+ GSM),32s 偏细腻(适合 150-180 GSM)。",
+      "user_response_example": "26s is fine. 32s would be a bit too fine for this style, and more expensive."
+    },
+    {
+      "round": 5,
+      "ai_message": "Good. About the quantity — we usually run at least 1,000 kg per color. How much do you need?",
+      "ai_message_zh": "好的。数量方面,我们一般每个色至少 1 吨。你们需要多少?",
+      "expected_user_response_hint": "说明下单量,确认起订量",
+      "key_phrases": ["We need around ... kg", "per color", "total quantity", "MOQ"],
+      "common_mistakes": "针织布的 MOQ 通常以 kg 计,而不是成衣的件(pieces)。",
+      "tips_zh": "针织染整厂起染量一般 500-1000 kg/色,小批量要加价。",
+      "user_response_example": "We have 3 colors this season. Each color is about 1,500 kg, total 4,500 kg."
+    },
+    {
+      "round": 6,
+      "ai_message": "4,500 kg clears the MOQ easily. I can offer around US$3.20 per kg for 26s combed cotton, 180 GSM, tubular, dyed. Lead time is 25 days after lab dip approval.",
+      "ai_message_zh": "4.5 吨轻松过起订量。26 支精梳棉 180 克圆筒染色,3.2 美元/公斤。批准色样后 25 天出货。",
+      "expected_user_response_hint": "确认价格和交期,问样品",
+      "key_phrases": ["How about the price", "is the lead time ...", "Can you send lab dips", "per kg"],
+      "common_mistakes": "lab dip 是染厂对色样,针织厂跟染厂是 separate workflow,先打 lab dip 才能进染缸。",
+      "tips_zh": "针织厂通常跟染厂分工:针织厂管坯布,染厂管染色/印花,交期要算两段。",
+      "user_response_example": "Lead time is fine. Can you send me lab dips first? I need 3 Pantone TCX colors signed off before bulk."
+    },
+    {
+      "round": 7,
+      "ai_message": "Sure. We can send lab dips in 5 days. Once you approve them, knitting starts in 7 days, dyeing another 10, total about 22 days. About shrinkage — what tolerance can you accept?",
+      "ai_message_zh": "可以。5 天可以出对色样。批准后,针织 7 天,染色 10 天,总共 22 天左右。缩水方面,你们能接受多少公差?",
+      "expected_user_response_hint": "说明缩水公差要求",
+      "key_phrases": ["within 5%", "lengthwise", "widthwise", "shrinkage tolerance", "pre-shrunk"],
+      "common_mistakes": "shrinkage 缩水说'5%以内',一般指 length × width 都达标,行业用 lengthwise / widthwise 分别报。",
+      "tips_zh": "棉针织缩水行业标准 ±5%,pre-shrunk(预缩)可压到 ±3%。",
+      "user_response_example": "Within 5% lengthwise and widthwise is acceptable. If you can do pre-shrunk finishing, even better."
+    },
+    {
+      "round": 8,
+      "ai_message": "We do compact pre-shrinking — that gets it to about 3%. I'll include that in the offer. Send me the Pantone numbers, and I'll have the lab dips ready by Friday. Anything else?",
+      "ai_message_zh": "我们做紧式预缩,能压到 3% 左右。报价里会包含。把潘通号发我,周五前出对色样。还有别的吗?",
+      "expected_user_response_hint": "发送潘通号,确认收件邮箱,收尾",
+      "key_phrases": ["I'll send ... by email", "Looking forward to ...", "Thanks Tom"],
+      "common_mistakes": "pre-shrunk 工艺要写明 finishing 里,不能口头说;PI 里要单独列。",
+      "tips_zh": "pre-shrunk 工艺(预缩)在 PI 的 finishing 栏单独列,后续 QC 才好对照。",
+      "user_response_example": "I'll send the 3 Pantone TCX numbers by email this afternoon. Looking forward to the lab dips. Thanks, Tom."
+    }
+  ]
+}

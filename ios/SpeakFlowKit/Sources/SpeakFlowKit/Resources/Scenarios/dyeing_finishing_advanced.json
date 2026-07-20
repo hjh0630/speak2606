@@ -1,0 +1,88 @@
+{
+  "scenario_id": "dyeing_finishing",
+  "scenario_title_en": "Dyeing & Finishing",
+  "scenario_title_zh": "染整工艺",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, Wang Lei here. Look, I need to flag something before we go any further. Your spec calls for a 200 GSM reactive-dyed cotton interlock with a mercerized finish, and the buyer's standard is 4 wash fastness on a multi-fiber strip. Honestly, on interlock, mercerizing compromises the dimensional stability by 2-3 percentage points on shrinkage. Are you sure the buyer won't accept a caustic-resistant mercerized look via calendering instead?",
+      "ai_message_zh": "Chen,王磊。先停一下,你工艺单写 200 克活性染色双面 + 丝光,客户要求多纤维贴衬水洗 4 级。说实话,双面上丝光尺寸稳定性会损失 2-3 个百分点缩水。客户真的不能接受改用烧碱冷轧 + 轧光做出来的丝光效果吗?",
+      "expected_user_response_hint": "回应工艺挑战,讨论替代方案",
+      "key_phrases": ["Caustic-resistant mercerizing", "calender", "dimensional stability", "shrinkage tradeoff"],
+      "common_mistakes": "mercerizing(丝光)传统用 NaOH 浸泡处理,caustic-resistant mercerizing(烧碱冷轧)是更温和工艺,影响尺寸小。",
+      "tips_zh": "双面 / 罗纹布不推荐传统丝光,会影响弹性;可用冷轧 + 轧光模拟丝光外观。",
+      "user_response_example": "Honest answer, I don't know if the buyer will accept it. The brief says 'mercerized appearance' — I think the look matters more than the chemistry. Can you send me a side-by-side so I can show them? And quantify the shrinkage delta."
+    },
+    {
+      "round": 2,
+      "ai_message": "Will do. On a 200 GSM interlock, traditional mercerizing will push lengthwise shrinkage from 3% pre-mercerizing to 6-7% post-mercerizing. Caustic-resistant calendering keeps it at 3-4%. That's a real difference for garment makers who have tight tolerance on the size chart.",
+      "ai_message_zh": "好。200 克双面,传统丝光会把长度方向缩水从 3% 推到 6-7%。烧碱冷轧 + 轧光能控制在 3-4%。对尺寸表严格的成衣厂,这是真实差异。",
+      "expected_user_response_hint": "理解缩水差异,权衡选择",
+      "key_phrases": ["3-4% is acceptable", "6-7% is too much", "size chart tolerance", "for the buyer"],
+      "common_mistakes": "lengthwise shrinkage 数字越大缩水越多,表示成品下水后变短越多,影响尺码。",
+      "tips_zh": "成衣厂一般要求针织缩水 ±5% 以内,丝光后接近临界;再大就会客诉。",
+      "user_response_example": "3-4% is workable, 6-7% is over the line. Show me the side-by-side. If the calendered version looks 90% as good, the buyer will likely take it. Quantify the cost difference, too."
+    },
+    {
+      "round": 3,
+      "ai_message": "Calendering is essentially the same process cost as mercerizing — no premium, no saving. The difference is process risk. Let me also raise a more fundamental issue: on interlock, are you locked to reactive dye? For deeper shades like your navy at 19-3920, a reactive/vat combination gets better wash fastness on the borderline colors.",
+      "ai_message_zh": "轧光成本跟丝光基本一样,既不加价也不省。区别在工艺风险。再说一个更根本的问题 — 双面布你锁死活性染料了吗?像 19-3920 那种深藏青,活性 / 还原染料组合对临界色牢度会更好。",
+      "expected_user_response_hint": "讨论染料组合",
+      "key_phrases": ["reactive/vat combination", "wash fastness", "deep shades", "color depth"],
+      "common_mistakes": "vat dye(还原染料) 色牢度极佳但工艺复杂、价格高,主要用于深色;reactive dye(活性染料) 色谱全、染色简单。",
+      "tips_zh": "深藏青、深黑、深酒红常用活性 / 还原组合,提升湿牢度。",
+      "user_response_example": "We're not locked to a single dye class — buyer's spec just says 'durable for 30+ industrial washes.' Walk me through what reactive/vat combination gives us, and what's the impact on cost and lead time."
+    },
+    {
+      "round": 4,
+      "ai_message": "Reactive for primary color, vat for the dark shade overlay — it adds about 2 process steps and 1.5 days per batch. Cost is roughly US$0.20 per kg higher. The payoff: wash fastness goes from grade 3-4 to solid grade 4 on multi-fiber, and crocking rub fastness improves by half a grade. For a deep navy, that's the difference between a complaint and a clean PO.",
+      "ai_message_zh": "活性打主色,还原做深色罩染 — 每批加 2 个工序、1.5 天。成本每公斤多 0.20 美元。回报:多纤维贴衬水洗从 3-4 级稳到 4 级,耐摩擦提高半级。深藏青,这一个决定就是投诉和干净 PO 的区别。",
+      "expected_user_response_hint": "评估加成本是否值得",
+      "key_phrases": ["US$0.20 is worth it", "value of half a grade", "clean PO", "process steps"],
+      "common_mistakes": "multi-fiber strip(多纤维贴衬) 测试相邻色转移,9 种纤维同时贴,deep shade 容易在醋纤 / 棉上掉色。",
+      "tips_zh": "深色 4 级牢度比浅色难做,多纤维贴衬是关键测试。",
+      "user_response_example": "US$0.20 per kg is a no-brainer if it means a clean PO. Let's do the reactive/vat combination. Add it to the finishing spec and update the cost in the PI."
+    },
+    {
+      "round": 5,
+      "ai_message": "Will do. One more technical call — your spec says 'mercerized finish' but doesn't specify the appearance standard. Mercerized cotton can range from a subtle sheen to a near-silk luster. Does the buyer have a reference swatch or a luster meter target?",
+      "ai_message_zh": "好。再确认一个 — 你工艺单写 'mercerized finish',但没说光泽到什么程度。丝光棉从微光到接近丝绸光泽都有。客户有没有参考样,或光泽度仪的目标值?",
+      "expected_user_response_hint": "讨论光泽度标准",
+      "key_phrases": ["Reference swatch", "luster meter", "75 gloss units", "subtle sheen"],
+      "common_mistakes": "luster meter(光泽度仪) 测 60° 或 75° 反射率,数字越高越亮;高端丝光约 75-85 单位。",
+      "tips_zh": "光泽度要落到具体数值,不要光说'亮一点',客户验收没依据。",
+      "user_response_example": "The buyer has a reference swatch from last season, but no instrument spec. I'll send you the swatch. Aim for subtle sheen, not silk-lustrous. If you can target 70-75 gloss units at 60°, that should match."
+    },
+    {
+      "round": 6,
+      "ai_message": "70-75 gloss units is achievable on calendered interlock — it would be 80+ on truly mercerized. I'll target 72-74 to leave margin. Now — the bigger issue I want to raise. You're using GRS recycled cotton at 30%. Recycled cotton has shorter fiber length, which means more neps and a rougher surface. The mercerized appearance will be harder to achieve consistently. Did the buyer know that?",
+      "ai_message_zh": "70-75 光泽度在轧光双面上能做到;真正丝光会到 80+。我打 72-74 留余量。再说一个重点 — 你用 30% GRS 再生棉。再生棉纤维短,棉结多,布面粗糙,丝光外观一致性更难做。客户知道这点吗?",
+      "expected_user_response_hint": "讨论再生棉对丝光效果的影响",
+      "key_phrases": ["Recycled cotton", "nep count", "fiber length", "appearance consistency"],
+      "common_mistakes": "再生棉 short fiber 比例高,导致 nep count 高;neps 多的布面做丝光,光泽度会不均。",
+      "tips_zh": "GRS 再生棉 + 高光泽整理是矛盾组合,客户要光泽就要接受短纤特征。",
+      "user_response_example": "Honestly, the buyer's merchandising team probably didn't think about it that way. I need to flag this — either we drop the mercerized claim, or we reduce recycled to 20% and add a singeing pass to clean the surface. What do you recommend?"
+    },
+    {
+      "round": 7,
+      "ai_message": "I'd recommend the singeing route. Keep the 30% GRS, run a singeing pass at 1100°C to burn off the surface fuzz, and then a light calender. That gets you clean surface for the luster, and the recycled content stays intact. Add about 1.5 days and US$0.10 per kg.",
+      "ai_message_zh": "我推荐烧毛路线。保留 30% GRS,加一道 1100 度烧毛烧掉表面毛羽,再轻轧光。这样布面光洁、丝光感足,再生成分也保住。加 1.5 天,每公斤 0.10 美元。",
+      "expected_user_response_hint": "接受烧毛 + 轧光方案",
+      "key_phrases": ["Singeing pass", "clean surface", "GRS content", "cost is acceptable"],
+      "common_mistakes": "singeing(烧毛) 是用气体火焰或铜板烧去表面毛羽,1100°C 是燃气烧毛典型温度。",
+      "tips_zh": "烧毛后布面光洁,有利于后续丝光、印花、涂层整理。",
+      "user_response_example": "Singeing is the cleaner solution. Add the singeing pass at 1100°C plus a light calender — 1.5 days and US$0.10 per kg is acceptable. Document it in the finish spec so I can show the buyer's QC team."
+    },
+    {
+      "round": 8,
+      "ai_message": "Final finish spec: 200 GSM interlock, 70% virgin combed cotton / 30% GRS recycled cotton, reactive + vat combination for navy 19-3920, singeing at 1100°C, light calender to 72-74 gloss units, hydrophilic softener, pre-shrunk to 3% lengthwise / 3% widthwise, multi-fiber grade 4 wash, grade 4 light fastness, Oeko-Tex Class 2. Lab dip 7 days. PI by tomorrow with US$0.30 per kg cost addition. Deal?",
+      "ai_message_zh": "最终整理工艺:200 克双面,70% 精梳棉 / 30% GRS 再生棉,藏青 19-3920 活性 + 还原组合,1100 度烧毛,轻轧光到 72-74 光泽单位,亲水柔软剂,预缩 3%/3%,多纤维水洗 4 级,耐光 4 级,Oeko-Tex Class 2。7 天出对色样,PI 明天发,加价 0.30 美元/公斤。成交?",
+      "expected_user_response_hint": "确认最终方案",
+      "key_phrases": ["Deal", "Send the PI", "Update the spec sheet", "approved"],
+      "common_mistakes": "最终工艺 spec 一定要落到 PI 或 spec sheet,后续 QC 和大货才有所依。",
+      "tips_zh": "工艺变更一定要落在书面文件(PI / spec sheet)上,口头说没用。",
+      "user_response_example": "Deal, Wang. Send the PI to chen.wei@lilygarments.com and update the spec sheet with every change we discussed. I'll have the buyer sign off by Wednesday. Thanks for pushing back on the mercerized claim — that was the right call."
+    }
+  ]
+}

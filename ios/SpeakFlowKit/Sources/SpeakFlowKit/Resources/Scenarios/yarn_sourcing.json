@@ -1,0 +1,88 @@
+{
+  "scenario_id": "yarn_sourcing",
+  "scenario_title_en": "Yarn Sourcing",
+  "scenario_title_zh": "纱线采购",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning. This is Lisa from Shandong Yibin Yarn. How can I help you?",
+      "ai_message_zh": "早上好,我是山东宜宾纱业的 Lisa,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍并说明来意:需要找特定规格的纱线",
+      "key_phrases": ["This is ...", "I am looking for ...", "We need ... for ...", "What do you have available"],
+      "common_mistakes": "Don't say 'I want buy yarn' — correct is 'I want to buy yarn' or 'I am looking for yarn'.",
+      "tips_zh": "电话咨询纱线时,先报上公司 + 用途 + 大致规格,对方才好推荐。",
+      "user_response_example": "Good morning, Lisa. This is Chen Wei from Hangzhou Lily Garments. I am looking for cotton yarn for our summer T-shirt line."
+    },
+    {
+      "round": 2,
+      "ai_message": "Nice to talk to you, Chen. What kind of cotton yarn do you need? We have carded, combed, and compact.",
+      "ai_message_zh": "陈先生你好。你们需要哪种棉纱?我们有普梳、精梳和紧密纺。",
+      "expected_user_response_hint": "说出成分和纺纱方式,报纱支数",
+      "key_phrases": ["We need combed cotton", "combed yarn", "What yarn count", "compact yarn"],
+      "common_mistakes": "yarn count 不要说成 yarn number;常见纱支写作 32s,32 Ne,30s,40s,50s。",
+      "tips_zh": "棉纱常见纺纱方式:carded(普梳,便宜)、combed(精梳,毛羽少)、compact(紧密纺,光洁)。T恤常用 26s-32s 精梳。",
+      "user_response_example": "We need combed cotton yarn, around 32s. The yarn will be used for men's basic T-shirts."
+    },
+    {
+      "round": 3,
+      "ai_message": "Got it. 32s combed cotton is one of our best sellers. What about the twist? Do you need regular twist or low twist?",
+      "ai_message_zh": "好的,32 支精梳棉纱是我们的主力产品。捻度方面,你们要常规捻还是低捻?",
+      "expected_user_response_hint": "说明捻度需求,或请供应商推荐",
+      "key_phrases": ["regular twist is fine", "low twist", "We usually use ...", "for handfeel"],
+      "common_mistakes": "twist 在口语里有时说 turns per inch(TPI) 或 twists per meter(TPM),但行业常说 twist。",
+      "tips_zh": "捻度影响手感:高捻纱挺括、低捻纱柔软。常规 T 恤用 4.0-4.5 TPM。",
+      "user_response_example": "Regular twist is fine. Around 4 TPM works for us. The handfeel should be soft but not too drapy."
+    },
+    {
+      "round": 4,
+      "ai_message": "OK. We can do that. How many colors do you need, and what is the order quantity? Our MOQ for dyed yarn is 300 kg per color.",
+      "ai_message_zh": "可以。你们需要多少颜色?订单量多少?我们染色纱起订量是每个色 300 公斤。",
+      "expected_user_response_hint": "说明颜色数量和下单量,询问起订量",
+      "key_phrases": ["We have ... colors", "around ... kg", "What is the MOQ", "per color"],
+      "common_mistakes": "MOQ 在纱线行业多以 kg(公斤)为单位,不要和成衣的 pieces 混。",
+      "tips_zh": "纱线 MOQ 一般按 kg 计,染色纱每色 200-500 kg,本白纱通常 1 吨起。",
+      "user_response_example": "We have 4 colors this season. The total quantity is around 3,000 kg. 300 kg per color is fine for us."
+    },
+    {
+      "round": 5,
+      "ai_message": "Good. Can you send me the Pantone numbers? For the lab dip we need TPX or TCX, not TPG.",
+      "ai_message_zh": "好的。能发我潘通色号吗?对色样我们用 TPX 或 TCX,不用 TPG。",
+      "expected_user_response_hint": "确认潘通色号,说明是纺织色卡",
+      "key_phrases": ["Sure, I'll send ...", "Pantone TPX", "Pantone TCX", "by email"],
+      "common_mistakes": "TPX/TCX 是纺织色卡(coated/棉基),TPG 是印刷色卡。不要混发。",
+      "tips_zh": "对色样一定要用纺织潘通 TPX/TCX,印刷 TPG 颜色会偏。",
+      "user_response_example": "Sure, I'll send the 4 Pantone TCX numbers by email this afternoon. The main color is 19-4052 navy."
+    },
+    {
+      "round": 6,
+      "ai_message": "Perfect. After I get the Pantone, we can do lab dips in 3-5 days. About price, our 32s combed is around US$3.80 per kg for this quantity. Lead time is 20 days after the lab dip is approved.",
+      "ai_message_zh": "好的。收到潘通号后,3-5 天可以出对色样。32 支精梳,这个量的话,价格大概每公斤 3.8 美元。批准色样后 20 天出货。",
+      "expected_user_response_hint": "确认交期,讨论价格是否可谈",
+      "key_phrases": ["How about the price", "is it negotiable", "Lead time is fine", "Could you do ... per kg"],
+      "common_mistakes": "lead time 后要接 from / after the lab dip,不是 lead time is 20 days(不完整)。",
+      "tips_zh": "大单可压价,3-5 吨以上一般有 3-5% 让价空间;首次合作通常按报价执行。",
+      "user_response_example": "Lead time is fine. For the price, US$3.80 is a bit higher than my target. For 3,000 kg, could you do US$3.65? We may have repeat orders."
+    },
+    {
+      "round": 7,
+      "ai_message": "I can come down a little, maybe US$3.70, but no more. The yarn price has gone up recently. Let me also ask — do you need the yarn on cones or in hanks?",
+      "ai_message_zh": "我可以稍微降一点,3.7 美元,但不能再低了。最近纱价涨了。再问一下,你们要筒子纱还是绞纱?",
+      "expected_user_response_hint": "确认包装方式,完成本轮",
+      "key_phrases": ["Cones, please", "cone weight", "Hanks are fine", "We usually use ..."],
+      "common_mistakes": "cone / cheese / hank 是三种常见卷装,口语里直接说 cone 即可。",
+      "tips_zh": "针织厂一般用筒子纱(cone),常见筒重 1 kg、1.5 kg、2 kg。",
+      "user_response_example": "Cones, please. 2 kg per cone is our standard. Please confirm cone weight in the proforma invoice."
+    },
+    {
+      "round": 8,
+      "ai_message": "Noted. I will send the proforma invoice by tomorrow. Once you confirm, the lab dip can start, and bulk production 20 days after lab dip approval. Anything else?",
+      "ai_message_zh": "记下了。我明天把形式发票发给你。确认后启动打色样,批准后 20 天大货。还有别的吗?",
+      "expected_user_response_hint": "确认收件邮箱和 PI 流程,做 closing",
+      "key_phrases": ["Please send to ...", "Looking forward to ...", "Have a nice day"],
+      "common_mistakes": "proforma invoice 不要说成 formal invoice,PI 是预开发票,不等同于商业发票。",
+      "tips_zh": "PI 上要写清:trade term、payment、validity、bank info,这是后续付款和清关的基础。",
+      "user_response_example": "Please send the PI to chen.wei@lilygarments.com. Looking forward to the lab dips. Have a nice day, Lisa."
+    }
+  ]
+}

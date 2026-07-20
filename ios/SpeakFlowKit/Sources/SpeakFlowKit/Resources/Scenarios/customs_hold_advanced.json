@@ -1,0 +1,68 @@
+{
+  "scenario_id": "customs_hold",
+  "scenario_title_en": "Customs Hold & Return",
+  "scenario_title_zh": "海关查验/扣货(高阶)",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Mr. Chen, this is David Cole, legal counsel for our buyer group. We have a serious problem — B/L HMM-2024-0856 has been seized by US Customs under suspicion of transshipment. CBP is alleging that the goods labeled 'Made in China' were actually partially manufactured in Vietnam and re-exported to evade the Section 301 tariffs. They are reviewing our last 12 months of shipments.",
+      "ai_message_zh": "陈先生,我是买方集团的法务 David Cole。我们有严重问题 — B/L HMM-2024-0856 被美国海关以转运嫌疑扣押。CBP 声称标着'中国制造'的商品实际部分在越南生产后转出口,以规避 301 条款关税。他们正在审查我们过去 12 个月的出货。",
+      "expected_user_response_hint": "保持冷静,坚决否认转运指控,要求具体证据",
+      "key_phrases": ["We strongly deny any transshipment", "please share the evidence", "full mill documentation"],
+      "common_mistakes": "Don't say 'this is the first time' — CBP reviews go back years, every shipment is in scope.",
+      "tips_zh": "Section 301 转运调查一旦启动,审查范围是过去 12-24 个月的所有出货,任何一票有可疑都会引爆连锁。",
+      "user_response_example": "Mr. Cole, we strongly deny any transshipment. Our production is 100 percent in our Hangzhou facility, and we can provide full mill documentation — production records, utility bills, worker payroll. Please share CBP's specific evidence so we can address each allegation."
+    },
+    {
+      "round": 2,
+      "ai_message": "CBP's allegation is based on three things: (1) your C/O says China, but 12 cartons had a 'Made in Vietnam' label when CBP opened them; (2) your supplier list filed last year shows a Hanoi-based trim supplier for 30 percent of the components; (3) the shipment quantity exceeds your facility's stated capacity by 15 percent in Q1.",
+      "ai_message_zh": "CBP 的指控基于三件事:1) 你们的 C/O 写中国,但 CBP 开箱时发现 12 个箱子贴着'越南制造'标签;2) 你们去年提交的供应商清单里有一个河内辅料供应商,占 30% 组件;3) Q1 出货量比你们厂房产能高 15%。",
+      "expected_user_response_hint": "逐条解释证据,提供反驳",
+      "key_phrases": ["The Vietnam label was a printing error", "trim supplier does not equal transshipment", "capacity includes overtime"],
+      "common_mistakes": "CBP 不接受'印错'作为主标签错误的理由 — 这是 origin fraud 的硬证据,必须主动改 C/O。",
+      "tips_zh": "origin fraud 调查 = CBP + ICE + DOJ 联合,一旦定罪,5 年禁运 + 罚款 + 客户破产都有可能。",
+      "user_response_example": "On the label — that was a printing error from our carton supplier, we will issue a corrected C/O and full label replacement. On the trim supplier — sourcing trims from Vietnam does not constitute transshipment, only the country of origin of the final assembly matters. On the capacity — our stated capacity is single-shift, we ran significant overtime in Q1."
+    },
+    {
+      "round": 3,
+      "ai_message": "CBP will not accept 'printing error' as an excuse for origin fraud. They want a formal response within 30 days, and they are now asking for full factory floor records, raw material import docs, and a third-party verification visit. They have also issued a 'Notice of Action' — all future shipments from your factory will be subject to intensive examination (100 percent exam, not random).",
+      "ai_message_zh": "CBP 不会接受'印错'作为 origin fraud 的借口。他们要 30 天内正式答复,还要全厂生产记录、原料进口单据、和第三方现场核查。他们已经发了'Action Notice' — 未来你们工厂所有出货都要 100% 查验,不是抽检。",
+      "expected_user_response_hint": "接受 30 天期限,组织正式回应,讨论 100% 查验成本",
+      "key_phrases": ["We will respond within 30 days", "100 percent exam will add cost", "third-party verification welcome"],
+      "common_mistakes": "Don't say 'CBP is wrong' without a rebuttal package — CBP escalates to ICE if they suspect cover-up.",
+      "tips_zh": "100% 查验每柜成本 US$800-1500 + 7-14 天滞港,对小工厂现金流是灾难;30 天 formal response 是法律窗口,过了默认认罪。",
+      "user_response_example": "We accept the 30-day deadline. Our legal team in Shanghai will prepare the formal response, and we'll commission a SGS or Bureau Veritas factory audit. We acknowledge the 100 percent exam on future shipments and will factor that cost into our FOB quote going forward."
+    },
+    {
+      "round": 4,
+      "ai_message": "About the existing seized cargo — CBP is offering two options: (1) pay a US$50,000 penalty, complete 100 percent re-labeling under CBP supervision, and the cargo is released; (2) abandon the cargo to CBP, no penalty, but no refund. Our buyer is asking for option 1, but we need your cost share.",
+      "ai_message_zh": "已扣的货 — CBP 给两个选择:1) 付 5 万美元罚款,在 CBP 监督下 100% 重贴标签,放行;2) 放弃货物给 CBP,不罚款但不退款。我们客户要选 1,但要你们分摊成本。",
+      "expected_user_response_hint": "讨论分摊,争取更低罚款或分期,提供证据反驳",
+      "key_phrases": ["We propose 50 / 50 on the penalty", "can we negotiate down", "re-labeling at our cost"],
+      "common_mistakes": "罚款可以谈 — 提供有利的 evidence 经常能让 CBP 降到 US$15-20K,别一上来就认。",
+      "tips_zh": "CBP 罚款协商有空间,提供完整反驳证据 + 第三方审计报告,US$50K 可以压到 US$15-25K。",
+      "user_response_example": "US$50,000 is significant. We accept the re-labeling cost at our expense, but propose 50 / 50 on the penalty. With the third-party audit and corrected documentation, can we negotiate the penalty down to US$20,000 to US$25,000?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Buyer is willing to negotiate the penalty down to US$30,000 if your factory audit comes back clean. About the 100 percent exam on future shipments, the cost is about US$1,200 per container. For our next 6 months, that's roughly 40 containers — US$48,000 in exam fees alone. We're asking you to absorb US$30,000 of that.",
+      "ai_message_zh": "如果你们工厂审计干净,客户愿意把罚款谈到 3 万美元。未来 100% 查验每柜 1200 美元。后面 6 个月大概 40 柜,光查验费就 4.8 万美元。我们要求你们承担 3 万。",
+      "expected_user_response_hint": "讨论 6 个月分摊方案,提出改进承诺",
+      "key_phrases": ["We will absorb US$15,000 over 6 months", "supply chain audit", "process improvement"],
+      "common_mistakes": "Don't commit to a lump sum — phase it (e.g., US$5K/month) and tie to milestones (clean audit, no further holds).",
+      "tips_zh": "6 个月分摊 = 现金流友好 + 客户能接受;条件挂钩(audit 通过 / 后续无扣) = 双向保护。",
+      "user_response_example": "We will absorb US$15,000 over 6 months, tied to clean SGS audits and zero holds on future shipments. Beyond that, the US$1,200 per container is your cost as importer of record. We will also commission an independent supply chain audit within 60 days to prevent future issues."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK, US$15,000 over 6 months plus the SGS audit in 60 days is acceptable. To wrap up the legal package: (1) 30-day formal response to CBP, (2) US$30,000 penalty, 50 / 50 split, (3) re-labeling at your cost, (4) US$15,000 absorption over 6 months, (5) SGS audit in 60 days, (6) 100 percent exam on future shipments, buyer pays. Please have your legal team sign and return by Friday.",
+      "ai_message_zh": "好的,6 个月承担 1.5 万美元 + 60 天 SGS 审计可以。法律包总结:1) 30 天正式答复 CBP;2) 罚款 3 万美元 50/50;3) 重贴标签你们承担;4) 6 个月分摊 1.5 万;5) 60 天 SGS 审计;6) 未来 100% 查验客户付。请你们法务周五前签回。",
+      "expected_user_response_hint": "确认时间表,做 closing",
+      "key_phrases": ["To summarize", "we will do ... by ...", "our legal team will sign by Friday"],
+      "common_mistakes": "收尾不要 'OK, we'll think about it' — 已经谈完 6 条,要明确签字承诺。",
+      "tips_zh": "法律包 closing 要点:6 个动作 × 责任人 × 时间表 × 签字方。",
+      "user_response_example": "Confirmed. To summarize: 30-day CBP response, US$30,000 penalty split 50 / 50, re-labeling at our cost, US$15,000 over 6 months, SGS audit in 60 days, 100 percent exam paid by buyer. Our legal team will sign and return by Friday, Mr. Cole."
+    }
+  ]
+}

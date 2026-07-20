@@ -1,0 +1,68 @@
+{
+  "scenario_id": "lc_discrepancy",
+  "scenario_title_en": "LC Document Discrepancy",
+  "scenario_title_zh": "信用证不符点(进阶)",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, this is Helen from Wells Trade Bank. We have reviewed the documents under LC 2024-M-188. We have a list of four discrepancies this time — the shipment was on time, but the documents have multiple issues. Can we go through them?",
+      "ai_message_zh": "早上好,我是 Wells Trade Bank 的 Helen。我们审了 LC 2024-M-188 的单据。这次有 4 个不符点 — 装期是准时的,但单据有多处问题。逐条过一下?",
+      "expected_user_response_hint": "认真接收,逐条确认",
+      "key_phrases": ["Yes, please list all four", "we will check our files"],
+      "common_mistakes": "不要说 'this is unusual' — 多不符点是常见现象,冷静接。",
+      "tips_zh": "多不符点叠加 = 议付行风险更高,客户拒付概率上升,需快速走 waiver 流程。",
+      "user_response_example": "Yes, please list all four one by one. I have all our files open and will check each against the LC terms. What's the first discrepancy?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Number one: the commercial invoice shows FOB Shanghai, but the LC specifies FOB Ningbo. Number two: the insurance policy is dated 2 days before the B/L, which is acceptable under UCP 600, but the LC specifically requires insurance to be dated the same day or after the B/L. Number three: the packing list shows 100 cartons, but the invoice shows 95. Number four: the certificate of origin was issued by CCPIT, but the LC requires it from CIQ.",
+      "ai_message_zh": "第一条:商业发票显示 FOB 上海,但信用证指定 FOB 宁波。第二条:保险单日期比 B/L 早 2 天,UCP 600 接受,但信用证明确要求保险日期等于或晚于 B/L。第三条:装箱单显示 100 箱,发票显示 95 箱。第四条:产地证由 CCPIT 出,但信用证要求 CIQ 出。",
+      "expected_user_response_hint": "逐条解释原因,提出解决方案",
+      "key_phrases": ["For the FOB port, we will reissue", "insurance can be re-dated", "the 5 carton difference is correct"],
+      "common_mistakes": "FOB port 错 = 单据整套要重开,所有相关文件(invoice / packing list / B/L instructions)都要改。",
+      "tips_zh": "CCPIT(中国国际贸易促进委员会)和 CIQ(出入境检验检疫局)是两家,出具的产地证格式和签字都不同。",
+      "user_response_example": "On FOB port — we will reissue the invoice and packing list as FOB Ningbo. On the insurance, we can re-issue it dated the same day as B/L. On the carton count, the 5 extra cartons are samples, the buyer agreed to ship them as free of charge. On the C/O, we need to re-apply from CIQ, which takes 5 business days."
+    },
+    {
+      "round": 3,
+      "ai_message": "About the carton discrepancy — the LC says 95 cartons, the invoice must match exactly. The 5 sample cartons must be declared separately. About the C/O from CIQ — that takes 5 business days, but the LC expires in 7 days. We need to request an LC amendment to extend the expiry OR get the C/O faster through expedited processing.",
+      "ai_message_zh": "箱数方面 — 信用证说 95 箱,发票必须完全一致。5 箱样品必须分开申报。C/O 从 CIQ 出 — 要 5 个工作日,但信用证 7 天后到期。我们要么改证延期,要么加急处理。",
+      "expected_user_response_hint": "讨论改证 + 加急双轨,确定路径",
+      "key_phrases": ["We can do both: amendment and expedited C/O", "expedited C/O costs more", "amendment fee is negotiable"],
+      "common_mistakes": "加急 C/O 通常能 2-3 天拿到,但每份加收 50-100% 费用,提前跟客户沟通分担。",
+      "tips_zh": "改证延期 + 加急 C/O 双轨并行最稳;改证 3-5 个工作日,C/O 加急 2-3 个工作日,都能赶上。",
+      "user_response_example": "We will do both in parallel: file the LC amendment today, and pay the expedited C/O fee to get it in 2 business days. The amendment fee and expedited C/O cost will be on our side, since the original errors are on our documentation."
+    },
+    {
+      "round": 4,
+      "ai_message": "OK, parallel approach. Now, about the negotiation — with 4 discrepancies and the LC expiring in 7 days, the negotiating bank may pay under reserve. Are you prepared to sign an indemnity letter, or do you want to wait for the buyer's waiver first?",
+      "ai_message_zh": "好的,并行做。议付方面 — 4 个不符点 + 7 天到期,议付行可能保留议付。你们准备签 indemnity letter 吗,还是先等客户 waiver?",
+      "expected_user_response_hint": "决定走 reserve 还是要 waiver,讲清风险",
+      "key_phrases": ["We will request buyer waiver first", "if no waiver in 48 hours, we go under reserve", "indemnity letter from our company"],
+      "common_mistakes": "Don't sign indemnity without contacting buyer first — it can create legal issues if buyer contests later.",
+      "tips_zh": "Reserve 议付 = 银行先付,客户拒付时出口商自担;indemnity letter 是对银行的承诺,签字前要客户先书面认可。",
+      "user_response_example": "We will request the buyer's waiver first — they have been responsive in the past. If we don't have the waiver in 48 hours, we will sign the indemnity letter and negotiate under reserve. Please prepare the indemnity template today."
+    },
+    {
+      "round": 5,
+      "ai_message": "About the buyer's waiver — there's a fee of US$50 to US$100 for the buyer's bank to process the waiver, and the buyer's finance team may take 1 to 3 business days to sign. Can you confirm the buyer's email and contact, and we'll send the waiver request to them in parallel?",
+      "ai_message_zh": "客户 waiver — 客户银行处理费 50-100 美元,客户财务签 1-3 个工作日。你们能确认客户邮箱和联系方式吗?我们并行发 waiver 请求。",
+      "expected_user_response_hint": "提供客户联系方式,确认 parallel 流程",
+      "key_phrases": ["Buyer contact is ...", "we will copy you on the email", "waiver template in English"],
+      "common_mistakes": "客户银行处理 waiver 要用英文模板,中文版常被退回。",
+      "tips_zh": "Waiver letter 标准模板:buyer 抬头 + 列不符点 + 明确接受 + 签字 + 公司盖章。",
+      "user_response_example": "The buyer's contact is mark.johnson@abctrading.com, finance director. I will copy you on the email. Please use the standard English waiver template, addressed to ABC Trading's finance team."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK, sent. To wrap up: (1) reissue invoice and packing list as FOB Ningbo today, (2) re-issue insurance dated same day as B/L, (3) re-apply C/O from CIQ expedited in 2 business days, (4) request buyer's waiver within 48 hours, (5) if no waiver, sign indemnity and negotiate under reserve, (6) file LC amendment to extend expiry. All correct?",
+      "ai_message_zh": "好的,已发。总结:1) 今天改 FOB 宁波重开发票和装箱单;2) 重开保险日期同 B/L;3) CIQ 加急 C/O 2 个工作日;4) 48 小时内拿客户 waiver;5) 没有 waiver 签 indemnity 保留议付;6) 改证延期。所有都 OK?",
+      "expected_user_response_hint": "确认所有动作,做 closing",
+      "key_phrases": ["Confirmed", "we will do all six by ...", "thank you for the detailed walk-through"],
+      "common_mistakes": "收尾不要 'OK' — 6 个动作要逐条确认责任方和时间。",
+      "tips_zh": "复杂多不符点 closing = 6 个动作 × 责任方 × 时间 × 验收方式。",
+      "user_response_example": "Confirmed. All six actions in your summary, with the buyer's waiver and LC amendment in parallel. We will send you written confirmation by end of day. Thank you for the detailed walk-through, Helen."
+    }
+  ]
+}

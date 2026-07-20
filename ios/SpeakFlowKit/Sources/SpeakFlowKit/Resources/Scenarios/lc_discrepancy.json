@@ -1,0 +1,88 @@
+{
+  "scenario_id": "lc_discrepancy",
+  "scenario_title_en": "LC Document Discrepancy",
+  "scenario_title_zh": "信用证不符点",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, this is Helen from the documentary credit department at Wells Trade Bank. I'm calling about your LC negotiation under LC No. 2024-M-188. We have a list of discrepancies.",
+      "ai_message_zh": "早上好,我是 Wells Trade Bank 单证部的 Helen。我打来是关于你们 LC 2024-M-188 的议付,我们列了一些不符点。",
+      "expected_user_response_hint": "认真接收,询问具体不符点列表",
+      "key_phrases": ["Thank you for the call", "Could you list the discrepancies", "we will check our documents"],
+      "common_mistakes": "客户/银行刚说不符点,不要马上说 'this can't be'。先听,后查单据。",
+      "tips_zh": "接收不符点三步:acknowledge / ask for list / commit to follow up。",
+      "user_response_example": "Good morning, Helen. Thank you for the call. Could you please list the discrepancies one by one? I will check our documents against them."
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure, there are three: (1) B/L date is 2024-09-12, which is later than the latest shipment date 2024-09-10 in the LC; (2) invoice number does not match the LC requirement; (3) insurance policy is short-shipped by 50 cartons.",
+      "ai_message_zh": "好的,一共三个:1) 提单日期 2024-09-12,晚于信用证最晚装期 2024-09-10;2) 发票号与信用证要求不符;3) 保险单比实际少保 50 箱。",
+      "expected_user_response_hint": "逐条确认,请银行发书面通知,准备应对",
+      "key_phrases": ["Could you send the list by email", "we will discuss with the buyer", "request amendment"],
+      "common_mistakes": "UCP 600 规定银行审单时限最长 5 个工作日,不是 'soon as possible'。",
+      "tips_zh": "B/L date 晚 = late shipment,是最常见的不符点,会让客户/银行拒付风险陡增。",
+      "user_response_example": "Thanks, Helen. Could you send the discrepancy list by email so I can forward it to the buyer? For the B/L date, can we request an LC amendment extending the shipment date?"
+    },
+    {
+      "round": 3,
+      "ai_message": "Yes, the LC can still be amended as long as it's within validity. About the invoice number, the LC requires the same number as the L/C application, but your invoice uses your internal number. Please reissue the invoice.",
+      "ai_message_zh": "是的,只要在有效期内,LC 还可以改证。发票号方面,信用证要求和申请书一致,但你们的发票用了内部编号。请重开发票。",
+      "expected_user_response_hint": "确认能重开发票,讲清时间",
+      "key_phrases": ["We can reissue the invoice", "within 24 hours", "by email", "same number as the LC"],
+      "common_mistakes": "重开发票要保持和 LC 一致的发票号,不是用自己内部号。",
+      "tips_zh": "Commercial invoice 的编号应与 LC 条款一致,这是常见审核点。",
+      "user_response_example": "We can reissue the commercial invoice with the same number as the LC application, within 24 hours. Should I send it to you by email or to the negotiating bank directly?"
+    },
+    {
+      "round": 4,
+      "ai_message": "Send to us, and we will forward to the negotiating bank. About the insurance short-shipment of 50 cartons, the insured amount is also short. You can either amend the policy or request the buyer to waive this discrepancy.",
+      "ai_message_zh": "发给我们,我们转给议付行。保险短装 50 箱,保险金额也不足。你们可以改保单,或者请客户放弃这个不符点。",
+      "expected_user_response_hint": "解释短装原因,建议改保单并请客户接受不符点",
+      "key_phrases": ["We will amend the insurance policy", "request the buyer to waive", "insurance certificate"],
+      "common_mistakes": "short-shipped = 实际装船数少于发票数,常见于分批装运或拼柜。",
+      "tips_zh": "保险金额通常按发票金额 110% 投保(CIF 条款下),少保等于违约,银行必须列不符点。",
+      "user_response_example": "The 50 cartons are part of a balance shipment, going out next week. We will amend the insurance policy to cover all cartons. Meanwhile, can we request the buyer to waive this discrepancy?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Yes, you can send a waiver request to the buyer. If they accept, the bank will pay under the LC. If not, you can negotiate under reserve with an indemnity letter from your company.",
+      "ai_message_zh": "可以,你们可以向客户发 waiver 请求。如果客户接受,银行会正常付款。如果不接受,可以由你们公司开 indemnity letter 保留议付。",
+      "expected_user_response_hint": "解释 waiver / reserve 流程,讲清风险",
+      "key_phrases": ["waiver letter", "negotiation under reserve", "indemnity letter", "buyer's instruction"],
+      "common_mistakes": "indemnity letter 是出口商开给银行的担保,表示不符点责任自负,不是客户开给银行的。",
+      "tips_zh": "保留议付(negotiation under reserve) = 银行先付,若客户拒付,出口商自己承担风险。",
+      "user_response_example": "We will contact the buyer for a waiver first. If they don't accept, please prepare the indemnity letter template — we may need to negotiate under reserve."
+    },
+    {
+      "round": 6,
+      "ai_message": "Sure, the template is standard. About the LC amendment, please send the amendment request to the issuing bank through the advising bank. It usually takes 3 to 5 working days.",
+      "ai_message_zh": "好的,模板是标准的。改证方面,请通过通知行向开证行发改证申请,通常 3-5 个工作日。",
+      "expected_user_response_hint": "确认改证流程和时间,讲清费用",
+      "key_phrases": ["amendment request", "advising bank", "issuing bank", "amendment fee"],
+      "common_mistakes": "amendment fee 通常由申请方(出口商)承担,有时候和客户谈分担。",
+      "tips_zh": "改证 = advising bank → issuing bank → applicant 同意 → issuing bank 发 amendment。",
+      "user_response_example": "Please send the amendment request to the advising bank. We will bear the amendment fee on our side. Can you confirm the SWIFT code and the latest date we can still amend?"
+    },
+    {
+      "round": 7,
+      "ai_message": "LC validity is 2024-10-15, so you can still amend within this date. About the 30-day payment term in the LC, will the late B/L date affect the negotiation?",
+      "ai_message_zh": "信用证有效期是 2024-10-15,所以你们在这个日期前都可以改。LC 里 30 天的付款期,晚的 B/L 日期会影响议付吗?",
+      "expected_user_response_hint": "解释 UCP 600 第 14 条审单规则,确认付款时效",
+      "key_phrases": ["UCP 600 article 14", "maximum 5 banking days", "after presentation", "rejection notice"],
+      "common_mistakes": "UCP 600 第 14 条:银行最多 5 个银行工作日审单,不是 'as soon as possible'。",
+      "tips_zh": "审单时限 5 个银行工作日,超过即视为接受。银行必须发 rejection notice 列出每个不符点。",
+      "user_response_example": "According to UCP 600 article 14, you have a maximum of 5 banking days following the day of presentation. We have presented all documents, so please review and send the rejection notice if any."
+    },
+    {
+      "round": 8,
+      "ai_message": "Understood. To wrap up: you'll reissue the invoice today, amend the insurance policy by tomorrow, send the LC amendment request by Wednesday, and ask the buyer for a waiver letter. Correct?",
+      "ai_message_zh": "明白。总结一下:你们今天重开发票,明天改保单,周三前发 LC 改证申请,并向客户要 waiver letter。对吗?",
+      "expected_user_response_hint": "确认时间表,做 closing",
+      "key_phrases": ["To summarize", "we will do ... by ...", "thank you for your help"],
+      "common_mistakes": "收尾不要用 OK, bye — 要做一个明确的 next step 总结。",
+      "tips_zh": "电话结束前主动总结 3-4 件事:谁做什么、什么时候完成、文件往哪发。",
+      "user_response_example": "Correct. To summarize: invoice reissued today, insurance policy amended by tomorrow, LC amendment request sent by Wednesday, waiver letter from the buyer within 5 days. Thank you for your help, Helen."
+    }
+  ]
+}

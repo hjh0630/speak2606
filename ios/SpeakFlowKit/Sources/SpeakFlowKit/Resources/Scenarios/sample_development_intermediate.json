@@ -1,0 +1,78 @@
+{
+  "scenario_id": "sample_development",
+  "scenario_title_en": "Sample Development",
+  "scenario_title_zh": "款式开发/打样",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen, this is Sarah. The hand sample arrived. Handfeel is good, but our designer is asking about yarn count — what's the yarn count of the 220 GSM terry? She wants 32s or higher.",
+      "ai_message_zh": "陈,Sarah。手感样到了,手感不错,但设计师问纱支 — 220 克毛布的纱支是多少?她要求 32 支以上。",
+      "expected_user_response_hint": "回纱支并解释",
+      "key_phrases": [
+        "The yarn count is 32s single jersey",
+        "32s/1 cotton",
+        "Higher count means finer, smoother"
+      ],
+      "common_mistakes": "yarn count(纱支)数字越大纱越细 — '32s 纱' 比 '21s 纱' 更细腻,别搞反。",
+      "tips_zh": "常用纱支:21s(粗),32s(中),40s(细),60s+(高端)。毛圈布常用 21s-32s。",
+      "user_response_example": "Our 220 GSM French terry is 32s single yarn, 100% cotton. That meets your designer's spec. For an even smoother face, we can go to 40s but that will push the cost up."
+    },
+    {
+      "round": 2,
+      "ai_message": "32s is fine. Now the measurement — we tested the sample, the chest at M is actually 98 cm, not 100. That's a 2 cm shortfall. Your QC says it's within tolerance, but I want to understand: did the fabric shrink in finishing?",
+      "ai_message_zh": "32s 没问题。尺寸 — 我们测了下,M 码胸围实际是 98 不是 100,差了 2 厘米。你们 QC 说在公差内,但我想知道:是不是后整理缩水了?",
+      "expected_user_response_hint": "解释缩水机制 + 给解决方案",
+      "key_phrases": [
+        "All cotton knits shrink 3-5 percent",
+        "We'll pre-shrink the bulk fabric",
+        "The 2 cm gap is from finishing"
+      ],
+      "common_mistakes": "不要否认缩水。棉针织后整理会缩 3-5%,这是常识,要解释清楚,客户会接受。",
+      "tips_zh": "工业做法:bulk 面料先做预缩(pre-shrink / sanforize),确保成衣尺寸稳定。",
+      "user_response_example": "Yes, that's a known behavior — 100% cotton knits typically shrink 3-5 percent in finishing. For bulk production, we'll pre-shrink the fabric so the finished garment hits 100 cm, not 98. Sample yardage wasn't pre-shrunk; bulk will be."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK, that's a fair explanation. Now, on the stitching — we noticed the coverstitch hem is slightly wavy on the side seam. Is that the operator's skill or the machine setup?",
+      "ai_message_zh": "行,这个解释可以。缝制 — 我们发现侧缝的下摆绷缝有点波浪,这是车工技术问题还是机器调试?",
+      "expected_user_response_hint": "诊断根因并给处理方案",
+      "key_phrases": [
+        "That's a tension issue on the coverstitch",
+        "We'll re-adjust the differential feed",
+        "Our senior operator will redo the sample"
+      ],
+      "common_mistakes": "波动 / 荷叶边( waviness)成因有多种:differential feed 比例、线张力、面料弹性。不要一句 'operator 不好' 打发。",
+      "tips_zh": "针织面料,coverstitch 必须用 differential feed(差动送布)来匹配面料弹性,不是车工问题。",
+      "user_response_example": "Good catch. That's a differential feed issue on the coverstitch machine, not operator skill. For stretch knits, the differential feed ratio needs to be tuned to 1.0 to 1.2. Our mechanic will recalibrate, and our senior operator will redo the sample on Tuesday."
+    },
+    {
+      "round": 4,
+      "ai_message": "Sounds good. While we're at it — the trims. We sent you a YKK zipper as reference, but I noticed your quote used a generic zipper. The customer-specified YKK is mandatory for this style. Please confirm you'll switch.",
+      "ai_message_zh": "行。还有辅料 — 我们寄了 YKK 拉链做参考,但你报价用的是普通拉链。客户指定必须 YKK,确认能换吧?",
+      "expected_user_response_hint": "确认换 + 解释价格影响",
+      "key_phrases": [
+        "We'll switch to YKK as specified",
+        "The cost add is about USD 0.15 per piece",
+        "We can absorb this for the first 500 units"
+      ],
+      "common_mistakes": "客户指定品牌辅料(spec-specified trims)必须遵守,别为了报价好看换便宜的 — 后面麻烦更大。",
+      "tips_zh": "常用客户指定辅料:YKK 拉链、Coats 缝线、IDEAL 纽扣、Conglom 商标。报价时单独列明。",
+      "user_response_example": "Confirmed — we'll switch to YKK zipper as specified. The cost add is about USD 0.15 per piece. We can absorb this on the first 500 pieces as a goodwill gesture; for repeat orders, we'll pass the cost through."
+    },
+    {
+      "round": 5,
+      "ai_message": "Appreciate that. Last question on sampling — can you do a fit sample on a real body or just on a dress form? We need to evaluate the silhouette.",
+      "ai_message_zh": "赞。最后 — 试衣样,你们能真人试穿还是只用人台?我们需要看立体效果。",
+      "expected_user_response_hint": "说明试衣能力 + 收费模式",
+      "key_phrases": [
+        "We have a part-time fit model",
+        "Fit sample adds 2-3 days",
+        "Fit sample on a real body costs extra USD 50"
+      ],
+      "common_mistakes": "fit sample(真人试衣)vs sample(成衣样):前者看版型合身,后者看工艺细节,目的不同别混。",
+      "tips_zh": "美式客户常要 fit sample,欧式客户多直接看 spec,提前问省得返工。",
+      "user_response_example": "We have a part-time fit model (size M, standard build). We can do a fit sample on her for an extra USD 50, adding 2-3 days. The dress form sample is included in the standard sample fee. Your call."
+    }
+  ]
+}

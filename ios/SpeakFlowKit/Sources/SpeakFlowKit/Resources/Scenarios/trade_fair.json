@@ -1,0 +1,88 @@
+{
+  "scenario_id": "trade_fair",
+  "scenario_title_en": "Trade Fair & Showroom",
+  "scenario_title_zh": "展会/Showroom 接单",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, mind if I take a look at your booth? I'm Mike, sourcing for a mid-size retailer in Chicago — we do activewear and lifestyle.",
+      "ai_message_zh": "你好,我能看看你们展位吗?我是 Mike,芝加哥一家中型零售商的采购,我们做运动和生活方式品类。",
+      "expected_user_response_hint": "热情迎接,简短介绍公司+亮点",
+      "key_phrases": ["Welcome to our booth", "Glad you stopped by", "we specialize in ..."],
+      "common_mistakes": "Don't say 'Hello, what do you want' — say 'Welcome to our booth' or 'Glad you stopped by', then 'How can I help you?'",
+      "tips_zh": "展会接待:welcome → 1 句公司介绍 → 反问客户背景(品类 / 量 / 市场),30 秒内完成。",
+      "user_response_example": "Hi Mike, welcome to our booth! Glad you stopped by. We're Lily Garments from Hangzhou — we specialize in activewear and yoga apparel. How can I help you today?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Activewear and yoga — that's our zone. We're looking for a yoga leggings supplier for our SS26 collection. What do you have that stands out?",
+      "ai_message_zh": "运动和瑜伽 — 我们正好在找。我们 SS26 季要找瑜伽裤供应商。你们有什么亮点?",
+      "expected_user_response_hint": "推介 hero product,强调面料科技 / 工艺 / 起订量灵活",
+      "key_phrases": ["Our hero product is ...", "featuring ...", "Nulu fabric", "four-way stretch"],
+      "common_mistakes": "Don't say 'we have many products' — say 'our hero product is X, featuring Y tech', more focused.",
+      "tips_zh": "Hero product = 1-2 款明星产品,推 1 句话卖点和 1 个技术亮点,客户会被吸引。",
+      "user_response_example": "Our hero product this season is the high-waist yoga leggings — Nulu fabric feel, four-way stretch, squat-proof. We also have a matching bra in the same fabric line. Want to see them?"
+    },
+    {
+      "round": 3,
+      "ai_message": "Yes, please. Nulu feel is what we want. What's the fabric composition and GSM?",
+      "ai_message_zh": "好的,看看。Nulu 触感是我们要的。面料成分和克重多少?",
+      "expected_user_response_hint": "报成分和克重,递样品或展示",
+      "key_phrases": ["80 percent nylon, 20 percent spandex", "around 220 GSM", "squat-proof", "here is the sample"],
+      "common_mistakes": "成分百分比要按数字说:'80 percent nylon, 20 percent spandex',不要说 '20% spandex inside'。",
+      "tips_zh": "Nulu 触感 = Lululemon 注册面料名,描述是'buttery soft, brushed, light compression'。自己用要换名字。",
+      "user_response_example": "It's 80 percent nylon, 20 percent spandex, around 220 GSM, brushed finish, squat-proof. Here, feel the sample — it's our SS26 hero."
+    },
+    {
+      "round": 4,
+      "ai_message": "Nice handfeel. Quick question — are you the manufacturer, or trading company? We prefer direct factory.",
+      "ai_message_zh": "手感不错。快速问一下 — 你们是工厂还是贸易公司?我们偏好直接工厂。",
+      "expected_user_response_hint": "诚实回答,工厂就强调产线/QC,贸易公司就强调整合能力",
+      "key_phrases": ["We are the manufacturer", "own factory", "production lines", "QC team"],
+      "common_mistakes": "Don't lie about being a factory if you're a trading company — buyers will audit later. Say 'we are a trading company but with own QC team and partner mills'.",
+      "tips_zh": "客户问工厂还是贸易公司,直接说。如果有自有工厂 + 合作厂,两个都说。",
+      "user_response_example": "We're a manufacturer — own factory in Hangzhou, 6 production lines, 800 workers. We also do BSCI and OEKO-TEX audits. Want to see our factory video?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Great, BSCI is important for us. About MOQ and price, what's your best for 5,000 pieces per style, 4 colors?",
+      "ai_message_zh": "好的,BSCI 对我们很重要。起订量和价格,4 个色每款 5000 件,你们最好能给到多少?",
+      "expected_user_response_hint": "说 MOQ,报价格区间,强调合作条件",
+      "key_phrases": ["Our MOQ is ...", "around US$ ... per piece", "for that quantity", "FOB Ningbo"],
+      "common_mistakes": "Don't say 'price depends' — say 'for 5,000 pieces per style, FOB Ningbo is around US$X, depending on the fabric and trims'.",
+      "tips_zh": "展会报价留余地,说区间,加 'depends on fabric / trims / quantity',让客户感到专业。",
+      "user_response_example": "Our MOQ is 500 pieces per color, 1,000 per style. For 5,000 pieces per style with 4 colors, FOB Ningbo is around US$6.80 to US$7.50 per piece, depending on trims and labels."
+    },
+    {
+      "round": 6,
+      "ai_message": "That's within range. Lead time for bulk after sample approval? And do you have a US showroom?",
+      "ai_message_zh": "这个价可以。样品确认后大货交期多久?你们在美国有 showroom 吗?",
+      "expected_user_response_hint": "说交期,如果有 showroom/agent 主动说",
+      "key_phrases": ["Around 45 to 60 days", "after sample approval", "we have an agent in LA"],
+      "common_mistakes": "lead time 要说 from / after sample approval,不要只说 '45 days'。",
+      "tips_zh": "Showroom 不必有实体,有 LA/NY agent 也算,关键是客户能 'touch and feel' 样品。",
+      "user_response_example": "Bulk lead time is around 45 to 60 days after sample approval. We have an agent in LA — he can show you the sample in person. I'll connect you after the fair."
+    },
+    {
+      "round": 7,
+      "ai_message": "Perfect. Can you send me samples after the fair? Also, do you do OEM or ODM?",
+      "ai_message_zh": "好的。展会后能寄样品吗?另外,你们做 OEM 还是 ODM?",
+      "expected_user_response_hint": "确认寄样,讲清 OEM/ODM 范围",
+      "key_phrases": ["Yes, we'll send samples", "we do both OEM and ODM", "with our own R&D team"],
+      "common_mistakes": "OEM = 客户设计,工厂做;ODM = 工厂设计,客户选。搞混会让客户觉得不专业。",
+      "tips_zh": "OEM/ODM 都能做的厂,优势 = 客户既可贴牌,也可买现成设计,合作灵活。",
+      "user_response_example": "Yes, we'll send 3 samples by DHL within a week after the fair. We do both OEM and ODM — our in-house R&D team can also help with tech-pack and design if you need."
+    },
+    {
+      "round": 8,
+      "ai_message": "Sounds good. Here's my card. Please send the samples, your company profile, and a price list to my email. Looking forward to working with you.",
+      "ai_message_zh": "好的,这是我的名片。请把样品、公司介绍、报价单发到我邮箱。期待合作。",
+      "expected_user_response_hint": "收名片,确认跟进,做 closing",
+      "key_phrases": ["Thanks for your card", "I'll follow up by ...", "Looking forward to ..."],
+      "common_mistakes": "收尾不要 'OK, bye' — 要明确 follow up 时间(24h / 48h) + 期待合作。",
+      "tips_zh": "展会 closing 模板:thank you → 收名片 → 确认 24-48h 内 follow up → 期待合作。",
+      "user_response_example": "Thanks for your card, Mike. I'll send the samples, profile, and price list within 48 hours. Looking forward to working with you on SS26. Have a great fair!"
+    }
+  ]
+}

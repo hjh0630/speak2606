@@ -1,0 +1,88 @@
+{
+  "scenario_id": "post_mortem",
+  "scenario_title_en": "Post-Mortem Review",
+  "scenario_title_zh": "反思复盘",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, this is David, factory quality manager. I would like to schedule a post-mortem review for PO 4521. The order is now closed, and I want to do a 5-why analysis on the issues we had. Can you prepare the data?",
+      "ai_message_zh": "你好,我是工厂品质经理 David。我想约一个 PO 4521 的复盘会。订单已经关了,我想对出现过的问题做 5-why 分析。你能准备数据吗?",
+      "expected_user_response_hint": "确认时间,准备订单数据和问题清单",
+      "key_phrases": ["Sure, I can prepare", "5-why analysis is a good idea", "issue log ready", "KPI summary"],
+      "common_mistakes": "5-why 不是问 5 次 'why',而是逐层追问到可行动的真因。",
+      "tips_zh": "5-why 的关键是:每个 why 都要基于事实,而不是猜测;追问到 actionable 的层面。",
+      "user_response_example": "Sure, David. 5-why analysis is exactly the right approach. I will pull the issue log, the inspection reports, the customer feedback, and the timeline. When would you like to hold the review?"
+    },
+    {
+      "round": 2,
+      "ai_message": "Let's do it this Thursday afternoon, 2 pm in my office. Please bring the data on the three main issues: the fabric delay, the bar tack defect, and the port strike impact. We will do 5-why on each.",
+      "ai_message_zh": "周四下午 2 点,我办公室。请带这三个主要问题的数据:面料延期、套结疵点、港口罢工影响。我们对每个做 5-why。",
+      "expected_user_response_hint": "确认时间,准备三个 5-why 的背景",
+      "key_phrases": ["Thursday 2 pm is confirmed", "three issues noted", "preliminary 5-why", "action items"],
+      "common_mistakes": "三个问题混在一起做 5-why 会乱,要分三个 session 或三个白板。",
+      "tips_zh": "5-why 一般 1 个问题 1 个白板,逐层写到根本原因(可预防的层面)。",
+      "user_response_example": "Thursday 2 pm is confirmed. I will prepare three separate 5-why worksheets — one for the fabric delay, one for the bar tack defect, one for the port strike. Each will have the timeline, the evidence, and a preliminary root cause hypothesis. We will validate or correct it in the meeting."
+    },
+    {
+      "round": 3,
+      "ai_message": "Good. Now, on the bar tack issue — my preliminary view is that the needle bar was worn. But I want to walk through the 5-why in the meeting. Can you start with the issue statement?",
+      "ai_message_zh": "好。套结问题 — 我初步看是针杆磨损。但我希望在会议中走 5-why。你能先说下问题陈述吗?",
+      "expected_user_response_hint": "给出清晰的 D2 problem statement",
+      "key_phrases": ["Problem statement", "8% bar tack skipping", "affecting 600 pcs", "8D report reference"],
+      "common_mistakes": "Problem statement 要具体:where, when, how many, impact, 不能含糊。",
+      "tips_zh": "D2 problem statement 模板:On [date], [issue] was found on [qty/percentage] of [product] in [location], impacting [consequence]。",
+      "user_response_example": "Problem statement: on 25 September, we observed 8% bar tack skipping on the chest pocket flap of the navy shirts, in pieces produced between 8 am and 12 pm on line 3. 600 pieces were affected. The defect was flagged by the buyer's QC. Source: 8D report dated 28 September, paragraph D2."
+    },
+    {
+      "round": 4,
+      "ai_message": "Good statement. Now let's do the 5-why. Why did the bar tack skip stitches?",
+      "ai_message_zh": "好的陈述。现在做 5-why。第一问,套结为什么跳针?",
+      "expected_user_response_hint": "第一层 why:针杆磨损",
+      "key_phrases": ["Why 1: needle bar worn", "evidence: 1.2 million stitches", "needle change overdue", "maintenance log"],
+      "common_mistakes": "第一层 why 要给事实(数据/记录),不要给猜测。",
+      "tips_zh": "5-why 每层都要有 evidence:照片、记录、数字、证言。",
+      "user_response_example": "Why 1: the needle bar on machine #2 was worn. Evidence: maintenance log shows 1.2 million stitches since the last needle bar change, well past the 800,000-stitch limit we set. Visual inspection confirmed scoring on the needle bar surface."
+    },
+    {
+      "round": 5,
+      "ai_message": "Why was the needle bar not changed at the 800,000-stitch mark?",
+      "ai_message_zh": "为什么针杆在 80 万针时没换?",
+      "expected_user_response_hint": "第二层 why:保养制度执行问题",
+      "key_phrases": ["Why 2: preventive maintenance not triggered", "no automatic alert system", "manual log only", "mechanic on leave"],
+      "common_mistakes": "第二层 why 要找制度原因,不是个人原因。",
+      "tips_zh": "5-why 关键:不要停在 'operator made a mistake' 这种 person-blaming 答案。",
+      "user_response_example": "Why 2: there was no automatic alert when the count reached 800,000. The mechanic tracks the count manually in a logbook, and the count was last checked at 600,000 stitches, 3 weeks earlier. The mechanic was on leave for 4 days around the time the threshold was hit, and no backup mechanic was assigned to monitor the count."
+    },
+    {
+      "round": 6,
+      "ai_message": "Why was there no backup mechanic, and no auto-alert system?",
+      "ai_message_zh": "为什么没有备用机修,也没有自动预警?",
+      "expected_user_response_hint": "第三/四层 why:管理层重视度、预算、SOP",
+      "key_phrases": ["Why 3: no SOP for backup mechanic", "Why 4: maintenance budget not approved for digital tracking", "management decision"],
+      "common_mistakes": "到这一层要 avoid blaming 个人,要找 system/process 缺口。",
+      "tips_zh": "5-why 的 4-5 层通常是 management / system 层面:预算、SOP、KPI。",
+      "user_response_example": "Why 3: there is no SOP that requires a backup mechanic to monitor critical maintenance counters when the primary mechanic is on leave. Why 4: the proposal to install a digital counter and alert system on bar tack machines was submitted last year but not approved by the plant manager due to budget constraints."
+    },
+    {
+      "round": 7,
+      "ai_message": "Why was the budget not approved, and what is the cost of poor quality here?",
+      "ai_message_zh": "为什么预算没批,这次质量损失是多少?",
+      "expected_user_response_hint": "讨论 COPQ(cost of poor quality),推动改善",
+      "key_phrases": ["COPQ: USD 12,000", "system cost USD 3,000", "ROI in 4 months", "PDCA cycle"],
+      "common_mistakes": "COPQ(cost of poor quality)要量化,才能推动预算批准。",
+      "tips_zh": "COPQ = internal failure (rework, scrap) + external failure (claim, return) + appraisal + prevention。",
+      "user_response_example": "Cost of poor quality for this incident: rework 600 pcs at USD 4 each = USD 2,400; QC observation 2 days at USD 500 = USD 1,000; credit note USD 1,500; air-freight share USD 1,500; customer goodwill lost = intangible. Total tangible COPQ is around USD 5,400 to USD 8,000. The digital alert system costs USD 3,000 once. The ROI is one incident. PDCA: we will re-submit the budget request next month with the COPQ data attached."
+    },
+    {
+      "round": 8,
+      "ai_message": "Good analysis. To close: 5-why complete, root cause is missing preventive maintenance system. CAPA: replace needle bar immediately, install digital counter, update SOP for backup mechanic, re-submit budget. KPI: target 0 bar tack defects for next quarter. Action items: SOP update by 15 October, system install by 30 October, KPI review monthly. Anything else?",
+      "ai_message_zh": "好分析。收尾:5-why 完成,根本原因是缺少预防性维护系统。CAPA:立刻换针杆,装数字计数器,更新 SOP 备用机修,重提预算。KPI:下季度零套结疵点。行动项:10 月 15 日前 SOP 更新,10 月 30 日前系统安装,每月 KPI 评审。还有别的吗?",
+      "expected_user_response_hint": "确认 action items,定 next step 和 owner",
+      "key_phrases": ["action items confirmed", "owner assigned per item", "next review in 30 days", "closing summary"],
+      "common_mistakes": "action item 一定要有 owner 和 due date,不能笼统说 'we will do it'。",
+      "tips_zh": "Action item 模板:Action — Owner — Due date — Status. 每条都要有这 4 项。",
+      "user_response_example": "Action items confirmed. I will write them up: A1 needle bar replacement — done. A2 install digital counter on all bar tack machines — owner: maintenance head, due 30 October. A3 SOP update for backup mechanic — owner: IE manager, due 15 October. A4 re-submit budget request with COPQ data — owner: plant manager, due 25 October. A5 monthly KPI review — owner: David, ongoing. Next 5-why review in 30 days. Thanks for the structured approach, this is exactly the discipline we need."
+    }
+  ]
+}

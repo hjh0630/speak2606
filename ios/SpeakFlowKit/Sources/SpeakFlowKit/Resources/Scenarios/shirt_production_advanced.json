@@ -1,0 +1,88 @@
+{
+  "scenario_id": "shirt_production",
+  "scenario_title_en": "Shirt Production",
+  "scenario_title_zh": "衬衣生产",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Lin, David from IE here. I have to be straight with you on PO 4521 — when we ran the marker optimization this morning, we hit 82% efficiency, not 86%. The buyer is going to ask why their fabric consumption went up. I want to align with you before we cut.",
+      "ai_message_zh": "Lin,我是 IE 的 David。直说 PO 4521 的事 — 今天上午排料优化下来,利用率 82%,不是 86%。客户一定会问面料消耗为什么增加。我想在裁剪前跟你对齐一下。",
+      "expected_user_response_hint": "询问导致利用率下降的原因,协商是否调整尺寸组合或排料策略",
+      "key_phrases": ["What drove the efficiency down", "marker optimization", "narrow the size range", "fabric allowance"],
+      "common_mistakes": "marker efficiency 不是越高越好,合理范围 80-88%,但若比报价时低,要在成本侧调整。",
+      "tips_zh": "marker efficiency 受尺码组合、面料门幅、疵点位置影响;若窄码组合合理可解释,否则要补差额。",
+      "user_response_example": "Honest question, David — what drove the efficiency down? Is it the size ratio, the fabric width, or a change in marker planning? Walk me through the numbers. We need to align on whether we absorb the extra 4% or renegotiate with the buyer."
+    },
+    {
+      "round": 2,
+      "ai_message": "Three factors. First, the fabric width came in at 142 cm, not 145 as we planned. Second, the size ratio has S and XXXL at 1 each — they eat more length. Third, the chest pocket on Rev.3 added 4 cm to the front panel length. That is where the 4% went.",
+      "ai_message_zh": "三个原因。第一,面料门幅实际 142 厘米,不是计划的 145。第二,尺码比例 S 和 XXXL 各只 1 件,它们占长度多。第三,Rev.3 加的胸口袋让前片长多了 4 厘米。4% 就吃在这。",
+      "expected_user_response_hint": "讨论三个原因的影响,提出让步或调整建议",
+      "key_phrases": ["142 cm width is below the spec", "size ratio can be tightened", "absorb internally", "fabric supplier claim"],
+      "common_mistakes": "fabric width 偏窄是 fabric supplier 的问题,可以发 deviation report 让供应商吸收 1-2%。",
+      "tips_zh": "门幅偏窄 +1-2 cm 是常见,先问 fabric supplier,再考虑工厂内部吸收。",
+      "user_response_example": "OK, let me unpack that. Width 142 cm is below the 145 we bought against — I will file a deviation report with the fabric mill, they should absorb 1 to 2%. The size ratio is fixed by the buyer, we cannot change it. The pocket length is a buyer-requested change. I propose the factory absorbs the pocket change, and the mill absorbs the width. Can you work with that?"
+    },
+    {
+      "round": 3,
+      "ai_message": "Reasonable. I can do that internally. One more flag — when we ran the pre-fuse test for the collar yesterday, we got bubble issues on 3 out of 20 panels. Temperature might be slightly off for this lot of interlining. We are re-testing at 148 degrees today.",
+      "ai_message_zh": "合理,内部可以消化。再说一个事:昨天做领子 pre-fuse test,20 片里 3 片起泡。这批粘合衬温度可能要微调,今天用 148 度重测。",
+      "expected_user_response_hint": "讨论 pre-fuse 失败,要求 root cause 和重测计划",
+      "key_phrases": ["3 out of 20 is 15%", "bubble is unacceptable", "pre-fuse test on every lot", "RC report"],
+      "common_mistakes": "bubble 出现在 fusing 后,通常是温度/压力/时间不匹配,或 interlining 批次变化。",
+      "tips_zh": "interlining 换批次必须重做 pre-fuse test,不能沿用上批参数。",
+      "user_response_example": "3 out of 20 is 15%, that is a clear failure. Bubbles are unacceptable — they will show up as visible defects on the finished shirt. Please run a full pre-fuse test on this new interlining lot, document the temperature, pressure, dwell time, and peel strength, and send me a short RC report before you start bulk fusing. No bulk cutting until the pre-fuse is approved."
+    },
+    {
+      "round": 4,
+      "ai_message": "Will hold bulk cutting. I am also pulling a sample from the bubble panels — looks like the interlining was stored in a high-humidity area, glue migration is the suspected cause. I will confirm by end of today and let you know.",
+      "ai_message_zh": "我会暂停大货裁剪。我从起泡的板上取样看了 — 怀疑是粘合衬存放在高湿区,胶迁移。今天下班前确认再回你。",
+      "expected_user_response_hint": "认可调查方向,要求 8D 报告思路和下一步",
+      "key_phrases": ["glue migration is plausible", "8D approach", "interlining supplier to be looped in", "concession plan"],
+      "common_mistakes": "glue migration 是粘合衬常见问题,要通知 interlining supplier 改进储存。",
+      "tips_zh": "8D 报告思路:D1 team, D2 problem, D3 containment, D4 root cause, D5 corrective, D6 implement, D7 prevent, D8 congratulate。",
+      "user_response_example": "Glue migration is plausible — that is a typical root cause for bubble defects in knit fusible. Please follow the 8D approach: contain the lot, isolate the interlining, involve the interlining supplier, and write up the D2 to D5 within 48 hours. I want this documented so we can prevent it on the next order."
+    },
+    {
+      "round": 5,
+      "ai_message": "Understood. Quick pivot — once fusing is sorted, sewing will start Friday on line 3 with 35 operators. I am planning 12 operations on the line with a target SMV of 18 minutes. For first 200 pieces, we will run at 85% efficiency to stabilize the line, then ramp to 95% from piece 201.",
+      "ai_message_zh": "明白。转换话题 — fusing 一解决,周五 3 号线开缝,35 人。计划 12 个工位,目标 SMV 18 分钟。前 200 件按 85% 效率跑稳,第 201 件起提到 95%。",
+      "expected_user_response_hint": "讨论 SMV、爬坡时间和首次件检验",
+      "key_phrases": ["18 minutes SMV is achievable", "first piece inspection", "ramp-up plan", "learning curve"],
+      "common_mistakes": "首 200 件一定要做 first piece inspection,确认尺寸和外观后再批量。",
+      "tips_zh": "IE 爬坡:前 100-200 件按 80-85% 效率,200-500 件按 90%,500 件以上按 95-100%。",
+      "user_response_example": "18 minutes SMV is achievable for this style. Please run first piece inspection on the first 5 shirts off the line — check measurements against the spec, seam appearance, SPI, and buttonhole position. Hold the line until I see the first piece report. I do not want to chase a defect 500 pieces later."
+    },
+    {
+      "round": 6,
+      "ai_message": "Will do. One more — the buyer's tech pack calls for a flat-felled seam on the side seam and a French seam on the inside of the sleeve placket. I have a concern: French seam on a placket is unusual, it adds bulk and may not lay flat. Are you sure?",
+      "ai_message_zh": "还有一件 — 客户 tech pack 写侧缝用 flat-felled seam,袖衩内侧用 French seam。我有点担心:袖衩 French seam 不常见,会厚、不服帖。确认一下真的要做?",
+      "expected_user_response_hint": "讨论 seam type 选择,引用 spec 或挑战可行性",
+      "key_phrases": ["French seam is in the tech pack", "alternative is bound seam", "confirm with the buyer", "sample room to test"],
+      "common_mistakes": "French seam 在轻薄面料常见,但用在 placket 处会厚,可建议改为 bound seam。",
+      "tips_zh": "Flat-felled / French / Bound / Superimposed 都是常见 seam type,要按面料和部位选。",
+      "user_response_example": "I see your point. French seam on a sleeve placket does add bulk. I will email the buyer's tech designer to confirm — meanwhile, please ask the sample room to make 2 versions: one French seam as per the tech pack, one bound seam with 0.6 cm binding. We will send photos to the buyer and let them decide. I do not want to make a unilateral call on this."
+    },
+    {
+      "round": 7,
+      "ai_message": "Good call. I will get those two samples out by Thursday. Now, on critical path — the navy color has a shade band issue. The lab dip and the bulk lot have a Delta E of 1.8, which is at the limit of the buyer's tolerance (Delta E less than 2.0). I want to ship pre-production samples today for the buyer's QC to approve before we continue cutting the navy lot.",
+      "ai_message_zh": "好主意。周四前出两个版本。关键路径:深蓝那个色有色差。lab dip 和大货的 Delta E 是 1.8,卡在客户公差 2.0 边缘。我建议今天寄 pre-production sample 给客户 QC 确认,确认后再继续裁深蓝那批。",
+      "expected_user_response_hint": "讨论 Delta E,要求正式 top sample 批准",
+      "key_phrases": ["Delta E 1.8 is borderline", "TOP sample needed", "bulk cutting is on hold for navy", "approve in writing"],
+      "common_mistakes": "Delta E 越接近 0 色差越小;商业可接受范围一般小于 2.0,出口订单要写明 tolerance。",
+      "tips_zh": "PP sample = pre-production, TOP sample = top of bulk,bulk cutting 前一定要拿 TOP 批准。",
+      "user_response_example": "Delta E 1.8 is borderline — I will not cut the navy lot without written approval. Please send the TOP sample today with a clear label 'TOP sample for color approval, navy'. I will email the buyer's QC with the Delta E reading and the spectrophotometer report. Hold the navy cutting until we have the green light in writing."
+    },
+    {
+      "round": 8,
+      "ai_message": "Agreed. White and light blue are approved, navy is on hold. Final inspection is scheduled for next Friday. AQL 1.5 for major defects, 2.5 for minor, 4.0 for critical. We will pull the inspection report, the measurement report, and a pre-shipment photo set. Anything else before I let you go?",
+      "ai_message_zh": "同意。白色和浅蓝已批,深蓝待确认。终检定下周五。AQL 主要疵点 1.5、次要 2.5、严重 4.0。会出检验报告、尺寸报告和装柜前照片。还有别的吗?",
+      "expected_user_response_hint": "收尾确认所有交付物,定下次沟通时间",
+      "key_phrases": ["inspection deliverables confirmed", "PSI on Friday", "navy hold confirmation in writing", "closing summary"],
+      "common_mistakes": "AQL 三档(1.5/2.5/4.0)是高单衬衣常见组合,比标准 2.5 单档更严。",
+      "tips_zh": "AQL critical 4.0 用于安全/合规疵点,如断针残留、锋利部件;major 1.5 用于功能/外观;minor 2.5 用于轻微可见。",
+      "user_response_example": "Inspection deliverables confirmed — inspection report, measurement report, pre-shipment photos. AQL 1.5 / 2.5 / 4.0 is the right split for this buyer. To close: white and light blue on track for PSI Friday, navy on hold pending written color approval. Please send me the in-line sewing report on Thursday and the TOP sample for navy by end of today. Great work pushing the seam-type question early."
+    }
+  ]
+}

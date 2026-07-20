@@ -1,0 +1,88 @@
+{
+  "scenario_id": "payment_overdue",
+  "scenario_title_en": "Overdue Payment & Collection",
+  "scenario_title_zh": "客户付款逾期/催款",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, this is Robert from the finance team. I'm calling about the balance on PO 2024-388 — it's been past due for two weeks now. Can we talk?",
+      "ai_message_zh": "陈,你好,我是财务部的 Robert。我打来是关于 PO 2024-388 的尾款,已经逾期两周了。能聊一下吗?",
+      "expected_user_response_hint": "认真接收,询问具体到期日和金额",
+      "key_phrases": ["Thanks for the call", "Could you confirm the due date", "we will check our records"],
+      "common_mistakes": "客户刚说逾期,不要马上说 'we will pay right now'。先听,后查。",
+      "tips_zh": "接收催款三步:acknowledge / ask for specifics / commit to follow up。",
+      "user_response_example": "Hi Robert. Thanks for reaching out. Could you confirm the exact due date and the amount? I'll check our records and get back to you within 24 hours."
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure, the balance is US$48,200, due on 2024-09-15. We've sent two email reminders but no response. That's why I'm calling.",
+      "ai_message_zh": "好的,尾款 48,200 美元,9 月 15 号到期。邮件催过两次了,没回复。所以我打电话。",
+      "expected_user_response_hint": "解释为什么没回复,说明内部情况,给出付款时间",
+      "key_phrases": ["Sorry for the delay", "we will arrange payment by ...", "our finance is processing"],
+      "common_mistakes": "Don't say 'we forgot to pay' — say 'we have some delay in internal processing' or 'we're catching up on the payment'.",
+      "tips_zh": "解释原因 + 给出具体付款日 + 主动确认。这是处理催款的标准动作。",
+      "user_response_example": "Sorry for the late reply, Robert. Our finance team is finishing the approval. We will arrange the TT payment by this Friday, 2024-09-27. Please bear with us."
+    },
+    {
+      "round": 3,
+      "ai_message": "Friday is 5 days from now. That's another week on top of the two weeks already past. Can you push it to Wednesday? Our month-end closing is on the 30th.",
+      "ai_message_zh": "周五是 5 天后。在已经逾期两周的基础上又加一周。能提前到周三吗?我们 30 号月结。",
+      "expected_user_response_hint": "解释付款流程约束,争取一个折中日期",
+      "key_phrases": ["Our TT process takes ...", "can we do ... instead", "I'll push our finance"],
+      "common_mistakes": "Don't say 'we can't pay' — say 'our TT process takes 3 working days' to give a reason, not an excuse.",
+      "tips_zh": "TT 海外汇款一般 2-3 个工作日到账,但银行 + 财务审批可能要 3-5 天,客户接受度较高。",
+      "user_response_example": "I understand the month-end pressure. Our TT process needs 3 working days from finance approval. How about Thursday? I'll push our finance to approve it today."
+    },
+    {
+      "round": 4,
+      "ai_message": "Thursday is one day better, but the bank-to-bank transfer may not clear by 30th. Can you do a same-day wire, or partial payment now and balance on Friday?",
+      "ai_message_zh": "周四比周五好一天,但跨境电汇可能赶不上 30 号到账。能当天汇款吗?或者先付一部分,周五付清?",
+      "expected_user_response_hint": "回应分期方案或同天汇款,讲清可行性",
+      "key_phrases": ["Same-day wire is possible", "partial payment of ...", "balance on Friday"],
+      "common_mistakes": "partial payment 要明确金额和比例,不要说 'we can pay some now'。",
+      "tips_zh": "分两次付款(50% + 50%)是常见折中,银行手续费较高但双方都能接受。",
+      "user_response_example": "Same-day wire may be hard today, but partial is doable. We can pay 50 percent tomorrow and the balance on Friday. Does that work for your month-end closing?"
+    },
+    {
+      "round": 5,
+      "ai_message": "50 / 50 is acceptable. But this is the second time PO 2024-388 has been late. Going forward, we need a stricter payment term — 30 percent deposit, 70 percent balance before shipment, not against B/L.",
+      "ai_message_zh": "50/50 可以。但这是 PO 2024-388 第二次逾期了。后面我们付款条款要更严 — 30% 定金,70% 款清发货,不是见提单付款。",
+      "expected_user_response_hint": "接受更严格的付款条件,讨论未来合作",
+      "key_phrases": ["We accept the new terms", "going forward", "before shipment not against B/L"],
+      "common_mistakes": "before shipment = 款清发货;against B/L = 见提单付款(后 T/T);这两个常被搞混。",
+      "tips_zh": "before shipment 对出口商最安全(钱到账再发货),对进口商压力大;against B/L 是平衡方案。",
+      "user_response_example": "We accept the 30 / 70 before-shipment term for future orders. For this PO, please confirm the 50 / 50 plan in writing — I'll send a revised payment schedule today."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK, send the revised payment schedule by email. About late-payment interest, our standard term is 1 percent per month on overdue balance. Are you OK with that?",
+      "ai_message_zh": "好的,把修订付款时间表发邮件。逾期利息方面,我们的标准是每月 1% 算逾期余额。能接受吗?",
+      "expected_user_response_hint": "回应逾期利息条款,接受或谈判",
+      "key_phrases": ["1 percent per month is fine", "we accept the interest", "going forward"],
+      "common_mistakes": "Don't say 'we don't want to pay interest' — say 'we accept the 1 percent per month' even if you negotiate it down.",
+      "tips_zh": "逾期利息 1% / 月 = 12% 年化,是行业标准;客户谈判时常压到 0.5% / 月。",
+      "user_response_example": "1 percent per month is acceptable. We'll pay the 50 percent tomorrow and the balance on Friday, plus the agreed interest for the delay. We apologize for the inconvenience."
+    },
+    {
+      "round": 7,
+      "ai_message": "OK, that's fair. About the new term going forward, I'll send an updated trade term sheet for your signature. Please also note — if this happens a third time, we may put the account on credit hold.",
+      "ai_message_zh": "好的,这样合理。新条款我发一份更新的贸易条款书给你签。请注意 — 如果再发生第三次,我们可能暂停授信。",
+      "expected_user_response_hint": "确认条款,避免信用暂停,做承诺",
+      "key_phrases": ["We will honor the new terms", "no more delays", "signed copy by ..."],
+      "common_mistakes": "credit hold = 暂停授信,新订单暂停生产/发货,不是 'stop cooperation'。",
+      "tips_zh": "credit hold 是工厂/出口商对客户的最后手段,通常是 30-60 天,客户清欠后恢复。",
+      "user_response_example": "We will honor the new 30 / 70 term, no more delays. I'll send the signed copy by Friday. We want to keep a long-term relationship with you, Robert."
+    },
+    {
+      "round": 8,
+      "ai_message": "Sounds good. To wrap up: 50 percent payment tomorrow, balance on Friday, revised schedule by email, signed term sheet by Friday. Anything else?",
+      "ai_message_zh": "好的。总结:明天付 50%,周五付清,邮件发修订时间表,周五前签条款书。还有别的吗?",
+      "expected_user_response_hint": "做 closing summary,确认时间表",
+      "key_phrases": ["To summarize", "we will do ... by ...", "thank you for your patience"],
+      "common_mistakes": "收尾不要用 OK, bye — 要给一个明确的 next step。",
+      "tips_zh": "电话结束前主动总结 3-4 件事:谁做什么、什么时候完成、文件往哪发。",
+      "user_response_example": "Perfect. To summarize: 50 percent TT tomorrow, balance on Friday, revised schedule emailed today, signed term sheet by Friday. Thank you for your patience, Robert. Have a good day."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "exception_handling",
+  "scenario_title_en": "Exception Handling",
+  "scenario_title_zh": "异常处理",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, this is the QC supervisor from the buyer's side. I am on the floor at your factory right now. We have found a recurring defect on the navy shirts — the bar tacks on the chest pocket flap are skipping stitches, about 8% of the pieces we sampled. This is a major defect. What is your plan?",
+      "ai_message_zh": "你好,我是客户方的 QC 主管。我现在在你们工厂。我们在深蓝衬衣上发现一个重复疵点 — 胸口袋扣盖的套结跳针,抽样里大概 8%。这是主要疵点。你们怎么解决?",
+      "expected_user_response_hint": "承认问题,要求 evidence,提出 root cause 调查",
+      "key_phrases": ["acknowledge the issue", "request evidence (photos, pieces)", "stop the line", "root cause investigation"],
+      "common_mistakes": "客户拿出 8% 的数字,先确认证据和取样方法,不要急着解释。",
+      "tips_zh": "套结跳针常见原因:针型号不对、线张力不稳、套结机压脚磨损。",
+      "user_response_example": "I acknowledge the issue, and I take it seriously. 8% bar tack skipping is well above our internal standard of 1%. Please send me photos and 3 sample pieces with the defect. Meanwhile, I will stop the bar tack station and pull the operator. Give me 2 hours to do a root cause check."
+    },
+    {
+      "round": 2,
+      "ai_message": "I will send photos now. The bar tacks at the pocket flap corners are missing 2 to 3 stitches, and some pieces have loose threads. The line is still running, by the way. Please act fast.",
+      "ai_message_zh": "照片现在发。扣盖角的套结缺 2 到 3 针,有些有浮线。顺带说一句,流水线还在跑。快处理。",
+      "expected_user_response_hint": "立刻停线,安排 rework 和 RC 调查",
+      "key_phrases": ["Stop the line immediately", "isolate the lot", "rework plan", "RC team"],
+      "common_mistakes": "客户提了 'line is still running',这就是要工厂立刻停线,不要再犹豫。",
+      "tips_zh": "停线决策:发现 AQL 主要疵点超 2.5%,应立刻停线,等 root cause 找到并修正。",
+      "user_response_example": "I have told the line supervisor to stop the bar tack station right now — within 5 minutes. All pieces from this morning's output will be isolated for 100% rework. The bar tack machines will be checked for needle wear and thread tension. I will form a small RC team: line supervisor, mechanic, and our QA. First update to you in 1 hour."
+    },
+    {
+      "round": 3,
+      "ai_message": "Good, line is stopped. Now, about the pieces already produced — how many pieces do you estimate are affected, and what is your rework plan?",
+      "ai_message_zh": "好,线停了。已经做出来的件,你们估计有多少受影响?返工方案是什么?",
+      "expected_user_response_hint": "估算数量,给出 100% 返工计划",
+      "key_phrases": ["about 600 pieces affected", "100% rework on the bar tacks", "additional 2 days", "no charge to buyer"],
+      "common_mistakes": "返工不能只做抽到有问题的件,要 100% 返工,否则还有漏网。",
+      "tips_zh": "返工完成后要 100% 复检,然后再做 AQL 抽样,确认无问题再放行。",
+      "user_response_example": "We have produced about 800 pieces since 8 am, and I estimate 600 of them may have the same issue. The rework plan: 100% piece-by-piece inspection, all bar tacks re-done on the affected pieces, then a 100% re-inspection, then AQL 2.5 sampling on top. Rework cost is on us. We may need 1.5 to 2 extra days, so the line can resume in 2 days."
+    },
+    {
+      "round": 4,
+      "ai_message": "Understood. Now, give me a short-term containment and a permanent fix. I do not want this to recur on the next 4,000 pieces.",
+      "ai_message_zh": "明白。短期围堵和长期方案分别给我。我不想在剩下 4 千件上重蹈覆辙。",
+      "expected_user_response_hint": "给短期围堵 + 长期 CAPA,8D 思路",
+      "key_phrases": ["Containment: 100% inspection", "Root cause: needle bar worn", "Corrective: replace needle bar", "Preventive: needle change schedule"],
+      "common_mistakes": "8D 报告要做全套:D1-D8,只给 corrective 不给 preventive 等于没做。",
+      "tips_zh": "8D 报告:D1 团队,D2 问题,D3 围堵,D4 根因,D5 纠正,D6 实施,D7 预防,D8 表彰。",
+      "user_response_example": "Containment: 100% piece-by-piece inspection on all 800 pieces, plus all 6,000 pcs in stock. Root cause: the needle bar on bar tack machine #2 was worn after 1.2 million stitches, and the auto thread trim was misfiring. Corrective: replace needle bar, recalibrate thread tension, and run 50 test stitches for QC sign-off. Preventive: change needle bar every 1 million stitches, log it in the maintenance system. We will run 50 test pieces for your approval before resuming the line."
+    },
+    {
+      "round": 5,
+      "ai_message": "OK, the 8D plan sounds structured. One more question — the rework is going to delay the line by 2 days. How does this affect the ETD?",
+      "ai_message_zh": "好,8D 方案听起来很有条理。再问一个 — 返工会让线延期 2 天,ETD 怎么变?",
+      "expected_user_response_hint": "讨论 ETD 修订、运输方案、加急",
+      "key_phrases": ["ETD pushed from 28 Sep to 30 Sep", "no impact on ETA", "we will expedite the remaining 4,000 pcs", "overtime authorized"],
+      "common_mistakes": "ETD 改 2 天,要看 ETA 是否变。如果船期密,可能 ETD 改 2 天,ETA 不变。",
+      "tips_zh": "若 ETD 改 2 天,船公司可能仍按原船期收(滚装),或改下个班期(差 7 天),要尽早订舱调整。",
+      "user_response_example": "ETD will move from 28 September to 30 September — 2 days later. ETA in Sydney stays 15 October, because the vessel is the same and the cut-off is still met. The remaining 4,000 pcs will be sewn on overtime to make up the lost 2 days. No cost impact to you, no ETD/ETA change downstream."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK, but I want to confirm — the rework is on the factory's cost, including labor and any extra QC time. And I want the 8D report in my inbox within 48 hours.",
+      "ai_message_zh": "好,但我要确认 — 返工成本工厂承担,包括人工和额外的 QC 时间。8D 报告 48 小时内要发我邮箱。",
+      "expected_user_response_hint": "确认成本承担,承诺 8D 报告时间",
+      "key_phrases": ["All rework cost on us", "8D report by Thursday EOD", "in English", "no extra charge"],
+      "common_mistakes": "8D 报告要用英文,工厂内部 RCA 报告用中文,两个版本都要有。",
+      "tips_zh": "8D 报告格式:D2 problem statement, D3 containment, D4 root cause (5-why), D5 corrective, D6 implementation, D7 prevention, D8 recognition。",
+      "user_response_example": "Confirmed — all rework cost, including labor, overtime, and extra QC hours, is on the factory. No charge to you. The 8D report will be in your inbox by Thursday EOD, in English, with photos for D2, D3, D4, and D5. I will also share a short summary slide for your management review."
+    },
+    {
+      "round": 7,
+      "ai_message": "Good. Now, for the bar tack issue specifically, the buyer's head office is going to ask for a credit note to cover the QC cost they spent on the rework observation. They are asking for USD 1,500. Will you agree?",
+      "ai_message_zh": "好。仅针对套结问题,客户总部要一笔 credit note 覆盖我们 QC 在返工观察上的支出,要 1,500 美元。你们同意吗?",
+      "expected_user_response_hint": "讨论 credit note 金额,谈判或接受",
+      "key_phrases": ["USD 1,500 is fair", "we will issue credit note", "negotiate to USD 1,200", "evidence of QC hours"],
+      "common_mistakes": "credit note 要有 evidence:QC hours, expense records, 否则容易产生纠纷。",
+      "tips_zh": "Credit note 用于冲抵货款,不是现金,要 evidence 支撑。",
+      "user_response_example": "USD 1,500 is reasonable, given the QC team spent 2 days on-site. I will issue a credit note for USD 1,500 within 48 hours, applied to the balance of the current invoice. I would appreciate if the QC team can give me a short note on the hours and the role they played, so I can document it in our internal CAPA file."
+    },
+    {
+      "round": 8,
+      "ai_message": "OK, agreed. To close: 600 pieces rework, 2-day delay, ETD 30 September, ETA unchanged, 8D report Thursday, credit note USD 1,500, no charge to buyer. Let me also confirm one more time — when can the line resume, and will my QC be present when it restarts?",
+      "ai_message_zh": "好,同意。收尾:600 件返工,延期 2 天,ETD 9 月 30 日,ETA 不变,8D 报告周四,credit note 1,500 美元,客户不付费。再确认一次 — 流水线什么时候恢复?恢复时我方 QC 在场吗?",
+      "expected_user_response_hint": "确认线恢复时间和客户 QC 监督",
+      "key_phrases": ["Line resumes tomorrow 8 am", "your QC is welcome", "50 test pieces for sign-off", "we keep your QC informed"],
+      "common_mistakes": "线恢复时,要请客户 QC 在场,sign-off 50 test pieces 后再批量。",
+      "tips_zh": "线恢复流程:1) machine 调试,2) 50 件试产,3) 客户 sign-off,4) 批量。",
+      "user_response_example": "Line resumes tomorrow 8 am Beijing time, after the needle bar replacement and 50 test pieces pass our internal QA. Your QC is welcome to be on the floor for the line restart — please confirm by 6 pm today if your QC will join. I will email you the maintenance record and the test piece sign-off form tonight. Thanks for flagging this early, it saved us from a much bigger problem on the next lot."
+    }
+  ]
+}
