@@ -26,6 +26,11 @@ export interface Scenario {
   difficulty_levels?: Difficulty[]
   category?: string
   subcategory?: string
+  /** Top-level module the scenario belongs to.
+   *  - "foreign-trade"   : 外贸英语口语 (default)
+   *  - "textile-apparel" : 纺织服装全链条英语沟通
+   *  Stamped by the backend content loader. */
+  module?: 'foreign-trade' | 'textile-apparel'
   /** The visible role for the AI side (English). */
   roles: { ai: string; user: string }
   goals: string[]
@@ -224,4 +229,38 @@ export interface ApiErrorBody {
   message?: string
   code?: string
   details?: unknown
+}
+
+// ---------- Wordbook (生词本) ----------
+
+/** 0 = unrated, 1 = easy, 2 = medium, 3 = hard. */
+export type WordbookDifficulty = 0 | 1 | 2 | 3
+
+export interface WordbookItem {
+  id: number
+  user_token: string
+  term: string
+  meaning: string | null
+  difficulty: WordbookDifficulty
+  source: string
+  source_ref: string | null
+  notes: string | null
+  created_at: number
+  updated_at: number
+}
+
+export interface WordbookListResponse {
+  items: WordbookItem[]
+  total: number
+  limit: number
+  offset: number
+  count: number
+  difficulty: string | null
+  search: string | null
+}
+
+export interface WordbookStats {
+  total: number
+  by_difficulty: { 0: number; 1: number; 2: number; 3: number }
+  recent_week: number
 }

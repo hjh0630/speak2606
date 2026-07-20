@@ -1,12 +1,44 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
 import WordPopup from '@/components/WordPopup.vue'
 import { useWordLookup } from '@/composables/useWordLookup'
 import { useSessionStore } from '@/stores/session'
 
-const { popup, isPlaying, playWord, close } = useWordLookup()
+const {
+  popup,
+  isPlaying,
+  isCurrentSaved,
+  isSaving,
+  playWord,
+  close,
+  saveCurrent,
+  refreshSavedTerms,
+} = useWordLookup()
 const sessionStore = useSessionStore()
+const route = useRoute()
+
+// Toast for "已加入生词本" — short, non-blocking.
+const toast = ref<string | null>(null)
+let toastTimer: number | null = null
+function showToast(msg: string): void {
+  toast.value = msg
+  if (toastTimer) window.clearTimeout(toastTimer)
+  toastTimer = window.setTimeout(() => { toast.value = null }, 1800)
+}
+
+// Wire the popup's save button → saveCurrent + toast.
+async function onSaveFromPopup(): Promise<void> {
+  const res = await saveCurrent()
+  if (res.ok && res.term) {
+    showToast(`已加入生词本 · ${res.term}`)
+  } else if (res.reason === 'already-saved') {
+    showToast('这个词已经在生词本里啦')
+  } else if (res.reason && res.reason !== 'in-flight' && res.reason !== 'stale' && res.reason !== 'no-popup') {
+    showToast(`加入失败: ${res.reason}`)
+  }
+}
 
 // One-time onboarding hint that teaches the user about the word-lookup
 // feature. Persists a "dismissed" flag in localStorage so the hint only
@@ -39,6 +71,10 @@ onMounted(() => {
     showHint.value = true
     autoDismissTimer = window.setTimeout(() => dismissHint(false), 15000)
   }
+  // Pull the user's saved terms so the popup's ☆/★ state is correct from
+  // the first selection.  Best-effort — if the store is empty / network
+  // fails the popup still works, just without the ★ state.
+  void refreshSavedTerms()
 })
 
 // Auto-dismiss the moment the user finishes a practice session — the hint
@@ -51,10 +87,22 @@ watch(
   },
 )
 
+// Whenever the user returns from the wordbook page (or any route that may
+// have mutated their saved set), re-sync the lookup cache so the popup
+// reflects the new state.
+watch(
+  () => route.fullPath,
+  () => { void refreshSavedTerms() },
+)
+
 onBeforeUnmount(() => {
   if (autoDismissTimer) {
     window.clearTimeout(autoDismissTimer)
     autoDismissTimer = null
+  }
+  if (toastTimer) {
+    window.clearTimeout(toastTimer)
+    toastTimer = null
   }
 })
 </script>
@@ -90,7 +138,7 @@ onBeforeUnmount(() => {
           </div>
           <p class="text-xs sm:text-sm text-ink-700 leading-snug flex-1">
             <span class="font-semibold text-ink-800">试试选中英文单词</span> —
-            弹中文释义,点喇叭听发音。整页通用。
+            弹中文释义,点喇叭听发音。点 ☆ 加入生词本。整页通用。
           </p>
           <button
             type="button"
@@ -108,13 +156,30 @@ onBeforeUnmount(() => {
       </div>
     </transition>
 
+    <!-- Toast for save feedback. -->
+    <transition name="toast">
+      <div
+        v-if="toast"
+        class="fixed left-1/2 -translate-x-1/2 top-16 sm:top-20 z-[110] pointer-events-none"
+        role="status"
+        aria-live="polite"
+      >
+        <div class="rounded-full bg-ink-900 text-white text-xs sm:text-sm px-4 py-2 shadow-card border border-ink-700/40">
+          {{ toast }}
+        </div>
+      </div>
+    </transition>
+
     <!-- Global word-lookup popup: any text on the page, double-click or
          drag-select to look up + hear a garment / textile term. -->
     <WordPopup
       :popup="popup"
       :is-playing="isPlaying"
+      :is-saved="isCurrentSaved"
+      :is-saving="isSaving"
       @play="playWord"
       @close="close"
+      @save="onSaveFromPopup"
     />
   </div>
 </template>
@@ -136,13 +201,22 @@ onBeforeUnmount(() => {
 .hint-leave-active {
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
-.hint-enter-from {
-  opacity: 0;
-  transform: translate(-50%, 12px);
-}
+.hint-enter-from,
 .hint-leave-to {
   opacity: 0;
   transform: translate(-50%, 12px);
+}
+.toast-enter-active,
+.toast-leave-active {
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.toast-enter-from {
+  opacity: 0;
+  transform: translate(-50%, -8px);
+}
+.toast-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -8px);
 }
 </style>
 

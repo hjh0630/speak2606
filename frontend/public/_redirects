@@ -1,0 +1,5 @@
+# Cloudflare Pages _redirects — proxies /api/* and /ws/* to the Workers backend.
+# Worker deployed 2026-06-17: https://speakflow-api.hjinghui.workers.dev
+
+/api/*  https://speakflow-api.hjinghui.workers.dev/api/:splat  200
+/ws/*   https://speakflow-api.hjinghui.workers.dev/ws/:splat   200

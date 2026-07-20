@@ -3,6 +3,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import { useSessionStore } from '@/stores/session'
 import { useUserStore } from '@/stores/user'
+import { useWordbookStore } from '@/stores/wordbook'
 import { useRecorder } from '@/composables/useRecorder'
 import { useBrowserSTT } from '@/composables/useBrowserSTT'
 import { useTts } from '@/composables/useTTS'
@@ -14,6 +15,7 @@ const route = useRoute()
 const router = useRouter()
 const sessionStore = useSessionStore()
 const userStore = useUserStore()
+const wordbookStore = useWordbookStore()
 
 const recorder = useRecorder()
 const stt = useBrowserSTT({ lang: 'en-US' })
@@ -48,6 +50,11 @@ const showPermissionHint = ref(false)
 const finishing = ref(false)
 const finished = ref(false)
 const lastFinishedId = ref<string | null>(null)
+// Toast shown after auto-adding low-score keywords to the wordbook.  Empty
+// string means no banner.  We use a separate ref (instead of the session
+// store's errorMessage) because the auto-add is a friendly confirmation,
+// not an error.
+const autoAddedHint = ref<string>('')
 
 function scrollToBottom() {
   nextTick(() => {
@@ -234,12 +241,119 @@ async function finish() {
   lastFinishedId.value = result?.id ?? sessionId.value
   finished.value = true
   finishing.value = false
+  // After the session has been persisted, check the score.  If the user
+  // scored low (< 60), offer to lift the keywords from their last spoken
+  // sentence into the wordbook so they can practice them next time.
+  // `result` may be null if the network request failed; in that case we
+  // fall back to whatever lastScore the store has (a single-turn score).
+  const score =
+    result?.total_score ??
+    result?.avg_score ??
+    sessionStore.lastScore?.overall ??
+    0
+  if (score > 0 && score < 60) {
+    void autoAddLowScoreKeywords(result)
+  }
+}
+
+/**
+ * Best-effort helper: pull keywords from the user's most recent spoken turn,
+ * dedupe against what's already in the wordbook, then save up to 5 new
+ * entries.  We deliberately stay silent on failure (no toast / no alert) —
+ * the user already saw their session end screen, and adding noise there
+ * would be worse than missing an entry.
+ */
+async function autoAddLowScoreKeywords(session: {
+  messages?: { role: string; content: string }[]
+  total_score?: number | null
+  avg_score?: number | null
+} | null): Promise<void> {
+  if (!session?.messages) return
+  const userTurns = session.messages.filter((m) => m.role === 'user')
+  if (userTurns.length === 0) return
+  // Use the *most recent* user turn — that's the one that likely dragged
+  // the score down.
+  const lastUserText = userTurns[userTurns.length - 1].content ?? ''
+  const candidates = extractKeywords(lastUserText)
+  if (candidates.length === 0) return
+  // Skip words already saved (case-insensitive).
+  const existing = await wordbookStore.checkSaved(candidates)
+  const toAdd = candidates.filter((w) => !existing.has(w.toLowerCase())).slice(0, 5)
+  if (toAdd.length === 0) {
+    autoAddedHint.value = '本次评分较低,但你已存过这些词啦 👏'
+    return
+  }
+  const scoreLabel = session.total_score ?? session.avg_score ?? 0
+  let added = 0
+  for (const term of toAdd) {
+    const r = await wordbookStore.addItem({
+      term,
+      difficulty: 3, // hard — these are the words the user tripped on
+      source: 'practice',
+      notes: `低分练习自动加入 (${scoreLabel})`,
+    })
+    if (r) added += 1
+  }
+  if (added > 0) {
+    autoAddedHint.value = `已自动加入 ${added} 个生词,记得再练练 💪`
+  }
+}
+
+// English stopwords — anything in here is skipped when auto-extracting
+// keywords.  Kept short and intentional: we only want nouns/verbs/adjectives
+// the user would actually study, not grammatical glue.
+const STOPWORDS = new Set<string>([
+  'the','a','an','and','or','but','if','then','than','so','as','is','are','was','were','be','been','being','am',
+  'have','has','had','having','do','does','did','doing','done','will','would','should','can','could','may','might','must','shall',
+  'i','you','he','she','it','we','they','me','him','her','us','them','my','your','his','its','our','their','mine','yours','hers','ours','theirs',
+  'this','that','these','those','there','here','where','when','why','how','what','which','who','whom','whose',
+  'to','of','in','on','at','by','for','with','about','against','between','into','through','during','before','after','above','below','from','up','down','out','off','over','under','again','further','once',
+  'all','any','both','each','few','more','most','other','some','such','no','nor','not','only','own','same','too','very','just','don','now','yes','okay','ok','well','like','really','actually','think','know','mean','want','need','get','got','make','made','take','took','go','went','come','came','see','saw','say','said','tell','told','ask','asked','use','used','work','working','one','two','three',
+])
+
+function extractKeywords(text: string): string[] {
+  if (!text) return []
+  // Tokenize: lowercase, strip punctuation except apostrophes & hyphens
+  // inside words (so "don't" / "well-known" survive), then split on
+  // whitespace.
+  const tokens = text
+    .toLowerCase()
+    .replace(/[^\w\s'-]/g, ' ')
+    .split(/\s+/)
+    .map((t) => t.replace(/^['-]+|['-]+$/g, ''))
+    .filter((t) => t.length >= 3 && !STOPWORDS.has(t) && !/^\d+$/.test(t))
+  // Dedupe while preserving order.
+  const seen = new Set<string>()
+  const out: string[] = []
+  for (const t of tokens) {
+    if (!seen.has(t)) {
+      seen.add(t)
+      out.push(t)
+    }
+  }
+  return out
 }
 
 function goToHistory() {
   const id = lastFinishedId.value ?? sessionId.value
   router.push({ name: 'history-detail', params: { id } })
 }
+
+// Auto-clear the toast after a few seconds so it doesn't linger across
+// navigation back into a fresh practice session.
+let hintTimer: number | null = null
+watch(autoAddedHint, (val) => {
+  if (hintTimer != null) window.clearTimeout(hintTimer)
+  if (val) {
+    hintTimer = window.setTimeout(() => {
+      autoAddedHint.value = ''
+      hintTimer = null
+    }, 6000)
+  }
+})
+onBeforeUnmount(() => {
+  if (hintTimer != null) window.clearTimeout(hintTimer)
+})
 </script>
 
 <template>
@@ -322,6 +436,12 @@ function goToHistory() {
         <div class="flex-1">
           <h3 class="text-base font-semibold text-ink-800">本次练习已结束</h3>
           <p class="text-sm text-ink-500">系统已为你保存本次对话与评分。</p>
+          <p
+            v-if="autoAddedHint"
+            class="mt-1 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-2 py-1 inline-block"
+          >
+            {{ autoAddedHint }}
+          </p>
         </div>
         <div class="flex gap-2">
           <button class="btn-outline" @click="router.push({ name: 'scenarios' })">返回场景</button>

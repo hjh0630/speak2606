@@ -29,6 +29,7 @@ function normalizeScenario(raw: Record<string, unknown>): Scenario {
     difficulty_levels?: string[]
     category?: string
     subcategory?: string
+    module?: 'foreign-trade' | 'textile-apparel'
     ai_role?: string
     ai_role_zh?: string
     user_role?: string
@@ -68,6 +69,7 @@ function normalizeScenario(raw: Record<string, unknown>): Scenario {
     difficulty_levels: r.difficulty_levels as Difficulty[] | undefined,
     category: r.category,
     subcategory: r.subcategory,
+    module: r.module,
     roles,
     goals,
     estimated_minutes: r.estimated_minutes,

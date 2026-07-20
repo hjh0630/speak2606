@@ -38,6 +38,12 @@ const routes: RouteRecordRaw[] = [
     meta: { title: '会话详情' },
   },
   {
+    path: '/wordbook',
+    name: 'wordbook',
+    component: () => import('@/views/WordbookView.vue'),
+    meta: { title: '生词本' },
+  },
+  {
     path: '/stats',
     name: 'stats',
     component: () => import('@/views/StatsView.vue'),

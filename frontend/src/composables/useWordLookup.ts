@@ -21,6 +21,15 @@ interface Popup {
 export function useWordLookup() {
   const popup = ref<Popup | null>(null)
   const isPlaying = ref(false)
+  /**
+   * `savedTerms` is the set of terms already present in the user's wordbook.
+   * App.vue populates this from the wordbook store so the popup can render
+   * the ☆/★ toggle correctly without an extra round-trip per lookup.
+   */
+  const savedTerms = ref<Set<string>>(new Set())
+  const isCurrentSaved = ref(false)
+  /** True while a saveWord() call is in flight. */
+  const isSaving = ref(false)
   const tts = useTts()
 
   let debounceTimer: number | null = null
@@ -28,6 +37,9 @@ export function useWordLookup() {
   // Monotonic counter so out-of-order async LLM responses can't clobber a
   // newer selection's popup.
   let reqId = 0
+  // Monotonic counter for save requests — protects against a stale save
+  // completing after the user has already moved on to a different word.
+  let saveReqId = 0
 
   function normalize(text: string): string {
     return text
@@ -153,6 +165,7 @@ export function useWordLookup() {
       const pos = rectForSelection()
       if (!pos) return
       popup.value = { word: found.key, meaning: found.meaning, ...pos, source: 'local' }
+      isCurrentSaved.value = savedTerms.value.has(found.key.toLowerCase())
       return
     }
 
@@ -161,6 +174,7 @@ export function useWordLookup() {
     if (!pos) return
     const myReqId = ++reqId
     popup.value = { word: raw, meaning: '查询中…', ...pos, loading: true }
+    isCurrentSaved.value = savedTerms.value.has(raw.toLowerCase())
     const remote = await fetchRemote(raw, myReqId)
     if (myReqId !== reqId) return
     if (!remote) {
@@ -168,6 +182,7 @@ export function useWordLookup() {
       return
     }
     popup.value = { ...remote, ...pos, loading: false }
+    isCurrentSaved.value = savedTerms.value.has(remote.word.toLowerCase())
   }
 
   function close() {
@@ -176,7 +191,70 @@ export function useWordLookup() {
       debounceTimer = null
     }
     popup.value = null
+    isCurrentSaved.value = false
     lastSelText = ''
+  }
+
+  /**
+   * Hand off the currently-shown term to the wordbook store. The actual
+   * network call lives in the store; this method just makes sure we don't
+   * double-fire when the user spams the ☆ button, and that the local
+   * `savedTerms` cache is updated optimistically on success so the popup
+   * flips to ★ immediately.
+   *
+   * Returns the resolved item (or null) so callers can show a toast.
+   */
+  async function saveCurrent(): Promise<{ ok: boolean; term?: string; reason?: string }> {
+    const cur = popup.value
+    if (!cur || cur.loading) return { ok: false, reason: 'no-popup' }
+    if (isCurrentSaved.value) return { ok: false, reason: 'already-saved' }
+    if (isSaving.value) return { ok: false, reason: 'in-flight' }
+
+    isSaving.value = true
+    const myReqId = ++saveReqId
+    try {
+      // Lazy import to avoid a circular dep — wordbook store imports session
+      // store in some setups, so we resolve on demand.
+      const { useWordbookStore } = await import('@/stores/wordbook')
+      const store = useWordbookStore()
+      const item = await store.addItem({
+        term: cur.word,
+        meaning: cur.meaning,
+        source: 'popup',
+        source_ref: null,
+      })
+      if (myReqId !== saveReqId) return { ok: false, reason: 'stale' }
+      if (item) {
+        savedTerms.value.add(item.term.toLowerCase())
+        isCurrentSaved.value = true
+        return { ok: true, term: item.term }
+      }
+      return { ok: false, reason: 'no-item' }
+    } catch (err) {
+      return { ok: false, reason: (err as Error).message }
+    } finally {
+      if (myReqId === saveReqId) isSaving.value = false
+    }
+  }
+
+  /**
+   * Refresh the set of saved terms from the wordbook store. Call this on
+   * app mount and after returning to the app from the wordbook page so the
+   * popup's ★/☆ state stays in sync.
+   */
+  async function refreshSavedTerms(): Promise<void> {
+    try {
+      const { useWordbookStore } = await import('@/stores/wordbook')
+      const store = useWordbookStore()
+      const set = await store.collectAllSavedTerms()
+      savedTerms.value = new Set(set.map((t) => t.toLowerCase()))
+      if (popup.value) {
+        isCurrentSaved.value = savedTerms.value.has(popup.value.word.toLowerCase())
+      }
+    } catch {
+      // Store may not be ready yet — keep the empty set; the popup will
+      // still work, just with ☆ instead of ★ until the next refresh.
+    }
   }
 
   // ── Event handlers ──────────────────────────────────────────────────
@@ -239,5 +317,15 @@ export function useWordLookup() {
     document.removeEventListener('keydown', onKeyDown)
   })
 
-  return { popup, isPlaying, playWord, close }
+  return {
+    popup,
+    isPlaying,
+    isCurrentSaved,
+    isSaving,
+    savedTerms,
+    playWord,
+    close,
+    saveCurrent,
+    refreshSavedTerms,
+  }
 }

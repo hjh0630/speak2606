@@ -14,11 +14,16 @@ interface Popup {
 const props = defineProps<{
   popup: Popup | null
   isPlaying: boolean
+  /** Has this exact term already been saved into the user's wordbook? */
+  isSaved?: boolean
+  /** True while a save request is in flight. */
+  isSaving?: boolean
 }>()
 
 const emit = defineEmits<{
   (e: 'play'): void
   (e: 'close'): void
+  (e: 'save'): void
 }>()
 
 const style = computed(() => {
@@ -45,7 +50,7 @@ const style = computed(() => {
     >
       <div
         class="rounded-xl bg-ink-800 text-white shadow-card border border-ink-700/40
-               px-3 py-2.5 min-w-[180px] max-w-[280px] animate-fade-in"
+               px-3 py-2.5 min-w-[200px] max-w-[320px] animate-fade-in"
       >
         <div class="flex items-center gap-2">
           <div class="flex-1 min-w-0">
@@ -64,7 +69,7 @@ const style = computed(() => {
                 <circle cx="12" cy="12" r="9" stroke-opacity="0.25" />
                 <path d="M21 12a9 9 0 0 0-9-9" stroke-linecap="round" />
               </svg>
-              <span>{{ popup.meaning }}</span>
+              <span class="truncate">{{ popup.meaning }}</span>
             </div>
           </div>
           <button
@@ -95,6 +100,42 @@ const style = computed(() => {
               fill="currentColor"
             >
               <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+          <!-- Add-to-wordbook button. Toggles between "☆" (unsaved) and
+               "★" (saved). When saved we still emit `save` so the caller
+               can decide to no-op or undo; the visible state is what
+               the user sees first. -->
+          <button
+            type="button"
+            class="shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-full
+                   transition-all active:scale-95 disabled:opacity-60"
+            :class="
+              isSaved
+                ? 'bg-amber-400/95 hover:bg-amber-400 text-amber-950'
+                : 'bg-white/10 hover:bg-white/20 text-white border border-white/15'
+            "
+            :disabled="isSaving || popup.loading || isSaved"
+            :aria-label="isSaved ? `已加入生词本` : `加入生词本 ${popup.word}`"
+            :title="isSaved ? '已在生词本' : '加入生词本'"
+            data-wordbook-save
+            @click="emit('save')"
+          >
+            <svg
+              v-if="isSaving"
+              viewBox="0 0 24 24"
+              class="h-4 w-4 animate-spin"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.4"
+            >
+              <circle cx="12" cy="12" r="9" stroke-opacity="0.25" />
+              <path d="M21 12a9 9 0 0 0-9-9" stroke-linecap="round" />
+            </svg>
+            <svg v-else viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
+              <path
+                d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
             </svg>
           </button>
           <button
