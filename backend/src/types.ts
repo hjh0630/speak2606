@@ -17,6 +17,20 @@ export interface ScenarioMeta {
   ai_role: string;
   user_role: string;
   key_skills: string[];
+  /**
+   * Top-level module this scenario belongs to. Two values currently:
+   *  - "foreign-trade"  : 外贸英语口语 (default; loaded from `content/scenarios.json`)
+   *  - "textile-apparel": 纺织服装全链条英语沟通 (loaded from `content/textile-english/`)
+   * The loader stamps this on every entry after the merge so the front-end can
+   * route / filter without having to inspect file paths.
+   */
+  module?: 'foreign-trade' | 'textile-apparel';
+  /**
+   * Optional industry vertical / sub-category. Examples: "communication",
+   * "process", "spinning", "weaving", "dyeing", "garment", "crafts",
+   * "qc", "sportswear". Used for category chips and scenario filtering.
+   */
+  category?: string;
 }
 
 export interface DialogRound {

@@ -17,6 +17,16 @@ const log = createLogger('content');
  * Falls back to a minimal in-memory default if the directory is missing — this lets
  * the backend start during integration before the content team has produced files.
  *
+ * Also scans a sibling sub-directory `textile-english/` (sibling of `dialogs/`)
+ * which holds the "纺织服装全链条英语沟通" module — that directory carries
+ * its own scenarios.json, vocabulary.json and `dialogs/<id>{_diff}.json`. The
+ * two sources are merged by id; later sources override earlier ones.
+ *
+ * Two dialog file shapes are supported:
+ *  (a) Standard:    `[{...}, {...}]` or `{ scenario_id, difficulty, rounds }`
+ *  (b) Keyed triple: `{ beginner: {...}, intermediate: {...}, advanced: {...} }`
+ *                    (used by the textile-english module — easier to maintain).
+ *
  * Cached after first read.
  */
 
@@ -197,94 +207,180 @@ function loadAll(): void {
   const contentDir = config.contentDir;
   log.info(`Loading content from ${contentDir}`);
 
-  if (fs.existsSync(contentDir)) {
-    const scenarios = safeReadJson<ScenarioMeta[]>(path.join(contentDir, 'scenarios.json'));
-    if (scenarios && Array.isArray(scenarios) && scenarios.length > 0) {
-      _scenarios = scenarios;
-      log.info(`Loaded ${scenarios.length} scenarios from disk`);
-    } else {
-      log.warn('scenarios.json missing or empty; using defaults');
-      _scenarios = defaultScenarios();
-    }
-
-    const dialogsMap = new Map<string, ScenarioDialogs[]>();
-    const allDifficulties: Difficulty[] = ['beginner', 'intermediate', 'advanced'];
-    for (const s of _scenarios) {
-      const list: ScenarioDialogs[] = [];
-      for (const diff of allDifficulties) {
-        if (!s.difficulty_levels.includes(diff)) continue;
-        const filePath = path.join(
-          contentDir,
-          'dialogs',
-          `${s.id}${difficultyFileSuffix(diff)}.json`,
-        );
-        const data = safeReadJson<ScenarioDialogs[] | ScenarioDialogs>(filePath);
-        if (Array.isArray(data)) {
-          for (const entry of data) {
-            if (entry && Array.isArray(entry.rounds)) {
-              list.push({ ...entry, difficulty: entry.difficulty ?? diff });
-            }
-          }
-        } else if (data && Array.isArray((data as ScenarioDialogs).rounds)) {
-          list.push({ ...(data as ScenarioDialogs), difficulty: diff });
-        } else {
-          // Graceful degradation: fall back to the beginner file if a
-          // difficulty-specific file is missing.
-          if (diff === 'beginner') {
-            log.warn(`No dialogs for ${s.id} (${diff}), will use defaults`);
-          } else {
-            log.warn(
-              `Missing dialog file for ${s.id} at difficulty ${diff} (${filePath}); falling back to beginner`,
-            );
-            const fallbackPath = path.join(contentDir, 'dialogs', `${s.id}.json`);
-            const fallback = safeReadJson<ScenarioDialogs[] | ScenarioDialogs>(fallbackPath);
-            if (Array.isArray(fallback)) {
-              for (const entry of fallback) {
-                if (entry && Array.isArray(entry.rounds)) {
-                  list.push({ ...entry, difficulty: diff });
-                }
-              }
-            } else if (fallback && Array.isArray((fallback as ScenarioDialogs).rounds)) {
-              list.push({ ...(fallback as ScenarioDialogs), difficulty: diff });
-            }
-          }
-        }
-      }
-      if (list.length === 0) {
-        log.warn(`No dialogs for ${s.id}, using defaults`);
-        const defaults = defaultDialogs().get(s.id) ?? [];
-        list.push(...defaults);
-      }
-      dialogsMap.set(s.id, list);
-    }
-    _dialogs = dialogsMap;
-
-    const vocab = safeReadJson<VocabularyEntry[]>(path.join(contentDir, 'vocabulary.json'));
-    if (vocab && Array.isArray(vocab) && vocab.length > 0) {
-      _vocabulary = vocab;
-      log.info(`Loaded ${vocab.length} vocabulary entries`);
-    } else {
-      log.warn('vocabulary.json missing or empty');
-      _vocabulary = [];
-    }
-
-    const sp = safeReadJson<Record<Difficulty, string>>(path.join(contentDir, 'system_prompts.json'));
-    if (sp && typeof sp === 'object' && (sp.beginner || sp.intermediate || sp.advanced)) {
-      _systemPrompts = sp;
-      log.info('Loaded system prompts from disk');
-    } else {
-      log.warn('system_prompts.json missing or invalid; using defaults');
-      _systemPrompts = defaultSystemPrompts();
-    }
-  } else {
+  // Primary directory may be missing → fall back to defaults. Sub-directories
+  // (e.g. textile-english/) are best-effort — if absent we just skip them.
+  if (!fs.existsSync(contentDir)) {
     log.warn(`Content directory ${contentDir} does not exist; using in-memory defaults.`);
     _scenarios = defaultScenarios();
     _dialogs = defaultDialogs();
     _vocabulary = [];
     _systemPrompts = defaultSystemPrompts();
+    _loaded = true;
+    return;
+  }
+
+  // ── Build the list of content roots in merge order. Later wins. ─────────
+  const contentRoots: string[] = [contentDir];
+  const textileDir = path.join(contentDir, 'textile-english');
+  if (fs.existsSync(textileDir)) contentRoots.push(textileDir);
+
+  // ── Scenarios: read every root's scenarios.json and merge by id. ─────────
+  const scenarioMap = new Map<string, ScenarioMeta>();
+  let scenariosFromDisk = 0;
+  for (const root of contentRoots) {
+    const file = path.join(root, 'scenarios.json');
+    const data = safeReadJson<ScenarioMeta[]>(file);
+    if (data && Array.isArray(data)) {
+      const moduleTag: 'foreign-trade' | 'textile-apparel' =
+        root === textileDir ? 'textile-apparel' : 'foreign-trade';
+      for (const s of data) {
+        if (s && typeof s.id === 'string' && s.id.length > 0) {
+          // Stamp the module tag from the source root, but let an explicit
+          // field on disk win so authors can override if needed.
+          const merged: ScenarioMeta = { ...s, module: s.module ?? moduleTag };
+          scenarioMap.set(s.id, merged);
+          scenariosFromDisk++;
+        }
+      }
+    }
+  }
+  if (scenariosFromDisk > 0) {
+    _scenarios = Array.from(scenarioMap.values());
+    log.info(`Loaded ${_scenarios.length} scenarios across ${contentRoots.length} root(s)`);
+  } else {
+    log.warn('scenarios.json missing or empty in every root; using defaults');
+    _scenarios = defaultScenarios();
+  }
+
+  // ── Dialogs: read every root's dialogs/<id>{_diff}.json and merge. ─────
+  const dialogsMap = new Map<string, ScenarioDialogs[]>();
+  const allDifficulties: Difficulty[] = ['beginner', 'intermediate', 'advanced'];
+  for (const s of _scenarios) {
+    const list: ScenarioDialogs[] = [];
+    for (const diff of allDifficulties) {
+      if (!s.difficulty_levels.includes(diff)) continue;
+      for (const root of contentRoots) {
+        const filePath = path.join(root, 'dialogs', `${s.id}${difficultyFileSuffix(diff)}.json`);
+        const data = safeReadJson<ScenarioDialogs | ScenarioDialogs[] | Record<string, ScenarioDialogs | ScenarioDialogs[]>>(filePath);
+        if (data === null) continue;
+        const collected = collectDialogs(data, diff);
+        if (collected.length > 0) {
+          list.push(...collected);
+          // First root with a hit wins for this difficulty — no fan-out across roots.
+          break;
+        }
+      }
+      // Fallback to beginner file when an intermediate/advanced variant is absent.
+      if (
+        diff !== 'beginner' &&
+        !list.some((d) => d.difficulty === diff)
+      ) {
+        for (const root of contentRoots) {
+          const fallbackPath = path.join(root, 'dialogs', `${s.id}.json`);
+          const data = safeReadJson<ScenarioDialogs | ScenarioDialogs[] | Record<string, ScenarioDialogs | ScenarioDialogs[]>>(fallbackPath);
+          if (data === null) continue;
+          const collected = collectDialogs(data, diff);
+          if (collected.length > 0) {
+            log.warn(
+              `Missing ${s.id} dialog at difficulty ${diff}; falling back to beginner`,
+            );
+            list.push(...collected);
+            break;
+          }
+        }
+      }
+    }
+    if (list.length === 0) {
+      log.warn(`No dialogs for ${s.id}, using defaults`);
+      const defaults = defaultDialogs().get(s.id) ?? [];
+      list.push(...defaults);
+    }
+    dialogsMap.set(s.id, list);
+  }
+  _dialogs = dialogsMap;
+
+  // ── Vocabulary: read every root's vocabulary.json and concatenate. ─────
+  const vocabAll: VocabularyEntry[] = [];
+  for (const root of contentRoots) {
+    const v = safeReadJson<VocabularyEntry[]>(path.join(root, 'vocabulary.json'));
+    if (v && Array.isArray(v)) vocabAll.push(...v);
+  }
+  if (vocabAll.length > 0) {
+    _vocabulary = vocabAll;
+    log.info(`Loaded ${_vocabulary.length} vocabulary entries across ${contentRoots.length} root(s)`);
+  } else {
+    log.warn('vocabulary.json missing or empty in every root');
+    _vocabulary = [];
+  }
+
+  // ── System prompts: read once from the primary root. ──────────────────
+  const sp = safeReadJson<Record<Difficulty, string>>(path.join(contentDir, 'system_prompts.json'));
+  if (sp && typeof sp === 'object' && (sp.beginner || sp.intermediate || sp.advanced)) {
+    _systemPrompts = sp;
+    log.info('Loaded system prompts from disk');
+  } else {
+    log.warn('system_prompts.json missing or invalid; using defaults');
+    _systemPrompts = defaultSystemPrompts();
   }
 
   _loaded = true;
+}
+
+/**
+ * Normalise a dialog-file payload into ScenarioDialogs[].
+ *
+ * Three accepted shapes:
+ *  (1) `ScenarioDialogs[]` — array of entries (each has rounds + difficulty)
+ *  (2) `ScenarioDialogs`    — single entry
+ *  (3) `{ beginner, intermediate, advanced }` keyed triple — each value is
+ *      either a ScenarioDialogs or an array of them. The active `diff` (the
+ *      filename we asked for) is preferred; if absent, all three are kept
+ *      under their own difficulty.
+ */
+function collectDialogs(
+  raw: ScenarioDialogs | ScenarioDialogs[] | Record<string, unknown> | null | undefined,
+  activeDiff: Difficulty,
+): ScenarioDialogs[] {
+  // Shape 3: keyed triple — detect by presence of any difficulty key.
+  if (
+    raw !== null &&
+    raw !== undefined &&
+    !Array.isArray(raw) &&
+    typeof raw === 'object'
+  ) {
+    const obj = raw as Record<string, unknown>;
+    if (
+      obj.beginner !== undefined ||
+      obj.intermediate !== undefined ||
+      obj.advanced !== undefined
+    ) {
+      const out: ScenarioDialogs[] = [];
+      const keys: Difficulty[] = ['beginner', 'intermediate', 'advanced'];
+      for (const k of keys) {
+        const v = obj[k];
+        if (v === undefined || v === null) continue;
+        out.push(...collectDialogs(v as ScenarioDialogs | ScenarioDialogs[], k));
+      }
+      if (out.length === 0) {
+        log.warn(`Keyed dialog file for ${activeDiff} contained no usable rounds`);
+      }
+      return out;
+    }
+  }
+  if (Array.isArray(raw)) {
+    const out: ScenarioDialogs[] = [];
+    for (const entry of raw) {
+      if (entry && typeof entry === 'object' && Array.isArray((entry as ScenarioDialogs).rounds)) {
+        const e = entry as ScenarioDialogs;
+        out.push({ ...e, difficulty: e.difficulty ?? activeDiff });
+      }
+    }
+    return out;
+  }
+  if (raw && typeof raw === 'object' && Array.isArray((raw as ScenarioDialogs).rounds)) {
+    return [{ ...(raw as ScenarioDialogs), difficulty: activeDiff }];
+  }
+  return [];
 }
 
 export function getScenarios(): ScenarioMeta[] {

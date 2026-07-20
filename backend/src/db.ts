@@ -79,6 +79,21 @@ const MIGRATIONS: string[] = [
     wrong_count INTEGER NOT NULL DEFAULT 0,
     last_seen INTEGER NOT NULL
   )`,
+
+  `CREATE TABLE IF NOT EXISTS wordbook (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_token TEXT NOT NULL,
+    term TEXT NOT NULL,
+    meaning TEXT,
+    difficulty INTEGER NOT NULL DEFAULT 0,
+    source TEXT NOT NULL DEFAULT 'popup',
+    source_ref TEXT,
+    notes TEXT,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    UNIQUE(user_token, term)
+  )`,
+  `CREATE INDEX IF NOT EXISTS idx_wordbook_user_created ON wordbook(user_token, created_at DESC)`,
 ];
 
 function isTursoConfigured(): boolean {
@@ -93,7 +108,7 @@ async function migrateTurso(client: Client): Promise<void> {
   for (const sql of MIGRATIONS) {
     await client.execute({ sql, args: [] });
   }
-  log.info('Turso migrations applied (sessions, messages, vocabulary_progress).');
+  log.info('Turso migrations applied (sessions, messages, vocabulary_progress, wordbook).');
 }
 
 function migrateSqlite(db: Db): void {
@@ -103,7 +118,7 @@ function migrateSqlite(db: Db): void {
     }
   });
   tx();
-  log.info('SQLite migrations applied (sessions, messages, vocabulary_progress).');
+  log.info('SQLite migrations applied (sessions, messages, vocabulary_progress, wordbook).');
 }
 
 export function getDb(): Db {

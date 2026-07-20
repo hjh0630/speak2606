@@ -64,4 +64,38 @@ study/
 *.tsbuildinfo
 .vercel
 
+# Cloudflare Wrangler local state
+.wrangler/
+.wrangler.toml.local
+
+# Xcode / Swift Package Manager
+ios/SpeakFlow.xcodeproj/xcuserdata/
+ios/SpeakFlow.xcodeproj/project.xcworkspace/xcuserdata/
+ios/SpeakFlow.xcworkspace/xcuserdata/
+ios/build/
+ios/DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcuserstate
+*.xcscheme
+.swiftpm/
+Package.resolved
+
 .vercel
+
+# Cloudflare Wrangler local state
+.wrangler/
+.wrangler.toml.local
+
+# Xcode / Swift Package Manager
+ios/SpeakFlow.xcodeproj/xcuserdata/
+ios/SpeakFlow.xcodeproj/project.xcworkspace/xcuserdata/
+ios/SpeakFlow.xcworkspace/xcuserdata/
+ios/build/
+ios/DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcuserstate
+*.xcscheme
+.swiftpm/
+Package.resolved

@@ -11,6 +11,7 @@ import sessionsRoutes from './routes/sessions';
 import historyRoutes from './routes/history';
 import statsRoutes from './routes/stats';
 import vocabularyRoutes from './routes/vocabulary';
+import wordbookRoutes from './routes/wordbook';
 import statusRoutes from './routes/status';
 import dictionaryRoutes from './routes/dictionary';
 import { registerSessionWs } from './ws/session-ws';
@@ -99,6 +100,7 @@ async function build(): Promise<FastifyInstance> {
   await app.register(historyRoutes);
   await app.register(statsRoutes);
   await app.register(vocabularyRoutes);
+  await app.register(wordbookRoutes);
   await app.register(statusRoutes);
   await app.register(dictionaryRoutes);
 
@@ -112,7 +114,7 @@ async function build(): Promise<FastifyInstance> {
   // We avoid setting prefix on the static plugin (it would install its own
   // 404 handler and conflict with our SPA fallback) — instead we mount a
   // sub-Fastify via fastify-static and prepend it as middleware.
-  const spaDir = path.resolve(__dirname, '../../frontend/dist');
+  const spaDir = path.resolve(__dirname, '../../../frontend/dist');
   let spaEnabled = false;
   let spaIndexHtml: Buffer | null = null;
   try {
