@@ -343,14 +343,106 @@
       "UHMWPE",
       "Nylon 66 Cordura",
       "DTY 150D/48F",
-      "spandex 40D+75D",
-      "dope-dyed"
+      "spandex-free Newlast",
+      "tactile sensing fiber"
     ],
     "estimated_minutes": 8,
     "tags": [
       "yarn",
       "uhmwpe",
-      "nylon66"
+      "nylon66",
+      "smart-textiles"
+    ]
+  },
+  {
+    "id": "gap_vdd_coo_sourcing",
+    "title_zh": "GAP 原产地规则 (COO) 破局与越南产能谈判",
+    "title_en": "GAP VDD Sourcing & Vietnam COO Compliance",
+    "icon": "🌏",
+    "description_zh": "真实邮件复盘：应对 GAP 原产地限制警报，以越南工厂直发及 COO=Vietnam 锁定 4 款梭织提花大货",
+    "description_en": "Real email negotiation: resolve GAP brand origin compliance alert by routing bulk through Vietnam factory (COO = Vietnam)",
+    "category": "sincetech",
+    "subcategory": "woven",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Ivy Nguyen (SG Corp / GAP VDD Sourcing Specialist)",
+    "ai_role_zh": "GAP 成衣代工供应链经理 (越南SG公司)",
+    "user_role": "David Huang (Sintech Global Accounts Director)",
+    "user_role_zh": "信泰海外大客户商务总监",
+    "key_skills": [
+      "COO compliance defence",
+      "Vietnam mill qualification",
+      "courier AWB logistics alignment",
+      "fast-track capacity booking"
+    ],
+    "key_skills_zh": [
+      "原产地合规答辩",
+      "越南工厂资质背书",
+      "样卡国际空运排期",
+      "大货产能快速锁仓"
+    ],
+    "industry_terms_sample": [
+      "COO = Vietnam",
+      "GAP nominated mill",
+      "woven jacquard",
+      "courier AWB",
+      "greige weaving capacity"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "sincetech",
+      "gap",
+      "vietnam",
+      "coo",
+      "woven"
+    ]
+  },
+  {
+    "id": "ninetide_fob_negotiation",
+    "title_zh": "9Tide 战略商务谈判：INTRA 硅胶工艺与 OneL 策略拒单",
+    "title_en": "9Tide FOB Negotiation & Capacity Discipline",
+    "icon": "💼",
+    "description_zh": "真实邮件复盘：INTRA 坚守价值底线并推介超薄硅胶印花；OneL 以产能排期为由体面拒单保利润",
+    "description_en": "Real email case: defend revised INTRA FOB with ultra-thin silicone print value-add, and tactfully decline OneL program via capacity limits",
+    "category": "sincetech",
+    "subcategory": "fabric_dev",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Haisam Saied (Global Client Manager, 9Tide Studios)",
+    "ai_role_zh": "海外买手商务经理 (9Tide Studios)",
+    "user_role": "David Huang (Sintech Commercial & Strategy Director)",
+    "user_role_zh": "信泰战略商务总监",
+    "key_skills": [
+      "value-based FOB defence",
+      "tactful capacity decline",
+      "ultra-thin silicone printing pitch",
+      "milestone schedule lock"
+    ],
+    "key_skills_zh": [
+      "基于价值的FOB抗辩",
+      "产能为由体面拒单",
+      "超薄硅胶印花工艺推荐",
+      "样板里程碑节点锁定"
+    ],
+    "industry_terms_sample": [
+      "target FOB",
+      "capacity limitation vs pricing decision",
+      "ultra-thin silicone printing",
+      "strike-off swatches",
+      "tactile grip"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "sincetech",
+      "fob",
+      "negotiation",
+      "silicone-print"
     ]
   },
   {

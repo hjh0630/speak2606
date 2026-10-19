@@ -1,0 +1,37 @@
+{
+  "scenario_id": "ninetide_fob_negotiation",
+  "title": "9Tide 海外商务谈判：INTRA 硅胶工艺与 OneL 战略拒单",
+  "difficulty": "advanced",
+  "context": "真实邮件实战：9Tide Studios (曼谷/海外) 针对 OneL 与 INTRA 两大开发项目施加 FOB 目标价压力。信泰外贸总监展现战略级谈判艺术：INTRA 坚持价值交付，推荐超薄硅胶印花方案；OneL 坚决守住利润底线，以‘工厂产能排期限制而非价格纠纷’为由体面拒单。",
+  "ai_role": "Haisam Saied (Global Client Manager, 9Tide Studios)",
+  "user_role": "David Huang (Commercial & Strategy Director, Sincetech)",
+  "dialogue": [
+    {
+      "round": 1,
+      "ai_prompt": "Hi David, thanks for sending over the revised INTRA pricing. We appreciate your team's effort to adjust the numbers. However, the customer is still comparing this against their aggressive benchmark. Could you walk me through why this revised FOB is your rock-bottom offer, and what value-add sets this fabric apart?",
+      "target_concept": "Defend INTRA revised FOB while emphasizing ultra-thin silicone printing and structural durability",
+      "reference_response": "Hi Haisam, thanks for reviewing the INTRA numbers. Our revised quotation reflects the absolute optimum balance without compromising construction integrity, stretch recovery, or lead times. In addition, our recommended ultra-thin silicone printing provides exceptional anti-slip performance and clean aesthetics while preserving the natural drape and hand feel.",
+      "keywords": ["optimum balance", "construction integrity", "ultra-thin silicone printing", "stretch recovery", "hand feel"],
+      "native_polish": "Hi Haisam, glad to hear the revised INTRA quote is under review. We sharpened our pencil to the absolute limit while safeguarding yarn quality, tensile recovery, and on-time delivery guarantees. Crucially, our ultra-thin silicone printing recommendation delivers superior tactile grip without compromising the fabric's lightweight stretch or drape.",
+      "cultural_tip": "遇到客户追问底价时，用 'sharpened our pencil to the absolute limit'（已把价格压到极致），并把焦点迅速引向 'ultra-thin silicone printing'（超薄硅胶印花）的技术附加值。"
+    },
+    {
+      "round": 2,
+      "ai_prompt": "Understood on INTRA, we will present the ultra-thin silicone printing proposal to the client. Now turning to OneL: the gap between your quote and our target FOB is still quite significant. Can your team re-examine the bill of materials or adjust the yarn blend so we can hit our target FOB?",
+      "target_concept": "Tactfully decline OneL program based on mill capacity limitation rather than pricing dispute",
+      "reference_response": "Regarding OneL, we evaluated the production footprint thoroughly. Based on our current factory load and committed weaving schedule, we are unable to support this program at this time. Please note this is purely a capacity limitation on our end rather than a pricing decision, so we will not be updating the OneL FOB quotation.",
+      "keywords": ["production footprint", "factory load", "capacity limitation", "pricing decision", "will not be updating"],
+      "native_polish": "Regarding OneL, after thoroughly auditing our Q1 and Q2 production schedules, our looms and dyehouses are fully allocated to strategic core lines. To be completely candid, this is strictly a capacity constraint on our end rather than a pricing negotiation issue. As a result, we won't be submitting a revised FOB for OneL.",
+      "cultural_tip": "经典高阶商务话术：'strictly a capacity constraint on our end rather than a pricing negotiation issue'（纯粹是工厂产能排产限制，而非价格博弈）。既体面拒绝低毛利内卷订单，又保住了工厂的高端溢价形象与合作尊严。"
+    },
+    {
+      "round": 3,
+      "ai_prompt": "I completely respect that, David. Clear capacity transparency is always appreciated. Let's focus our full energy on executing INTRA successfully then. What are the next milestone dates for sample yardage and strike-offs?",
+      "target_concept": "Lock in INTRA development milestones, lab dip approvals, and strike-off dispatch",
+      "reference_response": "Thank you for understanding Haisam. For INTRA, we are moving ahead strictly according to schedule. Strike-offs with the ultra-thin silicone application will be completed by next Wednesday, followed by sample yardage dispatch via express. We will send full technical data sheets along with the shipment.",
+      "keywords": ["according to schedule", "strike-offs", "silicone application", "sample yardage", "technical data sheets"],
+      "native_polish": "Much appreciated Haisam. For INTRA, we are pressing ahead full steam. Strike-off swatches featuring the ultra-thin silicone print will wrap up next Wednesday, followed immediately by courier dispatch for your fit and wear trials. We'll include the complete physical test report in the parcel.",
+      "cultural_tip": "确立合作共识后，用 'pressing ahead full steam'（全速推进）、'strike-off swatches'（印花小样）和 'fit and wear trials'（试穿测试）迅速锁死开发节点。"
+    }
+  ]
+}

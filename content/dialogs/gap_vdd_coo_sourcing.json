@@ -1,0 +1,37 @@
+{
+  "scenario_id": "gap_vdd_coo_sourcing",
+  "title": "GAP VDD 原产地规则 (COO) 突破与越南产能谈判",
+  "difficulty": "advanced",
+  "context": "真实邮件实战：SG Corporation (越南胡志明市) 针对 GAP VDD (Vendor Development) 梭织提花面料采购，提出 GAP 原产地限制要求（若为中国原产地且非指定工厂则需取消空运样单）。信泰外贸总监通过越南工厂产能方案成功化解危机，确保大货 COO = Vietnam 并推进样卡空运释放。",
+  "ai_role": "Ivy Nguyen (Fabric Sourcing Specialist, SG Corporation / GAP VDD Team)",
+  "user_role": "David Huang (Global Accounts Director, Sincetech)",
+  "dialogue": [
+    {
+      "round": 1,
+      "ai_prompt": "Hi David, thanks for following up on the swatch cards. However, we have an urgent policy alert from GAP regarding fabric Country of Origin (COO). GAP brand compliance restricts COO China unless the mill is officially nominated. Could you advise if Sincetech is nominated by GAP, or whether we must cancel air shipment BRI88005646723 immediately?",
+      "target_concept": "Clarify mill nomination status and propose Vietnam production COO solution",
+      "reference_response": "Hi Ivy, thanks for the heads up. While we have collaborated on previous vendor-sourced programs, here is our solid solution: all 4 woven jacquard items can be produced at our Vietnam facility. Therefore, bulk orders will be supplied with COO = Vietnam, which completely complies with GAP's origin requirements.",
+      "keywords": ["Vietnam facility", "COO = Vietnam", "woven jacquard", "complies with GAP origin requirements"],
+      "native_polish": "Hi Ivy, appreciate you raising this. Regarding GAP's COO policy, all four woven jacquard items are fully qualified to run at our Vietnam manufacturing plant. Consequently, commercial bulk will ship with COO = Vietnam, fully satisfying GAP's country-of-origin mandate. There's no need to cancel the courier shipment.",
+      "cultural_tip": "遇到跨国品牌原产地合规警报时，不要在‘是否被提名’上辩解纠缠，直接抛出海外工厂（COO = Vietnam）的制造与出证解决方案，瞬间打消客户砍单顾虑。"
+    },
+    {
+      "round": 2,
+      "ai_prompt": "That is a huge relief that your Vietnam facility can run these woven jacquards! Regarding the physical swatches, our forwarder in Guangzhou is holding the 4 swatch cards right now. Should we instruct them to release the air freight to Ho Chi Minh City today?",
+      "target_concept": "Confirm sample dispatch details, express tracking, and request prompt release",
+      "reference_response": "Yes, please confirm to your Guangzhou forwarder to release the parcel immediately. The 4 swatch cards were delivered this morning via SF Express tracking SF1580934939578 under AWB BRI88005646723. Once released, you should receive them for visual review in two business days.",
+      "keywords": ["release the parcel", "SF Express", "AWB", "visual review", "two business days"],
+      "native_polish": "Absolutely, please give the Guangzhou forwarder the green light to release the parcel today. The four woven swatch cards arrived this morning under SF Express tracking SF1580934939578 (Master AWB: BRI88005646723). Once they clear customs in Ho Chi Minh City, we look forward to your team's visual and tactile evaluation.",
+      "cultural_tip": "商务物流沟通要精准给出物流单号与分单号（Master AWB & Courier tracking），并用 'give the green light'（开绿灯/放行）展现地道干练的供应链掌控力。"
+    },
+    {
+      "round": 3,
+      "ai_prompt": "Understood, I will clear the shipment right away. Once our technical designer and GAP merchant review the swatches, we will need your forecast capacity and production lead times for bulk. How flexible is your Vietnam line for Q1 delivery?",
+      "target_concept": "Commit to volume forecast evaluation and outline quick-response bulk lead times",
+      "reference_response": "Thank you Ivy. As soon as you narrow down the preferred qualities, we will revert with a detailed production slot and timeline based on your forecast volume. Our Vietnam mill maintains dedicated yarn inventory for jacquard warps, ensuring a fast-track bulk turnaround within 4 to 5 weeks.",
+      "keywords": ["forecast volume", "production slot", "dedicated yarn inventory", "turnaround", "4 to 5 weeks"],
+      "native_polish": "Sounds like a plan, Ivy. Once your team selects the winning qualities, we will immediately reserve greige weaving capacity and revert with a firm production schedule tailored to your forecast volume. With our pre-positioned raw materials in Vietnam, we can confidently support a 4-to-5-week turnaround.",
+      "cultural_tip": "用 'reserve capacity'（锁定产能）、'firm production schedule'（确切排产表）和 'pre-positioned raw materials'（前置备纱）表达信泰规模化跨国快反实力。"
+    }
+  ]
+}

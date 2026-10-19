@@ -1519,5 +1519,86 @@
     "definition_zh": "手感(面料触感:柔软、滑爽、硬挺;由柔软剂、磨毛、轧光等调整)",
     "example_en": "The silicone softener improves handfeel but drops the spray rating, so we use a DWR-compatible one.",
     "example_zh": "硅油柔软剂改善手感但拉低喷淋分数,所以我们改用拒水兼容型。"
+  },
+  {
+    "term": "COO (Country of Origin)",
+    "full_form": "Country of Origin",
+    "category": "commercial",
+    "definition_en": "the country where the goods or fabrics are manufactured, critical for tariff compliance and brand sourcing rules",
+    "definition_zh": "原产地（商品或面料制造国，关税筹划与品牌采购合规的核心指标）",
+    "example_en": "Bulk orders can be supplied with COO = Vietnam, which satisfies the brand origin requirement.",
+    "example_zh": "大货订单可提供原产地为越南（COO = Vietnam），完全满足品牌方的原产地合规要求。"
+  },
+  {
+    "term": "nominated mill",
+    "full_form": "nominated fabric mill / vendor",
+    "category": "commercial",
+    "definition_en": "a textile mill officially vetted, approved, and designated by a brand for garment vendors to purchase from",
+    "definition_zh": "品牌指定面料商（品牌官方认证并要求成衣供应商指定采购的面料厂）",
+    "example_en": "Please advise whether Sincetech is a nominated mill or sourced directly by the vendor.",
+    "example_zh": "请告知信泰是品牌指定的面料厂，还是由成衣工厂自主开发采购的。"
+  },
+  {
+    "term": "greige preset",
+    "full_form": "greige heat preset / pre-setting",
+    "category": "dyeing",
+    "definition_en": "preliminary heat-setting of loom-state or knit-state greige fabric before further wet processing to stabilize width and tension",
+    "definition_zh": "胚定（胚布预定型，进染缸前通过热定型预先稳定门幅、克重与四面弹力）",
+    "example_en": "The cool-touch TWONE warp knit will undergo greige preset at the dyehouse without piece dyeing.",
+    "example_zh": "这款凉感 TWONE 经编面料送染厂主要做胚定，无需进行匹染。"
+  },
+  {
+    "term": "warp elongation",
+    "full_form": "warp-direction tensile elongation at break/stretch",
+    "category": "testing",
+    "definition_en": "the percentage increase in length along the lengthwise (machine/warp) direction under tensile load",
+    "definition_zh": "经向延伸率（面料在纵向/经向拉伸时的伸长比例，具身机器人关节外皮关键指标）",
+    "example_en": "Weft elongation exceeded our best specimen, but warp elongation was 50% below target on the raw greige trial.",
+    "example_zh": "试机样测试显示纬向延伸率优于最佳样品，但未定型的胚布经向延伸率比目标值低了 50%。"
+  },
+  {
+    "term": "pile height",
+    "full_form": "pile height / spacer thickness",
+    "category": "warp_knitting",
+    "definition_en": "the vertical distance or thickness between the front and back mesh faces in double needle bar warp knits or spacer fabrics",
+    "definition_zh": "毛高 / 夹层厚度（双针床经编网布或空气层两层表面之间的垂直间距）",
+    "example_en": "We are setting up the machine to knit two pile heights, 1.5mm and 1.8mm, on the same warp knitting frame.",
+    "example_zh": "我们正在同一台经编机上调试 1.5mm 和 1.8mm 两种毛高厚度同时上机生产。"
+  },
+  {
+    "term": "capacity limitation",
+    "full_form": "capacity limitation vs pricing decision",
+    "category": "commercial",
+    "definition_en": "tactful commercial phrase used to decline unviable orders by attributing refusal to mill lead time/capacity rather than price disputes",
+    "definition_zh": "产能排期限制（高阶外贸谈判话术：以工厂排产与产能受限为由委婉拒单，避免价格摩擦）",
+    "example_en": "This is a capacity limitation on our end rather than a pricing decision, so we will not be updating the FOB quotation.",
+    "example_zh": "这是我司目前的产能与排产限制，而非价格分歧，因此我们将不再更新该项目的 FOB 报价。"
+  },
+  {
+    "term": "ultra-thin silicone printing",
+    "full_form": "ultra-thin high-elastic silicone printing",
+    "category": "printing",
+    "definition_en": "specialized screen or transfer silicone application providing anti-slip and branding without stiffening stretch fabrics",
+    "definition_zh": "超薄高弹硅胶印花（具有高防滑性能且不破坏高弹面料柔软延展手感的特种印花）",
+    "example_en": "Our recommendation for ultra-thin silicone printing remains valid to keep the premium hand feel.",
+    "example_zh": "我们对超薄硅胶印花的工艺建议依然有效，能在保持卓越手感的同时达到防滑要求。"
+  },
+  {
+    "term": "spandex-free stretch",
+    "full_form": "spandex-free / elastane-free polyester stretch yarn",
+    "category": "spinning",
+    "definition_en": "100% recyclable polyester filament yarn engineered with mechanical or thermal crimp that replaces spandex",
+    "definition_zh": "无氨纶聚酯弹性纱（如塞拉尼斯 Newlast™，替代传统氨纶，耐氯、抗UV且可实现纯聚酯闭环回收）",
+    "example_en": "Spandex-free polyester stretch yarn allows circular mono-material recycling while maintaining recovery.",
+    "example_zh": "无氨纶聚酯弹性纱在保持弹性回复率的同时，能够实现单一材质闭环循环回收。"
+  },
+  {
+    "term": "tactile sensing fiber",
+    "full_form": "flexible pressure & tactile sensing fiber",
+    "category": "spinning",
+    "definition_en": "smart conductive and piezoresistive yarn integrated into textiles for pressure mapping in humanoid robotics and wearables",
+    "definition_zh": "柔性电子压感纤维（用于人形机器人仿生触觉与智能穿戴压力感知的导电与压阻智能纤维）",
+    "example_en": "We are co-developing tactile sensing fibers to embed touch perception directly into the robot knitted skin.",
+    "example_zh": "我们正在联合研发柔性压感纤维，将触觉感知能力直接织造到机器人的针织外皮之中。"
   }
 ]
