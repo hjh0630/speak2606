@@ -39,6 +39,7 @@ onBeforeUnmount(() => {
 const links = [
   { to: '/', label: '首页' },
   { to: '/scenarios', label: '场景' },
+  { to: '/custom-scenario', label: '自定义场景' },
   { to: '/history', label: '历史' },
   { to: '/wordbook', label: '生词本' },
   { to: '/stats', label: '统计' },

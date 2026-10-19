@@ -55,6 +55,7 @@ export function safeParseScore(raw: string): ScoreFeedback | null {
       accuracy: clamp(Number(obj.accuracy ?? 0), 0, 100),
       key_issues: issues.length > 0 ? issues : FALLBACK.key_issues,
       suggestion: typeof obj.suggestion === 'string' ? obj.suggestion : FALLBACK.suggestion,
+      native_polish: typeof obj.native_polish === 'string' ? obj.native_polish : undefined,
     };
   } catch {
     return null;

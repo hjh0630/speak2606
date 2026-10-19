@@ -1,0 +1,88 @@
+{
+  "scenario_id": "yarn_sourcing",
+  "scenario_title_en": "Yarn Sourcing",
+  "scenario_title_zh": "纱线采购",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, this is Lisa Chen from Yibin Yarn. Got your inquiry for 30s single combed cotton. I have a few questions before I quote — is this for knit or woven, and what end product?",
+      "ai_message_zh": "你好,我是宜宾纱业的 Lisa Chen。你询的 30 支单股精梳棉,我报价前先问几个问题:这是针织用还是梭织用?做什么产品?",
+      "expected_user_response_hint": "说明用途、产品、目标客群",
+      "key_phrases": ["It's for knit", "woven shirting", "End product is ...", "for our SS26 collection"],
+      "common_mistakes": "inquiry 和 enquiry 都对,英美拼写不同,意思都是'询价'。",
+      "tips_zh": "纱线用途不同,品质要求差很多。针织重视条干均匀,梭织重视强力。",
+      "user_response_example": "It's for knit — single jersey and interlock. End product is women's casual tees, our SS26 collection."
+    },
+    {
+      "round": 2,
+      "ai_message": "OK, knit use. Will you go with regular ring-spun, or are you open to compact? Compact is a bit more expensive but the fabric looks cleaner.",
+      "ai_message_zh": "针织用。那你是常规环锭纺,还是可以用紧密纺?紧密纺贵一点,但布面更光洁。",
+      "expected_user_response_hint": "说明是否用紧密纺,问价差",
+      "key_phrases": ["Compact is preferred", "What's the price difference", "for handfeel", "ring-spun is fine"],
+      "common_mistakes": "compact yarn(紧密纺)不是 siro-spun(赛络纺),后者是双股并合,工艺不同。",
+      "tips_zh": "高端 T 恤用紧密纺,毛羽少,印花清晰,价格高 5-8%。",
+      "user_response_example": "Compact is preferred for this style. What's the price difference between ring-spun and compact? I need to brief my buyer."
+    },
+    {
+      "round": 3,
+      "ai_message": "About US$0.25 per kg. And about the twist — for knit, I would suggest around 3.8 TPM for a softer hand, with a Z twist. S or Z?",
+      "ai_message_zh": "大概每公斤贵 0.25 美元。捻度方面,针织我建议 3.8 TPM,手感更柔软,Z 捻。你们要 S 捻还是 Z 捻?",
+      "expected_user_response_hint": "回答捻向,确认手感需求",
+      "key_phrases": ["Z twist is fine", "S twist", "we usually use ...", "What's the difference"],
+      "common_mistakes": "S/Z 捻是行业标准表达,口语里直接说 Z twist 即可;不要按字面说 'clockwise twist'。",
+      "tips_zh": "S 捻 = 顺时针(主要用于机织经纱),Z 捻 = 逆时针(针织主流)。",
+      "user_response_example": "Z twist is standard for us, 3.8 TPM sounds right. The buyer wants a soft, slightly drapy hand."
+    },
+    {
+      "round": 4,
+      "ai_message": "Good. On the color side — how tight is your dE tolerance? Our standard is 1.0 against the Pantone TCX, but we can do 0.8 if you sign off the lab dip in two rounds only.",
+      "ai_message_zh": "好的。对色方面,你们的 dE 公差是多少?我们标准是 1.0 以内对潘通 TCX;如果你们两轮就批准色样,我们可以做到 0.8。",
+      "expected_user_response_hint": "谈色差公差,讨论打样轮次",
+      "key_phrases": ["1.0 is acceptable", "Delta E 1.0", "two rounds should be fine", "we need ... rounds"],
+      "common_mistakes": "Delta E / dE / DE 都通用,口语里说 dE one point zero 即可。",
+      "tips_zh": "dE 1.0 以内是行业通行,0.8 是高端要求。dE 越低,色样越准,但打样轮次会增加。",
+      "user_response_example": "1.0 is acceptable for the main color, 0.8 for the white we will sign off quickly. Two rounds should be fine."
+    },
+    {
+      "round": 5,
+      "ai_message": "Noted. On quantity — you said around 5,000 kg per month. That clears our MOQ. I can offer US$3.55 per kg for compact 30s combed, FOB Qingdao. Is that workable?",
+      "ai_message_zh": "记下了。数量方面,你说每月 5000 公斤,过了我们的起订量。紧密纺 30 支精梳我可以报 FOB 青岛每公斤 3.55 美元。能做吗?",
+      "expected_user_response_hint": "回应价格,压价或接受",
+      "key_phrases": ["That's a bit high", "can you do ...", "I was quoted ... elsewhere", "split the difference"],
+      "common_mistakes": "split the difference 是常用议价表达,意思是'折中'。",
+      "tips_zh": "月单 5 吨是大客户,可要求 monthly pricing(浮动月结),并锁定 3 个月。",
+      "user_response_example": "US$3.55 is workable, but I have a quote at US$3.45 from another mill for similar spec. Can you meet that, or at least split the difference?"
+    },
+    {
+      "round": 6,
+      "ai_message": "Honestly, US$3.45 is below our cost for compact combed. But if you commit to a 6-month contract at 5,000 kg per month, I can do US$3.50 fixed. Cotton futures have been volatile.",
+      "ai_message_zh": "老实说,3.45 美元低于我们紧密纺精梳的成本。但如果你承诺 6 个月合同,每月 5 吨,3.5 美元可以锁价。棉花期货最近波动大。",
+      "expected_user_response_hint": "考虑合同期与锁价,回盘",
+      "key_phrases": ["6-month is too long", "We can commit to 3 months", "lock the price", "pass on to my boss"],
+      "common_mistakes": "lock the price / price lock 是'锁价',即固定单价不论原料涨跌。",
+      "tips_zh": "锁价通常含 5-10% 风险金,工厂愿意锁说明它看好原料降价。",
+      "user_response_example": "6 months is a bit long for me to commit. I can do 3 months at 5,000 kg, with the option to extend. Can you lock the price at US$3.50 for those 3 months?"
+    },
+    {
+      "round": 7,
+      "ai_message": "3 months is borderline. Let me check with our plant manager. One more question — sustainability. Do you need GRS-certified recycled cotton, or is virgin cotton acceptable?",
+      "ai_message_zh": "3 个月勉强可以,我问问厂长。再一个问题:可持续方面,你们要 GRS 认证的再生棉,还是用原生棉?",
+      "expected_user_response_hint": "说明可持续要求",
+      "key_phrases": ["GRS is required", "recycled cotton", "virgin is fine", "we'll need ... certificate"],
+      "common_mistakes": "GRS(Global Recycled Standard)是再生标准,GOTS 是有机标准,不要混。",
+      "tips_zh": "GRS 认证要 scope certificate(范围证)+ transaction certificate(交易证),下游客户要看到才能宣传。",
+      "user_response_example": "For this program, virgin is fine. But our SS27 line is targeting GRS recycled. Can you keep both options open in the quote?"
+    },
+    {
+      "round": 8,
+      "ai_message": "Will do. I'll send you a draft PI by tomorrow with both options — 30s combed virgin at US$3.50, and 30s combed GRS recycled at a premium. Let's lock this in by Friday. Talk soon.",
+      "ai_message_zh": "好。我明天发你草拟 PI,两个方案都有 — 30 支精梳原生棉 3.5 美元,30 支精梳 GRS 再生另加价。周五前敲定,回头再聊。",
+      "expected_user_response_hint": "确认收 PI,收尾",
+      "key_phrases": ["Sounds good", "I'll review and revert", "Talk soon", "Have a good evening"],
+      "common_mistakes": "revert 在英式英语里是'回复',美式英语里更常用 get back to。",
+      "tips_zh": "拿到 PI 后先核对:数量、单价、贸易条款、付款方式、有效期、银行信息,再回签。",
+      "user_response_example": "Sounds good, Lisa. I'll review with my boss and revert by Thursday EOD. Please CC my colleague Tony on the email. Talk soon."
+    }
+  ]
+}

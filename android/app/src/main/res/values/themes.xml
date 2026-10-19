@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Compose 负责全部 UI,这里用平台自带主题避免额外 material 组件依赖 -->
+    <style name="Theme.SpeakFlow" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/brand</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>

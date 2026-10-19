@@ -12,6 +12,10 @@ import { chatCompletion, buildConversationSystemPrompt } from '../services/minim
 import { textToAudio, TTS_DEFAULT_VOICE } from '../services/minimax-tts';
 import { scoreWithLlm, scoreRepeat } from '../services/scoring';
 import { getDialogForRound, getSystemPrompt } from '../services/content';
+import {
+  getCustomDialogForRound,
+  getCustomScenario,
+} from '../services/custom-scenarios';
 import { createLogger } from '../utils/logger';
 import { config } from '../config';
 import type {
@@ -253,10 +257,14 @@ async function runTurn(socket: WebSocket, state: WsState, userText: string): Pro
 
     // 2) Score
     const llmContext = toLlmContext(getMessages(state.sessionId).filter((m) => m.id !== userMsg.id));
+    const custom = getCustomScenario(state.sessionId);
+    const targetForRound = (): string =>
+      custom
+        ? getCustomDialogForRound(custom, rec.difficulty, rec.round_index)?.ai_message ?? ''
+        : getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index)?.ai_message ?? '';
     let score: ScoreFeedback;
     if (rec.mode === 'repeat') {
-      const target = getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index)?.ai_message ?? '';
-      score = scoreRepeat(target, userText);
+      score = scoreRepeat(targetForRound(), userText);
     } else {
       score = await scoreWithLlm(userText, llmContext);
     }
@@ -272,13 +280,13 @@ async function runTurn(socket: WebSocket, state: WsState, userText: string): Pro
     // 3) AI reply
     let aiMessage = '';
     if (rec.mode === 'repeat') {
-      const target = getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index)?.ai_message ?? '';
+      const target = targetForRound();
       aiMessage =
         score.overall_score >= 80
           ? `Great! You said "${userText}". Let's go to the next sentence.`
           : `Good try. The target was: "${target}". Please listen and try again.`;
     } else {
-      const systemPrompt = buildConversationSystemPrompt(getSystemPrompt(rec.difficulty));
+      const systemPrompt = buildConversationSystemPrompt(custom?.system_prompt ?? getSystemPrompt(rec.difficulty));
       const messages: LlmChatMessage[] = [
         ...llmContext,
         { role: 'user', content: userText },

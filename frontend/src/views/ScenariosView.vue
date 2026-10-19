@@ -1,11 +1,20 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
 import { listScenarios } from '@/api/scenarios'
 import type { Scenario, Difficulty } from '@/types/api'
+import { useCustomScenariosStore } from '@/stores/customScenarios'
 import ScenarioCard from '@/components/ScenarioCard.vue'
 
 type ModuleKey = 'foreign-trade' | 'textile-apparel' | 'all'
+
+const customStore = useCustomScenariosStore()
+
+function formatTime(t: string | number): string {
+  const d = new Date(t)
+  if (Number.isNaN(d.getTime())) return ''
+  return d.toLocaleDateString('zh-CN')
+}
 
 const scenarios = ref<Scenario[]>([])
 const loading = ref(true)
@@ -129,6 +138,60 @@ const moduleLabel = (m: ModuleKey): string => {
         </select>
       </div>
     </header>
+
+    <!-- 我的场景(自定义,保存在本机) -->
+    <div class="rounded-2xl border border-dashed border-brand-200 bg-brand-50/40 p-5 sm:p-6">
+      <div class="flex items-end justify-between mb-4">
+        <div>
+          <h2 class="text-base sm:text-lg font-semibold text-ink-800">我的场景</h2>
+          <p class="text-xs text-ink-500 mt-0.5">AI 生成的自定义场景 · 保存在本机浏览器</p>
+        </div>
+        <RouterLink to="/custom-scenario" class="text-sm text-brand-700 hover:text-brand-800 font-medium shrink-0">
+          + 创建新场景
+        </RouterLink>
+      </div>
+
+      <div v-if="customStore.items.length === 0" class="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-sm text-ink-500">
+          还没有自定义场景。输入名称和关键词,让 AI 生成一套专属练习内容。
+        </p>
+        <RouterLink to="/custom-scenario" class="btn-accent shrink-0 text-sm">去创建</RouterLink>
+      </div>
+
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <RouterLink
+          v-for="s in customStore.items"
+          :key="s.id"
+          :to="`/scenarios/${s.id}/preview`"
+          class="card group p-4 sm:p-5 flex flex-col gap-3 hover:shadow-card hover:-translate-y-0.5
+                 transition-all duration-200"
+        >
+          <div class="flex items-start gap-3">
+            <div class="h-11 w-11 shrink-0 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl">
+              ✨
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-2 mb-0.5 flex-wrap">
+                <h3 class="text-base font-semibold text-ink-800 truncate">{{ s.title_zh || s.name }}</h3>
+                <span class="chip bg-brand-50 text-brand-700">自定义</span>
+              </div>
+              <p v-if="s.title_en" class="text-xs text-ink-500 truncate">{{ s.title_en }}</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              v-for="k in s.keywords"
+              :key="k"
+              class="chip bg-ink-100 text-ink-600 text-[11px]"
+            >{{ k }}</span>
+          </div>
+          <div class="flex items-center justify-between text-xs text-ink-500 mt-auto pt-1">
+            <span>{{ formatTime(s.created_at) }}</span>
+            <span class="text-brand-600 group-hover:translate-x-0.5 transition-transform">开始练习 →</span>
+          </div>
+        </RouterLink>
+      </div>
+    </div>
 
     <!-- Module filter chips -->
     <div class="flex flex-wrap items-center gap-2">

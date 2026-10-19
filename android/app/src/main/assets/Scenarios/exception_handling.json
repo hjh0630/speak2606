@@ -1,0 +1,88 @@
+{
+  "scenario_id": "exception_handling",
+  "scenario_title_en": "Exception Handling",
+  "scenario_title_zh": "异常处理",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Sarah from Pacific Apparel. I am calling about PO 4521. We just received a status update that the shipment will be delayed by one week. This is a serious issue for us.",
+      "ai_message_zh": "你好,我是 Pacific Apparel 的 Sarah。我打电话是关于 PO 4521。刚收到更新说货要延期一周。这对我们来说是个严重问题。",
+      "expected_user_response_hint": "承认延期,询问具体原因和影响范围",
+      "key_phrases": ["I understand your concern", "the delay is due to ...", "We are doing our best", "revised ETD"],
+      "common_mistakes": "客户一上来就 angry,不要辩解,先 acknowledge 'I understand your concern'。",
+      "tips_zh": "异常处理三步:1) acknowledge,2) explain 原因,3) 给方案。",
+      "user_response_example": "Hi Sarah, I understand your concern, and I am sorry for the inconvenience. Let me explain — the delay is due to a fabric issue at our mill. The revised ETD is now 5 October, one week later than planned. Let me walk you through the cause and our recovery plan."
+    },
+    {
+      "round": 2,
+      "ai_message": "What exactly happened with the fabric? I need a clear explanation. We have a retail launch on 20 October, and one week delay could cause a stock-out.",
+      "ai_message_zh": "面料具体出了什么问题?我要一个清楚解释。我们 10 月 20 号零售首发,延期一周可能断货。",
+      "expected_user_response_hint": "清楚解释面料问题,给出补救方案",
+      "key_phrases": ["The fabric mill had a dye lot issue", "they re-dyed the lot", "we are expediting", "no impact on the white lot"],
+      "common_mistakes": "不要遮遮掩掩,客户要的是 clear explanation,不是借口。",
+      "tips_zh": "面料染整问题常见:dye lot 色差、hand feel 不达标、GSM 偏差、门幅不足。",
+      "user_response_example": "To be clear — our fabric mill had a dye lot issue on the navy color. The Delta E came back at 2.3, above the 2.0 tolerance. The mill is re-dyeing the lot, which takes 5 to 7 days. The white and light blue lots are not affected. To recover, we are expediting the re-dye at extra cost on our side."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK, so white and light blue are on time. Only navy is delayed. How many pieces of navy are affected, and when exactly can you ship the navy lot?",
+      "ai_message_zh": "好,白色和浅蓝按时,只有深蓝延期。深蓝有多少件,具体什么时候能出?",
+      "expected_user_response_hint": "给出准确数字和 ship-by date",
+      "key_phrases": ["2,000 pcs of navy", "ship by 5 October", "air-freight option", "split shipment"],
+      "common_mistakes": "ship-by date 要具体到日,不要 'early October'。",
+      "tips_zh": "常见补救:分批出运(white 先出,navy 后出)、空运补单、加班赶工。",
+      "user_response_example": "2,000 pcs of navy are affected. We can split the shipment — 6,000 pcs of white and light blue will ship on 28 September as planned, and the 2,000 pcs of navy will ship by 5 October. Or, if you prefer, we can air-freight the 2,000 pcs of navy at our extra cost to make your 20 October launch."
+    },
+    {
+      "round": 4,
+      "ai_message": "Split shipment is OK, but I am worried about extra freight cost. Who pays the extra freight for the navy lot?",
+      "ai_message_zh": "分批出运可以,但我担心额外的运费。深蓝批的额外运费谁出?",
+      "expected_user_response_hint": "承担运费,讨论责任分摊",
+      "key_phrases": ["extra freight on us", "we will absorb the cost", "no charge to you", "credit note as goodwill"],
+      "common_mistakes": "工厂因自己问题延期,运费理应承担;但不要主动给 credit note,除非客户要求。",
+      "tips_zh": "工厂自错:承担运费 + 加班费;客户原因(改单等):客户承担。",
+      "user_response_example": "The extra freight is on us — we will absorb the cost for the navy air-freight option, or the additional sea-freight cost for a split shipment. No charge to you on this. I will email you the freight quote tomorrow for your reference, with our company paying."
+    },
+    {
+      "round": 5,
+      "ai_message": "OK, that's fair. Now, will there be any other issues I should know about? I do not want another surprise.",
+      "ai_message_zh": "好,这样合理。还有没有其他问题我需要知道?我不想再有意外。",
+      "expected_user_response_hint": "汇报当前状态,承诺 no surprise",
+      "key_phrases": ["No other issues at this point", "we are monitoring closely", "weekly update", "no hidden problems"],
+      "common_mistakes": "不要打包票说 'no issues at all' — 要说 'no known issues, monitoring daily'。",
+      "tips_zh": "客户被吓过一次后,要给 transparent update,而不是 'don't worry'。",
+      "user_response_example": "No other known issues at this point. Sewing is on schedule, buttonhole and ironing will be in line. I will give you a daily update on the navy lot status, and a weekly call to cover the rest. I will not let another surprise come up — if anything changes, you will hear from me first, not from the QC."
+    },
+    {
+      "round": 6,
+      "ai_message": "Good. About the credit note — I would like a credit note for 1% of the navy lot value, as a goodwill gesture for the inconvenience. Is that acceptable?",
+      "ai_message_zh": "好。关于 credit note — 我希望给深蓝批 1% 订单价值的 credit note,作为对不便的善意补偿。可以吗?",
+      "expected_user_response_hint": "考虑 credit note,讨论金额和方式",
+      "key_phrases": ["1% credit note is reasonable", "we can issue the credit note", "deduct from balance", "goodwill gesture"],
+      "common_mistakes": "credit note 是贷项通知,用于冲抵后续订单的应付,不是现金退款。",
+      "tips_zh": "credit note 1-3% 是常见的 goodwill gesture 范围,工厂自错时给。",
+      "user_response_example": "1% credit note is reasonable given the inconvenience. I will issue the credit note this week, deductible from the balance payment. We will apply it to the navy lot invoice. I will email the credit note document for your records."
+    },
+    {
+      "round": 7,
+      "ai_message": "Thank you. Now, what happens if the navy re-dye fails the second time? I want a backup plan.",
+      "ai_message_zh": "谢谢。如果深蓝第二次复染还不合格,怎么办?我想要个备选方案。",
+      "expected_user_response_hint": "讨论 Plan B:换色、换料、换厂",
+      "key_phrases": ["Plan B is to switch to a similar Pantone", "use alternative fabric from another mill", "mutually agree on a new color"],
+      "common_mistakes": "不要等失败了再说,要主动给 Plan B。",
+      "tips_zh": "Plan B 常见:换 Pantone 类似色 / 换面料供应商 / 接受 close-match color。",
+      "user_response_example": "Good question. Our Plan B is to switch to Pantone 19-3939, which is 95% close to the original navy. We have a small stock of that fabric in the mill, so we can re-cut within 3 days if needed. We will mutually agree on the new color before any change. Plan C, if even Plan B fails, is to air-freight partial pieces from another factory in our group — but that is the last resort."
+    },
+    {
+      "round": 8,
+      "ai_message": "OK, I am comfortable with the plan. To summarize: 6,000 pcs on 28 September, 2,000 pcs navy by 5 October, extra freight on you, 1% credit note, daily update, Plan B ready. Anything else I should do?",
+      "ai_message_zh": "好,这个方案我接受。总结:6 千件 9 月 28 日,2 千件深蓝 10 月 5 日前,额外运费你们出,1% credit note,每日更新,Plan B 备好。我还需要做什么?",
+      "expected_user_response_hint": "收尾,要求书面确认",
+      "key_phrases": ["please confirm by email", "no action needed from you", "we will keep you posted", "thanks Sarah"],
+      "common_mistakes": "客户说 'anything else',不是真的问有没有事,是要收尾确认。",
+      "tips_zh": "异常处理收尾三件:1) 文字确认 2) 下一步动作 3) 主动 follow-up 计划。",
+      "user_response_example": "No action needed from your side at this moment — we will keep you posted. I will email you a written summary of all 7 points by end of today, please reply to confirm. We will start the daily update on the navy lot from tomorrow morning. Thanks for the understanding, Sarah. Have a good day."
+    }
+  ]
+}

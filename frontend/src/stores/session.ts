@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import type {
+  CustomScenario,
   Difficulty,
   PracticeMode,
   PracticeSession,
@@ -40,6 +41,9 @@ export const useSessionStore = defineStore('session', () => {
     scenarioId: string
     mode: PracticeMode
     difficulty: Difficulty
+    /** Full AI-generated scenario payload — required when scenarioId starts
+     *  with "custom-" (see ScenarioPreviewView). */
+    customScenario?: CustomScenario
   }): Promise<PracticeSession> {
     connection.value = 'connecting'
     errorMessage.value = null
@@ -48,6 +52,7 @@ export const useSessionStore = defineStore('session', () => {
         scenario_id: opts.scenarioId,
         mode: opts.mode,
         difficulty: opts.difficulty,
+        ...(opts.customScenario ? { custom_scenario: opts.customScenario } : {}),
       })
       session.value = s
       lastScore.value = null

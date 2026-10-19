@@ -1,0 +1,40 @@
+{
+  "scenario_id": "twone_warp_knitting",
+  "scenario_title_en": "Warp Knitting TWONE & 3D Spacer",
+  "scenario_title_zh": "经编三贾卡与 TWONE 智能单双层",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "David, we're redesigning our flagship performance shoe upper and exploring alternatives to standard circular mesh. How does Sintech's TWONE smart warp knitting technology outperform traditional 3D spacer mesh?",
+      "ai_message_zh": "David，我们正在重新设计旗舰性能跑鞋鞋面，想寻找替代传统圆机网布的方案。信泰的 TWONE 智能经编技术相比传统 3D 三明治网布有哪些突破？",
+      "expected_user_response_hint": "推介 TWONE 智能单双层一体成型技术：实现局部单层透气、局部双层立体支撑，解决传统网布贴合溢胶和笨重问题",
+      "key_phrases": [
+        "TWONE smart warp knit",
+        "engineered single-to-double transition",
+        "Karl Mayer double needle bar",
+        "seamless breathability",
+        "elimination of hotmelt film"
+      ],
+      "common_mistakes": "避免只讲抽象概念，要讲出 'seamless transition from single-layer mesh to double-layer structural support without secondary bonding'。",
+      "tips_zh": "母语亮点：'TWONE allows us to knit high-ventilation single-layer zones and robust double-layer containment zones on the very same machine bed.'",
+      "user_response_example": "Traditional 3D spacer mesh requires hotmelt overlays or layered stitching for lateral support, which adds weight and compromises airflow. Our proprietary TWONE smart warp knitting utilizes advanced Karl Mayer multi-bar machines to engineer a seamless transition from a single-layer open mesh to a reinforced double-layer structure in one continuous piece. This gives the runner targeted breathability over the vamp and rigid lockdown at the heel counter without adding a single gram of glue."
+    },
+    {
+      "round": 2,
+      "ai_message": "Eliminating overlays would save huge tooling costs. How is the run-resistance and seam burst strength if the upper experiences high lateral shear forces during sprinting?",
+      "ai_message_zh": "取消热熔膜能省下巨额模具费。如果鞋面在冲刺时承受剧烈的侧向剪切力，其防脱散性能和接缝顶破强力表现如何？",
+      "expected_user_response_hint": "解释经编独有的柱编链组织（pillar stitch）与防脱散特性，即使局部勾丝也不会顺向抽线，顶破强力超 800N",
+      "key_phrases": [
+        "warp knit pillar stitch",
+        "anti-laddering / run-resistant",
+        "interlocking loops",
+        "bursting strength ASTM D3787",
+        "lateral shear stability"
+      ],
+      "common_mistakes": "针织容易脱散是纬编弱点，要强调经编（Warp knit）每个线圈互相咬合锁死，'intrinsically ladder-proof'。",
+      "tips_zh": "母语亮点：'Unlike weft knits that unravel under puncture, warp knitting loops lock into adjacent wales, making it intrinsically ladder-resistant.'",
+      "user_response_example": "That is the fundamental strength of warp knitting. Because each loop is anchored by an independent vertical pillar stitch across adjacent wales, TWONE is intrinsically run-resistant and ladder-proof — even if an open mesh cell is punctured, it will not run. In testing under ASTM D3787, our burst strength exceeds 850 Newtons, providing unmatched lateral shear stability during high-speed cuts."
+    }
+  ]
+}

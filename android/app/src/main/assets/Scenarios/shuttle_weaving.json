@@ -1,0 +1,62 @@
+{
+  "scenario_id": "shuttle_weaving",
+  "scenario_title_en": "Shuttle / Woven Weaving",
+  "scenario_title_zh": "梭织",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, this is Daniel from Sunrise Mill. How can I help you?",
+      "ai_message_zh": "早上好,我是 Sunrise 织厂的 Daniel,请问有什么可以帮您?",
+      "expected_user_response_hint": "说明来意:是来询梭织面料的,提大致规格",
+      "key_phrases": ["I am looking for ...", "I want to develop ...", "I need ... for a new style"],
+      "common_mistakes": "Don't say 'I want cloth' — say 'I am looking for a woven fabric supplier'",
+      "tips_zh": "第一次联系织厂先报公司 + 用途 + 大致规格"
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure. What kind of fabric are you looking for? Cotton, polyester, blend, or something else?",
+      "ai_message_zh": "好的。请问您要找什么面料?棉、涤纶、混纺,还是其他?",
+      "expected_user_response_hint": "报成分(比如 100% 棉 或 CVC) + 用途(衬衣/西装/工装)",
+      "key_phrases": ["100% cotton", "polyester-cotton blend", "CVC", "for shirting", "for uniform"],
+      "common_mistakes": "Don't say 'I want T/C' without saying percentage — 'T/C 80/20' is clearer",
+      "tips_zh": "成分 + 比例 + 用途,一次说清"
+    },
+    {
+      "round": 3,
+      "ai_message": "Got it — 100% cotton for shirt fabric. What GSM are you targeting? And the weave — plain, twill, or oxford?",
+      "ai_message_zh": "明白 — 100% 棉做衬衣面料。请问您目标克重多少?织法 — 平纹、斜纹、还是牛津?",
+      "expected_user_response_hint": "报克重(比如 110-120 GSM)+ 织法(plain 是基础款,oxford 是休闲款)",
+      "key_phrases": ["110 GSM", "plain weave", "twill 2/1", "oxford", "yarn count"],
+      "common_mistakes": "Don't say 'around 100' — give a range 'between 110 and 130 GSM'",
+      "tips_zh": "克重和织法是基本规格,客户会问"
+    },
+    {
+      "round": 4,
+      "ai_message": "OK, 120 GSM plain weave, 60s x 60s count. We can do that. What quantity are you looking at?",
+      "ai_message_zh": "好,120 GSM 平纹,60 支 x 60 支。我们可以做。请问您需要多少量?",
+      "expected_user_response_hint": "报一个大概的量(比如 5000 米 / 月),或最小起订量",
+      "key_phrases": ["5000 meters per month", "initial order 3000", "ongoing 5000 monthly", "MOQ"],
+      "common_mistakes": "Don't say 'I don't know' — give a rough idea: 'initially 3000 meters, then monthly 5000'",
+      "tips_zh": "量给得越具体,报价越准"
+    },
+    {
+      "round": 5,
+      "ai_message": "For 3000 meters initial, our MOQ is 1000 meters per color. So you can split into 3 colors. Lead time is 25 days from lab dip approval. Sample yardage is free, but freight collect.",
+      "ai_message_zh": "首单 3000 米,我们每个颜色的 MOQ 是 1000 米。所以可以分 3 个颜色。从 lab dip 确认到出厂 25 天。打样免费,但运费到付。",
+      "expected_user_response_hint": "接受或谈 MOQ;问 lab dip 周期;确认颜色数量",
+      "key_phrases": ["MOQ per color", "lab dip approval", "sample yardage", "freight collect", "lead time 25 days"],
+      "common_mistakes": "Don't say 'OK that's fine' without re-confirming: 'MOQ 1000 m per color x 3 colors, lab dip in 7 days, 25 days after approval, OK'",
+      "tips_zh": "重述条款确认共识"
+    },
+    {
+      "round": 6,
+      "ai_message": "Great. Send me your tech pack with the Pantone codes, and I'll send you lab dips in 5 to 7 days. After your approval, we go to bulk. Shipping is from Shanghai port, FOB. Anything else?",
+      "ai_message_zh": "好。发我您的工艺单和 Pantone 色号,我 5-7 天内发您 lab dip。您确认后我们做大货。从上海港出,FOB。还有别的问题吗?",
+      "expected_user_response_hint": "确认工艺单会发,问付款条件(LC/TT),结束",
+      "key_phrases": ["tech pack", "Pantone code", "lab dip in 5-7 days", "FOB Shanghai", "payment terms LC at sight"],
+      "common_mistakes": "Don't say 'thanks bye' — re-confirm next step: 'Will send tech pack today, looking forward to lab dip. Thanks'",
+      "tips_zh": "电话结束:重述下一步 + 感谢,显得专业"
+    }
+  ]
+}

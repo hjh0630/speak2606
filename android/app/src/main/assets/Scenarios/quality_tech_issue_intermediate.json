@@ -1,0 +1,88 @@
+{
+  "scenario_id": "quality_tech_issue",
+  "scenario_title_en": "Quality & Tech Issue Resolution",
+  "scenario_title_zh": "工艺问题解决",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, Karen from Westcoast QC. I'm calling on a live issue with PO-2026-0518 — the buyer flagged a wash fastness failure on the navy hoodies. The bulk sample went through our lab test and the wash fastness came in at grade 2-3, well below the agreed grade 4. The buyer's merchandising team is asking for a root cause and a corrective action plan by Friday.",
+      "ai_message_zh": "Chen,我是 Westcoast QC 的 Karen。PO-2026-0518 有一个 issue — 客户发现藏青卫衣的水洗色牢度不达标。大货样送我们实验室,水洗 2-3 级,远低于约定的 4 级。客户商品团队要求周五前给根因分析和纠正措施。",
+      "expected_user_response_hint": "确认问题严重性,说明会立即调查",
+      "key_phrases": ["Got it", "I will pull the dye records", "What standard did you test against", "give me 24 hours"],
+      "common_mistakes": "wash fastness(耐洗色牢度) 是水洗后颜色变化的等级,1-5 级,5 级最好。",
+      "tips_zh": "深色水洗牢度比浅色难做,深藏青容易在多纤维贴衬上掉色。",
+      "user_response_example": "Got it, Karen. Grade 2-3 on navy is below the line — I will pull the dye records and lab report from the dye house. Which ISO standard did you test against? Give me 24 hours for the root cause analysis."
+    },
+    {
+      "round": 2,
+      "ai_message": "We tested per ISO 105-C06 at 40°C with the multi-fiber strip, 5 cycles. The black dye is bleeding onto the cotton and the nylon in the multi-fiber — clearly a fixation issue. Can you confirm the dye class and the fixative used?",
+      "ai_message_zh": "我们用 ISO 105-C06,40 度,多纤维贴衬,5 次循环测试。黑色染料掉到棉和锦纶上,显然是固色问题。能确认染料类型和固色剂吗?",
+      "expected_user_response_hint": "说明染料和固色工艺",
+      "key_phrases": ["reactive dye", "we used ... fixative", "no fixative was applied", "let me check"],
+      "common_mistakes": "fixative(固色剂) 在染色后整理添加,提升染料与纤维的结合力。",
+      "tips_zh": "深色 4 级牢度通常需要专门固色剂,工厂有时为省成本省掉这一步。",
+      "user_response_example": "I need to check with the dye house. Our standard for navy is reactive dye with a fixing agent, but I want to confirm whether it was actually applied on this batch. Will revert by tomorrow."
+    },
+    {
+      "round": 3,
+      "ai_message": "Please confirm urgently. While you do, I want to flag a related issue — the buyer's care label says 'wash separately for first 3 cycles.' If the fixative wasn't applied, even grade 4 won't be enough for the end consumer. The fixative is the only path to a 30-wash grade 4.",
+      "ai_message_zh": "请尽快确认。同时我想提一个相关问题 — 客户洗标写'前 3 次单独洗涤'。如果没用固色剂,4 级也不够消费者用。固色剂是做到 30 次水洗 4 级的唯一路径。",
+      "expected_user_response_hint": "讨论固色必要性",
+      "key_phrases": ["fixative is necessary", "we will add it", "cost of fixative", "for the buyer"],
+      "common_mistakes": "fixative(固色剂) 是后整理化学品,缺这一步不可能达到 30 次水洗 4 级。",
+      "tips_zh": "固色剂每公斤 0.05-0.15 美元,客户常忽视。",
+      "user_response_example": "Agreed, fixative is non-negotiable for the 30-wash claim. If the dye house skipped it, we will re-dye the affected lot with proper fixative. Let me confirm first what actually happened on this batch."
+    },
+    {
+      "round": 4,
+      "ai_message": "Good. One more critical point — we tested a control sample from the lab dip you submitted 8 weeks ago, and that sample hit grade 4. The bulk is failing. Something changed between lab dip approval and bulk production. Can you account for the change?",
+      "ai_message_zh": "好。再一个关键点 — 8 周前你提交的对色样我们留样测试,4 级。大货不及格。从批准色样到大货生产之间有变化,你能解释吗?",
+      "expected_user_response_hint": "分析从 lab dip 到大货的变化",
+      "key_phrases": ["what changed", "production lot", "process variance", "different dye lot"],
+      "common_mistakes": "lab dip to bulk(打色样到大货) 的色牢度差异是常见问题,常因工艺调整或化学品批次变化。",
+      "tips_zh": "打色样是大缸,大货是批量生产,工艺参数可能有偏差,需要严格控制。",
+      "user_response_example": "Honest answer — I don't know yet. The lab dip and bulk should use the same process. My theory: the bulk dye bath was at a different temperature, or the fixative step was cut. I will dig into the production records."
+    },
+    {
+      "round": 5,
+      "ai_message": "Please pull the records — the buyer is going to ask for the lab dip vs. bulk comparison, the dye house process sheet, and the chemical application log. If we can't reconstruct the chain, the buyer will assume the process was always wrong. Now — for the 3,000 affected pieces, what's your proposed action?",
+      "ai_message_zh": "把记录拿出来 — 客户会要对色样 vs. 大货对比、染厂工艺单、化学品使用记录。如果链条拼不回来,客户会以为工艺一直有问题。再说 3 千件问题产品,你们的处理方案?",
+      "expected_user_response_hint": "提出处理方案:重染/返工/让步",
+      "key_phrases": ["re-dye", "rework", "concession", "cost of each option"],
+      "common_mistakes": "re-dye(重染) 是把整批布重新染色,成本高但彻底解决;rework(返工)是局部修补,适合小范围问题。",
+      "tips_zh": "色牢度问题通常只能重染,返工无法解决。",
+      "user_response_example": "Re-dye is the right call — rework won't fix fastness. Re-dye with proper fixative, re-test to grade 4, then re-sew the garments. Cost is about US$1.20 per piece, total US$3,600. Lead time 14 days. Concession is not on the table for a grade 2-3 failure."
+    },
+    {
+      "round": 6,
+      "ai_message": "Re-dye and re-test is the right path. US$3,600 re-dye cost absorbed by your side, that's standard. But the buyer will also want a 5% quality allowance for the late delivery — that's another US$2,250 on the PO. Can you carry that?",
+      "ai_message_zh": "重染和重测是对的。3,600 美元重染成本你方承担,这是标准做法。但客户还会要 5% 延期质量补偿,PO 总额再减 2,250 美元。你能承担吗?",
+      "expected_user_response_hint": "谈判补偿金额",
+      "key_phrases": ["5% is too high", "split the difference", "3% is fair", "no allowance"],
+      "common_mistakes": "quality allowance(质量补偿) 是延期或不良品导致的扣款,客户有权要求。",
+      "tips_zh": "补偿谈判要在根因清楚、证据齐全的基础上谈,不要无原则让步。",
+      "user_response_example": "I can carry the re-dye cost. On the 5% allowance, that's a stretch — we are absorbing the re-dye and the re-test. Can we go 2.5%? Or I can offer 5% but split it as 2.5% allowance and 2.5% as a credit on the next PO."
+    },
+    {
+      "round": 7,
+      "ai_message": "2.5% allowance + 2.5% credit on next PO is workable. I'll need that in writing for the buyer's finance team. Now — the bigger question. The buyer's QC team will want to do a 100% inspection on the re-dyed bulk before shipment. Are you set up for that, and can you do it in your factory?",
+      "ai_message_zh": "2.5% 折让 + 2.5% 下次 PO 抵扣,可以。我需要书面确认给客户财务。再说大事 — 客户 QC 要对重染后大货做 100% 检验,你们厂里能做吗?",
+      "expected_user_response_hint": "确认 100% 检验能力",
+      "key_phrases": ["100% inspection", "we can do it", "in-house QC", "third-party"],
+      "common_mistakes": "100% inspection(全检) 是逐件检查,成本高但可彻底筛选问题件。",
+      "tips_zh": "全检 1 件 0.10-0.30 美元,3 千件 300-900 美元,通常是工厂承担。",
+      "user_response_example": "We can do 100% inspection in-house with our QC team — 6 inspectors, 3 days. Cost is on our side. Alternatively, the buyer can use their own QC team; either way works. The re-dyed pieces will be tested on wash fastness before they leave our factory."
+    },
+    {
+      "round": 8,
+      "ai_message": "In-house 100% is acceptable. Final plan: re-dye with fixative, 100% in-house inspection, wash fastness re-test to grade 4, 2.5% allowance + 2.5% credit on next PO, root cause report by Friday, corrective action plan by Monday. Send me all in writing and we're aligned. Anything else?",
+      "ai_message_zh": "厂内 100% 检验可以接受。最终方案:加固色剂重染,厂内 100% 全检,重测水洗 4 级,2.5% 折让 + 2.5% 下次 PO 抵扣,周五根因报告,周一纠正措施。所有文件书面给我,对齐。还有别的吗?",
+      "expected_user_response_hint": "确认方案,收尾",
+      "key_phrases": ["Confirmed", "I'll send everything by Friday", "talk next week"],
+      "common_mistakes": "corrective action plan(纠正措施) 要列:根因、措施、负责人、时间、验证方法。",
+      "tips_zh": "CAP(纠正措施计划) 是 QC 流程的正式文件,要签字留底。",
+      "user_response_example": "Confirmed, Karen. Re-dye, 100% in-house, re-test to grade 4, 2.5% + 2.5% credit, RCA by Friday, CAP by Monday. I'll email the written plan by tomorrow. Talk next week."
+    }
+  ]
+}

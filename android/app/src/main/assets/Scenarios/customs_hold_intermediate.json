@@ -1,0 +1,68 @@
+{
+  "scenario_id": "customs_hold",
+  "scenario_title_en": "Customs Hold & Return",
+  "scenario_title_zh": "海关查验/扣货(进阶)",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, Sandra from LA warehouse. Your B/L HMM-2024-0856 has been on customs hold for 3 days now. We've got the lab test report back — the fabric actually has 4 percent spandex, so it doesn't qualify for HS 6203.42 cotton trousers. They're saying it's 6204.43, which means 32 percent duty instead of 16. And there's a possible anti-dumping review on polyester trousers from China starting next month.",
+      "ai_message_zh": "陈,你好,洛杉矶仓的 Sandra。你们 B/L HMM-2024-0856 已经被海关扣了 3 天。测试报告出来了 — 面料实际含 4% 氨纶,所以不符合 6203.42 棉裤的归类。他们说是 6204.43,关税从 16% 提到 32%。而且下个月可能开始对中国涤纶裤的反倾销复审。",
+      "expected_user_response_hint": "确认成分,讨论 HS 重新归类,提前准备反倾销应对",
+      "key_phrases": ["We will check the fabric composition", "could you send the test report", "what is the latest from CBP"],
+      "common_mistakes": "Don't say 'HS code doesn't matter' — 6203 vs 6204 = double the duty; always take it seriously.",
+      "tips_zh": "HS 重新归类常因发现氨纶/弹性纤维,棉与合纤税率差 1 倍;反倾销是更大的系统性风险。",
+      "user_response_example": "OK, sorry to hear about the spandex content — we'll re-verify with our mill. Can you send the test report and the anti-dumping notice? We want to check if our 6204.43 category is on the review list."
+    },
+    {
+      "round": 2,
+      "ai_message": "Sure, I'll forward both by email. The bigger issue is — if the anti-dumping review covers your category, your future shipments will be hit with extra duty, possibly 30 to 80 percent on top of the 32 percent. CBP is asking us to either pay the higher duty now or get a binding ruling letter.",
+      "ai_message_zh": "好的,我两个都邮件转发。更大的问题是 — 如果反倾销复审覆盖你们的类目,后面出货会再加 30-80% 的额外关税,叠在 32% 之上。CBP 让我们要么现在补高关税,要么做 binding ruling。",
+      "expected_user_response_hint": "讨论 binding ruling 时间成本,提议分批策略",
+      "key_phrases": ["Binding ruling takes 3 to 6 months", "we should split the shipment", "anti-dumping review"],
+      "common_mistakes": "anti-dumping duty 跟 regular duty 是叠加的(不是二选一),客户常搞混。",
+      "tips_zh": "Binding ruling 3-6 个月,但 CBP 允许在申请期间继续按当前税率进口(押金形式),降低现金流压力。",
+      "user_response_example": "Binding ruling takes 3 to 6 months. Let's start the application now. For this shipment, can we pay the 32 percent and file a refund claim once the ruling is out? Or do we have to pay the anti-dumping deposit too?"
+    },
+    {
+      "round": 3,
+      "ai_message": "You have to pay the 32 percent now, and the anti-dumping deposit — about 47 percent on the entered value. The deposit is refundable if the final duty is lower. Total cash hit is around US$28,000 for this shipment.",
+      "ai_message_zh": "现在必须付 32%,加上反倾销押金(约 47% 按完税价格算)。如果最终税率更低押金可退。这票现金压力大概 2.8 万美元。",
+      "expected_user_response_hint": "讨论分摊方案,接受反倾销押金",
+      "key_phrases": ["We can split the cost", "anti-dumping deposit", "refund claim", "split 50 / 50"],
+      "common_mistakes": "deposit = 押金,不是定金;refundable if rate is reduced;有时 12-18 个月才能退。",
+      "tips_zh": "反倾销押金退还要等终裁,通常 12-18 个月,客户常因为现金流不愿意等。",
+      "user_response_example": "The 32 percent duty we accept — that's our mistake on the HS code. For the anti-dumping deposit, can we split 50 / 50 since the rate is uncertain? Or can you advance it and we reimburse next quarter?"
+    },
+    {
+      "round": 4,
+      "ai_message": "OK, we can do 50 / 50 on the anti-dumping deposit, but we need a written commitment from your finance team. About the binding ruling, CBP charges no fee, but the application needs detailed product specs — yarn count, GSM, full fiber breakdown, and end use. Can you prepare that within a week?",
+      "ai_message_zh": "反倾销押金 50/50 可以,但要你们财务书面承诺。Binding ruling 方面,CBP 不收费,但申请要详细产品参数 — 纱支、克重、完整纤维成分、用途。一周内能准备好吗?",
+      "expected_user_response_hint": "承诺准备 specs,讲清时间表",
+      "key_phrases": ["We can prepare within 5 business days", "full fiber breakdown", "binding ruling specs"],
+      "common_mistakes": "binding ruling 申请里写错纤维成分 = 申请作废 + 12 个月不能重提,要仔细。",
+      "tips_zh": "CBP NCSD 申请需要的产品参数:composition / yarn count / GSM / weight / end use / sample images。",
+      "user_response_example": "We can prepare the full specs within 5 business days — composition, yarn count, GSM, end use, with sample photos. Should we send it to your broker or directly to CBP NCSD?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Send to our broker first, they'll review and forward to CBP. Now about the next two shipments on PO 2024-401 and 2024-405 — we want to suspend both until the ruling is out, or at least re-route them to a different HS code.",
+      "ai_message_zh": "先发给我们报关行,他们审核后转 CBP。接下来的 PO 2024-401 和 2024-405 两票货 — 我们想等裁定出来再发,或者至少重新归类到不同 HS。",
+      "expected_user_response_hint": "讨论暂停或重新归类,评估对交期的影响",
+      "key_phrases": ["We can hold both shipments", "re-route to different HS", "ETD may slip"],
+      "common_mistakes": "re-routing HS code 是高风险操作,如果归类不当会被 CBP 认定为 evasion,罚款 + 列入黑名单。",
+      "tips_zh": "重归类(HS re-route)是合法但严格的做法,需要律师 + 报关行双重签字,不能图快。",
+      "user_response_example": "We can hold both shipments at our factory. About re-routing the HS, our US agent says it's risky without a binding ruling — we should wait. Can we hold 60 days and revisit?"
+    },
+    {
+      "round": 6,
+      "ai_message": "60 days hold is acceptable, but we need a written notice from you with the exact hold start date and a revised ETD. About the cargo already on hold, can we get it released in 7 days if we pay all duties and deposits today?",
+      "ai_message_zh": "60 天 hold 可以接受,但要你们书面通知,写明 hold 起始日和修订 ETD。已经扣着的货,如果今天付清所有关税和押金,7 天能放出来吗?",
+      "expected_user_response_hint": "确认今天付款,讨论放行时间表,做 closing",
+      "key_phrases": ["We will pay today by TT", "release within 7 days", "revised ETD by ..."],
+      "common_mistakes": "Don't say 'we will pay when convenient' — in customs hold, time is money, every day costs demurrage.",
+      "tips_zh": "CBP 收到付款后 3-5 个工作日放行,7 天是保守时间;demurrage 按天累计,越快越好。",
+      "user_response_example": "We will arrange the TT payment today for our 50 percent of the deposit plus all the duty. Please confirm the broker account by email. Looking forward to the cargo release within 7 days, Sandra."
+    }
+  ]
+}

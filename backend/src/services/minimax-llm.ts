@@ -32,7 +32,8 @@ After each user utterance, evaluate it and return STRICT JSON with EXACTLY this 
   "fluency": number,               // 0-100 integer
   "accuracy": number,              // 0-100 integer — grammar, vocabulary, collocation
   "key_issues": [string, string, string],  // up to 3 short English issue sentences (max 12 words each)
-  "suggestion": string             // one English sentence of constructive advice (max 20 words)
+  "suggestion": string,            // one English sentence of constructive advice (max 20 words)
+  "native_polish": string          // rephrase the user's sentence into how a native senior textile executive would say it (natural, professional, idiomatic)
 }
 
 Scoring rubric:

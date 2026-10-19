@@ -1,0 +1,88 @@
+{
+  "scenario_id": "customs_hold",
+  "scenario_title_en": "Customs Hold & Return",
+  "scenario_title_zh": "海关查验/扣货",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, this is Sandra from our LA warehouse. Bad news — your shipment under B/L HMM-2024-0856 got held by US Customs at Long Beach. We've been told to wait for further notice.",
+      "ai_message_zh": "陈,你好,我是洛杉矶仓的 Sandra。坏消息 — 你们 B/L HMM-2024-0856 的货在长滩被美国海关扣了。等进一步通知。",
+      "expected_user_response_hint": "接收坏消息,询问扣货原因",
+      "key_phrases": ["Sorry to hear that", "Could you share the reason", "What did customs say"],
+      "common_mistakes": "客户刚说 'got held',不要马上说 'this is not our fault'。先听,后查。",
+      "tips_zh": "接收扣货三步:acknowledge / ask for reason / commit to follow up。",
+      "user_response_example": "Hi Sandra, sorry to hear that. Could you share what the customs officer said the reason was? We will check our end and get back to you within 24 hours."
+    },
+    {
+      "round": 2,
+      "ai_message": "They mentioned two issues. First, the HS code on the commercial invoice says 6203.42, but the lab test report shows the fabric is 65 percent polyester, which should be 6203.43. Second, the country-of-origin label on the cartons says 'Made in Vietnam' but the C/O says China.",
+      "ai_message_zh": "他们提到两个问题:第一,商业发票的 HS 编码是 6203.42,但测试报告显示面料 65% 涤纶,应该是 6203.43。第二,纸箱上的原产地标签写的是 'Made in Vietnam',但 C/O 写的是中国。",
+      "expected_user_response_hint": "逐条解释原因,说明应对方案",
+      "key_phrases": ["For the HS code, ...", "for the label, ...", "we will fix it by ..."],
+      "common_mistakes": "HS code 不要说成 'HS code' 念成字母,直接读 'HS code' 即可,数字部分按 6 位数报。",
+      "tips_zh": "HS 编码 6203.42 = 棉男裤;6203.43 = 合成纤维男裤。成分决定归类,这是常见错误。",
+      "user_response_example": "For the HS code, we made a mistake — the test report shows 65 percent polyester, so it should be 6203.43. For the Vietnam label, that's a printing error by our factory. We will issue a corrected C/O and re-label the cartons."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK, a corrected C/O and re-labeling the cartons. About the C/O, can you send it by email first so our broker can show it to the customs officer today?",
+      "ai_message_zh": "好的,改 C/O 和重贴标签。C/O 能不能先邮件发一下,我们的报关行今天就给海关看?",
+      "expected_user_response_hint": "确认能马上发改 C/O 邮件,讲清流程",
+      "key_phrases": ["I will send it within 1 hour", "scanned C/O", "by email"],
+      "common_mistakes": "C/O = Certificate of Origin,产地证;不要简写 'CO' 让客户混淆。",
+      "tips_zh": "产地证改证 = 原证作废 + 重开,海关通常接受扫描件先到 + 正本后到。",
+      "user_response_example": "I will send the scanned corrected C/O within 1 hour, and the original by DHL to your broker. Please confirm the broker's email and DHL address."
+    },
+    {
+      "round": 4,
+      "ai_message": "The broker's email is broker@fastcustoms.com. About the re-labeling, who will cover the cost? We can't afford another US$3,000 on top of the demurrage.",
+      "ai_message_zh": "报关行邮箱 broker@fastcustoms.com。重贴标签费用谁出?我们付不起额外的 3000 美元,加上堆存费。",
+      "expected_user_response_hint": "讨论费用分摊,给方案",
+      "key_phrases": ["We will cover ...", "split the cost", "it is our fault so we pay ..."],
+      "common_mistakes": "demurrage = 堆存费,免堆期后按天收;detention = 滞箱费,集装箱超期使用。",
+      "tips_zh": "免堆期 free time 一般 5-7 天,超出按 US$50-150 / 天 / 柜计。海关查验期间不计入免堆期。",
+      "user_response_example": "Since the label and C/O errors are on our side, we will cover the re-labeling cost. For the demurrage, can we split 50 / 50? Please send me the demurrage invoice."
+    },
+    {
+      "round": 5,
+      "ai_message": "50 / 50 on demurrage is fair. About the HS code, can your factory issue a corrected commercial invoice to match the test report? We may also need a binding ruling letter from US Customs to avoid future holds.",
+      "ai_message_zh": "堆存费 50/50 可以。HS 编码方面,你们工厂能不能开一份改过的商业发票,匹配测试报告?我们可能还需要美国海关的 binding ruling letter,避免以后再扣。",
+      "expected_user_response_hint": "确认能改商业发票,讲 binding ruling 流程",
+      "key_phrases": ["We can issue a corrected invoice", "binding ruling", "to avoid future issues"],
+      "common_mistakes": "binding ruling = 事先裁定,美国海关对特定商品的归类裁定,6-12 个月才能拿到。",
+      "tips_zh": "Binding ruling 流程:向 CBP NCSD 申请,US$0 费用但要详细产品说明,有效期 3 年。",
+      "user_response_example": "We will issue a corrected commercial invoice today. For the binding ruling, our US agent can apply to CBP — it usually takes 3 to 6 months. We will start the application this month."
+    },
+    {
+      "round": 6,
+      "ai_message": "Sounds good. If customs doesn't release the cargo in 5 days, can we divert it to a free port like Panama or back to China? We need a Plan B.",
+      "ai_message_zh": "好的。如果 5 天内海关不放货,我们能不能改港到巴拿马这种自由港,或者退运回中国?我们要个 Plan B。",
+      "expected_user_response_hint": "讨论改港或退运方案,讲清成本",
+      "key_phrases": ["We can divert to ...", "return to origin", "freight cost", "Plan B"],
+      "common_mistakes": "Don't say 'it is easy' — say 'we can arrange it but it will cost US$X for freight and Y days'.",
+      "tips_zh": "退运回中国 = 进口商承担运费 + 关税保证金可退;改港 = 卸到自由港暂存,等清关结果。",
+      "user_response_example": "We can arrange diversion to a free port or return to origin, but the freight cost will be around US$8,000 to US$12,000. Let's monitor for 5 days, then decide. Will keep you posted."
+    },
+    {
+      "round": 7,
+      "ai_message": "OK, 5 days. About the next shipment on PO 2024-401, can you hold it until this issue is resolved? We don't want a second hold.",
+      "ai_message_zh": "好的,5 天。下一票 PO 2024-401 的货,你们能先扣住吗?我们不想第二次被扣。",
+      "expected_user_response_hint": "确认能 hold 住货,讲清影响",
+      "key_phrases": ["We will hold the shipment", "until the issue is resolved", "no impact on ETD"],
+      "common_mistakes": "Don't say 'we can't hold' — say 'we can hold but the ETD may slip by a few days'.",
+      "tips_zh": "Hold 在工厂 = 装柜前扣住,影响小;hold 在港口 = 已进港,改单费用高。",
+      "user_response_example": "We will hold PO 2024-401 at the factory until this issue is cleared. ETD may slip 3 to 5 days, but we'll update you as soon as we know."
+    },
+    {
+      "round": 8,
+      "ai_message": "Understood. To wrap up: corrected C/O by email today, re-labeling by your cost, demurrage split 50 / 50, binding ruling application this month, Plan B in 5 days, hold PO 2024-401. Correct?",
+      "ai_message_zh": "明白。总结:今天邮件发改 C/O,重贴标签费用你方承担,堆存费 50/50,本月申请 binding ruling,5 天后 Plan B,PO 2024-401 先 hold。对吗?",
+      "expected_user_response_hint": "做 closing summary,确认所有动作",
+      "key_phrases": ["To summarize", "we will do ... by ...", "thank you for your understanding"],
+      "common_mistakes": "收尾不要用 OK, bye — 要做一个明确的 next step 总结。",
+      "tips_zh": "电话结束前主动总结 5-6 件事:谁做什么、什么时候完成、文件往哪发、Plan B 触发条件。",
+      "user_response_example": "Correct. To summarize: corrected C/O emailed in 1 hour, re-labeling at our cost, demurrage 50 / 50, binding ruling application started, Plan B in 5 days, hold PO 2024-401. Thank you for working with us on this, Sandra."
+    }
+  ]
+}

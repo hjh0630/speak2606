@@ -1,0 +1,88 @@
+{
+  "scenario_id": "post_mortem",
+  "scenario_title_en": "Post-Mortem Review",
+  "scenario_title_zh": "反思复盘",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning. I have the Q3 post-mortem deck in front of me. Three things stand out: defect rate crept up to 1.8%, on-time delivery dropped to 91%, and we paid USD 28,000 in claims. This is the third quarter in a row that we are missing the KPI. I need a frank conversation about why the existing CAPA is not working, and a new approach. Walk me through your analysis.",
+      "ai_message_zh": "早上好。手上有 Q3 复盘材料。三件事显眼:疵点率升到 1.8%,准时交付降到 91%,索赔 28,000 美元。连续三季度 KPI 不达标。我要一个坦率的对话:为什么之前的 CAPA 不起作用,新方案怎么搞。带我过你的分析。",
+      "expected_user_response_hint": "承认 KPI 下滑,系统分析 CAPA 失效原因,提出新方法",
+      "key_phrases": ["acknowledge the trend", "Pareto of CAPA failures", "weak in preventive actions", "new framework"],
+      "common_mistakes": "不要为自己辩解,先承认趋势 + 分析 CAPA 失效原因。",
+      "tips_zh": "CAPA 失效常见:1) preventive action 走过场,2) owner 没 accountability,3) 没有 verification。",
+      "user_response_example": "Honest answer: I looked at the 18 CAPAs we closed in the last 9 months. 11 had corrective actions that worked, but only 4 had preventive actions that actually changed the system. The pattern is clear — we are firefighting symptoms, not preventing the next fire. I want to propose a 3-pillar framework: leadership accountability, preventive rigor, and KPI linkage."
+    },
+    {
+      "round": 2,
+      "ai_message": "Pillar 1: leadership accountability. What does that mean concretely? In the past, the plant manager signed off on CAPAs but did not follow up. I do not want theater.",
+      "ai_message_zh": "第一根支柱:领导 accountability。具体什么意思?过去厂长签字批 CAPA,但不跟进。我不要走过场。",
+      "expected_user_response_hint": "讨论 leadership accountability 的具体机制",
+      "key_phrases": ["monthly CAPA review at plant level", "KPI tied to manager evaluation", "RACI per CAPA", "escalation path"],
+      "common_mistakes": "leadership accountability 要和 KPI / 绩效 挂钩,不能只是开会。",
+      "tips_zh": "leadership accountability 三件套:1) 定期评审,2) KPI 挂钩,3) 升级路径。",
+      "user_response_example": "Three concrete actions. First, monthly CAPA review at the plant manager level — not a status update, a real review with go/no-go decisions. Second, the CAPA closure rate becomes a KPI in the plant manager's quarterly evaluation, weighted at 15%. Third, we use a RACI matrix per CAPA: Responsible (the doer), Accountable (the plant manager), Consulted (the IE/QA), Informed (the leadership team). If a CAPA is overdue 30 days, it auto-escalates to the COO."
+    },
+    {
+      "round": 3,
+      "ai_message": "Pillar 2: preventive rigor. Show me what is broken in our current preventive actions. I have a feeling we are checking boxes.",
+      "ai_message_zh": "第二根支柱:预防力度。给我看现在预防措施哪里坏了。我感觉我们是在走过场。",
+      "expected_user_response_hint": "诊断 preventive action 走过场的问题,提出新机制",
+      "key_phrases": ["Preventive actions are vague", "no verification protocol", "no recurrence test", "FMEA approach"],
+      "common_mistakes": "preventive action 常见问题:写 'update SOP' 但不验证 SOP 是否真有效。",
+      "tips_zh": "Preventive rigor 要加:recurrence test(30/60/90 天回查)、FMEA(失效模式分析)、layered audit。",
+      "user_response_example": "Three problems. First, preventive actions are written as 'update SOP' with no verification. Second, no recurrence test — we close the CAPA when the SOP is updated, but we never go back 90 days later to check if the issue recurred. Third, no FMEA on critical processes — we react to failure, we do not anticipate failure. I propose a 4-step preventive protocol: 1) define failure mode, 2) design prevention, 3) implement and train, 4) verify at 30/60/90 days. If recurrence happens, the CAPA is reopened."
+    },
+    {
+      "round": 4,
+      "ai_message": "Pillar 3: KPI linkage. Currently we track 12 KPIs at the factory level, but they do not roll up to the issues we see on the floor. How do we link KPIs to the actual problems?",
+      "ai_message_zh": "第三根支柱:KPI 联动。现在我们工厂层面跟踪 12 个 KPI,但和现场问题对不上。怎么把 KPI 和真实问题联动?",
+      "expected_user_response_hint": "讨论 KPI 重新设计,问题驱动",
+      "key_phrases": ["issue-driven KPIs, not metric-driven", "Pareto top 5 issues = top 5 KPIs", "leading vs lagging indicators", "DPMO and yield"],
+      "common_mistakes": "KPI 不要太多,要 Pareto top 5 驱动,leading indicator 提前预警。",
+      "tips_zh": "Leading indicator 提前预测(lab dip approval rate),Lagging indicator 事后看(claim rate)。",
+      "user_response_example": "I propose a KPI redesign. Today we have 12 factory KPIs, mostly lagging. New model: 5 leading KPIs (lab dip first-pass approval, fabric inspection score, in-line audit coverage, CAPA closure rate on time, training completion rate) and 5 lagging KPIs (defect rate, OTD, claim rate, COPQ, customer return rate). The 5 lagging KPIs come directly from the Pareto top 5 issues of the last 4 quarters. The 5 leading KPIs are designed to predict them. Both sets roll up to the plant manager scorecard."
+    },
+    {
+      "round": 5,
+      "ai_message": "OK, the framework is clear. Now, I want to talk about the human side. We had 3 line supervisors leave in Q3. The new supervisors are struggling. What is your view on the capability gap, and how does the post-mortem address it?",
+      "ai_message_zh": "好,框架清楚。现在谈人的问题。Q3 走了 3 个线长,新线长压力大能力跟不上。你怎么看能力差距?复盘怎么解决?",
+      "expected_user_response_hint": "讨论人才、培训、知识沉淀",
+      "key_phrases": ["talent pipeline", "supervisor certification", "knowledge management", "tacit knowledge"],
+      "common_mistakes": "人才流失要把 tacit knowledge(师傅脑子里的)显性化,落到 SOP。",
+      "tips_zh": "复盘的隐性价值:把个人经验变成组织资产(tacit → explicit)。",
+      "user_response_example": "The capability gap is real — 3 of our 8 line supervisors left for higher pay, and the replacements are first-time supervisors. The post-mortem addresses it in 3 ways. First, every CAPA must include a training record — who was trained, on what, when. Second, the lessons-learned documents are required reading for new supervisors, with a quiz. Third, we will set up a 'master supervisor' role — a senior operator with 10+ years' experience, who acts as a coach. This captures tacit knowledge before it walks out the door."
+    },
+    {
+      "round": 6,
+      "ai_message": "Talent retention is a separate budget discussion. For now, focus on the post-mortem process. Walk me through the PDCA cycle for the new framework — how does it work over the next 90 days?",
+      "ai_message_zh": "人才保留是预算问题,另议。现在聚焦复盘流程。带我过新框架的 PDCA 循环 — 接下来 90 天怎么走?",
+      "expected_user_response_hint": "给 90 天 PDCA 计划",
+      "key_phrases": ["Plan: define new KPI and CAPA protocol", "Do: pilot on PO 4530", "Check: 30/60/90 day review", "Act: refine and roll out"],
+      "common_mistakes": "PDCA 90 天要有具体 milestone,不能 'we will do PDCA'。",
+      "tips_zh": "PDCA 90 天常见:Plan (week 1-2), Do (week 3-8), Check (week 9-10), Act (week 11-12)。",
+      "user_response_example": "PDCA over 90 days. Plan: weeks 1 and 2 — finalize the 10 KPIs, redesign the CAPA template, train all 8 line supervisors on the new process. Do: weeks 3 to 8 — pilot on PO 4530 and PO 4531, the two big orders in October. Every CAPA uses the new 4-step preventive protocol. Check: weeks 9 and 10 — 30-day check on pilot CAPAs, 60-day check on training adoption, 90-day check on KPI movement. Act: week 11 to 12 — refine the framework, address gaps, present the Q4 review to the COO. The output: a working framework, not a deck."
+    },
+    {
+      "round": 7,
+      "ai_message": "Sounds like a real operating system, not a project. I am willing to back it. But I want to see a few things from you by next Friday: a 1-page memo on the 3 pillars, a draft CAPA template, a draft KPI scorecard, and a 90-day PDCA timeline. Can you commit?",
+      "ai_message_zh": "听起来是个操作系统,不是项目。我愿意背书。但我下周五前要看你出的几样东西:3 根支柱 1 页 memo、CAPA 模板草稿、KPI 看板草稿、90 天 PDCA 时间表。你能承诺吗?",
+      "expected_user_response_hint": "承诺交付,讨论优先级和资源",
+      "key_phrases": ["I can commit", "all 4 deliverables by Friday", "need IE and QA bandwidth", "coaching from leadership"],
+      "common_mistakes": "承诺要有 4 个 deliverable 的清单 + 日期,不能只说 'yes'。",
+      "tips_zh": "高管要的 deliverable:1) memo, 2) template, 3) scorecard, 4) timeline,要 4 个齐。",
+      "user_response_example": "I can commit. All 4 deliverables by next Friday 5 pm. Deliverable 1: 1-page memo on the 3 pillars, 1 page max, focused. Deliverable 2: draft CAPA template with the 4-step preventive protocol and RACI. Deliverable 3: draft KPI scorecard with 5 leading and 5 lagging indicators, plus a data source for each. Deliverable 4: 90-day PDCA timeline with milestones and owners. I will need 2 days of IE and QA bandwidth, plus a 30-minute review with you to align on the message. Will that work?"
+    },
+    {
+      "round": 8,
+      "ai_message": "Yes, IE and QA bandwidth is approved. The 30-minute review is on my calendar. To close: 3-pillar framework (leadership accountability, preventive rigor, KPI linkage), CAPA redesign with 4-step preventive protocol, KPI scorecard with 5 leading + 5 lagging indicators, 90-day PDCA pilot on PO 4530 and 4531, 4 deliverables by next Friday, monthly KPI review. We will do the Q4 review on 15 January, and I want to see defect rate below 1.2%, OTD above 95%, and zero repeated root causes. Anything else?",
+      "ai_message_zh": "好,IE 和 QA 时间批准。30 分钟 review 已上日历。收尾:3 支柱框架(领导 accountability、预防力度、KPI 联动),CAPA 重设计 4 步预防协议,10 个 KPI 看板,90 天 PDCA 试点 PO 4530 和 4531,下周五前 4 个 deliverable,月度 KPI 评审。Q4 评审 1 月 15 日,我要看到疵点率低于 1.2%,OTD 高于 95%,零重复根因。还有别的吗?",
+      "expected_user_response_hint": "做最终 closing summary,确认所有数字、文件、机制",
+      "key_phrases": ["To summarize and confirm", "3 pillars + CAPA + KPI + PDCA", "Q4 review 15 January", "all locked"],
+      "common_mistakes": "高级 close 要逐条 confirm,留 paper trail, 设定 Q4 目标。",
+      "tips_zh": "跨季度 close:3 件事 — 1) 总结方案, 2) 设定目标, 3) 约定下次评审。",
+      "user_response_example": "To summarize and confirm: 3-pillar framework — leadership accountability, preventive rigor, KPI linkage. CAPA redesign with 4-step preventive protocol and RACI. KPI scorecard: 5 leading, 5 lagging, rolled up to plant manager. 90-day PDCA pilot on PO 4530 and 4531, monthly KPI review first Friday of each month. 4 deliverables by next Friday 5 pm. Q4 review on 15 January. Targets: defect rate below 1.2%, OTD above 95%, zero repeated root causes, COPQ below 0.8% of revenue. All locked. This is the kind of operating discipline we need, and I appreciate the candor in your analysis. See you on the 30-minute review."
+    }
+  ]
+}

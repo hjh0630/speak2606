@@ -1,0 +1,40 @@
+{
+  "scenario_id": "woven_airjet_ripstop",
+  "scenario_title_en": "Woven Air-Jet & Ripstop Development",
+  "scenario_title_zh": "梭织新颖纹理与高密防撕裂",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello David. We are sourcing a lightweight technical ripstop for our packable alpine shell jacket. We need tear strength over 25 Newtons, but the total weight must not exceed 65 GSM. Can your air-jet looms deliver this balance?",
+      "ai_message_zh": "你好 David。我们正在为可收纳高山冲锋衣采购一款轻量化科技防撕裂（Ripstop）面料。我们要求撕破强力超过 25 牛顿，但总克重不能超过 65 GSM。你们的喷气织机能做到这个平衡吗？",
+      "expected_user_response_hint": "介绍采用 20D 高强尼龙66 (Cordura) 结合微型微格 (micro-ripstop) 结构，利用喷气机高纬密织造达到高强轻量化",
+      "key_phrases": [
+        "air-jet loom high speed",
+        "20D high-tenacity Nylon 66",
+        "micro-ripstop grid",
+        "tear strength ASTM D1424",
+        "under 65 GSM"
+      ],
+      "common_mistakes": "撕破强力测试要指明方法，如 'Elmendorf tear strength ASTM D1424 exceeding 25N'。",
+      "tips_zh": "母语亮点：'By reinforcing a 20D high-tenacity nylon ground with a cross-hatch double-yarn ripstop grid, we comfortably exceed 25 Newtons at 62 GSM.'",
+      "user_response_example": "Yes, we can. On our Tsudakoma high-speed air-jet looms, we weave a 20D high-tenacity Nylon 66 filament using a cross-hatch micro-ripstop grid. The high warp and weft tension control on air-jet looms ensures tight yarn interlocking. We can achieve a finished weight of 62 GSM while delivering Elmendorf tear strength well above 28 Newtons under ASTM D1424."
+    },
+    {
+      "round": 2,
+      "ai_message": "That tear-to-weight ratio is stellar. What finishing and coating do you suggest to maintain breathability while repelling heavy alpine downpours?",
+      "ai_message_zh": "这个强重比非常出色。你建议采用什么后整理和涂层，既能抵御高山暴雨，又能保持透气性？",
+      "expected_user_response_hint": "推荐超轻亲水性 TPU 微孔贴膜或透湿涂层，外层配合 C0 DWR，实现 10k/10k 防水透气",
+      "key_phrases": [
+        "breathable microporous membrane",
+        "C0 durable water repellent",
+        "10,000mm hydrostatic head",
+        "10,000g/m2/24h MVTR",
+        "soft quiet drape"
+      ],
+      "common_mistakes": "不要说 'very waterproof and very breathable'，用行业硬指标 '10k hydrostatic head and 10k MVTR'。",
+      "tips_zh": "母语亮点：'A 2.5-layer construction with a hydrophilic breathable membrane and C0 DWR gives you 10k/10k performance with silent, rustle-free drape.'",
+      "user_response_example": "We recommend a 2.5-layer lamination incorporating an ultra-thin hydrophilic membrane backed by our C0 fluorocarbon-free DWR. This setup guarantees a waterproof hydrostatic head over 10,000 mm while delivering a breathability MVTR above 10,000 g/m²/24hr. Furthermore, our micro-dry print on the inner face eliminates skin cling without the weight of a separate lining."
+    }
+  ]
+}

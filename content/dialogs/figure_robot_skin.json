@@ -1,0 +1,56 @@
+{
+  "scenario_id": "figure_robot_skin",
+  "scenario_title_en": "Figure AI Humanoid Robot Skin Fabric",
+  "scenario_title_zh": "Figure AI 机器人柔性皮肤面料",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi David, thanks for turning around the initial fabric swatches so fast. For our humanoid robot's exterior skin, we need this fabric to mimic human touch while stretching over 150% at the joints without bagging out. How do you propose achieving that?",
+      "ai_message_zh": "嗨 David，感谢这么快提供第一批面料样卡。针对我们人形机器人的外层皮肤，我们需要面料具备类肤触感，同时关节处全向拉伸超过150%且不能起堆鼓包。你建议如何实现？",
+      "expected_user_response_hint": "建议采用高针距电脑横机飞织或经编方案，使用高弹包覆纱配比，结合人体工程关节分区织造",
+      "key_phrases": [
+        "human-like handfeel",
+        "high recovery modulus",
+        "spandex covered yarn",
+        "zonal knitting",
+        "zero bagging effect"
+      ],
+      "common_mistakes": "不要说 'we use very stretchy elastic'，要说 'high-recovery spandex covered yarn with high modulus to prevent bagging out'。",
+      "tips_zh": "行话提炼：'zonal compression knitting' (分区压缩织造) 和 'hysteresis loop' (滞后回弹曲线)。",
+      "user_response_example": "We completely understand the biomechanical challenge. To achieve both a human-like handfeel and over 150% omnidirectional elongation, we propose using our fine-gauge flat knitting or warp tricot machine. By blending fine-denier DTY polyester with 40D/75D single-covered spandex in a zonal knitting structure, we can maximize elasticity at the knee and elbow joints while maintaining high recovery modulus so it snaps back cleanly without bagging out."
+    },
+    {
+      "round": 2,
+      "ai_message": "That makes total sense. Another critical gate for California compliance is environmental standards: we require strictly PFAS-free DWR with total fluorine under 100 ppm, but we cannot sacrifice water repellency. Can your finishing line guarantee that?",
+      "ai_message_zh": "完全切中要害。另一个加州合规硬性指标是环保要求：我们要求严格的无氟防水（PFAS-free DWR），总氟含量低于 100 ppm，但绝不能牺牲防泼水性能。你们的后整理线能保证吗？",
+      "expected_user_response_hint": "承诺采用信泰成熟的 C0 无氟拒水整理剂，达到 AATCC 22 初始100分，满足加州严格限氟法案",
+      "key_phrases": [
+        "C0 PFAS-free DWR",
+        "total fluorine below 100 ppm",
+        "AATCC 22 spray rating 100",
+        "stenter heat-setting cure",
+        "California AB 1817 compliant"
+      ],
+      "common_mistakes": "避免混淆 C6/C8 传统防水与 C0 无氟防水，老外非常看重 'zero added PFAS'。",
+      "tips_zh": "母语亮点：'Our C0 fluorocarbon-free chemistry passes California AB 1817 with non-detectable PFAS levels.'",
+      "user_response_example": "Absolutely. We have already phased in advanced C0 fluorocarbon-free chemistry on our stenter finishing lines. Our PFAS-free formulation easily complies with California regulations, guaranteeing total fluorine well below 100 ppm. In performance testing, it hits an AATCC 22 spray rating of 100 initially and maintains Grade 80+ even after 20 commercial laundering cycles."
+    },
+    {
+      "round": 3,
+      "ai_message": "Impressive data. What about the manufacturing route? Should we go with one-piece 3D flat knit flyknit, or cut-and-sew from warp knitted yardage?",
+      "ai_message_zh": "数据令人放心。关于量产工艺路径，你建议采用一体成型 3D 飞织，还是采用经编大货面料进行裁剪车缝？",
+      "expected_user_response_hint": "客观对比两种方案：飞织一体成型零车缝、贴合度完美但成本稍高；经编大货裁剪性价比极佳、利于快速放样",
+      "key_phrases": [
+        "one-piece flat knitting",
+        "seamless zero-waste",
+        "cut-and-sew warp knit",
+        "cost-benefit trade-off",
+        "rapid prototyping"
+      ],
+      "common_mistakes": "不要只说 'flyknit is better'，要从工装成本、贴合度、量产爬坡三个维度客观给出商业建议。",
+      "tips_zh": "母语高级表达：'From a cost-benefit standpoint, we recommend a phased approach: warp knit for initial rapid trials, then transition to 3D engineered knit for production.'",
+      "user_response_example": "From a technical and commercial perspective, both routes have distinct advantages. One-piece 3D flat knitting on 24-gauge machines provides seamless zero-waste construction and superior zonal shaping around curved actuators. On the other hand, our warp knitted 3-jacquard fabric combined with ultrasonic welded seams offers a much faster sampling turnaround and lower unit cost. We recommend qualifying the warp-knit option for EVT, while developing the 3D engineered flyknit for mass production."
+    }
+  ]
+}

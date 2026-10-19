@@ -2,9 +2,10 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import { getScenario } from '@/api/scenarios'
-import type { PracticeMode, Scenario } from '@/types/api'
+import type { CustomScenario, PracticeMode, Scenario } from '@/types/api'
 import { useUserStore } from '@/stores/user'
 import { useSessionStore } from '@/stores/session'
+import { useCustomScenariosStore } from '@/stores/customScenarios'
 import DifficultySelector from '@/components/DifficultySelector.vue'
 import ModeSelector from '@/components/ModeSelector.vue'
 
@@ -12,19 +13,50 @@ const route = useRoute()
 const router = useRouter()
 const userStore = useUserStore()
 const sessionStore = useSessionStore()
+const customStore = useCustomScenariosStore()
 
 const scenario = ref<Scenario | null>(null)
+/** The raw AI-generated payload, when the route id starts with "custom-".
+ *  Passed through to startSession → POST /api/sessions as custom_scenario. */
+const customScenario = ref<CustomScenario | null>(null)
 const loading = ref(true)
 const error = ref<string | null>(null)
 const difficulty = ref(userStore.defaultDifficulty)
 const mode = ref<PracticeMode>(userStore.defaultMode)
 const starting = ref(false)
 
+// Adapt a locally-stored CustomScenario into the Scenario shape this page
+// renders (title / description / roles / goals chips).
+function customToScenario(cs: CustomScenario): Scenario {
+  return {
+    id: cs.id,
+    title: cs.title_zh || cs.name,
+    subtitle: cs.title_en,
+    description: cs.description_zh || cs.description_en,
+    difficulty: 'beginner',
+    difficulty_levels: ['beginner', 'intermediate', 'advanced'],
+    category: '自定义',
+    roles: { ai: 'AI 对话伙伴', user: '你' },
+    goals: (cs.vocabulary ?? []).slice(0, 6).map((v) => v.term),
+    icon: '✨',
+    tags: cs.keywords,
+  }
+}
+
 async function load() {
   loading.value = true
   error.value = null
+  customScenario.value = null
   try {
-    scenario.value = await getScenario(route.params.id as string)
+    const id = route.params.id as string
+    if (id.startsWith('custom-')) {
+      const cs = customStore.getById(id)
+      if (!cs) throw new Error('自定义场景不存在或已被删除')
+      customScenario.value = cs
+      scenario.value = customToScenario(cs)
+    } else {
+      scenario.value = await getScenario(id)
+    }
   } catch (e) {
     error.value = e instanceof Error ? e.message : '加载失败'
   } finally {
@@ -52,6 +84,7 @@ async function start() {
       scenarioId: scenario.value.id,
       mode: mode.value,
       difficulty: difficulty.value,
+      customScenario: customScenario.value ?? undefined,
     })
     router.push({ name: 'practice', params: { id: s.id } })
   } catch (e) {

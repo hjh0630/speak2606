@@ -223,6 +223,8 @@ function loadAll(): void {
   const contentRoots: string[] = [contentDir];
   const textileDir = path.join(contentDir, 'textile-english');
   if (fs.existsSync(textileDir)) contentRoots.push(textileDir);
+  const shoeUpperDir = path.join(contentDir, 'shoe-upper');
+  if (fs.existsSync(shoeUpperDir)) contentRoots.push(shoeUpperDir);
 
   // ── Scenarios: read every root's scenarios.json and merge by id. ─────────
   const scenarioMap = new Map<string, ScenarioMeta>();
@@ -231,8 +233,10 @@ function loadAll(): void {
     const file = path.join(root, 'scenarios.json');
     const data = safeReadJson<ScenarioMeta[]>(file);
     if (data && Array.isArray(data)) {
-      const moduleTag: 'foreign-trade' | 'textile-apparel' =
-        root === textileDir ? 'textile-apparel' : 'foreign-trade';
+      const moduleTag: 'foreign-trade' | 'textile-apparel' | 'shoe-upper' =
+        root === textileDir ? 'textile-apparel' :
+        root === shoeUpperDir ? 'shoe-upper' :
+        'foreign-trade';
       for (const s of data) {
         if (s && typeof s.id === 'string' && s.id.length > 0) {
           // Stamp the module tag from the source root, but let an explicit

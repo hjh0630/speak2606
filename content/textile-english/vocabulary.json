@@ -1,108 +1,1523 @@
 [
-  {"term":"combed yarn","full_form":"combed cotton yarn","category":"spinning","definition_en":"cotton yarn that has been combed to remove short fibers, producing a smoother, stronger, cleaner yarn","definition_zh":"精梳棉纱（去除短纤后强力高、毛羽少）","example_en":"All T-shirts under this PO must use 100% combed yarn.","example_zh":"此订单下所有 T 恤必须使用 100% 精梳棉纱。"},
-  {"term":"carded yarn","full_form":"carded cotton yarn","category":"spinning","definition_en":"cotton yarn that has only been carded, leaving more short fibers and a rougher surface","definition_zh":"普梳棉纱（成本低，毛羽较多）","example_en":"Carded yarn is acceptable for the inner pocket lining only.","example_zh":"普梳棉仅可用于内袋里布。"},
-  {"term":"ring spun","full_form":"ring spun yarn","category":"spinning","definition_en":"yarn produced by ring spinning, the most common method that gives good strength and soft hand feel","definition_zh":"环锭纺纱（最主流的纺纱方式）","example_en":"Please confirm the yarn is 32s ring spun, not open-end.","example_zh":"请确认纱线为 32 支环锭纺，非气流纺。"},
-  {"term":"compact yarn","full_form":"compact spun yarn","category":"spinning","definition_en":"yarn spun on a compact spinning frame, with very low hairiness and high luster","definition_zh":"紧密纺纱（毛羽少、强力高、光洁）","example_en":"Compact yarn is mandatory for our premium shirting.","example_zh":"高档衬衫面料必须使用紧密纺纱。"},
-  {"term":"open-end yarn","full_form":"open-end yarn (OE)","category":"spinning","definition_en":"yarn produced by rotor spinning, lower cost but rougher hand feel and lower strength","definition_zh":"气流纺纱（成本低、手感粗硬）","example_en":"Open-end yarn is fine for low-end fleece.","example_zh":"气流纺可用于低端摇粒绒。"},
-  {"term":"slub yarn","full_form":"slub yarn","category":"spinning","definition_en":"yarn with intentional thick-and-thin variations for a textured, linen-look fabric","definition_zh":"竹节纱（粗细不匀的花式纱）","example_en":"Please develop a slub yarn linen-look fabric for SS25.","example_zh":"请为 25 春夏开发一款仿亚麻竹节纱面料。"},
-  {"term":"melange yarn","full_form":"melange yarn","category":"spinning","definition_en":"yarn spun from a blend of pre-dyed fibers to give a heathered or snowflake effect","definition_zh":"麻灰纱（混色纱，呈现雪花效果）","example_en":"Use grey melange yarn 80/20 cotton-polyester for the hoodie body.","example_zh":"卫衣身布采用 80/20 棉涤灰色麻灰纱。"},
-  {"term":"core-spun yarn","full_form":"core-spun yarn","category":"spinning","definition_en":"yarn with a filament core (usually spandex) wrapped by staple fibers, used for stretch fabrics","definition_zh":"包芯纱（长丝芯外包短纤，棉包氨纶常见）","example_en":"The denim uses cotton core-spun yarn with a spandex core.","example_zh":"此牛仔布采用棉包氨纶的包芯纱织造。"},
-  {"term":"yarn count","full_form":"yarn count","category":"spinning","definition_en":"the linear density of yarn, expressed in Ne (English), Tex, denier (D) or Nm (metric)","definition_zh":"纱支（纱线细度统称）","example_en":"Please specify the yarn count in both Ne and Tex.","example_zh":"请同时以英制和特数标注纱支。"},
-  {"term":"TPM","full_form":"turns per meter","category":"spinning","definition_en":"number of twists per meter of yarn, affects hand feel and strength","definition_zh":"每米捻数","example_en":"The hard-twisted voile requires 1,200 TPM.","example_zh":"强捻巴厘纱要求每米 1200 捻。"},
-  {"term":"Z-twist","full_form":"Z-twist","category":"spinning","definition_en":"the standard right-hand twist direction in cotton yarn","definition_zh":"Z 捻（右捻，棉纺单纱最常用）","example_en":"Single yarns are normally Z-twist in the cotton system.","example_zh":"棉纺单纱通常为 Z 捻。"},
-  {"term":"Uster CV%","full_form":"Uster evenness CV%","category":"spinning","definition_en":"coefficient of variation of yarn evenness measured on a Uster tester, lower is better","definition_zh":"条干变异系数（越小越均匀）","example_en":"Uster CV% should not exceed 13.5 for 30s combed cotton.","example_zh":"30 支精梳棉的 Uster CV% 不应超过 13.5。"},
-  {"term":"IPI","full_form":"imperfections per kilometer","category":"spinning","definition_en":"total count of thick places, thin places and neps per kilometer of yarn","definition_zh":"千米疵点（粗节+细节+棉结总数）","example_en":"The buyer requires IPI below 150 per km for shirting yarn.","example_zh":"客户要求衬衫纱 IPI 低于 150/km。"},
-  {"term":"hairiness index","full_form":"Uster hairiness index H","category":"spinning","definition_en":"the H value from Uster tester measuring protruding fibers on yarn surface","definition_zh":"毛羽指数 H 值","example_en":"The Uster hairiness index H must be below 5.5.","example_zh":"Uster 毛羽指数 H 必须低于 5.5。"},
-  {"term":"tenacity","full_form":"yarn tenacity","category":"spinning","definition_en":"specific strength of yarn in cN/tex (centinewtons per tex)","definition_zh":"单纱比强力","example_en":"The tenacity of this combed cotton yarn is 18 cN/tex.","example_zh":"此精梳棉纱的比强力为 18 cN/tex。"},
-  {"term":"EPI","full_form":"ends per inch","category":"weaving","definition_en":"number of warp yarns per inch in woven fabric","definition_zh":"经密（每英寸经纱数）","example_en":"EPI 110, PPI 76, balanced plain weave for the poplin order.","example_zh":"经密 110、纬密 76，平衡平纹用于府绸订单。"},
-  {"term":"PPI","full_form":"picks per inch","category":"weaving","definition_en":"number of weft yarns per inch in woven fabric","definition_zh":"纬密（每英寸纬纱数）","example_en":"PPI above 80 may cause reed mark on this yarn count.","example_zh":"该纱支纬密超过 80 可能产生筘痕。"},
-  {"term":"cuttable width","full_form":"cuttable width","category":"weaving","definition_en":"the usable width of finished fabric for garment lay planning","definition_zh":"可裁门幅","example_en":"Cuttable width 58/60 inches, please plan marker accordingly.","example_zh":"可裁门幅 58/60 英寸，请按此排料。"},
-  {"term":"poplin","full_form":"poplin","category":"weaving","definition_en":"a balanced plain-weave shirting fabric, typically 110x76 EPI/PPI","definition_zh":"府绸（衬衫常用平纹布）","example_en":"110x76 poplin, 100% cotton, 110 GSM, cuttable width 58/60 inches.","example_zh":"110x76 府绸，全棉，110 克重，可裁门幅 58/60 英寸。"},
-  {"term":"denim","full_form":"denim","category":"weaving","definition_en":"a sturdy 3/1 twill fabric, usually indigo-dyed warp and natural weft","definition_zh":"牛仔布（3/1 斜纹，靛蓝经+本白纬）","example_en":"12 oz indigo denim, 3/1 twill, sanforized, shrinkage under 3%.","example_zh":"12 盎司靛蓝牛仔，3/1 斜纹，预缩缩水率 3% 以内。"},
-  {"term":"twill","full_form":"twill weave","category":"weaving","definition_en":"a weave structure with diagonal lines, e.g. 2/1 twill, 3/1 twill","definition_zh":"斜纹布","example_en":"2/1 twill, combed cotton, suitable for workwear trousers.","example_zh":"2/1 斜纹，精梳棉，适合工装裤。"},
-  {"term":"rapier loom","full_form":"rapier loom","category":"weaving","definition_en":"a shuttleless loom using rigid or flexible rapiers to insert weft, ideal for high-quality poplin","definition_zh":"剑杆织机（适合高密府绸）","example_en":"We use Picanol rapier looms for solid poplin; no weft streaks.","example_zh":"我们用必佳乐剑杆织机织素色府绸，无纬档。"},
-  {"term":"air-jet loom","full_form":"air-jet loom","category":"weaving","definition_en":"a shuttleless loom using air jets to insert weft, high speed for mass production","definition_zh":"喷气织机（适合大批量雪纺等薄型）","example_en":"Air-jet loom is the best option for mass production of chiffon.","example_zh":"喷气织机是雪纺大批量生产的最佳选择。"},
-  {"term":"tricot","full_form":"tricot (warp knit)","category":"weaving","definition_en":"a basic warp-knit fabric, smooth on both sides, used for lingerie and linings","definition_zh":"经编平针（特里科）","example_en":"40D tricot, 60 GSM, widely used for lingerie and linings.","example_zh":"40D 经编平针，60 克重，广泛用于内衣和里布。"},
-  {"term":"raschel","full_form":"raschel (warp knit)","category":"weaving","definition_en":"a warp-knit machine/structure capable of complex laces and meshes","definition_zh":"拉舍尔经编（蕾丝与网眼）","example_en":"Raschel lace, 150 cm width, 4-bar, for women's dresses.","example_zh":"拉舍尔蕾丝，门幅 150 厘米，4 梳，用于女裙。"},
-  {"term":"single jersey","full_form":"single jersey","category":"weaving","definition_en":"a basic weft-knit fabric with one side smooth, one side looped, used for T-shirts","definition_zh":"单面布（汗布，T 恤常用）","example_en":"30s single jersey, 160 GSM, 100% cotton, for basic tees.","example_zh":"30 支单面布，160 克重，全棉，用于基础 T 恤。"},
-  {"term":"interlock","full_form":"interlock knit","category":"weaving","definition_en":"a double-knit fabric with two-faced structure, more stable than single jersey","definition_zh":"双罗纹/棉毛布（更厚实稳定）","example_en":"40s interlock, 200 GSM, used for premium polo shirts.","example_zh":"40 支双罗纹，200 克重，用于高档 Polo 衫。"},
-  {"term":"pique","full_form":"piqué knit","category":"weaving","definition_en":"a knit fabric with a textured waffle or honeycomb surface, classic for polo shirts","definition_zh":"珠地布（Polo 衫经典面料）","example_en":"Lacoste piqué, 220 GSM, 100% cotton, for polo shirts.","example_zh":"拉科斯特珠地布，220 克重，全棉，用作 Polo 衫。"},
-  {"term":"flyknit","full_form":"flyknit","category":"weaving","definition_en":"a one-piece knitted shoe upper produced on computer flat knitting machines","definition_zh":"飞织鞋面（电脑横机一体编织）","example_en":"Flyknit upper is the new standard for running shoes.","example_zh":"飞织鞋面是跑鞋的新标准。"},
-  {"term":"intarsia","full_form":"intarsia knit","category":"weaving","definition_en":"a knitting technique that creates color blocks without extra yarn on the back","definition_zh":"嵌花（色块拼接，背面无浮线）","example_en":"Intarsia is used for color blocks without extra yarn on the back.","example_zh":"嵌花用于色块拼接，背面没有多余纱线。"},
-  {"term":"barre","full_form":"barre","category":"weaving","definition_en":"visible horizontal streaks in woven or knitted fabric caused by uneven yarn or tension","definition_zh":"纬档（条干不匀引起的横条）","example_en":"Barre was found on the 3rd lot; please re-reed the loom.","example_zh":"第三批发现纬档，请重新穿筘。"},
-  {"term":"gauge","full_form":"knitting gauge","category":"weaving","definition_en":"the needle density of a knitting machine, e.g. E14, E18, E24, higher is finer","definition_zh":"针织机号（数字越大针越细）","example_en":"12-gauge gives a chunky sweater, 16-gauge is mid-weight.","example_zh":"12 针机号织粗针毛衫，16 针为中厚。"},
-  {"term":"reactive dye","full_form":"reactive dye","category":"dyeing","definition_en":"a class of dye that forms covalent bonds with cellulose fibers, used on cotton","definition_zh":"活性染料（纤维素纤维常用）","example_en":"Please use reactive dyes for this 100% cotton jersey.","example_zh":"这款 100% 棉针织请使用活性染料。"},
-  {"term":"disperse dye","full_form":"disperse dye","category":"dyeing","definition_en":"a class of dye used on polyester and other synthetic fibers, applied via thermosol","definition_zh":"分散染料（涤纶专用）","example_en":"For polyester chiffon, disperse dyes with thermosol process are recommended.","example_zh":"涤纶雪纺建议采用分散染料热溶工艺。"},
-  {"term":"vat dye","full_form":"vat dye","category":"dyeing","definition_en":"a class of dye with excellent fastness, used on denim and workwear","definition_zh":"还原染料（牛仔/工装常用）","example_en":"Vat dyes give the denim excellent light and wash fastness.","example_zh":"还原染料使牛仔布具有优异的耐光和水洗牢度。"},
-  {"term":"garment dye","full_form":"garment dye","category":"dyeing","definition_en":"dyeing performed on finished garments for a softer hand feel and vintage look","definition_zh":"成衣染色","example_en":"The customer prefers garment dye to get a softer hand feel.","example_zh":"客户偏好成衣染色以获得更柔软的手感。"},
-  {"term":"jet dyeing","full_form":"jet dyeing machine","category":"dyeing","definition_en":"an overflow dyeing machine that circulates fabric in a rope form, common for knits","definition_zh":"溢流染色机（针织常用）","example_en":"Please use jet dyeing machines to avoid creases on this polyester knit.","example_zh":"请用溢流机染色以避免此款涤纶针织起皱。"},
-  {"term":"thermosol","full_form":"thermosol process","category":"dyeing","definition_en":"a continuous disperse dyeing process using 200-220°C dry heat fixation on polyester","definition_zh":"热溶染色（涤纶连续染色）","example_en":"Thermosol process requires 200-220°C dry heat fixation.","example_zh":"热溶工艺需 200-220°C 干热固色。"},
-  {"term":"lab dip","full_form":"lab dip","category":"dyeing","definition_en":"a small sample of fabric dyed in the lab to confirm shade before bulk production","definition_zh":"对色样（实验室打样）","example_en":"We need 3 lab dips per color for customer approval.","example_zh":"每个颜色需打 3 个小样供客户确认。"},
-  {"term":"Pantone TPX","full_form":"Pantone for Textiles (paper)","category":"dyeing","definition_en":"Pantone textile color standard on paper, used for color matching","definition_zh":"潘通纺织色卡（纸版）","example_en":"Please match the lab dip against Pantone TPX 19-3950.","example_zh":"请按潘通 TPX 19-3950 打小样。"},
-  {"term":"Pantone TCX","full_form":"Pantone for Textiles (cotton)","category":"dyeing","definition_en":"Pantone textile color standard on cotton substrate, latest generation","definition_zh":"潘通纺织色卡（棉版/新版）","example_en":"Pantone TCX is the latest cotton-based color standard.","example_zh":"Pantone TCX 是最新的棉版色卡标准。"},
-  {"term":"Delta E","full_form":"Delta E (color difference)","category":"dyeing","definition_en":"a numeric value representing the perceived color difference between two samples, lower is closer","definition_zh":"色差值 ΔE（越小越接近）","example_en":"Delta E must be less than 1.0 between bulk and approved sample.","example_zh":"大货与确认样 ΔE 必须小于 1.0。"},
-  {"term":"color fastness","full_form":"color fastness","category":"dyeing","definition_en":"the resistance of a dyed fabric to fading or bleeding under various conditions","definition_zh":"色牢度","example_en":"Color fastness to washing must be grade 4 or above.","example_zh":"水洗牢度必须 4 级及以上。"},
-  {"term":"metamerism","full_form":"metamerism","category":"dyeing","definition_en":"two colors appear to match under one light source but differ under another","definition_zh":"同色异谱（不同光源下显色差异）","example_en":"Please check metamerism under CWF and D65 light sources.","example_zh":"请在 CWF 和 D65 光源下检查同色异谱现象。"},
-  {"term":"D65","full_form":"D65 standard light source","category":"dyeing","definition_en":"the international standard daylight illuminant at 6500K used for color assessment","definition_zh":"D65 标准光源（6500K 日光）","example_en":"Color matching is done under D65 light source.","example_zh":"配色需在 D65 光源下进行。"},
-  {"term":"mercerized","full_form":"mercerized finish","category":"dyeing","definition_en":"treating cotton with concentrated caustic soda to add luster and improve dye uptake","definition_zh":"丝光（棉布浓碱处理）","example_en":"Mercerized cotton has a silk-like luster.","example_zh":"丝光棉具有丝绸般光泽。"},
-  {"term":"sanforized","full_form":"sanforized finish","category":"dyeing","definition_en":"a mechanical pre-shrinking process that limits residual shrinkage to under 3%","definition_zh":"桑福整理（机械预缩）","example_en":"Sanforized denim is standard for premium jeans brands.","example_zh":"高端牛仔品牌牛仔布必须做桑福整理。"},
-  {"term":"DWR","full_form":"durable water repellent","category":"dyeing","definition_en":"a water-repellent finish that causes water to bead on the fabric surface","definition_zh":"耐久拒水（户外常用）","example_en":"The DWR coating must pass 20 wash cycles.","example_zh":"DWR 涂层须耐 20 次水洗。"},
-  {"term":"GSM loss","full_form":"GSM loss","category":"dyeing","definition_en":"the percentage reduction in fabric weight after wet processing, normally under 5%","definition_zh":"克重损失（染整后克重减少比例）","example_en":"GSM loss after dyeing must be under 5%.","example_zh":"染整后克重损失须在 5% 以内。"},
-  {"term":"PP sample","full_form":"pre-production sample","category":"garment","definition_en":"a sample made from bulk fabric and trims before bulk production starts","definition_zh":"大货前样（量产前确认样）","example_en":"PP sample must be approved before bulk production starts.","example_zh":"大货生产开始前必须先批核大货前样。"},
-  {"term":"TOP sample","full_form":"top of production sample","category":"garment","definition_en":"a sample taken from the bulk production run for final approval before shipment","definition_zh":"尾期样（封样）","example_en":"TOP sample is approved; please proceed with bulk cutting.","example_zh":"尾期样已批，请开始大货裁剪。"},
-  {"term":"tech pack","full_form":"technical package","category":"garment","definition_en":"a complete set of garment specifications including measurements, construction and materials","definition_zh":"技术资料（工艺单）","example_en":"Please confirm the tech pack before sampling.","example_zh":"打样前请确认工艺单。"},
-  {"term":"marker","full_form":"marker plan","category":"garment","definition_en":"a paper or digital lay plan that maximizes fabric utilization","definition_zh":"排料图（唛架）","example_en":"The marker length is 4.8m with 92% fabric utilization.","example_zh":"排料图长 4.8 米，面料利用率 92%。"},
-  {"term":"SPI","full_form":"stitches per inch","category":"garment","definition_en":"the number of stitches per inch in a seam, higher means finer and stronger","definition_zh":"每英寸针数（针距密度）","example_en":"Use SPI 12 for the side seam on woven shirts.","example_zh":"梭织衬衫侧缝用 SPI 12。"},
-  {"term":"flatlock","full_form":"flatlock seam","category":"garment","definition_en":"a stitch type that lays flat against the skin, common in sportswear","definition_zh":"绷缝（贴肤平整）","example_en":"Flatlock seams are mandatory for next-to-skin garments.","example_zh":"贴身服装必须使用绷缝线迹。"},
-  {"term":"lockstitch","full_form":"lockstitch (301)","category":"garment","definition_en":"the standard sewing machine stitch, ISO 301, used for most structural seams","definition_zh":"锁式线迹（301 平缝）","example_en":"Use lockstitch 301 for the main structural seams.","example_zh":"主要结构缝使用 301 锁式线迹。"},
-  {"term":"overlock","full_form":"overlock / serger (504)","category":"garment","definition_en":"a stitch that wraps the raw edge to prevent fraying, ISO 504","definition_zh":"包缝/拷边（504）","example_en":"All raw edges must be overlocked with 504.","example_zh":"所有毛边需用 504 包缝。"},
-  {"term":"fusing","full_form":"fusing interlining","category":"garment","definition_en":"the process of bonding interlining to garment components using heat and pressure","definition_zh":"粘合衬","example_en":"Pre-shrink the interlining before fusing to avoid shrinkage.","example_zh":"粘合前先预缩衬布。"},
-  {"term":"OEM","full_form":"original equipment manufacturer","category":"garment","definition_en":"production of garments under the buyer's brand and design","definition_zh":"贴牌生产","example_en":"We accept OEM orders with your brand label.","example_zh":"我们接受带贵司品牌的贴牌订单。"},
-  {"term":"ODM","full_form":"original design manufacturer","category":"garment","definition_en":"production based on the factory's own design, branded by the buyer","definition_zh":"自主设计制造","example_en":"Our ODM team can develop new styles based on your brief.","example_zh":"我们的 ODM 团队可根据简报开发新款式。"},
-  {"term":"embroidery digitizing","full_form":"embroidery digitizing","category":"crafts","definition_en":"converting artwork into stitch files (DST, EMB) for machine embroidery","definition_zh":"绣花打版","example_en":"Embroidery digitizing costs US$25 per design.","example_zh":"每个图案的绣花打版费为 25 美元。"},
-  {"term":"DST file","full_form":"DST embroidery file","category":"crafts","definition_en":"the standard digital file format for Tajima embroidery machines","definition_zh":"DST 绣花打版文件","example_en":"Could you resend the DST file? The previous one is corrupted.","example_zh":"请重新发送 DST 文件，之前那份已损坏。"},
-  {"term":"satin stitch","full_form":"satin stitch embroidery","category":"crafts","definition_en":"a dense zigzag stitch used for small letters and outlines under 5mm","definition_zh":"缎面绣（包针）","example_en":"Use satin stitch for any text under 5 mm height.","example_zh":"所有 5 毫米以下的文字请用包针。"},
-  {"term":"chenille embroidery","full_form":"chenille embroidery","category":"crafts","definition_en":"a 3D looped embroidery effect, often used for letterman patches","definition_zh":"绳绣（立体环状效果）","example_en":"Chenille embroidery gives a 3D looped effect on the cuff.","example_zh":"绳绣在袖口呈现立体环状效果。"},
-  {"term":"applique","full_form":"appliqué embroidery","category":"crafts","definition_en":"a decorative technique that sews fabric pieces onto a base fabric","definition_zh":"贴布绣/贴花","example_en":"The logo is done by appliqué with merrowed edge.","example_zh":"标志采用贴布绣配包边针处理。"},
-  {"term":"screen printing","full_form":"screen printing","category":"crafts","definition_en":"a printing method using mesh screens, one color per screen","definition_zh":"丝网印花","example_en":"We specialize in screen printing up to 12 colors.","example_zh":"我司专做 12 色以内的丝网印花。"},
-  {"term":"digital print","full_form":"digital printing (DTG)","category":"crafts","definition_en":"direct-to-garment digital printing, best for small batches and full-color designs","definition_zh":"数码直喷印花","example_en":"DTG printing works best on 100% cotton T-shirts.","example_zh":"数码直喷在 100% 棉 T 恤上效果最佳。"},
-  {"term":"sublimation printing","full_form":"sublimation printing","category":"crafts","definition_en":"a heat-transfer print method for polyester, dyes turn into gas and bond with fibers","definition_zh":"升华印花（涤纶专用）","example_en":"Sublimation printing requires polyester-rich fabric.","example_zh":"升华印花需含涤面料以呈现鲜艳色彩。"},
-  {"term":"discharge printing","full_form":"discharge printing","category":"crafts","definition_en":"printing that bleaches out the background dye and replaces it with new color","definition_zh":"拔染印花","example_en":"Discharge printing on dark ground requires a sample approval first.","example_zh":"深底拔染印花需先批色样。"},
-  {"term":"enzyme wash","full_form":"enzyme wash","category":"crafts","definition_en":"a garment wash using cellulase enzymes to soften fabric and create a vintage look","definition_zh":"酵素水洗","example_en":"Enzyme wash is more eco-friendly than traditional stone wash.","example_zh":"酵素水洗比传统石头水洗更环保。"},
-  {"term":"stone wash","full_form":"stone wash","category":"crafts","definition_en":"a garment wash using pumice stones to abrade denim for a worn look","definition_zh":"石头水洗","example_en":"Stone wash for 30 minutes gives the denim a vintage look.","example_zh":"石头水洗 30 分钟让牛仔呈现复古效果。"},
-  {"term":"dimensional change","full_form":"dimensional change after wash","category":"crafts","definition_en":"the percentage change in fabric dimensions after washing","definition_zh":"水洗后尺寸变化","example_en":"Dimensional change must stay within 3% both directions.","example_zh":"经纬向尺寸变化均须在 3% 以内。"},
-  {"term":"merrowed edge","full_form":"merrowed edge","category":"crafts","definition_en":"a wrap-stitched edge used on patches and twill numbers to prevent fray","definition_zh":"包边缝（毛毯边）","example_en":"Merrowed edge wraps the twill border to lock all threads.","example_zh":"包边缝将斜纹布四周包住以锁线。"},
-  {"term":"AQL","full_form":"acceptable quality level","category":"qc","definition_en":"the statistical sampling threshold for inspection, e.g. AQL 2.5 general level II","definition_zh":"可接受质量水平","example_en":"Most sportswear buyers use AQL 2.5 for general inspection.","example_zh":"大多数运动服装客户按 AQL 2.5 验货。"},
-  {"term":"PSI","full_form":"pre-shipment inspection","category":"qc","definition_en":"the final random inspection on finished goods before shipment","definition_zh":"出货前检验","example_en":"A third-party PSI is required before we can release the goods.","example_zh":"装运前必须经第三方 PSI 检验才能放货。"},
-  {"term":"DPI","full_form":"during production inspection","category":"qc","definition_en":"an inspection done when 30-40% of the order is finished to catch issues early","definition_zh":"生产中检验","example_en":"We suggest a DPI when 30% of the order is finished.","example_zh":"建议订单完成 30% 时做一次 DPI 检验。"},
-  {"term":"RFQ","full_form":"request for quotation","category":"qc","definition_en":"a formal inquiry sent to suppliers asking for price quotation","definition_zh":"询价单","example_en":"We received an RFQ for 10,000 pcs of running T-shirts.","example_zh":"我们收到一万件跑步 T 恤的询价单。"},
-  {"term":"PI","full_form":"proforma invoice","category":"qc","definition_en":"a preliminary invoice used as a quotation and payment reference before shipment","definition_zh":"形式发票（PI 报价单）","example_en":"Please issue the PI so we can arrange the deposit.","example_zh":"请开出形式发票以便我方安排定金。"},
-  {"term":"L/C","full_form":"letter of credit","category":"qc","definition_en":"a bank-issued payment guarantee tied to shipping document compliance","definition_zh":"信用证","example_en":"The L/C must be opened 30 days before the shipment date.","example_zh":"信用证须在装运日前 30 天开立。"},
-  {"term":"B/L","full_form":"bill of lading","category":"qc","definition_en":"a legal document issued by the carrier acknowledging receipt of cargo","definition_zh":"海运提单","example_en":"Please send us 3 originals and 3 copies of the B/L.","example_zh":"请提供 3 正 3 副的海运提单。"},
-  {"term":"HS code","full_form":"harmonized system code","category":"qc","definition_en":"the international customs classification code for goods","definition_zh":"海关编码","example_en":"For yoga leggings, the HS code is 6104.43 in most markets.","example_zh":"瑜伽裤在大多数市场的 HS 编码是 6104.43。"},
-  {"term":"FOB","full_form":"free on board","category":"qc","definition_en":"an Incoterm where the seller delivers goods on board the vessel at the port of shipment","definition_zh":"离岸价","example_en":"Quote on FOB Shanghai basis for 5,000 pcs.","example_zh":"5000 件请报 FOB 上海价。"},
-  {"term":"CIF","full_form":"cost, insurance and freight","category":"qc","definition_en":"an Incoterm where the seller pays cost, insurance and freight to the destination port","definition_zh":"到岸价","example_en":"CIF Hamburg includes ocean freight and insurance.","example_zh":"汉堡 CIF 价包含海运费和保险费。"},
-  {"term":"T/T","full_form":"telegraphic transfer","category":"qc","definition_en":"a wire transfer payment method, common as 30% deposit + 70% balance","definition_zh":"电汇","example_en":"30% T/T deposit and balance against B/L copy is our standard.","example_zh":"30% T/T 定金，余款凭提单复印件付清是标准。"},
-  {"term":"debit note","full_form":"debit note","category":"qc","definition_en":"a document issued to deduct money from an invoice, typically for claims","definition_zh":"借记通知（扣款单）","example_en":"We will issue a debit note to deduct the rework cost.","example_zh":"我方将开具借记通知扣减返工费。"},
-  {"term":"credit note","full_form":"credit note","category":"qc","definition_en":"a document issued as a credit to the buyer for compensation or allowance","definition_zh":"贷记通知（让利单）","example_en":"A credit note of US$1,200 has been issued for the late delivery.","example_zh":"因延迟出货已开具 1200 美元的贷记通知。"},
-  {"term":"REACH compliance","full_form":"REACH compliance","category":"qc","definition_en":"compliance with the EU REACH regulation on chemicals, SVHC below 0.1%","definition_zh":"REACH 化学品合规","example_en":"All dyes must show REACH compliance for the EU market.","example_zh":"欧盟市场所有染料须符合 REACH。"},
-  {"term":"critical defect","full_form":"critical defect","category":"qc","definition_en":"a defect that endangers the user (e.g. broken needle), zero acceptance","definition_zh":"严重缺陷（致命缺陷）","example_en":"A broken needle left in the seam is a critical defect.","example_zh":"断针遗留在缝内属严重缺陷。"},
-  {"term":"major defect","full_form":"major defect","category":"qc","definition_en":"a defect that reduces usability or saleability","definition_zh":"主要缺陷","example_en":"Uneven dye shade on the front panel is a major defect.","example_zh":"前片染色不均按主要缺陷判定。"},
-  {"term":"minor defect","full_form":"minor defect","category":"qc","definition_en":"a defect that does not affect usability but is below standard","definition_zh":"次要缺陷","example_en":"A 2 cm loose thread on the hem is a minor defect.","example_zh":"下摆 2 厘米的散线属次要缺陷。"},
-  {"term":"moisture-wicking","full_form":"moisture-wicking finish","category":"sportswear","definition_en":"a fabric finish that pulls sweat away from the skin for quick drying","definition_zh":"吸湿排汗整理","example_en":"All running tops must be moisture-wicking with a wicking rate ≥ 35 mm/10min.","example_zh":"所有跑步上衣必须具备排汗功能。"},
-  {"term":"four-way stretch","full_form":"four-way stretch","category":"sportswear","definition_en":"fabric that stretches in both warp and weft directions","definition_zh":"四面弹","example_en":"The fabric provides four-way stretch with 25% recovery after 5 washes.","example_zh":"该面料具备四面弹力，5 次水洗后回弹率达 25%。"},
-  {"term":"squat-proof","full_form":"squat-proof","category":"sportswear","definition_en":"a leggings quality standard that ensures the fabric is opaque when squatting","definition_zh":"深蹲不透（瑜伽裤指标）","example_en":"All our leggings must be squat-proof at 250 GSM.","example_zh":"我司瑜伽裤在 250 GSM 下必须深蹲不透。"},
-  {"term":"UPF 50+","full_form":"ultraviolet protection factor 50+","category":"sportswear","definition_en":"a fabric rating that blocks 98% of UVA/UVB rays","definition_zh":"防紫外线系数 50+","example_en":"The sun hoodie is rated UPF 50+ for outdoor training.","example_zh":"这款防晒连帽衫 UPF 达 50+。"},
-  {"term":"Gore-Tex","full_form":"Gore-Tex membrane","category":"sportswear","definition_en":"a waterproof, windproof and breathable membrane used in outdoor apparel","definition_zh":"戈尔防水透气膜","example_en":"The trail-running jacket uses 3-layer Gore-Tex.","example_zh":"这款越野跑夹克采用 3 层 Gore-Tex。"},
-  {"term":"PrimaLoft","full_form":"PrimaLoft Gold","category":"sportswear","definition_en":"a premium synthetic insulation that retains warmth when wet","definition_zh":"PrimaLoft 金装合成棉","example_en":"PrimaLoft Gold is the warmest synthetic fill in the line.","example_zh":"PrimaLoft Gold 是系列中保暖最强的合成棉。"},
-  {"term":"RDS","full_form":"Responsible Down Standard","category":"sportswear","definition_en":"a certification ensuring down is sourced responsibly with full chain of custody","definition_zh":"负责任羽绒标准","example_en":"The buyer requires the RDS certificate for every down order.","example_zh":"买方要求每张羽绒订单都附 RDS 证书。"},
-  {"term":"fill power","full_form":"fill power (in³/oz)","category":"sportswear","definition_en":"a measure of down loft, higher means warmer for the same weight","definition_zh":"蓬松度（立方英寸/盎司）","example_en":"The fill power is 800, providing high warmth at low weight.","example_zh":"蓬松度 800，重量轻却保暖强。"},
-  {"term":"tackle twill","full_form":"tackle twill number","category":"sportswear","definition_en":"a die-cut twill number sewn onto jerseys, classic for NBA-style jerseys","definition_zh":"贴布绣号码（球衣工艺）","example_en":"Tackle twill numbers are stitched on with zigzag merrowed edge.","example_zh":"贴布绣号码用之字包边缝车缝固定。"},
-  {"term":"recycled polyester","full_form":"GRS-certified recycled polyester","category":"sportswear","definition_en":"polyester fiber made from recycled PET bottles, GRS certified","definition_zh":"GRS 认证再生涤纶","example_en":"Buyer requires GRS-certified recycled polyester for SS25.","example_zh":"买家要求 25 春夏系列采用 GRS 认证再生涤纶。"},
-  {"term":"running singlet","full_form":"running singlet","category":"sportswear","definition_en":"a sleeveless running top with narrow shoulder straps","definition_zh":"跑步背心（窄肩款）","example_en":"The running singlet weighs only 65 grams to maximize breathability.","example_zh":"跑步背心仅重 65 克以最大化透气性。"},
-  {"term":"compression tights","full_form":"compression tights","category":"sportswear","definition_en":"tight-fitting leggings that apply graduated pressure for muscle support","definition_zh":"压缩紧身裤","example_en":"The compression tights apply 18 mmHg pressure at the calf zone.","example_zh":"压缩紧身裤在小腿区域施加 18 mmHg 压力。"},
-  {"term":"yoga leggings","full_form":"yoga leggings","category":"sportswear","definition_en":"high-waisted stretch leggings designed for yoga and athleisure","definition_zh":"瑜伽裤（高腰紧身打底裤）","example_en":"Our SS27 yoga leggings come in 12 solid colors and 3 prints.","example_zh":"我方 27 春夏瑜伽裤有 12 个素色和 3 个印花可选。"},
-  {"term":"high-waisted","full_form":"high-waisted","category":"sportswear","definition_en":"a waistband that sits at or above the natural waistline","definition_zh":"高腰（高于自然腰线）","example_en":"The yoga leggings feature a high-waisted design.","example_zh":"瑜伽裤采用高腰设计，修饰身形。"},
-  {"term":"seamless waistband","full_form":"seamless waistband","category":"sportswear","definition_en":"a waistband knitted in one piece to avoid digging into the skin","definition_zh":"无缝腰头","example_en":"Seamless waistband is knitted in one piece to avoid digging in.","example_zh":"无缝腰头一体编织以避免勒肉。"},
-  {"term":"teamwear","full_form":"teamwear customization","category":"sportswear","definition_en":"customized jerseys, shorts and socks made for a sports team","definition_zh":"球服定制","example_en":"Our MOQ for full teamwear customization is 30 sets per design.","example_zh":"整套球服定制的起订量为每款 30 套。"}
+  {
+    "term": "combed yarn",
+    "full_form": "combed cotton yarn",
+    "category": "spinning",
+    "definition_en": "cotton yarn that has been combed to remove short fibers, producing a smoother, stronger, cleaner yarn",
+    "definition_zh": "精梳棉纱（去除短纤后强力高、毛羽少）",
+    "example_en": "All T-shirts under this PO must use 100% combed yarn.",
+    "example_zh": "此订单下所有 T 恤必须使用 100% 精梳棉纱。"
+  },
+  {
+    "term": "carded yarn",
+    "full_form": "carded cotton yarn",
+    "category": "spinning",
+    "definition_en": "cotton yarn that has only been carded, leaving more short fibers and a rougher surface",
+    "definition_zh": "普梳棉纱（成本低，毛羽较多）",
+    "example_en": "Carded yarn is acceptable for the inner pocket lining only.",
+    "example_zh": "普梳棉仅可用于内袋里布。"
+  },
+  {
+    "term": "ring spun",
+    "full_form": "ring spun yarn",
+    "category": "spinning",
+    "definition_en": "yarn produced by ring spinning, the most common method that gives good strength and soft hand feel",
+    "definition_zh": "环锭纺纱（最主流的纺纱方式）",
+    "example_en": "Please confirm the yarn is 32s ring spun, not open-end.",
+    "example_zh": "请确认纱线为 32 支环锭纺，非气流纺。"
+  },
+  {
+    "term": "compact yarn",
+    "full_form": "compact spun yarn",
+    "category": "spinning",
+    "definition_en": "yarn spun on a compact spinning frame, with very low hairiness and high luster",
+    "definition_zh": "紧密纺纱（毛羽少、强力高、光洁）",
+    "example_en": "Compact yarn is mandatory for our premium shirting.",
+    "example_zh": "高档衬衫面料必须使用紧密纺纱。"
+  },
+  {
+    "term": "open-end yarn",
+    "full_form": "open-end yarn (OE)",
+    "category": "spinning",
+    "definition_en": "yarn produced by rotor spinning, lower cost but rougher hand feel and lower strength",
+    "definition_zh": "气流纺纱（成本低、手感粗硬）",
+    "example_en": "Open-end yarn is fine for low-end fleece.",
+    "example_zh": "气流纺可用于低端摇粒绒。"
+  },
+  {
+    "term": "slub yarn",
+    "full_form": "slub yarn",
+    "category": "spinning",
+    "definition_en": "yarn with intentional thick-and-thin variations for a textured, linen-look fabric",
+    "definition_zh": "竹节纱（粗细不匀的花式纱）",
+    "example_en": "Please develop a slub yarn linen-look fabric for SS25.",
+    "example_zh": "请为 25 春夏开发一款仿亚麻竹节纱面料。"
+  },
+  {
+    "term": "melange yarn",
+    "full_form": "melange yarn",
+    "category": "spinning",
+    "definition_en": "yarn spun from a blend of pre-dyed fibers to give a heathered or snowflake effect",
+    "definition_zh": "麻灰纱（混色纱，呈现雪花效果）",
+    "example_en": "Use grey melange yarn 80/20 cotton-polyester for the hoodie body.",
+    "example_zh": "卫衣身布采用 80/20 棉涤灰色麻灰纱。"
+  },
+  {
+    "term": "core-spun yarn",
+    "full_form": "core-spun yarn",
+    "category": "spinning",
+    "definition_en": "yarn with a filament core (usually spandex) wrapped by staple fibers, used for stretch fabrics",
+    "definition_zh": "包芯纱（长丝芯外包短纤，棉包氨纶常见）",
+    "example_en": "The denim uses cotton core-spun yarn with a spandex core.",
+    "example_zh": "此牛仔布采用棉包氨纶的包芯纱织造。"
+  },
+  {
+    "term": "yarn count",
+    "full_form": "yarn count",
+    "category": "spinning",
+    "definition_en": "the linear density of yarn, expressed in Ne (English), Tex, denier (D) or Nm (metric)",
+    "definition_zh": "纱支（纱线细度统称）",
+    "example_en": "Please specify the yarn count in both Ne and Tex.",
+    "example_zh": "请同时以英制和特数标注纱支。"
+  },
+  {
+    "term": "TPM",
+    "full_form": "turns per meter",
+    "category": "spinning",
+    "definition_en": "number of twists per meter of yarn, affects hand feel and strength",
+    "definition_zh": "每米捻数",
+    "example_en": "The hard-twisted voile requires 1,200 TPM.",
+    "example_zh": "强捻巴厘纱要求每米 1200 捻。"
+  },
+  {
+    "term": "Z-twist",
+    "full_form": "Z-twist",
+    "category": "spinning",
+    "definition_en": "the standard right-hand twist direction in cotton yarn",
+    "definition_zh": "Z 捻（右捻，棉纺单纱最常用）",
+    "example_en": "Single yarns are normally Z-twist in the cotton system.",
+    "example_zh": "棉纺单纱通常为 Z 捻。"
+  },
+  {
+    "term": "Uster CV%",
+    "full_form": "Uster evenness CV%",
+    "category": "spinning",
+    "definition_en": "coefficient of variation of yarn evenness measured on a Uster tester, lower is better",
+    "definition_zh": "条干变异系数（越小越均匀）",
+    "example_en": "Uster CV% should not exceed 13.5 for 30s combed cotton.",
+    "example_zh": "30 支精梳棉的 Uster CV% 不应超过 13.5。"
+  },
+  {
+    "term": "IPI",
+    "full_form": "imperfections per kilometer",
+    "category": "spinning",
+    "definition_en": "total count of thick places, thin places and neps per kilometer of yarn",
+    "definition_zh": "千米疵点（粗节+细节+棉结总数）",
+    "example_en": "The buyer requires IPI below 150 per km for shirting yarn.",
+    "example_zh": "客户要求衬衫纱 IPI 低于 150/km。"
+  },
+  {
+    "term": "hairiness index",
+    "full_form": "Uster hairiness index H",
+    "category": "spinning",
+    "definition_en": "the H value from Uster tester measuring protruding fibers on yarn surface",
+    "definition_zh": "毛羽指数 H 值",
+    "example_en": "The Uster hairiness index H must be below 5.5.",
+    "example_zh": "Uster 毛羽指数 H 必须低于 5.5。"
+  },
+  {
+    "term": "tenacity",
+    "full_form": "yarn tenacity",
+    "category": "spinning",
+    "definition_en": "specific strength of yarn in cN/tex (centinewtons per tex)",
+    "definition_zh": "单纱比强力",
+    "example_en": "The tenacity of this combed cotton yarn is 18 cN/tex.",
+    "example_zh": "此精梳棉纱的比强力为 18 cN/tex。"
+  },
+  {
+    "term": "EPI",
+    "full_form": "ends per inch",
+    "category": "weaving",
+    "definition_en": "number of warp yarns per inch in woven fabric",
+    "definition_zh": "经密（每英寸经纱数）",
+    "example_en": "EPI 110, PPI 76, balanced plain weave for the poplin order.",
+    "example_zh": "经密 110、纬密 76，平衡平纹用于府绸订单。"
+  },
+  {
+    "term": "PPI",
+    "full_form": "picks per inch",
+    "category": "weaving",
+    "definition_en": "number of weft yarns per inch in woven fabric",
+    "definition_zh": "纬密（每英寸纬纱数）",
+    "example_en": "PPI above 80 may cause reed mark on this yarn count.",
+    "example_zh": "该纱支纬密超过 80 可能产生筘痕。"
+  },
+  {
+    "term": "cuttable width",
+    "full_form": "cuttable width",
+    "category": "weaving",
+    "definition_en": "the usable width of finished fabric for garment lay planning",
+    "definition_zh": "可裁门幅",
+    "example_en": "Cuttable width 58/60 inches, please plan marker accordingly.",
+    "example_zh": "可裁门幅 58/60 英寸，请按此排料。"
+  },
+  {
+    "term": "poplin",
+    "full_form": "poplin",
+    "category": "weaving",
+    "definition_en": "a balanced plain-weave shirting fabric, typically 110x76 EPI/PPI",
+    "definition_zh": "府绸（衬衫常用平纹布）",
+    "example_en": "110x76 poplin, 100% cotton, 110 GSM, cuttable width 58/60 inches.",
+    "example_zh": "110x76 府绸，全棉，110 克重，可裁门幅 58/60 英寸。"
+  },
+  {
+    "term": "denim",
+    "full_form": "denim",
+    "category": "weaving",
+    "definition_en": "a sturdy 3/1 twill fabric, usually indigo-dyed warp and natural weft",
+    "definition_zh": "牛仔布（3/1 斜纹，靛蓝经+本白纬）",
+    "example_en": "12 oz indigo denim, 3/1 twill, sanforized, shrinkage under 3%.",
+    "example_zh": "12 盎司靛蓝牛仔，3/1 斜纹，预缩缩水率 3% 以内。"
+  },
+  {
+    "term": "twill",
+    "full_form": "twill weave",
+    "category": "weaving",
+    "definition_en": "a weave structure with diagonal lines, e.g. 2/1 twill, 3/1 twill",
+    "definition_zh": "斜纹布",
+    "example_en": "2/1 twill, combed cotton, suitable for workwear trousers.",
+    "example_zh": "2/1 斜纹，精梳棉，适合工装裤。"
+  },
+  {
+    "term": "rapier loom",
+    "full_form": "rapier loom",
+    "category": "weaving",
+    "definition_en": "a shuttleless loom using rigid or flexible rapiers to insert weft, ideal for high-quality poplin",
+    "definition_zh": "剑杆织机（适合高密府绸）",
+    "example_en": "We use Picanol rapier looms for solid poplin; no weft streaks.",
+    "example_zh": "我们用必佳乐剑杆织机织素色府绸，无纬档。"
+  },
+  {
+    "term": "air-jet loom",
+    "full_form": "air-jet loom",
+    "category": "weaving",
+    "definition_en": "a shuttleless loom using air jets to insert weft, high speed for mass production",
+    "definition_zh": "喷气织机（适合大批量雪纺等薄型）",
+    "example_en": "Air-jet loom is the best option for mass production of chiffon.",
+    "example_zh": "喷气织机是雪纺大批量生产的最佳选择。"
+  },
+  {
+    "term": "tricot",
+    "full_form": "tricot (warp knit)",
+    "category": "weaving",
+    "definition_en": "a basic warp-knit fabric, smooth on both sides, used for lingerie and linings",
+    "definition_zh": "经编平针（特里科）",
+    "example_en": "40D tricot, 60 GSM, widely used for lingerie and linings.",
+    "example_zh": "40D 经编平针，60 克重，广泛用于内衣和里布。"
+  },
+  {
+    "term": "raschel",
+    "full_form": "raschel (warp knit)",
+    "category": "weaving",
+    "definition_en": "a warp-knit machine/structure capable of complex laces and meshes",
+    "definition_zh": "拉舍尔经编（蕾丝与网眼）",
+    "example_en": "Raschel lace, 150 cm width, 4-bar, for women's dresses.",
+    "example_zh": "拉舍尔蕾丝，门幅 150 厘米，4 梳，用于女裙。"
+  },
+  {
+    "term": "single jersey",
+    "full_form": "single jersey",
+    "category": "weaving",
+    "definition_en": "a basic weft-knit fabric with one side smooth, one side looped, used for T-shirts",
+    "definition_zh": "单面布（汗布，T 恤常用）",
+    "example_en": "30s single jersey, 160 GSM, 100% cotton, for basic tees.",
+    "example_zh": "30 支单面布，160 克重，全棉，用于基础 T 恤。"
+  },
+  {
+    "term": "interlock",
+    "full_form": "interlock knit",
+    "category": "weaving",
+    "definition_en": "a double-knit fabric with two-faced structure, more stable than single jersey",
+    "definition_zh": "双罗纹/棉毛布（更厚实稳定）",
+    "example_en": "40s interlock, 200 GSM, used for premium polo shirts.",
+    "example_zh": "40 支双罗纹，200 克重，用于高档 Polo 衫。"
+  },
+  {
+    "term": "pique",
+    "full_form": "piqué knit",
+    "category": "weaving",
+    "definition_en": "a knit fabric with a textured waffle or honeycomb surface, classic for polo shirts",
+    "definition_zh": "珠地布（Polo 衫经典面料）",
+    "example_en": "Lacoste piqué, 220 GSM, 100% cotton, for polo shirts.",
+    "example_zh": "拉科斯特珠地布，220 克重，全棉，用作 Polo 衫。"
+  },
+  {
+    "term": "flyknit",
+    "full_form": "flyknit",
+    "category": "weaving",
+    "definition_en": "a one-piece knitted shoe upper produced on computer flat knitting machines",
+    "definition_zh": "飞织鞋面（电脑横机一体编织）",
+    "example_en": "Flyknit upper is the new standard for running shoes.",
+    "example_zh": "飞织鞋面是跑鞋的新标准。"
+  },
+  {
+    "term": "intarsia",
+    "full_form": "intarsia knit",
+    "category": "weaving",
+    "definition_en": "a knitting technique that creates color blocks without extra yarn on the back",
+    "definition_zh": "嵌花（色块拼接，背面无浮线）",
+    "example_en": "Intarsia is used for color blocks without extra yarn on the back.",
+    "example_zh": "嵌花用于色块拼接，背面没有多余纱线。"
+  },
+  {
+    "term": "barre",
+    "full_form": "barre",
+    "category": "weaving",
+    "definition_en": "visible horizontal streaks in woven or knitted fabric caused by uneven yarn or tension",
+    "definition_zh": "纬档（条干不匀引起的横条）",
+    "example_en": "Barre was found on the 3rd lot; please re-reed the loom.",
+    "example_zh": "第三批发现纬档，请重新穿筘。"
+  },
+  {
+    "term": "gauge",
+    "full_form": "knitting gauge",
+    "category": "weaving",
+    "definition_en": "the needle density of a knitting machine, e.g. E14, E18, E24, higher is finer",
+    "definition_zh": "针织机号（数字越大针越细）",
+    "example_en": "12-gauge gives a chunky sweater, 16-gauge is mid-weight.",
+    "example_zh": "12 针机号织粗针毛衫，16 针为中厚。"
+  },
+  {
+    "term": "reactive dye",
+    "full_form": "reactive dye",
+    "category": "dyeing",
+    "definition_en": "a class of dye that forms covalent bonds with cellulose fibers, used on cotton",
+    "definition_zh": "活性染料（纤维素纤维常用）",
+    "example_en": "Please use reactive dyes for this 100% cotton jersey.",
+    "example_zh": "这款 100% 棉针织请使用活性染料。"
+  },
+  {
+    "term": "disperse dye",
+    "full_form": "disperse dye",
+    "category": "dyeing",
+    "definition_en": "a class of dye used on polyester and other synthetic fibers, applied via thermosol",
+    "definition_zh": "分散染料（涤纶专用）",
+    "example_en": "For polyester chiffon, disperse dyes with thermosol process are recommended.",
+    "example_zh": "涤纶雪纺建议采用分散染料热溶工艺。"
+  },
+  {
+    "term": "vat dye",
+    "full_form": "vat dye",
+    "category": "dyeing",
+    "definition_en": "a class of dye with excellent fastness, used on denim and workwear",
+    "definition_zh": "还原染料（牛仔/工装常用）",
+    "example_en": "Vat dyes give the denim excellent light and wash fastness.",
+    "example_zh": "还原染料使牛仔布具有优异的耐光和水洗牢度。"
+  },
+  {
+    "term": "garment dye",
+    "full_form": "garment dye",
+    "category": "dyeing",
+    "definition_en": "dyeing performed on finished garments for a softer hand feel and vintage look",
+    "definition_zh": "成衣染色",
+    "example_en": "The customer prefers garment dye to get a softer hand feel.",
+    "example_zh": "客户偏好成衣染色以获得更柔软的手感。"
+  },
+  {
+    "term": "jet dyeing",
+    "full_form": "jet dyeing machine",
+    "category": "dyeing",
+    "definition_en": "an overflow dyeing machine that circulates fabric in a rope form, common for knits",
+    "definition_zh": "溢流染色机（针织常用）",
+    "example_en": "Please use jet dyeing machines to avoid creases on this polyester knit.",
+    "example_zh": "请用溢流机染色以避免此款涤纶针织起皱。"
+  },
+  {
+    "term": "thermosol",
+    "full_form": "thermosol process",
+    "category": "dyeing",
+    "definition_en": "a continuous disperse dyeing process using 200-220°C dry heat fixation on polyester",
+    "definition_zh": "热溶染色（涤纶连续染色）",
+    "example_en": "Thermosol process requires 200-220°C dry heat fixation.",
+    "example_zh": "热溶工艺需 200-220°C 干热固色。"
+  },
+  {
+    "term": "lab dip",
+    "full_form": "lab dip",
+    "category": "dyeing",
+    "definition_en": "a small sample of fabric dyed in the lab to confirm shade before bulk production",
+    "definition_zh": "对色样（实验室打样）",
+    "example_en": "We need 3 lab dips per color for customer approval.",
+    "example_zh": "每个颜色需打 3 个小样供客户确认。"
+  },
+  {
+    "term": "Pantone TPX",
+    "full_form": "Pantone for Textiles (paper)",
+    "category": "dyeing",
+    "definition_en": "Pantone textile color standard on paper, used for color matching",
+    "definition_zh": "潘通纺织色卡（纸版）",
+    "example_en": "Please match the lab dip against Pantone TPX 19-3950.",
+    "example_zh": "请按潘通 TPX 19-3950 打小样。"
+  },
+  {
+    "term": "Pantone TCX",
+    "full_form": "Pantone for Textiles (cotton)",
+    "category": "dyeing",
+    "definition_en": "Pantone textile color standard on cotton substrate, latest generation",
+    "definition_zh": "潘通纺织色卡（棉版/新版）",
+    "example_en": "Pantone TCX is the latest cotton-based color standard.",
+    "example_zh": "Pantone TCX 是最新的棉版色卡标准。"
+  },
+  {
+    "term": "Delta E",
+    "full_form": "Delta E (color difference)",
+    "category": "dyeing",
+    "definition_en": "a numeric value representing the perceived color difference between two samples, lower is closer",
+    "definition_zh": "色差值 ΔE（越小越接近）",
+    "example_en": "Delta E must be less than 1.0 between bulk and approved sample.",
+    "example_zh": "大货与确认样 ΔE 必须小于 1.0。"
+  },
+  {
+    "term": "color fastness",
+    "full_form": "color fastness",
+    "category": "dyeing",
+    "definition_en": "the resistance of a dyed fabric to fading or bleeding under various conditions",
+    "definition_zh": "色牢度",
+    "example_en": "Color fastness to washing must be grade 4 or above.",
+    "example_zh": "水洗牢度必须 4 级及以上。"
+  },
+  {
+    "term": "metamerism",
+    "full_form": "metamerism",
+    "category": "dyeing",
+    "definition_en": "two colors appear to match under one light source but differ under another",
+    "definition_zh": "同色异谱（不同光源下显色差异）",
+    "example_en": "Please check metamerism under CWF and D65 light sources.",
+    "example_zh": "请在 CWF 和 D65 光源下检查同色异谱现象。"
+  },
+  {
+    "term": "D65",
+    "full_form": "D65 standard light source",
+    "category": "dyeing",
+    "definition_en": "the international standard daylight illuminant at 6500K used for color assessment",
+    "definition_zh": "D65 标准光源（6500K 日光）",
+    "example_en": "Color matching is done under D65 light source.",
+    "example_zh": "配色需在 D65 光源下进行。"
+  },
+  {
+    "term": "mercerized",
+    "full_form": "mercerized finish",
+    "category": "dyeing",
+    "definition_en": "treating cotton with concentrated caustic soda to add luster and improve dye uptake",
+    "definition_zh": "丝光（棉布浓碱处理）",
+    "example_en": "Mercerized cotton has a silk-like luster.",
+    "example_zh": "丝光棉具有丝绸般光泽。"
+  },
+  {
+    "term": "sanforized",
+    "full_form": "sanforized finish",
+    "category": "dyeing",
+    "definition_en": "a mechanical pre-shrinking process that limits residual shrinkage to under 3%",
+    "definition_zh": "桑福整理（机械预缩）",
+    "example_en": "Sanforized denim is standard for premium jeans brands.",
+    "example_zh": "高端牛仔品牌牛仔布必须做桑福整理。"
+  },
+  {
+    "term": "DWR",
+    "full_form": "durable water repellent",
+    "category": "dyeing",
+    "definition_en": "a water-repellent finish that causes water to bead on the fabric surface",
+    "definition_zh": "耐久拒水（户外常用）",
+    "example_en": "The DWR coating must pass 20 wash cycles.",
+    "example_zh": "DWR 涂层须耐 20 次水洗。"
+  },
+  {
+    "term": "GSM loss",
+    "full_form": "GSM loss",
+    "category": "dyeing",
+    "definition_en": "the percentage reduction in fabric weight after wet processing, normally under 5%",
+    "definition_zh": "克重损失（染整后克重减少比例）",
+    "example_en": "GSM loss after dyeing must be under 5%.",
+    "example_zh": "染整后克重损失须在 5% 以内。"
+  },
+  {
+    "term": "PP sample",
+    "full_form": "pre-production sample",
+    "category": "garment",
+    "definition_en": "a sample made from bulk fabric and trims before bulk production starts",
+    "definition_zh": "大货前样（量产前确认样）",
+    "example_en": "PP sample must be approved before bulk production starts.",
+    "example_zh": "大货生产开始前必须先批核大货前样。"
+  },
+  {
+    "term": "TOP sample",
+    "full_form": "top of production sample",
+    "category": "garment",
+    "definition_en": "a sample taken from the bulk production run for final approval before shipment",
+    "definition_zh": "尾期样（封样）",
+    "example_en": "TOP sample is approved; please proceed with bulk cutting.",
+    "example_zh": "尾期样已批，请开始大货裁剪。"
+  },
+  {
+    "term": "tech pack",
+    "full_form": "technical package",
+    "category": "garment",
+    "definition_en": "a complete set of garment specifications including measurements, construction and materials",
+    "definition_zh": "技术资料（工艺单）",
+    "example_en": "Please confirm the tech pack before sampling.",
+    "example_zh": "打样前请确认工艺单。"
+  },
+  {
+    "term": "marker",
+    "full_form": "marker plan",
+    "category": "garment",
+    "definition_en": "a paper or digital lay plan that maximizes fabric utilization",
+    "definition_zh": "排料图（唛架）",
+    "example_en": "The marker length is 4.8m with 92% fabric utilization.",
+    "example_zh": "排料图长 4.8 米，面料利用率 92%。"
+  },
+  {
+    "term": "SPI",
+    "full_form": "stitches per inch",
+    "category": "garment",
+    "definition_en": "the number of stitches per inch in a seam, higher means finer and stronger",
+    "definition_zh": "每英寸针数（针距密度）",
+    "example_en": "Use SPI 12 for the side seam on woven shirts.",
+    "example_zh": "梭织衬衫侧缝用 SPI 12。"
+  },
+  {
+    "term": "flatlock",
+    "full_form": "flatlock seam",
+    "category": "garment",
+    "definition_en": "a stitch type that lays flat against the skin, common in sportswear",
+    "definition_zh": "绷缝（贴肤平整）",
+    "example_en": "Flatlock seams are mandatory for next-to-skin garments.",
+    "example_zh": "贴身服装必须使用绷缝线迹。"
+  },
+  {
+    "term": "lockstitch",
+    "full_form": "lockstitch (301)",
+    "category": "garment",
+    "definition_en": "the standard sewing machine stitch, ISO 301, used for most structural seams",
+    "definition_zh": "锁式线迹（301 平缝）",
+    "example_en": "Use lockstitch 301 for the main structural seams.",
+    "example_zh": "主要结构缝使用 301 锁式线迹。"
+  },
+  {
+    "term": "overlock",
+    "full_form": "overlock / serger (504)",
+    "category": "garment",
+    "definition_en": "a stitch that wraps the raw edge to prevent fraying, ISO 504",
+    "definition_zh": "包缝/拷边（504）",
+    "example_en": "All raw edges must be overlocked with 504.",
+    "example_zh": "所有毛边需用 504 包缝。"
+  },
+  {
+    "term": "fusing",
+    "full_form": "fusing interlining",
+    "category": "garment",
+    "definition_en": "the process of bonding interlining to garment components using heat and pressure",
+    "definition_zh": "粘合衬",
+    "example_en": "Pre-shrink the interlining before fusing to avoid shrinkage.",
+    "example_zh": "粘合前先预缩衬布。"
+  },
+  {
+    "term": "OEM",
+    "full_form": "original equipment manufacturer",
+    "category": "garment",
+    "definition_en": "production of garments under the buyer's brand and design",
+    "definition_zh": "贴牌生产",
+    "example_en": "We accept OEM orders with your brand label.",
+    "example_zh": "我们接受带贵司品牌的贴牌订单。"
+  },
+  {
+    "term": "ODM",
+    "full_form": "original design manufacturer",
+    "category": "garment",
+    "definition_en": "production based on the factory's own design, branded by the buyer",
+    "definition_zh": "自主设计制造",
+    "example_en": "Our ODM team can develop new styles based on your brief.",
+    "example_zh": "我们的 ODM 团队可根据简报开发新款式。"
+  },
+  {
+    "term": "embroidery digitizing",
+    "full_form": "embroidery digitizing",
+    "category": "crafts",
+    "definition_en": "converting artwork into stitch files (DST, EMB) for machine embroidery",
+    "definition_zh": "绣花打版",
+    "example_en": "Embroidery digitizing costs US$25 per design.",
+    "example_zh": "每个图案的绣花打版费为 25 美元。"
+  },
+  {
+    "term": "DST file",
+    "full_form": "DST embroidery file",
+    "category": "crafts",
+    "definition_en": "the standard digital file format for Tajima embroidery machines",
+    "definition_zh": "DST 绣花打版文件",
+    "example_en": "Could you resend the DST file? The previous one is corrupted.",
+    "example_zh": "请重新发送 DST 文件，之前那份已损坏。"
+  },
+  {
+    "term": "satin stitch",
+    "full_form": "satin stitch embroidery",
+    "category": "crafts",
+    "definition_en": "a dense zigzag stitch used for small letters and outlines under 5mm",
+    "definition_zh": "缎面绣（包针）",
+    "example_en": "Use satin stitch for any text under 5 mm height.",
+    "example_zh": "所有 5 毫米以下的文字请用包针。"
+  },
+  {
+    "term": "chenille embroidery",
+    "full_form": "chenille embroidery",
+    "category": "crafts",
+    "definition_en": "a 3D looped embroidery effect, often used for letterman patches",
+    "definition_zh": "绳绣（立体环状效果）",
+    "example_en": "Chenille embroidery gives a 3D looped effect on the cuff.",
+    "example_zh": "绳绣在袖口呈现立体环状效果。"
+  },
+  {
+    "term": "applique",
+    "full_form": "appliqué embroidery",
+    "category": "crafts",
+    "definition_en": "a decorative technique that sews fabric pieces onto a base fabric",
+    "definition_zh": "贴布绣/贴花",
+    "example_en": "The logo is done by appliqué with merrowed edge.",
+    "example_zh": "标志采用贴布绣配包边针处理。"
+  },
+  {
+    "term": "screen printing",
+    "full_form": "screen printing",
+    "category": "crafts",
+    "definition_en": "a printing method using mesh screens, one color per screen",
+    "definition_zh": "丝网印花",
+    "example_en": "We specialize in screen printing up to 12 colors.",
+    "example_zh": "我司专做 12 色以内的丝网印花。"
+  },
+  {
+    "term": "digital print",
+    "full_form": "digital printing (DTG)",
+    "category": "crafts",
+    "definition_en": "direct-to-garment digital printing, best for small batches and full-color designs",
+    "definition_zh": "数码直喷印花",
+    "example_en": "DTG printing works best on 100% cotton T-shirts.",
+    "example_zh": "数码直喷在 100% 棉 T 恤上效果最佳。"
+  },
+  {
+    "term": "sublimation printing",
+    "full_form": "sublimation printing",
+    "category": "crafts",
+    "definition_en": "a heat-transfer print method for polyester, dyes turn into gas and bond with fibers",
+    "definition_zh": "升华印花（涤纶专用）",
+    "example_en": "Sublimation printing requires polyester-rich fabric.",
+    "example_zh": "升华印花需含涤面料以呈现鲜艳色彩。"
+  },
+  {
+    "term": "discharge printing",
+    "full_form": "discharge printing",
+    "category": "crafts",
+    "definition_en": "printing that bleaches out the background dye and replaces it with new color",
+    "definition_zh": "拔染印花",
+    "example_en": "Discharge printing on dark ground requires a sample approval first.",
+    "example_zh": "深底拔染印花需先批色样。"
+  },
+  {
+    "term": "enzyme wash",
+    "full_form": "enzyme wash",
+    "category": "crafts",
+    "definition_en": "a garment wash using cellulase enzymes to soften fabric and create a vintage look",
+    "definition_zh": "酵素水洗",
+    "example_en": "Enzyme wash is more eco-friendly than traditional stone wash.",
+    "example_zh": "酵素水洗比传统石头水洗更环保。"
+  },
+  {
+    "term": "stone wash",
+    "full_form": "stone wash",
+    "category": "crafts",
+    "definition_en": "a garment wash using pumice stones to abrade denim for a worn look",
+    "definition_zh": "石头水洗",
+    "example_en": "Stone wash for 30 minutes gives the denim a vintage look.",
+    "example_zh": "石头水洗 30 分钟让牛仔呈现复古效果。"
+  },
+  {
+    "term": "dimensional change",
+    "full_form": "dimensional change after wash",
+    "category": "crafts",
+    "definition_en": "the percentage change in fabric dimensions after washing",
+    "definition_zh": "水洗后尺寸变化",
+    "example_en": "Dimensional change must stay within 3% both directions.",
+    "example_zh": "经纬向尺寸变化均须在 3% 以内。"
+  },
+  {
+    "term": "merrowed edge",
+    "full_form": "merrowed edge",
+    "category": "crafts",
+    "definition_en": "a wrap-stitched edge used on patches and twill numbers to prevent fray",
+    "definition_zh": "包边缝（毛毯边）",
+    "example_en": "Merrowed edge wraps the twill border to lock all threads.",
+    "example_zh": "包边缝将斜纹布四周包住以锁线。"
+  },
+  {
+    "term": "AQL",
+    "full_form": "acceptable quality level",
+    "category": "qc",
+    "definition_en": "the statistical sampling threshold for inspection, e.g. AQL 2.5 general level II",
+    "definition_zh": "可接受质量水平",
+    "example_en": "Most sportswear buyers use AQL 2.5 for general inspection.",
+    "example_zh": "大多数运动服装客户按 AQL 2.5 验货。"
+  },
+  {
+    "term": "PSI",
+    "full_form": "pre-shipment inspection",
+    "category": "qc",
+    "definition_en": "the final random inspection on finished goods before shipment",
+    "definition_zh": "出货前检验",
+    "example_en": "A third-party PSI is required before we can release the goods.",
+    "example_zh": "装运前必须经第三方 PSI 检验才能放货。"
+  },
+  {
+    "term": "DPI",
+    "full_form": "during production inspection",
+    "category": "qc",
+    "definition_en": "an inspection done when 30-40% of the order is finished to catch issues early",
+    "definition_zh": "生产中检验",
+    "example_en": "We suggest a DPI when 30% of the order is finished.",
+    "example_zh": "建议订单完成 30% 时做一次 DPI 检验。"
+  },
+  {
+    "term": "RFQ",
+    "full_form": "request for quotation",
+    "category": "qc",
+    "definition_en": "a formal inquiry sent to suppliers asking for price quotation",
+    "definition_zh": "询价单",
+    "example_en": "We received an RFQ for 10,000 pcs of running T-shirts.",
+    "example_zh": "我们收到一万件跑步 T 恤的询价单。"
+  },
+  {
+    "term": "PI",
+    "full_form": "proforma invoice",
+    "category": "qc",
+    "definition_en": "a preliminary invoice used as a quotation and payment reference before shipment",
+    "definition_zh": "形式发票（PI 报价单）",
+    "example_en": "Please issue the PI so we can arrange the deposit.",
+    "example_zh": "请开出形式发票以便我方安排定金。"
+  },
+  {
+    "term": "L/C",
+    "full_form": "letter of credit",
+    "category": "qc",
+    "definition_en": "a bank-issued payment guarantee tied to shipping document compliance",
+    "definition_zh": "信用证",
+    "example_en": "The L/C must be opened 30 days before the shipment date.",
+    "example_zh": "信用证须在装运日前 30 天开立。"
+  },
+  {
+    "term": "B/L",
+    "full_form": "bill of lading",
+    "category": "qc",
+    "definition_en": "a legal document issued by the carrier acknowledging receipt of cargo",
+    "definition_zh": "海运提单",
+    "example_en": "Please send us 3 originals and 3 copies of the B/L.",
+    "example_zh": "请提供 3 正 3 副的海运提单。"
+  },
+  {
+    "term": "HS code",
+    "full_form": "harmonized system code",
+    "category": "qc",
+    "definition_en": "the international customs classification code for goods",
+    "definition_zh": "海关编码",
+    "example_en": "For yoga leggings, the HS code is 6104.43 in most markets.",
+    "example_zh": "瑜伽裤在大多数市场的 HS 编码是 6104.43。"
+  },
+  {
+    "term": "FOB",
+    "full_form": "free on board",
+    "category": "qc",
+    "definition_en": "an Incoterm where the seller delivers goods on board the vessel at the port of shipment",
+    "definition_zh": "离岸价",
+    "example_en": "Quote on FOB Shanghai basis for 5,000 pcs.",
+    "example_zh": "5000 件请报 FOB 上海价。"
+  },
+  {
+    "term": "CIF",
+    "full_form": "cost, insurance and freight",
+    "category": "qc",
+    "definition_en": "an Incoterm where the seller pays cost, insurance and freight to the destination port",
+    "definition_zh": "到岸价",
+    "example_en": "CIF Hamburg includes ocean freight and insurance.",
+    "example_zh": "汉堡 CIF 价包含海运费和保险费。"
+  },
+  {
+    "term": "T/T",
+    "full_form": "telegraphic transfer",
+    "category": "qc",
+    "definition_en": "a wire transfer payment method, common as 30% deposit + 70% balance",
+    "definition_zh": "电汇",
+    "example_en": "30% T/T deposit and balance against B/L copy is our standard.",
+    "example_zh": "30% T/T 定金，余款凭提单复印件付清是标准。"
+  },
+  {
+    "term": "debit note",
+    "full_form": "debit note",
+    "category": "qc",
+    "definition_en": "a document issued to deduct money from an invoice, typically for claims",
+    "definition_zh": "借记通知（扣款单）",
+    "example_en": "We will issue a debit note to deduct the rework cost.",
+    "example_zh": "我方将开具借记通知扣减返工费。"
+  },
+  {
+    "term": "credit note",
+    "full_form": "credit note",
+    "category": "qc",
+    "definition_en": "a document issued as a credit to the buyer for compensation or allowance",
+    "definition_zh": "贷记通知（让利单）",
+    "example_en": "A credit note of US$1,200 has been issued for the late delivery.",
+    "example_zh": "因延迟出货已开具 1200 美元的贷记通知。"
+  },
+  {
+    "term": "REACH compliance",
+    "full_form": "REACH compliance",
+    "category": "qc",
+    "definition_en": "compliance with the EU REACH regulation on chemicals, SVHC below 0.1%",
+    "definition_zh": "REACH 化学品合规",
+    "example_en": "All dyes must show REACH compliance for the EU market.",
+    "example_zh": "欧盟市场所有染料须符合 REACH。"
+  },
+  {
+    "term": "critical defect",
+    "full_form": "critical defect",
+    "category": "qc",
+    "definition_en": "a defect that endangers the user (e.g. broken needle), zero acceptance",
+    "definition_zh": "严重缺陷（致命缺陷）",
+    "example_en": "A broken needle left in the seam is a critical defect.",
+    "example_zh": "断针遗留在缝内属严重缺陷。"
+  },
+  {
+    "term": "major defect",
+    "full_form": "major defect",
+    "category": "qc",
+    "definition_en": "a defect that reduces usability or saleability",
+    "definition_zh": "主要缺陷",
+    "example_en": "Uneven dye shade on the front panel is a major defect.",
+    "example_zh": "前片染色不均按主要缺陷判定。"
+  },
+  {
+    "term": "minor defect",
+    "full_form": "minor defect",
+    "category": "qc",
+    "definition_en": "a defect that does not affect usability but is below standard",
+    "definition_zh": "次要缺陷",
+    "example_en": "A 2 cm loose thread on the hem is a minor defect.",
+    "example_zh": "下摆 2 厘米的散线属次要缺陷。"
+  },
+  {
+    "term": "moisture-wicking",
+    "full_form": "moisture-wicking finish",
+    "category": "sportswear",
+    "definition_en": "a fabric finish that pulls sweat away from the skin for quick drying",
+    "definition_zh": "吸湿排汗整理",
+    "example_en": "All running tops must be moisture-wicking with a wicking rate ≥ 35 mm/10min.",
+    "example_zh": "所有跑步上衣必须具备排汗功能。"
+  },
+  {
+    "term": "four-way stretch",
+    "full_form": "four-way stretch",
+    "category": "sportswear",
+    "definition_en": "fabric that stretches in both warp and weft directions",
+    "definition_zh": "四面弹",
+    "example_en": "The fabric provides four-way stretch with 25% recovery after 5 washes.",
+    "example_zh": "该面料具备四面弹力，5 次水洗后回弹率达 25%。"
+  },
+  {
+    "term": "squat-proof",
+    "full_form": "squat-proof",
+    "category": "sportswear",
+    "definition_en": "a leggings quality standard that ensures the fabric is opaque when squatting",
+    "definition_zh": "深蹲不透（瑜伽裤指标）",
+    "example_en": "All our leggings must be squat-proof at 250 GSM.",
+    "example_zh": "我司瑜伽裤在 250 GSM 下必须深蹲不透。"
+  },
+  {
+    "term": "UPF 50+",
+    "full_form": "ultraviolet protection factor 50+",
+    "category": "sportswear",
+    "definition_en": "a fabric rating that blocks 98% of UVA/UVB rays",
+    "definition_zh": "防紫外线系数 50+",
+    "example_en": "The sun hoodie is rated UPF 50+ for outdoor training.",
+    "example_zh": "这款防晒连帽衫 UPF 达 50+。"
+  },
+  {
+    "term": "Gore-Tex",
+    "full_form": "Gore-Tex membrane",
+    "category": "sportswear",
+    "definition_en": "a waterproof, windproof and breathable membrane used in outdoor apparel",
+    "definition_zh": "戈尔防水透气膜",
+    "example_en": "The trail-running jacket uses 3-layer Gore-Tex.",
+    "example_zh": "这款越野跑夹克采用 3 层 Gore-Tex。"
+  },
+  {
+    "term": "PrimaLoft",
+    "full_form": "PrimaLoft Gold",
+    "category": "sportswear",
+    "definition_en": "a premium synthetic insulation that retains warmth when wet",
+    "definition_zh": "PrimaLoft 金装合成棉",
+    "example_en": "PrimaLoft Gold is the warmest synthetic fill in the line.",
+    "example_zh": "PrimaLoft Gold 是系列中保暖最强的合成棉。"
+  },
+  {
+    "term": "RDS",
+    "full_form": "Responsible Down Standard",
+    "category": "sportswear",
+    "definition_en": "a certification ensuring down is sourced responsibly with full chain of custody",
+    "definition_zh": "负责任羽绒标准",
+    "example_en": "The buyer requires the RDS certificate for every down order.",
+    "example_zh": "买方要求每张羽绒订单都附 RDS 证书。"
+  },
+  {
+    "term": "fill power",
+    "full_form": "fill power (in³/oz)",
+    "category": "sportswear",
+    "definition_en": "a measure of down loft, higher means warmer for the same weight",
+    "definition_zh": "蓬松度（立方英寸/盎司）",
+    "example_en": "The fill power is 800, providing high warmth at low weight.",
+    "example_zh": "蓬松度 800，重量轻却保暖强。"
+  },
+  {
+    "term": "tackle twill",
+    "full_form": "tackle twill number",
+    "category": "sportswear",
+    "definition_en": "a die-cut twill number sewn onto jerseys, classic for NBA-style jerseys",
+    "definition_zh": "贴布绣号码（球衣工艺）",
+    "example_en": "Tackle twill numbers are stitched on with zigzag merrowed edge.",
+    "example_zh": "贴布绣号码用之字包边缝车缝固定。"
+  },
+  {
+    "term": "recycled polyester",
+    "full_form": "GRS-certified recycled polyester",
+    "category": "sportswear",
+    "definition_en": "polyester fiber made from recycled PET bottles, GRS certified",
+    "definition_zh": "GRS 认证再生涤纶",
+    "example_en": "Buyer requires GRS-certified recycled polyester for SS25.",
+    "example_zh": "买家要求 25 春夏系列采用 GRS 认证再生涤纶。"
+  },
+  {
+    "term": "running singlet",
+    "full_form": "running singlet",
+    "category": "sportswear",
+    "definition_en": "a sleeveless running top with narrow shoulder straps",
+    "definition_zh": "跑步背心（窄肩款）",
+    "example_en": "The running singlet weighs only 65 grams to maximize breathability.",
+    "example_zh": "跑步背心仅重 65 克以最大化透气性。"
+  },
+  {
+    "term": "compression tights",
+    "full_form": "compression tights",
+    "category": "sportswear",
+    "definition_en": "tight-fitting leggings that apply graduated pressure for muscle support",
+    "definition_zh": "压缩紧身裤",
+    "example_en": "The compression tights apply 18 mmHg pressure at the calf zone.",
+    "example_zh": "压缩紧身裤在小腿区域施加 18 mmHg 压力。"
+  },
+  {
+    "term": "yoga leggings",
+    "full_form": "yoga leggings",
+    "category": "sportswear",
+    "definition_en": "high-waisted stretch leggings designed for yoga and athleisure",
+    "definition_zh": "瑜伽裤（高腰紧身打底裤）",
+    "example_en": "Our SS27 yoga leggings come in 12 solid colors and 3 prints.",
+    "example_zh": "我方 27 春夏瑜伽裤有 12 个素色和 3 个印花可选。"
+  },
+  {
+    "term": "high-waisted",
+    "full_form": "high-waisted",
+    "category": "sportswear",
+    "definition_en": "a waistband that sits at or above the natural waistline",
+    "definition_zh": "高腰（高于自然腰线）",
+    "example_en": "The yoga leggings feature a high-waisted design.",
+    "example_zh": "瑜伽裤采用高腰设计，修饰身形。"
+  },
+  {
+    "term": "seamless waistband",
+    "full_form": "seamless waistband",
+    "category": "sportswear",
+    "definition_en": "a waistband knitted in one piece to avoid digging into the skin",
+    "definition_zh": "无缝腰头",
+    "example_en": "Seamless waistband is knitted in one piece to avoid digging in.",
+    "example_zh": "无缝腰头一体编织以避免勒肉。"
+  },
+  {
+    "term": "teamwear",
+    "full_form": "teamwear customization",
+    "category": "sportswear",
+    "definition_en": "customized jerseys, shorts and socks made for a sports team",
+    "definition_zh": "球服定制",
+    "example_en": "Our MOQ for full teamwear customization is 30 sets per design.",
+    "example_zh": "整套球服定制的起订量为每款 30 套。"
+  },
+  {
+    "term": "POY",
+    "full_form": "partially oriented yarn",
+    "category": "spinning",
+    "definition_en": "a pre-oriented polyester filament yarn produced by high-speed melt spinning, used as feedstock for draw texturing into DTY",
+    "definition_zh": "预取向丝（熔融纺丝半成品，是加弹 DTY 的原料）",
+    "example_en": "Our DTY is textured in-house from POY, so the quality is stable.",
+    "example_zh": "我们的 DTY 由 POY 本厂加弹而成，质量稳定。"
+  },
+  {
+    "term": "DTY",
+    "full_form": "draw textured yarn",
+    "category": "spinning",
+    "definition_en": "a polyester filament yarn made by drawing and false-twist texturing POY, giving bulk and stretch, widely used in knitting",
+    "definition_zh": "拉伸变形丝（加弹丝，有蓬松弹性，针织常用）",
+    "example_en": "We need 10 tons of DTY 150D/48F semi-dull for single jersey.",
+    "example_zh": "我们需要 10 吨 150D/48F 半消光 DTY 用于单面布。"
+  },
+  {
+    "term": "FDY",
+    "full_form": "fully drawn yarn",
+    "category": "spinning",
+    "definition_en": "a fully oriented polyester filament yarn produced by one-step high-speed spinning and drawing, smooth and strong, used mainly in weaving",
+    "definition_zh": "全拉伸丝（一步法纺丝拉伸，光滑强力高，多用于梭织）",
+    "example_en": "FDY 75D/36F is the standard warp yarn for our chiffon.",
+    "example_zh": "FDY 75D/36F 是我们雪纺的常规经纱。"
+  },
+  {
+    "term": "melt spinning",
+    "full_form": "melt spinning",
+    "category": "spinning",
+    "definition_en": "the process of extruding molten polymer (e.g. PET) through spinnerets and cooling it into continuous filaments",
+    "definition_zh": "熔融纺丝（熔体经喷丝板挤出冷却成丝的工艺）",
+    "example_en": "Polyester filament is produced by melt spinning from PET chips.",
+    "example_zh": "涤纶长丝由 PET 切片经熔融纺丝制成。"
+  },
+  {
+    "term": "denier",
+    "full_form": "denier (D)",
+    "category": "spinning",
+    "definition_en": "a unit of linear density: the weight in grams of 9,000 meters of yarn; higher denier means thicker yarn",
+    "definition_zh": "旦尼尔（9000 米纱线的克重，数值越大纱越粗）",
+    "example_en": "For lightweight interlock, 75 denier is better than 150 denier.",
+    "example_zh": "做轻薄棉毛布，75 旦比 150 旦更合适。"
+  },
+  {
+    "term": "filament count",
+    "full_form": "filament count (F)",
+    "category": "spinning",
+    "definition_en": "the number of individual filaments in a yarn, written after denier, e.g. 150D/48F; higher F gives softer hand",
+    "definition_zh": "孔数 / 单丝根数（写在旦数后，如 150D/48F；F 越高手感越软）",
+    "example_en": "Please quote both 150D/48F and 150D/96F for comparison.",
+    "example_zh": "请同时报 150D/48F 和 150D/96F 以便比较。"
+  },
+  {
+    "term": "intermingle",
+    "full_form": "air intermingle (NIM/SIM/HIM)",
+    "category": "spinning",
+    "definition_en": "air-jet entanglement points along the yarn that hold filaments together; levels are NIM (light), SIM (medium), HIM (heavy)",
+    "definition_zh": "网络度（气流交络点，分轻网络 NIM、中网络 SIM、重网络 HIM）",
+    "example_en": "We prefer HIM, about 100 nips per meter, to avoid broken filaments on high-speed knitting.",
+    "example_zh": "我们要 HIM，每米约 100 个网络点，避免高速针织时断丝。"
+  },
+  {
+    "term": "elongation",
+    "full_form": "elongation at break",
+    "category": "spinning",
+    "definition_en": "the percentage a yarn stretches before breaking; DTY typically runs 20-30%",
+    "definition_zh": "断裂伸长率（DTY 常规 20%-30%）",
+    "example_en": "Your QC measured 32% elongation, but our retention sample tested within the 25±3% spec.",
+    "example_zh": "贵司 QC 测得伸度 32%，但我方留样检测在 25±3% 规格内。"
+  },
+  {
+    "term": "Uster evenness CV%",
+    "full_form": "Uster evenness coefficient of variation",
+    "category": "spinning",
+    "definition_en": "the coefficient of variation of yarn mass along its length measured on a Uster tester; lower means more even yarn",
+    "definition_zh": "Uster 条干变异系数（数值越小纱线越均匀）",
+    "example_en": "Please keep the Uster evenness CV below 1.5% and attach the report per lot.",
+    "example_zh": "请将 Uster 条干 CV 控制在 1.5% 以内，并按批附检测报告。"
+  },
+  {
+    "term": "dope dyed",
+    "full_form": "dope dyed (spun dyed)",
+    "category": "spinning",
+    "definition_en": "color added to the polymer melt before spinning, giving excellent color fastness without piece dyeing",
+    "definition_zh": "原液着色（纺丝前在熔体中加色，色牢度好，无需后染）",
+    "example_en": "Dope dyed black has a 3-ton MOQ per color at our mill.",
+    "example_zh": "我们厂原液着色黑丝每色起订量 3 吨。"
+  },
+  {
+    "term": "cone yarn",
+    "full_form": "cone yarn",
+    "category": "spinning",
+    "definition_en": "yarn wound on a conical paper or plastic tube, the standard package for filament yarn supplied to knitting and weaving mills",
+    "definition_zh": "筒子纱（长丝标准卷装，供针织厂、织造厂直接上机）",
+    "example_en": "We pack on 5 kg paper cones, palletized and wrapped for sea shipment.",
+    "example_zh": "我们用 5 公斤纸筒包装，打托盘缠膜海运。"
+  },
+  {
+    "term": "circular knitting machine",
+    "full_form": "circular knitting machine",
+    "category": "weaving",
+    "definition_en": "a weft-knitting machine with needles arranged in a cylinder, producing tubular knitted fabric at high speed",
+    "definition_zh": "大圆机(针筒式纬编机,生产筒状针织坯布)",
+    "example_en": "We run circular knitting machines from 24G to 32G for jersey and interlock.",
+    "example_zh": "我们的大圆机从 24G 到 32G,生产单面布和棉毛布。"
+  },
+  {
+    "term": "cylinder diameter",
+    "full_form": "cylinder diameter",
+    "category": "weaving",
+    "definition_en": "the diameter of the needle cylinder, which determines the tube width of the greige fabric",
+    "definition_zh": "筒径(决定坯布筒状门幅)",
+    "example_en": "A 30-inch cylinder gives about 70 inches open width after finishing.",
+    "example_zh": "30 英寸筒径成品开幅后约 70 英寸。"
+  },
+  {
+    "term": "feeder",
+    "full_form": "feeder (yarn feed system)",
+    "category": "weaving",
+    "definition_en": "a yarn feeding position on a circular machine; more feeders mean faster production and affect fabric structure",
+    "definition_zh": "路数/喂纱路(路数越多产量越高)",
+    "example_en": "Our 34-inch interlock machine has 84 feeders.",
+    "example_zh": "我们 34 英寸棉毛机有 84 路。"
+  },
+  {
+    "term": "rib",
+    "full_form": "rib knit (e.g. 1x1, 2x2)",
+    "category": "weaving",
+    "definition_en": "a knit structure with alternating knit and purl wales, highly elastic, used for collars and cuffs",
+    "definition_zh": "罗纹(纵条弹性结构,用于领口袖口)",
+    "example_en": "1x1 rib on 28-gauge is standard for T-shirt collars.",
+    "example_zh": "28G 织 1x1 罗纹是 T 恤领口的标准做法。"
+  },
+  {
+    "term": "greige fabric",
+    "full_form": "greige (grey) fabric",
+    "category": "weaving",
+    "definition_en": "unfinished knitted fabric straight off the machine, before dyeing or finishing",
+    "definition_zh": "毛坯布/坯布(下机后未染整的布)",
+    "example_en": "The greige fabric will be delivered directly to our dye house in Shaoxing.",
+    "example_zh": "毛坯布将直接送到我们绍兴的染厂。"
+  },
+  {
+    "term": "GSM",
+    "full_form": "grams per square meter",
+    "category": "weaving",
+    "definition_en": "fabric weight per square meter, the key spec for knitted fabric hand feel and costing",
+    "definition_zh": "克重(每平方米克数,针织核心规格)",
+    "example_en": "Please guarantee greige GSM at plus-minus 3 percent.",
+    "example_zh": "请保证坯布克重公差正负 3%。"
+  },
+  {
+    "term": "stitch length",
+    "full_form": "stitch length (loop length)",
+    "category": "weaving",
+    "definition_en": "the length of yarn in one knitted loop, in millimeters; shorter stitch length gives tighter, heavier fabric",
+    "definition_zh": "线圈长度(毫米;越短布越紧密克重越高)",
+    "example_en": "Keep the stitch length at 0.28 mm for a tight construction.",
+    "example_zh": "线圈长度保持在 0.28 毫米以保证紧密结构。"
+  },
+  {
+    "term": "four-point system",
+    "full_form": "four-point inspection system",
+    "category": "weaving",
+    "definition_en": "a fabric inspection method that assigns up to 4 penalty points per defect based on its size",
+    "definition_zh": "四分制验布(按疵点大小扣分,单个疵点最高 4 分)",
+    "example_en": "Every roll must pass the four-point system below 20 points per 100 kg.",
+    "example_zh": "每卷布四分制检验须控制在每 100 公斤 20 分以内。"
+  },
+  {
+    "term": "CMT",
+    "full_form": "cut, make, trim",
+    "category": "garment",
+    "definition_en": "a manufacturing service where the factory only cuts, sews and finishes the garments, while the buyer supplies fabric and trims",
+    "definition_zh": "裁剪、缝制、整烫加工(客供面辅料的纯加工模式)",
+    "example_en": "We need CMT only; the fabric and trims come from our nominated suppliers.",
+    "example_zh": "我们只要 CMT 加工,面料和辅料由指定供应商提供。"
+  },
+  {
+    "term": "spreading",
+    "full_form": "fabric spreading",
+    "category": "garment",
+    "definition_en": "laying fabric in multiple plies on the cutting table before cutting, done manually or with an automatic spreading machine",
+    "definition_zh": "铺布/拉布(裁剪前将面料多层铺叠在裁床上)",
+    "example_en": "We spread 80 plies for this knit fabric and keep end loss under 2 percent.",
+    "example_zh": "这款针织面料我们铺 80 层,断头损耗控制在 2% 以内。"
+  },
+  {
+    "term": "marker utilization",
+    "full_form": "marker utilization",
+    "category": "garment",
+    "definition_en": "the percentage of fabric area actually used by the pattern pieces in a marker plan, higher means less waste",
+    "definition_zh": "排料利用率(唛架上裁片实际占用面料的比例)",
+    "example_en": "Our marker utilization is around 88 percent, which keeps fabric waste low.",
+    "example_zh": "我们的排料利用率约 88%,面料损耗较低。"
+  },
+  {
+    "term": "sewing line",
+    "full_form": "sewing production line",
+    "category": "garment",
+    "definition_en": "a group of sewing machines and operators arranged in sequence to assemble garments in a flow",
+    "definition_zh": "缝制产线(按工序排列的车工与机器组合)",
+    "example_en": "Each sewing line has 28 operators and 30 machines.",
+    "example_zh": "每条缝制产线有 28 名车工、30 台机器。"
+  },
+  {
+    "term": "SMV",
+    "full_form": "standard minute value",
+    "category": "garment",
+    "definition_en": "the standard time in minutes allowed to produce one garment, set by IE engineers and used for costing and capacity planning",
+    "definition_zh": "标准工时(IE 制定的单件标准生产分钟数)",
+    "example_en": "The SMV for this polo is 18 minutes, so one line makes about 700 pieces a day.",
+    "example_zh": "这款 Polo 的标准工时是 18 分钟,一条线日产约 700 件。"
+  },
+  {
+    "term": "line efficiency",
+    "full_form": "sewing line efficiency",
+    "category": "garment",
+    "definition_en": "the ratio of produced standard minutes to attended minutes, showing how well a sewing line performs; 65-75% is good",
+    "definition_zh": "产线效率(产出标准分钟数 ÷ 出勤分钟数)",
+    "example_en": "This line runs at 72 percent efficiency, which is above the industry average.",
+    "example_zh": "这条线的效率约 72%,高于行业平均水平。"
+  },
+  {
+    "term": "daily output",
+    "full_form": "daily output",
+    "category": "garment",
+    "definition_en": "the number of garments one line or factory produces per day, calculated from operators, working minutes, efficiency and SMV",
+    "definition_zh": "日产能",
+    "example_en": "Daily output per line is about 750 pieces including one hour of overtime.",
+    "example_zh": "每条线日产能约 750 件(含一小时加班)。"
+  },
+  {
+    "term": "pressing",
+    "full_form": "pressing / ironing",
+    "category": "garment",
+    "definition_en": "the finishing process of applying heat, steam and pressure to shape garments and remove creases",
+    "definition_zh": "整烫/熨烫(成品定型与去皱工序)",
+    "example_en": "Our QC found shine marks on the placket after pressing; the iron temperature was too high.",
+    "example_zh": "QC 发现整烫后门襟有极光,是熨斗温度过高造成的。"
+  },
+  {
+    "term": "packing",
+    "full_form": "garment packing",
+    "category": "garment",
+    "definition_en": "the final process of polybagging, tagging and cartoning finished garments per the buyer's packing instruction",
+    "definition_zh": "尾部包装(装胶袋、挂吊牌、装箱)",
+    "example_en": "One piece per polybag, 24 pieces per carton, gross weight under 25 kg.",
+    "example_zh": "一件一胶袋,每箱 24 件,毛重不超过 25 公斤。"
+  },
+  {
+    "term": "PSI",
+    "full_form": "pre-shipment inspection",
+    "category": "garment",
+    "definition_en": "the final random inspection on finished goods before shipment; balance payment is often released only after PSI passes",
+    "definition_zh": "出货前检验(尾款通常以验货通过为条件)",
+    "example_en": "The balance stays after PSI; that is our standard payment term.",
+    "example_zh": "尾款在验货通过后才支付,这是我们的标准条款。"
+  },
+  {
+    "term": "rotary screen printing",
+    "full_form": "rotary screen printing",
+    "category": "crafts",
+    "definition_en": "a continuous printing method using cylindrical screens, fast and economical for medium to large yardage",
+    "definition_zh": "圆网印花（网筒连续印花，适合中大批量）",
+    "example_en": "For 2,000 meters with a 64 cm repeat, rotary screen printing is the most economical option.",
+    "example_zh": "2,000 米、64 厘米花回的订单，圆网印花最经济。"
+  },
+  {
+    "term": "flat screen printing",
+    "full_form": "flat screen printing",
+    "category": "crafts",
+    "definition_en": "a printing method using flat mesh screens on a printing table, flexible on repeat size but slower and costlier",
+    "definition_zh": "平网印花（台板印花，花回不限制但速度慢、成本高）",
+    "example_en": "Flat screen printing handles the 72 cm repeat, but adds a 15% premium to the price.",
+    "example_zh": "平网印花能做 72 厘米花回，但价格要加 15% 溢价。"
+  },
+  {
+    "term": "digital printing",
+    "full_form": "digital textile printing",
+    "category": "crafts",
+    "definition_en": "inkjet printing directly on fabric with no screens required, ideal for fine detail and small runs",
+    "definition_zh": "数码印花（无需制网，适合精细花型和小批量）",
+    "example_en": "If the strike-off loses the fine-line detail, we may switch this design to digital printing.",
+    "example_zh": "如果打样损失细线条细节，这个花型我们可能改做数码印花。"
+  },
+  {
+    "term": "reactive dyes",
+    "full_form": "reactive dyes",
+    "category": "crafts",
+    "definition_en": "dyes that form covalent bonds with cellulose fibers, the standard choice for cotton printing with good fastness",
+    "definition_zh": "活性染料（棉印花主流染料，色牢度和手感好）",
+    "example_en": "We prefer reactive dyes on this cotton poplin for better color fastness and softer handfeel.",
+    "example_zh": "这款全棉府绸我们倾向用活性染料，色牢度更好、手感更软。"
+  },
+  {
+    "term": "disperse dyes",
+    "full_form": "disperse dyes",
+    "category": "crafts",
+    "definition_en": "dyes used on polyester and synthetic fibers, fixed by heat, the standard for polyester printing",
+    "definition_zh": "分散染料（涤纶等合纤印花专用，热固色）",
+    "example_en": "For the polyester chiffon styles, please print with disperse dyes, not reactive.",
+    "example_zh": "涤纶雪纺款式请用分散染料印花，不要用活性染料。"
+  },
+  {
+    "term": "color paste",
+    "full_form": "printing color paste",
+    "category": "crafts",
+    "definition_en": "the mixture of dye, thickener and auxiliaries prepared for screen printing, usually made fresh per batch",
+    "definition_zh": "色浆（染料+糊料+助剂的印花混合浆，通常每批现配）",
+    "example_en": "The color paste is prepared fresh for each batch, so slight shade variation between lots is possible.",
+    "example_zh": "色浆每批现配，因此批次间可能有轻微色光差异。"
+  },
+  {
+    "term": "register",
+    "full_form": "print register",
+    "category": "crafts",
+    "definition_en": "the precise alignment of multiple screens/colors in a print design; out of register causes blurred or gapped outlines",
+    "definition_zh": "对花/套色（多套色之间的对位精度，走位会导致轮廓模糊或露白）",
+    "example_en": "Our machines hold register within plus or minus 0.5 mm; please check the outlines on the strike-off.",
+    "example_zh": "我们机台套色误差控制在正负 0.5 毫米，请在打样上仔细检查轮廓线。"
+  },
+  {
+    "term": "strike-off",
+    "full_form": "printing strike-off",
+    "category": "crafts",
+    "definition_en": "a small printed sample made before bulk production to confirm colors, register and print quality",
+    "definition_zh": "印花打样（批量前确认颜色、对花和印花效果的小样）",
+    "example_en": "The strike-off takes 7 to 10 days because we need to engrave the six screens first.",
+    "example_zh": "打样需要 7 到 10 天，因为要先雕刻 6 张网。"
+  },
+  {
+    "term": "repeat size",
+    "full_form": "pattern repeat size",
+    "category": "crafts",
+    "definition_en": "the length at which a print pattern repeats, limited by screen circumference on rotary machines",
+    "definition_zh": "花回（花型循环尺寸，圆网受网筒周长限制）",
+    "example_en": "Your repeat size is 72 cm, but our rotary screens only fit 64 cm.",
+    "example_zh": "你的花回是 72 厘米，但我们圆网网筒只能做 64 厘米。"
+  },
+  {
+    "term": "color fastness",
+    "full_form": "color fastness",
+    "category": "crafts",
+    "definition_en": "the resistance of printed color to washing, rubbing and light, graded from 1 to 5",
+    "definition_zh": "色牢度（耐水洗、摩擦、光照能力，1-5 级）",
+    "example_en": "Color fastness to washing must be grade 4 or above for this order.",
+    "example_zh": "此订单水洗色牢度必须达到 4 级及以上。"
+  },
+  {
+    "term": "pigment printing",
+    "full_form": "pigment printing",
+    "category": "crafts",
+    "definition_en": "printing with insoluble pigments bound by a binder, simple and cheap but with a stiffer handfeel",
+    "definition_zh": "涂料印花（颜料+粘合剂印花，工艺简单便宜但手感偏硬）",
+    "example_en": "Pigment white is a safe compromise if the discharge print fails the strength test.",
+    "example_zh": "如果拔染强力测试不达标，涂料白是稳妥的替代方案。"
+  },
+  {
+    "term": "flat embroidery",
+    "full_form": "flat embroidery",
+    "category": "crafts",
+    "definition_en": "the most common embroidery technique where stitches lie flat on the fabric surface, suitable for logos and fine details",
+    "definition_zh": "平绣(最基础的绣法,针迹平贴布面)",
+    "example_en": "The chest logo will be done in flat embroidery with 3 thread colors.",
+    "example_zh": "胸标采用平绣,用 3 个颜色的绣线。"
+  },
+  {
+    "term": "appliqué",
+    "full_form": "appliqué embroidery",
+    "category": "crafts",
+    "definition_en": "an embroidery technique where fabric pieces are cut and stitched onto the base fabric, ideal for large color areas",
+    "definition_zh": "贴布绣(将布片裁剪后车缝到底布上,适合大色块)",
+    "example_en": "Use appliqué with twill fabric for the big red area to reduce the stitch count.",
+    "example_zh": "大片红色区域用斜纹布做贴布绣,以降低针数。"
+  },
+  {
+    "term": "sequin embroidery",
+    "full_form": "sequin embroidery",
+    "category": "crafts",
+    "definition_en": "embroidery that attaches sequins to fabric by machine, common on fashion and evening wear",
+    "definition_zh": "亮片绣(机器缝制亮片,时装常用)",
+    "example_en": "The flag on the sleeve uses sequin embroidery with 3 mm sequins.",
+    "example_zh": "袖子上的旗子用 3 毫米亮片做亮片绣。"
+  },
+  {
+    "term": "3D puff embroidery",
+    "full_form": "3D puff embroidery",
+    "category": "crafts",
+    "definition_en": "embroidery stitched over EVA foam to create a raised three-dimensional effect, popular on caps and jackets",
+    "definition_zh": "立体绣(垫 EVA 海绵车缝形成凸起效果)",
+    "example_en": "The letters are done in 3D puff embroidery with 2 mm EVA foam.",
+    "example_zh": "字母部分用 2 毫米 EVA 海绵做立体绣。"
+  },
+  {
+    "term": "stitch count",
+    "full_form": "stitch count",
+    "category": "crafts",
+    "definition_en": "the total number of stitches in an embroidery design, the main basis for pricing",
+    "definition_zh": "针数(绣花图案的总结针数,计价主要依据)",
+    "example_en": "After switching to appliqué, the stitch count dropped from 15,000 to 8,000.",
+    "example_zh": "改为贴布绣后,针数从 15000 降到了 8000。"
+  },
+  {
+    "term": "embroidery thread",
+    "full_form": "embroidery thread",
+    "category": "crafts",
+    "definition_en": "specialized thread for machine embroidery, mainly polyester (strong, wash-fast) or rayon (high luster)",
+    "definition_zh": "绣线(涤丝线耐洗牢度高,人造丝线光泽好)",
+    "example_en": "Use polyester embroidery thread for the sequin part and rayon for the logo.",
+    "example_zh": "亮片部分用涤丝线,logo 部分用人造丝线。"
+  },
+  {
+    "term": "rayon thread",
+    "full_form": "rayon embroidery thread",
+    "category": "crafts",
+    "definition_en": "viscose-based embroidery thread with excellent sheen but lower wet strength",
+    "definition_zh": "人造丝绣线(光泽好但湿强低,易断线)",
+    "example_en": "Rayon thread gives the logo better luster but may break on high-speed heads.",
+    "example_zh": "人造丝线让 logo 光泽更好,但在高速机头上容易断线。"
+  },
+  {
+    "term": "digitizing",
+    "full_form": "embroidery digitizing",
+    "category": "crafts",
+    "definition_en": "the process of converting artwork into a stitch file (tape) that an embroidery machine can read",
+    "definition_zh": "电脑制版(把图案转换为绣花机可读取的针迹版带)",
+    "example_en": "The digitizing fee is 60 dollars, and the tape file will be in DST format.",
+    "example_zh": "电脑制版费 60 美元,版带用 DST 格式。"
+  },
+  {
+    "term": "tape file",
+    "full_form": "embroidery tape file",
+    "category": "crafts",
+    "definition_en": "the digitized stitch file for embroidery machines, common formats include DST, EMB and PES",
+    "definition_zh": "版带文件(常见格式 DST/EMB/PES)",
+    "example_en": "Please send the tape file so we can check the stitch density before sampling.",
+    "example_zh": "请先发版带文件,车样前我们要核对针迹密度。"
+  },
+  {
+    "term": "thread break",
+    "full_form": "thread break",
+    "category": "crafts",
+    "definition_en": "an interruption in machine embroidery when the thread snaps, reducing efficiency and causing defects",
+    "definition_zh": "断线(绣花过程中线断裂,影响效率并造成疵点)",
+    "example_en": "If the thread break rate stays below 2 per piece, we accept the price of 1.75.",
+    "example_zh": "如果断线率控制在每件 2 次以内,我们接受 1.75 的单价。"
+  },
+  {
+    "term": "placement",
+    "full_form": "embroidery placement",
+    "category": "crafts",
+    "definition_en": "the exact position of an embroidery design on a garment, defined by reference points and measurements",
+    "definition_zh": "绣花定位(图案在成衣上的具体位置,需参照点和尺寸)",
+    "example_en": "The placement is 8 cm from the center front and 18 cm down from the shoulder seam.",
+    "example_zh": "定位为距前中 8 厘米、距肩缝向下 18 厘米。"
+  },
+  {
+    "term": "placement tolerance",
+    "full_form": "placement tolerance",
+    "category": "crafts",
+    "definition_en": "the allowed deviation of embroidery position, typically plus or minus 3 mm on multi-head machines",
+    "definition_zh": "定位公差(多头机一般可保证正负 3 毫米)",
+    "example_en": "On multi-head machines we can hold a placement tolerance of plus or minus 3 mm.",
+    "example_zh": "多头机上我们的定位公差能保证在正负 3 毫米。"
+  },
+  {
+    "term": "stenter",
+    "full_form": "stenter / tenter frame",
+    "category": "dyeing",
+    "definition_en": "a machine that stretches fabric to a set width under heat for drying and heat setting, controlling final width and dimensional stability",
+    "definition_zh": "拉幅定型机(热风拉幅,控制成品门幅与尺寸稳定性)",
+    "example_en": "Please set the finished width at 58/60 inches on the stenter.",
+    "example_zh": "请在拉幅定型机上把成品门幅设定为 58/60 英寸。"
+  },
+  {
+    "term": "heat setting",
+    "full_form": "heat setting",
+    "category": "dyeing",
+    "definition_en": "a thermal process that fixes synthetic fabric dimensions, typically 160-200°C on polyester or nylon",
+    "definition_zh": "热定型(高温固定化纤尺寸,涤纶通常 160-200°C)",
+    "example_en": "Heat setting at 170°C is critical for the width stability of this 20D pongee.",
+    "example_zh": "170°C 热定型对这款 20D 春亚纺的门幅稳定非常关键。"
+  },
+  {
+    "term": "residual shrinkage",
+    "full_form": "residual shrinkage",
+    "category": "dyeing",
+    "definition_en": "the shrinkage remaining in finished fabric, measured per AATCC 135 or ISO 6330 after washing",
+    "definition_zh": "残余缩水率(成品面料经水洗后的剩余缩水,按 AATCC 135/ISO 6330 测试)",
+    "example_en": "Residual shrinkage must not exceed 3% in both warp and weft directions.",
+    "example_zh": "经纬两个方向的残余缩水率均不得超过 3%。"
+  },
+  {
+    "term": "peaching",
+    "full_form": "peaching / peach skin finish",
+    "category": "dyeing",
+    "definition_en": "a light sanding finish using abrasive rollers that gives fabric a soft, peach-skin surface touch",
+    "definition_zh": "桃皮绒磨毛(砂辊轻磨,表面呈桃皮般柔绒触感)",
+    "example_en": "We want light peaching for a soft peach skin touch, not a furry surface.",
+    "example_zh": "我们要轻磨毛做出桃皮绒触感,不要起毛的表面。"
+  },
+  {
+    "term": "sueding",
+    "full_form": "sueding / emerizing",
+    "category": "dyeing",
+    "definition_en": "a heavier sanding finish with emery-covered rollers that produces a suede-like nap, denser than peaching",
+    "definition_zh": "磨绒/金刚砂磨毛(砂皮辊重磨,绒感比桃皮磨毛更密)",
+    "example_en": "The approved counter sample was medium sueding, not peaching.",
+    "example_zh": "批核的对样是中度磨绒,不是桃皮磨毛。"
+  },
+  {
+    "term": "raising",
+    "full_form": "raising / napping",
+    "category": "dyeing",
+    "definition_en": "a mechanical finish using wire-covered rollers to pull fiber ends out of the fabric, creating a lofty nap like fleece or flannel",
+    "definition_zh": "起绒/拉毛(钢丝针布拉出纤维末端形成绒毛,如摇粒绒、法兰绒)",
+    "example_en": "The back side of this sweatshirt fabric needs double raising for a fleece effect.",
+    "example_zh": "这款卫衣布反面需要两次起绒做出摇粒绒效果。"
+  },
+  {
+    "term": "coating",
+    "full_form": "coating (PU/PVC)",
+    "category": "dyeing",
+    "definition_en": "applying a polymer layer (PU or PVC) onto fabric to add waterproofness, windproofness or special surface effects",
+    "definition_zh": "涂层(在布面刮涂 PU/PVC 浆料,赋予防水防风或特殊外观)",
+    "example_en": "PU coating on the back adds windproofness but reduces breathability.",
+    "example_zh": "背面 PU 涂层增强防风性但降低透气性。"
+  },
+  {
+    "term": "lamination",
+    "full_form": "lamination / bonding",
+    "category": "dyeing",
+    "definition_en": "bonding a membrane (e.g. TPU, PTFE) or another fabric to the base fabric for waterproof-breathable performance",
+    "definition_zh": "复合/贴合(将 TPU、PTFE 膜或其他面料与基布粘合,实现防水透湿)",
+    "example_en": "TPU lamination gives this shell a hydrostatic head above 3,000 mm.",
+    "example_zh": "TPU 复合使这款冲锋衣面料耐水压超过 3,000 毫米。"
+  },
+  {
+    "term": "water repellent",
+    "full_form": "water repellent finish (DWR)",
+    "category": "dyeing",
+    "definition_en": "a chemical finish (C6/C0 fluorocarbon or PFC-free) that makes water bead and roll off the fabric surface",
+    "definition_zh": "拒水整理(C6/C0 氟系或无氟整理剂,使水珠滚落布面)",
+    "example_en": "The C0 PFC-free water repellent must hold 80 spray rating after 20 washes.",
+    "example_zh": "C0 无氟拒水整理须保持 20 次水洗后喷淋 80 分。"
+  },
+  {
+    "term": "hydrostatic head",
+    "full_form": "hydrostatic head / water pressure resistance",
+    "category": "dyeing",
+    "definition_en": "the water column height (mm) a fabric withstands before leaking, the key waterproof index for coated and laminated fabrics",
+    "definition_zh": "耐水压(静水压,毫米水柱;涂层与复合面料的核心防水指标)",
+    "example_en": "The buyer requires a hydrostatic head of at least 5,000 mm for the rainwear fabric.",
+    "example_zh": "买家要求雨衣面料耐水压至少 5,000 毫米。"
+  },
+  {
+    "term": "handfeel",
+    "full_form": "handfeel / hand",
+    "category": "dyeing",
+    "definition_en": "the tactile quality of fabric — softness, smoothness, stiffness — adjusted by softeners, sueding or calendering",
+    "definition_zh": "手感(面料触感:柔软、滑爽、硬挺;由柔软剂、磨毛、轧光等调整)",
+    "example_en": "The silicone softener improves handfeel but drops the spray rating, so we use a DWR-compatible one.",
+    "example_zh": "硅油柔软剂改善手感但拉低喷淋分数,所以我们改用拒水兼容型。"
+  }
 ]

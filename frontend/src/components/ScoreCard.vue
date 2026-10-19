@@ -62,6 +62,15 @@ const subItems = computed<SubItem[]>(() => {
         <li v-for="(s, i) in score.suggestions" :key="i">{{ s }}</li>
       </ul>
     </div>
+
+    <div v-if="score.native_polish" class="mt-4 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-ink-800">
+      <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">
+        <span>✨ 母语老兵地道重构 (Native Polish)</span>
+      </div>
+      <p class="text-sm font-semibold text-emerald-950 leading-snug">
+        {{ score.native_polish }}
+      </p>
+    </div>
   </div>
   <div v-else class="card p-4 text-sm text-ink-500">尚无评分,先说一句话试试看。</div>
 </template>

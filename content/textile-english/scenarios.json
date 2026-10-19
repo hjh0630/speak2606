@@ -8,7 +8,11 @@
     "description_en": "Coordinate with yarn suppliers on composition, yarn count, twist, MOQ and price; negotiate allowance or debit notes around Uster CV% and IPI on bulk delivery.",
     "category": "spinning",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Yarn mill sales representative / QC manager",
     "ai_role_zh": "纱线厂业务员 / 品质经理",
     "user_role": "Knit or woven fabric sourcing / merchandiser at garment factory",
@@ -35,7 +39,12 @@
       "Pantone TPX"
     ],
     "estimated_minutes": 11,
-    "tags": ["process", "yarn", "sourcing", "qc"]
+    "tags": [
+      "process",
+      "yarn",
+      "sourcing",
+      "qc"
+    ]
   },
   {
     "id": "poplin-shade-claim",
@@ -46,7 +55,11 @@
     "description_en": "Talk with a woven mill on construction, EPI/PPI, GSM and width; once the fabric returns from the dye house, negotiate concession or debit note on Delta E between bulk and approved lab dip.",
     "category": "weaving",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Woven mill technician / dyeing house merchandiser",
     "ai_role_zh": "梭织厂技术员 / 染厂跟单",
     "user_role": "Garment factory merchandiser or fabric sourcing",
@@ -73,7 +86,12 @@
       "Delta E"
     ],
     "estimated_minutes": 11,
-    "tags": ["process", "weaving", "dyeing", "claim"]
+    "tags": [
+      "process",
+      "weaving",
+      "dyeing",
+      "claim"
+    ]
   },
   {
     "id": "dyeing-delta-e",
@@ -84,7 +102,11 @@
     "description_en": "Coordinate with the dye house from lab dip, repeat dip, first bulk lot to bulk production — discuss Delta E, color fastness, GSM loss and shrinkage, including concession trade-offs.",
     "category": "dyeing",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Dye house merchandiser / colorist",
     "ai_role_zh": "染厂跟单 / 调色师",
     "user_role": "Garment factory merchandiser / sourcing",
@@ -111,7 +133,12 @@
       "GSM loss"
     ],
     "estimated_minutes": 12,
-    "tags": ["process", "dyeing", "shade", "qc"]
+    "tags": [
+      "process",
+      "dyeing",
+      "shade",
+      "qc"
+    ]
   },
   {
     "id": "vintage-tshirt-craft",
@@ -122,7 +149,11 @@
     "description_en": "Vintage T-shirt sample confirmation covering fabric, print, embroidery, garment wash and craft cost; PP sample, TOP sample and pre-production tech pack sign-off.",
     "category": "garment",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Overseas buyer / merchandiser",
     "ai_role_zh": "海外采购商 / 跟单",
     "user_role": "Chinese garment factory merchandiser / sample room coordinator",
@@ -149,7 +180,12 @@
       "SPI"
     ],
     "estimated_minutes": 11,
-    "tags": ["product", "sampling", "garment", "cost"]
+    "tags": [
+      "product",
+      "sampling",
+      "garment",
+      "cost"
+    ]
   },
   {
     "id": "embroidery-print-wash",
@@ -160,7 +196,11 @@
     "description_en": "Coordinate with embroidery, print and laundry houses on DST digitizing, print color separation, enzyme / stone wash and wash fastness.",
     "category": "crafts",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Embroidery / print / laundry house merchandiser",
     "ai_role_zh": "绣花厂 / 印花厂 / 洗水厂跟单",
     "user_role": "Garment factory merchandiser / designer",
@@ -187,7 +227,12 @@
       "dimensional change"
     ],
     "estimated_minutes": 10,
-    "tags": ["crafts", "embroidery", "print", "wash"]
+    "tags": [
+      "crafts",
+      "embroidery",
+      "print",
+      "wash"
+    ]
   },
   {
     "id": "lc-claim-arbitration",
@@ -198,7 +243,11 @@
     "description_en": "End-to-end trade workflow: from RFQ inquiry, PI quotation, L/C issuance, pre-shipment inspection to buyer claim and arbitration.",
     "category": "qc",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Overseas buyer / documentary credit specialist / QC manager",
     "ai_role_zh": "海外客户 / 信用证单证员 / 品控经理",
     "user_role": "Chinese export sales / documentation clerk / quality manager",
@@ -226,7 +275,13 @@
       "debit note"
     ],
     "estimated_minutes": 13,
-    "tags": ["trade", "L/C", "PSI", "claim", "qc"]
+    "tags": [
+      "trade",
+      "L/C",
+      "PSI",
+      "claim",
+      "qc"
+    ]
   },
   {
     "id": "outdoor-yoga-basketball",
@@ -237,7 +292,11 @@
     "description_en": "Multi-category conversation covering outdoor hardshell, yoga bottoms and teamwear customization — waterproof rating, nylon-spandex ratio, tackle twill numbers and fit selection.",
     "category": "sportswear",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Sportswear brand sourcing / merchandising manager",
     "ai_role_zh": "运动品牌采购 / 跟单经理",
     "user_role": "Chinese sportswear factory merchandiser",
@@ -264,6 +323,299 @@
       "teamwear"
     ],
     "estimated_minutes": 12,
-    "tags": ["sportswear", "outdoor", "yoga", "teamwear", "customization"]
+    "tags": [
+      "sportswear",
+      "outdoor",
+      "yoga",
+      "teamwear",
+      "customization"
+    ]
+  },
+  {
+    "id": "fiber-spinning",
+    "title_zh": "纺丝与纱线规格沟通",
+    "title_en": "Fiber Spinning & Yarn Spec",
+    "icon": "🏭",
+    "description_zh": "与化纤厂沟通 POY/DTY/FDY 长丝品种、纤度与孔数、网络度、强力伸度等物性指标；围绕等级、起订量、价格有效期与分批交货进行谈判，并处理测试方法分歧引发的索赔。",
+    "description_en": "Discuss POY/DTY/FDY filament types, denier and filament count, intermingle level, tenacity and elongation with a chemical fiber mill; negotiate grade, MOQ, price validity and split shipments, and handle a claim caused by test-method disputes.",
+    "category": "spinning",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Chemical fiber / yarn mill sales or technical engineer",
+    "ai_role_zh": "化纤厂 / 纱线厂销售或技术工程师",
+    "user_role": "Fabric sourcing / merchandiser at garment factory",
+    "user_role_zh": "面料采购 / 服装厂跟单",
+    "key_skills": [
+      "specifying filament type (POY/DTY/FDY) and denier/filament count",
+      "confirming tenacity, elongation and evenness CV requirements",
+      "discussing intermingle level, luster and cross-section",
+      "negotiating MOQ, price validity and payment terms",
+      "handling test-method disputes and quality claims"
+    ],
+    "key_skills_zh": [
+      "长丝品种 (POY/DTY/FDY) 与纤度孔数表达",
+      "断裂强力、伸度与条干均匀度确认",
+      "网络度、光泽与截面讨论",
+      "起订量、价格有效期与付款谈判",
+      "测试方法分歧与质量索赔沟通"
+    ],
+    "industry_terms_sample": [
+      "DTY",
+      "denier / filament",
+      "tenacity",
+      "elongation",
+      "dope dyed"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "process",
+      "yarn",
+      "chemical-fiber",
+      "negotiation",
+      "qc"
+    ]
+  },
+  {
+    "id": "circular-knitting",
+    "title_zh": "圆编制造与大圆机沟通",
+    "title_en": "Circular Knitting Production",
+    "icon": "⭕",
+    "description_zh": "与圆编针织厂沟通大圆机机号、筒径、路数、布种(单面/棉毛/罗纹)、克重与线圈长度;确认毛坯布价格、交期与检验方式,并就横档、针路等下机疵点谈判降级折价与罚则。",
+    "description_en": "Coordinate with a circular knitting mill on machine gauge, cylinder diameter, feeders, fabric structure (single jersey, interlock, rib), GSM and stitch length; confirm greige price, lead time and inspection, and negotiate second-grade allowance and penalties over barre and needle lines.",
+    "category": "weaving",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Circular knitting mill sales / production supervisor",
+    "ai_role_zh": "圆编针织厂业务 / 生产主管",
+    "user_role": "Garment factory fabric sourcing / merchandiser",
+    "user_role_zh": "服装厂面料采购 / 跟单",
+    "key_skills": [
+      "specifying machine gauge, cylinder diameter and feeders",
+      "confirming fabric structure: single jersey, interlock, rib",
+      "agreeing GSM target and stitch length, greige vs finished",
+      "negotiating greige price, MOQ, rush surcharge and lead time",
+      "setting four-point inspection standard and defect allowance"
+    ],
+    "key_skills_zh": [
+      "机号、筒径与路数表达",
+      "布种确认(单面布/棉毛布/罗纹)",
+      "克重目标与线圈长度(坯布/成品口径)",
+      "坯布价格、起订量、加急费与交期谈判",
+      "四分制检验标准与疵布降级折价"
+    ],
+    "industry_terms_sample": [
+      "circular knitting machine",
+      "gauge 28G/32G",
+      "single jersey",
+      "interlock",
+      "greige fabric"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "process",
+      "knitting",
+      "sourcing",
+      "qc",
+      "negotiation"
+    ]
+  },
+  {
+    "id": "garment-manufacturing",
+    "title_zh": "服装制造与产线沟通",
+    "title_en": "Garment Manufacturing & Production Line",
+    "icon": "🧵",
+    "description_zh": "以品牌跟单/贸易公司 QC 身份验厂与排产:确认 CMT 加工范围、裁剪铺布与排料利用率、缝制线 SPI 要求,用 SMV 与产线效率核算日产能,处理整烫缺陷与返工责任,敲定尾部包装箱规与验货付款条款。",
+    "description_en": "Visit and audit a garment factory as a brand merchandiser / trading-company QC: confirm CMT scope, cutting and spreading with marker utilization, set SPI on the sewing line, calculate daily output from SMV and line efficiency, handle pressing defects and re-work responsibility, and finalize packing specs with PSI-linked payment terms.",
+    "category": "garment",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Garment factory director / IE engineer / production manager",
+    "ai_role_zh": "服装厂厂长 / IE 工程师 / 生产经理",
+    "user_role": "Brand merchandiser / trading company QC",
+    "user_role_zh": "品牌跟单 / 贸易公司 QC",
+    "key_skills": [
+      "confirming CMT scope and factory capacity",
+      "discussing cutting, spreading and marker utilization",
+      "setting SPI and seam requirements per tech pack",
+      "calculating daily output from SMV and line efficiency",
+      "handling pressing defects, packing specs and payment terms"
+    ],
+    "key_skills_zh": [
+      "确认 CMT 加工范围与工厂产能",
+      "裁剪、铺布与排料利用率沟通",
+      "按工艺单设定 SPI 与缝制要求",
+      "用 SMV 与产线效率核算日产能",
+      "整烫缺陷处理、包装箱规与付款条款谈判"
+    ],
+    "industry_terms_sample": [
+      "CMT",
+      "SPI",
+      "SMV",
+      "line efficiency",
+      "marker utilization"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "garment",
+      "production",
+      "factory-audit",
+      "qc",
+      "capacity"
+    ]
+  },
+  {
+    "id": "printing-process",
+    "title_zh": "印花工艺沟通",
+    "title_en": "Printing Process Discussion",
+    "icon": "🖨️",
+    "description_zh": "与印花厂沟通圆网/平网/数码印花工艺选择、染料类别、花回、对花公差与打样事宜；围绕色牢度、次品处理与交期条款进行商务谈判。",
+    "description_en": "Discuss rotary screen, flat screen and digital printing options, dye classes, repeat size, register tolerance and strike-off arrangements with a printing factory; negotiate color fastness, seconds policy and lead-time terms.",
+    "category": "crafts",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Printing factory sales rep / color master",
+    "ai_role_zh": "印花厂业务 / 调色师傅",
+    "user_role": "Garment factory merchandiser / designer liaison",
+    "user_role_zh": "服装厂跟单 / 设计师对接人",
+    "key_skills": [
+      "choosing between rotary, flat screen and digital printing",
+      "specifying dye class and color paste requirements",
+      "confirming repeat size and register tolerance",
+      "arranging strike-off and approval workflow",
+      "negotiating color fastness, seconds policy and lead time"
+    ],
+    "key_skills_zh": [
+      "圆网/平网/数码印花工艺选择",
+      "染料类别与色浆要求表达",
+      "花回与对花公差确认",
+      "印花打样与批样流程安排",
+      "色牢度、次品政策与交期谈判"
+    ],
+    "industry_terms_sample": [
+      "rotary screen printing",
+      "reactive dyes",
+      "strike-off",
+      "repeat size",
+      "color fastness"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "crafts",
+      "printing",
+      "strike-off",
+      "negotiation"
+    ]
+  },
+  {
+    "id": "embroidery-process",
+    "title_zh": "绣花工艺沟通",
+    "title_en": "Embroidery Process Discussion",
+    "icon": "🌸",
+    "description_zh": "与绣花厂沟通平绣、贴布绣、亮片绣与立体绣的工艺选择,确认图案文件、针数、绣线种类与绣花定位;围绕电脑制版费用、断线率与定位公差进行价格与验收标准谈判。",
+    "description_en": "Discuss embroidery techniques with an embroidery factory — flat embroidery, appliqué, sequin and 3D puff; confirm artwork, stitch count, thread type and placement; negotiate digitizing fees, thread break rates and placement tolerance.",
+    "category": "crafts",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Embroidery factory sales representative / digitizer",
+    "ai_role_zh": "绣花厂业务 / 制版师",
+    "user_role": "Garment factory merchandiser / design coordinator",
+    "user_role_zh": "服装厂跟单 / 设计师对接人",
+    "key_skills": [
+      "specifying embroidery techniques (flat, appliqué, sequin, 3D puff)",
+      "confirming stitch count and embroidery placement",
+      "selecting embroidery thread (polyester vs rayon)",
+      "discussing digitizing fees and tape file formats",
+      "negotiating thread break rates and placement tolerance"
+    ],
+    "key_skills_zh": [
+      "绣种表达(平绣/贴布绣/亮片绣/立体绣)",
+      "针数与绣花定位确认",
+      "绣线选择(涤丝与人造丝)",
+      "电脑制版费用与版带格式沟通",
+      "断线率与定位公差谈判"
+    ],
+    "industry_terms_sample": [
+      "flat embroidery",
+      "appliqué",
+      "stitch count",
+      "digitizing",
+      "thread break"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "embroidery",
+      "crafts",
+      "digitizing",
+      "merchandising",
+      "qc"
+    ]
+  },
+  {
+    "id": "finishing-process",
+    "title_zh": "后整理工艺沟通",
+    "title_en": "Fabric Finishing Process",
+    "icon": "🧪",
+    "description_zh": "与染整后整厂技术主管沟通拉幅定型、预缩、磨毛/起绒、涂层/复合、防水整理等工艺组合；围绕缩水率、耐水压、手感与环保合规(C6/C0、REACH)谈判价格与验收标准。",
+    "description_en": "Discuss stenter heat setting, sanforizing, peaching/sueding, raising, coating/lamination and water-repellent finishes with a finishing plant technical manager; negotiate price and acceptance criteria around shrinkage, hydrostatic head, handfeel and compliance (C6/C0, REACH).",
+    "category": "dyeing",
+    "subcategory": "garment_textile",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Technical manager of a dyeing & finishing plant",
+    "ai_role_zh": "染整后整厂技术主管",
+    "user_role": "Fabric trader / garment factory sourcing",
+    "user_role_zh": "面料贸易/服装厂采购",
+    "key_skills": [
+      "specifying stenter heat setting and finished width",
+      "confirming sanforizing and residual shrinkage limits",
+      "choosing surface finishes (peaching, sueding, raising)",
+      "evaluating coating vs lamination and hydrostatic head",
+      "balancing handfeel against water-repellent performance"
+    ],
+    "key_skills_zh": [
+      "拉幅热定型与成品门幅确认",
+      "预缩整理与残余缩水率约定",
+      "表面整理选择(磨毛/磨绒/起绒)",
+      "涂层与复合工艺评估及耐水压谈判",
+      "手感与防水性能的权衡沟通"
+    ],
+    "industry_terms_sample": [
+      "stenter",
+      "sanforized",
+      "peaching",
+      "PU coating",
+      "hydrostatic head"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "finishing",
+      "process",
+      "qc",
+      "compliance",
+      "negotiation"
+    ]
   }
 ]

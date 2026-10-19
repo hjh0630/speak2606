@@ -1,0 +1,39 @@
+# SpeakFlow XcodeGen 工程配置
+# Mac 上：brew install xcodegen && cd ios && xcodegen && open SpeakFlow.xcodeproj
+name: SpeakFlow
+options:
+  bundleIdPrefix: com.hjinghui
+  createIntermediateGroups: true
+
+packages:
+  SpeakFlowKit:
+    path: SpeakFlowKit
+
+targets:
+  SpeakFlow:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: SpeakFlow/SpeakFlow
+        excludes:
+          # Info.plist 由 INFOPLIST_FILE 指定，不参与编译/拷贝
+          - "Resources/Info.plist"
+          - "Resources/Info.plist.template"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hjinghui.htalk
+        PRODUCT_NAME: SpeakFlow
+        INFOPLIST_FILE: SpeakFlow/SpeakFlow/Resources/Info.plist
+        SWIFT_VERSION: "5.9"
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        # 留空：在 Xcode 里 Signing & Capabilities 选自己的 Personal Team
+        DEVELOPMENT_TEAM: ""
+    dependencies:
+      - package: SpeakFlowKit
+        product: SpeakFlowKit

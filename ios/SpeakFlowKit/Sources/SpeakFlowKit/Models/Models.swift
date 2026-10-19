@@ -38,6 +38,48 @@ public struct DialogRound: Codable, Hashable {
         case prompt, hint
         case keyWords = "key_words"
     }
+
+    /// content/dialogs 实际 JSON 格式（ai_message 系列字段）的解码 key
+    private enum ContentKeys: String, CodingKey {
+        case round
+        case aiMessage = "ai_message"
+        case aiMessageZh = "ai_message_zh"
+        case expectedHint = "expected_user_response_hint"
+        case keyPhrases = "key_phrases"
+        case keyPhrasesAlt = "key_phapes"   // 个别文件的笔误 key，兼容
+        case userExample = "user_response_example"
+    }
+
+    /// 自定义解码：同时兼容两种格式，公开字段不变
+    /// 1. 后端协议格式：speaker / text_en / text_zh / prompt / hint / key_words
+    /// 2. Bundle 内容格式（72 个场景 JSON 实际格式）：每轮 = 客户先说(ai_message)，用户再答
+    ///    - speaker 固定为 .partner，textEn/textZh 取 ai_message(_zh)
+    ///    - prompt 取 user_response_example（参考答案），hint 取 expected_user_response_hint
+    ///    - keyWords 取 key_phrases
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        self.round = try c.decode(Int.self, forKey: .round)
+        if let sp = try c.decodeIfPresent(Speaker.self, forKey: .speaker) {
+            self.speaker = sp
+            self.textEn = try c.decode(String.self, forKey: .textEn)
+            self.textZh = try c.decode(String.self, forKey: .textZh)
+            self.prompt = try c.decodeIfPresent(String.self, forKey: .prompt)
+            self.hint = try c.decodeIfPresent(String.self, forKey: .hint)
+            self.keyWords = try c.decodeIfPresent([String].self, forKey: .keyWords)
+            return
+        }
+        let k = try decoder.container(keyedBy: ContentKeys.self)
+        self.speaker = .partner
+        self.textEn = try k.decode(String.self, forKey: .aiMessage)
+        self.textZh = try k.decode(String.self, forKey: .aiMessageZh)
+        self.prompt = try k.decodeIfPresent(String.self, forKey: .userExample)
+        self.hint = try k.decodeIfPresent(String.self, forKey: .expectedHint)
+        if let phrases = try k.decodeIfPresent([String].self, forKey: .keyPhrases) {
+            self.keyWords = phrases
+        } else {
+            self.keyWords = try k.decodeIfPresent([String].self, forKey: .keyPhrasesAlt)
+        }
+    }
 }
 
 public enum Speaker: String, Codable, Hashable {
@@ -87,6 +129,29 @@ public struct VocabularyItem: Codable, Identifiable, Hashable {
         case reviewCount = "review_count"
         case lastReviewedAt = "last_reviewed_at"
         case difficulty
+    }
+
+    /// 公开构造器（App 端"加入生词本"用；默认值适配新手动添加场景）
+    public init(word: String,
+                phonetic: String? = nil,
+                partOfSpeech: String? = nil,
+                definitionEn: String? = nil,
+                definitionZh: String? = nil,
+                example: String? = nil,
+                addedAt: Date = Date(),
+                reviewCount: Int = 0,
+                lastReviewedAt: Date? = nil,
+                difficulty: Int = 1) {
+        self.word = word
+        self.phonetic = phonetic
+        self.partOfSpeech = partOfSpeech
+        self.definitionEn = definitionEn
+        self.definitionZh = definitionZh
+        self.example = example
+        self.addedAt = addedAt
+        self.reviewCount = reviewCount
+        self.lastReviewedAt = lastReviewedAt
+        self.difficulty = difficulty
     }
 }
 

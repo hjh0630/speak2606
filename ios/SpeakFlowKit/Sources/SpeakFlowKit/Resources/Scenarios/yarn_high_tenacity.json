@@ -1,0 +1,40 @@
+{
+  "scenario_id": "yarn_high_tenacity",
+  "scenario_title_en": "High-Tenacity & Functional Yarn Sourcing",
+  "scenario_title_zh": "特种高强纱线与功能原料开发",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello David. We are developing an ultra-durable glove and footwear reinforcement zone. We are comparing Ultra-High Molecular Weight Polyethylene against Nylon 66 Cordura. How do they compare in terms of cut resistance versus high-temperature friction?",
+      "ai_message_zh": "你好 David。我们正在研发一款超耐磨手套与鞋面补强区。我们正在对比超高分子量聚乙烯（UHMWPE）和高强尼龙66（Cordura）。它们在防切割和抗高温摩擦方面的表现如何对比？",
+      "expected_user_response_hint": "专业对比两种材料分子结构与物理特性：UHMWPE分子链超直、抗切割达到最高等级，但熔点低(~135°C)不耐高温摩擦；尼龙66耐磨性优异且熔点高(~260°C)，适合摩擦场景",
+      "key_phrases": [
+        "UHMWPE cut resistance Grade 5",
+        "high-tenacity Nylon 66 Cordura",
+        "melting point 135C vs 260C",
+        "abrasion resistance ASTM D4966",
+        "hybrid blend engineering"
+      ],
+      "common_mistakes": "避免一概而论说某一种更好，必须清晰区分防切割（Cut resistance）与抗摩擦熔断（Frictional abrasion melting）。",
+      "tips_zh": "母语亮点：'UHMWPE has unbeatable molecular strength for razor-sharp cut protection, but low thermal resistance (~135°C). Cordura Nylon 66 excels in high-heat friction (~260°C). We often engineer a hybrid core.'",
+      "user_response_example": "From a polymer science standpoint, they have complementary profiles. UHMWPE boasts ultra-high molecular orientation, giving it phenomenal tensile strength and ANSI Level 5 cut resistance. However, its melting point is low at approximately 135°C, making it vulnerable to high-speed frictional heat. Nylon 66 Cordura, with a melting point around 260°C, is far superior in abrasive heat and puncture endurance. That is why we frequently spin a hybrid yarn: UHMWPE for cut resistance wrapped with Nylon 66 for frictional durability."
+    },
+    {
+      "round": 2,
+      "ai_message": "A hybrid core-spun yarn sounds like the perfect engineering compromise. Can you supply this in dope-dyed black and grey with GRS recycled certification?",
+      "ai_message_zh": "包芯复合混纺纱听起来是个完美的折中工程方案。你们能提供原液着色（Dope-dyed）的黑色和麻灰，并且带有 GRS 全球回收标准认证吗？",
+      "expected_user_response_hint": "确认信泰具备原液着色母粒纺丝与GRS认证资质，原液着色环保省水且色牢度高达5级、无缸差",
+      "key_phrases": [
+        "dope-dyed solution dyeing",
+        "GRS certified recycled polyester",
+        "zero water dyeing process",
+        "colorfastness Grade 5",
+        "batch-to-batch consistency"
+      ],
+      "common_mistakes": "不要把 'dope-dyed' 解释成 'water dye'，它是原液纺丝时直接加入色母粒（Solution dyeing），具备无水印染环保优势。",
+      "tips_zh": "母语亮点：'Dope-dyed filament integrates color pigments during polymer extrusion, achieving Grade 5 lightfastness while cutting water consumption by 85% with full GRS certification.'",
+      "user_response_example": "Yes, we certainly can. We operate dedicated dope-dyed spinning lines where color pigments are injected directly into the molten polymer during extrusion. This eliminates traditional water-bath dyeing entirely, cutting water and energy consumption by over 80%. We provide full GRS Transaction Certificates for the recycled carrier resin, and because the color is locked inside the polymer matrix, light and wash fastness reach the maximum Grade 5 with zero batch-to-batch color variance."
+    }
+  ]
+}

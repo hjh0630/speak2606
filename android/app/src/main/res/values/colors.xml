@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 品牌主色,与 web 前端 tailwind brand 500 对齐 -->
+    <color name="brand">#1F8FB3</color>
+    <color name="ic_launcher_background">#1F8FB3</color>
+</resources>

@@ -1,5 +1,359 @@
 [
   {
+    "id": "wuli_showroom",
+    "title_zh": "五里展厅推介与5G智慧工厂",
+    "title_en": "Showroom Tour & 5G Smart Factory",
+    "icon": "🏭",
+    "description_zh": "带领海外高管/买手完成信泰15分钟双语展厅参观，介绍全产业链、5G智慧工厂与研发实力",
+    "description_en": "15-min showroom tour: full supply chain, 5G smart manufacturing, and 1,000+ patent R&D capabilities",
+    "category": "sincetech",
+    "subcategory": "presentation",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas brand sourcing vice president",
+    "ai_role_zh": "海外品牌采购副总裁",
+    "user_role": "Sintech executive & business architect",
+    "user_role_zh": "信泰高管/业务架构师",
+    "key_skills": [
+      "opening & welcome",
+      "heritage & 3D mesh",
+      "5G smart factory",
+      "global capacity",
+      "closing"
+    ],
+    "key_skills_zh": [
+      "开场致辞",
+      "历史与三明治网布",
+      "5G智慧工厂",
+      "全球10大园区产能",
+      "合作收尾"
+    ],
+    "industry_terms_sample": [
+      "vertical integration",
+      "5G smart factory",
+      "sandwich mesh",
+      "annual capacity",
+      "patents"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "sincetech",
+      "tour",
+      "pitch"
+    ]
+  },
+  {
+    "id": "figure_robot_skin",
+    "title_zh": "Figure AI 机器人柔性皮肤面料",
+    "title_en": "Figure AI Humanoid Robot Skin Fabric",
+    "icon": "🤖",
+    "description_zh": "与美国 Figure AI 供应链及材料专家研讨柔性类肤面料、全向拉伸>150%及无氟环保防水",
+    "description_en": "R&D meeting with Figure AI: human-like skin touch, >150% omnidirectional stretch, and PFAS-free DWR",
+    "category": "sincetech",
+    "subcategory": "fabric_rd",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Figure AI Global Supply Chain Manager (Peter)",
+    "ai_role_zh": "Figure AI 全球供应链经理 (Peter)",
+    "user_role": "Sintech fabric R&D director",
+    "user_role_zh": "信泰面料研发总监",
+    "key_skills": [
+      "human-like handfeel",
+      "high stretch dynamics",
+      "PFAS-free compliance",
+      "knit vs woven proposal"
+    ],
+    "key_skills_zh": [
+      "类肤质感",
+      "高动态延展性",
+      "加州无氟环保合规",
+      "飞织与经编方案对比"
+    ],
+    "industry_terms_sample": [
+      "PFAS-free",
+      "omnidirectional stretch",
+      "UHMWPE",
+      "TPU lamination",
+      "zonal knitting"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "figure-ai",
+      "robotics",
+      "functional-fabric"
+    ]
+  },
+  {
+    "id": "circular_knitting_as32",
+    "title_zh": "圆编细针距提花与轻量化面料",
+    "title_en": "Circular Knitting AS32/AX36 Tech",
+    "icon": "🌀",
+    "description_zh": "与国际运动品牌材料工程师研讨 AS32/AX36 细针距双面提花、斜行率控制与克重优化",
+    "description_en": "Deep dive into AS32/AX36 fine-gauge double jacquard, skewing control, and gram weight reduction",
+    "category": "sincetech",
+    "subcategory": "circular_knitting",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Athletic brand fabric engineering lead",
+    "ai_role_zh": "运动品牌面料工程主管",
+    "user_role": "Sintech circular knitting specialist",
+    "user_role_zh": "信泰圆编针织专家",
+    "key_skills": [
+      "fine gauge setup",
+      "spirality & skewing control",
+      "weight optimization",
+      "interlock vs jersey"
+    ],
+    "key_skills_zh": [
+      "细针距机台调校",
+      "斜行扭斜控制",
+      "克重优化",
+      "双面与单面选型"
+    ],
+    "industry_terms_sample": [
+      "gauge E32/E36",
+      "spirality < 3%",
+      "interlock",
+      "cuttable width",
+      "GSM tolerance"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "circular-knitting",
+      "as32",
+      "ax36"
+    ]
+  },
+  {
+    "id": "woven_airjet_ripstop",
+    "title_zh": "梭织新颖纹理与高密防撕裂",
+    "title_en": "Woven Air-Jet & Ripstop Development",
+    "icon": "📐",
+    "description_zh": "探讨户外防风风衣与鞋面梭织新颖纹理开发，调配 EPI/PPI 经纬密与 C0 无氟防泼水",
+    "description_en": "Woven upper & windbreaker innovation: EPI/PPI density tuning, tear strength, and C0 DWR",
+    "category": "sincetech",
+    "subcategory": "woven",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Outdoor apparel materials director",
+    "ai_role_zh": "户外品牌材料总监",
+    "user_role": "Sintech woven fabric engineer",
+    "user_role_zh": "信泰梭织面料工程师",
+    "key_skills": [
+      "air-jet loom tuning",
+      "ripstop structure",
+      "tear & tensile strength",
+      "C0 DWR performance"
+    ],
+    "key_skills_zh": [
+      "喷气机织造",
+      "格仔防撕裂结构",
+      "撕破强力对标",
+      "C0防泼水牢度"
+    ],
+    "industry_terms_sample": [
+      "air-jet loom",
+      "EPI / PPI",
+      "tear strength ASTM D2261",
+      "C0 DWR",
+      "breathability"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "woven",
+      "ripstop",
+      "air-jet"
+    ]
+  },
+  {
+    "id": "twone_warp_knitting",
+    "title_zh": "经编三贾卡与 TWONE 智能单双层",
+    "title_en": "Warp Knitting TWONE & 3D Spacer",
+    "icon": "🕸️",
+    "description_zh": "向品牌推介经编三贾卡立体结构、TWONE 智能单双层及 3D Spacer 三明治网布透气工程",
+    "description_en": "Present Karl Mayer 3-jacquard, TWONE smart single/double layer, and 3D spacer mesh technologies",
+    "category": "sincetech",
+    "subcategory": "warp_knitting",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Footwear & athletic wear innovation director",
+    "ai_role_zh": "鞋服材料创新总监",
+    "user_role": "Sintech warp knitting specialist",
+    "user_role_zh": "信泰经编技术专家",
+    "key_skills": [
+      "3D spacer structure",
+      "Karl Mayer guide bars",
+      "TWONE smart structure",
+      "run-resistance"
+    ],
+    "key_skills_zh": [
+      "三明治立体结构",
+      "卡尔迈耶导纱梳栉",
+      "TWONE智能单双层",
+      "防脱散性能"
+    ],
+    "industry_terms_sample": [
+      "Karl Mayer Tricot",
+      "3D spacer mesh",
+      "TWONE 28G/32G",
+      "guide bars",
+      "laddering resistance"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "warp-knitting",
+      "twone",
+      "spacer-mesh"
+    ]
+  },
+  {
+    "id": "flyknit_flat_knitting",
+    "title_zh": "电脑横机飞织一体成型开发",
+    "title_en": "Flat Knit & Flyknit 24G Engineering",
+    "icon": "👟",
+    "description_zh": "探讨 Stoll/Shima Seiki 12G/24G 电脑横机一体成型鞋面、无虚线嵌花与局部热熔丝定型",
+    "description_en": "Stoll 24G one-piece upper engineering: intarsia no-sew, zonal support, and hotmelt yarn activation",
+    "category": "sincetech",
+    "subcategory": "flyknit",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "PING Golf / Running Footwear Sourcing Lead",
+    "ai_role_zh": "PING高尔夫/运动鞋采购主管",
+    "user_role": "Sintech flat knitting technical lead",
+    "user_role_zh": "信泰电脑横机/飞织主管",
+    "key_skills": [
+      "24G fine knit",
+      "intarsia vs jacquard",
+      "hotmelt yarn activation",
+      "zonal breathability"
+    ],
+    "key_skills_zh": [
+      "24针细腻织造",
+      "嵌花与提花选型",
+      "热熔丝定型",
+      "分区透气网孔"
+    ],
+    "industry_terms_sample": [
+      "Stoll 24G",
+      "intarsia",
+      "tuck & miss stitch",
+      "hotmelt yarn",
+      "one-piece upper"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "flyknit",
+      "flat-knitting",
+      "stoll"
+    ]
+  },
+  {
+    "id": "dyeing_delta_e",
+    "title_zh": "染整工序、色差 Delta E 与牢度仲裁",
+    "title_en": "Dyeing Process, Delta E & Fastness QC",
+    "icon": "🧪",
+    "description_zh": "针对海外验货 D65/TL84 光源下 Delta E 色差、耐摩擦色牢度与 70+ 配方库稳定性抗辩",
+    "description_en": "Dyeing QC arbitration: Delta E < 0.8 under D65/TL84, crocking fastness Grade 4, and recipe repeatability",
+    "category": "sincetech",
+    "subcategory": "dyeing_finishing",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Third-party inspection lead (SGS / BV)",
+    "ai_role_zh": "SGS/BV 第三方验货主管",
+    "user_role": "Sintech dyehouse & finishing director",
+    "user_role_zh": "信泰染整与品质总监",
+    "key_skills": [
+      "Delta E CMC 2:1 explanation",
+      "light source metamers",
+      "crocking fastness defence",
+      "stenter heat-setting"
+    ],
+    "key_skills_zh": [
+      "Delta E色差原理解释",
+      "光源同色异谱排查",
+      "摩擦色牢度抗辩",
+      "定型温控工艺"
+    ],
+    "industry_terms_sample": [
+      "Delta E < 0.8",
+      "D65 vs TL84",
+      "colorfastness to crocking AATCC 8",
+      "stenter heat-setting",
+      "overflow dyeing"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "dyeing",
+      "delta-e",
+      "colorfastness"
+    ]
+  },
+  {
+    "id": "yarn_high_tenacity",
+    "title_zh": "特种高强纱线与功能原料开发",
+    "title_en": "High-Tenacity & Functional Yarn Sourcing",
+    "icon": "🧶",
+    "description_zh": "与国际买手研讨 UHMWPE 超高分子量聚乙烯防切割纤维、Cordura 尼龙66及原液着色纱线",
+    "description_en": "Raw material development: UHMWPE anti-cut fiber, Cordura Nylon 66, and dope-dyed low-carbon filament",
+    "category": "sincetech",
+    "subcategory": "yarn",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Global Raw Materials Sourcing Director",
+    "ai_role_zh": "全球原料采购总监",
+    "user_role": "Sintech yarn R&D & sourcing specialist",
+    "user_role_zh": "信泰纱线研发与采购专家",
+    "key_skills": [
+      "UHMWPE cut resistance",
+      "Nylon 66 abrasion",
+      "spandex core-spun ratio",
+      "dope-dyed sustainability"
+    ],
+    "key_skills_zh": [
+      "高强聚乙烯防切割",
+      "尼龙66耐磨性",
+      "氨纶包覆比配比",
+      "原液着色低碳优势"
+    ],
+    "industry_terms_sample": [
+      "UHMWPE",
+      "Nylon 66 Cordura",
+      "DTY 150D/48F",
+      "spandex 40D+75D",
+      "dope-dyed"
+    ],
+    "estimated_minutes": 8,
+    "tags": [
+      "yarn",
+      "uhmwpe",
+      "nylon66"
+    ]
+  },
+  {
     "id": "phone_meeting",
     "title_zh": "电话会议",
     "title_en": "Phone Meeting",
@@ -959,7 +1313,11 @@
     "description_en": "Coordinate with button / zipper / label / tape suppliers on specs, color, MOQ, price, lead time, color matching and custom tooling",
     "category": "process",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Accessory supplier / sales representative",
     "ai_role_zh": "辅料供应商 / 业务员",
     "user_role": "Garment factory merchandiser / accessories sourcing",
@@ -986,7 +1344,11 @@
       "woven label"
     ],
     "estimated_minutes": 9,
-    "tags": ["process", "accessory", "sourcing"]
+    "tags": [
+      "process",
+      "accessory",
+      "sourcing"
+    ]
   },
   {
     "id": "garment_washing",
@@ -997,7 +1359,11 @@
     "description_en": "Coordinate with laundry on wash type (general / enzyme / stone / bleach / silicone), shrinkage, handfeel control and color fastness",
     "category": "process",
     "subcategory": "garment_textile",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Garment laundry / finishing house merchandiser",
     "ai_role_zh": "洗水厂 / 后整理厂跟单",
     "user_role": "Garment factory merchandiser or denim / casual wear sourcing",
@@ -1024,7 +1390,11 @@
       "lab dip"
     ],
     "estimated_minutes": 10,
-    "tags": ["process", "garment", "finishing"]
+    "tags": [
+      "process",
+      "garment",
+      "finishing"
+    ]
   },
   {
     "id": "lc_discrepancy",
@@ -1035,7 +1405,11 @@
     "description_en": "On LC negotiation, present documents with discrepancies; negotiate with buyer and bank for acceptance, amendment or indemnity. ⚠️ Anomaly / advanced; finish [Inquiry & Quote] + [Order Management] first to be familiar with LC workflow.",
     "category": "business",
     "subcategory": "trade_finance",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Overseas buyer / documentary credit specialist at negotiating bank",
     "ai_role_zh": "海外客户 / 议付行单证员",
     "user_role": "Chinese export sales / documentation clerk",
@@ -1068,8 +1442,19 @@
     ],
     "estimated_minutes": 11,
     "estimated_difficulty": 4,
-    "prerequisites": ["inquiry_quote", "order_management"],
-    "tags": ["business", "LC", "documents", "exception", "anomaly", "crisis", "trade-finance"]
+    "prerequisites": [
+      "inquiry_quote",
+      "order_management"
+    ],
+    "tags": [
+      "business",
+      "LC",
+      "documents",
+      "exception",
+      "anomaly",
+      "crisis",
+      "trade-finance"
+    ]
   },
   {
     "id": "payment_overdue",
@@ -1080,7 +1465,11 @@
     "description_en": "Customer overdue on balance or post-shipment payment — collection calls, LC extension or installment plan negotiation. ⚠️ Anomaly / advanced; finish [Order Management] + [LC Document Discrepancy] first to be familiar with PI/LC workflow.",
     "category": "business",
     "subcategory": "trade_finance",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Overseas buyer / finance controller under cash flow pressure",
     "ai_role_zh": "海外客户 / 财务总监(资金紧张)",
     "user_role": "Chinese export sales / finance manager",
@@ -1113,8 +1502,19 @@
     ],
     "estimated_minutes": 10,
     "estimated_difficulty": 4,
-    "prerequisites": ["order_management", "lc_discrepancy"],
-    "tags": ["business", "payment", "exception", "anomaly", "crisis", "trade-finance", "collections"]
+    "prerequisites": [
+      "order_management",
+      "lc_discrepancy"
+    ],
+    "tags": [
+      "business",
+      "payment",
+      "exception",
+      "anomaly",
+      "crisis",
+      "trade-finance",
+      "collections"
+    ]
   },
   {
     "id": "customs_hold",
@@ -1125,7 +1525,11 @@
     "description_en": "Cargo held by customs at destination — coordinate with forwarder, buyer and customs broker on documents, diversion or return. ⚠️ Anomaly / advanced; finish [Logistics & Shipping] + [Order Management] first.",
     "category": "business",
     "subcategory": "logistics",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Destination customs officer / overseas buyer logistics manager",
     "ai_role_zh": "目的港海关 / 客户物流经理",
     "user_role": "Chinese export sales / shipping clerk / forwarder",
@@ -1158,8 +1562,18 @@
     ],
     "estimated_minutes": 11,
     "estimated_difficulty": 4,
-    "prerequisites": ["logistics_shipping", "order_management"],
-    "tags": ["business", "logistics", "exception", "customs", "anomaly", "crisis"]
+    "prerequisites": [
+      "logistics_shipping",
+      "order_management"
+    ],
+    "tags": [
+      "business",
+      "logistics",
+      "exception",
+      "customs",
+      "anomaly",
+      "crisis"
+    ]
   },
   {
     "id": "trade_fair",
@@ -1170,7 +1584,11 @@
     "description_en": "Receive buyers at trade fairs (Canton Fair, Magic Show, Texworld) and showrooms — quick product intro, sample walk-through and intent orders",
     "category": "business",
     "subcategory": "sales",
-    "difficulty_levels": ["beginner", "intermediate", "advanced"],
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
     "ai_role": "Overseas buyer / sourcing manager walking the booth",
     "ai_role_zh": "海外客户 / 采购经理(逛展位)",
     "user_role": "Chinese export sales on booth duty",
@@ -1197,6 +1615,11 @@
       "lead"
     ],
     "estimated_minutes": 8,
-    "tags": ["business", "sales", "fair", "showroom"]
+    "tags": [
+      "business",
+      "sales",
+      "fair",
+      "showroom"
+    ]
   }
 ]

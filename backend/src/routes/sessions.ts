@@ -11,17 +11,26 @@ import {
   ValidationError,
 } from '../services/session-manager';
 import { chatCompletion, buildConversationSystemPrompt } from '../services/minimax-llm';
-import { textToAudio, TTS_DEFAULT_VOICE } from '../services/minimax-tts';
+import { textToAudio, TTS_DEFAULT_VOICE, TTS_VOICES } from '../services/minimax-tts';
 import { transcribeBuffer } from '../services/minimax-asr';
 import { scoreWithLlm, scoreRepeat, safeParseScore } from '../services/scoring';
 // safeParseScore is internal to scoring.ts and not re-exported; we reuse it via the LLM module
 // only for the explicit /feedback path. The /messages path uses scoreWithLlm which already
 // handles JSON parsing.
 import { getScenarioById, getDialogForRound, getDialogsForScenario, getSystemPrompt } from '../services/content';
+import {
+  getCustomDialogForRound,
+  getCustomRounds,
+  getCustomScenario,
+  isCustomScenarioId,
+  setCustomScenario,
+} from '../services/custom-scenarios';
 import { config } from '../config';
 import { createLogger } from '../utils/logger';
 import type {
   ApiErrorBody,
+  CustomScenario,
+  DialogRound,
   Difficulty,
   LlmChatMessage,
   ScoreFeedback,
@@ -46,6 +55,7 @@ interface CreateSessionBody {
   scenario_id?: unknown;
   difficulty?: unknown;
   mode?: unknown;
+  custom_scenario?: unknown;
 }
 
 interface MessageBody {
@@ -72,9 +82,30 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
     if (!isValidMode(body.mode)) {
       return reply.code(400).send(errBody('VALIDATION_ERROR', 'mode must be free|repeat'));
     }
-    const scenario = getScenarioById(body.scenario_id);
-    if (!scenario) {
-      return reply.code(404).send(errBody('SCENARIO_NOT_FOUND', `scenario '${body.scenario_id}' not found`));
+    // Custom (LLM-generated) scenarios are not in the static content store;
+    // the client carries the full payload in `custom_scenario` and we stash it
+    // in an in-memory registry keyed by session id.
+    const isCustom = isCustomScenarioId(body.scenario_id);
+    let customScenario: CustomScenario | null = null;
+    if (isCustom) {
+      const cs = body.custom_scenario as Partial<CustomScenario> | null | undefined;
+      if (
+        !cs ||
+        typeof cs !== 'object' ||
+        typeof cs.system_prompt !== 'string' ||
+        typeof cs.dialogs !== 'object' ||
+        cs.dialogs === null
+      ) {
+        return reply
+          .code(400)
+          .send(errBody('VALIDATION_ERROR', 'custom_scenario is required when scenario_id starts with "custom-"'));
+      }
+      customScenario = cs as CustomScenario;
+    } else {
+      const scenario = getScenarioById(body.scenario_id);
+      if (!scenario) {
+        return reply.code(404).send(errBody('SCENARIO_NOT_FOUND', `scenario '${body.scenario_id}' not found`));
+      }
     }
     try {
       const rec = createSession({
@@ -82,6 +113,9 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
         difficulty: body.difficulty,
         mode: body.mode,
       });
+      if (customScenario) {
+        setCustomScenario(rec.id, customScenario);
+      }
       return reply.code(201).send({
         session_id: rec.id,
         scenario_id: rec.scenario_id,
@@ -140,12 +174,21 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
         const requestedDifficulty = req.query?.difficulty;
         const difficulty: Difficulty =
           requestedDifficulty && isValidDifficulty(requestedDifficulty) ? requestedDifficulty : rec.difficulty;
-        const dialogs = getDialogsForScenario(rec.scenario_id);
-        const entry = dialogs.find((d) => d.difficulty === difficulty) ?? dialogs[0];
-        if (!entry || !Array.isArray(entry.rounds) || entry.rounds.length === 0) {
+        const custom = getCustomScenario(rec.id);
+        let rounds: DialogRound[];
+        let entryDifficulty: Difficulty = difficulty;
+        if (custom) {
+          rounds = getCustomRounds(custom, difficulty);
+        } else {
+          const dialogs = getDialogsForScenario(rec.scenario_id);
+          const entry = dialogs.find((d) => d.difficulty === difficulty) ?? dialogs[0];
+          rounds = entry?.rounds ?? [];
+          if (entry) entryDifficulty = entry.difficulty;
+        }
+        if (rounds.length === 0) {
           return reply.send({ items: [] });
         }
-        const items = entry.rounds
+        const items = rounds
           .map((r) => {
             const text = r.ai_message ?? '';
             if (!text) return null;
@@ -153,7 +196,7 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
               id: String(r.round),
               text,
               translation: r.ai_message_zh,
-              difficulty: entry.difficulty,
+              difficulty: entryDifficulty,
             };
           })
           .filter((p): p is { id: string; text: string; translation: string; difficulty: Difficulty } => p !== null);
@@ -207,10 +250,14 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
 
         // 2) Score it.
         const llmContext = toLlmContext(getMessages(id).filter((m) => m.id !== userMsg.id));
+        const custom = getCustomScenario(id);
+        const targetForRound = (): DialogRound | null =>
+          custom
+            ? getCustomDialogForRound(custom, rec.difficulty, rec.round_index)
+            : getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index);
         let score: ScoreFeedback;
         if (effectiveMode === 'repeat') {
-          const targetDialog = getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index);
-          const target = targetDialog?.ai_message ?? '';
+          const target = targetForRound()?.ai_message ?? '';
           score = scoreRepeat(target, userText);
         } else {
           score = await scoreWithLlm(userText, llmContext);
@@ -234,15 +281,14 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
         let audioUrl: string | null = null;
         if (effectiveMode === 'repeat') {
           // In repeat mode the AI just confirms / prompts the next sentence.
-          const targetDialog = getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index);
-          const target = targetDialog?.ai_message ?? '';
+          const target = targetForRound()?.ai_message ?? '';
           if (score.overall_score >= 80) {
             aiMessage = `Great job! You said: "${userText}". Let's move to the next sentence.`;
           } else {
             aiMessage = `Good try. The target was: "${target}". Please listen and try again.`;
           }
         } else {
-          const systemPrompt = buildConversationSystemPrompt(getSystemPrompt(rec.difficulty));
+          const systemPrompt = buildConversationSystemPrompt(custom?.system_prompt ?? getSystemPrompt(rec.difficulty));
           const contextMessages: LlmChatMessage[] = [
             ...llmContext,
             { role: 'user', content: userText },
@@ -349,7 +395,8 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
             : null;
 
         // Ask the LLM for a holistic JSON feedback. We always re-score (mock fallback works).
-        const systemPrompt = buildConversationSystemPrompt(getSystemPrompt(rec.difficulty));
+        const custom = getCustomScenario(id);
+        const systemPrompt = buildConversationSystemPrompt(custom?.system_prompt ?? getSystemPrompt(rec.difficulty));
         const llmMessages: LlmChatMessage[] = [
           ...toLlmContext(messages),
           {
@@ -453,6 +500,11 @@ const sessionsRoutes: FastifyPluginAsync = async (app: FastifyInstance): Promise
       }
     },
   );
+
+  // GET /api/tts/voices — available MiniMax voices
+  app.get('/api/tts/voices', async (_req, reply) => {
+    return reply.send({ voices: TTS_VOICES, default_voice_id: TTS_DEFAULT_VOICE });
+  });
 
   // POST /api/tts  — convenience endpoint for the front-end to synthesise arbitrary text.
   app.post<{ Body: { text?: unknown; voice_id?: unknown; speed?: unknown } }>(

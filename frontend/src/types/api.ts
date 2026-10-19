@@ -70,6 +70,50 @@ export interface ScenarioListResponse {
   count?: number
 }
 
+// ---------- Custom scenario (AI 生成) ----------
+
+/** One dialog round inside an AI-generated custom scenario. */
+export interface CustomRound {
+  round: number
+  ai_message: string
+  ai_message_zh: string
+  expected_user_response_hint: string
+  key_phrases: string[]
+  common_mistakes: string
+  tips_zh: string
+  user_response_example: string
+}
+
+export interface CustomVocabularyItem {
+  term: string
+  full_form?: string
+  phonetic?: string
+  definition_en?: string
+  definition_zh: string
+  example: string
+}
+
+/** Returned by POST /api/custom-scenarios/generate.  `id` always starts
+ *  with "custom-".  Persisted locally in localStorage (see
+ *  stores/customScenarios.ts). */
+export interface CustomScenario {
+  id: string
+  name: string
+  keywords: string[]
+  title_zh: string
+  title_en: string
+  description_zh: string
+  description_en: string
+  vocabulary: CustomVocabularyItem[]
+  dialogs: {
+    beginner: CustomRound[]
+    intermediate: CustomRound[]
+    advanced: CustomRound[]
+  }
+  system_prompt: string
+  created_at: string | number
+}
+
 // ---------- Session / message / score ----------
 
 export interface ScoreFeedback {
@@ -87,6 +131,7 @@ export interface ScoreFeedback {
   /** Server sometimes uses "suggestion" (singular), we expose both. */
   suggestions?: string[]
   suggestion?: string
+  native_polish?: string
 }
 
 export interface SessionMessage {
@@ -123,6 +168,9 @@ export interface CreateSessionRequest {
   scenario_id: string
   mode: PracticeMode
   difficulty: Difficulty
+  /** Required when scenario_id starts with "custom-": the full AI-generated
+   *  scenario payload so the backend can drive the conversation. */
+  custom_scenario?: CustomScenario
 }
 
 /** Backend returns the new session with this shape on POST /api/sessions. */

@@ -145,6 +145,28 @@ const avgScore = computed(() => historyStore.stats?.average_score ?? 0)
       </div>
     </div>
 
+    <!-- 自定义场景入口 -->
+    <RouterLink
+      to="/custom-scenario"
+      class="group card p-5 sm:p-6 flex items-center gap-4 hover:shadow-card hover:-translate-y-0.5 transition-all duration-200"
+    >
+      <div class="h-12 w-12 shrink-0 rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 text-white flex items-center justify-center text-2xl shadow-soft">
+        ✨
+      </div>
+      <div class="min-w-0 flex-1">
+        <h3 class="text-base sm:text-lg font-semibold text-ink-800">自定义场景生成器</h3>
+        <p class="text-sm text-ink-500 mt-0.5">
+          输入场景名称和关键词,AI 为你生成专属的外贸英语练习场景。
+        </p>
+      </div>
+      <span class="shrink-0 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 group-hover:text-brand-800">
+        去创建
+        <svg viewBox="0 0 24 24" class="h-4 w-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </span>
+    </RouterLink>
+
     <!-- Why -->
     <div>
       <h2 class="text-xl sm:text-2xl font-semibold text-ink-800 mb-5">为什么选 SpeakFlow</h2>

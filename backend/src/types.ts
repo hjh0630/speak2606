@@ -24,7 +24,7 @@ export interface ScenarioMeta {
    * The loader stamps this on every entry after the merge so the front-end can
    * route / filter without having to inspect file paths.
    */
-  module?: 'foreign-trade' | 'textile-apparel';
+  module?: 'foreign-trade' | 'textile-apparel' | 'shoe-upper' | 'sincetech';
   /**
    * Optional industry vertical / sub-category. Examples: "communication",
    * "process", "spinning", "weaving", "dyeing", "garment", "crafts",
@@ -59,12 +59,46 @@ export interface VocabularyEntry {
   example: string;
 }
 
+export interface CustomDialogRound extends DialogRound {
+  user_response_example?: string;
+}
+
+export interface CustomScenarioDialogs {
+  beginner: CustomDialogRound[];
+  intermediate: CustomDialogRound[];
+  advanced: CustomDialogRound[];
+}
+
+export interface CustomVocabularyEntry {
+  term: string;
+  full_form?: string;
+  phonetic?: string;
+  definition_en: string;
+  definition_zh: string;
+  example: string;
+}
+
+export interface CustomScenario {
+  id: string;
+  name: string;
+  keywords: string[];
+  title_zh: string;
+  title_en: string;
+  description_zh: string;
+  description_en: string;
+  vocabulary: CustomVocabularyEntry[];
+  dialogs: CustomScenarioDialogs;
+  system_prompt: string;
+  created_at: number;
+}
+
 export interface ScoreFeedback {
   overall_score: number;
   fluency: number;
   accuracy: number;
   key_issues: string[];
   suggestion: string;
+  native_polish?: string;
 }
 
 export interface LlmChatMessage {

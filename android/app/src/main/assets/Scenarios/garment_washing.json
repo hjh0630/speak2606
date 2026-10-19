@@ -1,0 +1,88 @@
+{
+  "scenario_id": "garment_washing",
+  "scenario_title_en": "Garment Washing & Finishing",
+  "scenario_title_zh": "成衣洗水/后整",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi, this is Kevin from Foshan Apex Laundry. How can I help you?",
+      "ai_message_zh": "你好,我是佛山 Apex 洗水的 Kevin,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍,说明来意:需要洗水加工",
+      "key_phrases": ["This is ...", "We need ... for ...", "I am calling about ...", "wash order"],
+      "common_mistakes": "Don't say 'I want wash' — say 'we need garment washing' or 'we have a wash order'.",
+      "tips_zh": "找洗水厂,先报款式类型(牛仔/休闲/针织)+ 数量 + 期望交期,对方才好报价。",
+      "user_response_example": "Hi Kevin, this is Chen Wei from Hangzhou Lily Garments. I have a wash order — 5,000 pieces of men's denim jeans, enzyme wash with light whiskers."
+    },
+    {
+      "round": 2,
+      "ai_message": "OK, 5,000 pieces men's denim, enzyme wash with light whiskers. Are you going to send us ready-to-wash (RTW) garments, or do you need us to cut and sew as well?",
+      "ai_message_zh": "好的,5000 条男款牛仔,酵素洗加轻度猫须。你们是送 RTW(成衣)来洗,还是需要我们裁剪缝制?",
+      "expected_user_response_hint": "说明送货方式,是成衣还是需要后整厂做缝制",
+      "key_phrases": ["Ready-to-wash", "RTW garments", "cut and sew", "we will send ..."],
+      "common_mistakes": "RTW = ready-to-wear / ready-to-wash,成衣已经缝好;不要说 'finished garments' 不准确。",
+      "tips_zh": "RTW 是成衣洗水,客户送缝好的衣服进洗水厂;若需要从布料开始就要确认 cut & sew 服务。",
+      "user_response_example": "We will send RTW garments — the cut and sew is done in our own factory. We will deliver them in 2 batches, 2,500 pieces each."
+    },
+    {
+      "round": 3,
+      "ai_message": "Got it. For 5,000 pieces enzyme wash with whiskers, the wash cost is around US$1.20 per piece, and whiskers is an extra US$0.30 per piece.",
+      "ai_message_zh": "好的。5000 条酵素洗加猫须,洗水费约每件 1.2 美元,猫须加 0.3 美元一件。",
+      "expected_user_response_hint": "确认价格构成,询问是否有起订量要求",
+      "key_phrases": ["per piece", "wash cost", "extra ... per piece", "What is the MOQ"],
+      "common_mistakes": "Don't say 'the price is 1.2 dollars per one' — say '1.2 dollars per piece' or 'US$1.20 per piece'.",
+      "tips_zh": "洗水价 = 基础洗水 + 工艺附加(猫须/破洞/手擦/喷砂),每项都另计。",
+      "user_response_example": "US$1.20 plus US$0.30 makes US$1.50 per piece. What is your MOQ per color? And is there any extra charge for color matching?"
+    },
+    {
+      "round": 4,
+      "ai_message": "MOQ is 500 pieces per color, no problem for 5,000. About color matching, the indigo shade can shift 1 to 2 levels with enzyme wash — would you like a lab dip first?",
+      "ai_message_zh": "起订量每色 500 件,5000 件没问题。颜色方面,酵素洗后靛蓝会偏 1-2 个色级,要不要先做小样?",
+      "expected_user_response_hint": "同意先做小样,确认小样流程和时长",
+      "key_phrases": ["Yes, please do a lab dip", "lead time for lab dip", "approve before bulk", "first bulk sample"],
+      "common_mistakes": "lab dip 是洗水厂洗的一两块样布,不是染厂的染色小样,术语不要混。",
+      "tips_zh": "Lab dip 3-5 天,大货头缸样(first bulk sample)再 5-7 天,这是行业标准节奏。",
+      "user_response_example": "Yes, please do a lab dip first. We want to see the shade after enzyme. About lead time, 3 to 5 days for lab dip is fine, right?"
+    },
+    {
+      "round": 5,
+      "ai_message": "Yes, lab dip in 3-5 days. After approval, we need a first bulk sample on 30-50 pieces to lock the recipe before running all 5,000.",
+      "ai_message_zh": "是的,小样 3-5 天。批准后,我们需要 30-50 件的 first bulk sample 锁定配方,再跑大货。",
+      "expected_user_response_hint": "确认 first bulk sample 流程和数量",
+      "key_phrases": ["First bulk sample", "lock the recipe", "approve before bulk", "30 to 50 pieces"],
+      "common_mistakes": "first bulk sample 不要说成 'bulk sample' — 前者是头缸样,后者可能是大货。",
+      "tips_zh": "First bulk sample = 30-50 件大货头缸,用来最终确认配方/手感/缩率,不能省。",
+      "user_response_example": "30 to 50 pieces for first bulk sample is fine. We need to approve shrinkage and handfeel before bulk wash. How many days for the first bulk?"
+    },
+    {
+      "round": 6,
+      "ai_message": "About 7 days after lab dip approval. About shrinkage, our target is 3 percent warp and 3 percent weft after wash — AATCC 135 method. Can you accept?",
+      "ai_message_zh": "小样批准后约 7 天。缩率方面,我们的目标是经向 3% 纬向 3%,AATCC 135 法。能接受吗?",
+      "expected_user_response_hint": "确认缩率目标,讨论测试方法",
+      "key_phrases": ["3 percent warp and weft", "AATCC 135", "shrinkage tolerance", "can we tighten ..."],
+      "common_mistakes": "warp 是经向(长方向),weft 是纬向(宽方向),口语里有时说 'length and width' 更易懂。",
+      "tips_zh": "牛仔缩率 AATCC 135 或 ISO 6330 是常用测试法;客户有时要求 2% 以内,需要 pre-shrunk 处理。",
+      "user_response_example": "3 percent warp and weft is fine. AATCC 135 method, no problem. Can you also do a 5 home-laundry cycles test for dimensional change?"
+    },
+    {
+      "round": 7,
+      "ai_message": "Yes, 5 cycles home laundry test is included. About handfeel, our default is medium soft with silicone. Do you want it softer, or more dry hand?",
+      "ai_message_zh": "是的,5 次家庭水洗测试包含在内。手感方面,默认是中软加硅油。你们要更软,还是更干爽?",
+      "expected_user_response_hint": "说明手感要求,确认硅油用量",
+      "key_phrases": ["soft hand", "dry hand", "silicone softener", "enzyme wash", "vintage handfeel"],
+      "common_mistakes": "Don't say 'I want more soft' — say 'I want it softer' or 'softer handfeel'.",
+      "tips_zh": "Silicone softener = 滑爽;enzyme = 柔软去毛;两者叠用是牛仔 / 休闲常见组合。",
+      "user_response_example": "Softer is better, around 4 to 5 on our handfeel scale. Use silicone softener, about 3 percent on weight of garment. Confirm in your lab dip."
+    },
+    {
+      "round": 8,
+      "ai_message": "Noted, 3 percent silicone softener. I will start the lab dip tomorrow once we receive the RTW garments. ETA to ship the jeans back is 15 days after lab dip approval.",
+      "ai_message_zh": "记下了,3% 硅油。我们收到成衣后明天开始小样。小样批准后 15 天交回成品。",
+      "expected_user_response_hint": "确认送衣时间和出货时间表,做 closing",
+      "key_phrases": ["We will deliver RTW on ...", "ETA is ...", "Looking forward to ..."],
+      "common_mistakes": "ETA 后要接具体时间(日期或天数),不要只说 'fast'。",
+      "tips_zh": "洗水厂交期 = 收衣 + lab dip (3-5d) + 批准 + first bulk (7d) + 大货洗水 (5-7d) + 后整 + 包装。",
+      "user_response_example": "We will deliver the 5,000 RTW jeans to your factory next Monday. Looking forward to the lab dip. Have a nice day, Kevin."
+    }
+  ]
+}

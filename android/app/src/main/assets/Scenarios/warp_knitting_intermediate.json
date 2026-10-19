@@ -1,0 +1,88 @@
+{
+  "scenario_id": "warp_knitting",
+  "scenario_title_en": "Warp Knitting",
+  "scenario_title_zh": "经编",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Emma, Linda from Sunrise. I reviewed your spec sheet for the warp knit mesh — 4-bar raschel, hexagonal hole, 95 GSM, for running shoe lining. Let's go through it.",
+      "ai_message_zh": "Emma,我是 Sunrise 的 Linda。看了您经编网眼的规格 — 4 梳拉舍尔,六角网眼,95 GSM,跑鞋内里用。我们过一下。",
+      "expected_user_response_hint": "确认规格,讨论技术细节",
+      "key_phrases": ["Let me confirm the construction", "We need 4 bars total", "What hole size are you suggesting", "Is the construction feasible"],
+      "common_mistakes": "hexagonal hole(六角网眼)用 4-bar raschel 是常规,3-bar 也可但稳定性差。",
+      "tips_zh": "4 梳拉舍尔六角网眼:GB1/GB2 做编链,GB3/GB4 做衬纬和 partial set-out。",
+      "user_response_example": "Let me walk you through it. 4 bars total — GB1 and GB2 for pillar stitch, GB3 for inlay, GB4 for the pattern. Target hole size 1.5 mm, GSM 95. Is that feasible on your HKS machine?"
+    },
+    {
+      "round": 2,
+      "ai_message": "On HKS4 we typically run 3-bar raschel for mesh. 4-bar is more common on the HKS4-P or the new HKS4-M. Hexagonal 1.5 mm at 95 GSM is doable, but we need to control the take-up tension carefully to keep hole size consistent.",
+      "ai_message_zh": "HKS4 上我们一般用 3 梳做网眼。4 梳常用 HKS4-P 或新出的 HKS4-M。六角 1.5 毫米 95 GSM 可以做,但要严格控制卷取张力,保证孔径一致。",
+      "expected_user_response_hint": "讨论设备匹配,询问可量产性",
+      "key_phrases": ["What machine would you suggest", "HKS4-M is fine", "What is the production speed", "What is the yield"],
+      "common_mistakes": "take-up tension(卷取张力)影响网眼尺寸均匀度,要明确写在工艺单上。",
+      "tips_zh": "经编网眼克重稳定性:取决于送经量、卷取张力、整经均匀度三项,任一波动都会变化。",
+      "user_response_example": "HKS4-M is fine, we don't have a preference. What production speed can we expect on the 4-bar setup, and what's the typical yield for first bulk run?"
+    },
+    {
+      "round": 3,
+      "ai_message": "On HKS4-M, 4-bar raschel runs at 1,800 courses per minute, which is about 35 meters per hour for this construction. Yield on first bulk is around 92% — the rest is pattern bars and set-up waste.",
+      "ai_message_zh": "HKS4-M 上 4 梳拉舍尔 1800 横列/分钟,这种结构约 35 米/小时。大货首单良率约 92% — 其余是花型梳和开机废料。",
+      "expected_user_response_hint": "讨论损耗和良率,询问减少方案",
+      "key_phrases": ["92% is acceptable", "How can we reduce set-up waste", "What is the typical set-up length", "Can we use the set-up for samples"],
+      "common_mistakes": "set-up waste(开机废料)是不可避免的,通常每卷 50-200 米,看机器和工艺。",
+      "tips_zh": "经编开机废料长度:HKS 系列通常 80-150 米,新机 50-80 米,可用来做手感样。",
+      "user_response_example": "92% is fine for a complex 4-bar construction. Can the set-up yardage be used as hand samples for our design team, or do we need to pay for the greige?"
+    },
+    {
+      "round": 4,
+      "ai_message": "Set-up yardage is yours at no cost — typically 80-120 meters per machine per style. We can mark it as 'A-grade' and roll it separately. About the inlay yarn — do you want 30D or 40D spandex?",
+      "ai_message_zh": "开机废料免费提供 — 每台机每款 80-120 米。我们会标 A 级,单独卷。衬纬氨纶用 30D 还是 40D?",
+      "expected_user_response_hint": "选择氨纶细度,讨论弹性",
+      "key_phrases": ["30D for soft stretch", "40D for more power", "What's the elongation difference", "We need 100% elongation at 1kg load"],
+      "common_mistakes": "elongation(伸长率)vs power(回弹力):细氨纶伸长大但回弹力小,粗氨纶反之。",
+      "tips_zh": "经编网眼氨纶选择:30D 伸长 100-120%,回弹 90%;40D 伸长 80-100%,回弹 95%。",
+      "user_response_example": "30D spandex, please. We tested both and 30D gives a softer hand feel with sufficient stretch for shoe lining. We need at least 100% elongation at 1 kg load."
+    },
+    {
+      "round": 5,
+      "ai_message": "30D will hit 100% elongation. On the warping side, we need 4 section beams for the 4 bars, plus a separate spandex beam. Sectional warping is required for this construction. Lead time for warping is 5 days.",
+      "ai_message_zh": "30D 可以达到 100% 伸长。整经这块,4 梳需要 4 个分段经轴,加 1 个独立氨纶经轴。这种结构必须用分条整经。整经交期 5 天。",
+      "expected_user_response_hint": "讨论整经和上机,确认时间",
+      "key_phrases": ["Sectional warping is fine", "5 days for warping is OK", "Total lead time from PO", "When can we see the first meter"],
+      "common_mistakes": "sectional warping(分条整经) vs direct warping(分批整经):多色花型用前者,单色用后者。",
+      "tips_zh": "经编经轴(盘头)数量:每梳一个,加氨纶独立盘头;4 梳共 5 个盘头,占用整经机时间。",
+      "user_response_example": "Sectional warping is fine. 5 days for warping plus 25 days knitting — total 30 days from PO. Can we see a 5-meter first-off sample for sign-off before full production?"
+    },
+    {
+      "round": 6,
+      "ai_message": "Yes, we do a 5-meter first-off inspection at 24 hours into the run. Quality team checks GSM, hole size, and pattern alignment. We send you photos and the inspection data. Sign-off is required before we continue.",
+      "ai_message_zh": "可以。我们开机 24 小时后做 5 米首件检验。QC 团队检查克重、孔径、花型对位。我们会发您照片和检测数据,需您签样后才继续。",
+      "expected_user_response_hint": "讨论首件签样流程,询问数据",
+      "key_phrases": ["First-off sign-off is fine", "What data will you send", "GSM tolerance is ...", "Can we visit the line"],
+      "common_mistakes": "first-off sample(首件) vs counter-sample(确认样):首件是开机样,确认样是工艺定版样。",
+      "tips_zh": "first-off 签样:是量产质量基准,签了后工厂按此标准生产,后续争议以此为准。",
+      "user_response_example": "First-off sign-off is acceptable. Send the GSM, hole size measurement, and pattern alignment photos. GSM tolerance is plus or minus 5%. Can we visit the line for the first run?"
+    },
+    {
+      "round": 7,
+      "ai_message": "GSM tolerance of plus or minus 5% is tight for warp knit — we can commit to that with 4-bar control. Site visit is welcome with 3 days' notice. About the price — FOB Ningbo, 3,000 kg order, US$4.20 per kg for this construction.",
+      "ai_message_zh": "经编 ±5% 克重公差很严 — 4 梳严格控可以做到。现场参观提前 3 天通知即可。价格 — FOB 宁波,3000 公斤订单,这种结构 4.20 美元/公斤。",
+      "expected_user_response_hint": "讨论价格,试探折扣",
+      "key_phrases": ["4.20 is on the high side", "What's your best price at 5,000 kg", "Can you do 4.00", "What if we commit to 12 months"],
+      "common_mistakes": "FOB price per kg 是经编行业通用报价方式,客户通常对比 USD/kg 而非 USD/meter。",
+      "tips_zh": "经编网眼价格:1.5mm 孔径 95 GSM,FOB 约 3.5-4.5 美元/公斤,看订单量和结构复杂度。",
+      "user_response_example": "US$4.20 is on the high side for this construction. What's your best price at 5,000 kg per order? And can you hold the price for 12 months if we commit to a quarterly forecast?"
+    },
+    {
+      "round": 8,
+      "ai_message": "At 5,000 kg per order, I can do US$3.95 per kg. If you give us a 12-month rolling forecast, we lock the price for 12 months with raw material adjustment clauses. To close: sample 7 days, bulk 30 days, FOB Ningbo US$3.95 per kg for 5,000 kg. PI by tomorrow.",
+      "ai_message_zh": "5000 公斤一单,我可以做到 3.95 美元/公斤。如您给 12 个月滚动预测,我们可以锁价 12 个月,带原材料价格调整条款。总结:打样 7 天,大货 30 天,FOB 宁波 5000 公斤 3.95 美元/公斤。PI 明天发。",
+      "expected_user_response_hint": "确认价格和条件,锁定 PI",
+      "key_phrases": ["US$3.95 works", "Send the PI by email", "12-month forecast is fine", "I will confirm tomorrow"],
+      "common_mistakes": "raw material adjustment clause(原材料调价条款)是长约必备,通常按季度调整。",
+      "tips_zh": "锁价长约必备条款:原材料波动阈值(±5% 或 ±10%)、调价公式、生效日期、终止条件。",
+      "user_response_example": "US$3.95 works. Send the PI to emma@lotuslingerie.com by tomorrow. 12-month rolling forecast is fine — I'll send the first draft next week. Looking forward to working with you, Linda."
+    }
+  ]
+}

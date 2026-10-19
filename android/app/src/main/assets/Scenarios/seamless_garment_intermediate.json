@@ -1,0 +1,88 @@
+{
+  "scenario_id": "seamless_garment",
+  "scenario_title_en": "Seamless Garment",
+  "scenario_title_zh": "无缝服装",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen, Daniel from Sunline Seamless. Looking at your brief for a 7/8 length seamless legging with 4-zone compression, on E28, with 80/20 nylon-spandex. A few technical questions before sampling — the buyer specifies 'second-skin feel' and 'zero show-through' at 220 GSM average. On E28 with that composition, zero show-through at 220 is tight. What's the buyer's priority — coverage or hand feel?",
+      "ai_message_zh": "Chen,我是 Sunline 无缝的 Daniel。你工艺单要 7/8 长度无缝打底裤,4 区压力,E28,80/20 锦纶氨纶。采样前先问几个问题 — 客户要求'第二层皮肤'和'零透肉',平均 220 克。E28 加这个成分,220 克零透肉很紧。客户优先什么 — 遮盖还是手感?",
+      "expected_user_response_hint": "权衡遮盖和手感,做工艺决定",
+      "key_phrases": ["Coverage is priority", "Hand feel first", "show-through", "second-skin"],
+      "common_mistakes": "show-through(透肉) 是针织薄布常见问题,220 克 E28 锦纶/氨纶如果氨纶过细、线圈过长,容易出现。",
+      "tips_zh": "E28 + 220 克,完全不透肉需要短线圈长度 + 高密度。",
+      "user_response_example": "The buyer's merchandising team was clear: coverage first, then hand feel. Show-through is a non-starter — they had a quality claim last season on a similar style. Hand feel we can compromise on."
+    },
+    {
+      "round": 2,
+      "ai_message": "Coverage first it is. To kill show-through at 220 GSM on E28, we need to tighten the stitch length and increase the courses per cm. That will firm up the hand — the fabric will feel more 'held' and less 'caressing'. The buyer should know. Will they accept a firmer hand?",
+      "ai_message_zh": "遮盖优先。要在 E28 上做到 220 克不透肉,要收短线圈长度、增加横密。布会变'紧'而不是'柔'。客户能接受偏硬手感吗?",
+      "expected_user_response_hint": "权衡硬手感 vs. 遮盖",
+      "key_phrases": ["Firmer hand is OK", "Coverage over hand", "stitch length", "firm compression"],
+      "common_mistakes": "stitch length(线圈长度) 越短,布越紧实、克重越高、手感越硬。",
+      "tips_zh": "短线圈 + 高密度 = 紧实不透肉,代价是手感变硬。",
+      "user_response_example": "Honestly, this style is performance compression — firmer hand is on-brand. The buyer will not accept show-through but will accept a performance-grade hand. Let's go that direction."
+    },
+    {
+      "round": 3,
+      "ai_message": "Good. Now about the spandex — for true second-skin recovery, I'd push to 30% spandex instead of 20%. The extra 10% gives you 30% more recovery at 50% elongation, which is the sweet spot for performance leggings. The fabric will cost more, but the recovery is the difference between a US$25 legging and a US$45 one.",
+      "ai_message_zh": "好。氨纶方面 — 真要第二层皮肤回弹,我推 30% 氨纶代替 20%。多加 10%,在 50% 拉伸下回弹多 30%,正是性能打底裤的甜区。布更贵,但回弹是 25 美元和 45 美元打底裤的差距。",
+      "expected_user_response_hint": "评估氨纶比例",
+      "key_phrases": ["30% spandex", "recovery rate", "performance grade", "cost premium"],
+      "common_mistakes": "spandex recovery(氨纶回弹) 是氨纶百分比和加工工艺的综合结果,30% 比例下回弹提升明显。",
+      "tips_zh": "20% 氨纶适合普通打底,30% 适合运动 / 高弹性能;每公斤氨纶贵 1-2 美元。",
+      "user_response_example": "30% spandex aligns with the performance positioning. Send me the cost implication — if it's a reasonable premium per piece, we'll absorb it as part of the performance story."
+    },
+    {
+      "round": 4,
+      "ai_message": "30% spandex adds about US$0.18 per garment. Worth it. Now the technical structure — you mentioned a 'shaped waistband' that doesn't dig in. We do a 2-layer waistband with a 2 cm silicone-free elastic strip inside, knit seamlessly. Will that work, or do you need actual silicone grippers?",
+      "ai_message_zh": "30% 氨纶每件加 0.18 美元,值。再说结构 — 你提到'成形腰头不勒肉'。我们做双层腰头,内嵌 2cm 无硅胶弹力带,无缝编织。可以,还是要真的硅胶防滑条?",
+      "expected_user_response_hint": "决定腰头结构",
+      "key_phrases": ["Silicone-free", "shaped waistband", "gripper", "anti-slip"],
+      "common_mistakes": "silicone gripper(硅胶防滑条) 是常见防滑方案,但透气差、易引起皮肤敏感;高端品牌偏好无硅胶。",
+      "tips_zh": "无缝腰头通过编织实现,不需要缝合;硅胶条是低端方案。",
+      "user_response_example": "Silicone-free is the brand standard — no silicone on the body, period. The 2-layer seamless waistband with the inner elastic strip is exactly what we want. Document it in the spec."
+    },
+    {
+      "round": 5,
+      "ai_message": "Will do. Now — the gusset. Standard seamless gusset is a small diamond insert knit on the same machine, about 8 cm wide. The buyer is asking for a 'comfort gusset' — what does that mean to you? Wider, breathable, or just softer?",
+      "ai_message_zh": "好。三角区 — 标准无缝三角区是机器上直接织的小菱形插片,8cm 宽。客户要'舒适三角区' — 对你是什么意思?更宽、更透气,还是更软?",
+      "expected_user_response_hint": "说明客户对三角区的要求",
+      "key_phrases": ["wider gusset", "breathable", "softer", "comfort panel"],
+      "common_mistakes": "gusset(三角区) 在打底裤里通常指裆部菱形插片,影响舒适度。",
+      "tips_zh": "三角区可加宽到 10-12 cm,或用更柔软的纱线(棉/莫代尔) 替代锦纶。",
+      "user_response_example": "The buyer wants a wider, breathable gusset — about 12 cm wide, in cotton-rich yarn (or cotton-modal) for the comfort panel. The main body stays in nylon-spandex for compression."
+    },
+    {
+      "round": 6,
+      "ai_message": "Cotton-modal gusset on a nylon-spandex body — doable, we knit the gusset on the same machine using a yarn change. The transition zone is the tricky part — we need a 2-3 cm overlap to avoid a visible color or GSM line. Color matching is also key — Pantone match between nylon and cotton-modal can be a 0.5-1.0 dE difference.",
+      "ai_message_zh": "棉莫代尔三角区在锦纶氨纶主体上 — 可以,同机换纱织。过渡区是难点 — 要 2-3cm 重叠避免色差或克重线。色匹配也关键,锦纶和棉莫代尔潘通对色可能有 0.5-1.0 dE 差异。",
+      "expected_user_response_hint": "讨论三角区技术细节",
+      "key_phrases": ["yarn change", "overlap zone", "color match", "transition"],
+      "common_mistakes": "yarn change(换纱) 在无缝机上要预先编程,过渡区 2-3cm 是常规做法。",
+      "tips_zh": "无缝机的换纱通过喂纱系统切换,过渡区要提前设计。",
+      "user_response_example": "0.5-1.0 dE is borderline but workable if we're consistent within a dye lot. The 2-3 cm overlap is fine. Send the strike-off in cotton-modal gusset color so we can sign off the match."
+    },
+    {
+      "round": 7,
+      "ai_message": "Will do. Now, the tech question on sizing. Seamless size variation is done through stitch length and tension, not cut-and-sew grading. A size M and size L differ by about 8-10% in stitch length. We program both into the machine and run the appropriate one per order. For a full size run XS to XL, that's 5 programs. Confirm?",
+      "ai_message_zh": "好。无缝尺码变化不是靠裁剪,而是线圈长度和张力。M 和 L 之间线圈长度差 8-10%。机器里两个程序都编好,按订单跑。全尺码 XS 到 XL 5 个程序。确认吗?",
+      "expected_user_response_hint": "确认尺码程序",
+      "key_phrases": ["5 programs", "size run", "stitch length variance", "for sizing"],
+      "common_mistakes": "seamless 尺码变化通过 stitch length 和 tension 实现,不是裁剪升级(grading)。",
+      "tips_zh": "无缝产品的尺码靠机器编程,改尺码不用改版型。",
+      "user_response_example": "5 programs confirmed. Run the size run as one batch with the 5 programs. We'll order XS/S/M/L/XL with quantities: 800/1200/2500/1800/700 = 7,000 pieces. Need the timing for the 5 programs in the lead time."
+    },
+    {
+      "round": 8,
+      "ai_message": "5 programs add about 3 days to setup but no impact on per-piece time. 7,000 pieces at 35 days after fit approval, plus 3 days for 5 programs = 38 days. Cost: 80/20 nylon-spandex base US$4.20, 30% spandex premium US$0.18, cotton-modal gusset US$0.45, total US$4.83 per piece. Sampling 12 days. PI by tomorrow. Sound right?",
+      "ai_message_zh": "5 个程序加 3 天调机,不影响单件时间。7000 件,fit 批准后 35 天,加 3 天调机 = 38 天。成本:80/20 锦纶氨纶基础 4.2 美元,30% 氨纶加 0.18 美元,棉莫代尔三角区 0.45 美元,共 4.83 美元一件。打样 12 天。PI 明天发。这样对吗?",
+      "expected_user_response_hint": "确认总结,收尾",
+      "key_phrases": ["Approved", "Send the PI", "Looking forward"],
+      "common_mistakes": "无缝产品成本结构:原料 + 编织工时 + 后整理 + 加价;无车缝工时。",
+      "tips_zh": "成本谈判要先解构再谈,客户看到明细更容易接受。",
+      "user_response_example": "Approved on all points. Send the PI to chen.wei@lilygarments.com with the gusset spec and the size run. Looking forward to the proto, Daniel."
+    }
+  ]
+}

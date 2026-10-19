@@ -1,0 +1,40 @@
+{
+  "scenario_id": "dyeing_delta_e",
+  "scenario_title_en": "Dyeing Process, Delta E & Fastness QC",
+  "scenario_title_zh": "染整工序、色差 Delta E 与牢度仲裁",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "David, our inbound inspection flagged this batch of olive green fabric. Under D65 it looks acceptable, but under retail store TL84 lighting, the shade shifts visibly reddish with a Delta E of 1.15. Our acceptance tolerance is strictly Delta E below 0.8. How do you explain this metamerism?",
+      "ai_message_zh": "David，我们的入境质检验收拦截了这批橄榄绿面料。在 D65 阳光源下看基本可以，但在零售店 TL84 光源下，颜色明显发红，Delta E 达到了 1.15。我们的验货允收公差严格在 Delta E < 0.8 以内。你怎么解释这种同色异谱现象？",
+      "expected_user_response_hint": "专业解释同色异谱（Metamerism）机理，分析三原色染料配比中红色组分在三基色荧光灯下的光谱峰值反应，并承诺重新调配染料组合在双光源下均达标",
+      "key_phrases": [
+        "metameric failure / metamerism",
+        "spectrophotometer reading",
+        "trichromatic dyestuff balance",
+        "Delta E CMC 2:1 under 0.8",
+        "D65 and TL84 alignment"
+      ],
+      "common_mistakes": "不要和客户争辩 'it looks good to my eyes'，要用色差仪的分光光度计数据和三原色配方机理专业沟通。",
+      "tips_zh": "母语老兵句型：'We acknowledge the metameric shift under TL84. The disperse red component in the original dyestuff recipe is overly responsive to the 545nm emission peak of TL84. We will re-formulate with a metamerism-free dye combination.'",
+      "user_response_example": "We fully respect your spectrophotometer data. What you are observing is classic metamerism: while the color coordinates match under standard D65 daylight, the secondary red dye component has an absorption valley that reacts to the sharp emission peaks of TL84 fluorescent lighting. Our lab is already reformulating the trichromatic dye combination to flatten the spectral curve, ensuring Delta E under CMC 2:1 stays strictly below 0.7 across both D65 and TL84."
+    },
+    {
+      "round": 2,
+      "ai_message": "Good technical diagnosis. If you adjust the dye recipe, will it affect the colorfastness to wet crocking? We require Grade 4 minimum on dark shades.",
+      "ai_message_zh": "专业的技术诊断。如果你们重新调整染料配方，会不会影响湿摩擦色牢度？我们在深色系上要求最低达到 4 级。",
+      "expected_user_response_hint": "解释采用双重还原清洗（reduction clearing）与高温定型工艺，确保表面无浮色，湿摩擦牢度稳定在 4 级",
+      "key_phrases": [
+        "wet crocking fastness Grade 4",
+        "reduction clearing treatment",
+        "unfixed surface dyestuff removal",
+        "AATCC 8 Crockmeter test",
+        "stenter heat stabilization"
+      ],
+      "common_mistakes": "深色湿摩擦是行业老大难，不要空口保证，要讲出 'double reduction clearing process to strip all unfixed surface dye molecules'。",
+      "tips_zh": "母语亮点：'Our post-dyeing double reduction clearing thoroughly strips surface unfixed dyes, locking wet crocking at solid Grade 4.'",
+      "user_response_example": "Not at all. To protect crocking fastness, especially on deep olive and black shades, our standard procedure includes an aggressive double reduction clearing wash. This completely strips away any unfixed hydrolysed dyestuff from the fiber surface. In our internal AATCC 8 tests, wet crocking consistently scores Grade 4 and dry crocking achieves Grade 4.5."
+    }
+  ]
+}

@@ -14,6 +14,12 @@ const routes: RouteRecordRaw[] = [
     meta: { title: '场景库' },
   },
   {
+    path: '/custom-scenario',
+    name: 'custom-scenario',
+    component: () => import('@/views/CustomScenarioView.vue'),
+    meta: { title: '自定义场景' },
+  },
+  {
     path: '/scenarios/:id/preview',
     name: 'scenario-preview',
     component: () => import('@/views/ScenarioPreviewView.vue'),

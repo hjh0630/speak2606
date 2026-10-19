@@ -1,0 +1,40 @@
+{
+  "scenario_id": "circular_knitting_as32",
+  "scenario_title_en": "Circular Knitting AS32/AX36 Tech",
+  "scenario_title_zh": "圆编细针距提花与轻量化面料",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "David, our activewear line is seeing high customer return rates due to fabric spirality and torque after washing on our current single jersey. How does Sintech prevent skewing on your circular knitting machines?",
+      "ai_message_zh": "David，我们目前的运动单面汗布在水洗后扭斜率过高，导致严重的客诉和退货。信泰在圆编机台上是如何防止斜行扭斜的？",
+      "expected_user_response_hint": "解释从反向加捻纱线选配、机台转向平衡、精调针距到定型机超喂热定型的全流程防斜行工艺，确保斜行<3%",
+      "key_phrases": [
+        "fabric spirality / skewing",
+        "torque-balanced yarns",
+        "S and Z twist balancing",
+        "stenter overfeed heat-setting",
+        "skewing under 3%"
+      ],
+      "common_mistakes": "不要把 'skewing' 说成 'slanting'，行业标准术语是 'fabric spirality' 或 'skewing'。",
+      "tips_zh": "母语亮点：'We engineer S-twist and Z-twist yarns into alternating feeds to cancel out rotational torque before stenter heat-setting.'",
+      "user_response_example": "Fabric spirality is a classic pain point in circular single jersey. At Sintech, we eliminate it at the root: first, we use torque-balanced compact Siro-spun yarns with optimized twist multipliers. Second, on our circular knitters, we balance alternating feeds with S and Z twists to neutralize torque. Finally, during stenter finishing, we apply optical weft-straightening and controlled overfeed to lock skewing strictly under 3%, well within your AATCC 179 standard."
+    },
+    {
+      "round": 2,
+      "ai_message": "That's exactly the engineering rigor we look for. Can we achieve a 200 GSM double-sided interlock with a cool-touch handfeel on your AS32 or AX36 machines?",
+      "ai_message_zh": "这正是我们寻找的工程严谨度。如果在你们的 AS32 或 AX36 机台上做，能做到 200 GSM 且带有凉感手感的双面互锁（Interlock）面料吗？",
+      "expected_user_response_hint": "确认 AS32 32针/AX36 36针机台能力，采用高针距密织，混纺中空凉感锦纶，实现 200 GSM 紧密不透光且触感冰凉",
+      "key_phrases": [
+        "AS32 / AX36 fine gauge",
+        "200 GSM double interlock",
+        "cool-touch jade nylon filament",
+        "q-max thermal conductivity",
+        "non-sheer density"
+      ],
+      "common_mistakes": "避免单说 'it feels cool'，用 'cool-touch jade nylon fiber with high Q-max thermal conductivity'。",
+      "tips_zh": "母语亮点：'Tight 36-gauge knitting delivers opaque coverage at just 200 GSM with instant cool-touch hand.'",
+      "user_response_example": "Yes, absolutely. Our 36-gauge AX36 double-knit machines are designed specifically for high-density, lightweight interlocks. By combining 50D fine-filament cool-touch nylon with 20D spandex, we can hit exactly 200 GSM with excellent opacity, high modulus recovery, and an instantaneous Q-max cool-touch rating above 0.25 W/cm²."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "garment_washing",
+  "scenario_title_en": "Garment Washing & Finishing",
+  "scenario_title_zh": "成衣洗水/后整",
+  "difficulty": "intermediate",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hi Chen Wei, this is Kevin from Foshan Apex Laundry again. I heard you have a new order — a ladies' denim jacket style this time. What kind of wash effect are you looking for?",
+      "ai_message_zh": "你好 Chen Wei,还是我,佛山 Apex 洗水的 Kevin。听说你们有个新单,这次是女款牛仔夹克。想要什么洗水效果?",
+      "expected_user_response_hint": "说明目标洗水效果:酵素洗+轻度做旧,并提及有客户确认版可参考",
+      "key_phrases": ["enzyme wash", "light vintage look", "slight abrasion", "approved wash sample", "we have a reference sample"],
+      "common_mistakes": "Don't say 'old looking' — say 'vintage look' or 'worn-in look';做旧效果要用行业术语。",
+      "tips_zh": "描述洗水效果要具体:效果(vintage/bleached)+ 程度(light/medium/heavy)+ 部位(allover/局部),最好带确认版。",
+      "user_response_example": "Hi Kevin. This time it's an enzyme wash with a light vintage look — slight abrasion on the seams and pockets. We have an approved wash sample from the buyer, I can courier it to you today."
+    },
+    {
+      "round": 2,
+      "ai_message": "Good, an approved sample helps a lot. But before we quote, I need some process details: what temperature for the enzyme bath, how long per cycle, and do you want pumice stones in or stone-free?",
+      "ai_message_zh": "好,有确认版就好办。但报价前我需要一些工艺细节:酵素洗温度多少,每缸洗多久,要不要加浮石,还是无石洗?",
+      "expected_user_response_hint": "给出具体工艺参数:温度、时间、是否加浮石",
+      "key_phrases": ["45 to 50 degrees Celsius", "20 to 25 minutes per cycle", "stone-free enzyme wash", "no pumice stones"],
+      "common_mistakes": "温度说 '45 degrees' 时加 Celsius 更严谨;石磨洗是 stone wash,无石酵素洗是 stone-free enzyme wash,别混。",
+      "tips_zh": "常见参数:酵素洗 45-55°C、20-30 分钟;加浮石(pumice stones)磨白更快但伤布,无石洗更保手感但色差控制难。",
+      "user_response_example": "Stone-free enzyme wash, please — no pumice stones, we want to protect the fabric. Temperature 45 to 50 degrees Celsius, around 25 minutes per cycle, neutral pH."
+    },
+    {
+      "round": 3,
+      "ai_message": "Stone-free, 45 to 50 degrees, 25 minutes — clear. For the vintage effect without stones, we can do a longer enzyme time or add a light potassium permanganate spray on the thigh area. Which do you prefer?",
+      "ai_message_zh": "无石、45-50 度、25 分钟,清楚了。无石做旧的话,可以延长酵素时间,或者在大腿位轻度喷高锰酸钾做马骝效果,你们倾向哪种?",
+      "expected_user_response_hint": "选择工艺方案,说明原因(客户要求环保/成本)",
+      "key_phrases": ["potassium permanganate spray", "PP spray", "longer enzyme time", "the buyer prefers ...", "more eco-friendly"],
+      "common_mistakes": "马骝/猴洗英文是 PP spray (potassium permanganate spray) 或 monkey wash,不要直译成 'horse wash'。",
+      "tips_zh": "PP spray 做旧快、效果好,但高锰酸钾不环保,很多欧美买家禁用;延长时间更安全但成本高 10-15%。",
+      "user_response_example": "The buyer prefers no PP spray — their market is strict on chemicals. Let's go with the longer enzyme time, even if it costs a bit more. Just make sure the vintage level matches the approved sample."
+    },
+    {
+      "round": 4,
+      "ai_message": "Understood, no PP spray. Now let's talk about the wash standard. After we develop our sample, how do you want to check it against your approved sample — by eye under D65 light, or do you need a spectrophotometer reading?",
+      "ai_message_zh": "明白,不喷马骝。现在说下 wash standard。我们做出样板后,你们怎么对确认版——D65 光源下目检,还是要测色仪读数?",
+      "expected_user_response_hint": "说明对版方式:目检+测色双重标准,并约定色差容忍度",
+      "key_phrases": ["D65 light box", "spectrophotometer reading", "Delta E", "within tolerance", "wash standard"],
+      "common_mistakes": "色差单位是 Delta E (ΔE),口语说 'Delta E below 1.0';不要说 'color difference must be zero' 不现实。",
+      "tips_zh": "行业通行:ΔE ≤ 1.0 算合格,0.8 以内是优质;洗水货靠 D65 灯箱目检 + 测色仪双保险。",
+      "user_response_example": "Both, please. Visual check under D65 light box first, then a spectrophotometer reading — Delta E must be within 1.0 against the approved sample. That becomes our wash standard for bulk."
+    },
+    {
+      "round": 5,
+      "ai_message": "Delta E within 1.0, noted as the wash standard. About quantity — the order is 8,000 jackets, but can you tell me the breakdown? Different colors wash differently.",
+      "ai_message_zh": "ΔE 1.0 以内,记为 wash standard。数量方面——订单 8000 件夹克,能给我下拆分吗?不同颜色洗出来差别大。",
+      "expected_user_response_hint": "给出颜色/数量拆分,并说明每色都需单独对版",
+      "key_phrases": ["color breakdown", "3 colorways", "each colorway needs its own ...", "separate lab dips"],
+      "common_mistakes": "'颜色' 在外贸里说 colorway 更专业,不是 color;每色都要单独 lab dip 和 wash standard。",
+      "tips_zh": "多色订单要逐色对版,深色(黑牛)和浅色(漂白)工艺完全不同,报价也可能不同。",
+      "user_response_example": "The breakdown is 3 colorways: 4,000 in medium indigo, 2,500 in dark indigo, 1,500 in black. Each colorway needs its own lab dip and wash standard approval before bulk."
+    },
+    {
+      "round": 6,
+      "ai_message": "OK. My quote: medium indigo US$1.60 per piece, dark indigo US$1.75, black US$1.90 — black needs an extra fixation step for colorfastness. That's a bit higher than your target, I know.",
+      "ai_message_zh": "好的。报价:中蓝每件 1.6 美元,深蓝 1.75,黑色 1.9——黑色要多一道固色工序保证色牢度。我知道比你们目标价高。",
+      "expected_user_response_hint": "谈判单价:以数量和长期合作压价,要求统一定价或阶梯价",
+      "key_phrases": ["Can you sharpen the price", "volume discount", "one flat rate for all colorways", "long-term partner", "meet us halfway"],
+      "common_mistakes": "砍价说 'Can you do better on price' 或 'sharpen your price',不要说 'cheaper please' 太直白。",
+      "tips_zh": "8000 件是不错的量,可要求 flat rate(统一价)或总量折扣;强调返单潜力比单纯压价有效。",
+      "user_response_example": "Kevin, 8,000 pieces is good volume and this buyer repeats twice a year. Can you sharpen the price? We were hoping for one flat rate — say US$1.60 across all colorways, including the fixation step."
+    },
+    {
+      "round": 7,
+      "ai_message": "US$1.60 flat including fixation is tough... Tell you what: US$1.65 flat for all colorways, but you cover the courier cost for samples both ways. Deal?",
+      "ai_message_zh": "1.6 统一价还含固色有点难……这样吧:全部色 1.65 统一价,但样板往返快递费你们出,怎么样?",
+      "expected_user_response_hint": "接受折中方案,同时确认付款方式和色牢度指标",
+      "key_phrases": ["Deal", "we can live with that", "payment terms", "colorfastness to washing", "grade 4 or above"],
+      "common_mistakes": "色牢度说 colorfastness,水洗色牢度 colorfastness to washing;等级说 grade 4,不是 level 4。",
+      "tips_zh": "谈判收尾要把附带条件钉死:单价含什么、色牢度指标(洗水 grade 4+)、付款方式,避免后面扯皮。",
+      "user_response_example": "Deal — US$1.65 flat, we cover sample couriers. Two conditions: colorfastness to washing must be grade 4 or above, and payment is 30 days after delivery. Agreed?"
+    },
+    {
+      "round": 8,
+      "ai_message": "Agreed — grade 4 colorfastness, 30-day payment. Send me the approved sample and the color breakdown sheet, and I'll start the lab dips this week. Target: lab dips in 4 days, first bulk 7 days after approval.",
+      "ai_message_zh": "同意——色牢度 4 级,30 天付款。把确认版和颜色拆分表发我,这周开始打样。目标:小样 4 天,批准后头缸 7 天。",
+      "expected_user_response_hint": "确认时间表和所需文件,做 closing 并约定进度汇报节点",
+      "key_phrases": ["I will send ... today", "keep me posted", "weekly progress update", "Let's confirm the timeline"],
+      "common_mistakes": "'保持联系' 说 'keep me posted' 比 'keep in touch' 更适合跟进度;closing 时把时间点复述一遍。",
+      "tips_zh": "收尾复述关键约定:价格、时间表、测试标准,双方对齐,之后邮件书面确认(written confirmation)。",
+      "user_response_example": "Perfect. I'll courier the approved sample today and email the color breakdown sheet. Lab dips in 4 days, first bulk 7 days after approval — keep me posted on the progress. I'll send a written confirmation by email. Thanks, Kevin."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "scenario_id": "weft_knitting",
+  "scenario_title_en": "Weft Knitting",
+  "scenario_title_zh": "纬编",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Emma, Tom from Sunrise. I see your tech pack for the 240 GSM compact yarn pique with Lycra for the polo line. I have a quick question before I commit a development slot — what's the polo fabric stability you're targeting? I'm asking because 240 GSM pique is on the heavy side for polo, and we want to make sure it's not over-engineered.",
+      "ai_message_zh": "Emma,Sunrise 的 Tom。我看了你们 polo 线那条 240 GSM 紧密纺珠地 + 莱卡的工艺单。我报开发前有个问题:polo 面料的稳定性要多少?我这么问是因为 240 GSM 珠地 polo 偏重,我们想确认不是 over-engineered。",
+      "expected_user_response_hint": "解释目标(重磅 polo 耐用/挺括 vs 轻量 polo 透气),让对方给开发建议",
+      "key_phrases": ["compact yarn pique", "polo fabric", "over-engineered", "fabric stability", "development slot"],
+      "common_mistakes": "Don't say 'I am not sure' — engage: 'We want a substantial hand and recovery. 240 is intentional. What's the GSM of your reference polo?'",
+      "tips_zh": "高阶:对方 probe 你规格是否合理,要正面回应而不是退缩"
+    },
+    {
+      "round": 2,
+      "ai_message": "Good — 240 is intentional. Let me check my reference: we did 220 GSM compact pique with 3% Lycra for a similar program. The shrinkage was 4% warp, 2% weft. For your 240, I would expect similar, maybe 4.5% warp. The challenge is the GSM window — going to 240 makes the fabric feel boardy if we are not careful with the yarn count. What yarn count are you specifying?",
+      "ai_message_zh": "好 — 240 是有意为之。我查一下:我之前给类似项目做过 220 GSM 紧密纺珠地 + 3% 莱卡。缩水 4% 经向、2% 纬向。您 240 GSM 的话,我预估差不多,可能经向 4.5%。难点是克重窗口 — 到 240 的话,如果支数选不好,面料会偏硬板。您指定的是哪个纱支?",
+      "expected_user_response_hint": "报 32s 精梳棉 + 20D 莱卡;或问 26s 还是 32s 哪个更合适",
+      "key_phrases": ["220 GSM reference", "shrinkage 4% warp", "boardy fabric", "yarn count", "compact yarn"],
+      "common_mistakes": "Don't say 'you decide' — say 'We are at 32s compact, will that keep the hand soft? Or do you recommend 26s for that weight?'",
+      "tips_zh": "高阶:让对方参与决策,显得 team work"
+    },
+    {
+      "round": 3,
+      "ai_message": "For 240 GSM, I'd recommend 26s compact rather than 32s. 32s would make the fabric too tight, you lose the breathing room. 26s gives the right balance — heavy enough to feel substantial, but the yarn still has room to relax. We will run a 24-cut Mayer, 30 inch, 78 feeders. Want me to send two hand samples — one in 26s, one in 32s — for your comparison?",
+      "ai_message_zh": "240 GSM 的话,我推荐 26 支紧密纺,不要 32 支。32 支会让面料太紧,失去透气感。26 支给到刚好的平衡 — 重到有质感,但纱还有松量可以做呼吸感。我们用 24 针 Mayer、30 寸、78 路做。要不要我发两块手样 — 一块 26 支,一块 32 支,给你比较?",
+      "expected_user_response_hint": "接受两块手样,接受 26 支推荐",
+      "key_phrases": ["26s compact", "32s compact", "breathing room", "hand sample", "comparison"],
+      "common_mistakes": "Don't say 'just 26' — say 'Send both. We will pick after hand feel and lab test.'",
+      "tips_zh": "高阶:接受 AB 对比是聪明的客户"
+    },
+    {
+      "round": 4,
+      "ai_message": "On the knitting construction — for a true Lacoste pique, we need the knit-tuck-miss pattern repeat. The cam arrangement is a 6-step repeat. Course count: 18 per cm, wale count: 14 per cm. PCM (pique construction) is achieved with the tuck stitches. We can also do a mini-pique for lighter weight.",
+      "ai_message_zh": "织造结构 — 真珠地(类似 Lacoste polo)需要 knit-tuck-miss 循环。三角排列是 6 步循环。横密 18 行/厘米,纵密 14 列/厘米。PCM 珠地结构靠 tuck 线圈实现。轻量版可以做 mini-pique。",
+      "expected_user_response_hint": "选 Lacoste 经典珠地(knit-tuck-miss 6 步循环),问 mini-pique 与 经典珠地差异",
+      "key_phrases": ["knit-tuck-miss", "cam arrangement", "6-step repeat", "Lacoste pique", "PCM pique construction"],
+      "common_mistakes": "Don't say 'any pattern is fine' — engage: 'Standard Lacoste 6-step. Confirm the tuck height — we want 1.5 mm.'",
+      "tips_zh": "高阶:经典珠地有特定三角排列,显专业"
+    },
+    {
+      "round": 5,
+      "ai_message": "On the finishing — for compact yarn pique, the pre-shrinking and compacting sequence matters. We use a 3-step process: relax dryer, compact, then calendar. Compact 200 degrees C, line speed 15 m/min, overfeed 30%. Calendar is for surface finishing only. Color fastness wash 4, light 4, rubbing 4 dry / 3 wet. Lab dip in 5 days.",
+      "ai_message_zh": "后整理 — 紧密纺珠地,预缩和压光的工序顺序很关键。我们用 3 步:松弛烘干 → 预缩机 → 压光。预缩 200 度,线速 15 米/分,超喂 30%。压光只做表面处理。色牢度水洗 4 级,日晒 4 级,摩擦 4 干 / 3 湿。lab dip 5 天。",
+      "expected_user_response_hint": "确认 3 步工艺可以,问 calendar 温度/压力(影响手感),问绒感",
+      "key_phrases": ["relax dryer", "compact 200 degrees", "line speed 15 m/min", "overfeed 30%", "calendar finishing"],
+      "common_mistakes": "Don't say 'sounds good' — '3-step finishing is fine. What's the calendar temp and pressure? We want a soft hand, not pressed.'",
+      "tips_zh": "高阶:对 calender 工艺要 detail"
+    },
+    {
+      "round": 6,
+      "ai_message": "All right. Here is the deal — I will send you two hand samples (26s and 32s) in 4 days, greige only, plus a 1-meter lab dip in 5 days. Once you approve, I commit a 50-meter trial in 14 days, then bulk. Bulk 30 days from trial approval. 220 — sorry, 240 GSM. Right?",
+      "ai_message_zh": "好。这样 — 我 4 天内给您两块手样(26 支和 32 支),只有坯布,加 1 米 lab dip 5 天。确认后我留 50 米试产 14 天,然后大货。大货试产确认后 30 天。220 — 抱歉,240 GSM。对吧?",
+      "expected_user_response_hint": "确认 240 GSM 没错;承诺发 Pantone",
+      "key_phrases": ["two hand samples", "greige only", "50-meter trial", "14 days", "240 GSM"],
+      "common_mistakes": "Don't say 'ok' alone — '240 GSM, yes. Will send 2 Pantone codes today. Looking forward to the hand samples.'",
+      "tips_zh": "收尾:确认数字 + 下一步"
+    }
+  ]
+}

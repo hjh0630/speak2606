@@ -1,0 +1,56 @@
+{
+  "scenario_id": "wuli_showroom",
+  "scenario_title_en": "Showroom Tour & 5G Smart Factory",
+  "scenario_title_zh": "五里展厅推介与5G智慧工厂",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Good morning, David. Thank you for hosting us at Sintech headquarters today. We've heard a lot about your vertical setup. Could you kick off with an overview of your manufacturing footprint and history?",
+      "ai_message_zh": "早上好，David。感谢今天在信泰总部接待我们。我们听说了很多关于贵司垂直一体化产业链的优势。能先带我们概览一下信泰的制造版图和发展历程吗？",
+      "expected_user_response_hint": "欢迎外宾，介绍从90年代三明治网布起家，到如今全球10大园区、16个办事处及年产6亿双/件规模",
+      "key_phrases": [
+        "welcome to Sintech Group",
+        "vertical integration",
+        "sandwich mesh fabric",
+        "10 production parks globally",
+        "600 million pairs"
+      ],
+      "common_mistakes": "避免说 'we are very big company'，要用具体的 '10 production parks worldwide with an annual capacity of 600 million pairs'。",
+      "tips_zh": "母语老兵句型：Welcome to Sintech! Let me walk you through our vertical footprint — starting from our proprietary 3D sandwich mesh in the late 90s to 10 global manufacturing parks today.",
+      "user_response_example": "Welcome to Sintech Group! It is an absolute pleasure to have you here. Let me walk you through our journey: we started back in the late 90s with our signature 3D sandwich mesh fabric technology. Today, we have evolved into a full-chain textile leader with 10 production parks globally, 16 international offices, over 5,000 employees, and an annual capacity reaching 600 million pairs."
+    },
+    {
+      "round": 2,
+      "ai_message": "600 million pairs is truly impressive. What about your digital and smart manufacturing initiatives? We are prioritizing suppliers with real-time traceability and Industry 4.0 capabilities.",
+      "ai_message_zh": "年产6亿双确实令人震撼。那你们在数字化和智能制造方面有什么举措？我们正在优先选择具备实时全流程溯源和工业4.0能力的供应商。",
+      "expected_user_response_hint": "介绍泉州首家5G工业互联网示范工厂、IoT传感器全天候机台数据采集及MES/ERP数字大脑",
+      "key_phrases": [
+        "5G pilot smart factory",
+        "Industrial IoT platform",
+        "real-time telemetry",
+        "digital brain",
+        "MES and ERP integration"
+      ],
+      "common_mistakes": "不要只说 'we use computers'，要用专业术语 '5G-enabled smart factory with real-time IoT machine telemetry'。",
+      "tips_zh": "母语亮点：强调 'end-to-end traceability' (端到端可追溯) 和 'predictive maintenance' (预测性维护)。",
+      "user_response_example": "Digitalization is in our DNA. Back in 2015, Sintech became Quanzhou's first 5G pilot enterprise. We built our 5G Smart Factory with an Industrial IoT platform that captures live telemetry from thousands of looms 24/7. This feeds into our central digital brain, integrating ERP, MES, and WMS to achieve end-to-end traceability and cut production waste by over 20%."
+    },
+    {
+      "round": 3,
+      "ai_message": "That level of telemetry gives us great confidence in quality control. What about your R&D investment and testing lab? Do you have in-house testing certified for international brands?",
+      "ai_message_zh": "这种机台数据采集能力让我们对品质管控很有信心。那你们的研发投入和检测实验室情况如何？内部实验室有国际品牌认证吗？",
+      "expected_user_response_hint": "介绍信泰研究院近500人研发团队、千项专利、国家博士后工作站，以及符合 ASTM/AATCC/ISO 的CNAS认证实验室",
+      "key_phrases": [
+        "Sintech Research Institute",
+        "nearly 500 R&D specialists",
+        "close to 1,000 patents",
+        "Postdoctoral Workstation",
+        "certified testing lab"
+      ],
+      "common_mistakes": "避免单说 'we have many engineers'，用 'a dedicated R&D institute with nearly 500 engineers and close to 1,000 global patents'。",
+      "tips_zh": "突出 'National Postdoctoral Research Workstation' (国家级博士后科研工作站)，展现行业最高科研认可度。",
+      "user_response_example": "In 2020, we founded the dedicated Sintech Research Institute, which now houses nearly 500 R&D specialists and holds close to 1,000 patents worldwide. We were also approved to host a National Postdoctoral Research Workstation. Our testing lab is fully equipped to conduct all ASTM, AATCC, and ISO physical and chemical tests, ensuring every batch meets your stringent global standards."
+    }
+  ]
+}

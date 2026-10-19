@@ -123,3 +123,19 @@ export async function textToAudio(
 }
 
 export const TTS_DEFAULT_VOICE = 'male-qn-qingse';
+
+export interface VoiceInfo {
+  id: string;
+  name: string;
+  gender: 'male' | 'female';
+}
+
+export const TTS_VOICES: VoiceInfo[] = [
+  { id: 'male-qn-qingse', name: '男生 · 清澈', gender: 'male' },
+  { id: 'male-qn-badao', name: '男生 · 霸道', gender: 'male' },
+  { id: 'male-qn-daxuesheng', name: '男生 · 年轻', gender: 'male' },
+  { id: 'female-shaonv', name: '女生 · 少女', gender: 'female' },
+  { id: 'female-yujie', name: '女生 · 成熟', gender: 'female' },
+  { id: 'female-chengshu', name: '女生 · 知性', gender: 'female' },
+  { id: 'female-tianmei', name: '女生 · 甜美', gender: 'female' },
+];

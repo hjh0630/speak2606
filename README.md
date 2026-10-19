@@ -1,9 +1,12 @@
 # SpeakFlow · 服装纺织外贸英语口语练习 App
 
+> 📱 **最新更新 (2026)**：新增 **信泰纺织前沿实战 8 大场景** 与 **iPhone 15 Pro 深度优化**（Native Polish 母语重述引擎、灵动岛安全区、单手 74pt 触觉反馈底栏）。
+> 💻 **MacBook 极简编译指南**：请直接阅读 [MACBOOK_GUIDE.md](file:///E:/00.ai/00.project/10.HTalk/MACBOOK_GUIDE.md)（内置 `cd ios && ./run.sh` 脚本，无需付费开发者账号，⌘R 一键直达 iPhone 15 Pro）。
+
 一个垂直场景的英语口语练习应用,基于 MiniMax 语音大模型,专注服装纺织外贸业务。
-内置 20 个场景(6 大类 × 3 难度,加扩展),
+内置 28 个场景（涵盖圆编、梭织、经编、飞织、染整、高强纱线、展厅接待与具身机器人外皮等前沿实战），
 三个难度(入门 / 进阶 / 高阶),两种模式(自由对话 / 跟读),
-每轮 AI 回复后给简洁反馈(总分 + 流利度 + 准确度 + 关键问题 + 改进建议)。
+每轮 AI 回复后给简洁反馈(总分 + 流利度 + 准确度 + 关键问题 + 改进建议 + 💡 Native Polish 母语地道重述)。
 
 ## ✨ 特性
 
@@ -162,3 +165,10 @@ curl -X POST http://localhost:3001/api/sessions/<SID>/messages \
 - **录音**:MediaRecorder API + Web Audio API(电平监测)
 - **ASR**:Web Speech API(浏览器原生,无需服务器)
 - **TTS/LLM**:MiniMax 语音大模型(API 文档见 `src/services/minimax-*.ts`)
+
+## 📄 项目文档
+
+- [docs/PHASE-SUMMARY-2026-07-30.md](docs/PHASE-SUMMARY-2026-07-30.md) — 阶段性产出总结(生产制造场景 / 自定义场景生成器 / Android 客户端)
+- [docs/NEXT-STEPS.md](docs/NEXT-STEPS.md) — 后续工作清单(按优先级)
+- [android/README.md](android/README.md) — Android 客户端构建与配置说明
+- [docs/deployment/](docs/deployment/) — 部署文档

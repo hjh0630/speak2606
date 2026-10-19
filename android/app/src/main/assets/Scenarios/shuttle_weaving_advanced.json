@@ -1,0 +1,62 @@
+{
+  "scenario_id": "shuttle_weaving",
+  "scenario_title_en": "Shuttle / Woven Weaving",
+  "scenario_title_zh": "梭织",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Mark, Daniel. I read your sourcing brief on the 320 GSM 4-end stretch denim for the Japanese premium denim line. Before I quote, three things I need from you: shrinkage target, skew tolerance, and the fabric stiffness you want (we can do sanforized or not).",
+      "ai_message_zh": "Mark,Daniel。我看了你们日本高端线那条 320 GSM 4 向弹力牛仔的采购简报。报价前我需要三件事:缩水目标、纬斜容差、和你想要的面料手感(我们可以做预缩或不预缩)。",
+      "expected_user_response_hint": "给具体数字:缩水 ≤3%,纬斜 ≤2cm,预缩;也可以谈不预缩的 raw denim",
+      "key_phrases": ["shrinkage target", "skew tolerance", "sanforized", "raw denim", "4-end stretch"],
+      "common_mistakes": "Don't say 'normal numbers' — be specific: 'shrinkage 3% max, skew 2 cm max on 80 cm, sanforized please'",
+      "tips_zh": "牛仔/高端:缩水纬斜是核心,数字要精确"
+    },
+    {
+      "round": 2,
+      "ai_message": "On the yarn — 7s x 7s ring-spun indigo warp with 2% Lycra weft, right? What's the indigo dye level — 60% or 80%? 80% gives deeper shade and better ring effect but crocking risk is higher. Have you done crocking tests?",
+      "ai_message_zh": "纱线 — 7 支 x 7 支环锭纺靛蓝经纱 + 2% 莱卡纬纱,对吧?靛蓝染色深度 — 60% 还是 80%?80% 色泽更深、ring effect 更好,但摩擦色牢度风险更高。你们做过 crocking 测试吗?",
+      "expected_user_response_hint": "选 80% indigo,接受 crocking 风险;或选 60% 但要求 +2% 处理剂;谈经纬纱织缩",
+      "key_phrases": ["ring-spun indigo", "indigo dye level", "crocking test", "2% Lycra weft", "ring effect"],
+      "common_mistakes": "Don't say 'any level is OK' — engage: 'We want 80% indigo, with crocking fix agent applied. What's the fix cost per meter?'",
+      "tips_zh": "牛仔染整:indigo depth + crocking 必谈"
+    },
+    {
+      "round": 3,
+      "ai_message": "For 80% indigo, our crocking dry is 3 to 3.5 grade, wet 1.5 to 2 without fix. With our fix-agent finish (0.5% silicone-based), we can push dry to 4 and wet to 2.5. Adds 6 RMB per meter. Acceptable?",
+      "ai_message_zh": "80% 靛蓝,我们干摩擦 3-3.5 级,湿摩擦 1.5-2 级,不上固色剂的话。加我们的固色剂(0.5% 硅基),能干摩提到 4 级,湿摩 2.5 级。每米加 6 块人民币。可以接受吗?",
+      "expected_user_response_hint": "接受价格,问 tester 报告(ISO/AATCC),问固色剂型号/品牌",
+      "key_phrases": ["crocking grade", "fix-agent", "silicone-based", "dry 4 wet 2.5", "RMB per meter"],
+      "common_mistakes": "Don't say 'fine' — engage: 'OK on price. Send me a fix-agent spec and a sample with fix applied. We'll test AATCC 8 for wet crocking.'",
+      "tips_zh": "高阶:对成本/性能数字要 detail;用 AATCC / ISO 标准"
+    },
+    {
+      "round": 4,
+      "ai_message": "On the construction — Toyota JAT810 rapier loom, 240 cm reed, 38 ends per cm warp, 18 picks per cm weft. 4-end stretch from the spandex core-spun weft. Shrinkage pre-sanforizing is 12% warp, 8% weft. Post-sanforizing, we can hit 3% / 3%.",
+      "ai_message_zh": "织造 — 丰田 JAT810 剑杆织机,筘幅 240 厘米,经密 38 根/厘米,纬密 18 根/厘米。4 向弹力来自氨纶包芯纱纬。预缩前缩水 12% 经向、8% 纬向。预缩后,可以做到 3% / 3%。",
+      "expected_user_response_hint": "问缩水率怎么控制(预缩机型号 / 工艺)、缩水后克重是否变化、问纬斜控制",
+      "key_phrases": ["rapier loom", "core-spun weft", "pre-sanforizing shrinkage", "post-sanforizing 3%", "spandex core yarn"],
+      "common_mistakes": "Don't say 'OK' — probe: 'What's the GSM loss after pre-shrinking? And how do you control skew on the sanforizing range?'",
+      "tips_zh": "高阶:问预缩机工艺 + 缩水后克重损失"
+    },
+    {
+      "round": 5,
+      "ai_message": "GSM loss is 5 to 7 percent. We use a Bruckner sanforizing line. Skew control is 1.5 cm on 80 cm width, well under your 2 cm spec. For the indigo shade consistency, we use a 14-dip / 6-nip indigo range. First-dip depth 1.8 percent, last-dip 0.5 percent. Wet-on-wet dyeing.",
+      "ai_message_zh": "克重损失 5-7%。我们用 Bruckner 预缩机。纬斜控制在 1.5 厘米/80 厘米幅,远低于您 2 厘米的规格。靛蓝色光一致性,14 浸 6 轧的靛蓝染色线。第一浸 1.8%,最后一浸 0.5%。湿对湿染色。",
+      "expected_user_response_hint": "问染色稳定性(缸差/批差),问 PVA 上浆/退浆,问 AE log(染色日志)",
+      "key_phrases": ["GSM loss", "Bruckner sanforizing", "skew control", "14-dip 6-nip indigo", "wet-on-wet dyeing"],
+      "common_mistakes": "Don't say 'great' — ask for proof: 'Send me the lab-to-bulk shade variation report for the last 3 lots. We need delta E under 0.8 across lots.'",
+      "tips_zh": "高阶:要 lab-to-bulk 数据 + delta E"
+    },
+    {
+      "round": 6,
+      "ai_message": "All reasonable. Let me give you a 1-meter hand sample first — 80 percent indigo, with fix, post-sanforized. We can do it in 4 days. If the hand, shade, and stretch recovery pass, we go to a 50-meter trial. Then bulk. Send me your shrink panel spec and AE tolerance.",
+      "ai_message_zh": "都合理。我先给您 1 米手样 — 80% 靛蓝、加固色、预缩。4 天能出。如果手感、色光、弹力恢复都过,我们再走 50 米试产,然后大货。发我您的缩水板规格和 AE 容差。",
+      "expected_user_response_hint": "确认接收手样+时间节点,确认会发缩水板规格+AE 容差",
+      "key_phrases": ["1-meter hand sample", "stretch recovery", "50-meter trial", "shrink panel spec", "AE tolerance"],
+      "common_mistakes": "Don't say 'ok' alone — 'Will send the shrink panel and AE tolerance today. Looking forward to the hand sample.'",
+      "tips_zh": "完美收尾:重述下一步"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # SpeakFlow iOS · Mac 上手指南
 
+> 当前状态：可在 Mac 上 xcodegen 一键生成工程并编译安装（2026-07-28 更新）
+
 > 装到我自己 iPhone 15 Pro 上 —— 个人 Apple ID + TestFlight 自用，**免 $99/年商业开发者账号**。
 
 ## 🚀 一、Mac 准备（一次性）
@@ -25,34 +27,41 @@ ls ios/   # 应该看到 SpeakFlow/ + SpeakFlowKit/ + docs/
 
 ---
 
-## 🏗 二、Xcode 项目初始化（首次 30 分钟）
+## 🏗 二、Xcode 项目初始化（XcodeGen 一键生成）
 
-### 方案 A（推荐）：SwiftUI App + 本地 Package
-```
-Xcode → File → New → Project
-  ├─ iOS → App
-  ├─ Product Name: SpeakFlow
-  ├─ Interface: SwiftUI
-  ├─ Language: Swift
-  ├─ Storage: None（我们用 SwiftData 手动管理）
-  └─ Minimum Deployment: iOS 17.0
-```
+工程文件不进仓库，由 `ios/project.yml`（XcodeGen 配置）生成，三步出工程：
 
-把生成的 `SpeakFlow/` 目录**整体替换**为本仓库 `ios/SpeakFlow/`，并：
-1. **Info.plist**：用 `ios/SpeakFlow/SpeakFlow/Resources/Info.plist.template` 内容替换自动生成的 Info.plist
-2. **添加本地 Package**：
-   - File → Add Package Dependencies → Add Local...
-   - 选 `ios/SpeakFlowKit/`（含 Package.swift）
-   - 选 SpeakFlowKit 产品加入 SpeakFlow target
-3. **删除** Xcode 自动生成的 `ContentView.swift`（我们用仓库的 `SpeakFlowApp.swift`）
-4. **Bundle 资源已就位**：`SpeakFlowKit/Sources/SpeakFlowKit/Resources/Scenarios/*.json` + `Dictionary.json` 会被 Xcode 自动识别为 Bundle 资源
-
-### 方案 B（备选）：完全命令生成
 ```bash
-cd ~/Developer/SpeakFlow
-# 用 XcodeGen 或 Tuist（如果已装）
-# 否则走方案 A
+brew install xcodegen        # 一次性
+cd ios && xcodegen           # 生成 SpeakFlow.xcodeproj
+open SpeakFlow.xcodeproj
 ```
+
+然后：
+
+1. **选签名团队**：target SpeakFlow → Signing & Capabilities → Team 选你的 **Personal Team**（个人 Apple ID）。
+   - project.yml 里 `DEVELOPMENT_TEAM` 特意留空、`CODE_SIGN_STYLE: Automatic`，就是为这一步。
+   - 若 Bundle ID `com.hjinghui.speakflow` 提示已被占用，改成一个你自己的（如 `com.你的名字.speakflow`）即可。
+2. **连 iPhone**（USB，iPhone 上点"信任此电脑"），Xcode 顶部选你的 iPhone 15 Pro。
+3. **⌘R 编译运行**。首次安装后到 iPhone 设置 → 通用 → VPN与设备管理 → 信任开发者。
+
+工程已自动包含：
+- 本地包 `SpeakFlowKit`（Package.swift 同级目录，XcodeGen 自动链接）
+- `Info.plist`（`SpeakFlow/SpeakFlow/Resources/Info.plist`，含麦克风/语音识别用途、后台 audio、ATS 等，由 project.yml 的 `INFOPLIST_FILE` 指定）
+- deployment target iOS 17.0
+
+### 跑单元测试
+`SpeakFlowKit` 的测试（场景加载 / CSV 转义）不在 App scheme 里，单独打开包运行：
+```bash
+open ios/SpeakFlowKit/Package.swift   # Xcode 打开后 ⌘U
+```
+
+### 常见问题
+| 现象 | 解决 |
+|---|---|
+| `xcodegen: command not found` | `brew install xcodegen` |
+| Signing 报错 "No team" | 上面第 1 步选 Personal Team |
+| 改了目录结构后工程不同步 | 重新跑 `xcodegen` 即可（工程文件随时可再生成） |
 
 ---
 
@@ -65,9 +74,10 @@ cd ~/Developer/SpeakFlow
 
 ### 3.2 启动后预期
 - 5 Tab 出现（首页/场景/练习/生词本/历史）
-- 首页能加载（占位 Text）
-- 场景 Tab 是空的（待实现）
-- 麦克风权限会弹（首次启动后）
+- 首页显示"今日一句"、生词数、后端在线状态圆点
+- 场景 Tab 列出 26 个场景（离线时自动回退本地场景），点选难度进入练习
+- 练习页：客户气泡自动朗读（TTS）→ 点麦克风说话（ASR）→ 关键词重合度评分
+- 首次点麦克风会弹麦克风 + 语音识别权限申请
 
 ### 3.3 冒烟测试（Mac 终端）
 ```bash
@@ -196,7 +206,7 @@ Window → Devices and Simulators → 选你的 iPhone → Open Console → 搜 
 | Week | 任务 | 完成标志 |
 |---|---|---|
 | W1（5d）| ✅ Xcode init + APIClient + WebSocket + TTS/ASR + SwiftData | 真机跑通，5 Tab 可见 |
-| W2（5d）| ⏳ 5 个核心视图完整实现 | 能跑通 1 个完整 8 轮对话 |
+| W2（5d）| ✅ 5 个核心视图完整实现（本地剧本模式已可用；WS 实时 AI 对话为下一步） | 能跑通 1 个完整多轮对话 |
 | W3（3d）| ⏳ Dynamic Island + TestFlight + 推送 | TestFlight 上自用发布 |
 
 ---

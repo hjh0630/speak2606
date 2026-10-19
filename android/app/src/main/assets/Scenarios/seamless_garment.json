@@ -1,0 +1,88 @@
+{
+  "scenario_id": "seamless_garment",
+  "scenario_title_en": "Seamless Garment",
+  "scenario_title_zh": "无缝服装",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello, this is Daniel from Sunline Seamless. You inquired about seamless leggings yesterday. How can I help you?",
+      "ai_message_zh": "你好,我是 Sunline 无缝的 Daniel。你昨天咨询无缝打底裤,请问有什么可以帮您?",
+      "expected_user_response_hint": "自我介绍,说明来意:需要无缝产品",
+      "key_phrases": ["This is ...", "I am looking for ...", "seamless leggings", "for our activewear line"],
+      "common_mistakes": "seamless 形容词,常做定语 seamless knitting / seamless garment。",
+      "tips_zh": "联系无缝厂时要先报:产品类型(内衣/打底裤/上衣)、目标客群、尺码范围。",
+      "user_response_example": "Hello Daniel, this is Chen Wei from Lily Garments. I am looking for seamless leggings for our activewear line."
+    },
+    {
+      "round": 2,
+      "ai_message": "Activewear seamless — good. We do leggings, bras, tops, and bodysuits. What composition are you looking for? Nylon-spandex is our standard, but we also do polyester-spandex.",
+      "ai_message_zh": "运动无缝 — 好的。我们做打底裤、运动内衣、上衣、连体衣。成分呢?锦纶氨纶是标准,也能做涤纶氨纶。",
+      "expected_user_response_hint": "回答成分,问技术参数",
+      "key_phrases": ["nylon-spandex", "polyester-spandex", "What's the ratio", "denier"],
+      "common_mistakes": "nylon(锦纶) 和 polyester(涤纶) 在无缝产品里都常用,nylon 手感细腻、polyester 排汗好。",
+      "tips_zh": "锦纶/氨纶(nylon/spandex) 手感细腻,适合中高端;涤纶/氨纶(poly/spandex) 排汗好,适合运动款。",
+      "user_response_example": "Nylon-spandex. What's the typical ratio, and what denier do you use?"
+    },
+    {
+      "round": 3,
+      "ai_message": "We typically run 80% nylon, 20% spandex for activewear. The nylon is 40 denier, spandex is 20 denier. About the gauge — our machines are E28. Does that match your target?",
+      "ai_message_zh": "运动款我们常用 80% 锦纶、20% 氨纶。锦纶 40 旦,氨纶 20 旦。机号方面,我们是 E28。跟你目标对得上吗?",
+      "expected_user_response_hint": "了解机号,讨论密度",
+      "key_phrases": ["E28 is fine", "what gauge", "denier", "E14 / E18 / E28"],
+      "common_mistakes": "machine gauge(机号) 是每英寸针数,E28 表示每英寸 28 针,数字越大布越细。",
+      "tips_zh": "E28 是中细针,适合 leggings / 上衣;E14 是粗针,适合冬季厚款。",
+      "user_response_example": "E28 is what we want for this style. So 40D nylon + 20D spandex, 80/20 ratio, on E28 machines."
+    },
+    {
+      "round": 4,
+      "ai_message": "Confirmed. Now about the construction — for leggings, we can do a tube with a shaped waistband, gusset at the crotch, and varying GSM for compression. Do you want body shaping zones, or uniform GSM?",
+      "ai_message_zh": "确认。打底裤可以做成筒形,加成形腰头、三角区,不同部位不同克重做压力。要做分区塑形,还是整布均匀克重?",
+      "expected_user_response_hint": "回答结构与塑形",
+      "key_phrases": ["Body shaping", "uniform GSM", "compression zones", "gusset at crotch"],
+      "common_mistakes": "gusset(三角区/菱形插片) 是无缝打底裤关键结构,加弹性、减少摩擦。",
+      "tips_zh": "无缝打底裤的核心结构:腰头编织、gusset 三角区、腿部不同分区压力。",
+      "user_response_example": "We want body shaping — higher compression at the waist, lighter at the thigh, medium at the calf. The buyer is targeting a sculpting fit."
+    },
+    {
+      "round": 5,
+      "ai_message": "Body shaping is our strength. We do knit programs in 3 to 4 zones — waist, hip, thigh, calf — each with its own stitch length and tension to control compression. The buyer will see the difference on the body.",
+      "ai_message_zh": "分区塑形是我们的强项。我们做 3-4 个分区 — 腰、臀、大腿、小腿,每个分区独立线圈长度和压力。上身效果客户能看出来。",
+      "expected_user_response_hint": "讨论分区细节和克重",
+      "key_phrases": ["3 to 4 zones", "compression", "How many GSM zones", "stitch length"],
+      "common_mistakes": "seamless 的分区是机器编程实现,不同区用不同 stitch length(线圈长度)。",
+      "tips_zh": "分区塑形 = 不同线圈长度 + 不同张力,实现差异化压力。",
+      "user_response_example": "4 zones is good. What's the typical GSM range? For example, waist vs. thigh?"
+    },
+    {
+      "round": 6,
+      "ai_message": "Waist at 280 GSM for high compression, hip at 240, thigh at 200, calf at 180. The leg opening can taper down to 160 for a clean finish. The buyer might want a smoother gradient — we can fine-tune in the sample.",
+      "ai_message_zh": "腰部 280 克高压力,臀部 240,大腿 200,小腿 180,脚口可以收到 160 做收口。客户如果想要更平滑的过渡,打样时细调。",
+      "expected_user_response_hint": "讨论克重分布,准备打样",
+      "key_phrases": ["GSM range", "gradient", "sampling", "compression level"],
+      "common_mistakes": "taper down(收口) 是无缝机器自然实现的,不需要缝合,工艺优势。",
+      "tips_zh": "分区克重差异越大,塑形感越强;客户首次尝试建议从温和分区开始。",
+      "user_response_example": "That GSM range sounds right. Please send a proto sample in size M so we can check the fit and the compression."
+    },
+    {
+      "round": 7,
+      "ai_message": "Will do. Proto sample in size M, ready in 10 days. About the size set — what sizes do you need? S, M, L, or full size run XS to XL?",
+      "ai_message_zh": "好。M 码产前样,10 天出。尺码方面 — S/M/L,还是 XS 到 XL 全尺码?",
+      "expected_user_response_hint": "说明尺码需求",
+      "key_phrases": ["size run", "XS to XL", "S / M / L", "fit sample first"],
+      "common_mistakes": "size run(尺码组) 行业里也说 size set,口语里直接说 size run。",
+      "tips_zh": "无缝产品全尺码打样成本高,通常先打中码确认 fit,再扩尺码。",
+      "user_response_example": "First, just M and L. Once we approve the fit, we'll do the full size run XS to XL."
+    },
+    {
+      "round": 8,
+      "ai_message": "Smart. M and L first, then full run after fit approval. Let me summarize: 80/20 nylon-spandex, 40D/20D, E28, body-shaping 4 zones (280/240/200/180 GSM), leg opening 160, gusset, sample in 10 days, lead time 35 days after fit approval. PI by tomorrow. Anything else?",
+      "ai_message_zh": "聪明。先 M、L,fit 批准后做全尺码。总结:80/20 锦纶氨纶,40D/20D,E28,4 区塑形(280/240/200/180 克),脚口 160,三角区,10 天出样,fit 批准后 35 天出货。PI 明天发。还有别的吗?",
+      "expected_user_response_hint": "确认收 PI,收尾",
+      "key_phrases": ["Send the PI", "to my email", "Looking forward to the sample", "Thanks Daniel"],
+      "common_mistakes": "fit approval(fit 批准) 是打样尺寸定型,批准后才进大货。",
+      "tips_zh": "fit approval 包括上身试穿、压力测试、版型签字。",
+      "user_response_example": "Please send the PI to chen.wei@lilygarments.com. Looking forward to the proto sample. Thanks, Daniel."
+    }
+  ]
+}

@@ -1,0 +1,590 @@
+[
+  {
+    "id": "shoe-poy-dty-spec",
+    "title_zh": "鞋面化纤长丝规格沟通",
+    "title_en": "Shoe Upper Chemical Fiber Yarn Spec",
+    "icon": "🧵",
+    "description_zh": "与化纤厂沟通鞋面用 POY/DTY/FDY 长丝品种、纤度与孔数、网络度、强力伸度等物性指标；围绕等级、起订量、价格有效期与分批交货进行谈判，并处理测试方法分歧引发的索赔。",
+    "description_en": "Discuss POY/DTY/FDY filament types, denier and filament count, intermingle level, tenacity and elongation with a chemical fiber mill for shoe upper applications; negotiate grade, MOQ, price validity and split shipments, and handle a claim caused by test-method disputes.",
+    "category": "spinning",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Chemical fiber mill sales / technical engineer",
+    "ai_role_zh": "化纤厂销售 / 技术工程师",
+    "user_role": "Shoe upper fabric sourcing / merchandiser",
+    "user_role_zh": "鞋面面料采购 / 跟单",
+    "key_skills": [
+      "specifying filament type (POY/DTY/FDY) and denier/filament count",
+      "confirming tenacity, elongation and evenness CV requirements",
+      "discussing intermingle level, luster and cross-section",
+      "negotiating MOQ, price validity and payment terms",
+      "handling test-method disputes and quality claims"
+    ],
+    "key_skills_zh": [
+      "长丝品种 (POY/DTY/FDY) 与纤度孔数表达",
+      "断裂强力、伸度与条干均匀度确认",
+      "网络度、光泽与截面讨论",
+      "起订量、价格有效期与付款谈判",
+      "测试方法分歧与质量索赔沟通"
+    ],
+    "industry_terms_sample": [
+      "POY",
+      "DTY",
+      "FDY",
+      "denier / filament",
+      "dope dyed",
+      "intermingle"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "process",
+      "yarn",
+      "chemical-fiber",
+      "shoe-upper",
+      "negotiation"
+    ]
+  },
+  {
+    "id": "shoe-warp-knit-flyknit",
+    "title_zh": "鞋面经编网布与飞织沟通",
+    "title_en": "Shoe Upper Warp Knit & Flyknit Coordination",
+    "icon": "🕸️",
+    "description_zh": "与经编厂/飞织厂沟通鞋面经编网布规格：机号、机速、送经量、贾卡提花图案；飞织鞋面的纱线排嘴、编织密度、鞋面版型与双针床一体成型工艺。围绕起订量、交期与首件确认进行谈判。",
+    "description_en": "Coordinate with a warp knitting or flyknit mill on shoe upper mesh specifications: machine gauge, speed, let-off rate, jacquard pattern; for flyknit: yarn feeder arrangement, knit density, upper last shape and double-bed whole-garment knitting. Negotiate MOQ, lead time and first-article approval.",
+    "category": "knitting",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Warp knitting / flyknit mill sales or production manager",
+    "ai_role_zh": "经编厂 / 飞织厂销售或生产经理",
+    "user_role": "Shoe brand sourcing / upper fabric merchandiser",
+    "user_role_zh": "运动品牌采购 / 鞋面跟单",
+    "key_skills": [
+      "specifying warp knit machine gauge and let-off rate",
+      "discussing jacquard pattern and mesh density",
+      "confirming flyknit yarn feeder arrangement and upper density",
+      "reviewing whole-garment knitting on double-bed machine",
+      "negotiating MOQ, lead time and first-article sign-off"
+    ],
+    "key_skills_zh": [
+      "经编机机号与送经量表达",
+      "贾卡提花图案与网布密度讨论",
+      "飞织纱线排嘴与鞋面密度确认",
+      "双针床一体成型工艺审核",
+      "起订量、交期与首件确认谈判"
+    ],
+    "industry_terms_sample": [
+      "warp knitting",
+      "jacquard",
+      "flyknit",
+      "whole-garment",
+      "double-bed knitting",
+      "let-off"
+    ],
+    "estimated_minutes": 11,
+    "tags": [
+      "knitting",
+      "warp-knit",
+      "flyknit",
+      "shoe-upper",
+      "process"
+    ]
+  },
+  {
+    "id": "shoe-weft-knit-jersey",
+    "title_zh": "鞋面纬编针织布沟通",
+    "title_en": "Shoe Upper Weft Knit Fabric Coordination",
+    "icon": "🔄",
+    "description_zh": "与纬编针织厂沟通鞋面用针织布种：单面布、棉毛布、罗纹布；确认机号、筒径、线圈长度、克重与门幅；围绕坯布价格、起订量、交期与四分制检验标准进行谈判，并处理横档、针路等下机疵点。",
+    "description_en": "Coordinate with a weft knitting mill on shoe upper knitted fabrics: single jersey, interlock, rib; confirm machine gauge, cylinder diameter, stitch length, GSM and width; negotiate greige price, MOQ, lead time and four-point inspection standard, and handle barre and needle line defects.",
+    "category": "knitting",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Weft knitting mill sales / production supervisor",
+    "ai_role_zh": "纬编针织厂业务 / 生产主管",
+    "user_role": "Shoe upper fabric sourcing / merchandiser",
+    "user_role_zh": "鞋面面料采购 / 跟单",
+    "key_skills": [
+      "specifying weft knit fabric structure (single jersey, interlock, rib)",
+      "confirming machine gauge, cylinder diameter and stitch length",
+      "agreeing GSM and finished width targets",
+      "negotiating greige price, MOQ and lead time",
+      "setting four-point inspection and defect allowance"
+    ],
+    "key_skills_zh": [
+      "纬编布种表达(单面/棉毛/罗纹)",
+      "机号、筒径与线圈长度确认",
+      "克重与成品门幅目标约定",
+      "坯布价格、起订量与交期谈判",
+      "四分制检验与疵布折价标准"
+    ],
+    "industry_terms_sample": [
+      "weft knitting",
+      "single jersey",
+      "interlock",
+      "rib fabric",
+      "greige fabric",
+      "four-point system"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "knitting",
+      "weft-knit",
+      "shoe-upper",
+      "sourcing",
+      "qc"
+    ]
+  },
+  {
+    "id": "shoe-woven-lining",
+    "title_zh": "鞋面梭织布与里布沟通",
+    "title_en": "Shoe Upper Woven Fabric & Lining Spec",
+    "icon": "🪢",
+    "description_zh": "与梭织厂沟通鞋面用梭织布和里布：织物组织、经纬密、克重、门幅；鞋面补强布、鞋舌布、后跟衬布等辅料规格确认；围绕颜色、手感与环保合规进行谈判。",
+    "description_en": "Coordinate with a weaving mill on shoe upper woven fabrics and linings: weave construction, EPI/PPI, GSM, width; confirm reinforcing fabric, tongue fabric, heel counter lining specs; negotiate color, handfeel and compliance requirements.",
+    "category": "weaving",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Weaving mill sales / technical manager",
+    "ai_role_zh": "梭织厂销售 / 技术经理",
+    "user_role": "Shoe upper fabric sourcing / merchandiser",
+    "user_role_zh": "鞋面面料采购 / 跟单",
+    "key_skills": [
+      "specifying weave construction and EPI x PPI",
+      "confirming GSM and cuttable width",
+      "discussing reinforcing fabric and lining materials",
+      "reviewing color and handfeel against standard",
+      "negotiating compliance and testing requirements"
+    ],
+    "key_skills_zh": [
+      "织物组织与 EPI x PPI 表达",
+      "克重与可裁门幅确认",
+      "补强布与里布材质讨论",
+      "颜色与手感对标确认",
+      "合规与测试要求谈判"
+    ],
+    "industry_terms_sample": [
+      "EPI x PPI",
+      "GSM",
+      "cuttable width",
+      "lining",
+      "heel counter",
+      "reinforcing fabric"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "weaving",
+      "woven",
+      "shoe-upper",
+      "lining",
+      "sourcing"
+    ]
+  },
+  {
+    "id": "shoe-dyeing-finishing",
+    "title_zh": "鞋面染整与后整理沟通",
+    "title_en": "Shoe Upper Dyeing & Finishing Process",
+    "icon": "🎨",
+    "description_zh": "与染整厂沟通鞋面面料染色工艺：分散/酸性/活性染料选择、色牢度（耐汗、耐水、耐摩擦、耐光）、ΔE 控制；后整工艺包括拉幅定型、防水处理、抗紫外线、抗菌整理等。围绕价格、交期与环保合规（REACH、OEKO-TEX）进行谈判。",
+    "description_en": "Coordinate with a dyeing & finishing plant on shoe upper fabric dyeing: disperse/acid/reactive dye selection, color fastness (perspiration, water, rubbing, light), Delta E control; finishing processes include stenter setting, water repellent, UV protection, anti-bacterial finish. Negotiate price, lead time and compliance (REACH, OEKO-TEX).",
+    "category": "dyeing",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Dyeing & finishing plant technical manager / colorist",
+    "ai_role_zh": "染整厂技术主管 / 调色师",
+    "user_role": "Shoe upper fabric sourcing / merchandiser",
+    "user_role_zh": "鞋面面料采购 / 跟单",
+    "key_skills": [
+      "selecting dye class for polyester, nylon, cotton uppers",
+      "specifying color fastness requirements",
+      "reviewing Delta E between lab dip and bulk",
+      "discussing functional finishes (water repellent, UV, anti-bacterial)",
+      "negotiating price, MOQ and compliance documentation"
+    ],
+    "key_skills_zh": [
+      "涤纶/锦纶/棉鞋面染料选择",
+      "色牢度要求规范",
+      "小样与大货 ΔE 审核",
+      "功能整理(防水/抗紫外/抗菌)讨论",
+      "价格、起订量与合规文件谈判"
+    ],
+    "industry_terms_sample": [
+      "disperse dye",
+      "Delta E",
+      "color fastness",
+      "water repellent",
+      "OEKO-TEX",
+      "REACH"
+    ],
+    "estimated_minutes": 11,
+    "tags": [
+      "dyeing",
+      "finishing",
+      "shoe-upper",
+      "qc",
+      "compliance"
+    ]
+  },
+  {
+    "id": "shoe-lamination-bonding",
+    "title_zh": "鞋面复合与贴合工艺沟通",
+    "title_en": "Shoe Upper Lamination & Bonding Process",
+    "icon": "🔗",
+    "description_zh": "与复合厂沟通鞋面面料贴合工艺：热熔胶膜复合、火焰复合、水性胶复合；确认贴合牢度、耐水洗、耐黄变、透气性等指标；围绕起订量、交期与剥离强度测试标准进行谈判。",
+    "description_en": "Coordinate with a lamination plant on shoe upper fabric bonding: hot melt film lamination, flame lamination, water-based adhesive lamination; confirm bond strength, wash resistance, anti-yellowing, breathability; negotiate MOQ, lead time and peel strength test standards.",
+    "category": "finishing",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Lamination plant sales / technical manager",
+    "ai_role_zh": "复合厂销售 / 技术经理",
+    "user_role": "Shoe upper fabric sourcing / merchandiser",
+    "user_role_zh": "鞋面面料采购 / 跟单",
+    "key_skills": [
+      "specifying lamination method (hot melt, flame, water-based)",
+      "discussing bond strength and peel test standards",
+      "confirming wash resistance and anti-yellowing requirements",
+      "reviewing breathability and moisture management",
+      "negotiating MOQ, lead time and testing protocol"
+    ],
+    "key_skills_zh": [
+      "贴合工艺选择(热熔胶/火焰/水性胶)",
+      "贴合牢度与剥离测试标准讨论",
+      "耐水洗与耐黄变要求确认",
+      "透气性与透湿管理审核",
+      "起订量、交期与测试方案谈判"
+    ],
+    "industry_terms_sample": [
+      "hot melt film",
+      "flame lamination",
+      "peel strength",
+      "anti-yellowing",
+      "breathability",
+      "bond strength"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "finishing",
+      "lamination",
+      "bonding",
+      "shoe-upper",
+      "process"
+    ]
+  },
+  {
+    "id": "shoe-embossing-printing",
+    "title_zh": "鞋面装饰工艺沟通",
+    "title_en": "Shoe Upper Decoration Process",
+    "icon": "✨",
+    "description_zh": "与装饰加工厂沟通鞋面表面装饰工艺：压花/压纹、热转印、数码印花、高频、滴塑、激光雕刻等；确认图案定位、颜色牢度、耐磨性；围绕制版费、起订量与交期进行谈判。",
+    "description_en": "Coordinate with a decoration workshop on shoe upper surface finishing: embossing, heat transfer printing, digital printing, high-frequency welding, drip plastic, laser engraving; confirm pattern registration, color fastness, abrasion resistance; negotiate tooling cost, MOQ and lead time.",
+    "category": "crafts",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Decoration workshop sales / production manager",
+    "ai_role_zh": "装饰加工厂销售 / 生产经理",
+    "user_role": "Shoe brand merchandiser / designer",
+    "user_role_zh": "运动品牌跟单 / 设计师",
+    "key_skills": [
+      "specifying decoration method (embossing, transfer, digital print)",
+      "confirming pattern registration and placement tolerance",
+      "discussing color fastness and abrasion resistance",
+      "reviewing tooling cost and sample approval",
+      "negotiating MOQ, lead time and defect allowance"
+    ],
+    "key_skills_zh": [
+      "装饰工艺选择(压花/热转印/数码印花)",
+      "图案定位与公差确认",
+      "色牢度与耐磨性讨论",
+      "制版费与打样批核",
+      "起订量、交期与次品率谈判"
+    ],
+    "industry_terms_sample": [
+      "embossing",
+      "heat transfer",
+      "digital printing",
+      "high-frequency welding",
+      "laser engraving",
+      "tooling cost"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "crafts",
+      "decoration",
+      "shoe-upper",
+      "printing",
+      "embossing"
+    ]
+  },
+  {
+    "id": "shoe-sustainability-esg",
+    "title_zh": "鞋面可持续材料与 ESG 沟通",
+    "title_en": "Shoe Upper Sustainable Materials & ESG Compliance",
+    "icon": "🌱",
+    "description_zh": "与供应商沟通鞋面可持续材料：rPET 再生涤纶、生物基尼龙、可降解材料、水性 PU；围绕 GRS 认证、碳足迹、LCA 生命周期评估、ESG 报告进行谈判；处理绿色溢价定价与可持续采购目标。",
+    "description_en": "Coordinate with suppliers on sustainable shoe upper materials: rPET recycled polyester, bio-based nylon, biodegradable materials, water-based PU; negotiate around GRS certification, carbon footprint, LCA, ESG reporting; discuss green premium pricing and sustainable sourcing targets.",
+    "category": "sustainability",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Sustainable materials supplier / ESG compliance manager",
+    "ai_role_zh": "可持续材料供应商 / ESG 合规经理",
+    "user_role": "Shoe brand sustainability sourcing / ESG coordinator",
+    "user_role_zh": "运动品牌可持续采购 / ESG 协调员",
+    "key_skills": [
+      "specifying recycled content and material certification",
+      "discussing GRS, OEKO-TEX and carbon footprint documentation",
+      "reviewing LCA and ESG performance metrics",
+      "negotiating green premium pricing and MOQ",
+      "setting sustainable sourcing targets and timeline"
+    ],
+    "key_skills_zh": [
+      "再生含量与材料认证规范",
+      "GRS/OEKO-TEX/碳足迹文件讨论",
+      "LCA 与 ESG 绩效指标审核",
+      "绿色溢价定价与起订量谈判",
+      "可持续采购目标与时间表设定"
+    ],
+    "industry_terms_sample": [
+      "rPET",
+      "GRS",
+      "carbon footprint",
+      "LCA",
+      "ESG",
+      "bio-based nylon"
+    ],
+    "estimated_minutes": 12,
+    "tags": [
+      "sustainability",
+      "ESG",
+      "recycled",
+      "shoe-upper",
+      "compliance"
+    ]
+  },
+  {
+    "id": "shoe-qc-inspection",
+    "title_zh": "鞋面面料 QC 与验货沟通",
+    "title_en": "Shoe Upper Fabric QC & Inspection",
+    "icon": "🔎",
+    "description_zh": "以品牌 QC 身份对鞋面面料进行验货：四分制检验标准、色差评级、克重偏差、门幅偏差、手感差异、瑕疵分类与 AQL 抽样方案；围绕降级折价、让步接收、补货与扣款进行谈判。",
+    "description_en": "Conduct fabric inspection on shoe upper materials as a brand QC: four-point system, shade band rating, GSM tolerance, width tolerance, handfeel variation, defect classification and AQL sampling plan; negotiate downgrade allowance, concession, replacement and debit note.",
+    "category": "qc",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Shoe upper fabric mill QC manager / production supervisor",
+    "ai_role_zh": "鞋面面料厂品质经理 / 生产主管",
+    "user_role": "Shoe brand QC inspector / third-party inspector",
+    "user_role_zh": "运动品牌 QC / 第三方验货员",
+    "key_skills": [
+      "applying four-point system for fabric defect grading",
+      "reviewing shade band and Delta E against standard",
+      "measuring GSM, width and handfeel against spec",
+      "setting AQL sampling plan and critical defects",
+      "negotiating downgrade allowance, replacement and debit note"
+    ],
+    "key_skills_zh": [
+      "四分制面料疵点评级",
+      "色光评级与 ΔE 对标审核",
+      "克重、门幅与手感测量",
+      "AQL 抽样方案与严重疵点设定",
+      "降级折价、补货与扣款谈判"
+    ],
+    "industry_terms_sample": [
+      "four-point system",
+      "AQL",
+      "shade band",
+      "downgrade",
+      "debit note",
+      "concession"
+    ],
+    "estimated_minutes": 11,
+    "tags": [
+      "qc",
+      "inspection",
+      "shoe-upper",
+      "negotiation",
+      "claim"
+    ]
+  },
+  {
+    "id": "shoe-trade-logistics",
+    "title_zh": "鞋面面料外贸与物流沟通",
+    "title_en": "Shoe Upper Fabric Trade & Logistics",
+    "icon": "🚢",
+    "description_zh": "鞋面面料外贸全流程：RFQ 询盘、PI 报价、L/C 信用证、PSI 出货前验货、提单与报关；围绕 FOB/CIF 价格、付款条件、船期延误与索赔进行谈判。",
+    "description_en": "End-to-end trade workflow for shoe upper fabrics: RFQ inquiry, PI quotation, L/C issuance, PSI, bill of lading and customs clearance; negotiate FOB/CIF pricing, payment terms, shipment delay and claim arbitration.",
+    "category": "trade",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Overseas buyer / documentary credit specialist / forwarder",
+    "ai_role_zh": "海外客户 / 信用证单证员 / 货代",
+    "user_role": "Chinese shoe upper fabric export sales / documentation clerk",
+    "user_role_zh": "中国鞋面面料外贸业务员 / 单证员",
+    "key_skills": [
+      "responding to RFQ with FOB / CIF quotation",
+      "explaining L/C at sight and amendment",
+      "arranging PSI per AQL 2.5 standard",
+      "managing bill of lading and shipping documents",
+      "negotiating replacement vs allowance on delay claim"
+    ],
+    "key_skills_zh": [
+      "RFQ 询盘 FOB/CIF 报价",
+      "即期信用证与改证沟通",
+      "按 AQL 2.5 安排 PSI",
+      "提单与船务文件管理",
+      "船期延误索赔与补货谈判"
+    ],
+    "industry_terms_sample": [
+      "RFQ",
+      "PI",
+      "L/C at sight",
+      "PSI",
+      "bill of lading",
+      "FOB"
+    ],
+    "estimated_minutes": 12,
+    "tags": [
+      "trade",
+      "logistics",
+      "L/C",
+      "shoe-upper",
+      "claim"
+    ]
+  },
+  {
+    "id": "shoe-machinery-maintenance",
+    "title_zh": "鞋面设备采购与维护沟通",
+    "title_en": "Shoe Upper Machinery Procurement & Maintenance",
+    "icon": "⚙️",
+    "description_zh": "与机械设备供应商沟通鞋面生产设备采购：经编机、飞织机、圆编机、定型机、复合机等；围绕设备规格、产能、价格、付款条件、安装调试、保修期与备件供应进行谈判。",
+    "description_en": "Coordinate with machinery suppliers on shoe upper production equipment procurement: warp knitting machines, flyknit machines, circular knitting machines, stenter, lamination machines; negotiate machine specs, capacity, price, payment terms, installation, warranty and spare parts supply.",
+    "category": "machinery",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Machinery supplier sales manager / service engineer",
+    "ai_role_zh": "机械设备供应商销售经理 / 服务工程师",
+    "user_role": "Shoe upper factory owner / production director",
+    "user_role_zh": "鞋面面料厂老板 / 生产总监",
+    "key_skills": [
+      "specifying machine type and technical specifications",
+      "discussing production capacity and efficiency",
+      "negotiating price, down payment and balance terms",
+      "reviewing installation, commissioning and training plan",
+      "agreeing warranty period and spare parts supply"
+    ],
+    "key_skills_zh": [
+      "设备型号与技术参数表达",
+      "产能与效率讨论",
+      "价格、首付与尾款谈判",
+      "安装调试与培训计划审核",
+      "保修期与备件供应约定"
+    ],
+    "industry_terms_sample": [
+      "warp knitting machine",
+      "flyknit machine",
+      "stenter",
+      "commissioning",
+      "warranty",
+      "spare parts"
+    ],
+    "estimated_minutes": 11,
+    "tags": [
+      "machinery",
+      "procurement",
+      "shoe-upper",
+      "equipment",
+      "negotiation"
+    ]
+  },
+  {
+    "id": "shoe-testing-standards",
+    "title_zh": "鞋面检测标准与实验室沟通",
+    "title_en": "Shoe Upper Testing Standards & Lab Communication",
+    "icon": "🧪",
+    "description_zh": "与第三方检测实验室沟通鞋面面料检测项目：物理性能（拉伸强度、撕裂强度、耐磨性、剥离强度）、色牢度、缩水率、静水压、透气性；围绕检测标准（ASTM/ISO/GB）、测试费用与周期进行沟通。",
+    "description_en": "Coordinate with third-party testing labs on shoe upper fabric testing: physical properties (tensile strength, tear strength, abrasion resistance, peel strength), color fastness, shrinkage, hydrostatic head, breathability; discuss test standards (ASTM/ISO/GB), testing fees and turnaround time.",
+    "category": "testing",
+    "subcategory": "shoe_upper",
+    "difficulty_levels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "ai_role": "Third-party testing lab customer service / technical manager",
+    "ai_role_zh": "第三方检测实验室客服 / 技术经理",
+    "user_role": "Shoe brand QC / material engineer",
+    "user_role_zh": "运动品牌 QC / 材料工程师",
+    "key_skills": [
+      "specifying test methods and standards (ASTM, ISO, GB)",
+      "discussing physical property requirements",
+      "reviewing color fastness and shrinkage test results",
+      "confirming hydrostatic head and breathability targets",
+      "negotiating testing fees and turnaround time"
+    ],
+    "key_skills_zh": [
+      "测试方法与标准(ASTM/ISO/GB)规范",
+      "物理性能要求讨论",
+      "色牢度与缩水率测试结果审核",
+      "静水压与透气性目标确认",
+      "检测费用与周期谈判"
+    ],
+    "industry_terms_sample": [
+      "ASTM D5034",
+      "tear strength",
+      "abrasion resistance",
+      "hydrostatic head",
+      "breathability",
+      "tensile strength"
+    ],
+    "estimated_minutes": 10,
+    "tags": [
+      "testing",
+      "qc",
+      "shoe-upper",
+      "lab",
+      "standards"
+    ]
+  }
+]

@@ -23,14 +23,21 @@ import {
   ValidationError,
 } from '../services/session-manager';
 import { chatCompletion, buildConversationSystemPrompt } from '../services/llm';
-import { textToAudio, TTS_DEFAULT_VOICE } from '../services/tts';
+import { textToAudio, TTS_DEFAULT_VOICE, TTS_VOICES } from '../services/tts';
 import { transcribeBuffer } from '../services/asr';
 import { scoreWithLlm, scoreRepeat, safeParseScore } from '../services/scoring';
 import { getScenarioById, getDialogForRound, getDialogsForScenario, getSystemPrompt } from '../services/content';
+import {
+  getCustomDialogForRound,
+  getCustomRounds,
+  getCustomScenario,
+  isCustomScenarioId,
+  setCustomScenario,
+} from '../services/custom-scenarios';
 import { saveAudioForSession } from '../services/audio';
 import { getMiniMaxEnv, type Bindings } from '../env';
 import { runAsync } from '../db';
-import type { Difficulty, LlmChatMessage, ScoreFeedback, SessionMode } from '../types';
+import type { CustomScenario, DialogRound, Difficulty, LlmChatMessage, ScoreFeedback, SessionMode } from '../types';
 
 export const sessionsRoutes = new Hono<{ Bindings: Bindings }>();
 
@@ -56,12 +63,39 @@ sessionsRoutes.post('/api/sessions', async (c) => {
   if (!isValidMode(body.mode)) {
     return c.json({ error: { code: 'VALIDATION_ERROR', message: 'mode must be free|repeat' } }, 400);
   }
-  const scenario = getScenarioById(body.scenario_id);
-  if (!scenario) {
-    return c.json(
-      { error: { code: 'SCENARIO_NOT_FOUND', message: `scenario '${body.scenario_id}' not found` } },
-      404,
-    );
+  // Custom (LLM-generated) scenarios are not in the static content store;
+  // the client carries the full payload in `custom_scenario` and we stash it
+  // in an in-memory registry keyed by session id.
+  const isCustom = isCustomScenarioId(body.scenario_id);
+  let customScenario: CustomScenario | null = null;
+  if (isCustom) {
+    const cs = body.custom_scenario as Partial<CustomScenario> | null | undefined;
+    if (
+      !cs ||
+      typeof cs !== 'object' ||
+      typeof cs.system_prompt !== 'string' ||
+      typeof cs.dialogs !== 'object' ||
+      cs.dialogs === null
+    ) {
+      return c.json(
+        {
+          error: {
+            code: 'VALIDATION_ERROR',
+            message: 'custom_scenario is required when scenario_id starts with "custom-"',
+          },
+        },
+        400,
+      );
+    }
+    customScenario = cs as CustomScenario;
+  } else {
+    const scenario = getScenarioById(body.scenario_id);
+    if (!scenario) {
+      return c.json(
+        { error: { code: 'SCENARIO_NOT_FOUND', message: `scenario '${body.scenario_id}' not found` } },
+        404,
+      );
+    }
   }
   try {
     const rec = await createSession(c.env.DB, {
@@ -69,6 +103,9 @@ sessionsRoutes.post('/api/sessions', async (c) => {
       difficulty: body.difficulty,
       mode: body.mode,
     });
+    if (customScenario) {
+      setCustomScenario(rec.id, customScenario);
+    }
     return c.json(
       {
         session_id: rec.id,
@@ -133,12 +170,21 @@ sessionsRoutes.get('/api/sessions/:id/prompts', async (c) => {
     const requestedDifficulty = c.req.query('difficulty');
     const difficulty: Difficulty =
       requestedDifficulty && isValidDifficulty(requestedDifficulty) ? requestedDifficulty : rec.difficulty;
-    const dialogs = getDialogsForScenario(rec.scenario_id);
-    const entry = dialogs.find((d) => d.difficulty === difficulty) ?? dialogs[0];
-    if (!entry || !Array.isArray(entry.rounds) || entry.rounds.length === 0) {
+    const custom = getCustomScenario(rec.id);
+    let rounds: DialogRound[];
+    let entryDifficulty: Difficulty = difficulty;
+    if (custom) {
+      rounds = getCustomRounds(custom, difficulty);
+    } else {
+      const dialogs = getDialogsForScenario(rec.scenario_id);
+      const entry = dialogs.find((d) => d.difficulty === difficulty) ?? dialogs[0];
+      rounds = entry?.rounds ?? [];
+      if (entry) entryDifficulty = entry.difficulty;
+    }
+    if (rounds.length === 0) {
       return c.json({ items: [] });
     }
-    const items = entry.rounds
+    const items = rounds
       .map((r) => {
         const text = r.ai_message ?? '';
         if (!text) return null;
@@ -146,7 +192,7 @@ sessionsRoutes.get('/api/sessions/:id/prompts', async (c) => {
           id: String(r.round),
           text,
           translation: r.ai_message_zh,
-          difficulty: entry.difficulty,
+          difficulty: entryDifficulty,
         };
       })
       .filter((p): p is { id: string; text: string; translation: string; difficulty: Difficulty } => p !== null);
@@ -200,11 +246,15 @@ sessionsRoutes.post('/api/sessions/:id/messages', async (c) => {
     const userMsg = await appendMessage(c.env.DB, id, { role: 'user', content: userText });
     const priorMessages = (await getMessages(c.env.DB, id)).filter((m) => m.id !== userMsg.id);
     const llmContext = toLlmContext(priorMessages);
+    const custom = getCustomScenario(id);
+    const targetForRound = (): DialogRound | null =>
+      custom
+        ? getCustomDialogForRound(custom, rec.difficulty, rec.round_index)
+        : getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index);
 
     let score: ScoreFeedback;
     if (effectiveMode === 'repeat') {
-      const targetDialog = getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index);
-      const target = targetDialog?.ai_message ?? '';
+      const target = targetForRound()?.ai_message ?? '';
       score = scoreRepeat(target, userText);
     } else {
       score = await scoreWithLlm(mm, userText, llmContext);
@@ -235,14 +285,13 @@ sessionsRoutes.post('/api/sessions/:id/messages', async (c) => {
     let aiMessage = '';
     let audioUrl: string | null = null;
     if (effectiveMode === 'repeat') {
-      const targetDialog = getDialogForRound(rec.scenario_id, rec.difficulty, rec.round_index);
-      const target = targetDialog?.ai_message ?? '';
+      const target = targetForRound()?.ai_message ?? '';
       aiMessage =
         score.overall_score >= 80
           ? `Great job! You said: "${userText}". Let's move to the next sentence.`
           : `Good try. The target was: "${target}". Please listen and try again.`;
     } else {
-      const systemPrompt = buildConversationSystemPrompt(getSystemPrompt(rec.difficulty));
+      const systemPrompt = buildConversationSystemPrompt(custom?.system_prompt ?? getSystemPrompt(rec.difficulty));
       const contextMessages: LlmChatMessage[] = [
         ...llmContext,
         { role: 'user', content: userText },
@@ -346,7 +395,8 @@ sessionsRoutes.post('/api/sessions/:id/feedback', async (c) => {
         : null;
 
     const mm = getMiniMaxEnv(c.env);
-    const systemPrompt = buildConversationSystemPrompt(getSystemPrompt(rec.difficulty));
+    const custom = getCustomScenario(id);
+    const systemPrompt = buildConversationSystemPrompt(custom?.system_prompt ?? getSystemPrompt(rec.difficulty));
     const llmMessages: LlmChatMessage[] = [
       ...toLlmContext(messages),
       {
@@ -440,6 +490,11 @@ sessionsRoutes.post('/api/sessions/:id/complete', async (c) => {
   } catch (err) {
     return c.json({ error: { code: 'SESSION_COMPLETE_FAILED', message: (err as Error).message } }, 500);
   }
+});
+
+// GET /api/tts/voices — available MiniMax voices
+sessionsRoutes.get('/api/tts/voices', (c) => {
+  return c.json({ voices: TTS_VOICES, default_voice_id: TTS_DEFAULT_VOICE });
 });
 
 // POST /api/tts — public TTS utility

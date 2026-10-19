@@ -18,6 +18,7 @@ import { statsRoutes } from './routes/stats';
 import { vocabularyRoutes } from './routes/vocabulary';
 import { statusRoutes } from './routes/status';
 import { dictionaryRoutes } from './routes/dictionary';
+import { customScenariosRoutes } from './routes/custom-scenarios';
 import type { Bindings } from './env';
 
 export const app = new Hono<{ Bindings: Bindings }>();
@@ -31,6 +32,7 @@ app.route('/', statsRoutes);
 app.route('/', vocabularyRoutes);
 app.route('/', statusRoutes);
 app.route('/', dictionaryRoutes);
+app.route('/', customScenariosRoutes);
 
 app.get('/health', (c) =>
   c.json({ ok: true, ts: Date.now() }),

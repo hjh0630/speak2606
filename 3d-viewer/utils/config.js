@@ -1,0 +1,38 @@
+export const APP_CONFIG = {
+  appName: '3D Model Viewer',
+  version: '1.0.0',
+  debugMode: false,
+  defaultModel: null,
+  recentModels: [],
+  maxRecentModels: 10,
+  theme: {
+    primary: '#2196f3',
+    secondary: '#ff5722',
+    background: '#1a1a2e',
+    surface: '#16213e',
+    text: '#e0e0e0',
+    accent: '#00bcd4',
+  },
+  renderer: {
+    antialias: true,
+    alpha: false,
+    pixelRatio: window.devicePixelRatio,
+    toneMapping: 'ACESFilmic',
+    outputColorSpace: 'sRGB',
+  },
+  camera: {
+    fov: 45,
+    near: 0.1,
+    far: 1000,
+    initialPosition: [3, 2, 5],
+  },
+  controls: {
+    enableDamping: true,
+    dampingFactor: 0.05,
+    rotateSpeed: 1.0,
+    zoomSpeed: 1.2,
+    panSpeed: 0.8,
+    minDistance: 0.5,
+    maxDistance: 50,
+  },
+};

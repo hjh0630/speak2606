@@ -1,0 +1,40 @@
+{
+  "scenario_id": "flyknit_flat_knitting",
+  "scenario_title_en": "Flat Knit & Flyknit 24G Engineering",
+  "scenario_title_zh": "电脑横机飞织一体成型开发",
+  "difficulty": "beginner",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Hello David, we are reviewing our golf shoe upper options. We want a clean, premium aesthetic with zero-sew construction and waterproof performance. Why should we choose Sintech's Stoll 24G flat knitting over traditional leather?",
+      "ai_message_zh": "你好 David，我们正在评估高尔夫球鞋鞋面方案。我们追求高质感、无缝一体成型且具备防水性能。为什么我们应该选择信泰的 Stoll 24针电脑横机飞织，而不是传统皮革？",
+      "expected_user_response_hint": "介绍 24 针超高密度细腻织造、Intarsia 无虚线嵌花、热熔定型防泼水，比皮革轻 40% 且贴合脚感",
+      "key_phrases": [
+        "Stoll 24G fine flat knitting",
+        "intarsia seamless technology",
+        "40% lighter than leather",
+        "anatomical sock-like fit",
+        "integrated TPU yarn stabilization"
+      ],
+      "common_mistakes": "避免泛泛而谈，突出 24针比传统 14针/12针更细腻密实，达到媲美皮革的平整度与高端质感。",
+      "tips_zh": "母语亮点：'Our 24-gauge Stoll machines deliver leather-like structural stability and a pristine flat surface, while shedding 40% of the weight.'",
+      "user_response_example": "For modern golf performance, our 24-gauge Stoll computerized flat knitting gives you the best of both worlds. At 24 gauge, the knit structure is exceptionally fine and dense, delivering a luxurious leather-like surface without the stiff break-in period. We integrate Intarsia no-sew technology for custom logos and blend heat-activated TPU yarn directly into the saddle zone for swing stability — all while cutting weight by 40% compared to full-grain leather."
+    },
+    {
+      "round": 2,
+      "ai_message": "Golfers often play in morning dew or rain. Can your 24G flyknit upper pass a 50,000-flex Bally water resistance test?",
+      "ai_message_zh": "高尔夫球手经常在晨露或雨天打球。你们的 24针飞织鞋面能通过 50,000次 Bally 动态曲折防水测试吗？",
+      "expected_user_response_hint": "解释结合热熔丝高温熔融封闭微孔、外加 C0 DWR 与内嵌防水膜袜套，轻松通过 50,000 次曲折测试",
+      "key_phrases": [
+        "Bally flex water test 50,000 cycles",
+        "hotmelt yarn pore sealing",
+        "internal waterproof membrane bootie",
+        "C0 DWR surface tension",
+        "dry interior guarantee"
+      ],
+      "common_mistakes": "不要轻易承诺裸布防水5万次曲折，专业回答必须说明是 'C0 DWR surface + hotmelt yarn matrix + waterproof membrane bootie' 的系统化解决方案。",
+      "tips_zh": "母语亮点：'We engineer a multi-barrier defense: C0 surface beads moisture, heat-fused TPU filaments seal the interstitial gaps, and an inner membrane guarantees 50k flex dry performance.'",
+      "user_response_example": "Yes, through our three-layer barrier engineering. On the face, our C0 DWR creates high surface tension to bead morning dew. Within the knit matrix, heat-fusible yarns melt under stenter activation to seal the interstitial yarn spaces. Backed by our breathable waterproof bootie construction, the finished upper easily surpasses 50,000 cycles on the Bally flex test without a single drop of water ingress."
+    }
+  ]
+}

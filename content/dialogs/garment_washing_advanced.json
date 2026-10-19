@@ -1,0 +1,88 @@
+{
+  "scenario_id": "garment_washing",
+  "scenario_title_en": "Garment Washing & Finishing",
+  "scenario_title_zh": "成衣洗水/后整",
+  "difficulty": "advanced",
+  "rounds": [
+    {
+      "round": 1,
+      "ai_message": "Chen Wei, I need to be upfront with you. We shipped the 8,000 jackets last week, and now your QC is saying the bulk doesn't match the approved wash sample. Frankly, I think their inspection is too strict.",
+      "ai_message_zh": "Chen Wei,我跟你直说。上周我们出了 8000 件夹克,现在你们 QC 说大货和确认洗水版不符。说实话,我觉得他们验货太苛刻了。",
+      "expected_user_response_hint": "不接受'验货太苛刻'的说法,摆出客观证据:测色数据和照片",
+      "key_phrases": ["I beg to differ", "the numbers speak for themselves", "Delta E of 2.3", "against the approved wash sample", "documented evidence"],
+      "common_mistakes": "反驳对方别用 'You are wrong' 太冲;用 'I beg to differ' / 'I'm afraid the data says otherwise' 专业且有立场。",
+      "tips_zh": "扯皮第一步是摆证据:测色仪 ΔE 数据、D65 灯箱对比照片、双方签字的 wash standard,先把事实钉死。",
+      "user_response_example": "Kevin, I beg to differ. Our QC measured a Delta E of 2.3 against the approved wash sample — the agreed tolerance was 1.0, and that was your wash standard too. I have the spectrophotometer reports and D65 photos. The numbers speak for themselves."
+    },
+    {
+      "round": 2,
+      "ai_message": "Well... Delta E can vary depending on which part of the garment you measure. The whiskers area always reads higher. And honestly, your approved sample sat in our lab for two months — indigo fades, you know.",
+      "ai_message_zh": "这个……ΔE 测哪个部位差别很大,猫须位置读数肯定偏高。而且说实话,你们的确认版在我们实验室放了两个月——靛蓝会褪色的,你也知道。",
+      "expected_user_response_hint": "拆穿借口:说明测量部位按标准执行,确认版褪色不能成为大货偏色理由",
+      "key_phrases": ["we measured the body panel, not the whiskers", "that's beside the point", "the sample was stored properly", "a convenient excuse"],
+      "common_mistakes": "'这不是重点' 说 'That's beside the point';指出借口用 'That sounds like a convenient excuse' 有分寸但不退让。",
+      "tips_zh": "对方常用借口:测量部位不对、样板老化、灯光不同。应对:说明测量方法符合 AATCC,且双方各持一份确认版,可拿己方那份复测。",
+      "user_response_example": "We measured the body panel, not the whiskers — same method as the approval stage. And frankly, blaming sample fading sounds like a convenient excuse: we kept a duplicate approved sample in our office, properly stored, and the bulk is still off by Delta E 2.3 against that one too."
+    },
+    {
+      "round": 3,
+      "ai_message": "OK, let's say the shade is slightly off — I can concede that. But your QC also claims the handfeel is too harsh. Come on, handfeel is subjective. You can't reject a whole order on 'handfeel'.",
+      "ai_message_zh": "好吧,就算颜色轻微偏差——这个我可以认。但你们 QC 还说手感太硬。拜托,手感是主观的,总不能因为'手感'把整单拒了吧。",
+      "expected_user_response_hint": "说明手感判定有客观依据:双方确认的 wash standard 实物+洗水配方记录",
+      "key_phrases": ["handfeel may be subjective, but...", "we agreed on a physical handfeel standard", "side-by-side comparison", "skimping on the silicone softener"],
+      "common_mistakes": "'承认某点但坚持另一点' 的句型:'Handfeel may be subjective, but we agreed on a physical standard' — 先让步再反击。",
+      "tips_zh": "手感争议要用实物标样(physical handfeel standard)+ 配方记录(recipe sheet)说话;怀疑对方省硅油可以要求出示大货洗水记录。",
+      "user_response_example": "Handfeel may be subjective, but we agreed on a physical handfeel standard — the approved sample itself. Our team did a blind side-by-side comparison and 5 out of 6 rated the bulk noticeably harsher. Kevin, can you show me the bulk recipe sheet? It looks like someone skimped on the silicone softener."
+    },
+    {
+      "round": 4,
+      "ai_message": "I'll check the recipe sheet, fine. But while we're at it — your forwarder told me you found 3 percent damaged pieces, torn pockets and broken stitches. That could be your factory's sewing issue, not our washing. We're not taking the blame for that.",
+      "ai_message_zh": "我去查配方记录,行。但既然说到这——你们货代说发现 3% 破损,口袋撕裂、断线。那可能是你们车缝的问题,不是我们洗水造成的,这个锅我们不背。",
+      "expected_user_response_hint": "分析破损特征,区分责任:洗水机械损伤 vs 车缝问题,提出第三方判定",
+      "key_phrases": ["we're not asking you to take the blame blindly", "the damage pattern", "torn along the stone-wash direction", "third-party inspection", "let the evidence decide"],
+      "common_mistakes": "'背锅' 口语化说法是 'take the blame' 或 'be held responsible';反驳时说 'the damage pattern tells a different story'。",
+      "tips_zh": "洗水破损特征:沿受力方向撕裂、石磨痕、边角磨损;车缝问题:针距断裂、线迹松脱。说不清就请 SGS/ITS 第三方验货,费用按责任分摊。",
+      "user_response_example": "We're not asking you to take the blame blindly. But the damage pattern tells a different story — the tears run along the abrasion direction and there are pumice marks on the fabric. That's mechanical damage from washing, not sewing defects. If you disagree, let's call in SGS for a third-party inspection and let the evidence decide."
+    },
+    {
+      "round": 5,
+      "ai_message": "Third-party inspection costs money and takes two weeks — your delivery to the buyer is already tight. Look, maybe we can settle this commercially instead of arguing about whose fault it is.",
+      "ai_message_zh": "第三方验货又花钱又要两周——你们给买家的交期已经很紧了。这样吧,与其争论是谁的责任,不如我们从商业角度解决。",
+      "expected_user_response_hint": "同意商业解决但先定原则:在承认质量偏差的前提下谈补偿方案",
+      "key_phrases": ["I'm open to a commercial settlement", "provided that...", "let's be clear on the facts first", "compensation package"],
+      "common_mistakes": "'我同意商业解决,但前提是……' 用 'I'm open to a commercial settlement, provided that we agree on the facts first' — 先事实后方案。",
+      "tips_zh": "商业解决常见筹码:扣款(deduction)、返工(rework)、补料、下单调价。谈之前先把事实写进邮件,避免对方日后翻供。",
+      "user_response_example": "I'm open to a commercial settlement — we're under time pressure too. But let's be clear on the facts first: the shade and handfeel deviations are documented, and the damage is washing-related. Provided you acknowledge that in writing, we can talk about a compensation package."
+    },
+    {
+      "round": 6,
+      "ai_message": "Alright, we'll acknowledge the deviations in writing. My offer: we rework the 3 percent damaged pieces at our cost, and give you a 5 percent discount on the total wash charge. That's US$660 off. Take it or leave it.",
+      "ai_message_zh": "行,我们书面承认偏差。我的方案:3% 破损件我们自费返工,洗水费总额打 95 折,也就是减 660 美元。要么接受,要么拉倒。",
+      "expected_user_response_hint": "拒绝'要么接受要么拉倒'姿态,算清实际损失并提出合理反方案",
+      "key_phrases": ["that's not how we negotiate", "let me walk you through our actual losses", "air freight to catch the delivery", "10 percent deduction", "my counter-offer"],
+      "common_mistakes": "回应 'take it or leave it' 不要硬顶,用 'That's not how we negotiate, Kevin' + 摆数据,既专业又不失立场。",
+      "tips_zh": "算损失要全:返工交期导致的空运费、买家可能索赔(claim)、QC 复验费。扣款通常按洗水费 10-20% 或按损失实报实销。",
+      "user_response_example": "Take it or leave it? That's not how we negotiate, Kevin. Let me walk you through our actual losses: rework delays the shipment by a week, so we're looking at air freight to catch the buyer's delivery — that's US$2,800 alone, plus a possible claim from the buyer. My counter-offer: rework at your cost, plus a 15 percent deduction on the total wash charge."
+    },
+    {
+      "round": 7,
+      "ai_message": "Fifteen percent? That's nearly US$2,000 — you're killing me. We still have to pay our workers and electricity. Best I can do is 10 percent, and I'll throw in free washing on your next trial order, 500 pieces.",
+      "ai_message_zh": "15%?那是近 2000 美元——你要我的命啊。我们也要付工钱和电费。最多 10%,另外你们下个试单 500 件免费洗。",
+      "expected_user_response_hint": "权衡后接受折中,但加保护条款:书面确认、剩余货款支付前提、下不为例",
+      "key_phrases": ["I'll meet you halfway", "on one condition", "deduct it from the final payment", "this must not happen again", "put it in writing"],
+      "common_mistakes": "'各退一步' 说 'meet halfway';加条件用 'on one condition that...',最后一定要 'put it in writing' 书面化。",
+      "tips_zh": "接受折中时加保护条款:扣款从尾款直接扣(deduct from final payment)、书面和解协议(settlement agreement)、质量条款进下份合同。",
+      "user_response_example": "Alright, I'll meet you halfway — 10 percent deduction plus the free trial washing, on one condition: the deduction comes straight off the final payment, and you put the whole settlement in writing today. And Kevin, this must not happen again — the next order comes with a penalty clause for off-standard washing."
+    },
+    {
+      "round": 8,
+      "ai_message": "You've got yourself a deal. I'll email the settlement letter within the hour, and the rework starts tomorrow — finished in 5 days. For what it's worth, Chen Wei, you drive a hard bargain, but you kept it professional. I respect that.",
+      "ai_message_zh": "成交。一小时内把和解函发你,返工明天开始,5 天完成。说句实话,Chen Wei,你砍价够狠,但全程很专业,我服气。",
+      "expected_user_response_hint": "专业收尾:确认行动项和时间点,维护关系但不放松质量立场",
+      "key_phrases": ["nothing personal, it's just business", "let's recap", "action items", "I value our partnership", "quality is non-negotiable"],
+      "common_mistakes": "'对事不对人' 说 'Nothing personal, it's just business';收尾用 'Let's recap the action items' 把所有约定复述一遍。",
+      "tips_zh": "争议收尾:复述行动项(和解函时间、返工交期、扣款方式),强调关系价值 + 质量底线(non-negotiable),为下次合作定调。",
+      "user_response_example": "Nothing personal, Kevin — it's just business, and I value our partnership. Let's recap the action items: settlement letter within the hour, rework done in 5 days, 10 percent off the final payment, and a penalty clause in the next contract. Quality is non-negotiable for my buyers — get it right next time and we'll keep the orders coming."
+    }
+  ]
+}
