@@ -11,6 +11,9 @@ struct HomeView: View {
     @State private var backendOnline: Bool = false
     @State private var healthChecked: Bool = false
 
+    /// 学习计划 + 打卡（两周一个轮回）
+    @ObservedObject private var plan = LearningPlanStore.shared
+
     // 场景列表数据（从 ScenariosView 合并过来）
     @State private var rows: [ScenarioRowData] = []
     @State private var isLoading: Bool = true
@@ -34,6 +37,7 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     headerSection
+                    planSection
                     dailyRow
                     scenariosSection
                     Spacer(minLength: 0)
@@ -69,6 +73,10 @@ struct HomeView: View {
             loadWordCount()
             await checkHealth()
             await loadScenarios()
+        }
+        .onAppear {
+            // 练习页返回 / 跨天时刷新计划与打卡状态
+            plan.refresh()
         }
     }
 
@@ -121,6 +129,184 @@ struct HomeView: View {
                 .frame(width: 100, alignment: .center)
         }
         .frame(height: 120, alignment: .top)
+    }
+
+    // MARK: - 学习计划 + 打卡（两周一个轮回）
+
+    private var planSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            // 标题行：计划名 + 周期日徽标 + 连续打卡
+            HStack(spacing: 8) {
+                Label("两周学习计划", systemImage: "calendar.badge.clock")
+                    .font(.headline)
+                    .foregroundStyle(Color.kleinBlue)
+                Spacer()
+                if plan.streak > 0 {
+                    Text("🔥 连续 \(plan.streak) 天")
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.orange)
+                }
+                Text("第 \(plan.dayInCycle)/\(LearningPlanStore.cycleDays) 天")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
+                    .background(Color.kleinBlue.opacity(0.12))
+                    .foregroundStyle(Color.kleinBlue)
+                    .clipShape(Capsule())
+            }
+
+            // 14 天打卡点阵（两行七列 = 两周）
+            cycleDotsGrid
+
+            // 周期进度条
+            VStack(alignment: .leading, spacing: 4) {
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(Color.kleinBlue.opacity(0.12))
+                        Capsule().fill(Color.kleinBlue)
+                            .frame(width: geo.size.width * min(1, Double(plan.cycleCheckedCount) / Double(LearningPlanStore.cycleDays)))
+                    }
+                }
+                .frame(height: 6)
+                Text("本周期已打卡 \(plan.cycleCheckedCount)/\(LearningPlanStore.cycleDays) 天")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
+
+            Divider().background(Color.kleinBlue.opacity(0.12))
+
+            // 今日任务
+            VStack(alignment: .leading, spacing: 8) {
+                HStack {
+                    Text("今日任务")
+                        .font(.subheadline.bold())
+                        .foregroundStyle(Color.kleinBlue)
+                    Spacer()
+                    Text("\(plan.todayDoneCount)/\(plan.todayPlan.count)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                ForEach(plan.todayPlan) { item in
+                    planScenarioRow(item)
+                }
+            }
+
+            // 打卡状态 / 手动补卡
+            if plan.isTodayCheckedIn {
+                HStack(spacing: 6) {
+                    Image(systemName: "checkmark.seal.fill")
+                        .foregroundStyle(.green)
+                    Text("今日已打卡，太棒了！")
+                        .font(.caption)
+                        .fontWeight(.medium)
+                        .foregroundStyle(.green)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 8)
+                .background(Color.green.opacity(0.1))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            } else {
+                Button {
+                    plan.manualCheckInToday()
+                } label: {
+                    HStack(spacing: 6) {
+                        Image(systemName: "hand.tap.fill")
+                        Text("手动打卡（自由练习日）")
+                            .fontWeight(.medium)
+                    }
+                    .font(.caption)
+                    .foregroundStyle(Color.kleinBlue)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                    .background(Color.kleinBlue.opacity(0.08))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(14)
+        .background(Color(.secondarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.kleinBlue.opacity(0.15), lineWidth: 1)
+        )
+    }
+
+    /// 14 天打卡点阵：两行七列，今天高亮描边
+    private var cycleDotsGrid: some View {
+        let checks = plan.currentCycleChecks
+        return VStack(spacing: 6) {
+            ForEach(0..<2, id: \.self) { week in
+                HStack(spacing: 0) {
+                    ForEach(1...7, id: \.self) { weekday in
+                        let day = week * 7 + weekday
+                        let checked = checks.indices.contains(day - 1) ? checks[day - 1] : false
+                        let isToday = day == plan.dayInCycle
+                        ZStack {
+                            Circle()
+                                .fill(checked ? Color.kleinBlue : Color.kleinBlue.opacity(0.12))
+                                .frame(width: 22, height: 22)
+                            if checked {
+                                Image(systemName: "checkmark")
+                                    .font(.system(size: 10, weight: .bold))
+                                    .foregroundStyle(.white)
+                            } else {
+                                Text("\(day)")
+                                    .font(.system(size: 9))
+                                    .foregroundStyle(Color.kleinBlue.opacity(0.6))
+                            }
+                            if isToday {
+                                Circle()
+                                    .stroke(Color.orange, lineWidth: 2)
+                                    .frame(width: 27, height: 27)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                }
+            }
+        }
+    }
+
+    /// 今日任务单个场景行：点击走难度选择 → 练习页
+    private func planScenarioRow(_ item: PlanScenario) -> some View {
+        Button {
+            guard !item.done else { return }
+            let files = ScenarioLoader.allScenarioFiles()
+            pickerTarget = ScenarioRowData(
+                id: item.id,
+                titleZh: item.titleZh,
+                titleEn: item.titleEn,
+                category: item.category,
+                emoji: item.emoji,
+                difficulties: localDifficulties(for: item.id, files: files)
+            )
+        } label: {
+            HStack(spacing: 10) {
+                Text(item.emoji)
+                    .font(.body)
+                    .frame(width: 28, height: 28)
+                    .background(item.done ? Color.green.opacity(0.12) : Color.kleinBlue.opacity(0.1))
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                Text(item.titleZh)
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundStyle(item.done ? .secondary : .primary)
+                    .strikethrough(item.done, color: .secondary)
+                    .lineLimit(1)
+                Spacer()
+                Image(systemName: item.done ? "checkmark.circle.fill" : "circle")
+                    .foregroundStyle(item.done ? .green : Color.kleinBlue.opacity(0.4))
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 8)
+            .background(item.done ? Color.green.opacity(0.06) : Color.kleinBlue.opacity(0.05))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
+        .buttonStyle(.plain)
     }
 
     /// 今日一句（紧凑版）

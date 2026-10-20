@@ -657,6 +657,8 @@ struct PracticeView: View {
         TTSService.shared.stop()
         if isLastRound {
             isFinished = true
+            // 完成整场练习 → 计入学习计划（今日计划全部完成时自动打卡）
+            LearningPlanStore.shared.recordPracticeCompletion(scenarioId: scenarioId)
         } else {
             currentIndex += 1
             startRound()

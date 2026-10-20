@@ -76,3 +76,62 @@ final class VocabularyCSVTests: XCTestCase {
         XCTAssertTrue(csv.contains(",/test/,"), "音标字段不应加引号: \(csv)")
     }
 }
+
+/// 学习计划：两周轮回 + 确定性编排 + 打卡状态
+final class LearningPlanTests: XCTestCase {
+
+    @MainActor
+    func testCycleDaysIsFourteen() {
+        XCTAssertEqual(LearningPlanStore.cycleDays, 14)
+    }
+
+    /// 同一周期同一天，计划稳定（确定性洗牌）
+    @MainActor
+    func testPlanIsDeterministicWithinCycle() {
+        let store = LearningPlanStore.shared
+        let a = store.plannedScenarioIds(cycle: 0, day: 3)
+        let b = store.plannedScenarioIds(cycle: 0, day: 3)
+        XCTAssertEqual(a, b)
+        XCTAssertFalse(a.isEmpty)
+    }
+
+    /// 一个周期 14 天合起来应覆盖全部基础场景（不重复）
+    @MainActor
+    func testCycleCoversAllScenarios() {
+        let store = LearningPlanStore.shared
+        var all: Set<String> = []
+        for day in 1...LearningPlanStore.cycleDays {
+            let ids = store.plannedScenarioIds(cycle: 0, day: day)
+            for id in ids {
+                XCTAssertFalse(all.contains(id), "场景 \(id) 在周期内重复分配")
+                all.insert(id)
+            }
+        }
+        let total = (try? ScenarioLoader.loadScenarioMetadata())?
+            .filter { !$0.id.hasSuffix("_intermediate") && !$0.id.hasSuffix("_advanced") }
+            .count ?? 0
+        XCTAssertEqual(all.count, total, "一个周期应覆盖全部 \(total) 个基础场景")
+    }
+
+    /// 完成练习记录幂等 + 计划完成后判定已打卡
+    @MainActor
+    func testRecordCompletionAndAutoCheckIn() {
+        let store = LearningPlanStore.shared
+        let today = store.todayKey
+        let plan = store.plannedScenarioIds(cycle: store.cycleIndex, day: store.dayInCycle)
+        // 备份原记录，测试后还原（nil 赋给下标即移除该 key）
+        let backup = store.records[today]
+        defer {
+            var r = store.records
+            r[today] = backup
+            store.records = r
+        }
+
+        for id in plan {
+            store.recordPracticeCompletion(scenarioId: id)
+            store.recordPracticeCompletion(scenarioId: id) // 重复记录应幂等
+        }
+        XCTAssertEqual(Set(store.records[today]?.completed ?? []), Set(plan))
+        XCTAssertTrue(store.isTodayCheckedIn)
+    }
+}

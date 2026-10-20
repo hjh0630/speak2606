@@ -37,3 +37,20 @@ targets:
     dependencies:
       - package: SpeakFlowKit
         product: SpeakFlowKit
+    scheme:
+      testTargets:
+        - SpeakFlowKitTests
+
+  SpeakFlowKitTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: SpeakFlowKit/Tests/SpeakFlowKitTests
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
+        GENERATE_INFOPLIST_FILE: "YES"
+    dependencies:
+      - package: SpeakFlowKit
+        product: SpeakFlowKit
