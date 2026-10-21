@@ -90,3 +90,6 @@ Package.resolved
 **/android/**/build/
 *.hprof
 
+# 临时 QA 目录与打包测试产物（曾被误提交过一次）
+scripts/qa-tmp/
+workers/speakflow-api/dist-test/
