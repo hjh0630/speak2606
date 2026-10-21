@@ -255,9 +255,9 @@ function loadAll(): void {
     log.warn('scenarios.json missing or empty in every root; using defaults');
     _scenarios = defaultScenarios();
   }
-
   // ── Dialogs: read every root's dialogs/<id>{_diff}.json and merge. ─────
   const dialogsMap = new Map<string, ScenarioDialogs[]>();
+  const noDialogScenarios: string[] = [];
   const allDifficulties: Difficulty[] = ['beginner', 'intermediate', 'advanced'];
   for (const s of _scenarios) {
     const list: ScenarioDialogs[] = [];
@@ -295,11 +295,35 @@ function loadAll(): void {
       }
     }
     if (list.length === 0) {
-      log.warn(`No dialogs for ${s.id}, using defaults`);
-      const defaults = defaultDialogs().get(s.id) ?? [];
-      list.push(...defaults);
+      // 该场景在磁盘上没有任何对话脚本。
+      // 之前的做法是回落成通用默认话术（"No dialogs for xxx, using defaults"），
+      // 结果用户点进去练到的是「内容根本不存在」的场景。
+      // 现在改为：从场景列表里隐藏它。scenarios.json 里的定义仍然保留，
+      // 补上 content/dialogs/<id>.json 后它会自动重新出现。
+      noDialogScenarios.push(s.id);
+      continue;
     }
     dialogsMap.set(s.id, list);
+  }
+  if (noDialogScenarios.length > 0) {
+    log.warn(
+      `Hidden ${noDialogScenarios.length} scenario(s) with no dialog content: ${noDialogScenarios.join(', ')}`,
+    );
+    _scenarios = _scenarios.filter((s) => !noDialogScenarios.includes(s.id));
+  }
+  // 同一难度只保留一份：一个场景只备了基础文件 <id>.json 时，
+  // intermediate 与 advanced 都会回落到它 → 列表里出现两份完全相同的内容。
+  for (const [sid, list] of dialogsMap) {
+    const seen = new Set<Difficulty>();
+    const deduped = list.filter((d) => {
+      if (seen.has(d.difficulty)) return false;
+      seen.add(d.difficulty);
+      return true;
+    });
+    if (deduped.length !== list.length) {
+      log.warn(`Deduped ${list.length - deduped.length} duplicate dialog entry for ${sid}`);
+    }
+    dialogsMap.set(sid, deduped);
   }
   _dialogs = dialogsMap;
 
@@ -383,6 +407,41 @@ function collectDialogs(
   }
   if (raw && typeof raw === 'object' && Array.isArray((raw as ScenarioDialogs).rounds)) {
     return [{ ...(raw as ScenarioDialogs), difficulty: activeDiff }];
+  }
+  // Shape 4: 新版内容结构 —— { scenario_id, title, difficulty, context, dialogue: [...] }
+  // 2026-10 的真实案例：上游新增的实战场景（gap_vdd_coo_sourcing / ninetide_fob_negotiation）
+  // 用了 dialogue[] + ai_prompt/target_concept/reference_response/keywords 这一套字段，
+  // 与全局通用的 rounds[] + ai_message/... 不是同一套 → 旧解析器读不到，
+  // 场景被当成「无对话内容」而回落成默认话术。
+  // 这里做一层归一化，让两种结构都能用，内容文件本身不用改。
+  if (raw && typeof raw === 'object' && Array.isArray((raw as Record<string, unknown>).dialogue)) {
+    const obj = raw as Record<string, unknown>;
+    const rounds = (obj.dialogue as Array<Record<string, unknown>>)
+      .filter((r) => r && typeof r === 'object')
+      .map((r, idx) => ({
+        round: typeof r.round === 'number' ? r.round : idx + 1,
+        ai_message: String(r.ai_prompt ?? r.ai_message ?? ''),
+        ai_message_zh: String(r.ai_message_zh ?? r.ai_prompt_zh ?? ''),
+        expected_user_response_hint: String(r.target_concept ?? r.expected_user_response_hint ?? ''),
+        key_phrases: Array.isArray(r.keywords)
+          ? r.keywords.map(String)
+          : Array.isArray(r.key_phrases)
+            ? r.key_phrases.map(String)
+            : [],
+        common_mistakes: String(r.common_mistakes ?? ''),
+        tips_zh: String(r.cultural_tip ?? r.tips_zh ?? ''),
+        ...(typeof r.native_polish === 'string' ? { native_polish: r.native_polish } : {}),
+      }))
+      .filter((r) => r.ai_message.length > 0);
+    if (rounds.length > 0) {
+      return [
+        {
+          scenario_id: String(obj.scenario_id ?? ''),
+          difficulty: (typeof obj.difficulty === 'string' ? obj.difficulty : activeDiff) as Difficulty,
+          rounds,
+        } as ScenarioDialogs,
+      ];
+    }
   }
   return [];
 }

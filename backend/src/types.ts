@@ -41,6 +41,8 @@ export interface DialogRound {
   key_phrases: string[];
   common_mistakes: string;
   tips_zh: string;
+  /** 母语重述（新版内容结构自带，非必填） */
+  native_polish?: string;
 }
 
 export interface ScenarioDialogs {

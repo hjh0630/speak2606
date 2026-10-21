@@ -42,6 +42,22 @@ final class ScenarioLoaderTests: XCTestCase {
         let entries = try ScenarioLoader.loadDictionary()
         XCTAssertFalse(entries.isEmpty)
     }
+
+    /// 新版内容结构（dialogue[] + ai_prompt 系列）也能解码
+    /// 2026-10 上游新增的实战场景（gap_vdd_coo_sourcing / ninetide_fob_negotiation）
+    /// 用的是 dialogue[] + ai_prompt/target_concept/reference_response/keywords，
+    /// 与全局通用的 rounds[] + ai_message 不是同一套 —— 旧解码器直接读不出来。
+    func testNewContentFormatDecoding() throws {
+        let dialog = try ScenarioLoader.loadDialog(scenarioId: "gap_vdd_coo_sourcing", difficulty: "advanced")
+        XCTAssertEqual(dialog.scenarioId, "gap_vdd_coo_sourcing")
+        XCTAssertFalse(dialog.rounds.isEmpty)
+        let first = try XCTUnwrap(dialog.rounds.first)
+        XCTAssertEqual(first.speaker, .partner)
+        XCTAssertFalse(first.textEn.isEmpty, "ai_prompt 应映射到 textEn")
+        XCTAssertNotNil(first.hint, "target_concept 应映射到 hint")
+        XCTAssertNotNil(first.prompt, "reference_response 应映射到 prompt")
+        XCTAssertFalse(first.keyWords?.isEmpty ?? true, "keywords 应映射到 keyWords")
+    }
 }
 
 /// 生词本 Anki CSV 导出转义

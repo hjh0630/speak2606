@@ -48,6 +48,12 @@ public struct DialogRound: Codable, Hashable {
         case keyPhrases = "key_phrases"
         case keyPhrasesAlt = "key_phapes"   // 个别文件的笔误 key，兼容
         case userExample = "user_response_example"
+        // 新版内容结构（2026-10 上游新增的实战场景：GAP COO / 9Tide FOB）
+        case aiPrompt = "ai_prompt"
+        case aiPromptZh = "ai_prompt_zh"
+        case targetConcept = "target_concept"
+        case referenceResponse = "reference_response"
+        case keywords = "keywords"
     }
 
     /// 自定义解码：同时兼容两种格式，公开字段不变
@@ -56,6 +62,9 @@ public struct DialogRound: Codable, Hashable {
     ///    - speaker 固定为 .partner，textEn/textZh 取 ai_message(_zh)
     ///    - prompt 取 user_response_example（参考答案），hint 取 expected_user_response_hint
     ///    - keyWords 取 key_phrases
+    /// 3. 新版内容格式（2026-10 实战场景）：ai_prompt / target_concept / reference_response / keywords
+    ///    - textEn 取 ai_prompt，textZh 取 ai_prompt_zh（缺失时留空）
+    ///    - hint 取 target_concept，prompt 取 reference_response，keyWords 取 keywords
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         self.round = try c.decode(Int.self, forKey: .round)
@@ -70,14 +79,26 @@ public struct DialogRound: Codable, Hashable {
         }
         let k = try decoder.container(keyedBy: ContentKeys.self)
         self.speaker = .partner
-        self.textEn = try k.decode(String.self, forKey: .aiMessage)
-        self.textZh = try k.decode(String.self, forKey: .aiMessageZh)
-        self.prompt = try k.decodeIfPresent(String.self, forKey: .userExample)
-        self.hint = try k.decodeIfPresent(String.self, forKey: .expectedHint)
+        if let m = try k.decodeIfPresent(String.self, forKey: .aiMessage) {
+            self.textEn = m
+        } else {
+            self.textEn = try k.decode(String.self, forKey: .aiPrompt)
+        }
+        if let z = try k.decodeIfPresent(String.self, forKey: .aiMessageZh) {
+            self.textZh = z
+        } else {
+            self.textZh = (try k.decodeIfPresent(String.self, forKey: .aiPromptZh)) ?? ""
+        }
+        self.prompt = (try k.decodeIfPresent(String.self, forKey: .userExample))
+            ?? (try k.decodeIfPresent(String.self, forKey: .referenceResponse))
+        self.hint = (try k.decodeIfPresent(String.self, forKey: .expectedHint))
+            ?? (try k.decodeIfPresent(String.self, forKey: .targetConcept))
         if let phrases = try k.decodeIfPresent([String].self, forKey: .keyPhrases) {
             self.keyWords = phrases
+        } else if let alt = try k.decodeIfPresent([String].self, forKey: .keyPhrasesAlt) {
+            self.keyWords = alt
         } else {
-            self.keyWords = try k.decodeIfPresent([String].self, forKey: .keyPhrasesAlt)
+            self.keyWords = try k.decodeIfPresent([String].self, forKey: .keywords)
         }
     }
 }
@@ -100,6 +121,45 @@ public struct ScenarioDialog: Codable {
         case scenarioTitleEn = "scenario_title_en"
         case difficulty
         case rounds
+    }
+
+    /// 新版内容结构的兼容 key（2026-10 上游新增实战场景用的是 dialogue[] + title）
+    private enum AltKeys: String, CodingKey {
+        case title
+        case dialogue
+    }
+
+    public init(
+        scenarioId: String,
+        scenarioTitleZh: String,
+        scenarioTitleEn: String,
+        difficulty: String,
+        rounds: [DialogRound]
+    ) {
+        self.scenarioId = scenarioId
+        self.scenarioTitleZh = scenarioTitleZh
+        self.scenarioTitleEn = scenarioTitleEn
+        self.difficulty = difficulty
+        self.rounds = rounds
+    }
+
+    /// 自定义解码：兼容两套内容结构
+    /// 1. 通用结构：scenario_title_zh / scenario_title_en / rounds[]
+    /// 2. 新版结构：title / dialogue[]（上游 2026-10 新增的实战场景）
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        let alt = try decoder.container(keyedBy: AltKeys.self)
+        self.scenarioId = try c.decode(String.self, forKey: .scenarioId)
+        self.difficulty = (try c.decodeIfPresent(String.self, forKey: .difficulty)) ?? "beginner"
+        self.scenarioTitleZh = (try c.decodeIfPresent(String.self, forKey: .scenarioTitleZh))
+            ?? (try alt.decodeIfPresent(String.self, forKey: .title))
+            ?? ""
+        self.scenarioTitleEn = (try c.decodeIfPresent(String.self, forKey: .scenarioTitleEn)) ?? ""
+        if let r = try c.decodeIfPresent([DialogRound].self, forKey: .rounds) {
+            self.rounds = r
+        } else {
+            self.rounds = try alt.decode([DialogRound].self, forKey: .dialogue)
+        }
     }
 }
 
